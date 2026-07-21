@@ -7,3 +7,5 @@
 - 同步：`bash ~/.dc-platform/scripts/sync-memory-git.sh`
 
 机器角色不变：旧 Mac 跑 bot；两边只共享本目录内容。
+
+远程：https://github.com/youchu888/youchu-memory
