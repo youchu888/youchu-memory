@@ -5,6 +5,7 @@
 > **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
 
+- [Dev Session 对外汉字名](lessons/2026-07-21-dev-session-display-name-format.md) — 发群/新建用【标签】表名 · 又初；禁 dev-xxx 与海豚 project_code 当对外名。
 - [2026-07-01 归因 P0 全日归档](sessions/2026-07-01-attribution-p0-daily-archive.md) — bus#652~723 时间线、资产索引、未完成项；同类任务总入口。
 - [监控群聊上下文归档](lessons/2026-07-07-group-chat-context-archive.md) — context.jsonl 定时瘦身；冷数据 group_chat/archive + _search.jsonl；prompt 与 bootstrap 可检索。
 - [ALTER 必验 ETL + 同步上线](feedback_ddl_must_sync_verify_etl.md) — 知秋钦定全员：DDL 前查写表 ETL；DDL+ETL 同批；影子禁偷上 prod；首选显式列清单。

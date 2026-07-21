@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-21 | [Dev Session 对外汉字名 · 禁 code/项目id](./2026-07-21-dev-session-display-name-format.md) | dev-session, naming, feedback, tg, project | 发群/新建用【标签】表名 · 又初；禁 dev-xxx 与海豚 project_code 对外 |
 | 2026-07-15 | [日报周报语气：通俗但正式](./2026-07-15-report-plain-but-formal-style.md) | daily-report, weekly-report, writing-style, communication | 主人钦定；非技术看懂+书面语气；术语翻业务话、禁口语俚语；playbook+daily-report.mdc 已同步 |
 | 2026-07-15 | [停留时长进度+群知秋钦定要点](./2026-07-15-stay-duration-and-group-directives.md) | stay-duration, session, dws_session_duration, attribution, tag, zhiqiu, group | Phase1(page_stay/sid)test闭环待prod提审；Phase2知秋令转DWS会话时长(账户+设备)墙钟五档待拍；宏/人工节点/分层铁律 |
 | 2026-07-13 | [工作簿负责人以最新一日为准](./2026-07-13-workbook-ownership-latest.md) | workbook, ownership, group, feedback | 禁沿用过期归属；07-12 起停留时长改派又初 |
