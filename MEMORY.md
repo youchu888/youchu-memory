@@ -1,0 +1,107 @@
+# DC Platform 公共记忆索引
+
+> **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
+> 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
+> **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
+> 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
+
+- [2026-07-01 归因 P0 全日归档](sessions/2026-07-01-attribution-p0-daily-archive.md) — bus#652~723 时间线、资产索引、未完成项；同类任务总入口。
+- [监控群聊上下文归档](lessons/2026-07-07-group-chat-context-archive.md) — context.jsonl 定时瘦身；冷数据 group_chat/archive + _search.jsonl；prompt 与 bootstrap 可检索。
+- [ALTER 必验 ETL + 同步上线](feedback_ddl_must_sync_verify_etl.md) — 知秋钦定全员：DDL 前查写表 ETL；DDL+ETL 同批；影子禁偷上 prod；首选显式列清单。
+- [归因 P0 快速响应](reference_attribution_p0_quickstart.md) — test 海豚常量、三条验收、TASK_ONLY、发布门、agent-bus 命令。
+- [又初↔狂人 bus 三分法](lessons/2026-07-02-youchu-worker-ant-bus-convention.md) — 默认要干；不用做/暂停/不用回=只回不干；message_bus_mode。
+- [agent-bus 静默吞单两坑](lessons/2026-07-02-agent-bus-静默吞单两坑.md) — seal 误封 + needs_reply 漏判；狂人直派 youchu_ai 默认需 reply；自查 processed/ack/reply 三角。
+- [agent-bus TG 镜像 + 反套娃](lessons/2026-07-02-agent-bus-tg-mirror-anti-nesting.md) — no-dedup 仍 mirror；prod 403 走 request-publish；未 unblock 勿 bus done。
+- [海豚 wf 权威名 wf_dws_汇总_日](lessons/2026-07-02-dolphin-prod-test-wf-name-map.md) — prod UI legacy 显示 dws_日；API 用 wf_code，文档只用 wf_dws_汇总_日。
+- [任务耗时预估与实际校准](feedback_task_time_estimation.md) — ACK 顶行 ⏱ 预估；结案记实际分钟写入 task_time_log.jsonl，同类取中位数持续校准。
+- [prod 发布须审核、又初不自发](feedback_prod_release_review_gate.md) — 上 prod 群 @工作狂人/@知秋 交路径/方案/报告；他们审核发布，又初只做 test。
+- [渠道归因端到端方案](reference_attribution_end_to_end_complete.md) — 平台 slug attribution_end_to_end_complete；四步串行/灰度/结算7表/分工；每日看 updated_at 增量刷新。
+- [工作狂人全量协作核心包](lessons/20260627-worker-ant-full-collab-core.md) — bus#77 七章：SR幂等、cat迁移、海豚API、踩坑案例、文档slug。
+- [agent-bus poller offset 修法](lessons/20260627-agent-bus-offset-persistence.md) — after_id 落盘四步；防重放「开始核查」；参照 worker_ant agent_bus_poll。
+- [记忆体系与自我进化](lessons/20260627-worker-ant-memory-architecture.md) — 三级分层/触发词/Why+How/去重；知秋推广标准 checklist。
+- [工作狂人知识库索引](worker_ant/INDEX.md) — 每日 19:30 向 worker_ant 学习；lesson/文档 slug/会话流水；开工读 context-bootstrap。
+- [工作狂人协作速查 v1](lessons/20260626-worker-ant-collab-cheatsheet.md) — SR方言/核查铁律/prod必连/live SQL/抽样定性；worker_ant agent-bus 同步。
+- [工作日历 · 中国大陆](reference_work_calendar_cn.md) — 自然周 Mon-Sun 统计；常规工作日 Mon-Sat；国务院法定假/调休。
+- [work-log 跨 Agent 日报周报](feedback_work_log_multi_agent_reports.md) — 任务收尾 append 当日 work-log；子 Agent 同样写；transcript 只读补漏。
+- [VPN 续期按导入时刻滚动](lessons/2026-07-09-vpn-renew-by-import-time.md) — imported_at 记上次导入；满 23h 提前续；本机上次 2026-07-09 09:23，计划 07-10 08:23。
+- [周报写法以 W28 为样板](feedback_weekly_report_style_w28.md) — 主人认可；按工作簿主责分节；禁 bus#；只写数据工作。
+- [工作簿任务板（活文档）](project_youchu_workbook_tasks.md) — 以最新每日工作簿覆盖又初主责；读消息即更新。
+- [工作簿负责人以最新一日为准](lessons/2026-07-13-workbook-ownership-latest.md) — 禁沿用过期归属；07-12 起停留时长改派又初。
+- [停留时长进度+群知秋钦定要点](lessons/2026-07-15-stay-duration-and-group-directives.md) — 停留 Phase1(page_stay/sid)test闭环待prod提审；Phase2 知秋令转 DWS 会话时长(账户+设备/墙钟/五档待拍)；宏/人工节点/分层铁律 + 归因/标签开工令。
+- [日报周报语气：通俗但正式](lessons/2026-07-15-report-plain-but-formal-style.md) — 主人钦定；非技术看懂 + 书面语气；术语翻业务话、禁口语俚语；playbook + daily-report.mdc 已同步。
+- [日报禁止写 bus 编号须写任务名](lessons/2026-07-08-daily-report-no-bus-id.md) — 日报正文禁 bus#；写任务名；daily-report.mdc 已同步。
+- [日报须汇总多 Agent 流水](lessons/2026-07-08-daily-report-multi-agent-worklog.md) — 先读 work-log + 全日 transcript，勿只写当前窗。
+- [归因出数硬条件与测试验收手册](lessons/2026-07-08-attribution-test-gates-handbook.md) — 入围/成功/回写门槛；手册在 Downloads。
+- [内容排行猫猫线按令撤回](lessons/2026-07-08-content-rank-handoff-rollback.md) — 代管撤回即停，勿冒领。
+- [日报/周报 playbook](playbook_daily_weekly_report.md) — 从 work-log + transcript + git log 生成日报/周报模板与数据源优先级。
+- [dc-platform 项目化与记忆统一](project_dc_platform_projectization.md) — 所有 session 归属 dc-platform；公共记忆与 lesson 统一存 ~/.dc-platform/memory/。
+- [CHcode 目录索引](project_chcode_directory_index.md) — dc-parent 仓库目录地图：ETL/SQL/服务/工具/agent 配置，查路径先读此索引。
+- [ETL 统一 ops_system 分层目录](feedback_ops_system_etl_directory_layout.md) — SQL 与 dev session 禁放仓库根；按 DWD/DWS/DIM 落 ops_system 表目录，双扫改原文件不新建平行目录。
+- [Shared db skill context](project_shared_db_skill_context.md) — CHcode 关联 dc-platform 公共记忆与 .claude/database 约定。
+- [dw query constraints](feedback_dw_user_event_detail_query_constraints.md) — Query dw.dw_user_event_detail only with event_time bounds; SQL checks can run silently.
+- [DW event-detail lightweight checks](feedback_dw_user_event_detail_lightweight_validation_first.md) — Reconcile by event_id/date-app-channel first; only sample mismatches for detail drilldown.
+- [Violations must show raw rows](feedback_violations_must_show_raw_rows.md) — 报告数据违规必须给可 SQL 回查的真实行（event_id/时间/完整原值），不能用统计或归类摘要替代。
+- [Default to production config](feedback_default_to_production_config.md) — dc-parent 数据查询默认 my.cnf（生产），测试库经常空；写操作仍需用户明确确认。
+- [Report before saving playbook](feedback_report_before_saving_playbook.md) — Run checks first, show a complete filled report, then save/finalize only after review.
+- [Funnel datacheck sampling](feedback_funnel_datacheck_sampling.md) — For渠道漏斗表 prefer sampling; treat NULL/no-row and 0 as equivalent.
+- [Save relevant context proactively](feedback_save_relevant_context_proactively.md) — Save durable guidance/context before session end so the user needn't repeat it.
+- [Channel funnel regression setup](project_channel_funnel_playbook_ready_for_regression.md) — Funnel playbook is ready; after dev fix, rerun sampled regression.
+- [Attribution UA from DW](feedback_attribution_ua_from_dw_and_focus_ip.md) — Attribution分析时 UA 必须从 dw 取，并优先分析 UA 解析与 IP 上报问题。
+- [Metadata business domain rules](feedback_metadata_business_domain_and_confirmation_rules.md) — Project metadata must carry 业务域 and 状态; ask if missing for new tables.
+- [Quantify numeric errors and HLL tolerance](feedback_quantify_numeric_error_and_hll_tolerance.md) — Every check must explain numeric deltas; approximate metrics need error-rate judgment.
+- [Promotion video threshold >=5s](feedback_promotion_video_threshold_gte5.md) — Promotion video validation must use >=5s threshold.
+- [Promotion two-layer non-organic checks](feedback_promotion_check_two_layer_nonorganic_only.md) — Validate channel scoring via h-layer first, then dw trace; default non-empty non-organic channels only.
+- [Playbooks as overview source](feedback_playbooks_record_sources_and_programs_first_for_overviews.md) — Datacheck playbooks must include 数据来源表+处理程序; future overviews read playbooks first.
+- [Wide-table structure freeze](feedback_wide_table_structure_freeze_and_input_source_preference.md) — Use only user-provided latest table structure; never revert to old PDFs; only add/resize/explain mappings.
+- [OpenMetadata custom properties endpoint](reference_openmetadata_custom_properties_endpoint.md) — Event governance custom properties come from the provided OpenMetadata API.
+- [OpenMetadata User_Behavior_Events glossary chain](reference_openmetadata_user_behavior_events_glossary_chain.md) — Use the two-step glossary → glossaryTerms API chain and keep OM ids.
+- [OpenMetadata Common_Fields glossary chain](reference_openmetadata_common_fields_glossary_chain.md) — Use the two-step Common_Fields glossary → glossaryTerms API chain and keep OM ids.
+- [Event metadata presentation from target schema](feedback_event_metadata_target_schema_and_extension_columns.md) — Derive types/lengths from target DWD schemas and split extension columns.
+- [Metadata core submit flow first](feedback_focus_metadata_on_core_submit_flow.md) — For metadata tool work, prefer the shortest path to editable UI plus direct OpenMetadata submit.
+- [Metadata user starts local server](feedback_metadata_user_starts_local_server.md) — For metadata UI work, do not start/restart the local 8012 server; the user manages it.
+- [Metadata long-term workstream](project_metadata_long_term_workstream.md) — Treat metadata as an ongoing OpenMetadata+Claude workstream and resume it across sessions.
+- [Metadata lifecycle + sync progress](project_metadata_lifecycle_and_sync_progress.md) — 2026-04-20 批次：三态 lifecycle、prod 端独立 FQN、HTMX 保留 history、筛选穿透详情 已做完；resume 前先核对。
+- [Deprecated _h tables](project_deprecated_h_tables_in_favor_of_d.md) — dwd_user_register_h / app_page_view_h / order_paid_h_v2 与 dim_user_h 已作废，统一走 _d + hourly/daily 双链路；video_event_h 例外保留。
+- [StarRocks-only SQL dialect](feedback_project_is_starrocks_only.md) — All SQL must match StarRocks syntax; UPDATE target tables can't be aliased.
+- [StarRocks DEFAULT value caution](feedback_starrocks_default_value_caution.md) — Avoid DDL DEFAULT on StarRocks columns; they can't be ALTERed and PK UPDATE re-triggers them.
+- [dim_user_all pending rebuild](project_dim_user_all_next_rebuild.md) — Next rebuild needs累计字段幂等+去 DEFAULT；需 drop+create+2026-01-01 回刷。
+- [Data dictionary format](feedback_data_dictionary_format.md) — 数据字典 = 四栏表格（字段名/中文名/类型/说明），不加冗余章节。
+- [Exclude dwd_landing_page_click](feedback_exclude_landing_page_click.md) — dwd_landing_page_click 不属于本项目，统计时排除。
+- [Always include event_id in samples](feedback_always_include_event_id_in_samples.md) — 所有抽样明细必须带 event_id。
+- [Per-app verification rule](feedback_per_app_verification_rule.md) — 核对数据必须按 app 独立核算，uid 相同跨 app 算不同用户；只核对字母-数字格式的合法 app_id。
+- [Errors inline, not JSON page](feedback_errors_inline_not_json_page.md) — metadata UI 错误必须内联展示；禁用 HTTPException 让 FastAPI 渲染 JSON 整页。
+- [OM 调用三阶段 + 线程池](feedback_metadata_om_call_pattern.md) — OM 改写端点必须三阶段 saga（OM 先 DB 后 + 失败回滚），且 async 路由里同步 httpx 必须 run_in_threadpool 包起来。
+- [HTMX controls outside polled section](feedback_htmx_controls_outside_polled_section.md) — 需要用户交互的按钮必须放在 HTMX 轮询 section 外，用原生 form POST + 303，不然 swap 会抢跑导致点不了。
+- [Prod OM list 丢 columns.extension](feedback_prod_om_list_columns_extension_gap.md) — prod OM list 接口只返回 1/N 列的 extension，读 column extension 必须用 get_table_by_fqn。
+- [新表先校验再生成剧本](feedback_new_table_verify_before_playbook.md) — 新表 datacheck 先跑结果、等用户确认再落盘剧本文件。
+- [ETL 验证去 INSERT](feedback_etl_validation_via_select_only.md) — 验证 ETL 时去掉 INSERT/OVERWRITE，只跑 SELECT 取数；不建临时表。
+- [落地页 IP 重复正常](feedback_landing_page_ip_repeats_ok.md) — landing_page_view/click IP 重复不算异常（用户多次行为），仍报 NULL / CF-only / 服务端池。
+- [db/ 是源代码目录](feedback_db_dir_is_source_code.md) — 表 DDL/ETL 扫描必须同时覆盖 ops_system/ 和项目根 db/ 全部子目录，不能只扫前者。
+- [血缘起点是 Kafka 消息](feedback_lineage_origin_is_kafka.md) — 血缘起点永远画 Kafka，dw 是统一具化、dwd 是按事件拆分；retired 表直接剔除不参与分析。
+- [外部表立即上报](feedback_external_tables_immediate_report.md) — 发现项目外上游表必须当场提醒用户补登记，不要藏到最终报告里多轮往返。
+- [元数据 extension_values 全读](feedback_metadata_full_extension_values.md) — 核查表规则时必须取完整 JSON，含 regexMap/minValue/trimStrategy/defaultValue；uid 黑名单不含 '0'。
+- [dataFormat 类型语义](feedback_dataformat_semantics.md) — PERCENT 输入容忍 % 但输出必须去 %；TIMESTAMP10/13 区分秒/毫秒；NUMBER 允许正负小数；核查时按"清洗后期望"判定。
+- [血缘范围从项目挂载起算](feedback_lineage_scope_from_project_link.md) — 项目血缘范围必须从 tableprojectlink 拿全量活跃表起，不能用"反向追溯"算法，否则漏独立最下游 dws。
+- [允许跨项目共享上游](feedback_cross_project_shared_upstream_allowed.md) — 不强制所有上游都挂当前项目；用户判断后保持单挂的归"跨项目共享上游"章节，不当外部表恐慌。
+- [血缘工作流 2026-04-28 进度](project_metadata_lineage_workstream_2026_04_28.md) — 渠道广告报告已落盘；运营 90 张/85 online 已分析；3 处 online→developing 待解决；待用户多项决策。
+- [ETL 合规核查方法](feedback_etl_compliance_check_method.md) — 元数据有字典值的字段查命中（不查长度）、部分映射查残留、纯文本查长度；违反全归 ETL bug。
+- [元数据先查 metadata.db](feedback_query_metadata_db_first_for_table_info.md) — 表/字段/血缘等元数据问题先 SQL metadata.db，不要先 grep ops_system 或 mysql DESCRIBE。
+- [文件总结必须用 markdown 链接](feedback_file_summary_must_use_markdown_links.md) — 报告里所有创建 / 修改的文件路径都要包成 [name](relative/path)，不能反引号或纯文本。
+- [新 ETL 套件目前在测试环境](project_new_etl_in_test_env_2026_04_30.md) — dw_user_event_detail_new / dwd_unknown_event_df / dwd_standard_dirty_data_df 等新清洗表走测试库 test.cnf，上线后用户通知再切。
+- [海豚 ${var} 占位符避坑](feedback_dolphinscheduler_var_placeholder_pitfall.md) — `${var}` 必须裸用 SQL 表达式；不能放注释 / 字符串字面量里，否则 jdbc 报 Parameter index out of range。
+- [dwd ETL 字段截断基线 2026-05-01](project_dwd_etl_truncation_baseline_2026_05_01.md) — 35 个 dwd 任务全有 SET 容错头 + LEFT 截断；脚本在 .claude/database/scripts/，新增任务跑 fix 自动补。
+- [metadata 后端迁 MySQL 2026-05-01](project_metadata_db_migrated_to_mysql_2026_05_01.md) — metadata 服务从 SQLite 切到 MariaDB；config / db.py 已支持 backend 切换；11 张表行数核对通过。
+- [DS test API + token](reference_dolphinscheduler_test_api.md) — 海豚测试环境 API 与 token，已验证 endpoint + 卡住的 schedules，集成时用。
+- [开发管理平台愿景 2026-05-01](project_dev_platform_vision_2026_05_01.md) — metadata 升级为 AI 数据开发平台；M1 完成，M2 暂停（2026-05-02 用户思考中），下次先问思考结论再启动。
+- [dwd ETL 调度头规范 + 拆分进度](project_dwd_etl_schedule_split_2026_05_01.md) — 5 张双模式拆分完毕带新头模板；剩 26 张文件待补头部。
+- [海豚 $[date] / SET 变量两个 SR3.3 实跑坑](feedback_dolphinscheduler_date_macro_pitfalls.md) — `$[date]` 中 t 不是合法 Java pattern，max_filter_ratio 不是 SR session 变量，写 ETL 必避。
+- [ETL 新鲜度核查方法](feedback_etl_freshness_check_method.md) — max(dt) 不能判断任务跑没跑（dt 可能是数据维度）；要用 update_time / partition VisibleVersionTime。
+- [SQL DATETIME BETWEEN 上界 bug](feedback_sql_datetime_between_edge_bug.md) — `'YYYY-MM-DD'` 被 cast 成 0 点，BETWEEN 上界写日期会漏当天 00:00:00 之后所有数据；DATETIME 列必须半开区间。
+- [ETL 修复未推 prod 清单 2026-05-02](project_etl_fixes_pending_push_2026_05_02.md) — first_recharge BETWEEN bug + funnel_daily_d 双 partition + 282/234 处占位符修复，本地改完未推海豚。
+- [渠道评分表条件查询规则](feedback_channel_scoring_query_pattern.md) — 渠道评分表参数映射+指标定义（注册人数=register_date范围内 COUNT DISTINCT uid）；后续指标增量追加。
+- [omdb 是可拷贝独立项目](feedback_omdb_is_portable_no_memory.md) — omdb 子目录视作独立可分发项目；规则只写 omdb/CLAUDE.md，不在任何 memory 目录里积累 omdb 相关条目。
+- [海豚工作流更新 SOP](reference_dolphinscheduler_workflow_update_sop.md) — DS PUT/release/schedule API + 调度安全窗口 + 先小后大补数验证；元数据工具开发依赖。
+- [SQL 注释禁止任何占位符字面量](feedback_no_dollar_bracket_in_comments.md) — 注释里不能出现 ${...} / $[...] / ? / @var / :var；DS 和 mysql/SR 各种客户端都会盲扫拦截，多次踩同一坑。
+- [工作流任务失败后恢复策略](feedback_workflow_failure_recovery_strategy.md) — 不能直接 retry；先单点验证→补缺失时段→重跑失败实例。上游失败时下游全部 OVERWRITE task 都得补。
+
+- 2026-07-21 双 Mac 记忆同步：`~/.dc-platform/scripts/docs/memory_peer_sync.md` + `sync-memory-peer.sh`

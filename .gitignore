@@ -1,0 +1,20 @@
+# 本机/系统
+.DS_Store
+*.pyc
+__pycache__/
+*.swp
+*~
+
+# 密钥与本机私货（永不进库）
+.env
+.env.*
+*.pem
+*.key
+*_secret*
+*credentials*
+
+# 过大或易冲突的热数据（需要时可改回跟踪）
+group_chat/context.jsonl
+group_chat/_hot/
+tgbot_work_index.jsonl
+task_time_log.jsonl
