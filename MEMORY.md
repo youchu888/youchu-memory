@@ -105,3 +105,5 @@
 - [工作流任务失败后恢复策略](feedback_workflow_failure_recovery_strategy.md) — 不能直接 retry；先单点验证→补缺失时段→重跑失败实例。上游失败时下游全部 OVERWRITE task 都得补。
 
 - 2026-07-21 双 Mac 记忆同步：`~/.dc-platform/scripts/docs/memory_peer_sync.md` + `sync-memory-peer.sh`
+
+- 2026-07-21 双 Mac 记忆改走 Git：`~/.dc-platform/scripts/docs/memory_git_sync.md` + `sync-memory-git.sh`
