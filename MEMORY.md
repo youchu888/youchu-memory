@@ -107,3 +107,5 @@
 - 2026-07-21 双 Mac 记忆同步：`~/.dc-platform/scripts/docs/memory_peer_sync.md` + `sync-memory-peer.sh`
 
 - 2026-07-21 双 Mac 记忆改走 Git：`~/.dc-platform/scripts/docs/memory_git_sync.md` + `sync-memory-git.sh`
+
+- 2026-07-21 记忆 Git 定时同步：`install-memory-git-sync-launchd.sh`（每10min，双机各装）
