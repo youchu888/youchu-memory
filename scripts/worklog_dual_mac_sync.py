@@ -151,35 +151,93 @@ def merge_day(mem_wl: Path, day: str) -> Path:
     return dst
 
 
+def _authority_host(mem_wl: Path) -> str:
+    """正式日报权威主机：默认 old-mac（主人 2026-07-22 钦定）。"""
+    env = (os.environ.get("WORKLOG_AUTHORITY_HOST") or "").strip()
+    if env:
+        return re.sub(r"[^\w.\-]+", "-", env)[:64]
+    marker = mem_wl / "AUTHORITY_HOST"
+    if marker.exists():
+        for line in marker.read_text(encoding="utf-8", errors="replace").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#"):
+                return re.sub(r"[^\w.\-]+", "-", line)[:64]
+    return "old-mac"
+
+
 def publish_canonical_report(mem_wl: Path, local_wl: Path, day: str, host: str) -> Path | None:
-    """若本机有正式日报，同步为 memory 权威 reports（并回写本地镜像）。"""
+    """正式日报权威：以 AUTHORITY_HOST（默认 old-mac）为准。
+
+    - 权威机：可用本机日报覆盖 `work-log/reports/`
+    - 非权威机：只写到 `hosts/<自己>/reports/`，不覆盖权威稿；若权威稿已存在则镜像回本机
+    """
+    authority = _authority_host(mem_wl)
     local_report = local_wl / "reports" / f"{day}-日报.md"
     host_report = mem_wl / "hosts" / host / "reports" / f"{day}-日报.md"
-    src = local_report if local_report.exists() else host_report
-    if not src.exists():
-        return None
-    body = _read_text(src)
-    if not body:
-        return None
-    # 若文首未标明双机，补一行来源说明（不改正文结构）
-    if "双机汇总" not in body[:400]:
+    auth_report = mem_wl / "hosts" / authority / "reports" / f"{day}-日报.md"
+    canon = mem_wl / "reports" / f"{day}-日报.md"
+    local_wl.joinpath("reports").mkdir(parents=True, exist_ok=True)
+
+    def _stamp(body: str, src_host: str) -> str:
+        if "双机汇总" in body[:500] and "权威" in body[:500]:
+            return body if body.endswith("\n") else body + "\n"
         lines = body.splitlines()
-        # 插在日期元数据后
         insert_at = 0
-        for i, line in enumerate(lines[:20]):
+        for i, line in enumerate(lines[:25]):
             if line.startswith("> 日期:") or line.startswith("> 日期："):
                 insert_at = i + 1
                 break
-        note = f"> 双机汇总: 见 `~/.dc-platform/memory/work-log/{day}.md`（hosts 合并）"
-        lines.insert(insert_at, note)
-        body = "\n".join(lines).rstrip() + "\n"
+        notes = [
+            f"> 双机汇总: 见 `~/.dc-platform/memory/work-log/{day}.md`（hosts 合并）",
+            f"> 日报权威主机: `{src_host}`（非权威机不得覆盖正式稿）",
+        ]
+        for n in reversed(notes):
+            if n not in lines[:30]:
+                lines.insert(insert_at, n)
+        return "\n".join(lines).rstrip() + "\n"
 
-    canon = mem_wl / "reports" / f"{day}-日报.md"
-    canon.write_text(body, encoding="utf-8")
-    # 仅镜像正式日报回本地；禁止把合并稿覆盖本机日流水（否则会套娃翻倍）
-    local_wl.joinpath("reports").mkdir(parents=True, exist_ok=True)
-    local_report.write_text(body, encoding="utf-8")
-    return canon
+    # 1) 权威机：本机稿 → hosts/authority + reports 权威
+    if host == authority:
+        src = local_report if local_report.exists() else host_report
+        if not src.exists():
+            print(f"canonical: authority host `{authority}` 本日无本地日报稿")
+            return canon if canon.exists() else None
+        body = _stamp(_read_text(src), authority)
+        if not body.strip():
+            return None
+        (mem_wl / "hosts" / authority / "reports").mkdir(parents=True, exist_ok=True)
+        (mem_wl / "hosts" / authority / "reports" / f"{day}-日报.md").write_text(body, encoding="utf-8")
+        canon.write_text(body, encoding="utf-8")
+        local_report.write_text(body, encoding="utf-8")
+        print(f"canonical: published by authority `{authority}`")
+        return canon
+
+    # 2) 非权威机：只归档自己的 hosts 稿，不覆盖 reports/
+    if local_report.exists():
+        body = _read_text(local_report)
+        if body.strip():
+            (mem_wl / "hosts" / host / "reports").mkdir(parents=True, exist_ok=True)
+            host_report.write_text(body if body.endswith("\n") else body + "\n", encoding="utf-8")
+            print(f"canonical: non-authority `{host}` archived to hosts only (not overwriting)")
+
+    # 3) 若权威稿已在仓里，镜像到本机，保证新机读到旧机标准
+    preferred = None
+    if auth_report.exists():
+        preferred = auth_report
+    elif canon.exists():
+        # 仅当权威机尚未上传 hosts 稿、但 reports 已有时沿用；若来自非权威则仍可被权威覆盖
+        preferred = canon
+    if preferred and preferred.exists():
+        body = _read_text(preferred)
+        if body.strip():
+            local_report.write_text(body if body.endswith("\n") else body + "\n", encoding="utf-8")
+            if preferred == auth_report:
+                canon.write_text(_stamp(body, authority), encoding="utf-8")
+            print(f"canonical: mirrored authority draft → local ({preferred.name})")
+            return canon
+
+    print(f"canonical: waiting for authority `{authority}` report")
+    return None
 
 def export_recent_local(mem_wl: Path, local_wl: Path, host: str, days: int) -> int:
     n = 0

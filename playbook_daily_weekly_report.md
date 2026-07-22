@@ -45,7 +45,7 @@ bash ~/.dc-platform/scripts/sync-memory-git.sh
 | 合并稿（必读） | `~/.dc-platform/memory/work-log/YYYY-MM-DD.md` |
 | 各机原文 | `~/.dc-platform/memory/work-log/hosts/<new-mac\|old-mac>/` |
 | 本机习惯落盘 | `CHcode/.cursor/work-log/`（脚本会导出到 hosts） |
-| 正式日报（权威） | `~/.dc-platform/memory/work-log/reports/YYYY-MM-DD-日报.md`（并镜像到本机 `.cursor/work-log/reports/`） |
+| 正式日报（权威） | `~/.dc-platform/memory/work-log/reports/YYYY-MM-DD-日报.md` · **以旧 Mac（old-mac）稿为准**；新机只贡献 hosts 流水 |
 
 ## 日报流程（生成 → 记录）
 

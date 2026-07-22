@@ -37,11 +37,18 @@ export WORKLOG_HOST_ID=new-mac   # 或 old-mac
 ```
 
 建议：
-- 新 Mac（编码机）→ `new-mac`
-- 旧 Mac（bot 机）→ `old-mac`
+- 新 Mac（编码机）→ `new-mac`（只贡献流水）
+- 旧 Mac（bot 机）→ `old-mac`（**正式日报权威**）
 
-## 禁止
+正式日报以文件 `work-log/AUTHORITY_HOST` 为准（当前：`old-mac`）。
 
-- 不要把 token / `.env` 写进 work-log
-- 不要只根据当前 Cursor 会话写日报（必须读合并稿）
-- 正式日报不要两台各留一份长期分叉；以 `work-log/reports/` 为准
+## 正式日报权威（主人 2026-07-22）
+
+**以旧 Mac（`old-mac`）为准。**
+
+| 机器 | host id | 权限 |
+|------|---------|------|
+| 旧 Mac（bot 常驻） | `old-mac` | 可覆盖 `work-log/reports/` 正式日报 |
+| 新 Mac（编码） | `new-mac` | 只贡献 `hosts/new-mac/` 流水；**不得**覆盖正式日报 |
+
+写日报 / 21:30 自动出报：优先在**旧 Mac**生成正式稿；新 Mac 先把任务写进本机 work-log 并 sync，旧机合并后再定稿。
