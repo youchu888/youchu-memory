@@ -17,7 +17,6 @@ import argparse
 import os
 import re
 import socket
-import shutil
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
