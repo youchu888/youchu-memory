@@ -33,17 +33,24 @@ if [[ -f "$MEM/.env.host" ]]; then
   source "$MEM/.env.host"
 fi
 
-# 防并发（定时任务与手动同时跑）
+# 防并发（定时任务与手动同时跑）；清掉无进程的残留锁
 LOCK="$MEM/.git/.memory-sync.lock"
+LOCKD="$MEM/.git/.memory-sync.lockd"
+if [[ -d "$LOCKD" ]]; then
+  if ! pgrep -f "sync-memory-git.sh" >/dev/null 2>&1; then
+    echo "warn: 清除残留同步锁 $LOCKD"
+    rmdir "$LOCKD" 2>/dev/null || true
+  fi
+fi
 if command -v shlock >/dev/null 2>&1; then :; fi
 exec 9>"$LOCK"
 if ! flock -n 9 2>/dev/null; then
   # macOS 无 flock 时退化为 mkdir 锁
-  if ! mkdir "$MEM/.git/.memory-sync.lockd" 2>/dev/null; then
+  if ! mkdir "$LOCKD" 2>/dev/null; then
     echo "另一同步进行中，跳过"
     exit 0
   fi
-  trap 'rmdir "$MEM/.git/.memory-sync.lockd" 2>/dev/null || true' EXIT
+  trap 'rmdir "$LOCKD" 2>/dev/null || true' EXIT
 fi
 
 # 双机 work-log：先导出本机流水到 hosts/<id>/，再进入 git 同步
@@ -59,9 +66,27 @@ else
   git commit -m "$MSG" || true
 fi
 
+# 先 fetch；移走会挡住 pull 的「未跟踪但远端已有」文件（常见：AUTHORITY_HOST）
+git fetch origin "$BRANCH"
+BACKUP_DIR="$MEM/.git/untracked-backup"
+mkdir -p "$BACKUP_DIR"
+while IFS= read -r f; do
+  [[ -z "$f" || ! -e "$f" ]] && continue
+  if git ls-files --error-unmatch "$f" >/dev/null 2>&1; then
+    continue
+  fi
+  # 远端已有同名路径 → 本地未跟踪会阻断 merge/ff
+  if git cat-file -e "origin/$BRANCH:$f" 2>/dev/null; then
+    dest="$BACKUP_DIR/$(echo "$f" | tr '/' '_')-$(date +%s)"
+    echo "warn: 移走未跟踪冲突文件 $f → $dest"
+    mv "$f" "$dest"
+  fi
+done < <(git ls-tree -r --name-only "origin/$BRANCH")
+
 # 先拉再推：两台互相协调，较新提交合并
 if ! git pull --rebase --autostash origin "$BRANCH"; then
   echo "pull --rebase 冲突：手动解决后 git add -A && git rebase --continue && git push"
+  echo "若仅被未跟踪文件挡住，可：rm 冲突文件后 git reset --hard origin/$BRANCH"
   git rebase --abort 2>/dev/null || true
   exit 2
 fi
