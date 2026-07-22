@@ -12,7 +12,9 @@ LOG_DIR="$HOME/.dc-platform/logs"
 INTERVAL_SEC="${INTERVAL_SEC:-600}"
 mkdir -p "$HOME/Library/LaunchAgents" "$LOG_DIR" "$STD_DIR"
 chmod +x "$HERE"/sync-memory-git.sh "$HERE"/install-memory-git-sync-launchd.sh "$HERE"/uninstall-memory-git-sync-launchd.sh 2>/dev/null || true
+chmod +x "$HERE"/worklog_dual_mac_sync.py 2>/dev/null || true
 cp -f "$HERE"/sync-memory-git.sh "$HERE"/install-memory-git-sync-launchd.sh "$HERE"/uninstall-memory-git-sync-launchd.sh "$STD_DIR/"
+cp -f "$HERE"/worklog_dual_mac_sync.py "$STD_DIR/" 2>/dev/null || true
 chmod +x "$STD_DIR"/sync-memory-git.sh "$STD_DIR"/install-memory-git-sync-launchd.sh "$STD_DIR"/uninstall-memory-git-sync-launchd.sh
 # plist 指向标准位置（稳定路径）
 SCRIPT="$STD_DIR/sync-memory-git.sh"

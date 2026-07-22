@@ -27,6 +27,12 @@ if ! git remote get-url origin >/dev/null 2>&1; then
   exit 1
 fi
 
+# 可选：固定本机 host id（new-mac / old-mac），避免 hostname 撞名
+if [[ -f "$MEM/.env.host" ]]; then
+  # shellcheck disable=SC1091
+  source "$MEM/.env.host"
+fi
+
 # 防并发（定时任务与手动同时跑）
 LOCK="$MEM/.git/.memory-sync.lock"
 if command -v shlock >/dev/null 2>&1; then :; fi
@@ -38,6 +44,12 @@ if ! flock -n 9 2>/dev/null; then
     exit 0
   fi
   trap 'rmdir "$MEM/.git/.memory-sync.lockd" 2>/dev/null || true' EXIT
+fi
+
+# 双机 work-log：先导出本机流水到 hosts/<id>/，再进入 git 同步
+WL_SYNC="$MEM/scripts/worklog_dual_mac_sync.py"
+if [[ -f "$WL_SYNC" ]]; then
+  python3 "$WL_SYNC" || echo "warn: worklog_dual_mac_sync 失败（继续 memory sync）"
 fi
 
 git add -A
@@ -53,5 +65,15 @@ if ! git pull --rebase --autostash origin "$BRANCH"; then
   git rebase --abort 2>/dev/null || true
   exit 2
 fi
+
+# 拉完后再合并一次（吸收对端 hosts/）
+if [[ -f "$WL_SYNC" ]]; then
+  python3 "$WL_SYNC" || true
+  if ! git diff --quiet || ! git diff --cached --quiet; then
+    git add -A
+    git commit -m "chore: merge dual-mac work-log $(date '+%Y-%m-%d %H:%M')" || true
+  fi
+fi
+
 git push origin "$BRANCH"
 echo "✓ memory 已同步 → $(git remote get-url origin) ($BRANCH) @$(date '+%H:%M:%S')"

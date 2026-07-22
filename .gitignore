@@ -18,3 +18,6 @@ group_chat/context.jsonl
 group_chat/_hot/
 tgbot_work_index.jsonl
 task_time_log.jsonl
+
+# 本机 host 身份（勿提交）
+.env.host
