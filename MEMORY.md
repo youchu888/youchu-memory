@@ -3,6 +3,7 @@
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
 > 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
 > **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
+- [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
 
 - [Dev Session 对外汉字名](lessons/2026-07-21-dev-session-display-name-format.md) — 发群/新建用【标签】表名 · 又初；禁 dev-xxx 与海豚 project_code 当对外名。
