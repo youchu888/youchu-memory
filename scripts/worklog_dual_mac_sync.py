@@ -177,15 +177,10 @@ def publish_canonical_report(mem_wl: Path, local_wl: Path, day: str, host: str) 
 
     canon = mem_wl / "reports" / f"{day}-日报.md"
     canon.write_text(body, encoding="utf-8")
-    # 镜像回本地，保证 Cursor 规则读本地也一致
+    # 仅镜像正式日报回本地；禁止把合并稿覆盖本机日流水（否则会套娃翻倍）
     local_wl.joinpath("reports").mkdir(parents=True, exist_ok=True)
     local_report.write_text(body, encoding="utf-8")
-    # 合并流水也镜像
-    merged = mem_wl / f"{day}.md"
-    if merged.exists():
-        shutil.copy2(merged, local_wl / f"{day}.md")
     return canon
-
 
 def export_recent_local(mem_wl: Path, local_wl: Path, host: str, days: int) -> int:
     n = 0
