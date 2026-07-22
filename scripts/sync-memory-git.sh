@@ -70,18 +70,21 @@ fi
 git fetch origin "$BRANCH"
 BACKUP_DIR="$MEM/.git/untracked-backup"
 mkdir -p "$BACKUP_DIR"
+REMOTE_LIST="$BACKUP_DIR/remote-files.$$.list"
+git ls-tree -r --name-only "origin/$BRANCH" >"$REMOTE_LIST"
 while IFS= read -r f; do
   [[ -z "$f" || ! -e "$f" ]] && continue
   if git ls-files --error-unmatch "$f" >/dev/null 2>&1; then
     continue
   fi
-  # 远端已有同名路径 → 本地未跟踪会阻断 merge/ff
+  # 远端已有同名路径 -> 本地未跟踪会阻断 merge/ff
   if git cat-file -e "origin/$BRANCH:$f" 2>/dev/null; then
     dest="$BACKUP_DIR/$(echo "$f" | tr '/' '_')-$(date +%s)"
-    echo "warn: 移走未跟踪冲突文件 $f → $dest"
+    echo "warn: move untracked conflict: $f -> $dest"
     mv "$f" "$dest"
   fi
-done < <(git ls-tree -r --name-only "origin/$BRANCH")
+done <"$REMOTE_LIST"
+rm -f "$REMOTE_LIST"
 
 # 先拉再推：两台互相协调，较新提交合并
 if ! git pull --rebase --autostash origin "$BRANCH"; then
@@ -101,4 +104,4 @@ if [[ -f "$WL_SYNC" ]]; then
 fi
 
 git push origin "$BRANCH"
-echo "✓ memory 已同步 → $(git remote get-url origin) ($BRANCH) @$(date '+%H:%M:%S')"
+echo "OK memory 已同步 -> $(git remote get-url origin) ($BRANCH) @$(date '+%H:%M:%S')"
