@@ -220,24 +220,18 @@ def publish_canonical_report(mem_wl: Path, local_wl: Path, day: str, host: str) 
             host_report.write_text(body if body.endswith("\n") else body + "\n", encoding="utf-8")
             print(f"canonical: non-authority `{host}` archived to hosts only (not overwriting)")
 
-    # 3) 若权威稿已在仓里，镜像到本机，保证新机读到旧机标准
-    preferred = None
+    # 3) 仅当权威机已上传 hosts 稿时，镜像到本机 + 写入 reports
     if auth_report.exists():
-        preferred = auth_report
-    elif canon.exists():
-        # 仅当权威机尚未上传 hosts 稿、但 reports 已有时沿用；若来自非权威则仍可被权威覆盖
-        preferred = canon
-    if preferred and preferred.exists():
-        body = _read_text(preferred)
+        body = _read_text(auth_report)
         if body.strip():
-            local_report.write_text(body if body.endswith("\n") else body + "\n", encoding="utf-8")
-            if preferred == auth_report:
-                canon.write_text(_stamp(body, authority), encoding="utf-8")
-            print(f"canonical: mirrored authority draft → local ({preferred.name})")
+            stamped = _stamp(body, authority)
+            canon.write_text(stamped, encoding="utf-8")
+            local_report.write_text(stamped, encoding="utf-8")
+            print(f"canonical: mirrored from hosts/{authority}/reports")
             return canon
 
-    print(f"canonical: waiting for authority `{authority}` report")
-    return None
+    print(f"canonical: waiting for authority `{authority}` report (hosts/{authority}/reports/{day}-日报.md)")
+    return canon if canon.exists() else None
 
 def export_recent_local(mem_wl: Path, local_wl: Path, host: str, days: int) -> int:
     n = 0
