@@ -1,39 +1,56 @@
 #!/usr/bin/env bash
-# 用 git 同步 ~/.dc-platform/memory（不依赖局域网 IP，可两台互相协调）
+# 用 git 全自动同步 ~/.dc-platform/memory（双 Mac，不依赖局域网）
+# - launchd 每 10 分钟
+# - work-log 双机合并
+# - rebase 冲突尽量自愈（work-log 时间戳类）；失败则安全回退到 origin 再推本机 hosts
 set -euo pipefail
 
 MEM="${MEMORY_GIT_DIR:-$HOME/.dc-platform/memory}"
 BRANCH="${MEMORY_GIT_BRANCH:-main}"
 MSG="${1:-chore: sync memory $(date '+%Y-%m-%d %H:%M') @$(hostname -s)}"
 
-# launchd 下 PATH/ssh 环境极简：显式补全
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$HOME/.local/bin:$PATH"
 SSH_KEY="${MEMORY_GIT_SSH_KEY:-$HOME/.ssh/id_ed25519}"
 if [[ -f "$SSH_KEY" ]]; then
   export GIT_SSH_COMMAND="ssh -i $SSH_KEY -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15"
 fi
 
+# 仓内脚本更新后，自动覆盖 launchd 用的标准副本（双机全自动升级）
+CANON="$MEM/scripts/sync-memory-git.sh"
+SELF="$(cd "$(dirname "$0")" && pwd)/$(basename "$0")"
+if [[ -f "$CANON" && "$CANON" -nt "$SELF" ]]; then
+  cp -f "$CANON" "$SELF"
+  chmod +x "$SELF"
+  exec bash "$SELF" "$@"
+fi
+
 cd "$MEM"
 
 if [[ ! -d .git ]]; then
   echo "尚未 git init：$MEM"
-  echo "见：~/.dc-platform/scripts/docs/memory_git_sync.md"
   exit 1
 fi
 
 if ! git remote get-url origin >/dev/null 2>&1; then
-  echo "未配置 origin。先建仓再："
-  echo "  cd $MEM && git remote add origin <URL> && git push -u origin $BRANCH"
+  echo "未配置 origin"
   exit 1
 fi
 
-# 可选：固定本机 host id（new-mac / old-mac），避免 hostname 撞名
 if [[ -f "$MEM/.env.host" ]]; then
   # shellcheck disable=SC1091
   source "$MEM/.env.host"
 fi
 
-# 防并发（定时任务与手动同时跑）；清掉无进程的残留锁
+# 清掉上次失败残留的 rebase/merge
+if [[ -d .git/rebase-merge || -d .git/rebase-apply ]]; then
+  echo "warn: 清除残留 rebase"
+  git rebase --abort 2>/dev/null || true
+fi
+if [[ -f .git/MERGE_HEAD ]]; then
+  echo "warn: 清除残留 merge"
+  git merge --abort 2>/dev/null || true
+fi
+
 LOCK="$MEM/.git/.memory-sync.lock"
 LOCKD="$MEM/.git/.memory-sync.lockd"
 if [[ -d "$LOCKD" ]]; then
@@ -42,10 +59,8 @@ if [[ -d "$LOCKD" ]]; then
     rmdir "$LOCKD" 2>/dev/null || true
   fi
 fi
-if command -v shlock >/dev/null 2>&1; then :; fi
 exec 9>"$LOCK"
 if ! flock -n 9 2>/dev/null; then
-  # macOS 无 flock 时退化为 mkdir 锁
   if ! mkdir "$LOCKD" 2>/dev/null; then
     echo "另一同步进行中，跳过"
     exit 0
@@ -53,11 +68,14 @@ if ! flock -n 9 2>/dev/null; then
   trap 'rmdir "$LOCKD" 2>/dev/null || true' EXIT
 fi
 
-# 双机 work-log：先导出本机流水到 hosts/<id>/，再进入 git 同步
 WL_SYNC="$MEM/scripts/worklog_dual_mac_sync.py"
-if [[ -f "$WL_SYNC" ]]; then
-  python3 "$WL_SYNC" || echo "warn: worklog_dual_mac_sync 失败（继续 memory sync）"
-fi
+_run_worklog() {
+  if [[ -f "$WL_SYNC" ]]; then
+    python3 "$WL_SYNC" || echo "warn: worklog_dual_mac_sync 失败（继续 memory sync）"
+  fi
+}
+
+_run_worklog
 
 git add -A
 if git diff --cached --quiet && git diff --quiet; then
@@ -66,8 +84,9 @@ else
   git commit -m "$MSG" || true
 fi
 
-# 先 fetch；移走会挡住 pull 的「未跟踪但远端已有」文件（常见：AUTHORITY_HOST）
 git fetch origin "$BRANCH"
+
+# 移走会挡住 pull 的「未跟踪但远端已有」文件
 BACKUP_DIR="$MEM/.git/untracked-backup"
 mkdir -p "$BACKUP_DIR"
 REMOTE_LIST="$BACKUP_DIR/remote-files.$$.list"
@@ -77,7 +96,6 @@ while IFS= read -r f; do
   if git ls-files --error-unmatch "$f" >/dev/null 2>&1; then
     continue
   fi
-  # 远端已有同名路径 -> 本地未跟踪会阻断 merge/ff
   if git cat-file -e "origin/$BRANCH:$f" 2>/dev/null; then
     dest="$BACKUP_DIR/$(echo "$f" | tr '/' '_')-$(date +%s)"
     echo "warn: move untracked conflict: $f -> $dest"
@@ -86,22 +104,86 @@ while IFS= read -r f; do
 done <"$REMOTE_LIST"
 rm -f "$REMOTE_LIST"
 
-# 先拉再推：两台互相协调，较新提交合并
-if ! git pull --rebase --autostash origin "$BRANCH"; then
-  echo "pull --rebase 冲突：手动解决后 git add -A && git rebase --continue && git push"
-  echo "若仅被未跟踪文件挡住，可：rm 冲突文件后 git reset --hard origin/$BRANCH"
+# 尝试自愈 rebase 冲突（主要针对 work-log 合并稿）
+_heal_rebase_conflicts() {
+  local conflicted only_safe=1
+  conflicted="$(git diff --name-only --diff-filter=U 2>/dev/null || true)"
+  [[ -z "$conflicted" ]] && return 1
+  echo "warn: rebase 冲突，尝试自愈："
+  echo "$conflicted"
+  while IFS= read -r f; do
+    [[ -z "$f" ]] && continue
+    case "$f" in
+      work-log/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].md)
+        # 日合并稿：先取远端，稍后用 worklog 脚本重算
+        git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
+        git add -- "$f"
+        ;;
+      work-log/hosts/*)
+        # 各机 hosts 目录：尽量两边都留——冲突时保留 ours，对端下一轮会再推
+        git checkout --ours -- "$f" 2>/dev/null || git checkout --theirs -- "$f"
+        git add -- "$f"
+        ;;
+      recall_index.jsonl|tgbot_session_carry.md|recall_shortcuts.md)
+        # 索引类：取较新策略——先 theirs，本机 distill 后会再写
+        git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
+        git add -- "$f"
+        ;;
+      *)
+        only_safe=0
+        echo "warn: 非白名单冲突，不敢自动解: $f"
+        ;;
+    esac
+  done <<< "$conflicted"
+  if [[ "$only_safe" != 1 ]]; then
+    return 1
+  fi
+  if GIT_EDITOR=true git rebase --continue; then
+    echo "OK: rebase 冲突已自愈"
+    return 0
+  fi
+  return 1
+}
+
+_pull_rebase() {
+  if git pull --rebase --autostash origin "$BRANCH"; then
+    return 0
+  fi
+  echo "warn: pull --rebase 失败，进入自愈"
+  if _heal_rebase_conflicts; then
+    return 0
+  fi
+  # 自愈失败：中止 rebase，硬对齐远端，再导出本机流水重推（全自动兜底）
+  echo "warn: 自愈失败 → reset 到 origin/$BRANCH 后重导本机 hosts"
   git rebase --abort 2>/dev/null || true
-  exit 2
-fi
+  git reset --hard "origin/$BRANCH"
+  _run_worklog
+  git add -A
+  if ! git diff --cached --quiet; then
+    git commit -m "chore: auto-heal resync $(date '+%Y-%m-%d %H:%M') @$(hostname -s)" || true
+  fi
+  return 0
+}
+
+_pull_rebase
 
 # 拉完后再合并一次（吸收对端 hosts/）
-if [[ -f "$WL_SYNC" ]]; then
-  python3 "$WL_SYNC" || true
-  if ! git diff --quiet || ! git diff --cached --quiet; then
-    git add -A
-    git commit -m "chore: merge dual-mac work-log $(date '+%Y-%m-%d %H:%M')" || true
-  fi
+_run_worklog
+if ! git diff --quiet || ! git diff --cached --quiet; then
+  git add -A
+  git commit -m "chore: merge dual-mac work-log $(date '+%Y-%m-%d %H:%M')" || true
 fi
 
-git push origin "$BRANCH"
-echo "OK memory 已同步 -> $(git remote get-url origin) ($BRANCH) @$(date '+%H:%M:%S')"
+# push；若被抢先则再拉一次自愈后推
+if ! git push origin "$BRANCH"; then
+  echo "warn: push 被拒，再拉一次后重推"
+  _pull_rebase
+  _run_worklog
+  git add -A
+  if ! git diff --cached --quiet || ! git diff --quiet; then
+    git commit -m "chore: sync after push-reject $(date '+%Y-%m-%d %H:%M')" || true
+  fi
+  git push origin "$BRANCH"
+fi
+
+echo "OK memory 已同步 -> $(git remote get-url origin) ($BRANCH) @$(date '+%H:%M:%S') [全自动]"
