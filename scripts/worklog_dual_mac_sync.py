@@ -108,6 +108,11 @@ def _iter_host_day_files(mem_wl: Path, day: str) -> list[tuple[str, Path]]:
     return out
 
 
+def _strip_merge_stamp(text: str) -> str:
+    """忽略「合并时间」行，避免每 10min 只改时间戳就触发 git 冲突。"""
+    return re.sub(r"(?m)^> 合并时间:.*\n?", "", text or "").strip()
+
+
 def merge_day(mem_wl: Path, day: str) -> Path:
     """合并各 host 当日流水 → work-log/YYYY-MM-DD.md（权威合并稿）。"""
     parts: list[str] = [
@@ -147,7 +152,12 @@ def merge_day(mem_wl: Path, day: str) -> Path:
         parts.append("")
 
     dst = mem_wl / f"{day}.md"
-    dst.write_text("\n".join(parts).rstrip() + "\n", encoding="utf-8")
+    new_text = "\n".join(parts).rstrip() + "\n"
+    old_text = dst.read_text(encoding="utf-8", errors="replace") if dst.exists() else ""
+    if _strip_merge_stamp(old_text) == _strip_merge_stamp(new_text):
+        # 实质内容未变：保留旧文件，不刷新合并时间（防双机空转冲突）
+        return dst
+    dst.write_text(new_text, encoding="utf-8")
     return dst
 
 
