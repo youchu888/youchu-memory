@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-yyyy-mm-dd-md-定稿全文-禁.md` | 2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-y |
+| ## 00 07 18 18h 2026 | `~/.dc-platform/memory/lessons/2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu-page-stay-18h-laun.md` | 2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu |
+| ## 07 2026 24 agent_session_rotate curl | `~/.dc-platform/memory/lessons/2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-curl-重发-成功后再报-已到达.md` | 2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-c |
+| .cursor dd.md log mm reports transcript | `sessions/tg-rotate-2026-07-24-0620.md` | 日报流程：**先**读 work-log + transcript + 派单来源 |
+| 00 18 18h com.youchu.page install launch | `sessions/tg-rotate-2026-07-24-0620.md` | 停 18:00 页面停留推狂人：卸载 launchd **`com.youchu |
+| +补 11.6 dws_user_tag_d_d prod —— —单 | `sessions/tg-rotate-2026-07-24-0620.md` | prod 海豚 `dws_user_tag_d_d` 单挂后补跑，T-1 约 * |
+| ci hadoop jar rsync sbt scala | `sessions/tg-rotate-2026-07-24-0620.md` | **卡点②**：集群 `hadoop-1` 无 sbt，Scala 改动只能 r |
+| 001 20260720 dev uid_map 与宽 再并 | `sessions/tg-rotate-2026-07-24-0620.md` | **卡点①**：`uid_map`（`dev-20260720-001`）是否与 |
+| 001 06 0） 20 20260719 20）已完成 | `sessions/tg-rotate-2026-07-24-0620.md` | DWM 四表 27 天补数（06-24~07-20）已完成；代码 `bbd40f |
+| daily dd.md lesson mm report reports | `sessions/tg-rotate-2026-07-24-0620.md` | [LESSON: daily-report,upload/日报上传云端须主人显式 |
+| 00 18 18h agent bus com | `sessions/tg-rotate-2026-07-24-0620.md` | [LESSON: page-stay,launchd,agent-bus/停 1 |
+| @mudan99_bot device dimuser unknown 为公 为 | `sessions/tg-rotate-2026-07-24-0620.md` | 群旁听 `@mudan99_bot` 的 device `unknown` 质疑 |
+| curl hung kill tg urllib 勿让 | `sessions/tg-rotate-2026-07-24-0620.md` | TG/群消息发送若 **urllib 超时**，kill 后改 **curl** |
+| 07 11.1 15 20 30 81 | `sessions/tg-rotate-2026-07-24-0620.md` | SF-81 Paimon 试点验数 PASS 后，宽表 `calc_dt=07- |
+| #5.2 +指 +行 +补 sanity） 一眼 | `sessions/tg-rotate-2026-07-24-0620.md` | 设备标签 #5.2 进度同步应分三块：**已完成**（验数结论+补数区间+行数+ |
 | ## ### 00 001 05 1. | `~/.dc-platform/memory/lessons/2026-05-29-dad-dau-layered-root-cause.md` | TJ-001 DAD 900w vs DAU 6k：分层根因与逐层核查法 |
 | .claude database datacheck_layered_verif | `~/.dc-platform/memory/lessons/2026-05-29-dad-dau-layered-root-cause.md` | 逐层核查剧本：`.claude/database/playbooks/datac |
 | .claude ads.ads_app_metrics_dai ads.ads_ | `~/.dc-platform/memory/lessons/2026-05-29-dad-dau-layered-root-cause.md` | Playbook：`.claude/database/playbooks/ads |
@@ -30,18 +45,3 @@
 | ## .claude .cursor .dc .session 1. | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | dc-platform 项目化：记忆统一与定期存档 |
 | .cursor archive end.sh hook hooks memory | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | hook：`.cursor/hooks/session-start-memory |
 | .cursor evolve self skill skill.md skill | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | skill：`.cursor/skills/self-evolve/SKILL. |
-| .cursor agent.mdc chu rules you 规则 | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | 规则：`.cursor/rules/you-chu-agent.mdc` |
-| dev platform task.yaml.project 「运 写海 写海豚 | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | `task.yaml.project` 写海豚项目名「运营系统」，与 dev p |
-| .claude .dc memory platform 分叉 双写 | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | 在 `.claude/memory/` 与 `~/.dc-platform/me |
-| ## ### ... 04.dws 1. 128 | `~/.dc-platform/memory/lessons/2026-06-17-starrocks-alter-default-and-pk-modify.md` | StarRocks ALTER：DEFAULT 裸数字 + 主键列禁止 MODI |
-| feedback feedback_starrocks_default_valu | `~/.dc-platform/memory/lessons/2026-06-17-starrocks-alter-default-and-pk-modify.md` | feedback：`feedback_starrocks_default_val |
-| 04.dws dim_app_attribution_config_add_is | `~/.dc-platform/memory/lessons/2026-06-17-starrocks-alter-default-and-pk-modify.md` | 脚本：`ops_system/04.dws/dws.dws_register_a |
-| 128 id insert select ui varchar | `~/.dc-platform/memory/lessons/2026-06-17-starrocks-alter-default-and-pk-modify.md` | **方案 B**：必须 128 → 建新表（uid varchar(128)）→ |
-| 64 uid varchar ≤64 保持 实际 | `~/.dc-platform/memory/lessons/2026-06-17-starrocks-alter-default-and-pk-modify.md` | **方案 A**：uid 实际 ≤64 → 保持 varchar(64)，跳过 |
-| ## +p ... .p .sql 04.dws | `~/.dc-platform/memory/lessons/2026-06-18-sql-etl-header-three-lines.md` | ETL SQL 文件头三行声明（task / doc / params） |
-| 04.dws 06.dim dws.dws_register_attributi | `~/.dc-platform/memory/lessons/2026-06-18-sql-etl-header-three-lines.md` | 已修：`ops_system/04.dws/dws.dws_register_a |
-| 04.dws dws_user_tag_d_d dws_user_tag_d_d | `~/.dc-platform/memory/lessons/2026-06-18-sql-etl-header-three-lines.md` | 范例：`ops_system/04.dws/dws_user_tag_d_d/d |
-| app dc platform server services sql_lint | `~/.dc-platform/memory/lessons/2026-06-18-sql-etl-header-three-lines.md` | 规范：`dc-platform-server/app/services/sql_ |
-| code error） lint ok put session.lint | `~/.dc-platform/memory/lessons/2026-06-18-sql-etl-header-three-lines.md` | 发布前 `session.lint(code)` 或海豚 put 前 lint  |
-| code dc missing_header platform referenc | `~/.dc-platform/memory/lessons/2026-06-18-sql-etl-header-three-lines.md` | VS Code / DC Platform：`missing_header_*` |
-| dt error forbidden_placeholder_in_comme  | `~/.dc-platform/memory/lessons/2026-06-18-sql-etl-header-three-lines.md` | 注释里写 `pt/dt` 或 `${pt}` 字面量 → `forbidden_ |

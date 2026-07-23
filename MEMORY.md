@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
+- [日报上传云端须主人显式指令；只传 `reports/日报-YYYY-MM](lessons/2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-yyyy-mm-dd-md-定稿全文-禁.md) — 会话轮换蒸馏
+- [停 18:00 页面停留推狂人须卸载 `com.youchu.page-](lessons/2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu-page-stay-18h-laun.md) — 会话轮换蒸馏
+- [TG 群发 urllib 超时则 kill 进程并改用 curl 重发，](lessons/2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-curl-重发-成功后再报-已到达.md) — 会话轮换蒸馏
 - [沉淀记忆快速召回](recall_shortcuts.md) — `recall_index.jsonl` token 秒查；TG prompt 自动注入；重建 `omdb/tgbot/memory_recall.py --rebuild`
 - [get_task_instance_log 约 64KB 截断拿不到 S](lessons/2026-07-23-get_task_instance_log-约-64kb-截断拿不到-sr-尾部错-需海豚-ui.md) — 会话轮换蒸馏
 - [单 task 秒级 FAIL 且补跑成功：先跑验恢复四件套再判瞬时资源问](lessons/2026-07-23-单-task-秒级-fail-且补跑成功-先跑验恢复四件套再判瞬时资源问题-不必改-sql.md) — 会话轮换蒸馏

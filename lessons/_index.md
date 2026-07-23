@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-24 | [日报上传云端须主人显式指令；只传 `reports/日报-YYYY-MM-DD.](./2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-yyyy-mm-dd-md-定稿全文-禁.md) | daily-report,upload,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-24 | [停 18:00 页面停留推狂人须卸载 `com.youchu.page-stay](./2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu-page-stay-18h-laun.md) | page-stay,launchd,agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-24 | [TG 群发 urllib 超时则 kill 进程并改用 curl 重发，成功后再](./2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-curl-重发-成功后再报-已到达.md) | tg-send,urllib,curl,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-23 | [get_task_instance_log 约 64KB 截断拿不到 SR 尾部](./2026-07-23-get_task_instance_log-约-64kb-截断拿不到-sr-尾部错-需海豚-ui.md) | dolphin,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-23 | [单 task 秒级 FAIL 且补跑成功：先跑验恢复四件套再判瞬时资源问题，不必](./2026-07-23-单-task-秒级-fail-且补跑成功-先跑验恢复四件套再判瞬时资源问题-不必改-sql.md) | dolphin,datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-23 | [prod 集群 SSH 用 ec2-user@175.41.188.204，勿用](./2026-07-23-prod-集群-ssh-用-ec2-user-175-41-188-204-勿用-hadoop-.md) | dolphin,ssh,session-rotate | 会话轮换前自动蒸馏 |
