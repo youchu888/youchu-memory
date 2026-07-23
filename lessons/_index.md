@@ -2,6 +2,10 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-23 | [get_task_instance_log 约 64KB 截断拿不到 SR 尾部](./2026-07-23-get_task_instance_log-约-64kb-截断拿不到-sr-尾部错-需海豚-ui.md) | dolphin,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-23 | [单 task 秒级 FAIL 且补跑成功：先跑验恢复四件套再判瞬时资源问题，不必](./2026-07-23-单-task-秒级-fail-且补跑成功-先跑验恢复四件套再判瞬时资源问题-不必改-sql.md) | dolphin,datacheck,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-23 | [prod 集群 SSH 用 ec2-user@175.41.188.204，勿用](./2026-07-23-prod-集群-ssh-用-ec2-user-175-41-188-204-勿用-hadoop-.md) | dolphin,ssh,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-23 | [会话轮换必须先沉淀再清空](./2026-07-23-session-rotate-must-distill-first.md) | tg,session-rotate,self-evolve,feedback | 清 resume 前必蒸馏；carry+lesson+通知 |
 | 2026-07-21 | [Dev Session 对外汉字名 · 禁 code/项目id](./2026-07-21-dev-session-display-name-format.md) | dev-session, naming, feedback, tg, project | 发群/新建用【标签】表名 · 又初；禁 dev-xxx 与海豚 project_code 对外 |
 | 2026-07-22 | [双 Mac work-log 统一后再写日报](./2026-07-22-dual-mac-worklog-unified-daily-report.md) | daily-report, work-log, dual-mac, sync | hosts 分流+合并；sync-memory-git 自动导出；正式稿进 memory/work-log/reports |
 | 2026-07-15 | [日报周报语气：通俗但正式](./2026-07-15-report-plain-but-formal-style.md) | daily-report, weekly-report, writing-style, communication | 主人钦定；非技术看懂+书面语气；术语翻业务话、禁口语俚语；playbook+daily-report.mdc 已同步 |

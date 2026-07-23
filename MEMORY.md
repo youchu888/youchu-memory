@@ -5,6 +5,11 @@
 > **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
+- [沉淀记忆快速召回](recall_shortcuts.md) — `recall_index.jsonl` token 秒查；TG prompt 自动注入；重建 `omdb/tgbot/memory_recall.py --rebuild`
+- [get_task_instance_log 约 64KB 截断拿不到 S](lessons/2026-07-23-get_task_instance_log-约-64kb-截断拿不到-sr-尾部错-需海豚-ui.md) — 会话轮换蒸馏
+- [单 task 秒级 FAIL 且补跑成功：先跑验恢复四件套再判瞬时资源问](lessons/2026-07-23-单-task-秒级-fail-且补跑成功-先跑验恢复四件套再判瞬时资源问题-不必改-sql.md) — 会话轮换蒸馏
+- [prod 集群 SSH 用 ec2-user@175.41.188.20](lessons/2026-07-23-prod-集群-ssh-用-ec2-user-175-41-188-204-勿用-hadoop-.md) — 会话轮换蒸馏
+- [会话轮换必须先沉淀再清空](lessons/2026-07-23-session-rotate-must-distill-first.md) — 清 resume 前必蒸馏；热携带进新会话 prompt。
 
 - [Dev Session 对外汉字名](lessons/2026-07-21-dev-session-display-name-format.md) — 发群/新建用【标签】表名 · 又初；禁 dev-xxx 与海豚 project_code 当对外名。
 - [2026-07-01 归因 P0 全日归档](sessions/2026-07-01-attribution-p0-daily-archive.md) — bus#652~723 时间线、资产索引、未完成项；同类任务总入口。
