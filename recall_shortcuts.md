@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 2026 24 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-07-24-跨-agent-分工对齐走-bus-互督-checkpoint-不在群里公开回复派活细节.md` | 2026-07-24-跨-agent-分工对齐走-bus-互督-checkpoi |
+| ## 07 2026 24 agent_session_rotate all | `~/.dc-platform/memory/lessons/2026-07-24-归因-apply-须同步回写-dim_user_daily_snapshot-t-1-分区-ch.md` | 2026-07-24-归因-apply-须同步回写-dim_user_daily |
+| ## 07 2026 24 agent_session_rotate atten | `~/.dc-platform/memory/lessons/2026-07-24-查岗-handler-未命中须打-debug-日志-触发条件收成-抽查群-即尝试解析-勿依赖固定.md` | 2026-07-24-查岗-handler-未命中须打-debug-日志-触发条 |
+| dim is_rewrite_channel is_run organic re | `sessions/tg-rotate-2026-07-24-2111.md` | **回写开关与条件**：`is_run=1` 才算归因；`is_rewrite_ |
+| apply channel_appl channel_apply dim.cha | `sessions/tg-rotate-2026-07-24-2111.md` | **归因回写顺序**：`dim_user_all` 构建 → `result_d |
+| 15（early）+ 50（full） @0 @00 @04 _d | `sessions/tg-rotate-2026-07-24-2111.md` | **快照调度**：早窗 `wf_用户日快照_日` @00:15（early）+  |
+| 002 20260713 23 app_id dev dim.dim_user_ | `sessions/tg-rotate-2026-07-24-2111.md` | **用户日增量表**：`dim.dim_user_daily_snapshot` |
+| .env end false set_leave_day.py tg_work_ | `sessions/tg-rotate-2026-07-24-2111.md` | **绿点配置入口**：`.env` 的 `TG_WORK_ONLINE_STAR |
+| 09 22 30 30–22 45s com.youchu.tg | `sessions/tg-rotate-2026-07-24-2111.md` | **TG 绿点保活**：`com.youchu.tg-work-online`  |
+| all apply attribution channel dim dim_us | `sessions/tg-rotate-2026-07-24-2111.md` | [LESSON: attribution,dim/归因 apply 须同步回写  |
+| attendance debug handler lesson marker t | `sessions/tg-rotate-2026-07-24-2111.md` | [LESSON: attendance,tgbot/查岗 handler 未命中 |
+| curl prod select tg update urllib | `sessions/tg-rotate-2026-07-24-2111.md` | 运维小坑**：TG 群发 urllib 易超时，改 curl；主人说「不要在群里 |
+| handler marker re return telethon 且未 | `sessions/tg-rotate-2026-07-24-2111.md` | 查岗未回根因**：进程未断，旧 handler 条件过严（固定 marker + |
+| apply channel_apply dim.channel dim_user | `sessions/tg-rotate-2026-07-24-2111.md` | 归因回写顺序**：`dim_user_all` 构建 → `result_d`  |
+| 002 20260713 23 app_id dev dim.dim_user_ | `sessions/tg-rotate-2026-07-24-2111.md` | 用户日增量表**：`dim.dim_user_daily_snapshot`（替 |
 | ## 07 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-yyyy-mm-dd-md-定稿全文-禁.md` | 2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-y |
 | ## 00 07 18 18h 2026 | `~/.dc-platform/memory/lessons/2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu-page-stay-18h-laun.md` | 2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu |
 | ## 07 2026 24 agent_session_rotate curl | `~/.dc-platform/memory/lessons/2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-curl-重发-成功后再报-已到达.md` | 2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-c |
@@ -30,18 +45,3 @@
 | ads anon count device_id distinct dw | `~/.dc-platform/memory/lessons/2026-05-29-dad-dau-layered-root-cause.md` | DW anon `COUNT(DISTINCT device_id)` = DW |
 | 04.dws active_devices） dws dws_app_user_ | `~/.dc-platform/memory/lessons/2026-05-29-dad-dau-layered-root-cause.md` | `ops_system/04.dws/dws_app_user_active/d |
 | .s coalesce dml ods ods_app_page_view op | `~/.dc-platform/memory/lessons/2026-05-29-dad-dau-layered-root-cause.md` | `operating-system/ods/dml/dml-ods_app_pa |
-| 02.dwd dwd_app_page_view_d dwd_app_page_ | `~/.dc-platform/memory/lessons/2026-05-29-dad-dau-layered-root-cause.md` | `ops_system/02.dwd/job_dwd_page_type_d/d |
-| 05.ads 38 ads_app_metri ads_app_metrics_ | `~/.dc-platform/memory/lessons/2026-05-29-dad-dau-layered-root-cause.md` | `ops_system/05.ads/job_ads_app_metrics_d |
-| ## %d %h %m %y ... | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | 海豚 wf 发布后 schedule 仍 OFFLINE，下游 DEPENDEN |
-| dolphin_rules dolphin_rules.md extension | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | 发布 5 步规范：`vscode-extension/server-mcp/pr |
-| app dc dolphin_client.py platform remove | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | 代码：`dc-platform-server/app/services/dolp |
-| 02.dwd dwd_video_event_h dwd_video_event | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | SQL：`ops_system/02.dwd/dwd_video_event_h |
-| 21869808631296 21869819703040 95 98 _小 _ | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | 工作流：`wf_视频事件_小时` wf=21869808631296 sched |
-| 24 hour_partition1 localparams task yyyy | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | `hour_partition1/2/3` 由 task localParams |
-| 24 dd dt_partition1 mm yyyy | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | `dt_partition1/2/3` = `$[yyyy-MM-dd-1/24 |
-| 00 dd hh hour_end_time mm yyyy | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | `hour_end_time` = `$[yyyy-MM-dd HH:00:00 |
-| 24 hour_start_time1 | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | `hour_start_time1/2/3` = `-1/24`、`-2/24` |
-| 00 24 dd hh hour_start_time mm | `~/.dc-platform/memory/lessons/2026-06-13-dolphin-publish-schedule-offline.md` | `hour_start_time` = `$[yyyy-MM-dd HH:00: |
-| ## .claude .cursor .dc .session 1. | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | dc-platform 项目化：记忆统一与定期存档 |
-| .cursor archive end.sh hook hooks memory | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | hook：`.cursor/hooks/session-start-memory |
-| .cursor evolve self skill skill.md skill | `~/.dc-platform/memory/lessons/2026-06-17-dc-platform-projectization.md` | skill：`.cursor/skills/self-evolve/SKILL. |

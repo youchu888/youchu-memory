@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-24 | [跨 Agent 分工对齐走 bus 互督 checkpoint，不在群里公开回复](./2026-07-24-跨-agent-分工对齐走-bus-互督-checkpoint-不在群里公开回复派活细节.md) | agent-bus,tg,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-24 | [归因 apply 须同步回写 `dim_user_daily_snapshot`](./2026-07-24-归因-apply-须同步回写-dim_user_daily_snapshot-t-1-分区-ch.md) | attribution,dim,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-24 | [查岗 handler 未命中须打 debug 日志，触发条件收成「抽查群 @ 即](./2026-07-24-查岗-handler-未命中须打-debug-日志-触发条件收成-抽查群-即尝试解析-勿依赖固定.md) | attendance,tgbot,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-24 | [日报上传云端须主人显式指令；只传 `reports/日报-YYYY-MM-DD.](./2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-yyyy-mm-dd-md-定稿全文-禁.md) | daily-report,upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-24 | [停 18:00 页面停留推狂人须卸载 `com.youchu.page-stay](./2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu-page-stay-18h-laun.md) | page-stay,launchd,agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-24 | [TG 群发 urllib 超时则 kill 进程并改用 curl 重发，成功后再](./2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-curl-重发-成功后再报-已到达.md) | tg-send,urllib,curl,session-rotate | 会话轮换前自动蒸馏 |

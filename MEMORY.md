@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
+- [跨 Agent 分工对齐走 bus 互督 checkpoint，不在群里](lessons/2026-07-24-跨-agent-分工对齐走-bus-互督-checkpoint-不在群里公开回复派活细节.md) — 会话轮换蒸馏
+- [归因 apply 须同步回写 `dim_user_daily_snaps](lessons/2026-07-24-归因-apply-须同步回写-dim_user_daily_snapshot-t-1-分区-ch.md) — 会话轮换蒸馏
+- [查岗 handler 未命中须打 debug 日志，触发条件收成「抽查群](lessons/2026-07-24-查岗-handler-未命中须打-debug-日志-触发条件收成-抽查群-即尝试解析-勿依赖固定.md) — 会话轮换蒸馏
 - [日报上传云端须主人显式指令；只传 `reports/日报-YYYY-MM](lessons/2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-yyyy-mm-dd-md-定稿全文-禁.md) — 会话轮换蒸馏
 - [停 18:00 页面停留推狂人须卸载 `com.youchu.page-](lessons/2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu-page-stay-18h-laun.md) — 会话轮换蒸馏
 - [TG 群发 urllib 超时则 kill 进程并改用 curl 重发，](lessons/2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-curl-重发-成功后再报-已到达.md) — 会话轮换蒸馏

@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-07-24 · 最新归档：`sessions/tg-rotate-2026-07-24-0620.md`
+> 更新：2026-07-24 · 最新归档：`sessions/tg-rotate-2026-07-24-2111.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 用户日增量表**：`dim.dim_user_daily_snapshot`（替代已停 SCD2 拉链 `dim_user_zipper`）；session `dev-20260713-002`；PK `(dt, app_id, uid)`，23 列；勿与 `dws_user_finance_d`（金额专项）混淆。
+- 归因回写顺序**：`dim_user_all` 构建 → `result_d` 计算 → `channel_apply` 回写 → 下游读 `dim.channel`；禁止单独重跑 result，补数须 **result → apply 级联**。
+- 查岗未回根因**：进程未断，旧 handler 条件过严（固定 marker + 固定题干格式）且未命中时**静默 return 无日志**；Telethon 链路正常。
+- 运维小坑**：TG 群发 urllib 易超时，改 curl；主人说「不要在群里回复」时只私聊/查日志；SELECT 模拟 UPDATE 可先行验 prod 待回写行再提交。
+- [LESSON: attendance,tgbot|查岗 handler 未命中须打 debug 日志，触发条件收成「抽查群 @ 即尝试解析」，勿依赖固定 marker 字符串]
+- [LESSON: attribution,dim|归因 apply 须同步回写 `dim_user_daily_snapshot` T-1 分区 channel，与 all 表同口径；禁止单独重跑 result]
+- **TG 绿点保活**：`com.youchu.tg-work-online` 仅工作日 **09:30–22:30** 自动在线；周日/法定假/请假日不连；用户不必开 TG，每 45s ping 一次；22:30 自动下线变灰；与 `tgbot-daemon` 独立。
+- **绿点配置入口**：`.env` 的 `TG_WORK_ONLINE_START/END`；`TG_WORK_ONLINE_ENABLED=false` 可关；请假跑 `set_leave_day.py` 当天跳过连线。
+- **用户日增量表**：`dim.dim_user_daily_snapshot`（替代已停 SCD2 拉链 `dim_user_zipper`）；session `dev-20260713-002`；PK `(dt, app_id, uid)`，23 列；勿与 `dws_user_finance_d`（金额专项）混淆。
+- **快照调度**：早窗 `wf_用户日快照_日` @00:15（early）+ 全量挂 `wf_dim_维度_日` @04:50（full）；宇宙四源 pv/login/register/order_paid，当日有任一动作才入表。
+- **归因回写顺序**：`dim_user_all` 构建 → `result_d` 计算 → `channel_apply` 回写 → 下游读 `dim.channel`；禁止单独重跑 result，补数须 **result → apply 级联**。
+- **回写开关与条件**：`is_run=1` 才算归因；`is_rewrite_channel=1` 才真写 dim；success + 渠道非 organic + dim 当前 organic/空才覆盖；**不动** `register_channel`；已有真实非 organic 渠道不覆盖。
+- **快照 channel 回写（新增）**：apply 任务 Step2 同步 UPDATE `dim_user_daily_snapshot` **仅 dt=T-1**；规则与 all 表对齐；S1b 不碰已有行 channel；`rewrite_status` 仍以 all 表为准。
+- **归因失败诊断（HTML）**：YD 系无数据→查 app 上线与 `user_register` 上报；多数 JHG→`is_run` 未配 + 客户端 `attribution_flag:0`；JHG-004 已开但落地页候选缺失、打分&lt;40、`device_brand/model` 全空。
+- **查岗未回根因**：进程未断，旧 handler 条件过严（固定 marker + 固定题干格式）且未命中时**静默 return 无日志**；Telethon 链路正常。
 - 设备标签 #5.2 进度同步应分三块：**已完成**（验数结论+补数区间+行数+指标 sanity）、**卡点**（待拍板/环境阻塞）、**下一步**（stage/依赖项），便于群聊一眼扫清
 - SF-81 Paimon 试点验数 PASS 后，宽表 `calc_dt=07-20` 约 11.1 万行；核查重点看 **avg7/15/30 未塌缩**、**lifecycle 分布正常**
 - TG/群消息发送若 **urllib 超时**，kill 后改 **curl** 重发；勿让 hung 请求占着
-- 群旁听 `@mudan99_bot` 的 device `unknown` 质疑：device 为公共字段、清洗后仅四值；查 **dimuser 脚本**溯源，勿凭宽表侧猜测
-- [LESSON: page-stay,launchd,agent-bus|停 18:00 页面停留推狂人须卸载 `com.youchu.page-stay-18h` launchd，勿只改脚本不卸定时]
-- [LESSON: daily-report,upload|日报上传云端须主人显式指令；只传 `reports/日报-YYYY-MM-DD.md` 定稿全文，禁止改字或夹带其它文件]
-- DWM 四表 27 天补数（06-24~07-20）已完成；代码 `bbd40f38` 已推 `origin/dev`，平台 session `dev-20260719-001` 已到 **stage4**
-- **卡点①**：`uid_map`（`dev-20260720-001`）是否与宽表并行，需知秋拍板后再并行推进
-- **卡点②**：集群 `hadoop-1` 无 sbt，Scala 改动只能 rsync 旧 jar；需装 sbt 或走 **CI 编新 jar** 才能跟进
-- prod 海豚 `dws_user_tag_d_d` 单挂后补跑，T-1 约 **11.6 亿行**恢复——单挂定位+补跑是日报级可写成果
-- 停 18:00 页面停留推狂人：卸载 launchd **`com.youchu.page-stay-18h`**；手动验数用 `PAGE_STAY_FORCE=1` 跑脚本，恢复定时用 `install-page-stay-18h-launchd.sh`
-- 日报流程：**先**读 work-log + transcript + 派单来源 → 落 `.cursor/work-log/reports/日报-YYYY-MM-DD.md` → **仅主人明说「上传云端」**才调上传脚本
-- 云端上传只读定稿 Markdown **原封不动** POST `report/submit`；同日同类型覆盖；核对时说明文件路径、类型、日期、工号即可
-- prod 海豚晨检：`get_running_summary` + 当日 `FAILURE` 实例；先判「整 wf 挂」还是「单 task 挂」
-- `dws_user_tag_d_d` 在 **`wf_ads_日报表_日`**，不在 `wf_dws_汇总_日`；查失败勿只盯 dws 汇总 wf
-- 同 wf 其它 task 全 SUCCESS、仅 1 task FAIL → 优先怀疑该 task 瞬时问题，非全链路/SQL 口径
-- 17 秒即 FAIL** 不像 OOM（内存爆通常跑更久）；较像 SR 连接池/内存瞬时竞争
-- `fail_retry_times=0` 一次失败即标 wf FAILURE；防复发可设 1~2 次重试，或与最重 ads 任务错开几分钟
 
