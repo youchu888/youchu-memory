@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-24 03:20:42",
+  "last_run": "2026-07-24 09:11:50",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1010,8 +1010,11 @@
       "2026-07-22 23:12:01|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 说啥呢，你去看dimuser的脚本啊，看看这个unknow哪里来的。device是公共字段，直接就被清洗的只剩下四个值。你说的情况只有一种就是清洗的有漏网之鱼，但这个不可能啊，字典就那么多。||observe",
       "2026-07-22 23:23:58|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 缺省值是因为没有pv事件是吗？||observe",
       "2026-07-22 23:34:37|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 记下来，缺省的换成OTHER，虽然还是会有other。另一个问题是，出这个未知的是缺少pv但是有登录吗？||observe"
+    ],
+    "2026-07-23": [
+      "2026-07-23 07:53:56|telegram_dm|8740305767|[私聊#197] 查一下prod海豚报错原因|正在查 prod 海豚报错原因。\n## prod 海豚报错结论（07-23）\n\n今日 prod **只有一处定时失败**，且**已补跑恢复**。\n\n### 失败点\n\n| 项 | 值 |\n|---|---|\n| 工作流 | `wf_ads_日报表_日`（prod_primary） |\n| 实例 | PI **#24976**（SCHEDULER，07:25 触发） |\n| 失败 task | **`dws_user_tag_d_d`**（ti#73888） |\n| 耗时 | **17 秒**即 FAIL（07:44:16 → 07:44:33） |\n| 同 wf 其他 task | **20/20 SUCCESS**（含 dwm 三表、ads 日报全套） |\n\n`wf_dws_汇总_日` 今早 06:25 **SUCCESS**（约 8 分钟）；当前 **无 RUNNING** 实例。\n\n### 已恢复\n\n| 项 | 值 |\n|---|---|\n| 补跑 | PI **#24978**（COMPLEMENT_DATA，知秋 07:57 触发） |\n| 结果 | `dws_user_tag_d_d` ti#73891 **SUCCESS**（3 分 25 秒） |\n| 数据 | `dws.dws_user_tag_d_d` **dt=2026-07-22** ≈ **11.63 亿行**，`max_etl=2026-07-23 06:57:57` |\n| 上游 | dwm active/video/ad（07-22）均有数：2275万 / 851万 / 523万 |\n| 质量 | lifecycle 九档均有分布（churn/silent/dormant/…），不像空跑或语法全挂 |\n\n### 原因判断（高置信）\n\n1. **不是 SQL 口径/上游缺数**：补跑同 SQL 3 分钟成功，DWM 也有数。\n2. **不是长时间 OOM**：只跑了 17 秒；若是内存爆通常会跑更久才挂。\n3. **较像瞬时资源/连接问题**：`dws_user_tag` 紧跟 `ads_app_metrics_daily_d`（07:35–07:41，重查询约 6 分钟）之后启动，可能与 SR 连接池/内存瞬时竞争有关。\n4. **无自动重试**：该 task `fail_retry_times=0`，一次失败即把整个 wf 标 FAILURE。\n\n### 日志限制\n\n平台 `dolphin.get_task_instance_log` 只拉到 **~64KB SQL 回显**，**尾部 SR 真错被截断**（平台已知坑：`api_v1.py` 注释里写过）。本地无法直连新 prod 海豚 worker 翻页 log，故拿不到 `Detail message: ...` 原文。\n|"
     ]
   },
-  "last_hot_lines": 21,
-  "last_archived_lines": 8
+  "last_hot_lines": 20,
+  "last_archived_lines": 1
 }
