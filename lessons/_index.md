@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-24 | [群聊问进度禁止秒回「行，我来」罐头 ACK](./2026-07-24-progress-ask-no-instant-ack.md) | tg, group, progress, instant-ack, self-evolve | 进度问 → direct 短报；禁 instant ack |
 | 2026-07-24 | [跨 Agent 分工对齐走 bus 互督 checkpoint，不在群里公开回复](./2026-07-24-跨-agent-分工对齐走-bus-互督-checkpoint-不在群里公开回复派活细节.md) | agent-bus,tg,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-24 | [归因 apply 须同步回写 `dim_user_daily_snapshot`](./2026-07-24-归因-apply-须同步回写-dim_user_daily_snapshot-t-1-分区-ch.md) | attribution,dim,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-24 | [查岗 handler 未命中须打 debug 日志，触发条件收成「抽查群 @ 即](./2026-07-24-查岗-handler-未命中须打-debug-日志-触发条件收成-抽查群-即尝试解析-勿依赖固定.md) | attendance,tgbot,session-rotate | 会话轮换前自动蒸馏 |
