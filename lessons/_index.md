@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-25 | [归因 shadow 读 Paimon register + landing cl](./2026-07-25-归因-shadow-读-paimon-register-landing-click-view-开.md) | attribution-shadow,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-25 | [群聊进度第一句给结论，回前核对 bus 实态，列点 ≤4 条用 `·`，验完 b](./2026-07-25-群聊进度第一句给结论-回前核对-bus-实态-列点-4-条用-验完-bus-结案再群里一句带过.md) | tg-group,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-25 | [影子压测用独立 Spark wf + `_shadow` 表，源侧对齐后再首跑，](./2026-07-25-影子压测用独立-spark-wf-_shadow-表-源侧对齐后再首跑-严禁动现网-sr.md) | paimon-shadow,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-24 | [群聊问进度禁止秒回「行，我来」罐头 ACK](./2026-07-24-progress-ask-no-instant-ack.md) | tg, group, progress, instant-ack, self-evolve | 进度问 → direct 短报；禁 instant ack |
 | 2026-07-24 | [跨 Agent 分工对齐走 bus 互督 checkpoint，不在群里公开回复](./2026-07-24-跨-agent-分工对齐走-bus-互督-checkpoint-不在群里公开回复派活细节.md) | agent-bus,tg,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-24 | [归因 apply 须同步回写 `dim_user_daily_snapshot`](./2026-07-24-归因-apply-须同步回写-dim_user_daily_snapshot-t-1-分区-ch.md) | attribution,dim,session-rotate | 会话轮换前自动蒸馏 |
