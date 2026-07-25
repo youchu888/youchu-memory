@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 2026 25 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-07-25-开通归因-配置表-is_run-1-客户端-attribution_flag-1-双开-诊断报告.md` | 2026-07-25-开通归因-配置表-is_run-1-客户端-attribu |
+| ## 07 2026 25 @mudan99_bot agent_session | `~/.dc-platform/memory/lessons/2026-07-25-提审-审核人用-mudan99_bot-野花-禁止-主人代审.md` | 2026-07-25-提审-审核人用-mudan99_bot-野花-禁止-主人代 |
+| ## 07 2026 25 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-07-25-本地合表-改-outputs-后立刻用平台-api-同步-session-勿假设插件已跟上.md` | 2026-07-25-本地合表-改-outputs-后立刻用平台-api-同步- |
+| .3 3. 3） ads）+ di dim（用户 | `sessions/tg-rotate-2026-07-25-1624.md` | 星型建模（v3.3）：中心宽事实（dws/ads）+ 少量共享 dim（用户/日 |
+| agent bus dt session test 上线 | `sessions/tg-rotate-2026-07-25-1624.md` | 上线前核查除群 @ 外，应用 agent-bus 私信审核人，写清 sessio |
+| @mudan99_bot @youchu8888 pending 丹） 主人 人 | `sessions/tg-rotate-2026-07-25-1624.md` | 群通知审核人须 @ 正确对象：主人 `@youchu8888` ≠ 审核人野花； |
+| 404 api daily delete task v2 | `sessions/tg-rotate-2026-07-25-1624.md` | 旧 daily task 平台 delete API 404 删不掉时，在提审材 |
+| design git memory session 会重 会重定向父 | `sessions/tg-rotate-2026-07-25-1624.md` | 子 session 的 design/memory 会重定向父 session， |
+| @mudan99_bot collaboration lesson 主人 主人代 | `sessions/tg-rotate-2026-07-25-1624.md` | [LESSON: collaboration/提审 @ 审核人用 `@mudan |
+| api dev lesson outputs session 件已 | `sessions/tg-rotate-2026-07-25-1624.md` | [LESSON: dev-session/本地合表/改 outputs 后立刻用 |
+| attribution_flag html result_d 不等于 交付 交付 | `sessions/tg-rotate-2026-07-25-1624.md` | 交付根因/修复建议 HTML **不等于** 已执行配置变更；查开通状态要同时看 |
+| bitmap） biz_dt dim join sum uv | `sessions/tg-rotate-2026-07-25-1624.md` | 星型六原则：事实优先、每源每 biz_dt 单次扫描、dim JOIN 克制、度 |
+| a） dim.dim dim.dim_user_all ip prod regi | `sessions/tg-rotate-2026-07-25-1624.md` | 口径争议以 **prod 海豚线上 SQL** 为准，勿只看仓库；用户订单模型  |
+| pass pi publish request reviewer task | `sessions/tg-rotate-2026-07-25-1624.md` | test 闭环顺序：海豚发布 v2 task → 补跑 PI 成功 → T-1  |
+| 4→ api daily ddl dev etl | `sessions/tg-rotate-2026-07-25-1624.md` | 本地 ETL 合表（4→2、`stat_grain=session/daily` |
 | ## 07 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-25-page_stay-是-uid-dt-事实表-session_duration-是多维预聚合-合.md` | 2026-07-25-page_stay-是-uid-dt-事实表-sessio |
 | ## 07 113 132 2026 212 | `~/.dc-platform/memory/lessons/2026-07-25-test-上-dws-删表-改-pk-用-root-43-212-113-132-9030-勿用.md` | 2026-07-25-test-上-dws-删表-改-pk-用-root-43- |
 | ## 07 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-25-五档-dws-合表用-stat_grain-区分单次-日均-查询必带该列-否则两种-y-轴会混算.md` | 2026-07-25-五档-dws-合表用-stat_grain-区分单次-日均 |
@@ -30,18 +45,3 @@
 | shadow spark sr wf 不动 不动现网 | `sessions/tg-rotate-2026-07-25-0601.md` | Shadow 压测走 Spark 另起链路，**不动现网 SR**；表名带 `_ |
 | _p _压 _用 ai f_ im | `sessions/tg-rotate-2026-07-25-0601.md` | Paimon 影子压测双线：`A`=`paimon.dim.dim_user_d |
 | bus group lesson tg ≤4 一句 | `sessions/tg-rotate-2026-07-25-0601.md` | [LESSON: tg-group/群聊进度第一句给结论，回前核对 bus 实态 |
-| lesson paimon shadow spark sr wf | `sessions/tg-rotate-2026-07-25-0601.md` | [LESSON: paimon-shadow/影子压测用独立 Spark wf  |
-| @work @worker_ant_bot @youchu_ai_bot @yo | `sessions/tg-rotate-2026-07-25-0601.md` | 群聊你是 **初儿**（`@youchu_ai_bot`）；**禁止**让同事  |
-| agent bus bus」→ reply 「结 一句 | `sessions/tg-rotate-2026-07-25-0601.md` | 验数/派活若 bus 写明「结论请回 bus」→ **验完直接 agent-bu |
-| bus bus#5471 checkpoint 先核对 凭记 勿凭 | `sessions/tg-rotate-2026-07-25-0601.md` | 回群进度前**先核对 bus 实际进展**（如 bus#5471 / check |
-| ## 2~4 「还 」） 一句 两边 | `sessions/tg-rotate-2026-07-25-0601.md` | 群聊问进度：**第一句给结论**（如「还在对齐、两边都还没首跑」），再补 2~4 |
-| ## 07 2026 24 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-07-24-跨-agent-分工对齐走-bus-互督-checkpoint-不在群里公开回复派活细节.md` | 2026-07-24-跨-agent-分工对齐走-bus-互督-checkpoi |
-| ## 07 2026 24 agent_session_rotate all | `~/.dc-platform/memory/lessons/2026-07-24-归因-apply-须同步回写-dim_user_daily_snapshot-t-1-分区-ch.md` | 2026-07-24-归因-apply-须同步回写-dim_user_daily |
-| ## 07 2026 24 agent_session_rotate atten | `~/.dc-platform/memory/lessons/2026-07-24-查岗-handler-未命中须打-debug-日志-触发条件收成-抽查群-即尝试解析-勿依赖固定.md` | 2026-07-24-查岗-handler-未命中须打-debug-日志-触发条 |
-| dim is_rewrite_channel is_run organic re | `sessions/tg-rotate-2026-07-24-2111.md` | **回写开关与条件**：`is_run=1` 才算归因；`is_rewrite_ |
-| apply channel_appl channel_apply dim.cha | `sessions/tg-rotate-2026-07-24-2111.md` | **归因回写顺序**：`dim_user_all` 构建 → `result_d |
-| 15（early）+ 50（full） @0 @00 @04 _d | `sessions/tg-rotate-2026-07-24-2111.md` | **快照调度**：早窗 `wf_用户日快照_日` @00:15（early）+  |
-| 002 20260713 23 app_id dev dim.dim_user_ | `sessions/tg-rotate-2026-07-24-2111.md` | **用户日增量表**：`dim.dim_user_daily_snapshot` |
-| .env end false set_leave_day.py tg_work_ | `sessions/tg-rotate-2026-07-24-2111.md` | **绿点配置入口**：`.env` 的 `TG_WORK_ONLINE_STAR |
-| 09 22 30 30–22 45s com.youchu.tg | `sessions/tg-rotate-2026-07-24-2111.md` | **TG 绿点保活**：`com.youchu.tg-work-online`  |
-| all apply attribution channel dim dim_us | `sessions/tg-rotate-2026-07-24-2111.md` | [LESSON: attribution,dim/归因 apply 须同步回写  |

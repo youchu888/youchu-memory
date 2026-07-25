@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-25 | [开通归因=配置表 is_run=1 + 客户端 attribution_flag](./2026-07-25-开通归因-配置表-is_run-1-客户端-attribution_flag-1-双开-诊断报告.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-25 | [提审 @ 审核人用 `@mudan99_bot`（野花），禁止 @ 主人代审](./2026-07-25-提审-审核人用-mudan99_bot-野花-禁止-主人代审.md) | collaboration,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-25 | [本地合表/改 outputs 后立刻用平台 API 同步 session，勿假设](./2026-07-25-本地合表-改-outputs-后立刻用平台-api-同步-session-勿假设插件已跟上.md) | dev-session,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-25 | [星型模型设计 playbook 已沉淀](./2026-07-25-star-schema-design-playbook.md) | star-schema,design,dws,ads,playbook | 设计 DWS/ADS 前读 playbooks/star_schema_design.md；六原则+checklist |
 | 2026-07-25 | [page_stay 是 uid×dt 事实表，session_duration ](./2026-07-25-page_stay-是-uid-dt-事实表-session_duration-是多维预聚合-合.md) | duration_model,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-25 | [test 上 dws 删表/改 PK 用 root@43.212.113.132](./2026-07-25-test-上-dws-删表-改-pk-用-root-43-212-113-132-9030-勿用.md) | test_db,session-rotate | 会话轮换前自动蒸馏 |

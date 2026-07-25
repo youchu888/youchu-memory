@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
+- [开通归因=配置表 is_run=1 + 客户端 attribution_](lessons/2026-07-25-开通归因-配置表-is_run-1-客户端-attribution_flag-1-双开-诊断报告.md) — 会话轮换蒸馏
+- [提审 @ 审核人用 `@mudan99_bot`（野花），禁止 @ 主人](lessons/2026-07-25-提审-审核人用-mudan99_bot-野花-禁止-主人代审.md) — 会话轮换蒸馏
+- [本地合表/改 outputs 后立刻用平台 API 同步 session](lessons/2026-07-25-本地合表-改-outputs-后立刻用平台-api-同步-session-勿假设插件已跟上.md) — 会话轮换蒸馏
 - [星型模型设计 playbook](lessons/2026-07-25-star-schema-design-playbook.md) — 设计 DWS/ADS 前读 playbooks/star_schema_design.md
 - [page_stay 是 uid×dt 事实表，session_durat](lessons/2026-07-25-page_stay-是-uid-dt-事实表-session_duration-是多维预聚合-合.md) — 会话轮换蒸馏
 - [test 上 dws 删表/改 PK 用 root@43.212.113](lessons/2026-07-25-test-上-dws-删表-改-pk-用-root-43-212-113-132-9030-勿用.md) — 会话轮换蒸馏
