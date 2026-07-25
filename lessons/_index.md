@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-25 | [发布前三处代码必须一致 git/本地/海豚](./2026-07-25-publish-git-local-dolphin-triple-sync.md) | dolphin,git,publish,session-rotate | 发布完成=三处同 SHA；先 push 再发海豚；发布后 diff live SQL |
 | 2026-07-25 | [开通归因=配置表 is_run=1 + 客户端 attribution_flag](./2026-07-25-开通归因-配置表-is_run-1-客户端-attribution_flag-1-双开-诊断报告.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-25 | [提审 @ 审核人用 `@mudan99_bot`（野花），禁止 @ 主人代审](./2026-07-25-提审-审核人用-mudan99_bot-野花-禁止-主人代审.md) | collaboration,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-25 | [本地合表/改 outputs 后立刻用平台 API 同步 session，勿假设](./2026-07-25-本地合表-改-outputs-后立刻用平台-api-同步-session-勿假设插件已跟上.md) | dev-session,session-rotate | 会话轮换前自动蒸馏 |
