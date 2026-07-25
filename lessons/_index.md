@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-25 | [星型模型设计 playbook 已沉淀](./2026-07-25-star-schema-design-playbook.md) | star-schema,design,dws,ads,playbook | 设计 DWS/ADS 前读 playbooks/star_schema_design.md；六原则+checklist |
 | 2026-07-25 | [page_stay 是 uid×dt 事实表，session_duration ](./2026-07-25-page_stay-是-uid-dt-事实表-session_duration-是多维预聚合-合.md) | duration_model,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-25 | [test 上 dws 删表/改 PK 用 root@43.212.113.132](./2026-07-25-test-上-dws-删表-改-pk-用-root-43-212-113-132-9030-勿用.md) | test_db,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-25 | [五档 DWS 合表用 stat_grain 区分单次/日均，查询必带该列，否则两](./2026-07-25-五档-dws-合表用-stat_grain-区分单次-日均-查询必带该列-否则两种-y-轴会混算.md) | session_duration,session-rotate | 会话轮换前自动蒸馏 |
