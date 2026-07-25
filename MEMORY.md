@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
+- [page_stay 是 uid×dt 事实表，session_durat](lessons/2026-07-25-page_stay-是-uid-dt-事实表-session_duration-是多维预聚合-合.md) — 会话轮换蒸馏
+- [test 上 dws 删表/改 PK 用 root@43.212.113](lessons/2026-07-25-test-上-dws-删表-改-pk-用-root-43-212-113-132-9030-勿用.md) — 会话轮换蒸馏
+- [五档 DWS 合表用 stat_grain 区分单次/日均，查询必带该列](lessons/2026-07-25-五档-dws-合表用-stat_grain-区分单次-日均-查询必带该列-否则两种-y-轴会混算.md) — 会话轮换蒸馏
 - [归因 shadow 读 Paimon register + landin](lessons/2026-07-25-归因-shadow-读-paimon-register-landing-click-view-开.md) — 会话轮换蒸馏
 - [群聊进度第一句给结论，回前核对 bus 实态，列点 ≤4 条用 `·`，](lessons/2026-07-25-群聊进度第一句给结论-回前核对-bus-实态-列点-4-条用-验完-bus-结案再群里一句带过.md) — 会话轮换蒸馏
 - [影子压测用独立 Spark wf + `_shadow` 表，源侧对齐后](lessons/2026-07-25-影子压测用独立-spark-wf-_shadow-表-源侧对齐后再首跑-严禁动现网-sr.md) — 会话轮换蒸馏

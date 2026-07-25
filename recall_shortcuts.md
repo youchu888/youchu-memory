@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-25-page_stay-是-uid-dt-事实表-session_duration-是多维预聚合-合.md` | 2026-07-25-page_stay-是-uid-dt-事实表-sessio |
+| ## 07 113 132 2026 212 | `~/.dc-platform/memory/lessons/2026-07-25-test-上-dws-删表-改-pk-用-root-43-212-113-132-9030-勿用.md` | 2026-07-25-test-上-dws-删表-改-pk-用-root-43- |
+| ## 07 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-25-五档-dws-合表用-stat_grain-区分单次-日均-查询必带该列-否则两种-y-轴会混算.md` | 2026-07-25-五档-dws-合表用-stat_grain-区分单次-日均 |
+| daily deprecated） dws_session_daily_devi | `sessions/tg-rotate-2026-07-25-1205.md` | 合表后废弃：`dws_session_daily_user_d`、`dws_se |
+| bounce duration_bucket is_valid or sessi | `sessions/tg-rotate-2026-07-25-1205.md` | session 分支验数口径：`(is_valid=1 OR duration_ |
+| avg_daily_duration_sec avg_duration_sec  | `sessions/tg-rotate-2026-07-25-1205.md` | 统一统计字段：账号侧 `session_cnt/user_cnt/duratio |
+| all daily etl select session sql | `sessions/tg-rotate-2026-07-25-1205.md` | 合表 ETL 用两段 `SELECT UNION ALL` 写同一张表，**不能 |
+| dws_user_page_sta dws_user_page_stay_d 「 | `sessions/tg-rotate-2026-07-25-1205.md` | 用户说的「合表」指**五档线内部** 4 张 → 2 张（账号/设备各一张），不 |
+| +d +切 _b _s al at | `sessions/tg-rotate-2026-07-25-1205.md` | 项目里「时长」分两条线：`dws_user_page_stay_d`（页面停留/ |
+| duration_model lesson page_stay session_ | `sessions/tg-rotate-2026-07-25-1205.md` | [LESSON: duration_model/page_stay 是 uid× |
+| 90 9030 dc_admin dws lesson my.cnf.test | `sessions/tg-rotate-2026-07-25-1205.md` | [LESSON: test_db/test 上 dws 删表/改 PK 用 ro |
+| create ddl dr drop etl exists | `sessions/tg-rotate-2026-07-25-1205.md` | 仅 `CREATE IF NOT EXISTS` 无法给旧表加 `stat_gr |
+| 9030 @43.212.113.132 dc_admin drop dws m | `sessions/tg-rotate-2026-07-25-1205.md` | test 改 PK/删表：`my.cnf.test` 的 dc_admin ** |
+| ... daily dura duration_bucket session s | `sessions/tg-rotate-2026-07-25-1205.md` | 五档合表核心判别列：`stat_grain`（`session`=单次五档，`d |
+| _s al ay d_ division_alignment.md dws | `sessions/tg-rotate-2026-07-25-1205.md` | 两条 DWS **禁止**把 page_stay 与五档时长硬并表：粒度（有无  |
 | ## 07 2026 25 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-07-25-归因-shadow-读-paimon-register-landing-click-view-开.md` | 2026-07-25-归因-shadow-读-paimon-register-l |
 | ## 07 2026 25 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-07-25-群聊进度第一句给结论-回前核对-bus-实态-列点-4-条用-验完-bus-结案再群里一句带过.md` | 2026-07-25-群聊进度第一句给结论-回前核对-bus-实态-列点-4-条 |
 | ## 07 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-25-影子压测用独立-spark-wf-_shadow-表-源侧对齐后再首跑-严禁动现网-sr.md` | 2026-07-25-影子压测用独立-spark-wf-_shadow-表-源侧 |
@@ -30,18 +45,3 @@
 | .env end false set_leave_day.py tg_work_ | `sessions/tg-rotate-2026-07-24-2111.md` | **绿点配置入口**：`.env` 的 `TG_WORK_ONLINE_STAR |
 | 09 22 30 30–22 45s com.youchu.tg | `sessions/tg-rotate-2026-07-24-2111.md` | **TG 绿点保活**：`com.youchu.tg-work-online`  |
 | all apply attribution channel dim dim_us | `sessions/tg-rotate-2026-07-24-2111.md` | [LESSON: attribution,dim/归因 apply 须同步回写  |
-| attendance debug handler lesson marker t | `sessions/tg-rotate-2026-07-24-2111.md` | [LESSON: attendance,tgbot/查岗 handler 未命中 |
-| curl prod select tg update urllib | `sessions/tg-rotate-2026-07-24-2111.md` | 运维小坑**：TG 群发 urllib 易超时，改 curl；主人说「不要在群里 |
-| handler marker re return telethon 且未 | `sessions/tg-rotate-2026-07-24-2111.md` | 查岗未回根因**：进程未断，旧 handler 条件过严（固定 marker + |
-| apply channel_apply dim.channel dim_user | `sessions/tg-rotate-2026-07-24-2111.md` | 归因回写顺序**：`dim_user_all` 构建 → `result_d`  |
-| 002 20260713 23 app_id dev dim.dim_user_ | `sessions/tg-rotate-2026-07-24-2111.md` | 用户日增量表**：`dim.dim_user_daily_snapshot`（替 |
-| ## 07 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-yyyy-mm-dd-md-定稿全文-禁.md` | 2026-07-24-日报上传云端须主人显式指令-只传-reports-日报-y |
-| ## 00 07 18 18h 2026 | `~/.dc-platform/memory/lessons/2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu-page-stay-18h-laun.md` | 2026-07-24-停-18-00-页面停留推狂人须卸载-com-youchu |
-| ## 07 2026 24 agent_session_rotate curl | `~/.dc-platform/memory/lessons/2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-curl-重发-成功后再报-已到达.md` | 2026-07-24-tg-群发-urllib-超时则-kill-进程并改用-c |
-| .cursor dd.md log mm reports transcript | `sessions/tg-rotate-2026-07-24-0620.md` | 日报流程：**先**读 work-log + transcript + 派单来源 |
-| 00 18 18h com.youchu.page install launch | `sessions/tg-rotate-2026-07-24-0620.md` | 停 18:00 页面停留推狂人：卸载 launchd **`com.youchu |
-| +补 11.6 dws_user_tag_d_d prod —— —单 | `sessions/tg-rotate-2026-07-24-0620.md` | prod 海豚 `dws_user_tag_d_d` 单挂后补跑，T-1 约 * |
-| ci hadoop jar rsync sbt scala | `sessions/tg-rotate-2026-07-24-0620.md` | **卡点②**：集群 `hadoop-1` 无 sbt，Scala 改动只能 r |
-| 001 20260720 dev uid_map 与宽 再并 | `sessions/tg-rotate-2026-07-24-0620.md` | **卡点①**：`uid_map`（`dev-20260720-001`）是否与 |
-| 001 06 0） 20 20260719 20）已完成 | `sessions/tg-rotate-2026-07-24-0620.md` | DWM 四表 27 天补数（06-24~07-20）已完成；代码 `bbd40f |
-| daily dd.md lesson mm report reports | `sessions/tg-rotate-2026-07-24-0620.md` | [LESSON: daily-report,upload/日报上传云端须主人显式 |
