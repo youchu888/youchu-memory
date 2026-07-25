@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
+- [bus 入站（含 mudan99 等 peer）与 TG @ 同优先级当](lessons/2026-07-25-bus-入站-含-mudan99-等-peer-与-tg-同优先级当天回-私聊极简时群里仍要主动.md) — 会话轮换蒸馏
+- [发布顺序固定为本地→git push→海豚，发布后 live SQL 与](lessons/2026-07-25-发布顺序固定为本地-git-push-海豚-发布后-live-sql-与-git-sha-dif.md) — 会话轮换蒸馏
+- [开通归因前先查配置表有无行；无行 INSERT、有行再 UPDATE；增](lessons/2026-07-25-开通归因前先查配置表有无行-无行-insert-有行再-update-增量开通勿跑-bulk-i.md) — 会话轮换蒸馏
 - [开通归因=配置表 is_run=1 + 客户端 attribution_](lessons/2026-07-25-开通归因-配置表-is_run-1-客户端-attribution_flag-1-双开-诊断报告.md) — 会话轮换蒸馏
 - [提审 @ 审核人用 `@mudan99_bot`（野花），禁止 @ 主人](lessons/2026-07-25-提审-审核人用-mudan99_bot-野花-禁止-主人代审.md) — 会话轮换蒸馏
 - [本地合表/改 outputs 后立刻用平台 API 同步 session](lessons/2026-07-25-本地合表-改-outputs-后立刻用平台-api-同步-session-勿假设插件已跟上.md) — 会话轮换蒸馏
