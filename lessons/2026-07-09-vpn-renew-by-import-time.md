@@ -46,8 +46,13 @@ cat ~/.dc-platform/vpn/last_sync.json | rg imported_at
 tail ~/.dc-platform/vpn/sync.log
 ```
 
+## 增补（2026-07-27）
+
+主人钦定：**不论节假日还是请假，续期动作都不停、每天都要。** 见 `feedback_vpn_renew_every_day.md` / `2026-07-27-vpn-renew-never-skip-leave-holiday.md`。
+
 ## 关联
 
 - 脚本：`~/.dc-platform/scripts/vpn_ovpn_sync.py`
 - 安装：`~/.dc-platform/scripts/install-vpn-sync-launchd.sh`
 - 日志：`~/.dc-platform/vpn/sync.log`
+- 请假规则：`.cursor/rules/leave-skip-punch-attendance.mdc`（VPN 不在 skip 范围）
