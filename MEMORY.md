@@ -2,7 +2,8 @@
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
 > 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
-> **工作流水（日报/周报）**：[`CHcode/.cursor/work-log/README.md`](file:///Users/mac/Desktop/CHcode/.cursor/work-log/README.md) · 日流水 + `reports/` 正式日报周报 · **不进 Git**
+> **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
+- [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
 - [bus 入站（含 mudan99 等 peer）与 TG @ 同优先级当](lessons/2026-07-25-bus-入站-含-mudan99-等-peer-与-tg-同优先级当天回-私聊极简时群里仍要主动.md) — 会话轮换蒸馏

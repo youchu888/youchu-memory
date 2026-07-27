@@ -69,13 +69,20 @@ if ! flock -n 9 2>/dev/null; then
 fi
 
 WL_SYNC="$MEM/scripts/worklog_dual_mac_sync.py"
+OPS_MIRROR="$MEM/scripts/ops_mirror_to_memory.py"
 _run_worklog() {
   if [[ -f "$WL_SYNC" ]]; then
     python3 "$WL_SYNC" || echo "warn: worklog_dual_mac_sync 失败（继续 memory sync）"
   fi
 }
+_run_ops_mirror() {
+  if [[ -f "$OPS_MIRROR" ]]; then
+    python3 "$OPS_MIRROR" || echo "warn: ops_mirror_to_memory 失败（继续 memory sync）"
+  fi
+}
 
 _run_worklog
+_run_ops_mirror
 
 git add -A
 if git diff --cached --quiet && git diff --quiet; then
