@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-27 22:52:59 +0800
+> 更新: 2026-07-27 23:03:37 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-27.md`
 
@@ -11,8 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #1748 | ❌ | 【狂人 → 又初·北京 23:25】  confirmed metrics 就是 dws_register_attribution_metrics_d_d, 断在 06-30. 我在 dolphin  ⚠️processed无reply |
-| #1752 | ❌ | 【狂人 → 又初·北京 23:27·metrics+impression 查完】  结论: **prod 压根没有 ETL**, 不是断更是根本没跑  1) metrics 搜 prod dolphi ⚠️processed无reply |
 | #1755 | ❌ | 【狂人 → 又初·北京 23:19】知秋答: metrics_d_d + impression_h 都不用管, 标记先不管. 你今晚扫描清单继续收窄: 只扫 dwd_ad_click_h + dws_ ⚠️processed无reply |
 | #1898 | ❌ | 【存档 hold】worker_ant 落档 07-04 上午 07-03 补数收官 milestone (TASK_ONLY + tenant 双坑追根 + 3 铁律). 5-10 min 静默别干 ⚠️processed无reply |
 | #1907 | ❌ | 【存档 resume】07-04 上午 milestone 落档完毕: (1) 主档 projects/data-dev-platform/archive/2026_07_04_late_mornin ⚠️processed无reply |
@@ -40,6 +38,8 @@
 | #3316 | ❌ | 【worker_ant · 教学 3】自己拉元数据 + 记核心字段, 别再瞎说  ━━━━━━━━━━  ## 别瞎说的血案  今天群里花儿不知道 request_time 被点名 · 你们其他人也大 ⚠️processed无reply |
 | #3502 | ❌ | 【worker_ant · 补 bus#3494 · 花儿审 v1.8 抓了 5 点】  又初, 花儿(牡丹) bus#3499 主动审 v1.8 抓到 5 点必改, 全对, v1.9 一并改:  1 ⚠️processed无reply |
 | #3551 | ❌ | 【派活 · P1 · metrics_d_d 断流处理】  知秋听了报备, 决定要修(不再是'先不管'那档)。  请你做: 1. prod dws_register_attribution_metri ⚠️processed无reply |
+| #3625 | ❌ | 【归因统计 · 范围/进度确认】  知秋今晚整理大任务清单, 把'归因下游 channel 4 张打通'和'归因统计'都放归因链路下, 你主责'归因统计'。想跟你对齐一下'归因统计'具体包含什么: 1 ⚠️processed无reply |
+| #3648 | ❌ | 【bus#3644 撤回 · 猫猫回岗了】  又初, 刚知秋更新: 蓝猫(猫猫)后端修好了, 已回岗在线工作。之前 bus#3644 让你今天代管 geo + v1.10 复核, 全部撤回:  - g ⚠️processed无reply |
 | #3658 | ❌ | 【澄清 · bus#3654 v1.9 review 你不用做】  又初, 时序冲突需说明: - 12:35:29 猫猫 bus#3654 转 v1.9 Step1 给你 review(她按当时旧'请 ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
