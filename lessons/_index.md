@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-27 | [bus-reply|bus 派活要求「结论请回 bus」时，验完直接 agent](./2026-07-27-bus-reply-bus-派活要求-结论请回-bus-时-验完直接-agent-bus-结案-.md) | tg-group,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-27 | [群聊双 @ strip 误判没@初儿](./2026-07-27-group-dual-at-strip-false-negative.md) | tgbot,group,mention | strip @youchu 后 Agent 只见 mudan → 误回不回；已修 |
+| 2026-07-27 | [mention-routing|未 @youchu_ai_bot 的群消息直接不](./2026-07-27-mention-routing-未-youchu_ai_bot-的群消息直接不回-且不在群里解释.md) | tg-group,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-27 | [bot 自查告警：连续失败才私聊](./2026-07-27-bot-selfcheck-notify-after-sustained.md) | tgbot, watchdog, alert | NOTIFY_AFTER=3；getMe 后跳过二次探活 |
 | 2026-07-27 | [VPN 续期不因请假/节假日停止](./2026-07-27-vpn-renew-never-skip-leave-holiday.md) | vpn, leave, holiday, launchd | 每天必续；请假日历不管 VPN |
 | 2026-07-25 | [bus 入站（含 mudan99 等 peer）与 TG @ 同优先级当天回；私](./2026-07-25-bus-入站-含-mudan99-等-peer-与-tg-同优先级当天回-私聊极简时群里仍要主动.md) | agent-bus,collab,session-rotate | 会话轮换前自动蒸馏 |
