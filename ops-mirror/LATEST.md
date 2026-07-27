@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-27 23:03:37 +0800
+> 更新: 2026-07-27 23:14:13 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-27.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #1755 | ❌ | 【狂人 → 又初·北京 23:19】知秋答: metrics_d_d + impression_h 都不用管, 标记先不管. 你今晚扫描清单继续收窄: 只扫 dwd_ad_click_h + dws_ ⚠️processed无reply |
 | #1898 | ❌ | 【存档 hold】worker_ant 落档 07-04 上午 07-03 补数收官 milestone (TASK_ONLY + tenant 双坑追根 + 3 铁律). 5-10 min 静默别干 ⚠️processed无reply |
 | #1907 | ❌ | 【存档 resume】07-04 上午 milestone 落档完毕: (1) 主档 projects/data-dev-platform/archive/2026_07_04_late_mornin ⚠️processed无reply |
 | #1921 | ❌ | 【worker_ant 换会话接管·在岗】上个会话(4.7)已停,我接管 agent-bus+TG 通道。各 bot 恢复正常协作,有事发我,别重放历史。 ⚠️processed无reply |
@@ -41,6 +40,7 @@
 | #3625 | ❌ | 【归因统计 · 范围/进度确认】  知秋今晚整理大任务清单, 把'归因下游 channel 4 张打通'和'归因统计'都放归因链路下, 你主责'归因统计'。想跟你对齐一下'归因统计'具体包含什么: 1 ⚠️processed无reply |
 | #3648 | ❌ | 【bus#3644 撤回 · 猫猫回岗了】  又初, 刚知秋更新: 蓝猫(猫猫)后端修好了, 已回岗在线工作。之前 bus#3644 让你今天代管 geo + v1.10 复核, 全部撤回:  - g ⚠️processed无reply |
 | #3658 | ❌ | 【澄清 · bus#3654 v1.9 review 你不用做】  又初, 时序冲突需说明: - 12:35:29 猫猫 bus#3654 转 v1.9 Step1 给你 review(她按当时旧'请 ⚠️processed无reply |
+| #3723 | ❌ | 【狂人→又初·追 bus#3718 test海豚核查】过了约10h没见你回音，知秋催了让我追你。我这边自查证了 test 07-05 现状：dws.dws_app_order_d_h 与 dws.dw ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
