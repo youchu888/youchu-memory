@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-27 | [bot 自查告警：连续失败才私聊](./2026-07-27-bot-selfcheck-notify-after-sustained.md) | tgbot, watchdog, alert | NOTIFY_AFTER=3；getMe 后跳过二次探活 |
 | 2026-07-27 | [VPN 续期不因请假/节假日停止](./2026-07-27-vpn-renew-never-skip-leave-holiday.md) | vpn, leave, holiday, launchd | 每天必续；请假日历不管 VPN |
 | 2026-07-25 | [bus 入站（含 mudan99 等 peer）与 TG @ 同优先级当天回；私](./2026-07-25-bus-入站-含-mudan99-等-peer-与-tg-同优先级当天回-私聊极简时群里仍要主动.md) | agent-bus,collab,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-25 | [发布顺序固定为本地→git push→海豚，发布后 live SQL 与 git](./2026-07-25-发布顺序固定为本地-git-push-海豚-发布后-live-sql-与-git-sha-dif.md) | publish,dolphin,git,session-rotate | 会话轮换前自动蒸馏 |
