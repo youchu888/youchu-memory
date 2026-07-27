@@ -9,13 +9,15 @@ domain: ops
 
 ## 规则（主人 2026-07-27）
 
-监控群旁听仍开；**群里回复**触发任一即可：
+**仅机器人群** `MONITOR_GROUP_CHAT_ID`（`-5376962870`）旁听仍开；**群里回复**触发任一即可：
 
-1. `@youchu_ai_bot` / `GROUP_REPLY_MENTIONS` / 主人账号 text_mention
+1. `@youchu_ai_bot` / `@youchu8888` / `GROUP_REPLY_MENTIONS` / 主人账号 text_mention
 2. 正文含「又初」「初儿」（及「给又初」等）
 3. 回复本 bot 的消息
 
 仅 `@mudan99_bot` 等其他 bot、未点名又初 → 旁听不回。
+
+**抽查群** `ATTENDANCE_CHECK_CHAT_ID` 等不启用喊名扩展；抽查仍走 Telethon attendance，勿混进 bot 群规则。
 
 ## 实现
 
