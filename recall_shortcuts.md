@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 2026 28 agent_session_rotate chcod | `~/.dc-platform/memory/lessons/2026-07-28-vsix-放-dc-platform-server-extension-走-git-pull-s.md` | 2026-07-28-vsix-放-dc-platform-server-ext |
+| ## %（ %） 0% 00 07 | `~/.dc-platform/memory/lessons/2026-07-28-device_id-空率-90-本需求-100-则直建-dim_device_all-勿再设计-.md` | 2026-07-28-device_id-空率-90-本需求-100-则直建-d |
+| ## 07 2026 28 agent_session_rotate backe | `~/.dc-platform/memory/lessons/2026-07-28-prd-五档看板只查-session_duration-合表并带-stat_grain-page.md` | 2026-07-28-prd-五档看板只查-session_duration-合 |
+| 100% device device_id device_tag dim_dev | `sessions/tg-rotate-2026-07-28-0602.md` | **device_tag 阶段 1 拍板**：`order_paid_d_r`/ |
+| 07 20 ar br dev device_tag | `sessions/tg-rotate-2026-07-28-0602.md` | **device_tag 新方案**：Paimon 迁移（6 湖表 + wrap |
+| 5543 5544） bug bus 为准 人需 | `sessions/tg-rotate-2026-07-28-0602.md` | **bus 时区 bug 曾吞消息**（如 5543/5544）；狂人需重发，通 |
+| agent bus bus# file_id inbox lib | `sessions/tg-rotate-2026-07-28-0602.md` | **设计链接是否收到**：先查 agent-bus inbox + 当日 TG  |
+| @我 「没 」类 不回 初儿 又初 | `sessions/tg-rotate-2026-07-28-0602.md` | **群聊被 @ 又初/初儿**：必须给实质答复；禁止「没@我/群里不回」类推脱 |
+| .md 04.dws design.md dws_session_duratio | `sessions/tg-rotate-2026-07-28-0602.md` | **后端对接稿落点**：`omdb/tgbot/outgoing/停留时长表结构 |
+| +启 +账 daily device_d dws_session_daily d | `sessions/tg-rotate-2026-07-28-0602.md` | **合表 v2 主表**：`dws_session_duration_user_ |
+| daily_valid_stay_sec dev device_d durati | `sessions/tg-rotate-2026-07-28-0602.md` | **停留时长两条线不可混查**：PRD 五档看板用 `dws_session_d |
+| chcode dc desktop dev dmp extensi | `sessions/tg-rotate-2026-07-28-0602.md` | [LESSON: extension,release/vsix 放 dc-pla |
+| %（ %） 0% 00 10 100%）则直建 | `sessions/tg-rotate-2026-07-28-0602.md` | [LESSON: device_tag,dim/device_id 空率≥90% |
+| agent bus bus# file_id inbox libra | `sessions/tg-rotate-2026-07-28-0602.md` | 设计链接是否收到**：先查 agent-bus inbox + 当日 TG 镜像 |
+| @我 「没 」类 不回 初儿 又初 | `sessions/tg-rotate-2026-07-28-0602.md` | 群聊被 @ 又初/初儿**：必须给实质答复；禁止「没@我/群里不回」类推脱 |
 | ## 07 2026 27 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-07-27-bus-reply-bus-派活要求-结论请回-bus-时-验完直接-agent-bus-结案-.md` | 2026-07-27-bus-reply-bus-派活要求-结论请回-bus-时 |
 | ## 07 2026 27 @youchu_ai_bot agent_sessi | `~/.dc-platform/memory/lessons/2026-07-27-mention-routing-未-youchu_ai_bot-的群消息直接不回-且不在群里解释.md` | 2026-07-27-mention-routing-未-youchu_ai_b |
 | @youchu_ai_bot group lesson mention rout | `sessions/tg-rotate-2026-07-27-1851.md` | `[LESSON: tg-group/mention-routing/未 @yo |
@@ -30,18 +45,3 @@
 | apply） attribution_flag complement flag  | `sessions/tg-rotate-2026-07-25-1904.md` | 配置落 prod **不会补历史**；`result_d` 仍 0 时先查注册侧 |
 | 24h ip success ≥40 中逻 主命 | `sessions/tg-rotate-2026-07-25-1904.md` | 归因命中逻辑：IP + 24h 落地页主命中，设备四维 + 时间档加分，总分 ≥ |
 | 00 10 10） 20 21600 30 | `sessions/tg-rotate-2026-07-25-1904.md` | 设备加分统一口径：`brand_score=10`、`model_score=2 |
-| attribution bulk config insert is_run le | `sessions/tg-rotate-2026-07-25-1904.md` | [LESSON: attribution,prod-config/开通归因前先查 |
-| a（ bus commit diff fail） git | `sessions/tg-rotate-2026-07-25-1904.md` | 发布三处一致**：本地 `ops_system/` → **git commit |
-| alter_t alter_table.sql is_rewrite_chann | `sessions/tg-rotate-2026-07-25-1904.md` | 只开计算、不开回写：`is_run=1`、`is_rewrite_channel |
-| app dim.dim_app_attribution_config etl i | `sessions/tg-rotate-2026-07-25-1904.md` | 新 app 开归因：配置表**无行**时 ETL 白名单 JOIN 直接跳过，不 |
-| ## 07 2026 25 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-07-25-开通归因-配置表-is_run-1-客户端-attribution_flag-1-双开-诊断报告.md` | 2026-07-25-开通归因-配置表-is_run-1-客户端-attribu |
-| ## 07 2026 25 @mudan99_bot agent_session | `~/.dc-platform/memory/lessons/2026-07-25-提审-审核人用-mudan99_bot-野花-禁止-主人代审.md` | 2026-07-25-提审-审核人用-mudan99_bot-野花-禁止-主人代 |
-| ## 07 2026 25 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-07-25-本地合表-改-outputs-后立刻用平台-api-同步-session-勿假设插件已跟上.md` | 2026-07-25-本地合表-改-outputs-后立刻用平台-api-同步- |
-| .3 3. 3） ads）+ di dim（用户 | `sessions/tg-rotate-2026-07-25-1624.md` | 星型建模（v3.3）：中心宽事实（dws/ads）+ 少量共享 dim（用户/日 |
-| agent bus dt session test 上线 | `sessions/tg-rotate-2026-07-25-1624.md` | 上线前核查除群 @ 外，应用 agent-bus 私信审核人，写清 sessio |
-| @mudan99_bot @youchu8888 pending 丹） 主人 人 | `sessions/tg-rotate-2026-07-25-1624.md` | 群通知审核人须 @ 正确对象：主人 `@youchu8888` ≠ 审核人野花； |
-| 404 api daily delete task v2 | `sessions/tg-rotate-2026-07-25-1624.md` | 旧 daily task 平台 delete API 404 删不掉时，在提审材 |
-| design git memory session 会重 会重定向父 | `sessions/tg-rotate-2026-07-25-1624.md` | 子 session 的 design/memory 会重定向父 session， |
-| @mudan99_bot collaboration lesson 主人 主人代 | `sessions/tg-rotate-2026-07-25-1624.md` | [LESSON: collaboration/提审 @ 审核人用 `@mudan |
-| api dev lesson outputs session 件已 | `sessions/tg-rotate-2026-07-25-1624.md` | [LESSON: dev-session/本地合表/改 outputs 后立刻用 |
-| attribution_flag html result_d 不等于 交付 交付 | `sessions/tg-rotate-2026-07-25-1624.md` | 交付根因/修复建议 HTML **不等于** 已执行配置变更；查开通状态要同时看 |

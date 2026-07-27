@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
 - [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
+- [vsix 放 dc-platform-server/extension/](lessons/2026-07-28-vsix-放-dc-platform-server-extension-走-git-pull-s.md) — 会话轮换蒸馏
+- [device_id 空率≥90%（本需求 100%）则直建 dim_de](lessons/2026-07-28-device_id-空率-90-本需求-100-则直建-dim_device_all-勿再设计-.md) — 会话轮换蒸馏
+- [PRD 五档看板只查 session_duration 合表并带 sta](lessons/2026-07-28-prd-五档看板只查-session_duration-合表并带-stat_grain-page.md) — 会话轮换蒸馏
 - [bus-reply|bus 派活要求「结论请回 bus」时，验完直接 a](lessons/2026-07-27-bus-reply-bus-派活要求-结论请回-bus-时-验完直接-agent-bus-结案-.md) — 会话轮换蒸馏
 - [mention-routing|未 @youchu_ai_bot 的群消](lessons/2026-07-27-mention-routing-未-youchu_ai_bot-的群消息直接不回-且不在群里解释.md) — 会话轮换蒸馏
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。

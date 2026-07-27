@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-07-27 · 最新归档：`sessions/tg-rotate-2026-07-27-1851.md`
+> 更新：2026-07-28 · 最新归档：`sessions/tg-rotate-2026-07-28-0602.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 群聊被 @ 又初/初儿**：必须给实质答复；禁止「没@我/群里不回」类推脱
+- 设计链接是否收到**：先查 agent-bus inbox + 当日 TG 镜像；无记录则 bus 狂人问清 library URL / bus# / file_id，勿空猜
+- [LESSON: device_tag,dim|device_id 空率≥90%（本需求 100%）则直建 dim_device_all，勿再设计 uid 反查兜底]
+- [LESSON: extension,release|vsix 放 dc-platform-server/extension/ 走 git→pull→scp；CHcode 即 tq-git dmp/dc-parent dev，勿与 Desktop 另一 dc-parent 混用]
+- **停留时长两条线不可混查**：PRD 五档看板用 `dws_session_duration_user_d`/`device_d`（墙钟 `session_duration_sec` + `duration_bucket`）；账户日页面停留用 `dws_user_page_stay_d`（`daily_valid_stay_sec`）
+- **合表 v2 主表**：`dws_session_duration_user_d`/`device_d` 已吸收废弃的 `dws_session_daily_*_d`；查询必带 `stat_grain`（`session`=单次分档+启动次数，`daily`=当日累加分档+账号/设备数）
+- **后端对接稿落点**：`omdb/tgbot/outgoing/停留时长表结构-后端对接-*.md`；设计口径源 `ops_system/04.dws/dws_session_duration_d/design.md`
+- **群聊被 @ 又初/初儿**：必须给实质答复；禁止「没@我/群里不回」类推脱
+- **设计链接是否收到**：先查 agent-bus inbox + 当日 TG 镜像；无记录则 bus 狂人问清 library URL / bus# / file_id，勿空猜
+- **bus 时区 bug 曾吞消息**（如 5543/5544）；狂人需重发，通路修后以重发 bus 为准
+- **device_tag 新方案**：Paimon 迁移（6 湖表 + wrapper），废 07-20 phased；参照 `origin/dev` user_tag Spark v2 框架；设计稿在 library（如 `dws_device_tag_d_d_design`）
+- **device_tag 阶段 1 拍板**：`order_paid_d_r`/`register_v2` device_id fill=100% → 直建 `dim_device_all`；uid 反查兜底方案作废
+- **vsix 发版通道（方案 a）**：vsix+manifest 进 `dc-platform-server/extension/` → commit/push `dev` → 狂人 pull + scp 到 `/data/dcpaltform/metadata/extension/` → 验收 `GET /api/v1/extension/version`
+- **工作区归属**：CHcode = `tq-git` 的 `dmp/dc-parent` dev；Desktop 另一份 `opengit datacenter/dc-parent` 不是这条发版线
+- **extension API 现状**：`api_v1_extension.py` 仅 GET/download，无 POST upload；长期上传通道需另批
 - 没 @ 初儿时**静默跳过**，群里**不要**写「这条没 @ 我」「我不插嘴」之类内心戏。
 - 群聊口吻学工作狂人：第一句就是结论/在干啥，短句口语，数字 inline，别铺 wiki 式长文。
 - 群聊**禁止**用 `##` 标题、markdown 大表格；真要列点用 `·` 或换行，**最多 4 条**。
-- 狂人 bus 写明「结论请回 bus」→ 验完**直接 agent-bus reply 结案**，别问主人「要不要发 bus」。
-- 群里你是 **初儿**（`@youchu_ai_bot`）；**又初**是主人真人名，**禁止**让同事 @又初。
-- 私聊可以长，群聊让人**扫一眼就懂**；验数/派活结论走 bus，群里只做轻量同步。
-- `[LESSON: tg-group|bus-reply|bus 派活要求「结论请回 bus」时，验完直接 agent-bus 结案，禁止再问主人是否发送]`
-- 群聊里先看 `@` 对象：@的是 `@mudan99_bot`（野花）就**不回**；只有 @ `@youchu_ai_bot`（初儿）才接活。
-- 对方 @ 你已带背景时，**别整段复读** bus/派单正文。
-- bus 结案后，群里可 **@ 提问者一句带过**（例：「bus#1421 已回狂人，初步 OK」）。
-- `ads_product_day_stat_d` 订单创建/支付成功笔数金额口径，本次是问野花侧报表，不是又初群聊职责。
-- `[LESSON: tg-group|mention-routing|未 @youchu_ai_bot 的群消息直接不回，且不在群里解释「为什么不回」]`
-- 新 app 开归因：配置表**无行**时 ETL 白名单 JOIN 直接跳过，不是 `is_run=0` 能 UPDATE 的事，必须 **INSERT** `dim.dim_app_attribution_config`
-- 只开计算、不开回写：`is_run=1`、`is_rewrite_channel=0`；**禁止**跑 `alter_table.sql` §4 那段 `UPDATE … SET is_run=0`，会把现网白名单全关
-- 发布三处一致**：本地 `ops_system/` → **git commit + push（记 SHA）** → 海豚发布 → `live SQL` 与 `git show SHA:path` **diff 为空**；对外 bus/审单带 SHA（五档合表反例：海豚已 v137/v138、git 仍 4 表 → 野花 FAIL）
-- [LESSON: attribution,prod-config|开通归因前先查配置表有无行；无行 INSERT、有行再 UPDATE；增量开通勿跑 bulk is_run=0]
-- 设备加分统一口径：`brand_score=10`、`model_score=20`、`system_name=20`、`system_version=20`，`min_threshold=40`；时间档走 `dim_app_attribution_time_config` 的 **default** 四档（600/40、3600/30、21600/20、86400/10），新 app **不必单独插 time_config**
-- 归因命中逻辑：IP + 24h 落地页主命中，设备四维 + 时间档加分，总分 ≥40 才 success
 
