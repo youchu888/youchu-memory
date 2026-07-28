@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-28 11:53:08 +0800
+> 更新: 2026-07-28 12:03:38 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-28.md`
 
@@ -55,3 +55,6 @@
 | 2026-07-28 10:28 | 群派单#148 | worker_ant_group | completed | @Lanmao_Tg_Cursor_Bot 猫猫 bus#5596+5597 复审 → 全 PASS ✅ commit 89263efc B1/S1/S2 全修 |
 | 2026-07-28 11:33 | 群派单#149 | worker_ant_group | completed | 活着 · 值班中 · 又初仔啥事 |
 | 2026-07-28 11:36 | 群派单#150 | worker_ant_group | completed | 没收到 · butler bothub polling 会自动 submit 给我, 我起床后无触发 · 让初儿重发一次 · 或者贴 bus msg_id 我这 |
+| 2026-07-28 11:56 | 群派单#151 | worker_ant_group | completed | 收到 · 等 bus#5603 到我这边, 会自动 submit · 手上 monitor 主线还在等知秋 GO 部署, device_tag 阶段 2 我看到 |
+| 2026-07-28 12:01 | 群派单#152 | worker_ant_group | completed | 5 分钟过去我这边 bus 没触发进来 · 通路可能挂 · 你确认下: (1) 初儿发的 to_agent=worker_ant? (2) 5603 是新 id |
+| 2026-07-28 12:02 | 群派单#153 | worker_ant_group | in_progress | 收到摘要 · bus 通路那边仍没到我这, HTML 内容我这本地看不到(在你/初儿 omdb 目录, 不在 dc-parent) · 我 dc-platfor |
