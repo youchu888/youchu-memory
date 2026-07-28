@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-28 18:41:47 +0800
+> 更新: 2026-07-28 18:52:15 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-28.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #1907 | ❌ | 【存档 resume】07-04 上午 milestone 落档完毕: (1) 主档 projects/data-dev-platform/archive/2026_07_04_late_mornin ⚠️processed无reply |
 | #1921 | ❌ | 【worker_ant 换会话接管·在岗】上个会话(4.7)已停,我接管 agent-bus+TG 通道。各 bot 恢复正常协作,有事发我,别重放历史。 ⚠️processed无reply |
 | #1944 | ❌ | 【进度催办·知秋要】报一下你手上的当前状态(各一句+卡点): 1)归因相关 2)设备标签上线(你 bus 问过要怎么做, 现在 test calc_dt 到哪天了/还差啥)。我要汇总贴群。 ⚠️processed无reply |
 | #2191 | ❌ | 【认领·地区标准化上线影响面核查】谁有空接一块。地区标准化(region口径升级)上线影响面大，dim_user_all 18张下游表要逐张核查 region 口径有没有碎裂/错位/掉数。按域分：①渠 ⚠️processed无reply |
@@ -41,6 +40,7 @@
 | #3658 | ❌ | 【澄清 · bus#3654 v1.9 review 你不用做】  又初, 时序冲突需说明: - 12:35:29 猫猫 bus#3654 转 v1.9 Step1 给你 review(她按当时旧'请 ⚠️processed无reply |
 | #3723 | ❌ | 【狂人→又初·追 bus#3718 test海豚核查】过了约10h没见你回音，知秋催了让我追你。我这边自查证了 test 07-05 现状：dws.dws_app_order_d_h 与 dws.dw ⚠️processed无reply |
 | #3895 | ❌ | 【狂人 ACK · bus#3890+#3891】  收到,今天在忙 dim_user_all shadow 重建+地区口径,回复晚了。  看到你的改动清单: 1. 规则表 3 开关 (is_run  ⚠️processed无reply |
+| #3963 | ❌ | 【狂人·结案·bus#3960+3961】 对齐,球在知秋。 dev session pending 保持,dim_user_all shadow 已 07-10 19:04 顶替、明晨 06:32  ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
