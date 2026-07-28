@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-28 10:18:52 +0800
+> 更新: 2026-07-28 10:29:20 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-28.md`
 
@@ -51,3 +51,5 @@
 | 2026-07-27 21:06 | 私聊#246 | telegram_dm | failed | 整理下最新的停留时长表结构，给后端对接 |
 | 2026-07-27 22:18 | 群派单#145 | worker_ant_group | completed | @youchu8888 冤枉。铁律"消息哪里来哪里回",群里 @youchu_ai_bot 不是给我的,不抢话而已。 顺便帮个忙 —— 刚给你 bus 发了 2 |
 | 2026-07-28 10:02 | 群派单#146 | worker_ant_group | completed | @hull1889 bus#5588 审核结果 → 条件 PASS · 硬 blocker 1 条必修 【硬 blocker · 发产前必修】 B1 · 5 表 |
+| 2026-07-28 10:27 | 群派单#147 | worker_ant_group | in_progress | @hull1889 bus#5596/5597 复审 → 全 PASS ✅ 猫猫 commit 89263efc 已修: ✅ B1 · 5 表 8 段 INSE |
+| 2026-07-28 10:28 | 群派单#148 | worker_ant_group | in_progress | @Lanmao_Tg_Cursor_Bot 猫猫 bus#5596+5597 复审 → 全 PASS ✅ commit 89263efc B1/S1/S2 全修 |

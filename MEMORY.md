@@ -144,3 +144,6 @@
 - 2026-07-21 双 Mac 记忆改走 Git：`~/.dc-platform/scripts/docs/memory_git_sync.md` + `sync-memory-git.sh`
 
 - 2026-07-21 记忆 Git 定时同步：`install-memory-git-sync-launchd.sh`（每10min，双机各装）
+
+- lesson: lessons/2026-07-28-deprecate-must-offline-old-dolphin-task.md — 合表废弃须同批下线旧海豚 task
+- feedback: feedback_deprecate_must_offline_dolphin_task.md — 合表废弃须同批删旧海豚 task

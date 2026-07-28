@@ -75,3 +75,4 @@
 | 2026-06-03 | [生产 LTV 补数 readonly 限制](./20260603-prod-ltv-backfill-readonly.md) | prod, ltv, dolphin, complement, readonly | 生产 SR readonly + 无 prod 海豚写权限 → 必须海豚 UI/ETL 账号补数，不能直接 INSERT |
 | 2026-05-29 | [dad-dau 分层根因与逐层核查](./2026-05-29-dad-dau-layered-root-cause.md) | datacheck, ads, dwd, dw, device_id, dad, dau | TJ-001 DAD 900w 根因在客户端 device_id 高 churn + ADS 口径含匿名 device；datacheck 必须逐层追到 dw |
 | 2026-07-27 | [merge_pool 多桶 OVERWRITE](./2026-07-27-merge-pool-stage4-overwrite-and-publish.md) | merge_pool, stage4 | 同分区串行桶会互覆盖；默认 bucket_n=1 |
+| 2026-07-28 | deprecate-must-offline-old-dolphin-task | high | dolphin,deprecate,half-migration | 合表废弃必须同批删旧海豚 task，禁半迁移 |
