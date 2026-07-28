@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-29 | [新 Spark 任务 launcher 只填 JOB/SQL/PROFILE 走](./2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md) | ops-system,templates,spark,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-29 | [姿态 F 主链路不经过 merge_pool；海豚老 task P0 与 Spa](./2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-task-p0-与-spark-迁移方向一.md) | device-tag,dolphin,merge-pool,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-29 | [Paimon/Spark 表结构变更时用 DROP+CREATE bootstr](./2026-07-29-paimon-spark-表结构变更时用-drop-create-bootstrap-禁止仅靠-.md) | device-tag,spark,ddl,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-28 | [日报是汇报：禁内部黑话，要展开说](./2026-07-28-日报是汇报禁内部黑话要展开.md) | daily-report, writing-style, expand | 主人纠正；汇报非总结；40~70字业务展开 |
 | 2026-07-28 | [回懂了必须立刻开干](./2026-07-28-ack-must-start-work.md) | ack, execution, criticism | ACK 后同会话动手，禁口头确认后静默 |
 | 2026-07-28 | [群聊仅显式 @初儿/@又初 才回，取消裸喊名](./2026-07-28-群聊仅显式at初儿又初才回.md) | tg, group, mention, silent | 废止裸喊名；@worker_ant+文案带又初不再秒回 |

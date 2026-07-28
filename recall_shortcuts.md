@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 2026 29 agent_session_rotate boots | `~/.dc-platform/memory/lessons/2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md` | 2026-07-29-新-spark-任务-launcher-只填-job-sq |
+| ## 07 2026 29 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-task-p0-与-spark-迁移方向一.md` | 2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-ta |
+| ## 07 2026 29 agent_session_rotate boots | `~/.dc-platform/memory/lessons/2026-07-29-paimon-spark-表结构变更时用-drop-create-bootstrap-禁止仅靠-.md` | 2026-07-29-paimon-spark-表结构变更时用-drop-cre |
+| 00 3张 ac ad ad→finance→video→a ad→financ | `sessions/tg-rotate-2026-07-29-0601.md` | **姿态 F 主链路**：`device_tag_wrapper.sh` 六步串 |
+| commit ddl dev or origin paimon | `sessions/tg-rotate-2026-07-29-0601.md` | **无 test 环境的标准交付**：Scala/Paimon 代码 + DDL |
+| git html library library#46 push 「设 | `sessions/tg-rotate-2026-07-29-0601.md` | **设备标签不等狂人审阶段2**：知秋明确「设计/样例已给，先开发完 push  |
+| #5600→#5603） after_id bothub bus id msg_ | `sessions/tg-rotate-2026-07-29-0601.md` | **bothub 未触发要重发新 id**：outbound 对方 poller |
+| bus inbox tg ≠只 「业 「私 | `sessions/tg-rotate-2026-07-29-0601.md` | **bus 收件≠只有私聊 inbox**：发给猫猫/蓝猫审核线的 bus，又初 |
+| @我 bot 「又 「没 「群 」「 | `sessions/tg-rotate-2026-07-29-0601.md` | **群聊点名必回实质内容**：正文含「又初/初儿」、@ bot 或 @ 主人时， |
+| bootstrap ddl job launcher lesson ops | `sessions/tg-rotate-2026-07-29-0601.md` | [LESSON: ops-system,templates,spark/新 Sp |
+| bootstrap create ddl device drop+crea dr | `sessions/tg-rotate-2026-07-29-0601.md` | [LESSON: device-tag,spark,ddl/Paimon/Spa |
+| bootstrap ddl job launcher ops_system pr | `sessions/tg-rotate-2026-07-29-0601.md` | 新 launcher 走 `_templates/`**：只填 `JOB` /  |
+| bootstrap combined_n_ddl.sql create ddl  | `sessions/tg-rotate-2026-07-29-0601.md` | DDL 改列勿用 IF NOT EXISTS 裸建**：`CREATE TABL |
+| #5600→#5603） after_id bothub bus id msg_ | `sessions/tg-rotate-2026-07-29-0601.md` | bothub 未触发要重发新 id**：outbound 对方 poller 没 |
+| @我 bot 「又 「没 「群 」「 | `sessions/tg-rotate-2026-07-29-0601.md` | 群聊点名必回实质内容**：正文含「又初/初儿」、@ bot 或 @ 主人时，必须 |
 | ## 07 2026 28 agent_session_rotate chcod | `~/.dc-platform/memory/lessons/2026-07-28-vsix-放-dc-platform-server-extension-走-git-pull-s.md` | 2026-07-28-vsix-放-dc-platform-server-ext |
 | ## %（ %） 0% 00 07 | `~/.dc-platform/memory/lessons/2026-07-28-device_id-空率-90-本需求-100-则直建-dim_device_all-勿再设计-.md` | 2026-07-28-device_id-空率-90-本需求-100-则直建-d |
 | ## 07 2026 28 agent_session_rotate backe | `~/.dc-platform/memory/lessons/2026-07-28-prd-五档看板只查-session_duration-合表并带-stat_grain-page.md` | 2026-07-28-prd-五档看板只查-session_duration-合 |
@@ -30,18 +45,3 @@
 | agent bu bus bus」时 group lesson | `sessions/tg-rotate-2026-07-27-1851.md` | `[LESSON: tg-group/bus-reply/bus 派活要求「结论 |
 | bus 一眼 以长 做轻 只做 同步 | `sessions/tg-rotate-2026-07-27-1851.md` | 私聊可以长，群聊让人**扫一眼就懂**；验数/派活结论走 bus，群里只做轻量同 |
 | @youchu_ai_bot @又初 主人 人名 人真 你是 | `sessions/tg-rotate-2026-07-27-1851.md` | 群里你是 **初儿**（`@youchu_ai_bot`）；**又初**是主人真 |
-| agent bus bus」 bus」→ reply 「结 | `sessions/tg-rotate-2026-07-27-1851.md` | 狂人 bus 写明「结论请回 bus」→ 验完**直接 agent-bus re |
-| ## markdown 列点 大表格 或换行 最多 | `sessions/tg-rotate-2026-07-27-1851.md` | 群聊**禁止**用 `##` 标题、markdown 大表格；真要列点用 `·` |
-| inline wiki 一句 作狂 别铺 口吻 | `sessions/tg-rotate-2026-07-27-1851.md` | 群聊口吻学工作狂人：第一句就是结论/在干啥，短句口语，数字 inline，别铺  |
-| 「我 「这 」「 」之 不插 不要 | `sessions/tg-rotate-2026-07-27-1851.md` | 没 @ 初儿时**静默跳过**，群里**不要**写「这条没 @ 我」「我不插嘴」 |
-| ## 07 2026 25 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-07-25-bus-入站-含-mudan99-等-peer-与-tg-同优先级当天回-私聊极简时群里仍要主动.md` | 2026-07-25-bus-入站-含-mudan99-等-peer-与-tg- |
-| ## 07 2026 25 agent_session_rotate commi | `~/.dc-platform/memory/lessons/2026-07-25-发布顺序固定为本地-git-push-海豚-发布后-live-sql-与-git-sha-dif.md` | 2026-07-25-发布顺序固定为本地-git-push-海豚-发布后-liv |
-| ## 07 2026 25 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-07-25-开通归因前先查配置表有无行-无行-insert-有行再-update-增量开通勿跑-bulk-i.md` | 2026-07-25-开通归因前先查配置表有无行-无行-insert-有行再-u |
-| agent_bus_send.py agent_bus_watcher.py m | `sessions/tg-rotate-2026-07-25-1904.md` | TG 出站镜像标题曾写死「又初→狂人」；应按实际 `to_agent` 显示（` |
-| agent bot bus mudan99 不可 不能 | `sessions/tg-rotate-2026-07-25-1904.md` | agent-bus 里 **野花/牡丹/千行/猫猫**（`mudan99` 等） |
-| ch channel」） 「只 」汇 不写回 事聊 | `sessions/tg-rotate-2026-07-25-1904.md` | 群聊/私聊回复先**接话再报数**，像同事聊天，少「· 第一点 · 第二点」汇报 |
-| sql 「跟 」才 一句 主动 了」 | `sessions/tg-rotate-2026-07-25-1904.md` | **私聊要极简、群里要闭环**：用户只要 SQL 可只给 SQL，但配置执行后群 |
-| channel dim_u dim_user_all.channel dim_u | `sessions/tg-rotate-2026-07-25-1904.md` | `dim_user_attribution_channel_apply_d` 是 |
-| apply） attribution_flag complement flag  | `sessions/tg-rotate-2026-07-25-1904.md` | 配置落 prod **不会补历史**；`result_d` 仍 0 时先查注册侧 |
-| 24h ip success ≥40 中逻 主命 | `sessions/tg-rotate-2026-07-25-1904.md` | 归因命中逻辑：IP + 24h 落地页主命中，设备四维 + 时间档加分，总分 ≥ |
-| 00 10 10） 20 21600 30 | `sessions/tg-rotate-2026-07-25-1904.md` | 设备加分统一口径：`brand_score=10`、`model_score=2 |

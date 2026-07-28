@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
 - [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
+- [新 Spark 任务 launcher 只填 JOB/SQL/PROFI](lessons/2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md) — 会话轮换蒸馏
+- [姿态 F 主链路不经过 merge_pool；海豚老 task P0 与](lessons/2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-task-p0-与-spark-迁移方向一.md) — 会话轮换蒸馏
+- [Paimon/Spark 表结构变更时用 DROP+CREATE boo](lessons/2026-07-29-paimon-spark-表结构变更时用-drop-create-bootstrap-禁止仅靠-.md) — 会话轮换蒸馏
 - [vsix 放 dc-platform-server/extension/](lessons/2026-07-28-vsix-放-dc-platform-server-extension-走-git-pull-s.md) — 会话轮换蒸馏
 - [device_id 空率≥90%（本需求 100%）则直建 dim_de](lessons/2026-07-28-device_id-空率-90-本需求-100-则直建-dim_device_all-勿再设计-.md) — 会话轮换蒸馏
 - [PRD 五档看板只查 session_duration 合表并带 sta](lessons/2026-07-28-prd-五档看板只查-session_duration-合表并带-stat_grain-page.md) — 会话轮换蒸馏
