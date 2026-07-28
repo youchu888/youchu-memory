@@ -11,6 +11,8 @@
 - [bus-reply|bus 派活要求「结论请回 bus」时，验完直接 a](lessons/2026-07-27-bus-reply-bus-派活要求-结论请回-bus-时-验完直接-agent-bus-结案-.md) — 会话轮换蒸馏
 - [mention-routing|未 @youchu_ai_bot 的群消](lessons/2026-07-27-mention-routing-未-youchu_ai_bot-的群消息直接不回-且不在群里解释.md) — 会话轮换蒸馏
 > 每个 memory 文件挂一行：`- [<标题>](<rel_path>) — <一句话 hook>`。
+- [群聊探活/bus收条勿再回](feedback_group_liveness_bus_ack_no_reply.md) — 「还活着吗」「bus收到了吗」「收到这块我跟」已闭环则静默；禁 Cursor 叠回。
+- [探活与bus收条无需再回](lessons/2026-07-28-探活与bus收条无需再回.md) — 主人 07-28 截图纠正；无任务清单的探活/收条 = 不回。
 - [bus 入站（含 mudan99 等 peer）与 TG @ 同优先级当](lessons/2026-07-25-bus-入站-含-mudan99-等-peer-与-tg-同优先级当天回-私聊极简时群里仍要主动.md) — 会话轮换蒸馏
 - [发布顺序固定为本地→git push→海豚，发布后 live SQL 与](lessons/2026-07-25-发布顺序固定为本地-git-push-海豚-发布后-live-sql-与-git-sha-dif.md) — 会话轮换蒸馏
 - [开通归因前先查配置表有无行；无行 INSERT、有行再 UPDATE；增](lessons/2026-07-25-开通归因前先查配置表有无行-无行-insert-有行再-update-增量开通勿跑-bulk-i.md) — 会话轮换蒸馏
