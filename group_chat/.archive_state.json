@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-27 02:30:51",
+  "last_run": "2026-07-28 19:01:17",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1129,8 +1129,13 @@
       "2026-07-25 18:49:50|telegram_dm|8740305767|[私聊#244] 如果搞定了，bus给小花|先确认野花打回的分档边界是否已改完，改完再 bus 给她。\n野花打回的 daily 分档还没改，我先修成 60/300，push 后再 bus 给她。\n已搞定，刚 bus 给野花了（#5500，回她 #5497 那条）。\n\n**修了啥：**\n- daily 分档 **180/420 → 60/300**（user/device 各两处 CASE）\n- design 拆开单次 / 日均口径\n- push **`0de94f9d`**\n\n跟她说清楚了：test 现网数据还是旧边界跑的，要复验得重发海豚补跑。B 线 Paimon 阻塞点也一并带了。|",
       "2026-07-25 18:53:19|telegram_dm|8740305767|[私聊#245] 以后发布的时候，所有的代码都要统一，git 本地，海豚 ，3处代码要版本一致，发现几次都是代码版本不一致了|这条我记进协作习惯和 lesson，发布前先核对 git、本地、海豚三处一致。\n记住了，今天五档就是反例——海豚 v137/v138 已发，git 还停在 4 表，野花一核对直接 FAIL。\n\n以后发布按这个顺序，**三处必须同一版**：\n\n1. **本地** `ops_system/` 改完  \n2. **git** commit + push（记下 SHA）  \n3. **海豚** 再走平台发布  \n4. 发布后拉 live SQL 和 `git show SHA:path` **diff 为空**才算完  \n\n对外汇报、bus、审单都带 commit SHA，方便对齐。\n\n已写入 `feedback_publish_git_local_dolphin_triple_sync.md` 和 lesson `2026-07-25-publish-git-local-dolphin-triple-sync.md`，以后发布前按这个 checklist 走。|",
       "2026-07-25 21:25:53|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 值班||observe"
+    ],
+    "2026-07-27": [
+      "2026-07-27 18:44:17|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot ads_product_day_stat_d 这个报表，计算订单创建笔数和金额，支付成功笔数和金额都是什么规则？||observe",
+      "2026-07-27 18:45:39|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot ads_product_day_stat_d 这个报表，计算订单创建笔数和金额，支付成功笔数和金额都是什么规则？||observe",
+      "2026-07-27 18:47:21|telegram_group|8184109272|[群聊#146] [群聊·@zhiqiu56789]: @mudan99_bot ads_product_day_stat_d 这个报表，计算订单创建笔数和金额，支付成功笔数和金额都是什么规则？|这条 @ 的是 `@mudan99_bot`（野花），没 @ 初儿，群里不回。|"
     ]
   },
-  "last_hot_lines": 0,
-  "last_archived_lines": 72
+  "last_hot_lines": 58,
+  "last_archived_lines": 3
 }
