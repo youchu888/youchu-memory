@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-28 | [群聊仅显式 @初儿/@又初 才回，取消裸喊名](./2026-07-28-群聊仅显式at初儿又初才回.md) | tg, group, mention, silent | 废止裸喊名；@worker_ant+文案带又初不再秒回 |
 | 2026-07-28 | [探活 / bus 收条类对话：已闭环则勿再回](./2026-07-28-探活与bus收条无需再回.md) | tg, group, silent, liveness, bus-ack | 还活着吗/bus收到了吗/收到这块我跟 → 不回；禁 Cursor 叠回 |
 | 2026-07-28 | [vsix 放 dc-platform-server/extension/ 走 g](./2026-07-28-vsix-放-dc-platform-server-extension-走-git-pull-s.md) | extension,release,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-28 | [device_id 空率≥90%（本需求 100%）则直建 dim_device](./2026-07-28-device_id-空率-90-本需求-100-则直建-dim_device_all-勿再设计-.md) | device_tag,dim,session-rotate | 会话轮换前自动蒸馏 |
