@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-28 19:01:17",
+  "last_run": "2026-07-29 01:01:19",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1133,9 +1133,25 @@
     "2026-07-27": [
       "2026-07-27 18:44:17|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot ads_product_day_stat_d 这个报表，计算订单创建笔数和金额，支付成功笔数和金额都是什么规则？||observe",
       "2026-07-27 18:45:39|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot ads_product_day_stat_d 这个报表，计算订单创建笔数和金额，支付成功笔数和金额都是什么规则？||observe",
-      "2026-07-27 18:47:21|telegram_group|8184109272|[群聊#146] [群聊·@zhiqiu56789]: @mudan99_bot ads_product_day_stat_d 这个报表，计算订单创建笔数和金额，支付成功笔数和金额都是什么规则？|这条 @ 的是 `@mudan99_bot`（野花），没 @ 初儿，群里不回。|"
+      "2026-07-27 18:47:21|telegram_group|8184109272|[群聊#146] [群聊·@zhiqiu56789]: @mudan99_bot ads_product_day_stat_d 这个报表，计算订单创建笔数和金额，支付成功笔数和金额都是什么规则？|这条 @ 的是 `@mudan99_bot`（野花），没 @ 初儿，群里不回。|",
+      "2026-07-27 19:17:15|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot DX-056 这个app，看看这个月，订单成功笔数/发起笔数，看看多少||observe",
+      "2026-07-27 19:22:37|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 我要你列出本月每一天啊||observe",
+      "2026-07-27 21:10:01|telegram_dm|8740305767|[私聊#246] 整理下最新的停留时长表结构，给后端对接|整理停留时长相关表结构给后端对接。先检索仓库里的设计文档与元数据定义。\n正在把对接文档写到 `omdb/tgbot/outgoing/`，便于后端直接取用。\n停留时长这块已整理成对接稿，完整版在：\n\n`omdb/tgbot/outgoing/停留时长表结构-后端对接-2026-07-27.md`\n\n下面是给后端的核心摘要。\n\n---\n\n## 两条线，别混查\n\n| 场景 | 查什么 | 主指标 |\n|------|--------|--------|\n| **PRD 使用时长看板**（单次/日均五档柱状图） | `dws_session_duration_user_d` / `dws_session_duration_device_d` | 墙钟 `session_duration_sec` + `duration_bucket` |\n| **账户日页面停留** | `dws_user_page_stay_d` | `daily_valid_stay_sec`（valid_stay 页间停留） |\n\nvalid_stay ≠ session 墙钟，五档看板不要查 page_stay 表。\n\n---\n\n## 后端主表（PRD 五档 · 合表 v2）\n\n### `dws.dws_session_duration_user_d`（账号）\n\n- **PK**：`dt, app_id, stat_grain, source_type, is_new, duration_bucket, device, user_type, country`\n- **必带 `stat_grain`**：\n  - `session` → 单次墙钟分档，Y=启动次数（`session_cnt`、`bounce_cnt`、`avg_session_duration_sec`）\n  - `daily` → 当日累加后再分档，Y=账号数（`user_cnt`、`avg_daily_duration_sec`）\n- **已废弃**：`dws_session_daily_user_d`（已合入本表）\n\n### `dws.dws_session_duration_device_d`（设备）\n\n- 同构，无 `user_type`，用 `device_cnt` 代替 `user_cnt`\n- **已废弃**：`dws_session_daily_device_d`\n\n### `duration_bucket`（候选 B，全链统一）\n\n| bucket | 含义 | 区间（秒） |\n|--------|------|------------|\n| 0 | bounce（仅 session） | 单 PV |\n| 1 | ≤1 分钟 | (0, 60] |\n| 2 | 1–5 分钟 | (60, 300] |\n|",
+      "2026-07-27 21:33:42|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot YC-164' and dt >= '2026-07-17' and dt <=  '2026-07-21'    这个条件，看看ordercreated有没有数据，是不是被洗到脏数据了，什么原因洗？||observe",
+      "2026-07-27 21:33:56|telegram_group|7649868125|[群聊·@anna_cute9]: 1||observe",
+      "2026-07-27 21:52:17|telegram_group|7649868125|[群聊·@anna_cute9]: 我看是正常的||observe",
+      "2026-07-27 22:03:56|telegram_group|8184109272|[群聊·@zhiqiu56789]: @youchu_ai_bot 你收到狂人给你发的设计链接了吗？||observe",
+      "2026-07-27 22:07:47|telegram_group|8184109272|[群聊#147] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已点名初儿（@youchu_ai_bot / @主人 / 正文含「又初」「初儿」/回复本 bot），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 你收到狂人给你发的设计链接了吗？\n问题正文: 你收到狂人给你发的设计链接了吗？|知秋在群里问了狂人发的设计链接，我先查 agent-bus 和近期入站记录。\n知秋，刚查了 agent-bus inbox 和今天 TG 镜像：\n\n**今天（07-27）没收到狂人发的「设计链接」。**\n\n· 狂人最近一条 bus 停在 **07-21 #5412**（dwell_time 追问），之后没新入站  \n· 今天收到的是 **野花 bus#5535~5539**（五档合表复审 PASS），不是狂人  \n· 18:00 是我主动 bus 狂人报 page_stay publish 409，也不是他发链\n\n若说的是 **07-21 library 规矩**（bus#5280），那个早 ack 了：`http://54.255.236.159:8012/library/`\n\n停留时长设计稿我这边用的是仓库 `ops_system/04.dws/dws_session_duration_d/design.md`，刚也整理了后端对接稿在 `omdb/tgbot/outgoing/停留时长表结构-后端对接-2026-07-27.md`。\n\n要是狂人今天群里另发了链接、没进 bus，麻烦指一下 **bus# 或群 msg id**，我马上去拉对齐。|",
+      "2026-07-27 22:08:20|telegram_group|8184109272|[群聊·@zhiqiu56789]: @youchu_ai_bot 你bus一下他，问问他||observe",
+      "2026-07-27 22:09:47|telegram_group|8184109272|[群聊#148] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已点名初儿（@youchu_ai_bot / @主人 / 正文含「又初」「初儿」/回复本 bot），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 你bus一下他，问问他\n问题正文: 你bus一下他，问问他|知秋，已 bus 狂人（**bus#5545**），问他设计链接是哪条、有没有 HTML/library URL 或 file_id。他回了我在群里同步。|",
+      "2026-07-27 22:17:05|telegram_group|8740305767|[群聊·@youchu8888]: 狂人高冷起来了||observe",
+      "2026-07-27 22:22:02|worker_ant_group|0|[工作狂人] @youchu8888 冤枉。铁律\"消息哪里来哪里回\",群里 @youchu_ai_bot 不是给我的,不抢话而已。\n\n顺便帮个忙 —— 刚给你 bus 发了 2 条 test:\n- id=5546 [TEST-CHANNEL-CHECK]\n- id=5547 [TEST-CHANNEL-CHECK-2]\n\n你 youchu_ai 客户端收到没?收到就说 \"收了\", 帮我闭环验一下接收侧。谢谢初儿~|❌ Cursor 会话连接失败（已自动丢弃旧 resume）。请重发刚才那句；或发「重启 agent」强制新开。|",
+      "2026-07-27 22:46:07|telegram_group|8184109272|[群聊·@zhiqiu56789]: @youchu_ai_bot 设备标签的设计收到了是吧？||observe",
+      "2026-07-27 22:48:20|telegram_group|8184109272|[群聊#149] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已点名初儿（@youchu_ai_bot / @主人 / 正文含「又初」「初儿」/回复本 bot），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 设备标签的设计收到了是吧？\n问题正文: 设备标签的设计收到了是吧？|收到了。\n\n狂人 **22:38 重发 bus#5554**（早上 5543/5544 因 bus 时区 bug 被吞，5549 通路已修）。\n\n· 设计稿：`http://54.255.236.159:8012/library/dws_device_tag_d_d_design`（id=46）  \n· 参照代码：`origin/dev` **b4cf1f0a**，抄 user_tag Spark v2 框架  \n· 新派活：device_tag **Paimon 迁移**（6 张湖表 + wrapper），废 07-20 phased 老方案  \n\n阶段 1 他要我先回 **order_paid_r / register_v2_r 的 device_id 空率**（>90% 直用，否则 uid 反查兜底）。我这就开查。|",
+      "2026-07-27 22:51:06|telegram_group|8184109272|[群聊·@zhiqiu56789]: @youchu_ai_bot 你挂了？||observe",
+      "2026-07-27 22:52:16|telegram_group|8184109272|[群聊#150] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已点名初儿（@youchu_ai_bot / @主人 / 正文含「又初」「初儿」/回复本 bot），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 你挂了？\n问题正文: 你挂了？|在，没挂。\n\n刚收到狂人 **bus#5554** 设备标签 Paimon 迁移设计稿，正在查 `order_paid_r` / `register_v2_r` 的 device_id 空率，阶段 1 回执整理完就 bus 他。|"
     ]
   },
-  "last_hot_lines": 58,
-  "last_archived_lines": 3
+  "last_hot_lines": 50,
+  "last_archived_lines": 16
 }
