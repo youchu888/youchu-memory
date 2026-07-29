@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
 - [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
 - [**死规矩** 不改插件版本/不自发 vsix](feedback_no_bump_extension_version.md) — 发版交给野花/超管
+- [群内找又初须 @又初/@初儿/@youchu8888/@youchu_a](lessons/2026-07-30-群内找又初须-又初-初儿-youchu8888-youchu_ai_bot-主人账号不是又初通道.md) — 会话轮换蒸馏
+- [设备标签问 device 时答两层：DWD 入值 ANDROID/IOS](lessons/2026-07-30-设备标签问-device-时答两层-dwd-入值-android-ios-pc-宽表落-reg_.md) — 会话轮换蒸馏
+- [机器人群工作簿进度默认私聊草稿待主人确认后再发，草稿须查库/平台取证，禁](lessons/2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库-平台取证-禁止硬编码与探针空快照直接.md) — 会话轮换蒸馏
 - [进入 stage 须带 byCode](lessons/2026-07-29-advanceToStage-必须带byCode.md) — 审核点 stage 报 state not found；**不自行升版**
 - [**死规矩** 禁止空标 stage](feedback_dev_session_no_fake_stage_done.md) — 提审前五件齐；lesson + Cursor alwaysApply
 - [禁止空标 stage：须落 state 产物](lessons/2026-07-29-dev-session-禁止空标stage须落state产物.md) — stage4/5/6 真走；禁只标 done

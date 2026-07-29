@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-30 | [群内找又初须 @又初/@初儿/@youchu8888/@youchu_ai_bo](./2026-07-30-群内找又初须-又初-初儿-youchu8888-youchu_ai_bot-主人账号不是又初通道.md) | tg-group,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-30 | [设备标签问 device 时答两层：DWD 入值 ANDROID/IOS/PC，](./2026-07-30-设备标签问-device-时答两层-dwd-入值-android-ios-pc-宽表落-reg_.md) | device-tag,field-dict,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-30 | [机器人群工作簿进度默认私聊草稿待主人确认后再发，草稿须查库/平台取证，禁止硬编码](./2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库-平台取证-禁止硬编码与探针空快照直接.md) | tgbot,workbook-progress,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-29 | [进入 stage 失败：advanceToStage 必须带 byCode](./2026-07-29-advanceToStage-必须带byCode.md) | extension, byCode | 审核人点 stage 报 state not found；0.0.122 |
 | 2026-07-29 | [设备标签姿态 F：须整批下线日 wf + 全部旧 task](./2026-07-29-设备标签姿态F须整批下线海豚日wf与桶task.md) | device-tag,dolphin,pose-f,deprecate | 禁半迁移：不能只停 merge_pool |
 | 2026-07-29 | [禁止空标 stage done：须落 stage4/5/6 state 产物](./2026-07-29-dev-session-禁止空标stage须落state产物.md) | dev-session, state_json, stage4 | 空标 done 野花审界面打不开；真查库+写产物 |
