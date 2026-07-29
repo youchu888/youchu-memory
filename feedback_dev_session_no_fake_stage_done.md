@@ -50,13 +50,30 @@ assert s4.get('created') and s4.get('etlRan') and s4.get('playbookConfirmed')
 "
 ```
 
-## 血案
+## 打开会话（与空标并列的死规矩）
 
-- `dev-20260729-002`：列表 stage7+pending 野花，实质 state 仅 5 key → 审核打不开；主人定性「忽悠」
-- 同批 `dev-20260729-001` 亦缺；已严格重走补齐
+平台自 **2026-06-17** 起：**文件 content 不落 backend**（`GET /file` → 410；`bulk-pull` 只有 path）。
+
+别人要打开 session，必须：
+
+1. VS Code 工作区打开 **`dmp/dc-parent` 仓库根**（与 `project_id` 一致）
+2. `git pull`，保证本地存在 `rel_dir`（例：`ops_system/04.dws/dws_session_duration_d`）
+3. 再点开需求；**不能指望后端 materialize 写出正文**
+
+`state_json` 五件齐 ≠ 文件可打开。五件解决的是 stage7 **审核界面渲染**；文件靠 **git 磁盘**。
+
+插件禁止在无 content 时写空壳文件（会制造「打开了但是全空」）。
+
+### 血案 · `进入 stage 失败: session state not found in …`
+
+- 野花从「待发布申请」点 stage → `advanceToStage(dir)` 只靠 `resolveCodeByDir`
+- 反查默认 index 对不上别人的 `rel_dir` → `readState` 空 → 报错
+- **修**：`advanceToStage(..., { byCode })`；`openDevSessionStage` 必传 `session.state.code`
+- 需发新 vsix 后生效
 
 ## 关联
 
 - lesson：`lessons/2026-07-29-dev-session-禁止空标stage须落state产物.md`
 - Cursor 规则：`.cursor/rules/dev-session-stage-artifacts-required.mdc`
 - 平台文档：`dc-platform-server/docs/task_state_model.md`（Gate1 stage4 三勾）
+- 插件：`vscode-extension/src/dev-session.ts` `advanceToStage`
