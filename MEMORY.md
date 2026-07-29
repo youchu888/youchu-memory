@@ -160,3 +160,4 @@
 
 - lesson: lessons/2026-07-28-deprecate-must-offline-old-dolphin-task.md — 合表废弃须同批下线旧海豚 task
 - feedback: feedback_deprecate_must_offline_dolphin_task.md — 合表废弃须同批删旧海豚 task
+- [设备标签姿态 F：须整批下线日 wf + 全部旧 task](lessons/2026-07-29-设备标签姿态F须整批下线海豚日wf与桶task.md) — 禁半迁移只停 merge_pool
