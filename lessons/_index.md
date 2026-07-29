@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-29 | [禁止空标 stage done：须落 stage4/5/6 state 产物](./2026-07-29-dev-session-禁止空标stage须落state产物.md) | dev-session, state_json, stage4 | 空标 done 野花审界面打不开；真查库+写产物 |
 | 2026-07-29 | [工作簿进展发群前必须主人确认](./2026-07-29-workbook-progress-confirm-before-group.md) | tg, workbook, confirm | 私聊草稿→确认发群；禁09:01自动发群 |
 | 2026-07-29 | [新 Spark 任务 launcher 只填 JOB/SQL/PROFILE 走](./2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md) | ops-system,templates,spark,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-29 | [姿态 F 主链路不经过 merge_pool；海豚老 task P0 与 Spa](./2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-task-p0-与-spark-迁移方向一.md) | device-tag,dolphin,merge-pool,session-rotate | 会话轮换前自动蒸馏 |
