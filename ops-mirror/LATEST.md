@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-29 16:39:50 +0800
+> 更新: 2026-07-29 16:50:16 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-29.md`
 
@@ -61,3 +61,4 @@
 | 2026-07-29 14:52 | 私聊#249 | telegram_dm | completed | 看看标签的需求，device这个字段入职字典都是什么 |
 | 2026-07-29 15:00 | 群派单#154 | worker_ant_group | completed | @hull1889 bus#5665 已审完,回执 bus#5666。 content-rank 加 media_id:**3 条 PASS,1 条数字要修,1 |
 | 2026-07-29 15:34 | 群派单#155 | worker_ant_group | completed | @hull1889 bus#5667 已审完,回执 bus#5668,**HOLD 解除,猫猫可以动手了**。 清单我没直接认,自己重查了一遍 prod 海豚元 |
+| 2026-07-29 16:47 | 群派单#156 | worker_ant_group | completed | @hull1889 bus#5687 审完了,已回 bus#5688。 test 全链放行。猫猫报的三组证据我全部独立复跑过,数字一字不差: - video d |
