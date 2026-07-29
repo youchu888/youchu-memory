@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-29 16:29:08",
+  "last_run": "2026-07-29 23:42:57",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1189,9 +1189,15 @@
       "2026-07-28 15:54:03|telegram_group|8184109272|[群聊#154] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已显式 @ 初儿/又初（@youchu_ai_bot / @youchu8888 / @又初 / @初儿），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 审什么啊，设计，代码例子，全都给你了。你都开发完，开发之后提交git，再给你看\n问题正文: 审什么啊，设计，代码例子，全都给你了。你都开发完，开发之后提交git，再给你看|收到，不等狂人审阶段2了。我先对齐现有设计和代码基线，再开干。\n知秋，明白了，不等狂人审阶段2了。\n\n设计稿 library#46 + user_tag 姿态F 代码样例都在，我按这个把 **6 湖表 + wrapper + 宽表** 开发完，test 跑通后 **push origin/dev**，再发你 commit 和验数结果。\n\n今天先收口阶段3代码和 test 海豚，有卡点群里报。|",
       "2026-07-28 15:59:47|telegram_group|8184109272|[群聊·@zhiqiu56789]: @youchu_ai_bot 这里没有测试环境，代码写完提交配置库，狂人给你sumbit到spark跑，懂了吧？||observe",
       "2026-07-28 16:00:39|telegram_group|8184109272|[群聊#155] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已显式 @ 初儿/又初（@youchu_ai_bot / @youchu8888 / @又初 / @初儿），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 这里没有测试环境，代码写完提交配置库，狂人给你sumbit到spark跑，懂了吧？\n问题正文: 这里没有测试环境，代码写完提交配置库，狂人给你sumbit到spark跑，懂了吧？|懂了。\n\n这边没有 test 环境可自跑，我按 library#46 + 姿态F 把 Scala/Paimon 代码和 DDL 写完，**直接 push 配置库 origin/dev**，不自己 submit Spark。\n\n跑数你让狂人那边 spark-submit，我 push 完把 **commit SHA + 改动路径** 发群里，他拉代码上集群跑。|",
-      "2026-07-28 16:18:32|telegram_group|8774096826|[群聊·@hull1889]: @Lanmao_Tg_Cursor_Bot 现在订单分析的那几个时间在哪个工作流，在哪个时间前后，给我发一张png的图，让我们审核一下||observe"
+      "2026-07-28 16:18:32|telegram_group|8774096826|[群聊·@hull1889]: @Lanmao_Tg_Cursor_Bot 现在订单分析的那几个时间在哪个工作流，在哪个时间前后，给我发一张png的图，让我们审核一下||observe",
+      "2026-07-28 18:39:29|telegram_group|8184109272|[群聊·@zhiqiu56789]: @youchu_ai_bot dwm_device_tag_merge_pool_d_d\n这是什么东西？||observe",
+      "2026-07-28 18:41:17|telegram_group|8184109272|[群聊#156] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已显式 @ 初儿/又初（@youchu_ai_bot / @youchu8888 / @又初 / @初儿），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot dwm_device_tag_merge_pool_d_d\n这是什么东西？\n问题正文: dwm_device_tag_merge_pool_d_d\n这是什么东西？|`dwm_device_tag_merge_pool_d_d` 是**设备标签 v2 的 DWM 中间表**，不是最终宽表。\n\n作用一句话：**当天哪些 device 需要重算标签**——把「今日有动静的设备」+「滚动窗口边界要衰减的设备」合成一张日键表，宽表只 JOIN 这张表，避免像老方案那样每天扫十几亿全量设备。\n\n里面主要是 `(dt, app_id, device_id, pool_source)`，来源三块：\n· **delta**：今天活跃/播放/下单/广告/注册有新信号的设备  \n· **expiry**：7/15/30 天窗口滑出边界、要重算 last_N 指标的  \n· **boundary**：昨天宽表里登录很久但窗口计数还没清零的\n\n产物表是 `dws.dws_device_tag_d_d`；merge_pool 是宽表前面的**增量驱动池**。\n\n补充：这是 **07-19 v2 重设计（Scala/StarRocks）** 那条线的 L2 表，test 海豚 `wf_设备标签_日` 里有过。你现在推的**姿态 F 六步 wrapper**（ad/finance/video/active/dim → 宽表）是另一条，step6 直接五表 JOIN，**不经过 merge_pool**。所以这张表是 v2 增量架构用的，不是姿态 F 主链路必跑表。|",
+      "2026-07-28 18:42:08|telegram_group|8184109272|[群聊·@zhiqiu56789]: @youchu_ai_bot 设备标签都放到spark，不要留在海豚||observe",
+      "2026-07-28 18:43:10|telegram_group|8184109272|[群聊#157] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已显式 @ 初儿/又初（@youchu_ai_bot / @youchu8888 / @又初 / @初儿），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 设备标签都放到spark，不要留在海豚\n问题正文: 设备标签都放到spark，不要留在海豚|知秋要求设备标签全部迁到 Spark、不再走海豚调度。我先核对当前仓库里设备标签在海豚与 Spark 上的分布，再给你可执行的群聊答复。\n收到，按这条执行。\n\n**结论**：设备标签**统一走 Spark**，不再在海豚挂日批任务。\n\n**现状**：\n- **姿态 F 主链路**（当前在推的）已经是 Spark：`device_tag_wrapper.sh` 串 6 步（ad → finance → video → active → dim → 宽表），Paimon 落湖，集群由狂人 submit，**不依赖海豚**。\n- 海豚里还留着的是**老 v1/v2 线**（`wf_设备标签_日` / `wf_dwm_设备标签_日`、8 桶 UPSERT、merge_pool 等），属于历史包袱，**不再作为目标架构**。\n\n**后续**：\n1. 新开发、补数、上线验收**只认 Spark wrapper**，代码继续推 `origin/dev`。\n2. 海豚侧设备标签 task **停更、不扩**；等姿态 F 跑通后再下线旧 wf（需狂人/运维配合停调度）。\n3. `merge_pool` / `uid_map` 若还要用，也改成 Spark SQL + wrapper 挂接，**不回海豚**。\n\n今天修完的 video 表 schema（`is_eff_play`）也是 Spark 路径上的，狂人重跑 wrapper step3+6 即可。|",
+      "2026-07-28 21:22:33|telegram_group|8184109272|[群聊·@zhiqiu56789]: @youchu_ai_bot 所以你的标签任务已经开发完了？||observe",
+      "2026-07-28 21:23:50|telegram_group|8184109272|[群聊#158] [群聊·@zhiqiu56789]: 【群聊硬规则】本条已显式 @ 初儿/又初（@youchu_ai_bot / @youchu8888 / @又初 / @初儿），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 所以你的标签任务已经开发完了？\n问题正文: 所以你的标签任务已经开发完了？|还没完，不能算「开发完了」。\n\n**现状**（设备标签 · 姿态 F）：\n- **代码侧**：六步 Spark wrapper + 6 张 Paimon 表 SQL 已推 `origin/dev`；今天还修了 DDL（DROP 重建）和 video 表 `is_eff_play` 字段问题。\n- **跑数侧**：`dt=2026-07-27` 前 5 步已过，**第 6 步宽表**因旧 schema 挂过；修复已推，等狂人在集群重跑 step3+6 验收。\n- **上线**：**未 prod**；海豚老 `wf_设备标签_日` 按你要求不再维护，姿态 F 跑通后一起下线。\n\n**一句话**：开发主体在 Spark 线上，还差 **step6 集群验收通过** 才能说做完；验收 OK 我再报「可上线」。|"
     ]
   },
-  "last_hot_lines": 22,
-  "last_archived_lines": 35
+  "last_hot_lines": 21,
+  "last_archived_lines": 6
 }

@@ -25,4 +25,4 @@
 | 2026-07-24 | 27 | ##, 07, 1., 2., 2026 | [2026-07-24](archive/2026-07-24.md) |
 | 2026-07-25 | 65 | 群聊·@zhiqiu56789, ##, **, sql, 1. | [2026-07-25](archive/2026-07-25.md) |
 | 2026-07-27 | 19 | 群聊·@zhiqiu56789, @youchu_ai_bot, @mudan99_bot, bus, 07 | [2026-07-27](archive/2026-07-27.md) |
-| 2026-07-28 | 38 | @lanmao_tg_cursor_bot, 07, 群聊·@hull1889, 群聊·@zhiqiu56789, bus | [2026-07-28](archive/2026-07-28.md) |
+| 2026-07-28 | 44 | 群聊·@zhiqiu56789, 07, @lanmao_tg_cursor_bot, @youchu_ai_bot, 群聊·@hull1889 | [2026-07-28](archive/2026-07-28.md) |
