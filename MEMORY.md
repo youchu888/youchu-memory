@@ -4,6 +4,7 @@
 > 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
 > **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
 - [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
+- [**死规矩** 禁止空标 stage](feedback_dev_session_no_fake_stage_done.md) — 提审前五件齐；lesson + Cursor alwaysApply
 - [禁止空标 stage：须落 state 产物](lessons/2026-07-29-dev-session-禁止空标stage须落state产物.md) — stage4/5/6 真走；禁只标 done
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 - [新 Spark 任务 launcher 只填 JOB/SQL/PROFI](lessons/2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md) — 会话轮换蒸馏

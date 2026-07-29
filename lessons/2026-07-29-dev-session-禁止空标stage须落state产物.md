@@ -7,6 +7,8 @@ domain: ops
 
 # 禁止空标 stage done：野花审核要读 stage4/5/6 产物
 
+> **死规矩**（主人 2026-07-29）：已升格为硬反馈 + alwaysApply Cursor 规则，禁止再犯。
+
 ## 背景
 
 停留时长 `dev-20260729-002` 列表显示 stage1~6 done + pending 野花，但插件 stage7 审界面打不开。根因不是接口挂了，而是 `state_json` 缺执行产物。
@@ -45,6 +47,8 @@ curl -sS -H "Authorization: Bearer $TOKEN" \
 
 ## 关联
 
+- **硬反馈**：`../feedback_dev_session_no_fake_stage_done.md`
+- **Cursor 规则**：`CHcode/.cursor/rules/dev-session-stage-artifacts-required.mdc`（alwaysApply）
 - session：`dev-20260729-002`（停留时长，已严格重走 + RP 野花）
 - session：`dev-20260729-001`（设备标签，已补产物，不 RP）
 - 报告：`ops_system/04.dws/dws_session_duration_d/_strict_rewalk_report.json`
