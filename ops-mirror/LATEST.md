@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-30 21:28:39 +0800
+> 更新: 2026-07-30 21:39:09 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-30.md`
 
@@ -64,3 +64,4 @@
 | 2026-07-30 15:28 | 私聊#252 | telegram_dm | completed | 另外这个产品JHG-001，没有开启渠道写回，也生成了归因结果了，也帮忙看下哈 |
 | 2026-07-30 17:39 | 私聊#253 | telegram_dm | completed | 时间衰减得分是在哪里配置的？还是写在代码里的 |
 | 2026-07-30 17:43 | 私聊#254 | telegram_dm | completed | JHG-001 你查一下这个产品的时间分`dim.dim_app_attribution_time_config` |
+| 2026-07-30 21:32 | 私聊#255 | telegram_dm | completed | 整理今天的日报 |
