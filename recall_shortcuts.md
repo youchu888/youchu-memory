@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 2026 24h 31 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-07-31-改时间分查-dim_app_attribution_time_config-无专属行即-defa.md` | 2026-07-31-改时间分查-dim_app_attribution_tim |
+| ## 07 2026 31 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-07-31-影子期判读-is_run-1-且-is_rewrite_channel-0-时结果表有数-渠道不.md` | 2026-07-31-影子期判读-is_run-1-且-is_rewrite_c |
+| ## 07 2026 31 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-07-31-答疑-没匹配为何有分-先看-attribution_status-unattributed_re.md` | 2026-07-31-答疑-没匹配为何有分-先看-attribution_sta |
+| .cursor dd.md log mm reports upload_work | `sessions/tg-rotate-2026-07-31-0639.md` | 日报「上传云端」：以主人定稿 **原封不动** 更新 `.cursor/work |
+| .m 04.dws dws.dws_register_attribution_r | `sessions/tg-rotate-2026-07-31-0639.md` | 归因口径详述见 `ops_system/04.dws/dws.dws_regis |
+| dws_register_attribution_result_d.sql et | `sessions/tg-rotate-2026-07-31-0639.md` | ETL（`dws_register_attribution_result_d.s |
+| 10 20 21600 30 3600 40 | `sessions/tg-rotate-2026-07-31-0639.md` | 无 app 专属时间分行则 fallback **`default` 四档**： |
+| app_id dim.dim_app_attribution_config di | `sessions/tg-rotate-2026-07-31-0639.md` | 时间衰减分配在 `dim.dim_app_attribution_time_co |
+| ap apply（仅 app未灰度 es is_rewrite_channel  | `sessions/tg-rotate-2026-07-31-0639.md` | 链路拆分：result（算分落结果表）→ apply（仅 `is_rewrite |
+| apply dim_user_all.channel dws_register_ | `sessions/tg-rotate-2026-07-31-0639.md` | 归因两开关独立：`is_run=1` 走 result 任务写 `dws_reg |
+| +10） 11.5h 86400 default miss mvp_v2 | `sessions/tg-rotate-2026-07-31-0639.md` | mvp_v2 总分 = 品牌 + 型号 + 系统名 + 系统版本 + 时间档；设 |
+| 001 40） attribution_status ip jhg score | `sessions/tg-rotate-2026-07-31-0639.md` | 注册归因「有分数 ≠ 归因成功」：`attribution_status=una |
+| ads.ads_app_event_data_quality_summary_d | `sessions/tg-rotate-2026-07-31-0639.md` | `ads.ads_app_event_data_quality_summary_ |
+| .m ai ai开发版.md ar bo dev_platform_dev | `sessions/tg-rotate-2026-07-31-0639.md` | 数仓全链路手册可交付两份：`omdb/tgbot/outgoing/数仓开发手册 |
+| @youchu8888 @youchu_ai_bot @初儿 @又初 「没 「群 | `sessions/tg-rotate-2026-07-31-0639.md` | 群聊被显式 `@youchu_ai_bot` / `@youchu8888` / |
 | ## 07 2026 30 @youchu8888 @youchu_ai_bot | `~/.dc-platform/memory/lessons/2026-07-30-群内找又初须-又初-初儿-youchu8888-youchu_ai_bot-主人账号不是又初通道.md` | 2026-07-30-群内找又初须-又初-初儿-youchu8888-youch |
 | ## 07 2026 30 agent_session_rotate andro | `~/.dc-platform/memory/lessons/2026-07-30-设备标签问-device-时答两层-dwd-入值-android-ios-pc-宽表落-reg_.md` | 2026-07-30-设备标签问-device-时答两层-dwd-入值-andr |
 | ## 07 2026 30 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库-平台取证-禁止硬编码与探针空快照直接.md` | 2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库 |
@@ -30,18 +45,3 @@
 | @我 bot 「又 「没 「群 」「 | `sessions/tg-rotate-2026-07-29-0601.md` | **群聊点名必回实质内容**：正文含「又初/初儿」、@ bot 或 @ 主人时， |
 | bootstrap ddl job launcher lesson ops | `sessions/tg-rotate-2026-07-29-0601.md` | [LESSON: ops-system,templates,spark/新 Sp |
 | bootstrap create ddl device drop+crea dr | `sessions/tg-rotate-2026-07-29-0601.md` | [LESSON: device-tag,spark,ddl/Paimon/Spa |
-| bootstrap ddl job launcher ops_system pr | `sessions/tg-rotate-2026-07-29-0601.md` | 新 launcher 走 `_templates/`**：只填 `JOB` /  |
-| bootstrap combined_n_ddl.sql create ddl  | `sessions/tg-rotate-2026-07-29-0601.md` | DDL 改列勿用 IF NOT EXISTS 裸建**：`CREATE TABL |
-| #5600→#5603） after_id bothub bus id msg_ | `sessions/tg-rotate-2026-07-29-0601.md` | bothub 未触发要重发新 id**：outbound 对方 poller 没 |
-| @我 bot 「又 「没 「群 」「 | `sessions/tg-rotate-2026-07-29-0601.md` | 群聊点名必回实质内容**：正文含「又初/初儿」、@ bot 或 @ 主人时，必须 |
-| ## 07 2026 28 agent_session_rotate chcod | `~/.dc-platform/memory/lessons/2026-07-28-vsix-放-dc-platform-server-extension-走-git-pull-s.md` | 2026-07-28-vsix-放-dc-platform-server-ext |
-| ## %（ %） 0% 00 07 | `~/.dc-platform/memory/lessons/2026-07-28-device_id-空率-90-本需求-100-则直建-dim_device_all-勿再设计-.md` | 2026-07-28-device_id-空率-90-本需求-100-则直建-d |
-| ## 07 2026 28 agent_session_rotate backe | `~/.dc-platform/memory/lessons/2026-07-28-prd-五档看板只查-session_duration-合表并带-stat_grain-page.md` | 2026-07-28-prd-五档看板只查-session_duration-合 |
-| 100% device device_id device_tag dim_dev | `sessions/tg-rotate-2026-07-28-0602.md` | **device_tag 阶段 1 拍板**：`order_paid_d_r`/ |
-| 07 20 ar br dev device_tag | `sessions/tg-rotate-2026-07-28-0602.md` | **device_tag 新方案**：Paimon 迁移（6 湖表 + wrap |
-| 5543 5544） bug bus 为准 人需 | `sessions/tg-rotate-2026-07-28-0602.md` | **bus 时区 bug 曾吞消息**（如 5543/5544）；狂人需重发，通 |
-| agent bus bus# file_id inbox lib | `sessions/tg-rotate-2026-07-28-0602.md` | **设计链接是否收到**：先查 agent-bus inbox + 当日 TG  |
-| @我 「没 」类 不回 初儿 又初 | `sessions/tg-rotate-2026-07-28-0602.md` | **群聊被 @ 又初/初儿**：必须给实质答复；禁止「没@我/群里不回」类推脱 |
-| .md 04.dws design.md dws_session_duratio | `sessions/tg-rotate-2026-07-28-0602.md` | **后端对接稿落点**：`omdb/tgbot/outgoing/停留时长表结构 |
-| +启 +账 daily device_d dws_session_daily d | `sessions/tg-rotate-2026-07-28-0602.md` | **合表 v2 主表**：`dws_session_duration_user_ |
-| daily_valid_stay_sec dev device_d durati | `sessions/tg-rotate-2026-07-28-0602.md` | **停留时长两条线不可混查**：PRD 五档看板用 `dws_session_d |

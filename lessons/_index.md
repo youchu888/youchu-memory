@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-07-31 | [改时间分查 `dim_app_attribution_time_config`（](./2026-07-31-改时间分查-dim_app_attribution_time_config-无专属行即-defa.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-31 | [影子期判读：`is_run=1` 且 `is_rewrite_channel=0](./2026-07-31-影子期判读-is_run-1-且-is_rewrite_channel-0-时结果表有数-渠道不.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-07-31 | [答疑「没匹配为何有分」先看 `attribution_status`/`unat](./2026-07-31-答疑-没匹配为何有分-先看-attribution_status-unattributed_re.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-30 | [群内找又初须 @又初/@初儿/@youchu8888/@youchu_ai_bo](./2026-07-30-群内找又初须-又初-初儿-youchu8888-youchu_ai_bot-主人账号不是又初通道.md) | tg-group,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-30 | [设备标签问 device 时答两层：DWD 入值 ANDROID/IOS/PC，](./2026-07-30-设备标签问-device-时答两层-dwd-入值-android-ios-pc-宽表落-reg_.md) | device-tag,field-dict,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-30 | [机器人群工作簿进度默认私聊草稿待主人确认后再发，草稿须查库/平台取证，禁止硬编码](./2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库-平台取证-禁止硬编码与探针空快照直接.md) | tgbot,workbook-progress,session-rotate | 会话轮换前自动蒸馏 |
