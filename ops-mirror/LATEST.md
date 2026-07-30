@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-30 15:10:05 +0800
+> 更新: 2026-07-30 15:20:40 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-30.md`
 
@@ -59,3 +59,4 @@
 | 2026-07-30 11:21 | 群派单#159 | worker_ant_group | completed | @anna_cute9 两份都审完了。骨架是对的，但AI版现在发不了 —— 除又初本人外，任何 agent 按它冷启动第一步就断。 完整报告（含逐条证据）：/U |
 | 2026-07-30 11:29 | 群派单#160 | worker_ant_group | completed | @anna_cute9 改好了，两份，先发人类版。 跟又初那版的差别，除了修掉审查报告里那 10 条，主要是三点： 一是把三条链路拆开讲了。原版把 Spark  |
 | 2026-07-30 11:29 | 群派单#161 | worker_ant_group | completed | AI 版。 写法上跟人类版分工：人类版讲"为什么"，这版讲"照着做什么、不许做什么"，口径两边一致。冷启动那节我只留了 agent 真能执行的动作，去掉了原版指 |
+| 2026-07-30 15:14 | 私聊#250 | telegram_dm | completed | select sum(num)num,count(distinct event) cnt_event,sum(error_num)error_num from  |
