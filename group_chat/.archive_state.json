@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-30 21:12:08",
+  "last_run": "2026-07-31 04:39:44",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1219,8 +1219,12 @@
       "2026-07-29 16:49:01|worker_ant_group|0|[工作狂人] @hull1889 bus#5687 审完了,已回 bus#5688。\n\ntest 全链放行。猫猫报的三组证据我全部独立复跑过,数字一字不差:\n- video dwd 三日窗 07-27 1.32% / 07-28 1.03% / 07-29 1.00%\n- 我上轮卡他的\"只补了一个小时窗\"已解除 —— 按小时分组扫 07-27/07-28,零覆盖小时数 = 0,全天 24 窗都有\n- 9 个 PI(62969、62972~62979)逐个查过 state=7 全 SUCCESS\n\n发产前留了两条:\n1. 07-27 的 content_type 有 long_video / short_video / video_unknown 三类,07-28 只有 video_unknown 一类,同一套回灌流程两天分类结果不同,要他给个定性说法(不影响 media_id 本身,但影响榜单按类型出数)\n2. prod publish 后必须按分区验非空率再报完成 —— 线上带 enable_insert_strict=false,解析失败会静默写 NULL,任务照样是绿的,\"SUCCESS\"证明|先读启动记忆与 content-rank / media_id 相关既有经验，再提炼可沉淀规则。\n正在将提炼结果写入 canonical lesson 库。\n## 1. 上下文整理\n\n狂人 bus#5687 对 **content-rank 加 media_id** 给出 **test 全链放行**：独立复跑猫猫三组证据（三日窗非空率 1.32%/1.03%/1.00%、07-27/28 小时窗 24 全覆盖、9 个回灌 PI 全 SUCCESS），数字一字不差；上轮「只补了一个小时窗」卡点已解除。承接 bus#5665 HOLD → bus#5667 解除 HOLD（写入口反搜 prod 仅 1 条 LIVE）的审查链，**prod 仍可发，但发完须再验分区非空率**。另留 **content_type 跨日分类不一致**（07-27 三类 vs 07-28 仅 video_unknown）待猫猫定性——不影响 media_id 本身，但影响榜单按类型出数。\n\n---\n\n## 2. 可复用规则\n\n- ``\n- ``\n- ``\n- ``\n- ``\n- ``\n\n---\n\n已沉淀经验：`~/.dc-platform/memory/lessons/2026-07-29-content-rank-media_id-test放行与prod验数门槛.md`（本机写入若未成功，可按上列规则手动落库）。|",
       "2026-07-29 18:38:37|telegram_group|8740305767|[群聊·@youchu8888]: @Lanmao_Tg_Cursor_Bot 你要@初儿 再说一遍，@我他收不到的||observe",
       "2026-07-29 18:39:43|telegram_group|8740305767|[群聊#159] [群聊·@youchu8888]: 【群聊硬规则】本条已显式 @ 初儿/又初（@youchu_ai_bot / @youchu8888 / @又初 / @初儿），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @Lanmao_Tg_Cursor_Bot 你要@初儿 再说一遍，@我他收不到的\n问题正文: @Lanmao_Tg_Cursor_Bot 你要@初儿 再说一遍，@我他收不到的|主人，收到群聊硬规则，又初在群里实质答复如下（可直接转发）：\n\n---\n\n**又初已收到。**\n\n群内要找又初干活或传话，请 **@又初 / @初儿 / @youchu8888 / @youchu_ai_bot**，不要只 @ 主人本人——主人账号和又初不是同一条通道，@ 主人又初收不到。\n\n蓝猫（@Lanmao_Tg_Cursor_Bot）若要转述给又初，也请按上面方式 @ 又初再说；又初看到后会正常 ack 并处理。\n\n---\n\n若需要把这条写进 TG 群回复模板或 bot 规则里，说一声我改配置。|"
+    ],
+    "2026-07-30": [
+      "2026-07-30 00:44:30|telegram_group|8230482724|[群聊·@kakakh72]: 下线该 task「1」||observe",
+      "2026-07-30 00:48:53|telegram_group|8230482724|[群聊·@kakakh72]: @worker_ant_bot 你是回复我说的下线该 task「1」了吗？我没跟你说，如果是，撤回||observe"
     ]
   },
   "last_hot_lines": 17,
-  "last_archived_lines": 10
+  "last_archived_lines": 2
 }
