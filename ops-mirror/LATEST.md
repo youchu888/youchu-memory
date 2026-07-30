@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-30 17:37:14 +0800
+> 更新: 2026-07-30 17:47:45 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-30.md`
 
@@ -62,3 +62,5 @@
 | 2026-07-30 15:14 | 私聊#250 | telegram_dm | completed | select sum(num)num,count(distinct event) cnt_event,sum(error_num)error_num from  |
 | 2026-07-30 15:21 | 私聊#251 | telegram_dm | completed | select * from dws.dws_register_attribution_result_d where register_event_id ='4d |
 | 2026-07-30 15:28 | 私聊#252 | telegram_dm | completed | 另外这个产品JHG-001，没有开启渠道写回，也生成了归因结果了，也帮忙看下哈 |
+| 2026-07-30 17:39 | 私聊#253 | telegram_dm | completed | 时间衰减得分是在哪里配置的？还是写在代码里的 |
+| 2026-07-30 17:43 | 私聊#254 | telegram_dm | completed | JHG-001 你查一下这个产品的时间分`dim.dim_app_attribution_time_config` |
