@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-30 15:20:40 +0800
+> 更新: 2026-07-30 15:31:07 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-30.md`
 
@@ -60,3 +60,5 @@
 | 2026-07-30 11:29 | 群派单#160 | worker_ant_group | completed | @anna_cute9 改好了，两份，先发人类版。 跟又初那版的差别，除了修掉审查报告里那 10 条，主要是三点： 一是把三条链路拆开讲了。原版把 Spark  |
 | 2026-07-30 11:29 | 群派单#161 | worker_ant_group | completed | AI 版。 写法上跟人类版分工：人类版讲"为什么"，这版讲"照着做什么、不许做什么"，口径两边一致。冷启动那节我只留了 agent 真能执行的动作，去掉了原版指 |
 | 2026-07-30 15:14 | 私聊#250 | telegram_dm | completed | select sum(num)num,count(distinct event) cnt_event,sum(error_num)error_num from  |
+| 2026-07-30 15:21 | 私聊#251 | telegram_dm | completed | select * from dws.dws_register_attribution_result_d where register_event_id ='4d |
+| 2026-07-30 15:28 | 私聊#252 | telegram_dm | completed | 另外这个产品JHG-001，没有开启渠道写回，也生成了归因结果了，也帮忙看下哈 |
