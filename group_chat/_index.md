@@ -27,4 +27,4 @@
 | 2026-07-27 | 19 | 群聊·@zhiqiu56789, @youchu_ai_bot, @mudan99_bot, bus, 07 | [2026-07-27](archive/2026-07-27.md) |
 | 2026-07-28 | 44 | 群聊·@zhiqiu56789, 07, @lanmao_tg_cursor_bot, @youchu_ai_bot, 群聊·@hull1889 | [2026-07-28](archive/2026-07-28.md) |
 | 2026-07-29 | 21 | 群聊·@hull1889, @lanmao_tg_cursor_bot, 07, ##, 1. | [2026-07-29](archive/2026-07-29.md) |
-| 2026-07-30 | 15 | ##, prod, 07, agent, sql | [2026-07-30](archive/2026-07-30.md) |
+| 2026-07-30 | 18 | ##, prod, sql, 07, 30 | [2026-07-30](archive/2026-07-30.md) |
