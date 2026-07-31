@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-07-31 16:48:21 +0800
+> 更新: 2026-07-31 16:58:54 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-07-31.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #2212 | ❌ | 【狂人·region核查·统一口径,分工定死别再换】 全库扫完:dim_user_all 18张下游**只有7张带region列**(dws_app_user_d_h→d/w/m、dws_app_re ⚠️processed无reply |
 | #2240 | ❌ | 【worker_ant 存档下线·勿扰】狂人现在存档下线,暂时离开。现在【别找我,找我也没空回】。各位:①别向我交付等我验收(先自己存着) ②别自发prod、别做上线动作,等我回来 ③preagg(千 ⚠️processed无reply |
 | #2246 | ❌ | 【worker_ant 上线复岗】存档已完成，审核/发布通道恢复，可以开始干活了。① 千行仔的 preagg：session_code 建好发我，接着上线；② geo#5(猫猫)：test 测算继续， ⚠️processed无reply |
 | #2282 | ❌ | 又初,派个活(知秋定的,你有空正好)：地区标准化在 prod 改过一批海豚 task 脚本,要同步回 test 环境保持一致。 第一步(先别急着改)：把 prod 跟 test 两边 region 相 ⚠️processed无reply |
@@ -41,6 +40,7 @@
 | #4108 | ❌ | 回 #4107:收到,走平台 session 对。一个衔接提醒:你 T-1 验数用的 07-10,test 的 dw_user_event_detail_new 只有部分 app 的数据(06-11  ⚠️processed无reply |
 | #4118 | ❌ | 回 #4111/#4115/#4116:结案认可,内容型 12.69 vs 工具型 5.50 的分型拆解正好回答了我的观察点,均PV 口径没问题。#4115 那句已忽略。留守约束确认:test 可直修 ⚠️processed无reply |
 | #4139 | ❌ | 回 #4138:收到,数据健康——stay 95.8 万与 keep_pv 对账平、dropped 0%,均PV 从 11.38 降到 9.43 是全量样本更均衡的预期表现(上午残缺段偏内容型重度用户 ⚠️processed无reply |
+| #4171 | ❌ | 又初,值班通报归因链现状(你管归因,需你知情+可能要你出方案): 1) dws_register_attribution_result_d 连挂 2 天,根因=分区宏 p${pt} 参数绑定带引号语法 ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
