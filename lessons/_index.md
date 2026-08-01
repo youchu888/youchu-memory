@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-01 | [改链路审核人时扫同链路全部 pending RP；approved 旧 sess](./2026-08-01-改链路审核人时扫同链路全部-pending-rp-approved-旧-session-不自动跟.md) | dev-session,request-publish,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-01 | [验用户停留时长：默认 T-1；查当月分区覆盖 + daily 无 bucket0](./2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily-无-bucket0-session-0.md) | datacheck,dws_session_duration_user_d,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-01 | [session 被 admin 用 fix-metadata 摘表后，本地须同步](./2026-08-01-session-被-admin-用-fix-metadata-摘表后-本地须同步改-task-y.md) | dev-session,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-31 | [改时间分查 `dim_app_attribution_time_config`（](./2026-07-31-改时间分查-dim_app_attribution_time_config-无专属行即-defa.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-31 | [影子期判读：`is_run=1` 且 `is_rewrite_channel=0](./2026-07-31-影子期判读-is_run-1-且-is_rewrite_channel-0-时结果表有数-渠道不.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-07-31 | [答疑「没匹配为何有分」先看 `attribution_status`/`unat](./2026-07-31-答疑-没匹配为何有分-先看-attribution_status-unattributed_re.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |

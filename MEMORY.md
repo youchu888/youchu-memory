@@ -5,6 +5,9 @@
 > **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
 - [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
 - [**死规矩** 不改插件版本/不自发 vsix](feedback_no_bump_extension_version.md) — 发版交给野花/超管
+- [改链路审核人时扫同链路全部 pending RP；approved 旧 ](lessons/2026-08-01-改链路审核人时扫同链路全部-pending-rp-approved-旧-session-不自动跟.md) — 会话轮换蒸馏
+- [验用户停留时长：默认 T-1；查当月分区覆盖 + daily 无 buc](lessons/2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily-无-bucket0-session-0.md) — 会话轮换蒸馏
+- [session 被 admin 用 fix-metadata 摘表后，本](lessons/2026-08-01-session-被-admin-用-fix-metadata-摘表后-本地须同步改-task-y.md) — 会话轮换蒸馏
 - [改时间分查 `dim_app_attribution_time_conf](lessons/2026-07-31-改时间分查-dim_app_attribution_time_config-无专属行即-defa.md) — 会话轮换蒸馏
 - [影子期判读：`is_run=1` 且 `is_rewrite_chann](lessons/2026-07-31-影子期判读-is_run-1-且-is_rewrite_channel-0-时结果表有数-渠道不.md) — 会话轮换蒸馏
 - [答疑「没匹配为何有分」先看 `attribution_status`/`](lessons/2026-07-31-答疑-没匹配为何有分-先看-attribution_status-unattributed_re.md) — 会话轮换蒸馏

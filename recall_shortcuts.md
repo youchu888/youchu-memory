@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 01 08 2026 agent_session_rotate appro | `~/.dc-platform/memory/lessons/2026-08-01-改链路审核人时扫同链路全部-pending-rp-approved-旧-session-不自动跟.md` | 2026-08-01-改链路审核人时扫同链路全部-pending-rp-appr |
+| ## 01 08 0~5 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily-无-bucket0-session-0.md` | 2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily- |
+| ## 01 08 2026 admin agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-01-session-被-admin-用-fix-metadata-摘表后-本地须同步改-task-y.md` | 2026-08-01-session-被-admin-用-fix-metadat |
+| dws.dws_session_duration_user_d prod 下当  | `sessions/tg-rotate-2026-08-01-1002.md` | prod 验 `dws.dws_session_duration_user_d` |
+| dolphin_owned_tasks prod related_tables  | `sessions/tg-rotate-2026-08-01-1002.md` | `dolphin_owned_tasks` 可 **test + prod 两条 |
+| 10000 30 ddl desig design.md history_par | `sessions/tg-rotate-2026-08-01-1002.md` | DDL 对齐 prod：`start=-10000`、`history_part |
+| 180283360953 180283360953472 _d _日 _汇 dw | `sessions/tg-rotate-2026-08-01-1002.md` | prod 海豚已挂：`运营系统` → `wf_dws_汇总_日` → **tas |
+| full out_of_scope_separate_session put r | `sessions/tg-rotate-2026-08-01-1002.md` | 平台 session 同步用 **PUT `/full`**，并更新 `rela |
+| 001 20260731 design dev dwm job_dwm_app_ | `sessions/tg-rotate-2026-08-01-1002.md` | 设备 DWM 独立成新 session **`dev-20260731-001` |
+| 002 04.dws 20260729 dev dolphin_owned_ta | `sessions/tg-rotate-2026-08-01-1002.md` | `dev-20260729-002` 已收敛为**单目标表** `dws.dws |
+| 001 20260711 _s ag approved ay | `sessions/tg-rotate-2026-08-01-1002.md` | 已是 **approved** 的旧 session（如 `dev-202607 |
+| admin dev fix full lesson metadata | `sessions/tg-rotate-2026-08-01-1002.md` | [LESSON: dev-session/session 被 admin 用 f |
+| 07 2026 30 comm commit dev | `sessions/tg-rotate-2026-08-01-1002.md` | 2026-07 prod 结论：30 业务日全覆盖、分档符合设计、07-30 与 |
+| get merge prod put session state | `sessions/tg-rotate-2026-08-01-1002.md` | 他人已在 prod 发版后本地跟 session：**先 GET 服务端最新 s |
+| 001 002 20260711 20260716 20260729 dev | `sessions/tg-rotate-2026-08-01-1002.md` | 停留时长链路改审核人时，要扫**同链路所有 pending 的 request- |
 | ## 07 2026 24h 31 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-07-31-改时间分查-dim_app_attribution_time_config-无专属行即-defa.md` | 2026-07-31-改时间分查-dim_app_attribution_tim |
 | ## 07 2026 31 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-07-31-影子期判读-is_run-1-且-is_rewrite_channel-0-时结果表有数-渠道不.md` | 2026-07-31-影子期判读-is_run-1-且-is_rewrite_c |
 | ## 07 2026 31 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-07-31-答疑-没匹配为何有分-先看-attribution_status-unattributed_re.md` | 2026-07-31-答疑-没匹配为何有分-先看-attribution_sta |
@@ -30,18 +45,3 @@
 | #3 #9 dt phase prod te | `sessions/tg-rotate-2026-07-30-0643.md` | 探针超时/连库失败时 `#3` 归因、`#9` 停留会显示空 dt、0 行或 p |
 | 01 09 workbook_live_cache.jso workbook_l | `sessions/tg-rotate-2026-07-30-0643.md` | 机器人群 09:01 自动进度帖不可当真：须交叉核对「本地发帖记录 + `wor |
 | lesson progress tgbot workbook 与探 主人 | `sessions/tg-rotate-2026-07-30-0643.md` | [LESSON: tgbot,workbook-progress/机器人群工作簿 |
-| app device dws_user_tag_d_d.reg_platform | `sessions/tg-rotate-2026-07-30-0643.md` | 对照：用户标签 `dws_user_tag_d_d.reg_platform`  |
-| dev dt git session sha 出的 | `sessions/tg-rotate-2026-07-30-0643.md` | 草稿必须带当日证据（分区 dt、行数、git SHA、dev session 状 |
-| #1 #187）已明确 07 18 22 22（私聊#186 | `sessions/tg-rotate-2026-07-30-0643.md` | 主人 07-22（私聊#186/#187）已明确：工作簿进度要反映**当天真实完 |
-| 81 git pass playbook progress_device_tag | `sessions/tg-rotate-2026-07-30-0643.md` | `workbook_progress_service.py` 里 `_progr |
-| ## 07 2026 29 agent_session_rotate boots | `~/.dc-platform/memory/lessons/2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md` | 2026-07-29-新-spark-任务-launcher-只填-job-sq |
-| ## 07 2026 29 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-task-p0-与-spark-迁移方向一.md` | 2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-ta |
-| ## 07 2026 29 agent_session_rotate boots | `~/.dc-platform/memory/lessons/2026-07-29-paimon-spark-表结构变更时用-drop-create-bootstrap-禁止仅靠-.md` | 2026-07-29-paimon-spark-表结构变更时用-drop-cre |
-| 00 3张 ac ad ad→finance→video→a ad→financ | `sessions/tg-rotate-2026-07-29-0601.md` | **姿态 F 主链路**：`device_tag_wrapper.sh` 六步串 |
-| commit ddl dev or origin paimon | `sessions/tg-rotate-2026-07-29-0601.md` | **无 test 环境的标准交付**：Scala/Paimon 代码 + DDL |
-| git html library library#46 push 「设 | `sessions/tg-rotate-2026-07-29-0601.md` | **设备标签不等狂人审阶段2**：知秋明确「设计/样例已给，先开发完 push  |
-| #5600→#5603） after_id bothub bus id msg_ | `sessions/tg-rotate-2026-07-29-0601.md` | **bothub 未触发要重发新 id**：outbound 对方 poller |
-| bus inbox tg ≠只 「业 「私 | `sessions/tg-rotate-2026-07-29-0601.md` | **bus 收件≠只有私聊 inbox**：发给猫猫/蓝猫审核线的 bus，又初 |
-| @我 bot 「又 「没 「群 」「 | `sessions/tg-rotate-2026-07-29-0601.md` | **群聊点名必回实质内容**：正文含「又初/初儿」、@ bot 或 @ 主人时， |
-| bootstrap ddl job launcher lesson ops | `sessions/tg-rotate-2026-07-29-0601.md` | [LESSON: ops-system,templates,spark/新 Sp |
-| bootstrap create ddl device drop+crea dr | `sessions/tg-rotate-2026-07-29-0601.md` | [LESSON: device-tag,spark,ddl/Paimon/Spa |
