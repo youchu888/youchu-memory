@@ -2,24 +2,10 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
-| 2026-08-01 | [整理日报须先双机同步再汇总](./2026-08-01-整理日报须先双机同步再汇总.md) | daily-report, dual-mac, work-log, sync | 主人钦定；prepare_daily_report_sync.sh；缺机须点明 |
-| 2026-08-01 | [改链路审核人时扫同链路全部 pending RP；approved 旧 sess](./2026-08-01-改链路审核人时扫同链路全部-pending-rp-approved-旧-session-不自动跟.md) | dev-session,request-publish,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-08-01 | [验用户停留时长：默认 T-1；查当月分区覆盖 + daily 无 bucket0](./2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily-无-bucket0-session-0.md) | datacheck,dws_session_duration_user_d,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-08-01 | [session 被 admin 用 fix-metadata 摘表后，本地须同步](./2026-08-01-session-被-admin-用-fix-metadata-摘表后-本地须同步改-task-y.md) | dev-session,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-31 | [改时间分查 `dim_app_attribution_time_config`（](./2026-07-31-改时间分查-dim_app_attribution_time_config-无专属行即-defa.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-31 | [影子期判读：`is_run=1` 且 `is_rewrite_channel=0](./2026-07-31-影子期判读-is_run-1-且-is_rewrite_channel-0-时结果表有数-渠道不.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-31 | [答疑「没匹配为何有分」先看 `attribution_status`/`unat](./2026-07-31-答疑-没匹配为何有分-先看-attribution_status-unattributed_re.md) | attribution,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-30 | [群内找又初须 @又初/@初儿/@youchu8888/@youchu_ai_bo](./2026-07-30-群内找又初须-又初-初儿-youchu8888-youchu_ai_bot-主人账号不是又初通道.md) | tg-group,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-30 | [设备标签问 device 时答两层：DWD 入值 ANDROID/IOS/PC，](./2026-07-30-设备标签问-device-时答两层-dwd-入值-android-ios-pc-宽表落-reg_.md) | device-tag,field-dict,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-30 | [机器人群工作簿进度默认私聊草稿待主人确认后再发，草稿须查库/平台取证，禁止硬编码](./2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库-平台取证-禁止硬编码与探针空快照直接.md) | tgbot,workbook-progress,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-29 | [进入 stage 失败：advanceToStage 必须带 byCode](./2026-07-29-advanceToStage-必须带byCode.md) | extension, byCode | 审核人点 stage 报 state not found；0.0.122 |
-| 2026-07-29 | [设备标签姿态 F：须整批下线日 wf + 全部旧 task](./2026-07-29-设备标签姿态F须整批下线海豚日wf与桶task.md) | device-tag,dolphin,pose-f,deprecate | 禁半迁移：不能只停 merge_pool |
-| 2026-07-29 | [禁止空标 stage done：须落 stage4/5/6 state 产物](./2026-07-29-dev-session-禁止空标stage须落state产物.md) | dev-session, state_json, stage4 | 空标 done 野花审界面打不开；真查库+写产物 |
-| 2026-07-29 | [工作簿进展发群前必须主人确认](./2026-07-29-workbook-progress-confirm-before-group.md) | tg, workbook, confirm | 私聊草稿→确认发群；禁09:01自动发群 |
-| 2026-07-29 | [新 Spark 任务 launcher 只填 JOB/SQL/PROFILE 走](./2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md) | ops-system,templates,spark,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-29 | [姿态 F 主链路不经过 merge_pool；海豚老 task P0 与 Spa](./2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-task-p0-与-spark-迁移方向一.md) | device-tag,dolphin,merge-pool,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-29 | [Paimon/Spark 表结构变更时用 DROP+CREATE bootstr](./2026-07-29-paimon-spark-表结构变更时用-drop-create-bootstrap-禁止仅靠-.md) | device-tag,spark,ddl,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-07-28 | [日报是汇报：禁内部黑话，要展开说](./2026-07-28-日报是汇报禁内部黑话要展开.md) | daily-report, writing-style, expand | 主人纠正；汇报非总结；40~70字业务展开 |
+| 2026-07-31 | [Dev Session 1–6 必须逐步做完否则别人打不开](./2026-07-31-dev-session-stages-complete-or-others-cant-open.md) | dev-session, stage1-6, publish_runs, strict | 禁空标 done/半截收工；产物+证据+push 齐再收口 |
+| 2026-07-31 | [提交后立刻推远程禁止分两步](./2026-07-31-commit-then-push-no-two-steps.md) | git, push, feedback | 入库/commit 成功即 push；勿再问要不要推 |
+| 2026-07-31 | [提交说明用第一人称禁主人称呼](./2026-07-31-first-person-commit-voice.md) | git, commit, voice | commit/备注用「我」；禁主人/钦定 |
+| 2026-07-31 | [Stage4 海豚段不可半截](./2026-07-31-stage4-finish-dolphin-not-skip.md) | stage4, dolphin_test | 三勾后必须补数对账再标 done |
 | 2026-07-28 | [回懂了必须立刻开干](./2026-07-28-ack-must-start-work.md) | ack, execution, criticism | ACK 后同会话动手，禁口头确认后静默 |
 | 2026-07-28 | [群聊仅显式 @初儿/@又初 才回，取消裸喊名](./2026-07-28-群聊仅显式at初儿又初才回.md) | tg, group, mention, silent | 废止裸喊名；@worker_ant+文案带又初不再秒回 |
 | 2026-07-28 | [探活 / bus 收条类对话：已闭环则勿再回](./2026-07-28-探活与bus收条无需再回.md) | tg, group, silent, liveness, bus-ack | 还活着吗/bus收到了吗/收到这块我跟 → 不回；禁 Cursor 叠回 |

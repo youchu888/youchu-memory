@@ -2,26 +2,12 @@
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
 > 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
+- [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
+- [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
+- [提交说明用第一人称](lessons/2026-07-31-first-person-commit-voice.md) — commit/备注用「我」，禁「主人」等称呼；规则见 `.cursor/rules/first-person-commit-voice.mdc`
 > **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
 - [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
-- [**死规矩** 不改插件版本/不自发 vsix](feedback_no_bump_extension_version.md) — 发版交给野花/超管
-- [改链路审核人时扫同链路全部 pending RP；approved 旧 ](lessons/2026-08-01-改链路审核人时扫同链路全部-pending-rp-approved-旧-session-不自动跟.md) — 会话轮换蒸馏
-- [验用户停留时长：默认 T-1；查当月分区覆盖 + daily 无 buc](lessons/2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily-无-bucket0-session-0.md) — 会话轮换蒸馏
-- [session 被 admin 用 fix-metadata 摘表后，本](lessons/2026-08-01-session-被-admin-用-fix-metadata-摘表后-本地须同步改-task-y.md) — 会话轮换蒸馏
-- [改时间分查 `dim_app_attribution_time_conf](lessons/2026-07-31-改时间分查-dim_app_attribution_time_config-无专属行即-defa.md) — 会话轮换蒸馏
-- [影子期判读：`is_run=1` 且 `is_rewrite_chann](lessons/2026-07-31-影子期判读-is_run-1-且-is_rewrite_channel-0-时结果表有数-渠道不.md) — 会话轮换蒸馏
-- [答疑「没匹配为何有分」先看 `attribution_status`/`](lessons/2026-07-31-答疑-没匹配为何有分-先看-attribution_status-unattributed_re.md) — 会话轮换蒸馏
-- [群内找又初须 @又初/@初儿/@youchu8888/@youchu_a](lessons/2026-07-30-群内找又初须-又初-初儿-youchu8888-youchu_ai_bot-主人账号不是又初通道.md) — 会话轮换蒸馏
-- [设备标签问 device 时答两层：DWD 入值 ANDROID/IOS](lessons/2026-07-30-设备标签问-device-时答两层-dwd-入值-android-ios-pc-宽表落-reg_.md) — 会话轮换蒸馏
-- [机器人群工作簿进度默认私聊草稿待主人确认后再发，草稿须查库/平台取证，禁](lessons/2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库-平台取证-禁止硬编码与探针空快照直接.md) — 会话轮换蒸馏
-- [进入 stage 须带 byCode](lessons/2026-07-29-advanceToStage-必须带byCode.md) — 审核点 stage 报 state not found；**不自行升版**
-- [**死规矩** 禁止空标 stage](feedback_dev_session_no_fake_stage_done.md) — 提审前五件齐；lesson + Cursor alwaysApply
-- [禁止空标 stage：须落 state 产物](lessons/2026-07-29-dev-session-禁止空标stage须落state产物.md) — stage4/5/6 真走；禁只标 done
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
-- [整理日报须先双机同步再汇总](lessons/2026-08-01-整理日报须先双机同步再汇总.md) — 主人 08-01；`prepare_daily_report_sync.sh`；缺机点明
-- [新 Spark 任务 launcher 只填 JOB/SQL/PROFI](lessons/2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md) — 会话轮换蒸馏
-- [姿态 F 主链路不经过 merge_pool；海豚老 task P0 与](lessons/2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-task-p0-与-spark-迁移方向一.md) — 会话轮换蒸馏
-- [Paimon/Spark 表结构变更时用 DROP+CREATE boo](lessons/2026-07-29-paimon-spark-表结构变更时用-drop-create-bootstrap-禁止仅靠-.md) — 会话轮换蒸馏
 - [vsix 放 dc-platform-server/extension/](lessons/2026-07-28-vsix-放-dc-platform-server-extension-走-git-pull-s.md) — 会话轮换蒸馏
 - [device_id 空率≥90%（本需求 100%）则直建 dim_de](lessons/2026-07-28-device_id-空率-90-本需求-100-则直建-dim_device_all-勿再设计-.md) — 会话轮换蒸馏
 - [PRD 五档看板只查 session_duration 合表并带 sta](lessons/2026-07-28-prd-五档看板只查-session_duration-合表并带-stat_grain-page.md) — 会话轮换蒸馏
@@ -84,8 +70,6 @@
 - [工作簿任务板（活文档）](project_youchu_workbook_tasks.md) — 以最新每日工作簿覆盖又初主责；读消息即更新。
 - [工作簿负责人以最新一日为准](lessons/2026-07-13-workbook-ownership-latest.md) — 禁沿用过期归属；07-12 起停留时长改派又初。
 - [停留时长进度+群知秋钦定要点](lessons/2026-07-15-stay-duration-and-group-directives.md) — 停留 Phase1(page_stay/sid)test闭环待prod提审；Phase2 知秋令转 DWS 会话时长(账户+设备/墙钟/五档待拍)；宏/人工节点/分层铁律 + 归因/标签开工令。
-- [工作簿进展发群前必须主人确认](feedback_workbook_progress_confirm_before_group.md) — 私聊草稿→「确认发群」才发机器人群。
-- [日报是汇报：禁内部黑话要展开](lessons/2026-07-28-日报是汇报禁内部黑话要展开.md) — 主人 07-28；汇报非总结；40~70字。
 - [日报周报语气：通俗但正式](lessons/2026-07-15-report-plain-but-formal-style.md) — 主人钦定；非技术看懂 + 书面语气；术语翻业务话、禁口语俚语；playbook + daily-report.mdc 已同步。
 - [日报禁止写 bus 编号须写任务名](lessons/2026-07-08-daily-report-no-bus-id.md) — 日报正文禁 bus#；写任务名；daily-report.mdc 已同步。
 - [日报须汇总多 Agent 流水](lessons/2026-07-08-daily-report-multi-agent-worklog.md) — 先读 work-log + 全日 transcript，勿只写当前窗。
@@ -170,4 +154,3 @@
 
 - lesson: lessons/2026-07-28-deprecate-must-offline-old-dolphin-task.md — 合表废弃须同批下线旧海豚 task
 - feedback: feedback_deprecate_must_offline_dolphin_task.md — 合表废弃须同批删旧海豚 task
-- [设备标签姿态 F：须整批下线日 wf + 全部旧 task](lessons/2026-07-29-设备标签姿态F须整批下线海豚日wf与桶task.md) — 禁半迁移只停 merge_pool
