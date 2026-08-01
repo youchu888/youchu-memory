@@ -18,6 +18,7 @@
 - [**死规矩** 禁止空标 stage](feedback_dev_session_no_fake_stage_done.md) — 提审前五件齐；lesson + Cursor alwaysApply
 - [禁止空标 stage：须落 state 产物](lessons/2026-07-29-dev-session-禁止空标stage须落state产物.md) — stage4/5/6 真走；禁只标 done
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
+- [整理日报须先双机同步再汇总](lessons/2026-08-01-整理日报须先双机同步再汇总.md) — 主人 08-01；`prepare_daily_report_sync.sh`；缺机点明
 - [新 Spark 任务 launcher 只填 JOB/SQL/PROFI](lessons/2026-07-29-新-spark-任务-launcher-只填-job-sql-profile-走-_templa.md) — 会话轮换蒸馏
 - [姿态 F 主链路不经过 merge_pool；海豚老 task P0 与](lessons/2026-07-29-姿态-f-主链路不经过-merge_pool-海豚老-task-p0-与-spark-迁移方向一.md) — 会话轮换蒸馏
 - [Paimon/Spark 表结构变更时用 DROP+CREATE boo](lessons/2026-07-29-paimon-spark-表结构变更时用-drop-create-bootstrap-禁止仅靠-.md) — 会话轮换蒸馏

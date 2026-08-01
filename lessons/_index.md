@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-01 | [整理日报须先双机同步再汇总](./2026-08-01-整理日报须先双机同步再汇总.md) | daily-report, dual-mac, work-log, sync | 主人钦定；prepare_daily_report_sync.sh；缺机须点明 |
 | 2026-08-01 | [改链路审核人时扫同链路全部 pending RP；approved 旧 sess](./2026-08-01-改链路审核人时扫同链路全部-pending-rp-approved-旧-session-不自动跟.md) | dev-session,request-publish,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-01 | [验用户停留时长：默认 T-1；查当月分区覆盖 + daily 无 bucket0](./2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily-无-bucket0-session-0.md) | datacheck,dws_session_duration_user_d,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-01 | [session 被 admin 用 fix-metadata 摘表后，本地须同步](./2026-08-01-session-被-admin-用-fix-metadata-摘表后-本地须同步改-task-y.md) | dev-session,session-rotate | 会话轮换前自动蒸馏 |
