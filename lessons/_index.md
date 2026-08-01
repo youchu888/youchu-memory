@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-01 | [prod 补数全员开放](./2026-08-01-prod-complement-open-all-users.md) | dolphin, complement, prod | env=prod 补数非admin可用；三坑 dep_type/日期/force |
 | 2026-08-01 | [butler 原生图记忆体系](./2026-08-01-butler-native-memory-system.md) | memory, butler, self-evolve | 项目.claude/memory+sqlite；六工具；写前query；读timeline+query |
 | 2026-08-01 | [做事要考虑健壮性](./2026-08-01-robustness-first.md) | robustness, habit, ops | 失败自愈、不滚雪球、脚本同源、改完 smoke |
 | 2026-08-01 | [新 Mac memory 同步总失败因旧脚本](./2026-08-01-new-mac-memory-sync-old-script.md) | memory-git, dual-mac, new-mac, launchd | LaunchAgent 跑 07-24 旧脚本无自愈；应对齐 memory/scripts 新版 |
