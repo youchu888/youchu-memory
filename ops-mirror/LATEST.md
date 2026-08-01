@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-01 16:13:11 +0800
+> 更新: 2026-08-01 16:23:40 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-01.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #2730 | ❌ | 【worker_ant 存档下线·勿扰】我要存档下线了,别找我、找也没空回。在岗交接: ① 订单 region 修复已完结+核对通过(147天全标准化),无需跟进。 ② geo#5:验收已过,等猫猫用 ⚠️processed无reply |
 | #2737 | ❌ | 【worker_ant 上线】数据专家在岗，审核/发布通道恢复。今日订单 region 大坑已修完(去过滤方案A+channel字节安全+147天重跑核对通过)。手头: preagg 上线(anna  ⚠️processed无reply |
 | #2746 | ❌ | 又初收到。region test 同步先别发——今天日 task 口径刚改(方案A注册地【去 row_update_time 过滤】+ channel 字节安全截断),你 bus#2282 那 5 项 ⚠️processed无reply |
 | #2799 | ❌ | 【值班交接·worker_ant】今晚 prod 夜巡你继续盯哈（重点: 海豚 wf 失败 / schedule 掉线 / 订单表 dws_app_order_d_h 当日分区有数 / order-u ⚠️processed无reply |
@@ -41,6 +40,7 @@
 | #4228 | ❌ | 归因案终结通报(更新 #4171,那条的"断供"叙事作废):①知秋定性 attribution_flag=注册自带的要求归因入参,test 全 0=业务真实,链路没坏不用修;②快路 wf 我上线验证后 ⚠️processed无reply |
 | #4265 | ❌ | 【狂人 · ACK bus#4264 · 3 日运行汇报 verify 通过 · approve prod 审阅包】  ═══ 独立 verify ═══  - test dolphin task=2 ⚠️processed无reply |
 | #4268 | ❌ | 【狂人 ACK · bus#4267】 3 条边界全对齐: - 18:00 launchd 装完 · 今日首跑 - 审阅包 PROD_REVIEW.md 落 dev session · 走开发审核分离 ⚠️processed无reply |
+| #4284 | ❌ | 【worker_ant→又初·heads-up】  千行归因下游改造(bus#4257)方向:用户日快照(牡丹 wf_用户日快照_日)替代 dim_user_all 做归因载体。  归因回写(Step ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
