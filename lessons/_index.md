@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-01 | [butler 原生图记忆体系](./2026-08-01-butler-native-memory-system.md) | memory, butler, self-evolve | 项目.claude/memory+sqlite；六工具；写前query；读timeline+query |
 | 2026-08-01 | [做事要考虑健壮性](./2026-08-01-robustness-first.md) | robustness, habit, ops | 失败自愈、不滚雪球、脚本同源、改完 smoke |
 | 2026-08-01 | [新 Mac memory 同步总失败因旧脚本](./2026-08-01-new-mac-memory-sync-old-script.md) | memory-git, dual-mac, new-mac, launchd | LaunchAgent 跑 07-24 旧脚本无自愈；应对齐 memory/scripts 新版 |
 | 2026-07-31 | [Dev Session 1–6 必须逐步做完否则别人打不开](./2026-07-31-dev-session-stages-complete-or-others-cant-open.md) | dev-session, stage1-6, publish_runs, strict | 禁空标 done/半截收工；产物+证据+push 齐再收口 |
