@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-01 | [新 Mac memory 同步总失败因旧脚本](./2026-08-01-new-mac-memory-sync-old-script.md) | memory-git, dual-mac, new-mac, launchd | LaunchAgent 跑 07-24 旧脚本无自愈；应对齐 memory/scripts 新版 |
 | 2026-07-31 | [Dev Session 1–6 必须逐步做完否则别人打不开](./2026-07-31-dev-session-stages-complete-or-others-cant-open.md) | dev-session, stage1-6, publish_runs, strict | 禁空标 done/半截收工；产物+证据+push 齐再收口 |
 | 2026-07-31 | [提交后立刻推远程禁止分两步](./2026-07-31-commit-then-push-no-two-steps.md) | git, push, feedback | 入库/commit 成功即 push；勿再问要不要推 |
 | 2026-07-31 | [提交说明用第一人称禁主人称呼](./2026-07-31-first-person-commit-voice.md) | git, commit, voice | commit/备注用「我」；禁主人/钦定 |
