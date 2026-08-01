@@ -5,6 +5,7 @@
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
 - [提交说明用第一人称](lessons/2026-07-31-first-person-commit-voice.md) — commit/备注用「我」，禁「主人」等称呼；规则见 `.cursor/rules/first-person-commit-voice.mdc`
+- [做事要考虑健壮性](lessons/2026-08-01-robustness-first.md) — 失败自愈、不滚雪球、脚本同源、改完 smoke；规则见 `.cursor/rules/robustness-first.mdc`
 > **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
 - [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
