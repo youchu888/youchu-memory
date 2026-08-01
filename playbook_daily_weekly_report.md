@@ -30,14 +30,15 @@
 4. `git log --since=<当日0点> --until=<次日0点>`（辅助）
 5. `lessons/_index.md`（仅写【死锁阻碍】）
 
-## 双 Mac 统一汇总（2026-07-22）
+## 双 Mac 统一汇总（2026-07-22 · 2026-08-01 强化）
 
-写日报前**必须**先合并两机流水，禁止只根据当前 Cursor 会话：
+写日报前**必须先同步再汇总**（主人铁律）；禁止只根据当前 Cursor 会话：
 
 ```bash
-python3 ~/.dc-platform/memory/scripts/worklog_dual_mac_sync.py
-# 或直接：
-bash ~/.dc-platform/scripts/sync-memory-git.sh
+bash ~/.dc-platform/scripts/prepare_daily_report_sync.sh
+# 等价核心：
+# bash ~/.dc-platform/scripts/sync-memory-git.sh
+# python3 ~/.dc-platform/memory/scripts/worklog_dual_mac_sync.py
 ```
 
 | 读什么 | 路径 |
@@ -46,6 +47,8 @@ bash ~/.dc-platform/scripts/sync-memory-git.sh
 | 各机原文 | `~/.dc-platform/memory/work-log/hosts/<new-mac\|old-mac>/` |
 | 本机习惯落盘 | `CHcode/.cursor/work-log/`（脚本会导出到 hosts） |
 | 正式日报（权威） | `~/.dc-platform/memory/work-log/reports/YYYY-MM-DD-日报.md` · **以旧 Mac（old-mac）稿为准**；新机只贡献 hosts 流水 |
+
+缺机 hosts 时须在回复点明；新机活未写 work-log 则旧机无法汇到（transcript 不跨机）。
 
 ## 日报流程（生成 → 记录）
 

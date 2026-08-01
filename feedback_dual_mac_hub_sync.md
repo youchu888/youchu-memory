@@ -32,9 +32,18 @@
 
 ## Agent 习惯
 
-- 任一台收尾：写 `CHcode/.cursor/work-log/当日.md` + 该写的 lesson
+- 任一台收尾：写 `CHcode/.cursor/work-log/当日.md` + 该写的 lesson（**不写则对端永远汇不到**）
 - 读跨机任务：先看 `~/.dc-platform/memory/ops-mirror/LATEST.md` 与 `work-log/当日.md`
+- **写日报前（主人 2026-08-01）**：`bash ~/.dc-platform/scripts/prepare_daily_report_sync.sh` → 先同步再汇总；缺 `hosts/new-mac` 须点明
 - 换到新 Mac **接单**：先停旧机 poller，再启新机（主控切换）；日常不要双开
+
+## 已知断点（2026-08-01 核查）
+
+| 现象 | 根因 |
+|------|------|
+| 旧机日报少新机活 | 新机自某日起未推 `work-log/hosts/new-mac/当日.md`（未写流水 / sync 未跑 / 休眠） |
+| 只读本机 transcript | transcript 不进 youchu-memory；规则曾未强制「先 sync」 |
+| hostname 混用 | 旧机 hostname=`MacBook-Pro` 但 `WORKLOG_HOST_ID=old-mac`；勿再导出一份 MacBook-Pro 冒充第二台 |
 
 ## 脚本
 
