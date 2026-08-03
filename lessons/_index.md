@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-03 | [归因 Paimon 影子全链 test](./2026-08-03-attribution-paimon-shadow-full-chain-test.md) | attribution-shadow, paimon, dolphin | 独立 wf+_r 全链；test 湖空则 0 行；真压测等湖或 prod |
 | 2026-08-03 | [提交只动 ops_system：禁改平台插件与 api_v1](./2026-08-03-禁改平台插件与api_v1.md) | git, ownership, 禁改 | vscode-extension/dc-platform-server 禁改；误 push 则新 commit 恢复 |
 | 2026-08-01 | [prod 补数全员开放](./2026-08-01-prod-complement-open-all-users.md) | dolphin, complement, prod | env=prod 补数非admin可用；三坑 dep_type/日期/force |
 | 2026-08-01 | [butler 原生图记忆体系](./2026-08-01-butler-native-memory-system.md) | memory, butler, self-evolve | 项目.claude/memory+sqlite；六工具；写前query；读timeline+query |
@@ -9,7 +10,7 @@
 | 2026-08-01 | [新 Mac memory 同步总失败因旧脚本](./2026-08-01-new-mac-memory-sync-old-script.md) | memory-git, dual-mac, new-mac, launchd | LaunchAgent 跑 07-24 旧脚本无自愈；应对齐 memory/scripts 新版 |
 | 2026-07-31 | [Dev Session 1–6 必须逐步做完否则别人打不开](./2026-07-31-dev-session-stages-complete-or-others-cant-open.md) | dev-session, stage1-6, publish_runs, strict | 禁空标 done/半截收工；产物+证据+push 齐再收口 |
 | 2026-07-31 | [提交后立刻推远程禁止分两步](./2026-07-31-commit-then-push-no-two-steps.md) | git, push, feedback | 入库/commit 成功即 push；勿再问要不要推 |
-| 2026-07-31 | [提交说明用第一人称直诉，别写旁白](./2026-07-31-first-person-commit-voice.md) | git, commit, voice | 用「我」直诉；禁主人/旁白体 |
+| 2026-07-31 | [提交说明用第一人称直述禁我/主人/旁白](./2026-07-31-first-person-commit-voice.md) | git, commit, voice | 直述做了什么；禁「我/主人/旁白体」 |
 | 2026-07-31 | [Stage4 海豚段不可半截](./2026-07-31-stage4-finish-dolphin-not-skip.md) | stage4, dolphin_test | 三勾后必须补数对账再标 done |
 | 2026-07-28 | [回懂了必须立刻开干](./2026-07-28-ack-must-start-work.md) | ack, execution, criticism | ACK 后同会话动手，禁口头确认后静默 |
 | 2026-07-28 | [群聊仅显式 @初儿/@又初 才回，取消裸喊名](./2026-07-28-群聊仅显式at初儿又初才回.md) | tg, group, mention, silent | 废止裸喊名；@worker_ant+文案带又初不再秒回 |
