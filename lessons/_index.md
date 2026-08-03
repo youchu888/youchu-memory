@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-03 | [提交只动 ops_system：禁改平台插件与 api_v1](./2026-08-03-禁改平台插件与api_v1.md) | git, ownership, 禁改 | vscode-extension/dc-platform-server 禁改；误 push 则新 commit 恢复 |
 | 2026-08-01 | [prod 补数全员开放](./2026-08-01-prod-complement-open-all-users.md) | dolphin, complement, prod | env=prod 补数非admin可用；三坑 dep_type/日期/force |
 | 2026-08-01 | [butler 原生图记忆体系](./2026-08-01-butler-native-memory-system.md) | memory, butler, self-evolve | 项目.claude/memory+sqlite；六工具；写前query；读timeline+query |
 | 2026-08-01 | [做事要考虑健壮性](./2026-08-01-robustness-first.md) | robustness, habit, ops | 失败自愈、不滚雪球、脚本同源、改完 smoke |
