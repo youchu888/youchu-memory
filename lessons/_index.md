@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-04 | [日报对照主人改定稿学习写法](./2026-08-04-日报对照主人改定学习.md) | daily-report, learning | 结果向少旁白；明日动作可多条估截止 |
 | 2026-08-04 | [extension|security|官方 vsix 安装前必须 SHA256 ](./2026-08-04-extension-security-官方-vsix-安装前必须-sha256-校验通过-禁止跳.md) | dc-platform,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-04 | [extension|dual-mac|双机无 SSH 时扩展升级须各机本地跑 s](./2026-08-04-extension-dual-mac-双机无-ssh-时扩展升级须各机本地跑-sync-memo.md) | dc-platform,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-04 | [日报只写已完成；死锁少写；推送仅 old-mac](./2026-08-04-daily-report-no-in-progress.md) | daily-report, dual-mac, tg | 已完成→结果；未完→明日；死锁空；old-mac 推私聊 |

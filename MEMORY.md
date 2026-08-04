@@ -12,6 +12,7 @@
 - [做事要考虑健壮性](lessons/2026-08-01-robustness-first.md) — 失败自愈、不滚雪球、脚本同源、改完 smoke；规则见 `.cursor/rules/robustness-first.mdc`
 > **工作流水（日报/周报）**：[`work-log/`](work-log/README.md)（权威在 memory Git）· 本机习惯写 `CHcode/.cursor/work-log/` 再导出
 - [双 Mac 旧机主控 + 记忆/任务双向同步](feedback_dual_mac_hub_sync.md) — bot 常驻旧 Mac；lesson/work-log/ops-mirror 经 Git 互通；聊天原文不同步
+- [日报对照主人改定学习](lessons/2026-08-04-日报对照主人改定学习.md) — 结果向少旁白；明日动作可多条、估真实截止
 - [双 Mac work-log 统一日报](lessons/2026-07-22-dual-mac-worklog-unified-daily-report.md) — 两机 hosts 合并后再写日报
 - [vsix 放 dc-platform-server/extension/](lessons/2026-07-28-vsix-放-dc-platform-server-extension-走-git-pull-s.md) — 会话轮换蒸馏
 - [device_id 空率≥90%（本需求 100%）则直建 dim_de](lessons/2026-07-28-device_id-空率-90-本需求-100-则直建-dim_device_all-勿再设计-.md) — 会话轮换蒸馏
