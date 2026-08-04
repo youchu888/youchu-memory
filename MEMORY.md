@@ -74,6 +74,7 @@
 - [工作簿负责人以最新一日为准](lessons/2026-07-13-workbook-ownership-latest.md) — 禁沿用过期归属；07-12 起停留时长改派又初。
 - [停留时长进度+群知秋钦定要点](lessons/2026-07-15-stay-duration-and-group-directives.md) — 停留 Phase1(page_stay/sid)test闭环待prod提审；Phase2 知秋令转 DWS 会话时长(账户+设备/墙钟/五档待拍)；宏/人工节点/分层铁律 + 归因/标签开工令。
 - [日报周报语气：通俗但正式](lessons/2026-07-15-report-plain-but-formal-style.md) — 主人钦定；非技术看懂 + 书面语气；术语翻业务话、禁口语俚语；playbook + daily-report.mdc 已同步。
+- [日报结果条禁止写进行中](feedback_daily_report_no_in_progress.md) — 今日结果末尾只标已完成；未完进死锁/明日。
 - [日报禁止写 bus 编号须写任务名](lessons/2026-07-08-daily-report-no-bus-id.md) — 日报正文禁 bus#；写任务名；daily-report.mdc 已同步。
 - [日报须汇总多 Agent 流水](lessons/2026-07-08-daily-report-multi-agent-worklog.md) — 先读 work-log + 全日 transcript，勿只写当前窗。
 - [归因出数硬条件与测试验收手册](lessons/2026-07-08-attribution-test-gates-handbook.md) — 入围/成功/回写门槛；手册在 Downloads。
