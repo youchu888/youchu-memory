@@ -1,21 +1,17 @@
-# 新 Mac 出站 bus 不同步 TG 私聊
+# 新 Mac 出站不同步 TG：别改链路，回旧机处理
 
 ## 现象
-Cursor 已 `agent_bus_send`（progress/reply 写入本机 `youchu_ai_tg_status.jsonl`），TG 私聊仍只有「处理中」，看不到「又初→狂人」结案正文。
+在新 Mac Cursor 上回了 bus（progress/reply），TG 私聊看不到结案；只有「处理中」。
 
-## 根因
-- 新 Mac（`WORKLOG_HOST_ID=new-mac`）按约定**不跑** tgbot / status_mirror（`disable-local-automation-new-mac.sh`）。
-- 出站只 append 本机 `tg_status.jsonl`；旧机 bot 读的是**旧机** state，读不到新机出站。
-- 入站「处理中」仍可能由旧机 poller 镜像，造成「有处理中、无结案」错觉。
+## 根因（分工，不是缺功能）
+- **旧 Mac** = TG bot + poller + 接单主会话 + status_mirror（权威）
+- **新 Mac** = 编码机；`disable-local-automation-new-mac.sh` 故意不跑 bot/poller
+- 出站写本机 `tg_status`，旧机 bot 读不到 → 镜像断档
 
-## 修复
-- `agent_bus_send._mirror_outbound_tg`：在写 jsonl 后，若 `new-mac` 或本机无 tgbot，则对 `ack/progress/reply` **直推** `TASK_DISPATCH_NOTIFY_USER_IDS` 私聊。
-- 开关：`AGENT_BUS_TG_DIRECT_OUTBOUND=1|0` 强制开/关。
-- 部署：改 `.claude/database/scripts/notify/agent_bus_send.py` 后 `cp` 到 Application Support（或 sync）；**新机勿长期开 poller**。
+## 正确做法
+1. bot/agent-bus 派单 → **只在旧机 Cursor 处理**
+2. 新机不要为「看得到 TG」去加直推 / 启 poller（易双开抢活、改坏原链路）
+3. 误在新机开干了 → 后续回旧机续做；新机侧别再改 `agent_bus_send`
 
-## 自检
-```bash
-# 发一条 progress，TG 应出现「又初→狂人（阶段同步）」
-python3 .claude/database/scripts/notify/agent_bus_send.py \
-  --to worker_ant --kind progress --reply-to-bus-id N --text "[进度] smoke"
-```
+## 反例（已撤回）
+2026-08-04 曾在新机给 `agent_bus_send` 加 TG 直推，**已按主人令还原**；勿再合入。
