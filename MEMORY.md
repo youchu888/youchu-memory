@@ -161,3 +161,4 @@
 
 - lesson: lessons/2026-07-28-deprecate-must-offline-old-dolphin-task.md — 合表废弃须同批下线旧海豚 task
 - feedback: feedback_deprecate_must_offline_dolphin_task.md — 合表废弃须同批删旧海豚 task
+- [主人说话风格复用](feedback_主人说话风格复用.md) — 群聊/狂人/对主人：短、直接、先结论，禁汇报腔
