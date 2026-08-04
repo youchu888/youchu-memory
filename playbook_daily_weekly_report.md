@@ -61,7 +61,7 @@ bash ~/.dc-platform/scripts/prepare_daily_report_sync.sh
 5. **落盘**：权威机写 `~/.dc-platform/memory/work-log/reports/YYYY-MM-DD-日报.md`；本机镜像 `.cursor/work-log/reports/`
 6. **推送 TG 私聊（仅 old-mac）**：
    ```bash
-   omdb/tgbot/.venv/bin/python omdb/tgbot/scripts/post_daily_report_to_dm.py
+   python3 ~/.dc-platform/memory/scripts/post_daily_report_to_dm.py
    ```
 7. 无交办的工作日：可不生成，或写「无交办」一条（若生成仍由 old-mac 推私聊）
 

@@ -15,4 +15,5 @@
 
 - `.cursor/rules/daily-report.mdc`
 - `playbook_daily_weekly_report.md`
-- `omdb/tgbot/scripts/post_daily_report_to_dm.py`（默认校验 authority=old-mac）
+- `omdb/tgbot/scripts/post_daily_report_to_dm.py`（本机副本）
+- **canonical（双机同步）**：`~/.dc-platform/memory/scripts/post_daily_report_to_dm.py`
