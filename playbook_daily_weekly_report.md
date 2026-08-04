@@ -50,13 +50,20 @@ bash ~/.dc-platform/scripts/prepare_daily_report_sync.sh
 
 缺机 hosts 时须在回复点明；新机活未写 work-log 则旧机无法汇到（transcript 不跨机）。
 
-## 日报流程（生成 → 记录）
+## 日报流程（生成 → 记录 → 私聊）
 
-1. 检索**当日**用户全部交办（transcript grep / 会话记忆）
-2. 按模板写 `【今日结果】` 3 条左右，每条 20～30 字
-3. **落盘**：`CHcode/.cursor/work-log/reports/YYYY-MM-DD-日报.md`
-4. **同步**：更新 `.cursor/work-log/YYYY-MM-DD.md` 的 `## 完成` / `## 阻碍` / `## 明日`
-5. 无交办的工作日：可不生成，或写「无交办」一条
+> 主人 2026-08-04：今日结果只写已完成；死锁尽量空；未完进明日；**自动推送仅 old-mac**。
+
+1. 先双机同步再汇总（`prepare_daily_report_sync.sh`）
+2. `【今日结果】`**只写已完成项**（约 3 条），末尾只标「已完成」；禁止「进行中」
+3. `【死锁阻碍】`**尽量留空**
+4. 未完成项写入 `【明日动作】`（可多条）
+5. **落盘**：权威机写 `~/.dc-platform/memory/work-log/reports/YYYY-MM-DD-日报.md`；本机镜像 `.cursor/work-log/reports/`
+6. **推送 TG 私聊（仅 old-mac）**：
+   ```bash
+   omdb/tgbot/.venv/bin/python omdb/tgbot/scripts/post_daily_report_to_dm.py
+   ```
+7. 无交办的工作日：可不生成，或写「无交办」一条（若生成仍由 old-mac 推私聊）
 
 ## 日报模板
 
@@ -77,11 +84,16 @@ bash ~/.dc-platform/scripts/prepare_daily_report_sync.sh
 
 ## 【明日动作】
 - TOP1: …（截止：下一工作日）
+- TOP2: …（截止：下一工作日）
 ```
 
 规则：
 
 - 仅**工作日**生成；法定假日跳过（除非用户显式要求）
+- `【今日结果】`只列已完成；未完成进 `【明日动作】`
+- `【死锁阻碍】`尽量不写（默认空）
+- 禁止结果条出现「进行中 / 待确认」
+- **自动出报 + TG 私聊推送由 old-mac 执行**；new-mac 只贡献 hosts 流水
 - `【明日动作】` 指**下一个工作日**（跳过周末与法定假）
 - 每条约 **40~70 字**（汇报展开说清；禁内部黑话）；通常 3 条
 - **语气：通俗但正式（主人 2026-07-15 定稿）**——读者是部门/主管非开发。
