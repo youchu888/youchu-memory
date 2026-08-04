@@ -92,3 +92,4 @@
 | 2026-07-27 | [merge_pool 多桶 OVERWRITE](./2026-07-27-merge-pool-stage4-overwrite-and-publish.md) | merge_pool, stage4 | 同分区串行桶会互覆盖；默认 bucket_n=1 |
 | 2026-07-28 | deprecate-must-offline-old-dolphin-task | high | dolphin,deprecate,half-migration | 合表废弃必须同批删旧海豚 task，禁半迁移 |
 | 2026-08-03 | [查岗未回：work_online 克隆 session 双连抢更新](./2026-08-03-查岗未回因work_online克隆session双连抢更新.md) | attendance,tgbot,telethon | 同 auth_key 双连导致 NewMessage 丢失 |
+| 2026-08-04 | [新 Mac 出站 bus 不同步 TG](./2026-08-04-new-mac-outbound-tg-direct.md) | agent-bus,tg,new-mac | 出站直推私聊 |
