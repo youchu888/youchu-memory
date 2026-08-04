@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-04 | [日报结果条禁止写进行中](./2026-08-04-daily-report-no-in-progress.md) | daily-report, writing-style | 结果条只标已完成；未完进死锁/明日 |
+| 2026-08-04 | [日报定稿后必须推送 TG 私聊](./2026-08-04-daily-report-push-tg-dm.md) | tg, daily-report, dm | 21:30 落盘后跑 post_daily_report_to_dm.py |
 | 2026-08-03 | [归因 Paimon 影子全链 test](./2026-08-03-attribution-paimon-shadow-full-chain-test.md) | attribution-shadow, paimon, dolphin | 独立 wf+_r 全链；test 湖空则 0 行；真压测等湖或 prod |
 | 2026-08-03 | [提交只动 ops_system：禁改平台插件与 api_v1](./2026-08-03-禁改平台插件与api_v1.md) | git, ownership, 禁改 | vscode-extension/dc-platform-server 禁改；误 push 则新 commit 恢复 |
 | 2026-08-01 | [prod 补数全员开放](./2026-08-01-prod-complement-open-all-users.md) | dolphin, complement, prod | env=prod 补数非admin可用；三坑 dep_type/日期/force |
