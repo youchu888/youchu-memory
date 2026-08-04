@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-04 | [extension|security|官方 vsix 安装前必须 SHA256 ](./2026-08-04-extension-security-官方-vsix-安装前必须-sha256-校验通过-禁止跳.md) | dc-platform,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-04 | [extension|dual-mac|双机无 SSH 时扩展升级须各机本地跑 s](./2026-08-04-extension-dual-mac-双机无-ssh-时扩展升级须各机本地跑-sync-memo.md) | dc-platform,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-04 | [日报只写已完成；死锁少写；推送仅 old-mac](./2026-08-04-daily-report-no-in-progress.md) | daily-report, dual-mac, tg | 已完成→结果；未完→明日；死锁空；old-mac 推私聊 |
 | 2026-08-04 | [日报定稿后必须推送 TG 私聊](./2026-08-04-daily-report-push-tg-dm.md) | tg, daily-report, dm | 仅 old-mac 跑 memory/scripts/post_daily_report_to_dm.py |
 | 2026-08-03 | [归因 Paimon 影子全链 test](./2026-08-03-attribution-paimon-shadow-full-chain-test.md) | attribution-shadow, paimon, dolphin | 独立 wf+_r 全链；test 湖空则 0 行；真压测等湖或 prod |

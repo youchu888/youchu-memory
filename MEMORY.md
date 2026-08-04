@@ -5,6 +5,8 @@
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
 - [提交说明用第一人称直述](lessons/2026-07-31-first-person-commit-voice.md) — 直述做了什么/为什么；禁「我/主人/旁白体」；规则见 `.cursor/rules/first-person-commit-voice.mdc`
+- [extension|security|官方 vsix 安装前必须 SHA](lessons/2026-08-04-extension-security-官方-vsix-安装前必须-sha256-校验通过-禁止跳.md) — 会话轮换蒸馏
+- [extension|dual-mac|双机无 SSH 时扩展升级须各机本](lessons/2026-08-04-extension-dual-mac-双机无-ssh-时扩展升级须各机本地跑-sync-memo.md) — 会话轮换蒸馏
 - [归因 Paimon 影子全链 test](lessons/2026-08-03-attribution-paimon-shadow-full-chain-test.md) — 独立 wf+_r；test 湖空仍 SUCCESS/0 行；真压测等湖或 prod
 - [禁改平台插件与 api_v1](lessons/2026-08-03-禁改平台插件与api_v1.md) — 提交只动 ops_system；vscode-extension/dc-platform-server 不动
 - [做事要考虑健壮性](lessons/2026-08-01-robustness-first.md) — 失败自愈、不滚雪球、脚本同源、改完 smoke；规则见 `.cursor/rules/robustness-first.mdc`

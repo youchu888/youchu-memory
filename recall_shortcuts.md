@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 04 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-04-extension-security-官方-vsix-安装前必须-sha256-校验通过-禁止跳.md` | 2026-08-04-extension-security-官方-vsix-安装 |
+| ## 04 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-04-extension-dual-mac-双机无-ssh-时扩展升级须各机本地跑-sync-memo.md` | 2026-08-04-extension-dual-mac-双机无-ssh-时扩 |
+| @youchu_ai_bot @初儿 @又初 tg 「我 不回 | `sessions/tg-rotate-2026-08-04-1714.md` | TG 群旁听：仅显式 @又初/@初儿/@youchu_ai_bot 等时才回复； |
+| 0.0.123 dc platform platform.dc 一台 一台装完后 | `sessions/tg-rotate-2026-08-04-1714.md` | 一台装完后应核对版本号（如 `dc-platform.dc-platform-0 |
+| 0.0.122 0.0.123 中保留 关文 开相 放开 | `sessions/tg-rotate-2026-08-04-1714.md` | 0.0.122 的补数放开相关文案在 0.0.123 中保留 |
+| 0.0.123 sessio session —— ——申请发布可指定审核人 — | `sessions/tg-rotate-2026-08-04-1714.md` | 0.0.123 主要变更：恢复**发布审核流**——申请发布可指定审核人、撤回申 |
+| cursor developer reload window 会生 功能 | `sessions/tg-rotate-2026-08-04-1714.md` | 装完须在 Cursor 执行 **`Developer: Reload Wind |
+| dc extension git install lat latest.sh | `sessions/tg-rotate-2026-08-04-1714.md` | 安装脚本已沉淀在 memory git：`memory/scripts/inst |
+| .dc bash dc extension git.sh install | `sessions/tg-rotate-2026-08-04-1714.md` | 标准双机流程：先 `bash ~/.dc-platform/scripts/sy |
+| dc mac new old platform ssh | `sessions/tg-rotate-2026-08-04-1714.md` | dc-platform 扩展双机升级：old-mac / new-mac **无 |
+| dc extension lesson platform security sh | `sessions/tg-rotate-2026-08-04-1714.md` | [LESSON: dc-platform/extension/security/ |
+| api download extension latest sha256 v1 | `sessions/tg-rotate-2026-08-04-1714.md` | 官方包来源：`/api/v1/extension/download/latest |
 | ## 01 08 2026 agent_session_rotate appro | `~/.dc-platform/memory/lessons/2026-08-01-改链路审核人时扫同链路全部-pending-rp-approved-旧-session-不自动跟.md` | 2026-08-01-改链路审核人时扫同链路全部-pending-rp-appr |
 | ## 01 08 0~5 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily-无-bucket0-session-0.md` | 2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily- |
 | ## 01 08 2026 admin agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-01-session-被-admin-用-fix-metadata-摘表后-本地须同步改-task-y.md` | 2026-08-01-session-被-admin-用-fix-metadat |
@@ -33,15 +45,3 @@
 | +10） 11.5h 86400 default miss mvp_v2 | `sessions/tg-rotate-2026-07-31-0639.md` | mvp_v2 总分 = 品牌 + 型号 + 系统名 + 系统版本 + 时间档；设 |
 | 001 40） attribution_status ip jhg score | `sessions/tg-rotate-2026-07-31-0639.md` | 注册归因「有分数 ≠ 归因成功」：`attribution_status=una |
 | ads.ads_app_event_data_quality_summary_d | `sessions/tg-rotate-2026-07-31-0639.md` | `ads.ads_app_event_data_quality_summary_ |
-| .m ai ai开发版.md ar bo dev_platform_dev | `sessions/tg-rotate-2026-07-31-0639.md` | 数仓全链路手册可交付两份：`omdb/tgbot/outgoing/数仓开发手册 |
-| @youchu8888 @youchu_ai_bot @初儿 @又初 「没 「群 | `sessions/tg-rotate-2026-07-31-0639.md` | 群聊被显式 `@youchu_ai_bot` / `@youchu8888` / |
-| ## 07 2026 30 @youchu8888 @youchu_ai_bot | `~/.dc-platform/memory/lessons/2026-07-30-群内找又初须-又初-初儿-youchu8888-youchu_ai_bot-主人账号不是又初通道.md` | 2026-07-30-群内找又初须-又初-初儿-youchu8888-youch |
-| ## 07 2026 30 agent_session_rotate andro | `~/.dc-platform/memory/lessons/2026-07-30-设备标签问-device-时答两层-dwd-入值-android-ios-pc-宽表落-reg_.md` | 2026-07-30-设备标签问-device-时答两层-dwd-入值-andr |
-| ## 07 2026 30 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库-平台取证-禁止硬编码与探针空快照直接.md` | 2026-07-30-机器人群工作簿进度默认私聊草稿待主人确认后再发-草稿须查库 |
-| @youchu8888 @youchu_ai_bot @初儿 @又初 @（ bo | `sessions/tg-rotate-2026-07-30-0643.md` | TG 群仅在被显式 @（`@youchu_ai_bot` / `@youchu8 |
-| android app browser h5→web ios→ap ios→ap | `sessions/tg-rotate-2026-07-30-0643.md` | 设备标签 `reg_platform` 映射（SR 老版 + Spark 姿态  |
-| android device dwd dwd_user_register_d_v | `sessions/tg-rotate-2026-07-30-0643.md` | 设备标签 `device` 要分两层：上游 DWD `dwd_user_regi |
-| 「可 」或 不发 主人 主人「可以发」或改字后再发机器人群 人「 | `sessions/tg-rotate-2026-07-30-0643.md` | 正确流程：狂人 9 点工作簿 → **只生成草稿私聊主人** → 主人「可以发」 |
-| #3 #9 dt phase prod te | `sessions/tg-rotate-2026-07-30-0643.md` | 探针超时/连库失败时 `#3` 归因、`#9` 停留会显示空 dt、0 行或 p |
-| 01 09 workbook_live_cache.jso workbook_l | `sessions/tg-rotate-2026-07-30-0643.md` | 机器人群 09:01 自动进度帖不可当真：须交叉核对「本地发帖记录 + `wor |
-| lesson progress tgbot workbook 与探 主人 | `sessions/tg-rotate-2026-07-30-0643.md` | [LESSON: tgbot,workbook-progress/机器人群工作簿 |
