@@ -5,6 +5,9 @@
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
 - [提交说明用第一人称直述](lessons/2026-07-31-first-person-commit-voice.md) — 直述做了什么/为什么；禁「我/主人/旁白体」；规则见 `.cursor/rules/first-person-commit-voice.mdc`
+- [主人说「stage1-6 干完先不发」时：可标 stage done +](lessons/2026-08-05-主人说-stage1-6-干完先不发-时-可标-stage-done-test-跑通-但-禁止-.md) — 会话轮换蒸馏
+- [进入=会话首页且来路非空；刷新不算跳转；空 uid/device 丢弃—](lessons/2026-08-05-进入-会话首页且来路非空-刷新不算跳转-空-uid-device-丢弃-改-etl-前先核对这三.md) — 会话轮换蒸馏
+- [一个 PRD「页面访问」按指标类型拆成 visit_d（日指标）与 ju](lessons/2026-08-05-一个-prd-页面访问-按指标类型拆成-visit_d-日指标-与-jump_d-跳转分布-两个.md) — 会话轮换蒸馏
 - [extension|security|官方 vsix 安装前必须 SHA](lessons/2026-08-04-extension-security-官方-vsix-安装前必须-sha256-校验通过-禁止跳.md) — 会话轮换蒸馏
 - [extension|dual-mac|双机无 SSH 时扩展升级须各机本](lessons/2026-08-04-extension-dual-mac-双机无-ssh-时扩展升级须各机本地跑-sync-memo.md) — 会话轮换蒸馏
 - [归因 Paimon 影子全链 test](lessons/2026-08-03-attribution-paimon-shadow-full-chain-test.md) — 独立 wf+_r；test 湖空仍 SUCCESS/0 行；真压测等湖或 prod
@@ -163,3 +166,4 @@
 - lesson: lessons/2026-07-28-deprecate-must-offline-old-dolphin-task.md — 合表废弃须同批下线旧海豚 task
 - feedback: feedback_deprecate_must_offline_dolphin_task.md — 合表废弃须同批删旧海豚 task
 - [主人说话风格复用](feedback_主人说话风格复用.md) — 群聊/狂人/对主人：短、直接、先结论，禁汇报腔
+- [自开任务必须登工作簿](feedback_自开任务必须登工作簿.md) — 非狂人簿的主人交办/自开活也要写入 workbook「自开任务」

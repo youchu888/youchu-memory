@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-05 | [主人说「stage1-6 干完先不发」时：可标 stage done + tes](./2026-08-05-主人说-stage1-6-干完先不发-时-可标-stage-done-test-跑通-但-禁止-.md) | dev-session-stage,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-05 | [进入=会话首页且来路非空；刷新不算跳转；空 uid/device 丢弃——改 E](./2026-08-05-进入-会话首页且来路非空-刷新不算跳转-空-uid-device-丢弃-改-etl-前先核对这三.md) | page-visit-caliber,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-05 | [一个 PRD「页面访问」按指标类型拆成 visit_d（日指标）与 jump_d](./2026-08-05-一个-prd-页面访问-按指标类型拆成-visit_d-日指标-与-jump_d-跳转分布-两个.md) | page-visit,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-04 | [日报对照主人改定稿学习写法](./2026-08-04-日报对照主人改定学习.md) | daily-report, learning | 结果向少旁白；明日动作可多条估截止 |
 | 2026-08-04 | [extension|security|官方 vsix 安装前必须 SHA256 ](./2026-08-04-extension-security-官方-vsix-安装前必须-sha256-校验通过-禁止跳.md) | dc-platform,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-04 | [extension|dual-mac|双机无 SSH 时扩展升级须各机本地跑 s](./2026-08-04-extension-dual-mac-双机无-ssh-时扩展升级须各机本地跑-sync-memo.md) | dc-platform,session-rotate | 会话轮换前自动蒸馏 |
