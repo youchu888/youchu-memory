@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 06 08 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-06-bus-转发须自检正文完整-截断导致对方看不到问题时立即补发全量说明再结案.md` | 2026-08-06-bus-转发须自检正文完整-截断导致对方看不到问题时立即补 |
+| ## #263 06 08 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-06-问指标是否被改时先查平台-metric-文档并对本地-diff-同时读齐私聊上文-禁止跨轮次漏读.md` | 2026-08-06-问指标是否被改时先查平台-metric-文档并对本地-di |
+| ## 06 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-06-狂人未更新工作簿时-自开任务写-workbook_supplemental-json-合并逻辑按.md` | 2026-08-06-狂人未更新工作簿时-自开任务写-workbook_supp |
+| +去 jump_d top5 visit_d 两张表 仓只 | `sessions/tg-rotate-2026-08-06-0617.md` | 数仓只管按天落表；默认日期、筛选、Top5 截断在前端/查询侧；**visit_ |
+| +设 1800s device_id page_load_time uid 不进 | `sessions/tg-rotate-2026-08-06-0617.md` | 平均停留账号+设备都做；末页或 >1800s 不进平均；平均加载仅 `page_ |
+| etl） greatest jump lead（#7 pv pv−jump | `sessions/tg-rotate-2026-08-06-0617.md` | 跳出率 `(pv−jump)/pv`，用 `GREATEST` 防负、防 >1； |
+| and from to ≠来 一页 不算 | `sessions/tg-rotate-2026-08-06-0617.md` | 进入 = **会话第一页 AND 来路非空**（首屏来路空不算）；跳转 = ** |
+| etl spec 一按 不再 不再等知秋改口径 主人 | `sessions/tg-rotate-2026-08-06-0617.md` | **8/4 主人拍板即终稿**，不再等知秋改口径；平台文档、spec、ETL 统 |
+| commit publish publish） request stage1–6 | `sessions/tg-rotate-2026-08-06-0617.md` | 页面访问在主人说可发前卡点：**stage1–6 不发**（不 commit、不 |
+| #10 002 003 20260804 dev session | `sessions/tg-rotate-2026-08-06-0617.md` | 页面访问 #10 绑定 `dev-20260804-002`（visit_d）+ |
+| assignee no sessions title 不会 两条 | `sessions/tg-rotate-2026-08-06-0617.md` | 增补项字段：`no`、`title`、`assignee`、可选 `sessio |
+| data omdb tgbot workbook_progress_servic | `sessions/tg-rotate-2026-08-06-0617.md` | 狂人工作簿未更新时，自开任务写入 `omdb/tgbot/data/workbo |
+| #263 context continuity diff docs lesson | `sessions/tg-rotate-2026-08-06-0617.md` | [LESSON: context-continuity,platform-doc |
+| agent bus 「没 」时 人须 到问 | `sessions/tg-rotate-2026-08-06-0617.md` | agent-bus 发狂人须防**正文截断**；对方回「没看到问题」时补发完整说 |
+| #2 #263「指标已上平台」）必须接上 26 3「 63 bus | `sessions/tg-rotate-2026-08-06-0617.md` | 问「平台指标有没有改」须**先查平台文档**（如 `metric_page_vi |
 | ## 05 08 2026 ag agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-05-主人说-stage1-6-干完先不发-时-可标-stage-done-test-跑通-但-禁止-.md` | 2026-08-05-主人说-stage1-6-干完先不发-时-可标-stage |
 | ## 05 08 2026 agent_session_rotate calib | `~/.dc-platform/memory/lessons/2026-08-05-进入-会话首页且来路非空-刷新不算跳转-空-uid-device-丢弃-改-etl-前先核对这三.md` | 2026-08-05-进入-会话首页且来路非空-刷新不算跳转-空-uid-dev |
 | ## 05 08 2026 _d agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-05-一个-prd-页面访问-按指标类型拆成-visit_d-日指标-与-jump_d-跳转分布-两个.md` | 2026-08-05-一个-prd-页面访问-按指标类型拆成-visit_d-日 |
@@ -30,18 +45,3 @@
 | .dc bash dc extension git.sh install | `sessions/tg-rotate-2026-08-04-1714.md` | 标准双机流程：先 `bash ~/.dc-platform/scripts/sy |
 | dc mac new old platform ssh | `sessions/tg-rotate-2026-08-04-1714.md` | dc-platform 扩展双机升级：old-mac / new-mac **无 |
 | dc extension lesson platform security sh | `sessions/tg-rotate-2026-08-04-1714.md` | [LESSON: dc-platform/extension/security/ |
-| api download extension latest sha256 v1 | `sessions/tg-rotate-2026-08-04-1714.md` | 官方包来源：`/api/v1/extension/download/latest |
-| ## 01 08 2026 agent_session_rotate appro | `~/.dc-platform/memory/lessons/2026-08-01-改链路审核人时扫同链路全部-pending-rp-approved-旧-session-不自动跟.md` | 2026-08-01-改链路审核人时扫同链路全部-pending-rp-appr |
-| ## 01 08 0~5 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily-无-bucket0-session-0.md` | 2026-08-01-验用户停留时长-默认-t-1-查当月分区覆盖-daily- |
-| ## 01 08 2026 admin agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-01-session-被-admin-用-fix-metadata-摘表后-本地须同步改-task-y.md` | 2026-08-01-session-被-admin-用-fix-metadat |
-| dws.dws_session_duration_user_d prod 下当  | `sessions/tg-rotate-2026-08-01-1002.md` | prod 验 `dws.dws_session_duration_user_d` |
-| dolphin_owned_tasks prod related_tables  | `sessions/tg-rotate-2026-08-01-1002.md` | `dolphin_owned_tasks` 可 **test + prod 两条 |
-| 10000 30 ddl desig design.md history_par | `sessions/tg-rotate-2026-08-01-1002.md` | DDL 对齐 prod：`start=-10000`、`history_part |
-| 180283360953 180283360953472 _d _日 _汇 dw | `sessions/tg-rotate-2026-08-01-1002.md` | prod 海豚已挂：`运营系统` → `wf_dws_汇总_日` → **tas |
-| full out_of_scope_separate_session put r | `sessions/tg-rotate-2026-08-01-1002.md` | 平台 session 同步用 **PUT `/full`**，并更新 `rela |
-| 001 20260731 design dev dwm job_dwm_app_ | `sessions/tg-rotate-2026-08-01-1002.md` | 设备 DWM 独立成新 session **`dev-20260731-001` |
-| 002 04.dws 20260729 dev dolphin_owned_ta | `sessions/tg-rotate-2026-08-01-1002.md` | `dev-20260729-002` 已收敛为**单目标表** `dws.dws |
-| 001 20260711 _s ag approved ay | `sessions/tg-rotate-2026-08-01-1002.md` | 已是 **approved** 的旧 session（如 `dev-202607 |
-| admin dev fix full lesson metadata | `sessions/tg-rotate-2026-08-01-1002.md` | [LESSON: dev-session/session 被 admin 用 f |
-| 07 2026 30 comm commit dev | `sessions/tg-rotate-2026-08-01-1002.md` | 2026-07 prod 结论：30 业务日全覆盖、分档符合设计、07-30 与 |
-| get merge prod put session state | `sessions/tg-rotate-2026-08-01-1002.md` | 他人已在 prod 发版后本地跟 session：**先 GET 服务端最新 s |

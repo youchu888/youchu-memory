@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-06 | [bus 转发须自检正文完整；截断导致对方看不到问题时立即补发全量说明再结案](./2026-08-06-bus-转发须自检正文完整-截断导致对方看不到问题时立即补发全量说明再结案.md) | agent-bus,messaging,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-06 | [问指标是否被改时先查平台 metric 文档并对本地 diff，同时读齐私聊上文](./2026-08-06-问指标是否被改时先查平台-metric-文档并对本地-diff-同时读齐私聊上文-禁止跨轮次漏读.md) | context-continuity,platform-docs,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-06 | [狂人未更新工作簿时，自开任务写 workbook_supplemental.js](./2026-08-06-狂人未更新工作簿时-自开任务写-workbook_supplemental-json-合并逻辑按.md) | workbook,task-tracking,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-05 | [主人说「stage1-6 干完先不发」时：可标 stage done + tes](./2026-08-05-主人说-stage1-6-干完先不发-时-可标-stage-done-test-跑通-但-禁止-.md) | dev-session-stage,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-05 | [进入=会话首页且来路非空；刷新不算跳转；空 uid/device 丢弃——改 E](./2026-08-05-进入-会话首页且来路非空-刷新不算跳转-空-uid-device-丢弃-改-etl-前先核对这三.md) | page-visit-caliber,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-05 | [一个 PRD「页面访问」按指标类型拆成 visit_d（日指标）与 jump_d](./2026-08-05-一个-prd-页面访问-按指标类型拆成-visit_d-日指标-与-jump_d-跳转分布-两个.md) | page-visit,session-rotate | 会话轮换前自动蒸馏 |
