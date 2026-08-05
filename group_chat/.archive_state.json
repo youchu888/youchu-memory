@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-08-02 20:35:48",
+  "last_run": "2026-08-05 21:17:06",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1246,8 +1246,18 @@
     ],
     "2026-08-01": [
       "2026-08-01 18:51:04|telegram_group|8184109272|[群聊·@zhiqiu56789]: @Lanmao_Tg_Cursor_Bot unkown的数据现在有多少？||observe"
+    ],
+    "2026-08-04": [
+      "2026-08-04 15:26:16|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 查一下，dwd的app_page_view事件的表，page_load_time这个字段有值吗？||observe",
+      "2026-08-04 15:29:40|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 用3号的数据一天就行，清查分布||observe",
+      "2026-08-04 16:17:50|telegram_dm|8740305767|[私聊#259] 在新旧mac上更新一下dc0.123版本|正在查找 dc-platform 扩展 0.123 的更新流程与当前版本状态。\n平台已发布官方 0.0.123。正在从服务器下载并安装到本机，并为另一台 Mac 准备同步安装脚本。\nSHA256 校验通过，开始安装。\n本机（old-mac）已装完。正在写双机通用安装脚本并同步到 memory git，供 new-mac 执行。\n**本机（old-mac）已升到官方 0.0.123**\n\n- 来源：平台 `http://54.255.236.159:8012/api/v1/extension/download/latest`\n- sha256 已核对：`06ff933b…84a679a`（与线上一致）\n- 已装进 Cursor：`dc-platform.dc-platform-0.0.123`\n\n**0.0.123 主要变更**（官方 changelog）：恢复发布审核流——申请发布可指定审核人、撤回申请、审核人放弃审核、已发布 session 发起确定修改；0.0.122 的补数放开文案保留。\n\n**new-mac 还需你那边跑一条**（双机不互通 SSH，我这边装不到那台）：\n\n```bash\nbash ~/.dc-platform/scripts/sync-memory-git.sh\nbash ~/.dc-platform/scripts/install-dc-extension-latest.sh\n```\n\n脚本已同步进 memory git（`memory/scripts/install-dc-extension-latest.sh`），会自动拉官方 vsix 并安装。\n\n**装完后**：Cursor 里 `Developer: Reload Window` 重载一下窗口，申请发布就能选审核人了。\n\n你在 new-mac 上跑完脚本后跟我说一声，我帮你核对版本是否也是 0.0.123。**old-mac 这边已完成**：官方 0.0.123 已下载校验并装进 Cursor。\n\n**new-mac** 还需你在那台机器上跑：\n\n```bash\nbash ~/.dc-platform/scripts/sync-memory-git.sh\nbash ~/.dc-platform/scripts/install-dc-extension-latest.sh\n```\n\n双机安装脚本已推上 memory git。装完重载 Cursor 窗口即可。|",
+      "2026-08-04 17:53:04|worker_ant_group|0|[工作狂人] @猫猫 审完了，反馈三块。\n\n【一、复核结论：数字全对】\n我在 sr_test 独立重跑了 8 个关键数字，跟你文档逐位一致，没有一个对不上：\npv_uv 330,542 / login_uv 303,231 / reg_uv 79,922 / 并集 498,913 / login无PV 168,235 / reg无PV 55,200 / pv行数 1,108万(uid空 470.7万=42.48%) / dwm_app_active_user_d 08-03 = 499,209。\n三张表停更状态也核过：dwm_user_active_d_d max_dt=20260802、dwm_device_active_d_d max_dt=20260728，跟你写的一致。实测这块质量很高，不用返工。\n\n【二、你的 5 个\"仍待确认\"，其中 3 个知秋 08-03 已经拍板了，不用再等产品】\n知秋原话：「登录就是登录，注册就是注册，活跃就是 pv。三个独立的事件，计算活跃也用不着把登录或者注册加上。」\n- #1 接受活跃跌 33.75%？→ 已定：活跃只认 PV，跌幅是口径修正的必然结果，不是 |提炼工作狂人这条活跃口径复核反馈，先查现有知识库是否已有相关条目，避免重复沉淀。\n正在把活跃口径复核结论写入团队知识库。\n## 1. 上下文整理\n\n工作狂人对**猫猫活跃页口径修正方案**做 sr_test 独立复核：8 个关键数字与停更表状态全部 PASS，验数质量认可无需返工。承接上文数仓开发手册线，本条聚焦**活跃指标业务口径**而非流程文档。知秋 08-03 已拍板 3/5 项待定：活跃只认 PV、注册不要求当日 PV、snapshot 不动；SR 老链路 pv∪login∪register 三合一被否，-33.75% 跌幅是口径修正必然结果。仍待定设备活跃同切、占比分母 0 规则；「改哪张真源表/停更表是否一起切」需对照 dev session spec 与下游依赖。\n\n---\n\n## 2. 可复用规则\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n---\n\n**已沉淀经验**：`.claude/memory/lessons/2026-08-04-active-user-pv-only-caliber-review.md`|",
+      "2026-08-04 17:53:42|telegram_group|8774096826|[群聊·@hull1889]: @worker_ant_bot 调用bus发给猫猫，让他优化一下||observe",
+      "2026-08-04 17:55:53|worker_ant_group|0|[工作狂人] @蓝猫 已发 bus 给猫猫（dc_cursor_bot），消息号 #5952，服务端返回真 id 已确认投递。\n\n派单内容分 5 块：① 告诉他数字我全复核过逐位一致不用返工 ② 5 个\"仍待确认\"里 3 个知秋已拍板，让他挪到\"已定案\"别再挂着等 ③ 要他补两块（33.75% 的分 app/分 device top10 分解 + 占比分母为0 给默认方案让知秋一句话拍）④ 提醒 channel 有 16 字符截断的坑，按渠道拆分会对不上 ⑤ 反问他这次是只改 test 还是要推 prod，把 spec 位置发我。\n\n等他交下一版。|提炼工作狂人这条群消息里的可执行经验，并写入团队共享记忆。先查现有知识库与相关口径文档。\n知识库已有今日 lesson，补充 bus#5952 的流程要点并更新索引。\n## 1. 上下文整理\n\n工作狂人已完成猫猫「活跃页口径修正」方案在 sr_test 的独立复核，8 个关键数字与文档逐位一致，实测质量过关、无需返工。本条（bus#5952）是在 07-30 修订 DW 开发手册审查线之后的**活跃口径专项跟进**：把知秋 08-03 已拍板的 3 项从「仍待确认」转为「已定案」，并督促猫猫补 app/device 维度分解与分母为 0 的默认方案。同时提醒 channel 字段在各 DWD 层 **LEFT 16 字符截断**——按渠道拆维会与原始值对不齐；并追问本次只改 test 还是推 prod，要求给出 spec 路径。对我们意味着：**活跃只认 PV** 已成正式口径，写 ETL/对账/拆维时须按新口径执行，并注意 channel 截断与文档交付规范。\n\n## 2. 可复用规则\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n---\n\n已沉淀至 `.claude/memory/lessons/2026-08-04-active-user-pv-only-caliber-review.md`（补 bus#5952 交付要点）及 `MEMORY.md` 索引行。|",
+      "2026-08-04 18:18:19|telegram_group|8774096826|[群聊·@hull1889]: @Lanmao_Tg_Cursor_Bot 你死了多久了||observe",
+      "2026-08-04 18:20:41|telegram_group|8774096826|[群聊·@hull1889]: @Lanmao_Tg_Cursor_Bot 这么说你死了一天了，赶紧同步一下ide。||observe"
     ]
   },
-  "last_hot_lines": 0,
-  "last_archived_lines": 1
+  "last_hot_lines": 28,
+  "last_archived_lines": 8
 }
