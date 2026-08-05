@@ -18,7 +18,7 @@
 
 | 代号 | 任务 | 来源 | 状态 | 备注 |
 |------|------|------|------|------|
-| YC-PV-001 | 运营系统·页面访问 | 主人 08-04 PRD 对齐 + 开干 | 进行中 | **只加工** `dws_app_page_visit_d`（`dev-20260804-002`）；jump session/代码已删；Stage1-6、test 有数；**未发版** |
+| YC-PV-001 | 运营系统·页面访问 | 主人 08-04 PRD + 文档对齐 | 进行中 | 表 `dws_app_page_visit_d_d`（`dev-20260804-002`）；对齐 [metric_page_visit_analysis](http://54.255.236.159:8012/library/metric_page_visit_analysis)；test `dt=2026-08-04` 约 1.96 万行；**未发版** |
 
 ## 非又初（知会，勿冒领）
 

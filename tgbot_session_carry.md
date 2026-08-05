@@ -7,15 +7,11 @@
 
 - 截至 2026-08-05 初：上述两目录本地仍为 **未跟踪**（`git status` 可见 `??`），入库前勿当已交付
 - [LESSON: dev-session-stage|主人说「stage1-6 干完先不发」时：可标 stage done + test 跑通，但 **禁止** 擅自 commit/push/海豚 publish/request-publish]
-- 「运营系统·页面访问」**只加工指标表** `dev-20260804-002`（`dws_app_page_visit_d`）；`dev-20260804-003` / jump 代码 **已删除**
-- **visit 表**：页面日指标（PV/UV/进入/跳转次数/跳出率/停留/加载），账号维 + 设备维；表内仍有 `jump_cnt`（刷新不算）
-- 代码目录：`ops_system/04.dws/dws_app_page_visit_d/`
-- 口径已定：**进入** = 会话首页且来路非空；**刷新不算跳转**；空 uid/device 丢弃；按天聚合
-- 2026-08-04 当晚进度：指标表 Stage **1–6 已标 done**；test 上 DDL+ETL 已跑通（`dt=2026-08-03`）；bounce 异常已修
-- 主人指令：**stage1-6 干完、先不发**——海豚 publish / request-publish / prod 均暂缓
-- 待办链：**git commit/push** → test 验数/挂海豚 task → 主人说可发时再 request-publish
-- 指标文档：http://54.255.236.159:8012/library/metric_page_visit_analysis
-- 上游探数背景：知秋曾查 `dwd` 层 `app_page_view` 的 `page_load_time` 字段分布（8/3 单日），与 visit 表「加载」指标相关
+- 「运营系统·页面访问」表 `dws.dws_app_page_visit_d_d`（`dev-20260804-002`）；口径权威 http://54.255.236.159:8012/library/metric_page_visit_analysis
+- 只账号；进入=来路空/`unknown`；只落分子分母；uid_cnt=BITMAP；跳转边表已删
+- 代码目录：`ops_system/04.dws/dws_app_page_visit_d_d/`
+- test `dt=2026-08-04` 已重跑（约 1.96 万行）；主人令先不发
+- 待办：主人说可发再 commit/publish/request-publish
 - 官方包来源：`/api/v1/extension/download/latest`；安装前必须做 **SHA256 校验**，与线上一致再装
 - [LESSON: dc-platform|extension|security|官方 vsix 安装前必须 SHA256 校验通过，禁止跳过校验直接装]
 - dc-platform 扩展双机升级：old-mac / new-mac **无 SSH 互通**，每台须在本机执行安装，不能远程代装
