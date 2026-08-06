@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 08 2026 agent_session_rotate compl | `~/.dc-platform/memory/lessons/2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例-并区分-发起窗口-与-表实际最早可落.md` | 2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例 |
+| ## 07 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区间-耗时秒数-pi-等核对细节.md` | 2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区 |
+| ## 07 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-07-写日报前必须先-prod-test-平台逐项核查再落稿-状态与补数范围禁止凭印象或局部样本.md` | 2026-08-07-写日报前必须先-prod-test-平台逐项核查再落稿-状 |
+| force mac old tg 不反 不反复污染对外稿 | `sessions/tg-rotate-2026-08-07-0604.md` | 更正日报后可在 old-mac 上 force 重推 TG 私聊；核查过程与修正 |
+| 与用 事件 于已 件统 任务 优先 | `sessions/tg-rotate-2026-08-07-0604.md` | 【明日动作】须对齐当前任务盘，而非随手写跟进项：大漏斗事件统计表 + 指标文档、 |
+| de dev pending rp session 「审 | `sessions/tg-rotate-2026-08-07-0604.md` | 平台/session 状态须真查再写：页面访问 RP 在野花侧 **pendin |
+| 01 01～08 05 07 36 「0 | `sessions/tg-rotate-2026-08-07-0604.md` | 补数窗口说「五月至今」时，若表/上游七月才有分区，内部心知实际落库范围，但**对 |
+| 31 is_valid ≠「 「口 「口径补丁 「首 | `sessions/tg-rotate-2026-08-07-0604.md` | 「口径补丁/补刷」≠「首次生产发布」：停留时长 7/31 已上线，当日仅是 `i |
+| 21 30 prepare_daily_report_sync.sh tg 主人 | `sessions/tg-rotate-2026-08-07-0604.md` | 21:30 定时任务漏推日报时，主人提醒后须先跑双机同步（`prepare_da |
+| daily lesson pi# report 「五 」） | `sessions/tg-rotate-2026-08-07-0604.md` | [LESSON: daily-report/日报正文只用业务说法（如「五月至今补 |
+| daily datacheck lesson prod report test | `sessions/tg-rotate-2026-08-07-0604.md` | [LESSON: daily-report,datacheck/写日报前必须先  |
+| 上传 上传云端须 不动 主人 云端 人定 | `sessions/tg-rotate-2026-08-07-0604.md` | 日报被主人定稿后，上传云端须**原封不动**用给定正文，禁止改写后再传。 |
+| 40～70 etl_time pi# 业务 主管 俗业 | `sessions/tg-rotate-2026-08-07-0604.md` | 日报读者是部门/主管：用通俗业务话（约 40～70 字/条），**禁止**分区号 |
+| 36 72 etl_time pi 与海豚 全部 | `sessions/tg-rotate-2026-08-07-0604.md` | 报补数范围/耗时时须查**全部分区** `etl_time` 与海豚 PI，禁止 |
+| prod test 与流 先写 先核查 再落稿 | `sessions/tg-rotate-2026-08-07-0604.md` | 写日报铁序：**先核查 prod/test/平台与流水，再落稿**；禁止凭印象或 |
 | ## 06 08 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-06-bus-转发须自检正文完整-截断导致对方看不到问题时立即补发全量说明再结案.md` | 2026-08-06-bus-转发须自检正文完整-截断导致对方看不到问题时立即补 |
 | ## #263 06 08 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-06-问指标是否被改时先查平台-metric-文档并对本地-diff-同时读齐私聊上文-禁止跨轮次漏读.md` | 2026-08-06-问指标是否被改时先查平台-metric-文档并对本地-di |
 | ## 06 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-06-狂人未更新工作簿时-自开任务写-workbook_supplemental-json-合并逻辑按.md` | 2026-08-06-狂人未更新工作簿时-自开任务写-workbook_supp |
@@ -30,18 +45,3 @@
 | device uid 不算 且来 丢弃 会话 | `sessions/tg-rotate-2026-08-05-0915.md` | 口径已定：**进入** = 会话首页且来路非空；**刷新不算跳转**；空 uid |
 | 04.dws dws_app_page_jump_d dws_app_page_ | `sessions/tg-rotate-2026-08-05-0915.md` | 代码目录：`ops_system/04.dws/dws_app_page_vis |
 | fr jump m→ om o） ro | `sessions/tg-rotate-2026-08-05-0915.md` | **jump 表**：页面跳转分布（from→to），供来源/去向饼图 |
-| pv uv visit 一套 停留 加载） | `sessions/tg-rotate-2026-08-05-0915.md` | **visit 表**：页面日指标（PV/UV/进入/跳转/跳出率/停留/加载） |
-| 002 003 20260 20260804 dev dws_app_page_ | `sessions/tg-rotate-2026-08-05-0915.md` | 「运营系统·页面访问」PRD 落地拆成 **两个 dev session**，不 |
-| ag commit dev don done e1 | `sessions/tg-rotate-2026-08-05-0915.md` | [LESSON: dev-session-stage/主人说「stage1-6  |
-| 05 08 2026 git status 上述 | `sessions/tg-rotate-2026-08-05-0915.md` | 截至 2026-08-05 初：上述两目录本地仍为 **未跟踪**（`git s |
-| ## 04 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-04-extension-security-官方-vsix-安装前必须-sha256-校验通过-禁止跳.md` | 2026-08-04-extension-security-官方-vsix-安装 |
-| ## 04 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-04-extension-dual-mac-双机无-ssh-时扩展升级须各机本地跑-sync-memo.md` | 2026-08-04-extension-dual-mac-双机无-ssh-时扩 |
-| @youchu_ai_bot @初儿 @又初 tg 「我 不回 | `sessions/tg-rotate-2026-08-04-1714.md` | TG 群旁听：仅显式 @又初/@初儿/@youchu_ai_bot 等时才回复； |
-| 0.0.123 dc platform platform.dc 一台 一台装完后 | `sessions/tg-rotate-2026-08-04-1714.md` | 一台装完后应核对版本号（如 `dc-platform.dc-platform-0 |
-| 0.0.122 0.0.123 中保留 关文 开相 放开 | `sessions/tg-rotate-2026-08-04-1714.md` | 0.0.122 的补数放开相关文案在 0.0.123 中保留 |
-| 0.0.123 sessio session —— ——申请发布可指定审核人 — | `sessions/tg-rotate-2026-08-04-1714.md` | 0.0.123 主要变更：恢复**发布审核流**——申请发布可指定审核人、撤回申 |
-| cursor developer reload window 会生 功能 | `sessions/tg-rotate-2026-08-04-1714.md` | 装完须在 Cursor 执行 **`Developer: Reload Wind |
-| dc extension git install lat latest.sh | `sessions/tg-rotate-2026-08-04-1714.md` | 安装脚本已沉淀在 memory git：`memory/scripts/inst |
-| .dc bash dc extension git.sh install | `sessions/tg-rotate-2026-08-04-1714.md` | 标准双机流程：先 `bash ~/.dc-platform/scripts/sy |
-| dc mac new old platform ssh | `sessions/tg-rotate-2026-08-04-1714.md` | dc-platform 扩展双机升级：old-mac / new-mac **无 |
-| dc extension lesson platform security sh | `sessions/tg-rotate-2026-08-04-1714.md` | [LESSON: dc-platform/extension/security/ |

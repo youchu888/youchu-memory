@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-07 | [报补数窗口与耗时时查全部分区 etl_time 与海豚实例，并区分「发起窗口」与](./2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例-并区分-发起窗口-与-表实际最早可落.md) | complement,datacheck,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-07 | [日报正文只用业务说法（如「五月至今补刷」），禁止写入内部分区区间、耗时秒数、PI](./2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区间-耗时秒数-pi-等核对细节.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-07 | [写日报前必须先 prod/test/平台逐项核查再落稿，状态与补数范围禁止凭印象](./2026-08-07-写日报前必须先-prod-test-平台逐项核查再落稿-状态与补数范围禁止凭印象或局部样本.md) | daily-report,datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-06 | [bus 转发须自检正文完整；截断导致对方看不到问题时立即补发全量说明再结案](./2026-08-06-bus-转发须自检正文完整-截断导致对方看不到问题时立即补发全量说明再结案.md) | agent-bus,messaging,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-06 | [问指标是否被改时先查平台 metric 文档并对本地 diff，同时读齐私聊上文](./2026-08-06-问指标是否被改时先查平台-metric-文档并对本地-diff-同时读齐私聊上文-禁止跨轮次漏读.md) | context-continuity,platform-docs,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-06 | [狂人未更新工作簿时，自开任务写 workbook_supplemental.js](./2026-08-06-狂人未更新工作簿时-自开任务写-workbook_supplemental-json-合并逻辑按.md) | workbook,task-tracking,session-rotate | 会话轮换前自动蒸馏 |

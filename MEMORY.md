@@ -5,6 +5,9 @@
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
 - [提交说明用第一人称直述](lessons/2026-07-31-first-person-commit-voice.md) — 直述做了什么/为什么；禁「我/主人/旁白体」；规则见 `.cursor/rules/first-person-commit-voice.mdc`
+- [报补数窗口与耗时时查全部分区 etl_time 与海豚实例，并区分「发起](lessons/2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例-并区分-发起窗口-与-表实际最早可落.md) — 会话轮换蒸馏
+- [日报正文只用业务说法（如「五月至今补刷」），禁止写入内部分区区间、耗时秒](lessons/2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区间-耗时秒数-pi-等核对细节.md) — 会话轮换蒸馏
+- [写日报前必须先 prod/test/平台逐项核查再落稿，状态与补数范围禁](lessons/2026-08-07-写日报前必须先-prod-test-平台逐项核查再落稿-状态与补数范围禁止凭印象或局部样本.md) — 会话轮换蒸馏
 - [bus 转发须自检正文完整；截断导致对方看不到问题时立即补发全量说明再结](lessons/2026-08-06-bus-转发须自检正文完整-截断导致对方看不到问题时立即补发全量说明再结案.md) — 会话轮换蒸馏
 - [问指标是否被改时先查平台 metric 文档并对本地 diff，同时读齐](lessons/2026-08-06-问指标是否被改时先查平台-metric-文档并对本地-diff-同时读齐私聊上文-禁止跨轮次漏读.md) — 会话轮换蒸馏
 - [狂人未更新工作簿时，自开任务写 workbook_supplementa](lessons/2026-08-06-狂人未更新工作簿时-自开任务写-workbook_supplemental-json-合并逻辑按.md) — 会话轮换蒸馏
