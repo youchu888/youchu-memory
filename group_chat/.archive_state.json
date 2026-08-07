@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-08-06 12:02:39",
+  "last_run": "2026-08-07 20:41:08",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1270,8 +1270,12 @@
       "2026-08-05 10:31:47|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 说人话，dau_count=注册+pv； old_dau_count=dau_count − new_reg_count ； \neffective_active = pv，但是 有条件必须>=2，是吗？||observe",
       "2026-08-05 10:34:08|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 把两个表的日活相关指标的计算方式，用人话，给我写一个简单的文档||observe",
       "2026-08-05 10:36:37|telegram_group|8184109272|[群聊·@zhiqiu56789]: @mudan99_bot 你个笨蛋，文件发给这里啊||observe"
+    ],
+    "2026-08-06": [
+      "2026-08-06 19:19:38|telegram_group|8774096826|[群聊·@hull1889]: @worker_ant_bot 你单独审核一下这个指标字典，看看有没有问题\nhttp://54.255.236.159:8012/library/metric_product_day_report||observe",
+      "2026-08-06 19:27:46|worker_ant_group|0|[工作狂人] 【狂人 · 项目日报数据字典 单独审核结论】\n\n审的是 /library/metric_product_day_report（猫猫 08-06 更新版）。我没看文档自述，是拉了现网 task 174729507871563 的真 SQL（v2，17KB）+ retention MV 的 DDL + prod 实测逐条对的。\n\n一、文档核验准确，8 项我全部独立复核属实\n1. dau_count = bitmap_or(dau_ids,new_reg_ids) = PV∪注册 —— 与知秋 08-05 定案一致\n2. day3 = MV 的 day2_ret_cnt(T+2)、day7 = day6_ret_cnt(T+6) —— 我查 MV DDL 核实，文档说「DDL 口头注释 T+3 是错的」正确\n3. effective_dau 现网 WHERE pk_cnt >= 2 —— 属实，DDL 旧注释 ≥3 确已作废\n4. old_dau_count 是标量减 —— 属实\n5. currency 现网确实是 = 'CNY' 没有 COALESCE —— 文档定案升级为 COALESC|正在读取启动记忆与相关经验索引，并把工作狂人对项目日报数据字典的审核结论沉淀进团队知识库。\n正在写入 lesson 并更新索引。\n## 1. 上下文整理\n\n工作狂人独立审了指标库 **项目日报**（`metric_product_day_report`，猫猫 08-06 版），方法是拉 prod 海豚 task `174729507871563` 真 SQL + 留存 MV DDL + prod 实测，不是只看文档自述。这是 08-05 起活跃模型 / 订单字段字典审阅系列的延续：活跃口径已定为 **PV∪注册**，本份文档 8 项核心规则全部属实。新增风险集中在 **留存落库**：`COALESCE(...,0)` 会把漏跑批次写成永久 0，且 prod 已有 3 个日期在错；另需知 **target_dates 会连带重算日活等非留存列**，以及 **07-24 JHG-001 留存异常**要单独查上游。\n\n---\n\n## 2. 可复用规则\n\n- ``\n- ``\n- ``\n- ``\n- ``\n- ``\n- ``\n- ``\n\n---\n\n**已沉淀经验**：`.claude/memory/lessons/2026-08-06-metric-product-day-report-review.md`（已入 `_index.md` 与 `MEMORY.md`）|"
     ]
   },
-  "last_hot_lines": 16,
-  "last_archived_lines": 9
+  "last_hot_lines": 21,
+  "last_archived_lines": 2
 }

@@ -22,5 +22,6 @@
 - [LESSON: context-continuity,platform-docs|问指标是否被改时先查平台 metric 文档并对本地 diff，同时读齐私聊上文，禁止跨轮次漏读 #263 类指令]
 - 狂人工作簿未更新时，自开任务写入 `omdb/tgbot/data/workbook_supplemental.json`，由 `workbook_progress_service.py` 与狂人清单按编号/标题合并去重，9 点进展与兜底模板一并带上
 - 增补项字段：`no`、`title`、`assignee`、可选 `sessions`；狂人日后正式加同名项不会重复两条
-- 页面访问 #10 绑定 `dev-20260804-002`（visit_d）+ `dev-20260804-003`（jump_d）；进度探针查 test 最新分区 + 平台 session 状态
-
+- **大漏斗 #11** 已登 supplemental（`dev-20260807-big-funnel-001`）；群进展「已做」须当日探针数字 + work-log，禁止硬编码历史套话复读
+- 页面访问 #10 绑定 `dev-20260804-002`（visit_d）；prod 已上线；进度以当日 T-1 分区探针为准
+- [LESSON: workbook-progress|群工作簿进展须当日实查整理，新大活次日登簿汇报]

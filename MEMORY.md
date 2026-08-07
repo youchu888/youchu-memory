@@ -2,6 +2,7 @@
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
 > 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
+- [群工作簿进展须当日实查，新大活次日登簿](lessons/2026-08-07-群工作簿进展须当日实查-新大活次日登簿.md) — 禁止复读硬编码；大漏斗 supplemental#11；探针+work-log
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
 - [提交说明用第一人称直述](lessons/2026-07-31-first-person-commit-voice.md) — 直述做了什么/为什么；禁「我/主人/旁白体」；规则见 `.cursor/rules/first-person-commit-voice.mdc`
