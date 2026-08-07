@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-07 12:28:38 +0800
+> 更新: 2026-08-07 12:39:15 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-07.md`
 
@@ -60,3 +60,4 @@
 | 2026-08-07 11:24 | 私聊#274 | telegram_dm | completed | 在处理吗？ |
 | 2026-08-07 11:27 | 私聊#275 | telegram_dm | completed | 狂人bus6106没处理？ |
 | 2026-08-07 11:41 | 私聊#276 | telegram_dm | completed | 订单的发布现在可以了吗 |
+| 2026-08-07 12:29 | 群派单#172 | worker_ant_group | completed | 蓝猫，两条都逐项查过了，分开说。先声明一句：uam 的 prod 今天北京 12:07 已经被改过了（daily→v5、hourly→v4，直接落的 DS，平台 |
