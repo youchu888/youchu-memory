@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-07-指定审核人发产须同时满足-publish_request_status-pending-与-pu.md` | 2026-08-07-指定审核人发产须同时满足-publish_request_ |
+| ## 07 08 2026 60 ack | `~/.dc-platform/memory/lessons/2026-08-07-并行处理私聊-工作簿时仍须-60-秒内-agent-bus-ack-核查完再-reply-禁止漏.md` | 2026-08-07-并行处理私聊-工作簿时仍须-60-秒内-agent-bus |
+| ## 07 08 2026 agent_session_rotate check | `~/.dc-platform/memory/lessons/2026-08-07-群工作簿进度发群前必须-prod-实查分区-验数-禁止只看-test-或-dev-session.md` | 2026-08-07-群工作簿进度发群前必须-prod-实查分区-验数-禁止只看 |
+| prepare_daily_report_sync.sh 上传 不写 云端 产跟 | `sessions/tg-rotate-2026-08-07-2244.md` | 日报：先跑 `prepare_daily_report_sync.sh` 双机同 |
+| 001 20260728 dev false i_can_publish_pro | `sessions/tg-rotate-2026-08-07-2244.md` | 订单发产（`dev-20260728-ura-001`）：test 就绪 ≠ 可 |
+| #6 06 10 60 61 ack | `sessions/tg-rotate-2026-08-07-2244.md` | agent-bus 与私聊并行：处理 A 时不能漏 B；**60 秒内 ACK* |
+| prod pv test uv 不能 不能逐行对 | `sessions/tg-rotate-2026-08-07-2244.md` | prod/test 对账：test 为稀疏采样，**不能逐行对 prod**；回 |
+| #1 002 05 0） 10 20260 | `sessions/tg-rotate-2026-08-07-2244.md` | 页面访问（#10）：prod `dws_app_page_visit_d_d`  |
+| #9 06 08 31 9） dws_session_duration_user | `sessions/tg-rotate-2026-08-07-2244.md` | 停留时长（#9）：prod `dws_session_duration_user |
+| dev log pending pending） prod rp | `sessions/tg-rotate-2026-08-07-2244.md` | 群工作簿进度以 **prod 实查** 为准：prod 有近期分区即标「已完成」 |
+| 60 ack agent bus lesson reply | `sessions/tg-rotate-2026-08-07-2244.md` | [LESSON: agent-bus,ack/并行处理私聊/工作簿时仍须 60  |
+| check dev lesson pending prod progress | `sessions/tg-rotate-2026-08-07-2244.md` | [LESSON: workbook-progress,prod-check/群工 |
+| none pass status test 「申 不以 | `sessions/tg-rotate-2026-08-07-2244.md` | 发产卡在 `status=none`：让申请人（蓝猫）重提「申请发布」；审核人发 |
+| prod session 不能凭 主人 主人已多次强调 人已 | `sessions/tg-rotate-2026-08-07-2244.md` | 每日群进度须 **发群前 prod 验数门禁**；主人已多次强调，不能凭 ses |
+| bash omdb pending prod restart.sh ses | `sessions/tg-rotate-2026-08-07-2244.md` | `workbook_progress_service.py` 旧逻辑三坑：只查  |
 | ## 07 08 2026 agent_session_rotate compl | `~/.dc-platform/memory/lessons/2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例-并区分-发起窗口-与-表实际最早可落.md` | 2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例 |
 | ## 07 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区间-耗时秒数-pi-等核对细节.md` | 2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区 |
 | ## 07 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-07-写日报前必须先-prod-test-平台逐项核查再落稿-状态与补数范围禁止凭印象或局部样本.md` | 2026-08-07-写日报前必须先-prod-test-平台逐项核查再落稿-状 |
@@ -30,18 +45,3 @@
 | etl spec 一按 不再 不再等知秋改口径 主人 | `sessions/tg-rotate-2026-08-06-0617.md` | **8/4 主人拍板即终稿**，不再等知秋改口径；平台文档、spec、ETL 统 |
 | commit publish publish） request stage1–6 | `sessions/tg-rotate-2026-08-06-0617.md` | 页面访问在主人说可发前卡点：**stage1–6 不发**（不 commit、不 |
 | #10 002 003 20260804 dev session | `sessions/tg-rotate-2026-08-06-0617.md` | 页面访问 #10 绑定 `dev-20260804-002`（visit_d）+ |
-| assignee no sessions title 不会 两条 | `sessions/tg-rotate-2026-08-06-0617.md` | 增补项字段：`no`、`title`、`assignee`、可选 `sessio |
-| data omdb tgbot workbook_progress_servic | `sessions/tg-rotate-2026-08-06-0617.md` | 狂人工作簿未更新时，自开任务写入 `omdb/tgbot/data/workbo |
-| #263 context continuity diff docs lesson | `sessions/tg-rotate-2026-08-06-0617.md` | [LESSON: context-continuity,platform-doc |
-| agent bus 「没 」时 人须 到问 | `sessions/tg-rotate-2026-08-06-0617.md` | agent-bus 发狂人须防**正文截断**；对方回「没看到问题」时补发完整说 |
-| #2 #263「指标已上平台」）必须接上 26 3「 63 bus | `sessions/tg-rotate-2026-08-06-0617.md` | 问「平台指标有没有改」须**先查平台文档**（如 `metric_page_vi |
-| ## 05 08 2026 ag agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-05-主人说-stage1-6-干完先不发-时-可标-stage-done-test-跑通-但-禁止-.md` | 2026-08-05-主人说-stage1-6-干完先不发-时-可标-stage |
-| ## 05 08 2026 agent_session_rotate calib | `~/.dc-platform/memory/lessons/2026-08-05-进入-会话首页且来路非空-刷新不算跳转-空-uid-device-丢弃-改-etl-前先核对这三.md` | 2026-08-05-进入-会话首页且来路非空-刷新不算跳转-空-uid-dev |
-| ## 05 08 2026 _d agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-05-一个-prd-页面访问-按指标类型拆成-visit_d-日指标-与-jump_d-跳转分布-两个.md` | 2026-08-05-一个-prd-页面访问-按指标类型拆成-visit_d-日 |
-| app_page_view dwd page_load_time visit 「 | `sessions/tg-rotate-2026-08-05-0915.md` | 上游探数背景：知秋曾查 `dwd` 层 `app_page_view` 的 `p |
-| commit git publish push request task | `sessions/tg-rotate-2026-08-05-0915.md` | 待办链：**git commit/push** → test 验数/挂海豚 ta |
-| pro prod publish request stage1 —— | `sessions/tg-rotate-2026-08-05-0915.md` | 主人指令：**stage1-6 干完、先不发**——海豚 publish / r |
-| 03 04 08 1–6 2026 bounce | `sessions/tg-rotate-2026-08-05-0915.md` | 2026-08-04 当晚进度：平台 Stage **1–6 已标 done** |
-| device uid 不算 且来 丢弃 会话 | `sessions/tg-rotate-2026-08-05-0915.md` | 口径已定：**进入** = 会话首页且来路非空；**刷新不算跳转**；空 uid |
-| 04.dws dws_app_page_jump_d dws_app_page_ | `sessions/tg-rotate-2026-08-05-0915.md` | 代码目录：`ops_system/04.dws/dws_app_page_vis |
-| fr jump m→ om o） ro | `sessions/tg-rotate-2026-08-05-0915.md` | **jump 表**：页面跳转分布（from→to），供来源/去向饼图 |

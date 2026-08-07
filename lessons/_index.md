@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-07 | [指定审核人发产须同时满足 publish_request_status=pend](./2026-08-07-指定审核人发产须同时满足-publish_request_status-pending-与-pu.md) | publish-prod,publish_request_status,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-07 | [并行处理私聊/工作簿时仍须 60 秒内 agent-bus ACK，核查完再 r](./2026-08-07-并行处理私聊-工作簿时仍须-60-秒内-agent-bus-ack-核查完再-reply-禁止漏.md) | agent-bus,ack,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-07 | [群工作簿进度发群前必须 prod 实查分区/验数，禁止只看 test 或 dev](./2026-08-07-群工作簿进度发群前必须-prod-实查分区-验数-禁止只看-test-或-dev-session.md) | workbook-progress,prod-check,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-07 | [群工作簿进展须当日实查整理，新大活次日登簿汇报](./2026-08-07-群工作簿进展须当日实查-新大活次日登簿.md) | workbook-progress, tgbot, supplemental, criticism | 禁止复读硬编码；大漏斗登 supplemental#11 |
 | 2026-08-07 | [报补数窗口与耗时时查全部分区 etl_time 与海豚实例，并区分「发起窗口」与](./2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例-并区分-发起窗口-与-表实际最早可落.md) | complement,datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-07 | [日报正文只用业务说法（如「五月至今补刷」），禁止写入内部分区区间、耗时秒数、PI](./2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区间-耗时秒数-pi-等核对细节.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |

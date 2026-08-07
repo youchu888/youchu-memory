@@ -1,27 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-07 · 最新归档：`sessions/tg-rotate-2026-08-07-0604.md`
+> 更新：2026-08-07 · 最新归档：`sessions/tg-rotate-2026-08-07-2244.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- `workbook_progress_service.py` 旧逻辑三坑：只查 test、硬编码「先不发」、用旧 session pending 判待审；改后 prod 探针优先，改完需 `bash omdb/tgbot/restart.sh` 才生效
+- 每日群进度须 **发群前 prod 验数门禁**；主人已多次强调，不能凭 session/测试库状态直接同步
+- 发产卡在 `status=none`：让申请人（蓝猫）重提「申请发布」；审核人发产前仍须自跑 test T-1 对账，不以申请 PASS 代替实查
+- [LESSON: workbook-progress,prod-check|群工作簿进度发群前必须 prod 实查分区/验数，禁止只看 test 或 dev session pending 状态]
+- [LESSON: agent-bus,ack|并行处理私聊/工作簿时仍须 60 秒内 agent-bus ACK，核查完再 reply，禁止漏单]
+- 群工作簿进度以 **prod 实查** 为准：prod 有近期分区即标「已完成」；不能只看 test、过期 dev session pending、或 work-log 流水（如 RP pending）
+- 停留时长（#9）：prod `dws_session_duration_user_d` 7/31 首上，08-06 为 `is_valid=1` 补丁 + 补刷
+- 页面访问（#10）：prod `dws_app_page_visit_d_d` 日批约 71 万行；`dev-20260804-002` 已 approved；`wf_dws_汇总_日` 05:25 跑，T-1 `etl_time` 可对齐
+- prod/test 对账：test 为稀疏采样，**不能逐行对 prod**；回执写 prod 分区行数/PV/UV + 调度时间即可
+- agent-bus 与私聊并行：处理 A 时不能漏 B；**60 秒内 ACK**，再逐项核查 reply 结案（bus#6106 先例）
+- 订单发产（`dev-20260728-ura-001`）：test 就绪 ≠ 可发产；须 `publish_request_status=pending` 且 `publish_reviewer_id=指定审核人`，否则 `i_can_publish_prod=false`、按钮不亮
+- 日报：先跑 `prepare_daily_report_sync.sh` 双机同步；定稿原样上传云端；工作簿进度修复、订单发产跟进等运维项**默认不写**今日结果/明日动作
+- 知秋派单回执要点：页面访问 prod 验数、session 分工、channel_summary 双扫仅跨日界（3h 迟到补偿待拍板）、设备标签重复 session 建议留 002 关 001
 - 写日报铁序：**先核查 prod/test/平台与流水，再落稿**；禁止凭印象或局部样本先写后改。
 - 报补数范围/耗时时须查**全部分区** `etl_time` 与海豚 PI，禁止只看最近几天（曾把 36 天/72 秒误写成 5 天/7 秒）。
 - 日报读者是部门/主管：用通俗业务话（约 40～70 字/条），**禁止**分区号、PI#、`etl_time`、裸表名等内部核对细节进正文。
 - 日报被主人定稿后，上传云端须**原封不动**用给定正文，禁止改写后再传。
 - [LESSON: daily-report,datacheck|写日报前必须先 prod/test/平台逐项核查再落稿，状态与补数范围禁止凭印象或局部样本]
-- [LESSON: daily-report|日报正文只用业务说法（如「五月至今补刷」），禁止写入内部分区区间、耗时秒数、PI# 等核对细节]
-- 21:30 定时任务漏推日报时，主人提醒后须先跑双机同步（`prepare_daily_report_sync.sh`），再汇总、推 TG 私聊；同步结果要标注哪台缺当日流水。
-- 「口径补丁/补刷」≠「首次生产发布」：停留时长 7/31 已上线，当日仅是 `is_valid=1` 零秒过滤补丁 + 历史补刷，表述须区分。
-- 补数窗口说「五月至今」时，若表/上游七月才有分区，内部心知实际落库范围，但**对外仍用业务窗口表述**，不把「07-01～08-05 共 36 天」塞进日报正文。
-- 平台/session 状态须真查再写：页面访问 RP 在野花侧 **pending** 时不能写「审核已通过」；以 dev session + 本机流水为准。
-- 【明日动作】须对齐当前任务盘，而非随手写跟进项：大漏斗事件统计表 + 指标文档、蓝猫侧项目日报留存修复与用户活跃模型口径切换发布，优先级高于已在审的页面访问。
-- 更正日报后可在 old-mac 上 force 重推 TG 私聊；核查过程与修正摘要留在对话/本地文件，不反复污染对外稿。
-- 问「平台指标有没有改」须**先查平台文档**（如 `metric_page_visit_analysis`），再对本地 spec；私聊上文（如 #263「指标已上平台」）必须接上，勿只翻 bus/本地
-- agent-bus 发狂人须防**正文截断**；对方回「没看到问题」时补发完整说明，勿只留尾巴
-- [LESSON: context-continuity,platform-docs|问指标是否被改时先查平台 metric 文档并对本地 diff，同时读齐私聊上文，禁止跨轮次漏读 #263 类指令]
-- 狂人工作簿未更新时，自开任务写入 `omdb/tgbot/data/workbook_supplemental.json`，由 `workbook_progress_service.py` 与狂人清单按编号/标题合并去重，9 点进展与兜底模板一并带上
-- 增补项字段：`no`、`title`、`assignee`、可选 `sessions`；狂人日后正式加同名项不会重复两条
-- **大漏斗 #11** 已登 supplemental（`dev-20260807-big-funnel-001`）；群进展「已做」须当日探针数字 + work-log，禁止硬编码历史套话复读
-- 页面访问 #10 绑定 `dev-20260804-002`（visit_d）；prod 已上线；进度以当日 T-1 分区探针为准
-- [LESSON: workbook-progress|群工作簿进展须当日实查整理，新大活次日登簿汇报]
+
