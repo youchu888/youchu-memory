@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-07 21:47:25 +0800
+> 更新: 2026-08-07 21:57:55 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-07.md`
 
@@ -67,3 +67,4 @@
 | 2026-08-07 17:16 | 私聊#277 | telegram_dm | completed | 再问狂人 催促一下昨天询问的大漏斗相关的内容 |
 | 2026-08-07 18:22 | 群派单#176 | worker_ant_group | completed | @hull1889 金币 daily 止血【还没发上 prod】，卡在别人占着 wf，不是我压着。刚查的实况： prod wf_dws_汇总_日 被野花的视频补 |
 | 2026-08-07 21:41 | 私聊#278 | telegram_dm | completed | 整理今天日报 |
+| 2026-08-07 21:51 | 私聊#279 | telegram_dm | completed | 今日结果去掉top2 明日计划去掉top2/3 这个可以不用写 |
