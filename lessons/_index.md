@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-08 | [口径|is_new](./2026-08-08-口径-is_new.md) | spec,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-08 | [funnel|oom|etl](./2026-08-08-funnel-oom-etl.md) | spark,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-07 | [指定审核人发产须同时满足 publish_request_status=pend](./2026-08-07-指定审核人发产须同时满足-publish_request_status-pending-与-pu.md) | publish-prod,publish_request_status,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-07 | [并行处理私聊/工作簿时仍须 60 秒内 agent-bus ACK，核查完再 r](./2026-08-07-并行处理私聊-工作簿时仍须-60-秒内-agent-bus-ack-核查完再-reply-禁止漏.md) | agent-bus,ack,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-07 | [群工作簿进度发群前必须 prod 实查分区/验数，禁止只看 test 或 dev](./2026-08-07-群工作簿进度发群前必须-prod-实查分区-验数-禁止只看-test-或-dev-session.md) | workbook-progress,prod-check,session-rotate | 会话轮换前自动蒸馏 |
