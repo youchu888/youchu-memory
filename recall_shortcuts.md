@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 09 2026 agent_session_rotate app | `~/.dc-platform/memory/lessons/2026-08-09-etl-跑通但-0-行时先核对-app_id-与源表行数-再决定是否换-app-补跑.md` | 2026-08-09-etl-跑通但-0-行时先核对-app_id-与源表行数- |
+| ## 08 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-09-宽漏斗禁单-sql-宽聚合-拆成-metrics-wide-两阶段-避免-driver-heap.md` | 2026-08-09-宽漏斗禁单-sql-宽聚合-拆成-metrics-wide |
+| ## 08 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-09-user_is_new-禁止-join-无分区-dim_user_all-改由当日-user_r.md` | 2026-08-09-user_is_new-禁止-join-无分区-dim_u |
+| @worker_ant_bot _p ads_product_day_stat_ | `sessions/tg-rotate-2026-08-09-0926.md` | 群聊里 `@worker_ant_bot` 派给猫猫的 `ads_product |
+| 03 08 17 1） 2026 7s | `sessions/tg-rotate-2026-08-09-0926.md` | **r5b（SF-81）两阶段 ETL**（metrics ~6.3h + wi |
+| driver heap oom sql treenode.generatetre | `sessions/tg-rotate-2026-08-09-0926.md` | 第 4 轮 driver heap OOM：单文件宽聚合导致计划树过大（`Tre |
+| .dc api hosts log memory platform | `sessions/tg-rotate-2026-08-09-0926.md` | 日报 API 中断时：本地草稿可能已在 `~/.dc-platform/memo |
+| 13 18 23 33 35 cursor | `sessions/tg-rotate-2026-08-09-0926.md` | 任务 18:13/18:33 入队、23:35 才跑并失败，说明中间是 **Cu |
+| ag agent」强制新开 bot en ge nt | `sessions/tg-rotate-2026-08-09-0926.md` | Bot 遇到失效 resume 会**按设计清掉旧会话**；用户可重发指令或发「 |
+| driver etl funnel heap lesson metrics | `sessions/tg-rotate-2026-08-09-0926.md` | [LESSON: funnel-etl/宽漏斗禁单 SQL 宽聚合，拆成 met |
+| dim_user_all etl executor funnel join le | `sessions/tg-rotate-2026-08-09-0926.md` | [LESSON: funnel-etl/user_is_new 禁止 JOIN  |
+| r5b） 「直 」时 做项 前状 只复 | `sessions/tg-rotate-2026-08-09-0926.md` | 用户说「直接检查错误原因」时：应出**根因表 + 当前状态 + 可补做项**（如 |
+| 60 6022 81 app_2556 app_id sf | `sessions/tg-rotate-2026-08-09-0926.md` | 第 5 轮「跑通但 0 行」：源表 **`app_2556` 本身 0 行**， |
+| dim_user_all executor join oom user_is_n | `sessions/tg-rotate-2026-08-09-0926.md` | 大漏斗第 3 轮 executor OOM：`user_is_new` **JO |
+| #283 #284 api cursor resume sql | `sessions/tg-rotate-2026-08-09-0926.md` | 私聊 #283/#284 失败根因在 **Cursor 侧**（`--resum |
 | ## 08 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-08-08-口径-is_new.md` | 2026-08-08-口径-is_new |
 | ## 08 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-08-08-funnel-oom-etl.md` | 2026-08-08-funnel-oom-etl |
 | etl oom paimon session 「能 「降 | `sessions/tg-rotate-2026-08-08-2153.md` | 大漏斗链路推进状态：平台 session 已建，Paimon 建表、日批 ETL |
@@ -30,18 +45,3 @@
 | dev log pending pending） prod rp | `sessions/tg-rotate-2026-08-07-2244.md` | 群工作簿进度以 **prod 实查** 为准：prod 有近期分区即标「已完成」 |
 | 60 ack agent bus lesson reply | `sessions/tg-rotate-2026-08-07-2244.md` | [LESSON: agent-bus,ack/并行处理私聊/工作簿时仍须 60  |
 | check dev lesson pending prod progress | `sessions/tg-rotate-2026-08-07-2244.md` | [LESSON: workbook-progress,prod-check/群工 |
-| none pass status test 「申 不以 | `sessions/tg-rotate-2026-08-07-2244.md` | 发产卡在 `status=none`：让申请人（蓝猫）重提「申请发布」；审核人发 |
-| prod session 不能凭 主人 主人已多次强调 人已 | `sessions/tg-rotate-2026-08-07-2244.md` | 每日群进度须 **发群前 prod 验数门禁**；主人已多次强调，不能凭 ses |
-| bash omdb pending prod restart.sh ses | `sessions/tg-rotate-2026-08-07-2244.md` | `workbook_progress_service.py` 旧逻辑三坑：只查  |
-| ## 07 08 2026 agent_session_rotate compl | `~/.dc-platform/memory/lessons/2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例-并区分-发起窗口-与-表实际最早可落.md` | 2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例 |
-| ## 07 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区间-耗时秒数-pi-等核对细节.md` | 2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区 |
-| ## 07 08 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-07-写日报前必须先-prod-test-平台逐项核查再落稿-状态与补数范围禁止凭印象或局部样本.md` | 2026-08-07-写日报前必须先-prod-test-平台逐项核查再落稿-状 |
-| force mac old tg 不反 不反复污染对外稿 | `sessions/tg-rotate-2026-08-07-0604.md` | 更正日报后可在 old-mac 上 force 重推 TG 私聊；核查过程与修正 |
-| 与用 事件 于已 件统 任务 优先 | `sessions/tg-rotate-2026-08-07-0604.md` | 【明日动作】须对齐当前任务盘，而非随手写跟进项：大漏斗事件统计表 + 指标文档、 |
-| de dev pending rp session 「审 | `sessions/tg-rotate-2026-08-07-0604.md` | 平台/session 状态须真查再写：页面访问 RP 在野花侧 **pendin |
-| 01 01～08 05 07 36 「0 | `sessions/tg-rotate-2026-08-07-0604.md` | 补数窗口说「五月至今」时，若表/上游七月才有分区，内部心知实际落库范围，但**对 |
-| 31 is_valid ≠「 「口 「口径补丁 「首 | `sessions/tg-rotate-2026-08-07-0604.md` | 「口径补丁/补刷」≠「首次生产发布」：停留时长 7/31 已上线，当日仅是 `i |
-| 21 30 prepare_daily_report_sync.sh tg 主人 | `sessions/tg-rotate-2026-08-07-0604.md` | 21:30 定时任务漏推日报时，主人提醒后须先跑双机同步（`prepare_da |
-| daily lesson pi# report 「五 」） | `sessions/tg-rotate-2026-08-07-0604.md` | [LESSON: daily-report/日报正文只用业务说法（如「五月至今补 |
-| daily datacheck lesson prod report test | `sessions/tg-rotate-2026-08-07-0604.md` | [LESSON: daily-report,datacheck/写日报前必须先  |
-| 上传 上传云端须 不动 主人 云端 人定 | `sessions/tg-rotate-2026-08-07-0604.md` | 日报被主人定稿后，上传云端须**原封不动**用给定正文，禁止改写后再传。 |

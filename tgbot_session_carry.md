@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-08 · 最新归档：`sessions/tg-rotate-2026-08-08-2153.md`
+> 更新：2026-08-09 · 最新归档：`sessions/tg-rotate-2026-08-09-0926.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 私聊 #283/#284 失败根因在 **Cursor 侧**（`--resume` 传输故障 / 云端 API 不可达），不是业务 SQL；排查时先区分基础设施 vs 任务逻辑。
+- 大漏斗第 3 轮 executor OOM：`user_is_new` **JOIN 无分区 `dim_user_all`（~1.5 亿行）** 是根因；应改由**当日 `user_register` 推导**。
+- 第 5 轮「跑通但 0 行」：源表 **`app_2556` 本身 0 行**，有效数据在 **`SF-81`（约 6022 万行）**；跑通 ≠ 成功，必须先核对 **app_id 与源表行数**。
+- 用户说「直接检查错误原因」时：应出**根因表 + 当前状态 + 可补做项**（如补推日报、补跑 r5b），而非只复述失败现象。
+- [LESSON: funnel-etl|user_is_new 禁止 JOIN 无分区 dim_user_all，改由当日 user_register 推导，避免 executor OOM]
+- [LESSON: funnel-etl|宽漏斗禁单 SQL 宽聚合，拆成 metrics + wide 两阶段，避免 driver heap OOM]
+- Bot 遇到失效 resume 会**按设计清掉旧会话**；用户可重发指令或发「重启 agent」强制新开。
+- 任务 18:13/18:33 入队、23:35 才跑并失败，说明中间是 **Cursor 卡住/排队**，不能据此判断又初未执行。
+- 日报 API 中断时：本地草稿可能已在 `~/.dc-platform/memory/work-log/hosts/*/reports/`，但 **TG 推送与云端上传会漏**；恢复后需补推、补传。
+- 第 4 轮 driver heap OOM：单文件宽聚合导致计划树过大（`TreeNode.generateTreeString`）；**弃用单 SQL 宽聚合**，改拆分链路。
+- **r5b（SF-81）两阶段 ETL**（metrics ~6.3h + wide ~17s）已验证无 OOM；宽表粒度 `(dt, app_id, is_new)`，dt=2026-08-03 产出 **3 行**符合预期。
+- 群聊里 `@worker_ant_bot` 派给猫猫的 `ads_product_day_stat_d` 改动（video_play 从 dwd 换 dwm）是**旁听背景**，与本会话大漏斗/日报排查无直接执行关系。
 - stage37 OOM 根因是单条超宽 `COUNT(DISTINCT CASE...)` 同时在单个 stage 维护过多 distinct 集合，内存峰值过高。
 - 重构 ETL 时必须同步三处文档：`spec.md`（口径）、`design.md`（数据流/实现）、`memory.md`（进展与待验项），避免代码与口径脱节。
 - [LESSON: spec|口径|is_new] 临时口径与目标口径并存时，必须在 spec 写明当前实现来源与未接入的上游（如 `dim_user_daily_snapshot`），避免验数按错标准。
 - 大漏斗任务工作目录固定为 `ops_system/04.dws/dws_app_event_funnel_d_d/`；续做前先读 `spec.md` / `design.md` / `memory.md` / `task` 定位卡点，再动 SQL。
 - 抗 OOM 改法：把「一条大聚合」拆成「按事件独立聚合 + 以 keys 外连接拼宽表」；先保口径不变，再验可跑性。
 - 当前 Spark 版 `is_new` 临时口径：以当日 `user_register` 事件推导，不用 `uid=-1`；目标来源是 `dim_user_daily_snapshot`，但现阶段不直连，需在 spec 里显式标注。
-- 改完 SQL 后先做本地 diff 自检，确认改动范围只在大漏斗目录、无旁路误改，再进入集群冒烟。
-- 下一轮验收建议跑第 4 轮 SF-81 冒烟（S 档），示例命令：`bash ops_system/04.dws/dws_app_event_funnel_d_d/spark/scripts/run_yarn_daily_sql.sh 2026-08-03 S app_2556`。
-- 冒烟验收应覆盖：耗时、输出行数、关键指标抽样；可沉淀到 `playbook.md` 便于与知秋对齐复验。
-- 日报格式偏好：主人要求「今日结果」不写第二条、「明日动作」只保留 TOP1；改定稿后需重新推 TG 私聊。
-- 大漏斗链路推进状态：平台 session 已建，Paimon 建表、日批 ETL、设计说明与核查剧本已落库；当前重点从「能跑通」转向「降 OOM 风险后复验」。
-- `workbook_progress_service.py` 旧逻辑三坑：只查 test、硬编码「先不发」、用旧 session pending 判待审；改后 prod 探针优先，改完需 `bash omdb/tgbot/restart.sh` 才生效
-- 每日群进度须 **发群前 prod 验数门禁**；主人已多次强调，不能凭 session/测试库状态直接同步
-- 发产卡在 `status=none`：让申请人（蓝猫）重提「申请发布」；审核人发产前仍须自跑 test T-1 对账，不以申请 PASS 代替实查
-- [LESSON: workbook-progress,prod-check|群工作簿进度发群前必须 prod 实查分区/验数，禁止只看 test 或 dev session pending 状态]
-- [LESSON: agent-bus,ack|并行处理私聊/工作簿时仍须 60 秒内 agent-bus ACK，核查完再 reply，禁止漏单]
-- 群工作簿进度以 **prod 实查** 为准：prod 有近期分区即标「已完成」；不能只看 test、过期 dev session pending、或 work-log 流水（如 RP pending）
-- 停留时长（#9）：prod `dws_session_duration_user_d` 7/31 首上，08-06 为 `is_valid=1` 补丁 + 补刷
 

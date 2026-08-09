@@ -5,6 +5,9 @@
 - [群工作簿进展须当日实查，新大活次日登簿](lessons/2026-08-07-群工作簿进展须当日实查-新大活次日登簿.md) — 禁止复读硬编码；大漏斗 supplemental#11；探针+work-log
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
+- [ETL 跑通但 0 行时先核对 app_id 与源表行数，再决定是否换 ](lessons/2026-08-09-etl-跑通但-0-行时先核对-app_id-与源表行数-再决定是否换-app-补跑.md) — 会话轮换蒸馏
+- [宽漏斗禁单 SQL 宽聚合，拆成 metrics + wide 两阶段，](lessons/2026-08-09-宽漏斗禁单-sql-宽聚合-拆成-metrics-wide-两阶段-避免-driver-heap.md) — 会话轮换蒸馏
+- [user_is_new 禁止 JOIN 无分区 dim_user_all](lessons/2026-08-09-user_is_new-禁止-join-无分区-dim_user_all-改由当日-user_r.md) — 会话轮换蒸馏
 - [口径|is_new](lessons/2026-08-08-口径-is_new.md) — 会话轮换蒸馏
 - [funnel|oom|etl](lessons/2026-08-08-funnel-oom-etl.md) — 会话轮换蒸馏
 - [指定审核人发产须同时满足 publish_request_status=](lessons/2026-08-07-指定审核人发产须同时满足-publish_request_status-pending-与-pu.md) — 会话轮换蒸馏
