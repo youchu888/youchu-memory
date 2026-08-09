@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-09 | [工作簿拦截私聊刷屏：launchd 找不到 mysql + 拦截未去重](./2026-08-09-workbook-verify-block-dm-spam-mysql-path.md) | tgbot, workbook-progress, mysql, dm-spam | 拦截同一天只 DM 一次；MYSQL_BIN |
 | 2026-08-09 | [ETL 跑通但 0 行时先核对 app_id 与源表行数，再决定是否换 app ](./2026-08-09-etl-跑通但-0-行时先核对-app_id-与源表行数-再决定是否换-app-补跑.md) | funnel-etl,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-09 | [宽漏斗禁单 SQL 宽聚合，拆成 metrics + wide 两阶段，避免 d](./2026-08-09-宽漏斗禁单-sql-宽聚合-拆成-metrics-wide-两阶段-避免-driver-heap.md) | funnel-etl,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-09 | [user_is_new 禁止 JOIN 无分区 dim_user_all，改由当](./2026-08-09-user_is_new-禁止-join-无分区-dim_user_all-改由当日-user_r.md) | funnel-etl,session-rotate | 会话轮换前自动蒸馏 |
