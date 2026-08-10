@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-11 | [用户说「推送云端」时只传已定稿 reports 文件，禁止改写；成功回执须含云端](./2026-08-11-用户说-推送云端-时只传已定稿-reports-文件-禁止改写-成功回执须含云端-record-.md) | daily-report,cloud-upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-10 | [DWS 核查须从上游按 ETL 规则全量重算交叉](./2026-08-10-dws-full-chain-reconstruct-crosscheck.md) | datacheck, full-chain, reconstruct | 汇总+行级 FULL OUTER；visit/session T-1 PASS |
 | 2026-08-10 | [页面访问 jump_only 与空 uid 是口径规律](./2026-08-10-page-visit-jump-only-empty-uid-caliber.md) | page-visit, jump_only, empty-uid | 勿当 ETL 丢数；对账用有 uid view |
 | 2026-08-10 | [归因 flag≠config≠result；metrics 断流单盯](./2026-08-10-attribution-flag-config-result-metrics-layers.md) | attribution, metrics, 断流 | metrics 自 06-29 空；分层报 |
