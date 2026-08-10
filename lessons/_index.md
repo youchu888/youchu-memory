@@ -2,6 +2,11 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-10 | [大漏斗扩全量前先用 SF-81 按 playbook 做口径 spot-chec](./2026-08-10-大漏斗扩全量前先用-sf-81-按-playbook-做口径-spot-check-宽表-is_.md) | etl-validation,funnel,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-10 | [收到「别一直发拦截了」类指摘时，立刻改工具/规则并继续干活，禁止重复发送同类说明](./2026-08-10-收到-别一直发拦截了-类指摘时-立刻改工具-规则并继续干活-禁止重复发送同类说明.md) | agent-communication,feedback,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-10 | [Yarn 日跑脚本须拦截已知 0 行源表的 app（如 app_2556），否则](./2026-08-10-yarn-日跑脚本须拦截已知-0-行源表的-app-如-app_2556-否则-exit-0-也.md) | yarn-spark,datacheck,anti-pattern,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-10 | [TG|收到用户「不要一直重复发拦截」时，立刻改行为并交付修复，禁止复读状态模板](./2026-08-10-tg-收到用户-不要一直重复发拦截-时-立刻改行为并交付修复-禁止复读状态模板.md) | 协作,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-10 | [yarn|大漏斗|冒烟|app_2556 源表 0 行会导致假成功，脚本层应硬拒](./2026-08-10-yarn-大漏斗-冒烟-app_2556-源表-0-行会导致假成功-脚本层应硬拒并在-readm.md) | spark,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-09 | [工作簿拦截私聊刷屏：launchd 找不到 mysql + 拦截未去重](./2026-08-09-workbook-verify-block-dm-spam-mysql-path.md) | tgbot, workbook-progress, mysql, dm-spam | 拦截同一天只 DM 一次；MYSQL_BIN |
 | 2026-08-09 | [ETL 跑通但 0 行时先核对 app_id 与源表行数，再决定是否换 app ](./2026-08-09-etl-跑通但-0-行时先核对-app_id-与源表行数-再决定是否换-app-补跑.md) | funnel-etl,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-09 | [宽漏斗禁单 SQL 宽聚合，拆成 metrics + wide 两阶段，避免 d](./2026-08-09-宽漏斗禁单-sql-宽聚合-拆成-metrics-wide-两阶段-避免-driver-heap.md) | funnel-etl,session-rotate | 会话轮换前自动蒸馏 |

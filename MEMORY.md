@@ -5,6 +5,11 @@
 - [群工作簿进展须当日实查，新大活次日登簿](lessons/2026-08-07-群工作簿进展须当日实查-新大活次日登簿.md) — 禁止复读硬编码；大漏斗 supplemental#11；探针+work-log
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
+- [大漏斗扩全量前先用 SF-81 按 playbook 做口径 spot-](lessons/2026-08-10-大漏斗扩全量前先用-sf-81-按-playbook-做口径-spot-check-宽表-is_.md) — 会话轮换蒸馏
+- [收到「别一直发拦截了」类指摘时，立刻改工具/规则并继续干活，禁止重复发送](lessons/2026-08-10-收到-别一直发拦截了-类指摘时-立刻改工具-规则并继续干活-禁止重复发送同类说明.md) — 会话轮换蒸馏
+- [Yarn 日跑脚本须拦截已知 0 行源表的 app（如 app_2556](lessons/2026-08-10-yarn-日跑脚本须拦截已知-0-行源表的-app-如-app_2556-否则-exit-0-也.md) — 会话轮换蒸馏
+- [TG|收到用户「不要一直重复发拦截」时，立刻改行为并交付修复，禁止复读状](lessons/2026-08-10-tg-收到用户-不要一直重复发拦截-时-立刻改行为并交付修复-禁止复读状态模板.md) — 会话轮换蒸馏
+- [yarn|大漏斗|冒烟|app_2556 源表 0 行会导致假成功，脚本](lessons/2026-08-10-yarn-大漏斗-冒烟-app_2556-源表-0-行会导致假成功-脚本层应硬拒并在-readm.md) — 会话轮换蒸馏
 - [ETL 跑通但 0 行时先核对 app_id 与源表行数，再决定是否换 ](lessons/2026-08-09-etl-跑通但-0-行时先核对-app_id-与源表行数-再决定是否换-app-补跑.md) — 会话轮换蒸馏
 - [宽漏斗禁单 SQL 宽聚合，拆成 metrics + wide 两阶段，](lessons/2026-08-09-宽漏斗禁单-sql-宽聚合-拆成-metrics-wide-两阶段-避免-driver-heap.md) — 会话轮换蒸馏
 - [user_is_new 禁止 JOIN 无分区 dim_user_all](lessons/2026-08-09-user_is_new-禁止-join-无分区-dim_user_all-改由当日-user_r.md) — 会话轮换蒸馏
