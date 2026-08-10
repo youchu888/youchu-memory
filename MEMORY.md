@@ -2,6 +2,10 @@
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
 > 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
+- [DWS 核查须从上游按 ETL 全量重算交叉](lessons/2026-08-10-dws-full-chain-reconstruct-crosscheck.md) — 汇总+行级；visit/session T-1 PASS
+- [页面访问 jump_only/空 uid 是口径规律](lessons/2026-08-10-page-visit-jump-only-empty-uid-caliber.md) — 勿当 ETL 丢数
+- [归因 flag≠config≠result；metrics 断流单盯](lessons/2026-08-10-attribution-flag-config-result-metrics-layers.md) — metrics 自 06-29 空
+- [标签连续分区 + 漏斗未上线勿混名](lessons/2026-08-10-user-tag-partition-break-and-funnel-not-on-prod.md) — tag 08-07 起 0
 - [群工作簿进展须当日实查，新大活次日登簿](lessons/2026-08-07-群工作簿进展须当日实查-新大活次日登簿.md) — 禁止复读硬编码；大漏斗 supplemental#11；探针+work-log
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
