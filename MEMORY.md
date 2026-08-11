@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [工作簿进展改双通道后：群里发完同内容 mirror bus（kind=p](lessons/2026-08-12-工作簿进展改双通道后-群里发完同内容-mirror-bus-kind-progress-同日-w.md) — 会话轮换蒸馏
+- [显式 @ 又初 必须在群里实质答复；未 @ 则静默，回复中禁止解释「为何](lessons/2026-08-12-显式-又初-必须在群里实质答复-未-则静默-回复中禁止解释-为何不回.md) — 会话轮换蒸馏
+- [工作簿群/bus 进展统一读 `.claude/database/wor](lessons/2026-08-12-工作簿群-bus-进展统一读-claude-database-workbook-md-团队编号与.md) — 会话轮换蒸馏
 - [日报 wake 读 AUTHORITY_HOST 禁止整文件去空白](lessons/2026-08-11-daily-report-wake-authority-parse.md) — `tr -d` 空白会粘注释导致 21:30 skip；跳过 # 取首行
 - [DWS 核查须从上游按 ETL 全量重算交叉](lessons/2026-08-10-dws-full-chain-reconstruct-crosscheck.md) — 汇总+行级；visit/session T-1 PASS
 - [页面访问 jump_only/空 uid 是口径规律](lessons/2026-08-10-page-visit-jump-only-empty-uid-caliber.md) — 勿当 ETL 丢数

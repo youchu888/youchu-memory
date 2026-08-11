@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 12 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-12-工作簿进展改双通道后-群里发完同内容-mirror-bus-kind-progress-同日-w.md` | 2026-08-12-工作簿进展改双通道后-群里发完同内容-mirror-bus |
+| ## 08 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-12-显式-又初-必须在群里实质答复-未-则静默-回复中禁止解释-为何不回.md` | 2026-08-12-显式-又初-必须在群里实质答复-未-则静默-回复中禁止解释 |
+| ## #1 #10 #11 #4 #9 | `~/.dc-platform/memory/lessons/2026-08-12-工作簿群-bus-进展统一读-claude-database-workbook-md-团队编号与.md` | 2026-08-12-工作簿群-bus-进展统一读-claude-databas |
+| #1 #11「大漏斗」 #4 #9 #9「停留时长」 11 | `sessions/tg-rotate-2026-08-12-0641.md` | 旧#4「设备标签 v2」、#9「停留时长」、#11「大漏斗」**暂未入团队簿** |
+| bus group_workbook_progress_handler.py t | `sessions/tg-rotate-2026-08-12-0641.md` | 双通道代码接在 `group_workbook_progress_handler |
+| @w @worker_ant_bot」升级为 _a _b an bo | `sessions/tg-rotate-2026-08-12-0641.md` | 工作簿进展已从「仅群里同步 @worker_ant_bot」升级为**双通道** |
+| group lesson tg 「为 不回 中禁 | `sessions/tg-rotate-2026-08-12-0641.md` | [LESSON: tg-group/显式 @ 又初 必须在群里实质答复；未 @  |
+| #10 #11 #4 #9 .claude bus | `sessions/tg-rotate-2026-08-12-0641.md` | [LESSON: workbook/工作簿群/bus 进展统一读 `.claud |
+| #1 #4 11 dws_device_tag_d_d dws_user_tag | `sessions/tg-rotate-2026-08-12-0641.md` | 旧#4 ≠ 团队#11**：团队#11 是知秋主责的用户标签 Spark 迁移（ |
+| #1 #2 00 09 10 11） | `sessions/tg-rotate-2026-08-12-0641.md` | 编号根因冲突：09:00 探针仍解析旧 TG 编号（3/4/9/10/11），与 |
+| ## +编 .claude canonical database tg | `sessions/tg-rotate-2026-08-12-0641.md` | 团队唯一工作簿 canonical 在 `.claude/database/wo |
+| agent_bus_send.py bus bus」 reply 「结 「要 | `sessions/tg-rotate-2026-08-12-0641.md` | 狂人 bus 派活若写明「结论请回 bus」，验完直接 `agent_bus_s |
+| —— →」 「又 」— 一律 一律不回 | `sessions/tg-rotate-2026-08-12-0641.md` | 只有上述四种显式 @ 才回；裸写「又初/初儿」、只 @ 别人、标题带「又初→」— |
+| ## inline markdown 一句 内心 写内 | `sessions/tg-rotate-2026-08-12-0641.md` | 群聊口吻学狂人：第一句给结论，短句口语、数字 inline；最多约 4 条 `· |
+| @youchu8888 @youchu_ai_bot @初儿 @又初 @我 「没 | `sessions/tg-rotate-2026-08-12-0641.md` | 协作群显式 `@youchu_ai_bot` / `@youchu8888` / |
 | ## 08 11 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-08-11-用户说-推送云端-时只传已定稿-reports-文件-禁止改写-成功回执须含云端-record-.md` | 2026-08-11-用户说-推送云端-时只传已定稿-reports-文件-禁止 |
 | @youchu8888 @youchu_ai_bot @初儿 @又初 tg 「我 | `sessions/tg-rotate-2026-08-11-0641.md` | TG 群/旁听：仅被显式 `@youchu_ai_bot / @youchu88 |
 | #2 28 7） 87 「推 「继 | `sessions/tg-rotate-2026-08-11-0641.md` | 用户从「继续大漏斗」（私聊#287）切到「推送云端」时：**先完成最新明确指令* |
@@ -30,18 +45,3 @@
 | check commit dev session spot stage4 | `sessions/tg-rotate-2026-08-10-0914.md` | 验数通过后再 commit 推仓，并推进 dev-session stage4； |
 | app memory.md readme.md spark 一步 下一 | `sessions/tg-rotate-2026-08-10-0914.md` | 防踩坑文档应落在 `spark/README.md` + 会话 `memory. |
 | app app_2556 run_yarn_daily_sql.sh yarn  | `sessions/tg-rotate-2026-08-10-0914.md` | `app_2556` 源表 0 行会导致「任务成功但无产出」的假成功；已在 `r |
-| 「拦 」类 一段 任务 住根 先改 | `sessions/tg-rotate-2026-08-10-0914.md` | 用户指出「拦截/说明」类问题时：先改脚本或流程堵住根因，再直接推进任务，禁止反复 |
-| ## 08 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-10-tg-收到用户-不要一直重复发拦截-时-立刻改行为并交付修复-禁止复读状态模板.md` | 2026-08-10-tg-收到用户-不要一直重复发拦截-时-立刻改行为并交付修 |
-| ## 08 10 2026 81 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-10-yarn-大漏斗-冒烟-app_2556-源表-0-行会导致假成功-脚本层应硬拒并在-readm.md` | 2026-08-10-yarn-大漏斗-冒烟-app_2556-源表-0-行会导 |
-| commit dev session stage4 压测 压测通过后再 | `sessions/tg-rotate-2026-08-10-0914.md` | 压测通过后再 commit 推仓，推进 dev-session stage4 |
-| 81 app check（video_view page_view playbo | `sessions/tg-rotate-2026-08-10-0914.md` | 验数顺序：先按 `playbook.md` 做 SF-81 口径 spot-ch |
-| app app_2556 run_yarn_daily_sql.sh 从脚 从脚 | `sessions/tg-rotate-2026-08-10-0914.md` | 已在 `run_yarn_daily_sql.sh` 硬拒 `app_2556` |
-| 17s 6.3h metrics stage_metrics stage_wid | `sessions/tg-rotate-2026-08-10-0914.md` | stage_metrics 墙钟约 6.3h，stage_wide 约 17s； |
-| 39 81 is_new sf stg 为最 | `sessions/tg-rotate-2026-08-10-0914.md` | 冒烟默认用 SF-81；宽表 is_new=-1/0/1 各 1 行共 3 行， |
-| 03 08 2026 81 de dt | `sessions/tg-rotate-2026-08-10-0914.md` | 大漏斗两阶段 ETL（metrics → wide）在 SF-81、dt=202 |
-| lesson tg 「不 」时 一直 不要 | `sessions/tg-rotate-2026-08-10-0914.md` | [LESSON: 协作/TG/收到用户「不要一直重复发拦截」时，立刻改行为并交付 |
-| memory.md readme.md spark 一步 下一 冒烟 | `sessions/tg-rotate-2026-08-10-0914.md` | 防踩坑文档应同步：`spark/README.md` 写冒烟命令，`memory |
-| 5「 app_2556 r5 r5「假成功」根因 「假 」根 | `sessions/tg-rotate-2026-08-10-0914.md` | r5「假成功」根因：误传 `app_2556`，其源表 0 行仍可能跑完但不产出 |
-| 「拦 」时 了」 出「 反复 处理 | `sessions/tg-rotate-2026-08-10-0914.md` | 用户指出「拦截了」时，应直接处理问题并推进，禁止反复复读拦截说明 |
-| ## 08 09 2026 agent_session_rotate app | `~/.dc-platform/memory/lessons/2026-08-09-etl-跑通但-0-行时先核对-app_id-与源表行数-再决定是否换-app-补跑.md` | 2026-08-09-etl-跑通但-0-行时先核对-app_id-与源表行数- |
-| ## 08 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-09-宽漏斗禁单-sql-宽聚合-拆成-metrics-wide-两阶段-避免-driver-heap.md` | 2026-08-09-宽漏斗禁单-sql-宽聚合-拆成-metrics-wide |

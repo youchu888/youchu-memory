@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-11 · 最新归档：`sessions/tg-rotate-2026-08-11-0641.md`
+> 更新：2026-08-12 · 最新归档：`sessions/tg-rotate-2026-08-12-0641.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 协作群显式 `@youchu_ai_bot` / `@youchu8888` / `@又初` / `@初儿` 时，必须在群里给**实质答复**；禁止以「没@我」「群里不回」推脱。
+- 群聊口吻学狂人：第一句给结论，短句口语、数字 inline；最多约 4 条 `·`；别铺 markdown 表格/`##` 标题，别写内心戏。
+- 只有上述四种显式 @ 才回；裸写「又初/初儿」、只 @ 别人、标题带「又初→」——**一律不回**，且回复里不要解释为什么不回。
+- 狂人 bus 派活若写明「结论请回 bus」，验完直接 `agent_bus_send.py reply` 结案；禁止问主人「要不要发 bus」。
+- 团队唯一工作簿 canonical 在 `.claude/database/workbook.md`；进展播报应读 **`## 进行中`**，按**团队项名+编号**报，勿继续用狂人 TG 旧编号。
+- 编号根因冲突：09:00 探针仍解析旧 TG 编号（3/4/9/10/11），与团队簿（1/2…）不一致；旧#3 归因→团队#2，旧#10 页面访问→团队#1。
+- 旧#4 ≠ 团队#11**：团队#11 是知秋主责的用户标签 Spark 迁移（`dws_user_tag`）；群点名#4 是又初主责的设备标签 v2（`dws_device_tag_d_d`），test 有数/prod 未上线——勿混为一项。
+- [LESSON: workbook|工作簿群/bus 进展统一读 `.claude/database/workbook.md` 团队编号与项名，禁止沿用狂人 TG 旧#3/#4/#9/#10/#11 自编号]
+- [LESSON: tg-group|显式 @ 又初 必须在群里实质答复；未 @ 则静默，回复中禁止解释「为何不回」]
+- 工作簿进展已从「仅群里同步 @worker_ant_bot」升级为**双通道**：群里发完自动 mirror 一份 bus 给狂人（`kind=progress`）；`workbook_progress_posted.json` 同一天防重。
+- 双通道代码接在 `group_workbook_progress_handler.py`；改完需 **tgbot 重启** 才自动生效；规则变更日可手工补发当日 bus。
+- 旧#4「设备标签 v2」、#9「停留时长」、#11「大漏斗」**暂未入团队簿**，播报前需知秋补项或明确映射，避免对不上。
+- **旧#4 ≠ 团队#11**：团队#11 是知秋主责的用户标签 Spark 迁移（`dws_user_tag`）；群点名#4 是又初主责的设备标签 v2（`dws_device_tag_d_d`），test 有数/prod 未上线——勿混为一项。
+- bus 只管派单 ack/结案 + 工作簿 progress mirror；工作簿**点名答疑**仍按规定群里回 `@worker_ant_bot`（与 bus 双发不矛盾）。
 - 用户说「推送云端」= 上传**已定稿**日报，以 `.cursor/work-log/reports/日报-YYYY-MM-DD.md` 为准，**上传前禁止改字**
 - 日报「生成/定稿/推 TG」与「上传云端」分步：用户单独说「推送云端」时才跑上传，不要自动附带上传
 - 大漏斗两阶段 ETL 顺序固定为 `metrics → …`（metrics 先行，勿颠倒）
 - 收到「别一直发拦截/说明」类指摘：先改脚本或流程堵根因，再继续推进，禁止反复复读同类拦截话术
-- `app_2556` 源表 0 行会导致「任务成功但无产出」假成功；Yarn 日跑已在 `run_yarn_daily_sql.sh` 硬拒绝，勿再误传
-- 防踩坑文档落 `spark/README.md` + 会话 `memory.md`：写清冒烟命令、默认 app、下一步清单
-- 验数通过后再 commit 推仓并推进 dev-session stage4；勿跳过 spot-check 直接全量压测
-- [LESSON: daily-report,cloud-upload|用户说「推送云端」时只传已定稿 reports 文件，禁止改写；成功回执须含云端 record id 与 inserted/updated 状态]
-- 未指定日期时默认当日（Asia/Shanghai）；脚本：`.cursor/scripts/upload_work_report.py --date YYYY-MM-DD`
-- 上传成功回执应带三要素：**文件路径**、**工号 DN6517**、**云端 record id** 及 `inserted`/`updated` 状态
-- 用户从「继续大漏斗」（私聊#287）切到「推送云端」时：**先完成最新明确指令**，再一句询问是否续做挂起任务
-- TG 群/旁听：仅被显式 `@youchu_ai_bot / @youchu8888 / @又初 / @初儿` 时才回复；裸提名字或只 @ 他人时不回、也不声明「我不插嘴」
-- 用户指出「拦截/说明」类问题时：先改脚本或流程堵住根因，再直接推进任务，禁止反复复读同一段拦截话术
-- `app_2556` 源表 0 行会导致「任务成功但无产出」的假成功；已在 `run_yarn_daily_sql.sh` 硬拒绝该 app，后续 Yarn 日跑勿再误传
-- 防踩坑文档应落在 `spark/README.md` + 会话 `memory.md`：写清冒烟命令、默认 app、下一步清单，避免下轮重踩
-- 验数通过后再 commit 推仓，并推进 dev-session stage4；不要跳过 spot-check 直接上全量压测
-- [LESSON: agent-communication,feedback|收到「别一直发拦截了」类指摘时，立刻改工具/规则并继续干活，禁止重复发送同类说明]
-- 大漏斗两阶段 ETL 顺序固定为 `metrics → wide`；冒烟默认用 `SF-81`，指定 `dt` 先跑通再扩 profile
 

@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-12 | [工作簿进展改双通道后：群里发完同内容 mirror bus（kind=progr](./2026-08-12-工作簿进展改双通道后-群里发完同内容-mirror-bus-kind-progress-同日-w.md) | workbook-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-12 | [显式 @ 又初 必须在群里实质答复；未 @ 则静默，回复中禁止解释「为何不回」](./2026-08-12-显式-又初-必须在群里实质答复-未-则静默-回复中禁止解释-为何不回.md) | tg-group,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-12 | [工作簿群/bus 进展统一读 `.claude/database/workboo](./2026-08-12-工作簿群-bus-进展统一读-claude-database-workbook-md-团队编号与.md) | workbook,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-11 | [日报 wake 读 AUTHORITY_HOST 禁止整文件去空白](./2026-08-11-daily-report-wake-authority-parse.md) | daily-report, launchd, tg, AUTHORITY_HOST | tr -d 空白会粘注释；跳过 # 取首行 |
 | 2026-08-11 | [狂人记忆系统实操 v2](./2026-08-11-worker-ant-memory-v2-practice.md) | memory, worker_ant, bootstrap | 4前缀/硬注入/立刻沉/周体检；bus#6361 |
 | 2026-08-11 | [用户说「推送云端」时只传已定稿 reports 文件，禁止改写；成功回执须含云端](./2026-08-11-用户说-推送云端-时只传已定稿-reports-文件-禁止改写-成功回执须含云端-record-.md) | daily-report,cloud-upload,session-rotate | 会话轮换前自动蒸馏 |
