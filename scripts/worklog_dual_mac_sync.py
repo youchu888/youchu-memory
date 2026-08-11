@@ -55,14 +55,20 @@ def _read_text(p: Path) -> str:
 
 
 def export_host_day(mem_wl: Path, local_wl: Path, day: str, host: str) -> Path | None:
-    """把本机当日流水/日报副本写到 hosts/<host>/。"""
+    """把本机当日流水/日报副本写到 hosts/<host>/。
+
+    优先本机 `.cursor/work-log/`；若当日未写日流水，则回退 ops-mirror
+   （派单/私聊摘要）——避免「记忆仓已 sync 但 hosts 空白」误报双机缺流水。
+    """
     host_dir = mem_wl / "hosts" / host
     host_dir.mkdir(parents=True, exist_ok=True)
     (host_dir / "reports").mkdir(parents=True, exist_ok=True)
 
     day_src = local_wl / f"{day}.md"
     report_src = local_wl / "reports" / f"{day}-日报.md"
+    ops_src = mem_wl.parent / "ops-mirror" / "hosts" / host / f"{day}.md"
     wrote = False
+    source = "local"
 
     day_dst = host_dir / f"{day}.md"
     chunks: list[str] = [
@@ -88,8 +94,24 @@ def export_host_day(mem_wl: Path, local_wl: Path, day: str, host: str) -> Path |
             report_body + "\n", encoding="utf-8"
         )
 
+    # 本机未写 work-log：用 ops-mirror 兜底，保证 21:30 前 sync 仍能留下 hosts 痕迹
+    if not wrote:
+        ops_body = _read_text(ops_src)
+        if ops_body:
+            chunks.append("## 本机日流水（ops-mirror 兜底 · 当日未写 `.cursor/work-log`）")
+            chunks.append("")
+            chunks.append(ops_body)
+            chunks.append("")
+            wrote = True
+            source = "ops-mirror"
+
     if not wrote:
         return None
+    # 已有更完整的本地 hosts 时不要被 ops-mirror 兜底覆盖掉
+    if source == "ops-mirror" and day_dst.exists():
+        existing = _read_text(day_dst)
+        if existing and "ops-mirror 兜底" not in existing and "## 本机日流水" in existing:
+            return day_dst
     day_dst.write_text("\n".join(chunks).rstrip() + "\n", encoding="utf-8")
     return day_dst
 

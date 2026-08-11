@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-11 | [日报 wake 读 AUTHORITY_HOST 禁止整文件去空白](./2026-08-11-daily-report-wake-authority-parse.md) | daily-report, launchd, tg, AUTHORITY_HOST | tr -d 空白会粘注释；跳过 # 取首行 |
 | 2026-08-11 | [狂人记忆系统实操 v2](./2026-08-11-worker-ant-memory-v2-practice.md) | memory, worker_ant, bootstrap | 4前缀/硬注入/立刻沉/周体检；bus#6361 |
 | 2026-08-11 | [用户说「推送云端」时只传已定稿 reports 文件，禁止改写；成功回执须含云端](./2026-08-11-用户说-推送云端-时只传已定稿-reports-文件-禁止改写-成功回执须含云端-record-.md) | daily-report,cloud-upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-10 | [DWS 核查须从上游按 ETL 规则全量重算交叉](./2026-08-10-dws-full-chain-reconstruct-crosscheck.md) | datacheck, full-chain, reconstruct | 汇总+行级 FULL OUTER；visit/session T-1 PASS |
