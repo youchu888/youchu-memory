@@ -24,6 +24,20 @@ if [[ -f "$CANON" && "$CANON" -nt "$SELF" ]]; then
   exec bash "$SELF" "$@"
 fi
 
+# 记忆冷启动/周清理脚本：仓内 canonical → 运行时 ~/.dc-platform/scripts
+RUNTIME_SCRIPTS="${HOME}/.dc-platform/scripts"
+mkdir -p "$RUNTIME_SCRIPTS"
+for s in load-memory-context.sh memory_weekly_hygiene.sh; do
+  src="$MEM/scripts/$s"
+  dst="$RUNTIME_SCRIPTS/$s"
+  if [[ -f "$src" ]]; then
+    if [[ ! -f "$dst" || "$src" -nt "$dst" ]]; then
+      cp -f "$src" "$dst"
+      chmod +x "$dst"
+    fi
+  fi
+done
+
 cd "$MEM"
 
 if [[ ! -d .git ]]; then
