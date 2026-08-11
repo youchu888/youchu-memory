@@ -2,6 +2,9 @@
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
 > 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
+> **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
+> **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
+> 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
 - [DWS 核查须从上游按 ETL 全量重算交叉](lessons/2026-08-10-dws-full-chain-reconstruct-crosscheck.md) — 汇总+行级；visit/session T-1 PASS
 - [页面访问 jump_only/空 uid 是口径规律](lessons/2026-08-10-page-visit-jump-only-empty-uid-caliber.md) — 勿当 ETL 丢数
 - [归因 flag≠config≠result；metrics 断流单盯](lessons/2026-08-10-attribution-flag-config-result-metrics-layers.md) — metrics 自 06-29 空
