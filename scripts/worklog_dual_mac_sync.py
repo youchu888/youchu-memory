@@ -23,7 +23,26 @@ from pathlib import Path
 TZ = timezone(timedelta(hours=8))
 
 
+def _load_env_host(mem: Path) -> None:
+    """加载 memory/.env.host（与 sync-memory-git.sh 同源），保证 WORKLOG_HOST_ID=old-mac/new-mac。"""
+    env_file = mem / ".env.host"
+    if not env_file.is_file():
+        return
+    for line in env_file.read_text(encoding="utf-8", errors="replace").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        if line.startswith("export "):
+            line = line[len("export ") :].strip()
+        k, _, v = line.partition("=")
+        k, v = k.strip(), v.strip().strip("'\"")
+        if k and k not in os.environ:
+            os.environ[k] = v
+
+
 def _host_id() -> str:
+    mem, _ = _paths()
+    _load_env_host(mem)
     raw = (os.environ.get("WORKLOG_HOST_ID") or "").strip()
     if raw:
         return re.sub(r"[^\w.\-]+", "-", raw)[:64]
@@ -299,7 +318,13 @@ def main() -> int:
         print(f"exported+merged days≈{n}")
     else:
         out = export_host_day(mem_wl, local, day, host)
-        print(f"export: {out or '(no local day/report)'}")
+        if out:
+            print(f"export: {out}")
+        else:
+            print(
+                "export: (no local day/report; ops-mirror 也无 → hosts 不会生成；"
+                "记忆仓仍可 sync，但日报核对会报该机缺流水)"
+            )
         merged = merge_day(mem_wl, day)
         print(f"merged: {merged}")
 
