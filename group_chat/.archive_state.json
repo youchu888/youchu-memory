@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-08-11 22:41:16",
+  "last_run": "2026-08-12 12:43:09",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1322,8 +1322,14 @@
     ],
     "2026-08-10": [
       "2026-08-10 21:53:45|telegram_dm|8740305767|[私聊#288] 推送云端|理解为：上传今日已定稿日报到云端，原封不动。正在定位日报文件并执行上传脚本。\n**2026-08-10 日报已上传云端。**\n\n- 文件：`.cursor/work-log/reports/日报-2026-08-10.md`（原封未改）\n- 工号：DN6517\n- 云端记录 id：**68604**（`inserted`）\n\n私聊#287 的大漏斗任务需要的话，你说一声我接着干。|"
+    ],
+    "2026-08-11": [
+      "2026-08-11 09:05:12|telegram_group|8740305767|[群聊·@youchu8888]: @youchu_ai_bot 工作簿bus狂人了吗||observe",
+      "2026-08-11 09:07:13|telegram_group|8740305767|[群聊#161] [群聊·@youchu8888]: 【群聊硬规则】本条已显式 @ 初儿/又初（@youchu_ai_bot / @youchu8888 / @又初 / @初儿），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 工作簿bus狂人了吗\n问题正文: 工作簿bus狂人了吗|查一下工作簿有没有经 agent-bus 发给狂人。\n没走 bus，也不用走 bus——工作簿点名按规定是**群里回 @worker_ant_bot**，bus 只管派单 ack/结案。\n\n今天 08-11 的已经发了：09:01 协作群自动出了精简+详细两版（`workbook_progress_posted.json` 已记 brief+detailed）。\n\n又初负责项快照（09:01 探针）：\n· #3 归因：prod result 追到 08-10，259 行 / success 229\n· #4 设备标签：test 07-12 ~98 万行，prod 未上线\n· #9 停留时长：session prod 08-10 有数，session dev s7 pending\n· #10 页面访问：visit prod 08-10 ~527 万行，dev s7 approved\n· #11 大漏斗：dev s3，prod 表还没建，昨晚在推 SF-81 冒烟\n\n有疑问 @worker_ant_bot 或 @youchu_ai_bot|",
+      "2026-08-11 09:19:03|telegram_group|8740305767|[群聊·@youchu8888]: @youchu_ai_bot 后续工作簿除了群里同步，也要bus发给狂人||observe",
+      "2026-08-11 09:21:09|telegram_group|8740305767|[群聊#162] [群聊·@youchu8888]: 【群聊硬规则】本条已显式 @ 初儿/又初（@youchu_ai_bot / @youchu8888 / @又初 / @初儿），必须在群里给实质答复；禁止说「没@初儿」「没@本机器人」「群里不回」。\n原文: @youchu_ai_bot 后续工作簿除了群里同步，也要bus发给狂人\n问题正文: 后续工作簿除了群里同步，也要bus发给狂人|收到：工作簿进展以后群里同步之外，也要 bus 给狂人。我先看现有工作簿发群逻辑，再把 bus 双发接上。\n正在把 bus 双发接到工作簿发群流程里。\n补发今天 08-11 的 bus（群里 09:01 已发过，当时还没双通道）。\n收到，已改规则。\n\n从今天起工作簿进展**双通道**：群里发完自动 mirror 一份 bus 给狂人（`kind=progress`，同一天只发一次防重）。\n\n今天 08-11 群里 09:01 已发过，bus 刚补发成功。\n\n代码已接到 `group_workbook_progress_handler.py`，tgbot 下次重启后自动生效。有疑问 @worker_ant_bot 或 @youchu_ai_bot|"
     ]
   },
-  "last_hot_lines": 4,
-  "last_archived_lines": 1
+  "last_hot_lines": 6,
+  "last_archived_lines": 4
 }
