@@ -6,6 +6,7 @@
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
 - [群聊显式 @ 又初时必须群内给实质答复，禁止以未 @ 机器人为由不回](lessons/2026-08-12-群聊显式-又初时必须群内给实质答复-禁止以未-机器人为由不回.md) — 会话轮换蒸馏
+- [TG 私聊长任务双轨方案（讨论稿）](feedback_tg_dm_fast_work_dual_track.md) — Fast 仅短指令；长任务单槽串行；急指令直连；待新 Mac 拍板
 - [开 YARN 前确认集群 spark 包与 origin/dev 一致，](lessons/2026-08-12-开-yarn-前确认集群-spark-包与-origin-dev-一致-旧版单文件-sql-与仓.md) — 会话轮换蒸馏
 - [大漏斗集群读湖仓不读 SR，停跑自查优先查 Paimon 分区可读性与 ](lessons/2026-08-12-大漏斗集群读湖仓不读-sr-停跑自查优先查-paimon-分区可读性与-flink-fanout.md) — 会话轮换蒸馏
 - [工作簿进展改双通道后：群里发完同内容 mirror bus（kind=p](lessons/2026-08-12-工作簿进展改双通道后-群里发完同内容-mirror-bus-kind-progress-同日-w.md) — 会话轮换蒸馏
