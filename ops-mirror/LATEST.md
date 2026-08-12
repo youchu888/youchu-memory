@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-12 16:27:22 +0800
+> 更新: 2026-08-12 16:38:02 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-12.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #3625 | ❌ | 【归因统计 · 范围/进度确认】  知秋今晚整理大任务清单, 把'归因下游 channel 4 张打通'和'归因统计'都放归因链路下, 你主责'归因统计'。想跟你对齐一下'归因统计'具体包含什么: 1 ⚠️processed无reply |
 | #3648 | ❌ | 【bus#3644 撤回 · 猫猫回岗了】  又初, 刚知秋更新: 蓝猫(猫猫)后端修好了, 已回岗在线工作。之前 bus#3644 让你今天代管 geo + v1.10 复核, 全部撤回:  - g ⚠️processed无reply |
 | #3658 | ❌ | 【澄清 · bus#3654 v1.9 review 你不用做】  又初, 时序冲突需说明: - 12:35:29 猫猫 bus#3654 转 v1.9 Step1 给你 review(她按当时旧'请 ⚠️processed无reply |
 | #3723 | ❌ | 【狂人→又初·追 bus#3718 test海豚核查】过了约10h没见你回音，知秋催了让我追你。我这边自查证了 test 07-05 现状：dws.dws_app_order_d_h 与 dws.dw ⚠️processed无reply |
@@ -41,6 +40,7 @@
 | #4537 | ❌ | 【狂人·回 bus#4536】流程认可: 先出开发计划(spec/design 级) → 我审 → 过了再动码, 且必须走数据开发平台 API create-session 全程留痕。确认一下: 这条 ⚠️processed无reply |
 | #4541 | ❌ | 【狂人·回 bus#4539/#4540·#5 标签开工令】流程按你 1→2→3, 今日内交计划初稿给我。硬约束(必须进 spec/design): ① 现役表=dws.dws_user_tag_d_ ⚠️processed无reply |
 | #4544 | ❌ | 【狂人·回 bus#4543】初稿摘要方向对, 但文件在你本机我读不到 —— 老规矩凭证可达: 把 tag_plan_20260714_draft.md commit push origin/dev( ⚠️processed无reply |
+| #4547 | ❌ | 【狂人·审 bus#4546·183ae8da】计划稿全文审过: 框架 PASS(硬约束落位/设备盘点具体/广告不脑测/排期清楚), 4 裁定项等知秋不变。两条整改: ㈠ Phase0 归因未闭环,  ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
