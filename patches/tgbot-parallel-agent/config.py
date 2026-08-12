@@ -15,7 +15,9 @@ ALLOWED_GROUP_CHAT_IDS = [
 GROUP_LISTEN_WITHOUT_MENTION = os.getenv('GROUP_LISTEN_WITHOUT_MENTION', 'false').strip().lower() in (
     '1', 'true', 'yes', 'on',
 )
-# 群聊旁听：白名单群内所有消息写入统一上下文；仅 @本机器人 才在群里回复（正文提「初儿」不算）
+# 群聊旁听：白名单群内所有消息写入统一上下文；
+# 群里回复（主人 2026-07-28）：仅显式 @本机器人/@GROUP_REPLY_MENTIONS/@又初/@初儿；
+# 裸写「又初」「初儿」、回复本 bot、未 @ 探活秒回 — 一律不回
 GROUP_OBSERVE_ALL = os.getenv('GROUP_OBSERVE_ALL', 'true').strip().lower() in (
     '1', 'true', 'yes', 'on',
 )
@@ -47,7 +49,8 @@ AI_TIMEOUT_SEC = int(os.getenv('AI_TIMEOUT_SEC', '600'))  # 已废弃作软超�
 # 子进程存活探活间隔（秒）；仅用于内部检测，默认不向 TG 刷「还在处理」
 AI_PROGRESS_INTERVAL_SEC = int(os.getenv('AI_PROGRESS_INTERVAL_SEC', '60'))
 # 硬上限（秒）；0=不按墙钟杀。优先用 AI_IDLE_TIMEOUT_SEC（无 stdout 则杀）
-AI_HARD_TIMEOUT_SEC = int(os.getenv('AI_HARD_TIMEOUT_SEC', '0'))
+# 默认 900：防 Connection lost 重连刷屏拖死整条私聊队列
+AI_HARD_TIMEOUT_SEC = int(os.getenv('AI_HARD_TIMEOUT_SEC', '900'))
 # 无 stdout 响应超时（秒）；默认 900=15 分钟无输出则 kill，释放 agent 队列
 AI_IDLE_TIMEOUT_SEC = int(os.getenv('AI_IDLE_TIMEOUT_SEC', '900'))
 # 私聊叠单：长活占着 agent 时，新私聊另开并行 agent（不 resume 旧 chat）
@@ -60,6 +63,8 @@ AGENT_MAX_PARALLEL = int(os.getenv('AGENT_MAX_PARALLEL', '3'))
 AGENT_MEMORY_REFRESH_ON_SPAWN = os.getenv('AGENT_MEMORY_REFRESH_ON_SPAWN', 'true').strip().lower() in (
     '1', 'true', 'yes', 'on',
 )
+# 重连/心跳刷屏行不算 idle activity；连续仅此类输出超过 N 秒则当 idle（默认 120）
+AI_RECONNECT_IDLE_SEC = int(os.getenv('AI_RECONNECT_IDLE_SEC', '120'))
 # 私聊「还在处理中」刷屏间隔；0=关闭（推荐）。长任务不要一直占 TG 私聊
 SLOW_NUDGE_SEC = int(os.getenv('SLOW_NUDGE_SEC', '0'))
 # 是否在 TG 私聊推送 cursor-agent 心跳「还在处理」（默认关）
@@ -144,6 +149,13 @@ JIKE_CHECKIN_WINDOW_START = os.getenv('JIKE_CHECKIN_WINDOW_START', '09:30').stri
 JIKE_CHECKIN_WINDOW_END = os.getenv('JIKE_CHECKIN_WINDOW_END', '10:00').strip()
 JIKE_CHECKOUT_WINDOW_START = os.getenv('JIKE_CHECKOUT_WINDOW_START', '22:00').strip()
 JIKE_CHECKOUT_WINDOW_END = os.getenv('JIKE_CHECKOUT_WINDOW_END', '22:30').strip()
+# 周六下班 19:00，签退窗单独提前（主人 2026-07-31）
+JIKE_CHECKOUT_SATURDAY_WINDOW_START = os.getenv(
+    'JIKE_CHECKOUT_SATURDAY_WINDOW_START', '19:00'
+).strip()
+JIKE_CHECKOUT_SATURDAY_WINDOW_END = os.getenv(
+    'JIKE_CHECKOUT_SATURDAY_WINDOW_END', '19:30'
+).strip()
 JIKE_CHECKIN_STATE_PATH = os.path.join(TGBOT_DIR, 'data', 'jike_checkin_state.json')
 
 GROUP_ROLL_CALL_ENABLED = os.getenv('GROUP_ROLL_CALL_ENABLED', 'true').strip().lower() in (
@@ -161,6 +173,10 @@ GROUP_ROLL_CALL_SENDERS = [
 GROUP_WORKBOOK_PROGRESS_ENABLED = os.getenv(
     'GROUP_WORKBOOK_PROGRESS_ENABLED', 'true',
 ).strip().lower() in ('1', 'true', 'yes', 'on')
+# 主人 2026-07-29：默认自动发群真实进展；仅当显式打开才走私聊确认
+GROUP_WORKBOOK_REQUIRE_OWNER_CONFIRM = os.getenv(
+    'GROUP_WORKBOOK_REQUIRE_OWNER_CONFIRM', 'false',
+).strip().lower() in ('1', 'true', 'yes', 'on')
 
 TELEGRAM_API_ID = int(os.getenv('TELEGRAM_API_ID', '0') or '0')
 TELEGRAM_API_HASH = os.getenv('TELEGRAM_API_HASH', '').strip()
@@ -174,17 +190,27 @@ TELETHON_APP_VERSION = os.getenv('TELETHON_APP_VERSION', '6.4.2').strip()
 TELETHON_WORK_HOURS_ONLY = os.getenv('TELETHON_WORK_HOURS_ONLY', 'false').strip().lower() in (
     '1', 'true', 'yes', 'on',
 )
-# 旧机 worker_ant_dispatch_watcher 工作在线时段（Asia/Shanghai）
-TG_WORK_ONLINE_START = os.getenv('TG_WORK_ONLINE_START', '09:00').strip()
-TG_WORK_ONLINE_END = os.getenv('TG_WORK_ONLINE_END', '22:00').strip()
+# 旧机上班时段 TG 在线保活（tg_work_online.py / launchd com.youchu.tg-work-online）
+TG_WORK_ONLINE_ENABLED = os.getenv('TG_WORK_ONLINE_ENABLED', 'true').strip().lower() in (
+    '1', 'true', 'yes', 'on',
+)
+TG_WORK_ONLINE_START = os.getenv('TG_WORK_ONLINE_START', '09:30').strip()
+TG_WORK_ONLINE_END = os.getenv('TG_WORK_ONLINE_END', '22:30').strip()
 TG_WORK_ONLINE_TZ = os.getenv('TG_WORK_ONLINE_TZ', 'Asia/Shanghai').strip()
+TG_WORK_ONLINE_PING_SEC = int(os.getenv('TG_WORK_ONLINE_PING_SEC', '45') or '45')
+TG_WORK_ONLINE_SESSION_PATH = os.getenv(
+    'TG_WORK_ONLINE_SESSION_PATH',
+    os.path.join(TGBOT_DIR, 'data', 'user_telegram_work_online'),
+).strip()
 
-# 进程内定期自查（Mac 常开保活；默认 2min，critical 1 次即重启）
+# 进程内定期自查（Mac 常开保活；默认 2min）
+# 通知：连续失败达 BOT_SELF_CHECK_NOTIFY_AFTER 才私聊（默认 3≈6min），抖动只记日志
 BOT_SELF_CHECK_ENABLED = os.getenv('BOT_SELF_CHECK_ENABLED', 'true').strip().lower() in (
     '1', 'true', 'yes', 'on',
 )
 BOT_SELF_CHECK_INTERVAL = int(os.getenv('BOT_SELF_CHECK_INTERVAL', '120'))
-BOT_SELF_CHECK_NOTIFY_COOLDOWN = int(os.getenv('BOT_SELF_CHECK_NOTIFY_COOLDOWN', '900'))
+BOT_SELF_CHECK_NOTIFY_AFTER = int(os.getenv('BOT_SELF_CHECK_NOTIFY_AFTER', '3'))
+BOT_SELF_CHECK_NOTIFY_COOLDOWN = int(os.getenv('BOT_SELF_CHECK_NOTIFY_COOLDOWN', '1800'))
 BOT_HEARTBEAT_INTERVAL = int(os.getenv('BOT_HEARTBEAT_INTERVAL', '30'))
 BOT_CRITICAL_RESTART_AFTER = int(os.getenv('BOT_CRITICAL_RESTART_AFTER', '3'))
 BOT_SOFT_RESTART_AFTER = int(os.getenv('BOT_SOFT_RESTART_AFTER', '5'))
