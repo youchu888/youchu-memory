@@ -1,40 +1,42 @@
-# Feedback：TG 私聊长任务排队 · 双轨方案（讨论稿 · 待新 Mac 拍板落地）
+# Feedback：TG 私聊长活占着时另开 agent（已落地）
 
-**来源**：主人 2026-08-12 夜 · old-mac 排查后讨论  
-**状态**：方案对齐中；**未改 bot 双轨代码**（仅讨论 + 部分应急修复已上 old-mac）
+**来源**：主人 2026-08-12 夜讨论 → 新 Mac 落地  
+**状态**：**代码已改**（本机 `omdb/tgbot`）；旧 Mac 用 memory 补丁一键应用
 
-## 已确认问题
+## 定案
 
-1. 全渠道共用一把 `run_locked` 串行锁；一条长私聊占住，后面全卡（「前面还有 N 条」）。
-2. 硬杀 30 分钟不合适：正常长任务常 >30min，不能当主策略。
-3. 「忙就新开 agent」若 Fast 也接长任务，堵点只从 1 条变成 2 条，第三条仍卡。
+> 保持 1 任务 1 agent。长活占着时 TG 新私聊 → **另开新 agent**；新 agent **必读记忆冷启动**。
 
-## 主人/又初对齐的目标形态
+不做复杂 Fast/Work 白名单。
 
-1. **Fast 轨只准短任务**（白名单）：停了吧 / 进度 / 上传云端 / 整理日报 / 重启 agent / 短问答。  
-   长任务（改 ETL、深挖查库、集群跑数、多步核查）**禁止上 Fast**。
-2. **长任务单槽串行**（或最多 2 槽，待定）；多出来的长任务排队是正常的。
-3. **排队时直连说明 + 三选一**（不占 agent）：  
-   `排队` / `打断旧任务改做这个` / `旧的继续、这个先记着稍后做`
-4. **急指令永远直连插队**：「停了吧」「重启 agent」不经长队列。
-5. **硬超时**：不当常规；若保留仅作僵死兜底（建议 ≥2h 且无心跳才杀）。old-mac 曾临时设 `AI_HARD_TIMEOUT_SEC=1800`，新 Mac 讨论后可改/撤。
+## 落地位置
 
-## old-mac 已落地的应急项（非双轨本体）
+| 项 | 路径 |
+|----|------|
+| Playbook（流程） | `~/.dc-platform/memory/playbook_tg_dm_parallel_agent.md` |
+| 补丁文件 | `~/.dc-platform/memory/patches/tgbot-parallel-agent/` |
+| 旧机一键应用 | `bash ~/.dc-platform/memory/scripts/apply_tgbot_parallel_agent.sh` |
+| 本机源码 | `omdb/tgbot/{agent_queue,bot,prompt_builder,config}.py` |
 
-- `cursor_executor` 开始消费 `AGENT_LOOP_WAKE_DAILY_REPORT`（日报不依赖 IDE monitor）
-- 21:45 `com.youchu.daily-report-fallback` 未推送则补唤醒
-- lesson：`lessons/2026-08-12-daily-report-executor-and-dm-queue.md`
-- 08-12 改定日报已云端 `id=70631` + TG 重推
+## 行为摘要
 
-## 新 Mac 续聊时建议拍板
+- 空闲：原串行 + 可 resume workspace cursor chat  
+- 忙碌私聊：秒回「另开 agent」→ `run_parallel` + `cursor_chat_id=None` + bootstrap  
+- 软顶：`AGENT_MAX_PARALLEL=3`  
+- 群聊 / bus 派单：仍 `run_locked`
 
-- [ ] Fast 白名单最终列表
-- [ ] 长任务并发槽：1 还是 2
-- [ ] `AI_HARD_TIMEOUT_SEC`：关掉 / 改 2h+ / 仅无心跳杀
-- [ ] 是否立刻改 `omdb/tgbot` 落地双轨（需主人明确允改 bot）
+## 旧 Mac
+
+memory sync 后执行：
+
+```bash
+bash ~/.dc-platform/memory/scripts/apply_tgbot_parallel_agent.sh
+```
+
+详见 `playbook_tg_dm_parallel_agent.md`。
 
 ## 关联
 
+- playbook：`playbook_tg_dm_parallel_agent.md`
 - lesson：`2026-08-12-daily-report-executor-and-dm-queue.md`
-- 规则：`.cursor/rules/daily-report.mdc`
-- 代码（old-mac Application Support）：`agent_bus_cursor_executor.py`、`daily-report-fallback.sh`
+- 记忆 v2：`2026-08-11-worker-ant-memory-v2-practice.md`
