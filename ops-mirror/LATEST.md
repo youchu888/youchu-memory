@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-12 20:20:28 +0800
+> 更新: 2026-08-12 20:31:33 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-12.md`
 
@@ -57,3 +57,5 @@
 | 2026-08-12 16:48 | 私聊#293 | telegram_dm | completed | 那你开始吧、有结果了通知我 |
 | 2026-08-12 19:59 | 私聊#294 | telegram_dm | completed | 什么进度了 大漏斗 |
 | 2026-08-12 20:13 | 私聊#295 | telegram_dm | completed | 停了吧 现在数据有问题 |
+| 2026-08-12 20:24 | 私聊#296 | telegram_dm | completed | 你查一下上游的数据问题嘛，查不到的话问下狂人嘛 |
+| 2026-08-12 20:27 | 私聊#297 | telegram_dm | in_progress | 你自己先查啊 |
