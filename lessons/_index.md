@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-12 | [群聊显式 @ 又初时必须群内给实质答复，禁止以未 @ 机器人为由不回](./2026-08-12-群聊显式-又初时必须群内给实质答复-禁止以未-机器人为由不回.md) | tg-group,协作,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-12 | [开 YARN 前确认集群 spark 包与 origin/dev 一致，旧版单文](./2026-08-12-开-yarn-前确认集群-spark-包与-origin-dev-一致-旧版单文件-sql-与仓.md) | spark-cluster,deploy,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-12 | [大漏斗集群读湖仓不读 SR，停跑自查优先查 Paimon 分区可读性与 Flin](./2026-08-12-大漏斗集群读湖仓不读-sr-停跑自查优先查-paimon-分区可读性与-flink-fanout.md) | big-funnel,datacheck,paimon,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-12 | [工作簿进展改双通道后：群里发完同内容 mirror bus（kind=progr](./2026-08-12-工作簿进展改双通道后-群里发完同内容-mirror-bus-kind-progress-同日-w.md) | workbook-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-12 | [显式 @ 又初 必须在群里实质答复；未 @ 则静默，回复中禁止解释「为何不回」](./2026-08-12-显式-又初-必须在群里实质答复-未-则静默-回复中禁止解释-为何不回.md) | tg-group,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-12 | [工作簿群/bus 进展统一读 `.claude/database/workboo](./2026-08-12-工作簿群-bus-进展统一读-claude-database-workbook-md-团队编号与.md) | workbook,session-rotate | 会话轮换前自动蒸馏 |
