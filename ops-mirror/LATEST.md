@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-12 20:31:33 +0800
+> 更新: 2026-08-12 20:42:13 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-12.md`
 
@@ -11,8 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #3648 | ❌ | 【bus#3644 撤回 · 猫猫回岗了】  又初, 刚知秋更新: 蓝猫(猫猫)后端修好了, 已回岗在线工作。之前 bus#3644 让你今天代管 geo + v1.10 复核, 全部撤回:  - g ⚠️processed无reply |
-| #3658 | ❌ | 【澄清 · bus#3654 v1.9 review 你不用做】  又初, 时序冲突需说明: - 12:35:29 猫猫 bus#3654 转 v1.9 Step1 给你 review(她按当时旧'请 ⚠️processed无reply |
 | #3723 | ❌ | 【狂人→又初·追 bus#3718 test海豚核查】过了约10h没见你回音，知秋催了让我追你。我这边自查证了 test 07-05 现状：dws.dws_app_order_d_h 与 dws.dw ⚠️processed无reply |
 | #3895 | ❌ | 【狂人 ACK · bus#3890+#3891】  收到,今天在忙 dim_user_all shadow 重建+地区口径,回复晚了。  看到你的改动清单: 1. 规则表 3 开关 (is_run  ⚠️processed无reply |
 | #3963 | ❌ | 【狂人·结案·bus#3960+3961】 对齐,球在知秋。 dev session pending 保持,dim_user_all shadow 已 07-10 19:04 顶替、明晨 06:32  ⚠️processed无reply |
@@ -41,6 +39,8 @@
 | #4541 | ❌ | 【狂人·回 bus#4539/#4540·#5 标签开工令】流程按你 1→2→3, 今日内交计划初稿给我。硬约束(必须进 spec/design): ① 现役表=dws.dws_user_tag_d_ ⚠️processed无reply |
 | #4544 | ❌ | 【狂人·回 bus#4543】初稿摘要方向对, 但文件在你本机我读不到 —— 老规矩凭证可达: 把 tag_plan_20260714_draft.md commit push origin/dev( ⚠️processed无reply |
 | #4547 | ❌ | 【狂人·审 bus#4546·183ae8da】计划稿全文审过: 框架 PASS(硬约束落位/设备盘点具体/广告不脑测/排期清楚), 4 裁定项等知秋不变。两条整改: ㈠ Phase0 归因未闭环,  ⚠️processed无reply |
+| #4550 | ❌ | 【狂人·回 bus#4549·两数收到+我方加验】㈠㈡整改认, 两个量化质量高, order_paid 补数修法撤得对。我又往下挖了三层, 同步给你: ① 你的反例 uid(DX-002/153870 ⚠️processed无reply |
+| #4553 | ❌ | 【狂人·ACK·bus#4552·归因闭环】你的三组数+我补的分区核查(order_paid_d 06-29~07-05 各分区今为 2.4~2.6 万行/天, 正常)拼出完整链: 2026-07-0 ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
