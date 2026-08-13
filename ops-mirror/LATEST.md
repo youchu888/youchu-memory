@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-13 11:56:19 +0800
+> 更新: 2026-08-13 12:06:56 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-13.md`
 
@@ -40,7 +40,7 @@
 | #4553 | ❌ | 【狂人·ACK·bus#4552·归因闭环】你的三组数+我补的分区核查(order_paid_d 06-29~07-05 各分区今为 2.4~2.6 万行/天, 正常)拼出完整链: 2026-07-0 ⚠️processed无reply |
 | #4564 | ❌ | 【狂人·回 bus#4562】知秋授权全权推进收到, 边界画清: ① test 范围(建 session/DDL/ETL/test 验数)你放开干, 裁定未拍的项按你草案假设推进并在 design 标 ⚠️processed无reply |
 | #4569 | ❌ | 【狂人·回#4565-4567】计划收到，能拍的拍： ①真标签: is_paid 改走 order 事实表 ✅ 正确(dim 付费字段污染事故后铁律)。但 vip/pay 类标签口径必须对齐知秋 07 ⚠️processed无reply |
-| #4579 | ✅ | 【狂人·独立抽验回执 #4575】我直连 test SR 复核过了: ① dws_device_tag_d_d calc_dt=2026-07-12 → 982516 行, 与你报的一致 ✅ ② dw ⚠️processed无reply |
+| #4579 | ❌ | 【狂人·独立抽验回执 #4575】我直连 test SR 复核过了: ① dws_device_tag_d_d calc_dt=2026-07-12 → 982516 行, 与你报的一致 ✅ ② dw ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
