@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [关键词页空白先查 ops-api 路由是否 404，prod 活表仅 d](lessons/2026-08-13-关键词页空白先查-ops-api-路由是否-404-prod-活表仅-d_h-search_ho.md) — 会话轮换蒸馏
+- [分工归属只认 workbook.md 实查项，清单无则等知秋定，禁止擅自](lessons/2026-08-13-分工归属只认-workbook-md-实查项-清单无则等知秋定-禁止擅自指派.md) — 会话轮换蒸馏
+- [活跃账号对数必须先对齐 app+业务日，再比 ads/dws/API 三](lessons/2026-08-13-活跃账号对数必须先对齐-app-业务日-再比-ads-dws-api-三处-t-日与-t-1-不.md) — 会话轮换蒸馏
 - [活跃数核查统一走用户活跃 V2 与 `dau_count`，V1 仅 P](lessons/2026-08-13-活跃数核查统一走用户活跃-v2-与-dau_count-v1-仅-pv-会系统性偏低.md) — 会话轮换蒸馏
 - [「搜索引擎占比」无标准字段时，用自然新增占比作临时代理并 bus 确认业](lessons/2026-08-13-搜索引擎占比-无标准字段时-用自然新增占比作临时代理并-bus-确认业务定义-禁止把站内搜索或渠.md) — 会话轮换蒸馏
 - [两页同指标不一致时，先查表/API/ETL 完成度与分时快照时刻，再查口](lessons/2026-08-13-两页同指标不一致时-先查表-api-etl-完成度与分时快照时刻-再查口径定义.md) — 会话轮换蒸馏

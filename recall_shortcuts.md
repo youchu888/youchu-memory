@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 13 2026 404 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-13-关键词页空白先查-ops-api-路由是否-404-prod-活表仅-d_h-search_ho.md` | 2026-08-13-关键词页空白先查-ops-api-路由是否-404-pro |
+| ## 08 13 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-13-分工归属只认-workbook-md-实查项-清单无则等知秋定-禁止擅自指派.md` | 2026-08-13-分工归属只认-workbook-md-实查项-清单无则等知 |
+| ## +业 08 13 2026 ads | `~/.dc-platform/memory/lessons/2026-08-13-活跃账号对数必须先对齐-app-业务日-再比-ads-dws-api-三处-t-日与-t-1-不.md` | 2026-08-13-活跃账号对数必须先对齐-app-业务日-再比-ads-dw |
+| 中日 以前 前才 勿拿 参考 及以 | `sessions/tg-rotate-2026-08-13-1730.md` | **T 日活跃只能当实时参考**，未收盘；**T-1 及以前才是闭合日活**，对 |
+| ads_product_day_stat_d dws_app_user_d t+ | `sessions/tg-rotate-2026-08-13-1730.md` | **数据概览走日批链**（`ads_product_day_stat_d`，T+ |
+| activeusercnt ads_product_day_stat_d.dau | `sessions/tg-rotate-2026-08-13-1730.md` | **日批闭合后应对齐同一套口径**：`ads_product_day_stat_ |
+| 2」 app v2 v2」默认 「数 「用 | `sessions/tg-rotate-2026-08-13-1730.md` | **活跃账号数两页不一致，先查 app + 业务日是否对齐**；常见是「数据概览 |
+| 404 analysis api d_d d_h keyword | `sessions/tg-rotate-2026-08-13-1730.md` | [LESSON: keyword-analysis/关键词页空白先查 ops-a |
+| lesson ownership workbook.md 分工 分工归属只认 则 | `sessions/tg-rotate-2026-08-13-1730.md` | [LESSON: ownership/分工归属只认 workbook.md 实查 |
+| +业 ads ap api app+业务日 datacheck | `sessions/tg-rotate-2026-08-13-1730.md` | [LESSON: datacheck/活跃账号对数必须先对齐 app+业务日，再 |
+| 04 33464 40 404→空） 4→ 520031 | `sessions/tg-rotate-2026-08-13-1730.md` | 关键词分析页空白根因常为 ops-api 与 PRD 路径不一致**（KPI 有 |
+| api etl ops prod show tables | `sessions/tg-rotate-2026-08-13-1730.md` | 又初边界**：只查数/验口径/探表；**不改 ETL、前端、ops-api**； |
+| 122523 82000 api app vs 一日 | `sessions/tg-rotate-2026-08-13-1730.md` | 82000 vs 122523 类问题**：先按 app 在库里/API 反查哪 |
+| bitm bitmap dws_app_user_d sum 加总 历史坑 | `sessions/tg-rotate-2026-08-13-1730.md` | 历史坑**：`dws_app_user_d` 日表若用 SUM 跨维度加总可能重 |
+| 中日 以前 前才 勿拿 参考 及以 | `sessions/tg-rotate-2026-08-13-1730.md` | T 日活跃只能当实时参考**，未收盘；**T-1 及以前才是闭合日活**，对数勿 |
 | ## 08 13 2026 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-08-13-活跃数核查统一走用户活跃-v2-与-dau_count-v1-仅-pv-会系统性偏低.md` | 2026-08-13-活跃数核查统一走用户活跃-v2-与-dau_count-v |
 | ## 08 13 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-13-搜索引擎占比-无标准字段时-用自然新增占比作临时代理并-bus-确认业务定义-禁止把站内搜索或渠.md` | 2026-08-13-搜索引擎占比-无标准字段时-用自然新增占比作临时代理并-b |
 | ## 08 13 2026 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-08-13-两页同指标不一致时-先查表-api-etl-完成度与分时快照时刻-再查口径定义.md` | 2026-08-13-两页同指标不一致时-先查表-api-etl-完成度与分时快 |
@@ -30,18 +45,3 @@
 | #6341 +详 bu bus_sent mirror s） | `sessions/tg-rotate-2026-08-12-2043.md` | 工作簿进展走**双通道**：群里自动发精简+详细，同秒 mirror 狂人（bu |
 | group lesson tg 不回 为由 人为 | `sessions/tg-rotate-2026-08-12-2043.md` | [LESSON: tg-group,协作/群聊显式 @ 又初时必须群内给实质答复 |
 | 60 ack agent bus reply 「嘛 | `sessions/tg-rotate-2026-08-12-2043.md` | agent-bus 铁律：60 秒内 ACK → 干活 → reply 结案；正 |
-| 08 11 2026 comic dwd_user_register_d dwd | `sessions/tg-rotate-2026-08-12-2043.md` | 2026-08-11 停跑根因：Paimon **schema-6 事故**—— |
-| fanout flink sche schema sr 「你 | `sessions/tg-rotate-2026-08-12-2043.md` | 说「你自己先查啊」= 不要等狂人回，主动查上游：SR 量级/小时分布、湖仓分区可 |
-| kill run_yarn_daily_sql submit yarn 「数 」 | `sessions/tg-rotate-2026-08-12-2043.md` | 主人说「数据有问题/停了吧」→ **立刻 kill** YARN 任务并清本地  |
-| +w 001 03 08 2026 20260807 | `sessions/tg-rotate-2026-08-12-2043.md` | 大漏斗 session `dev-20260807-big-funnel-001 |
-| @youchu_ai_bot @本 「没 」推 不回 以「 | `sessions/tg-rotate-2026-08-12-2043.md` | 群聊显式 @ 又初/初儿/@youchu_ai_bot 时，必须在群里给**实质 |
-| ## 08 12 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-12-工作簿进展改双通道后-群里发完同内容-mirror-bus-kind-progress-同日-w.md` | 2026-08-12-工作簿进展改双通道后-群里发完同内容-mirror-bus |
-| ## 08 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-12-显式-又初-必须在群里实质答复-未-则静默-回复中禁止解释-为何不回.md` | 2026-08-12-显式-又初-必须在群里实质答复-未-则静默-回复中禁止解释 |
-| ## #1 #10 #11 #4 #9 | `~/.dc-platform/memory/lessons/2026-08-12-工作簿群-bus-进展统一读-claude-database-workbook-md-团队编号与.md` | 2026-08-12-工作簿群-bus-进展统一读-claude-databas |
-| #1 #11「大漏斗」 #4 #9 #9「停留时长」 11 | `sessions/tg-rotate-2026-08-12-0641.md` | 旧#4「设备标签 v2」、#9「停留时长」、#11「大漏斗」**暂未入团队簿** |
-| bus group_workbook_progress_handler.py t | `sessions/tg-rotate-2026-08-12-0641.md` | 双通道代码接在 `group_workbook_progress_handler |
-| @w @worker_ant_bot」升级为 _a _b an bo | `sessions/tg-rotate-2026-08-12-0641.md` | 工作簿进展已从「仅群里同步 @worker_ant_bot」升级为**双通道** |
-| group lesson tg 「为 不回 中禁 | `sessions/tg-rotate-2026-08-12-0641.md` | [LESSON: tg-group/显式 @ 又初 必须在群里实质答复；未 @  |
-| #10 #11 #4 #9 .claude bus | `sessions/tg-rotate-2026-08-12-0641.md` | [LESSON: workbook/工作簿群/bus 进展统一读 `.claud |
-| #1 #4 11 dws_device_tag_d_d dws_user_tag | `sessions/tg-rotate-2026-08-12-0641.md` | 旧#4 ≠ 团队#11**：团队#11 是知秋主责的用户标签 Spark 迁移（ |
-| #1 #2 00 09 10 11） | `sessions/tg-rotate-2026-08-12-0641.md` | 编号根因冲突：09:00 探针仍解析旧 TG 编号（3/4/9/10/11），与 |
