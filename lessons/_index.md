@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-13 | [活跃数核查统一走用户活跃 V2 与 `dau_count`，V1 仅 PV 会系](./2026-08-13-活跃数核查统一走用户活跃-v2-与-dau_count-v1-仅-pv-会系统性偏低.md) | datacheck,API,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-13 | [「搜索引擎占比」无标准字段时，用自然新增占比作临时代理并 bus 确认业务定义，](./2026-08-13-搜索引擎占比-无标准字段时-用自然新增占比作临时代理并-bus-确认业务定义-禁止把站内搜索或渠.md) | db,SEO,organic,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-13 | [两页同指标不一致时，先查表/API/ETL 完成度与分时快照时刻，再查口径定义](./2026-08-13-两页同指标不一致时-先查表-api-etl-完成度与分时快照时刻-再查口径定义.md) | datacheck,口径,看板,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-12 | [日报须 executor 消费；私聊硬超时防卡队列](./2026-08-12-daily-report-executor-and-dm-queue.md) | daily-report, tgbot, queue, cursor-executor | DAILY_REPORT 进 executor；AI_HARD_TIMEOUT=1800；21:45 兜底 |
 | 2026-08-12 | [群聊显式 @ 又初时必须群内给实质答复，禁止以未 @ 机器人为由不回](./2026-08-12-群聊显式-又初时必须群内给实质答复-禁止以未-机器人为由不回.md) | tg-group,协作,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-12 | [开 YARN 前确认集群 spark 包与 origin/dev 一致，旧版单文](./2026-08-12-开-yarn-前确认集群-spark-包与-origin-dev-一致-旧版单文件-sql-与仓.md) | spark-cluster,deploy,session-rotate | 会话轮换前自动蒸馏 |

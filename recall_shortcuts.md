@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 13 2026 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-08-13-活跃数核查统一走用户活跃-v2-与-dau_count-v1-仅-pv-会系统性偏低.md` | 2026-08-13-活跃数核查统一走用户活跃-v2-与-dau_count-v |
+| ## 08 13 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-13-搜索引擎占比-无标准字段时-用自然新增占比作临时代理并-bus-确认业务定义-禁止把站内搜索或渠.md` | 2026-08-13-搜索引擎占比-无标准字段时-用自然新增占比作临时代理并-b |
+| ## 08 13 2026 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-08-13-两页同指标不一致时-先查表-api-etl-完成度与分时快照时刻-再查口径定义.md` | 2026-08-13-两页同指标不一致时-先查表-api-etl-完成度与分时快 |
+| 00 11 14.0 16.0 21 7.8 | `sessions/tg-rotate-2026-08-13-1229.md` | 8.12 分时累计活跃典型轨迹：约 11:00 ≈ 7.8 万、21:00 ≈  |
+| 13.8 7.8 vs 一致 上述 上述来源应一致 | `sessions/tg-rotate-2026-08-13-1229.md` | **日批跑完后**上述来源应一致；若白天看到 13.8 万 vs 7.8 万，优 |
+| 001 active ads_app_metrics_daily_d ads_p | `sessions/tg-rotate-2026-08-13-1229.md` | YC-001 活跃账号数可对齐链路：`ads_product_day_stat_ |
+| app prod seo 「单 「组 」和 | `sessions/tg-rotate-2026-08-13-1229.md` | 批量查多项目 SEO 占比时，固定对齐 **app 编码 + T-1 + pro |
+| ads.ads_product_day_stat_d channel new_r | `sessions/tg-rotate-2026-08-13-1229.md` | 最接近的代理口径是**自然新增占比**：`new_reg_nature_coun |
+| baidu bing google seo 不对 不是 | `sessions/tg-rotate-2026-08-13-1229.md` | 按渠道名匹配 baidu/google/bing 等，T-1 这批 SEO 项目 |
+| 不能 不能当作外链搜索引擎流量占比 作外 关表 关键 关键词相关表统计的是 | `sessions/tg-rotate-2026-08-13-1229.md` | 关键词相关表统计的是**站内搜索**，不能当作外链搜索引擎流量占比。 |
+| bus db lesson organic seo 「搜 | `sessions/tg-rotate-2026-08-13-1229.md` | [LESSON: db,SEO,organic/「搜索引擎占比」无标准字段时，用 |
+| active dau_ids pv（ trend user v1 | `sessions/tg-rotate-2026-08-13-1229.md` | 「用户活跃」若仍走废弃 **V1** `/user/active/trend`， |
+| api 一致 不一 不同 不要 不要先假设业务口径不同 | `sessions/tg-rotate-2026-08-13-1229.md` | 看板两页数字不一致，先**分别对齐底层表和 API**，不要先假设业务口径不同。 |
+| agent bus organic sem 不确 业务 | `sessions/tg-rotate-2026-08-13-1229.md` | 口径不确定时，**先 agent-bus 找业务方拍板**（是否等于 organ |
+| baidu bing google 「搜 」在 不要 | `sessions/tg-rotate-2026-08-13-1229.md` | 口语里的「搜索引擎占比」在数仓**没有同名现成指标**；先查元数据/字段，不要默 |
 | ## 08 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-12-群聊显式-又初时必须群内给实质答复-禁止以未-机器人为由不回.md` | 2026-08-12-群聊显式-又初时必须群内给实质答复-禁止以未-机器人为由不 |
 | ## 08 12 2026 agent_session_rotate clust | `~/.dc-platform/memory/lessons/2026-08-12-开-yarn-前确认集群-spark-包与-origin-dev-一致-旧版单文件-sql-与仓.md` | 2026-08-12-开-yarn-前确认集群-spark-包与-origin- |
 | ## 08 12 2026 agent_session_rotate big | `~/.dc-platform/memory/lessons/2026-08-12-大漏斗集群读湖仓不读-sr-停跑自查优先查-paimon-分区可读性与-flink-fanout.md` | 2026-08-12-大漏斗集群读湖仓不读-sr-停跑自查优先查-paimon- |
@@ -30,18 +45,3 @@
 | #10 #11 #4 #9 .claude bus | `sessions/tg-rotate-2026-08-12-0641.md` | [LESSON: workbook/工作簿群/bus 进展统一读 `.claud |
 | #1 #4 11 dws_device_tag_d_d dws_user_tag | `sessions/tg-rotate-2026-08-12-0641.md` | 旧#4 ≠ 团队#11**：团队#11 是知秋主责的用户标签 Spark 迁移（ |
 | #1 #2 00 09 10 11） | `sessions/tg-rotate-2026-08-12-0641.md` | 编号根因冲突：09:00 探针仍解析旧 TG 编号（3/4/9/10/11），与 |
-| ## +编 .claude canonical database tg | `sessions/tg-rotate-2026-08-12-0641.md` | 团队唯一工作簿 canonical 在 `.claude/database/wo |
-| agent_bus_send.py bus bus」 reply 「结 「要 | `sessions/tg-rotate-2026-08-12-0641.md` | 狂人 bus 派活若写明「结论请回 bus」，验完直接 `agent_bus_s |
-| —— →」 「又 」— 一律 一律不回 | `sessions/tg-rotate-2026-08-12-0641.md` | 只有上述四种显式 @ 才回；裸写「又初/初儿」、只 @ 别人、标题带「又初→」— |
-| ## inline markdown 一句 内心 写内 | `sessions/tg-rotate-2026-08-12-0641.md` | 群聊口吻学狂人：第一句给结论，短句口语、数字 inline；最多约 4 条 `· |
-| @youchu8888 @youchu_ai_bot @初儿 @又初 @我 「没 | `sessions/tg-rotate-2026-08-12-0641.md` | 协作群显式 `@youchu_ai_bot` / `@youchu8888` / |
-| ## 08 11 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-08-11-用户说-推送云端-时只传已定稿-reports-文件-禁止改写-成功回执须含云端-record-.md` | 2026-08-11-用户说-推送云端-时只传已定稿-reports-文件-禁止 |
-| @youchu8888 @youchu_ai_bot @初儿 @又初 tg 「我 | `sessions/tg-rotate-2026-08-11-0641.md` | TG 群/旁听：仅被显式 `@youchu_ai_bot / @youchu88 |
-| #2 28 7） 87 「推 「继 | `sessions/tg-rotate-2026-08-11-0641.md` | 用户从「继续大漏斗」（私聊#287）切到「推送云端」时：**先完成最新明确指令* |
-| dn6517 id inser inserted record updated | `sessions/tg-rotate-2026-08-11-0641.md` | 上传成功回执应带三要素：**文件路径**、**工号 DN6517**、**云端  |
-| .cursor as date dd ia mm | `sessions/tg-rotate-2026-08-11-0641.md` | 未指定日期时默认当日（Asia/Shanghai）；脚本：`.cursor/sc |
-| cloud daily id inserted lesson record | `sessions/tg-rotate-2026-08-11-0641.md` | [LESSON: daily-report,cloud-upload/用户说「推 |
-| check commit dev session spot stage4 | `sessions/tg-rotate-2026-08-11-0641.md` | 验数通过后再 commit 推仓并推进 dev-session stage4；勿 |
-| app memory.md readme.md spark 一步 下一 | `sessions/tg-rotate-2026-08-11-0641.md` | 防踩坑文档落 `spark/README.md` + 会话 `memory.md |
-| app_2556 run_yarn_daily run_yarn_daily_s | `sessions/tg-rotate-2026-08-11-0641.md` | `app_2556` 源表 0 行会导致「任务成功但无产出」假成功；Yarn 日 |
-| 「别 」类 一直 先改 先改脚本或流程堵根因 再继 | `sessions/tg-rotate-2026-08-11-0641.md` | 收到「别一直发拦截/说明」类指摘：先改脚本或流程堵根因，再继续推进，禁止反复复读 |
