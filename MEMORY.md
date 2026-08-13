@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [DAILY_REPORT 唤醒写入 wake_feed 但 execut](lessons/2026-08-14-daily_report-唤醒写入-wake_feed-但-executor-未消费时-补跑-s.md) — 会话轮换蒸馏
+- [Spark/YARN 补数或 A/B 判定跑完后须立刻 bus repl](lessons/2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-bus-reply-报秒数与选型-勿等催.md) — 会话轮换蒸馏
+- [写明日动作前先对当天周几，周四及以后禁写「周中」作截止，改「周五」等具体](lessons/2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改-周五-等具体日期.md) — 会话轮换蒸馏
 - [关键词页空白先查 ops-api 路由是否 404，prod 活表仅 d](lessons/2026-08-13-关键词页空白先查-ops-api-路由是否-404-prod-活表仅-d_h-search_ho.md) — 会话轮换蒸馏
 - [分工归属只认 workbook.md 实查项，清单无则等知秋定，禁止擅自](lessons/2026-08-13-分工归属只认-workbook-md-实查项-清单无则等知秋定-禁止擅自指派.md) — 会话轮换蒸馏
 - [活跃账号对数必须先对齐 app+业务日，再比 ads/dws/API 三](lessons/2026-08-13-活跃账号对数必须先对齐-app-业务日-再比-ads-dws-api-三处-t-日与-t-1-不.md) — 会话轮换蒸馏

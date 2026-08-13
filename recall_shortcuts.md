@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## .p 08 14 2026 _d | `~/.dc-platform/memory/lessons/2026-08-14-daily_report-唤醒写入-wake_feed-但-executor-未消费时-补跑-s.md` | 2026-08-14-daily_report-唤醒写入-wake_feed-但 |
+| ## 08 14 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-bus-reply-报秒数与选型-勿等催.md` | 2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-b |
+| ## 08 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改-周五-等具体日期.md` | 2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改 |
+| stage1 v2.5.2 与渠 互动 互动覆盖度交底与渠道口径待定项先整理入团 | `sessions/tg-rotate-2026-08-14-0630.md` | 漫画分析字段字典 v2.5.2 口径层通过后，互动覆盖度交底与渠道口径待定项先整 |
+| 001 vs yc 一致 上午 不一 | `sessions/tg-rotate-2026-08-14-0630.md` | YC-001 数据概览 vs 用户活跃上午不一致，日批完成后复验两页口径一致，差 |
+| 「搜 」时 不是 不是投放渠道 交核 仓无 | `sessions/tg-rotate-2026-08-14-0630.md` | 数仓无现成「搜索引擎占比」时，可先用自然新增占比作代理交核对；正口径是**网页端 |
+| bus reply spark yarn 不回 与选 | `sessions/tg-rotate-2026-08-14-0630.md` | Spark/YARN 补数链跑完须**立刻 bus reply 结案**报秒数与 |
+| 5410s batch13 day_small.sql small 于基 仍走 | `sessions/tg-rotate-2026-08-14-0630.md` | BATCH13 判据：small 表秒数 **低于基准 5410s 用缓存版** |
+| bus summary.tsv yarn 一回 三选 催办 | `sessions/tg-rotate-2026-08-14-0630.md` | bus 催办 A/B 补数时，先查 YARN/日志/_summary.tsv 再 |
+| 「周 「明 」已 」截 」） 中」 | `sessions/tg-rotate-2026-08-14-0630.md` | 写「明日动作」截止须先对当天周几；周四写「周中」已过期，改具体日期（如「周五」） |
+| 「上 」须 上传 上传前不改字 不动 不改 | `sessions/tg-rotate-2026-08-14-0630.md` | 用户说「上传云端」须以其给的定稿**原封不动**上传；先更新本地报告文件再跑上传 |
+| .cursor dd.md log mac） mm post_daily_rep | `sessions/tg-rotate-2026-08-14-0630.md` | 日报漏推补跑顺序：`prepare_daily_report_sync` → 写 |
+| 21 30 45 agent_loop_wake_daily_report cu | `sessions/tg-rotate-2026-08-14-0630.md` | `AGENT_LOOP_WAKE_DAILY_REPORT` 21:30 已写入 |
+| agent bus lesson reply spark yarn | `sessions/tg-rotate-2026-08-14-0630.md` | [LESSON: agent-bus/Spark/YARN 补数或 A/B 判定 |
+| daily lesson report 「周 」作 」等 | `sessions/tg-rotate-2026-08-14-0630.md` | [LESSON: daily-report/写明日动作前先对当天周几，周四及以后 |
 | ## 08 13 2026 404 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-13-关键词页空白先查-ops-api-路由是否-404-prod-活表仅-d_h-search_ho.md` | 2026-08-13-关键词页空白先查-ops-api-路由是否-404-pro |
 | ## 08 13 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-13-分工归属只认-workbook-md-实查项-清单无则等知秋定-禁止擅自指派.md` | 2026-08-13-分工归属只认-workbook-md-实查项-清单无则等知 |
 | ## +业 08 13 2026 ads | `~/.dc-platform/memory/lessons/2026-08-13-活跃账号对数必须先对齐-app-业务日-再比-ads-dws-api-三处-t-日与-t-1-不.md` | 2026-08-13-活跃账号对数必须先对齐-app-业务日-再比-ads-dw |
@@ -30,18 +45,3 @@
 | ads.ads_product_day_stat_d channel new_r | `sessions/tg-rotate-2026-08-13-1229.md` | 最接近的代理口径是**自然新增占比**：`new_reg_nature_coun |
 | baidu bing google seo 不对 不是 | `sessions/tg-rotate-2026-08-13-1229.md` | 按渠道名匹配 baidu/google/bing 等，T-1 这批 SEO 项目 |
 | 不能 不能当作外链搜索引擎流量占比 作外 关表 关键 关键词相关表统计的是 | `sessions/tg-rotate-2026-08-13-1229.md` | 关键词相关表统计的是**站内搜索**，不能当作外链搜索引擎流量占比。 |
-| bus db lesson organic seo 「搜 | `sessions/tg-rotate-2026-08-13-1229.md` | [LESSON: db,SEO,organic/「搜索引擎占比」无标准字段时，用 |
-| active dau_ids pv（ trend user v1 | `sessions/tg-rotate-2026-08-13-1229.md` | 「用户活跃」若仍走废弃 **V1** `/user/active/trend`， |
-| api 一致 不一 不同 不要 不要先假设业务口径不同 | `sessions/tg-rotate-2026-08-13-1229.md` | 看板两页数字不一致，先**分别对齐底层表和 API**，不要先假设业务口径不同。 |
-| agent bus organic sem 不确 业务 | `sessions/tg-rotate-2026-08-13-1229.md` | 口径不确定时，**先 agent-bus 找业务方拍板**（是否等于 organ |
-| baidu bing google 「搜 」在 不要 | `sessions/tg-rotate-2026-08-13-1229.md` | 口语里的「搜索引擎占比」在数仓**没有同名现成指标**；先查元数据/字段，不要默 |
-| ## 08 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-12-群聊显式-又初时必须群内给实质答复-禁止以未-机器人为由不回.md` | 2026-08-12-群聊显式-又初时必须群内给实质答复-禁止以未-机器人为由不 |
-| ## 08 12 2026 agent_session_rotate clust | `~/.dc-platform/memory/lessons/2026-08-12-开-yarn-前确认集群-spark-包与-origin-dev-一致-旧版单文件-sql-与仓.md` | 2026-08-12-开-yarn-前确认集群-spark-包与-origin- |
-| ## 08 12 2026 agent_session_rotate big | `~/.dc-platform/memory/lessons/2026-08-12-大漏斗集群读湖仓不读-sr-停跑自查优先查-paimon-分区可读性与-flink-fanout.md` | 2026-08-12-大漏斗集群读湖仓不读-sr-停跑自查优先查-paimon- |
-| 0~23 et etl hive paimon prod | `sessions/tg-rotate-2026-08-12-2043.md` | **大漏斗读湖不读 SR**：prod SR 探表正常（行数、0~23 小时无断 |
-| 08 12 dev origin spark sql | `sessions/tg-rotate-2026-08-12-2043.md` | **集群代码可能与仓库不同步**：08-12 跑的是集群上 08-08 旧版单文 |
-| 81 big_funnel ec2 home metrics running | `sessions/tg-rotate-2026-08-12-2043.md` | 集群包路径 `/home/ec2-user/spark/big_funnel/` |
-| 09 20 30~10 81 app application_id | `sessions/tg-rotate-2026-08-12-2043.md` | 集群试跑命令：`run_yarn_daily_sql.sh <dt> S SF- |
-| #6341 +详 bu bus_sent mirror s） | `sessions/tg-rotate-2026-08-12-2043.md` | 工作簿进展走**双通道**：群里自动发精简+详细，同秒 mirror 狂人（bu |
-| group lesson tg 不回 为由 人为 | `sessions/tg-rotate-2026-08-12-2043.md` | [LESSON: tg-group,协作/群聊显式 @ 又初时必须群内给实质答复 |
-| 60 ack agent bus reply 「嘛 | `sessions/tg-rotate-2026-08-12-2043.md` | agent-bus 铁律：60 秒内 ACK → 干活 → reply 结案；正 |

@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-14 | [DAILY_REPORT 唤醒写入 wake_feed 但 executor 未](./2026-08-14-daily_report-唤醒写入-wake_feed-但-executor-未消费时-补跑-s.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-14 | [Spark/YARN 补数或 A/B 判定跑完后须立刻 bus reply 报秒](./2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-bus-reply-报秒数与选型-勿等催.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-14 | [写明日动作前先对当天周几，周四及以后禁写「周中」作截止，改「周五」等具体日期](./2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改-周五-等具体日期.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-13 | [关键词页空白先查 ops-api 路由是否 404，prod 活表仅 d_h/s](./2026-08-13-关键词页空白先查-ops-api-路由是否-404-prod-活表仅-d_h-search_ho.md) | keyword-analysis,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-13 | [分工归属只认 workbook.md 实查项，清单无则等知秋定，禁止擅自指派](./2026-08-13-分工归属只认-workbook-md-实查项-清单无则等知秋定-禁止擅自指派.md) | ownership,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-13 | [活跃账号对数必须先对齐 app+业务日，再比 ads/dws/API 三处；T ](./2026-08-13-活跃账号对数必须先对齐-app-业务日-再比-ads-dws-api-三处-t-日与-t-1-不.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
