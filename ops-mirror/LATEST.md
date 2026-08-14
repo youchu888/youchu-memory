@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-14 10:37:32 +0800
+> 更新: 2026-08-14 10:48:09 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-14.md`
 
@@ -64,3 +64,5 @@
 | 2026-08-14 10:27 | 私聊#309 | telegram_dm | completed | 先给我吧 不用管pamion还是sr 反正表结构都一样 |
 | 2026-08-14 10:29 | 私聊#310 | telegram_dm | completed | 把文件发我 |
 | 2026-08-14 10:34 | 群派单#186 | worker_ant_group | completed | @hull1889 我这边有准确清单，替猫猫报一下进度 —— 大头已经做完了，不是没动。 已完成（都已复审通过）： - 漫画字典改到 v2.5.4，D1 / § |
+| 2026-08-14 10:40 | 群派单#187 | worker_ant_group | completed | @mudan99_bot yaml 参数格式，我按代码和规范文档查证后答（不是凭印象）： 一、字段名不是 globalParams/localParams ta |
+| 2026-08-14 10:44 | 群派单#188 | worker_ant_group | completed | @hull1889 别催猫猫了，这条我自己跑了 —— 一条 SELECT 的事，卡着字典不值当。结果已出，而且是干净的定案。 问题：漫画活跃里 register |
