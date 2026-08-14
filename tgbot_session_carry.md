@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-14 · 最新归档：`sessions/tg-rotate-2026-08-14-0630.md`
+> 更新：2026-08-14 · 最新归档：`sessions/tg-rotate-2026-08-14-1532.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- [LESSON: agent-execution|汇报任务进度前先查集群日志、outgoing 产物、bus 结案状态，禁止未核实就下「没干/没跑」结论]
+- **大漏斗后端对接**：表 `dws.dws_app_event_funnel_d_d`；粒度 `(dt, app_id, is_new)`；4 维度列 + 18 事件 × 3 指标（`user_cnt`/`session_cnt`/`event_cnt`）= 54 列；口径字典见平台 `metric_big_funnel_event_dictionary`。
+- **DDL 双份**：主跑 Paimon 在 `ops_system/04.dws/dws_app_event_funnel_d_d/spark/sql/…paimon.ddl.sql`；后端对接 SR 形态在同级 `dws_app_event_funnel_d_d_ddl.sql`；设计见 `spec.md`/`design.md`。
+- **私聊要表结构时**：从仓库整理成「对接说明 md + 纯 DDL sql」两文件，放到 `omdb/tgbot/outgoing/` 再 `[SEND_FILE]`；不必纠结 Paimon/SR，表结构一致。
+- **交付缺口常见形态**：口径/DDL 已在仓或平台，但未单独打包成「后端对接包」私聊发出；SR 同步未就绪时后端默认查 SR 可能接不上。
+- **dwd_*_r 历史补数分工（#6488）**：狂人起作业（`chain_range_cached.sh`，08-09→07-13 倒序 28 天）；又初**只验数、不起作业**；异常 bus 狂人，不自行修。
+- **补数验数节奏**：按 `_summary.tsv` + `verify_*.log` 逐日验 15 张表量级；与相邻日一致、无 0 行/数量级跳变即通过；A/B 已定缓存版（1652s vs 5410s）。
+- **站群关键词探查**：脚本在 `ops_system/_probe/site_group_search_kw/`，上 hadoop-1 跑；结果日志在 `site_group_search_kw/logs/`；口径狂人 #6417 已交，跑完 TOP 词条 + 条数 bus 结案。
+- **被问「昨晚活干没干」**：分条对照派单——已闭环 / 进行中 / 确实欠着；欠着要认，不混在已做项里。
+- **inbox 误标未结案**：bus 早回过但 inbox 仍 open 会反复被催（如停留四段口径 #4342→#6485）；reply 成功才算结案。
+- **汇报前必查现场**：探查类任务先查集群日志、bus 结案记录，再答「跑没跑」；未核实就答「没跑」会误报欠账。
+- **优先级陷阱**：补数盯盘、bus 回执、口径交底占满注意力时，知秋点名的一次性探查（不需等人）仍须排期闭环，不能无限后搁。
+- **主人要求（#313）**：安排的活都要干——**可以延迟，不能不做**；无指令也可自主判断该推进什么，先干再报，灵活主动。
 - [LESSON: daily-report|写明日动作前先对当天周几，周四及以后禁写「周中」作截止，改「周五」等具体日期]
 - [LESSON: agent-bus|Spark/YARN 补数或 A/B 判定跑完后须立刻 bus reply 报秒数与选型，勿等催办才回执]
 - `AGENT_LOOP_WAKE_DAILY_REPORT` 21:30 已写入 `wake_feed`，若 Cursor executor 未消费，21:45 fallback 前不会自动写稿推私聊；用户私聊相当于手动补唤醒
 - 日报漏推补跑顺序：`prepare_daily_report_sync` → 写稿 → `post_daily_report_to_dm.py`（old-mac）；定稿落 `.cursor/work-log/reports/日报-YYYY-MM-DD.md`
 - 用户说「上传云端」须以其给的定稿**原封不动**上传；先更新本地报告文件再跑上传脚本，上传前不改字
-- 写「明日动作」截止须先对当天周几；周四写「周中」已过期，改具体日期（如「周五」）或「周五，待拍板」
-- bus 催办 A/B 补数时，先查 YARN/日志/_summary.tsv 再三选一回复：已跑完 / 还在跑 / 挂了
-- BATCH13 判据：small 表秒数 **低于基准 5410s 用缓存版** `day_small.sql`，否则原版；大表仍走原版
-- Spark/YARN 补数链跑完须**立刻 bus reply 结案**报秒数与选型；跑完不回执会被当成超时仍在跑
-- 数仓无现成「搜索引擎占比」时，可先用自然新增占比作代理交核对；正口径是**网页端来源域名**，不是投放渠道
-- YC-001 数据概览 vs 用户活跃上午不一致，日批完成后复验两页口径一致，差异多为**日批中间态**
-- 漫画分析字段字典 v2.5.2 口径层通过后，互动覆盖度交底与渠道口径待定项先整理入团队知识库再推进 stage1
-- T 日活跃只能当实时参考**，未收盘；**T-1 及以前才是闭合日活**，对数勿拿进行中日活和昨日定稿比。
-- 历史坑**：`dws_app_user_d` 日表若用 SUM 跨维度加总可能重复计人；对数时可对照 `_h` bitmap 汇总。
-- 82000 vs 122523 类问题**：先按 app 在库里/API 反查哪个数对应哪一日，再解释差值（日期 + 未收盘），勿先入为主判两页口径不一致。
-- 又初边界**：只查数/验口径/探表；**不改 ETL、前端、ops-api**；表名勿凭猜测，prod 须 `SHOW TABLES` 实查。
-- 关键词分析页空白根因常为 ops-api 与 PRD 路径不一致**（KPI 有数、Top10/词云 404→空），非缺数；prod 可独立复现词量（如 33464 词 / 520031 次）。
-- [LESSON: datacheck|活跃账号对数必须先对齐 app+业务日，再比 ads/dws/API 三处；T 日与 T-1 不可混比]
 

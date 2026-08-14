@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 14 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-14-主人允许无二次指令时自主推进已派活-分工变被动-如补数只验数-不覆盖其它仍归己的独立任务.md` | 2026-08-14-主人允许无二次指令时自主推进已派活-分工变被动-如补数只验 |
+| ## 08 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-14-派活默认闭环-一次性独立任务-如-_probe-上集群-不因盯盘-回执让路-indefinite.md` | 2026-08-14-派活默认闭环-一次性独立任务-如-_probe-上集群-不 |
+| ## 08 14 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-14-汇报任务进度前先查集群日志-outgoing-产物-bus-结案状态-禁止未核实就下-没干-没跑.md` | 2026-08-14-汇报任务进度前先查集群日志-outgoing-产物-bus |
+| bus 一次 不能 不能无限 不能无限后搁 不需 | `sessions/tg-rotate-2026-08-14-1532.md` | **优先级陷阱**：补数盯盘、bus 回执、口径交底占满注意力时，知秋点名的一次 |
+| bus 「没 「跑 」会 任务 会误 | `sessions/tg-rotate-2026-08-14-1532.md` | **汇报前必查现场**：探查类任务先查集群日志、bus 结案记录，再答「跑没跑」 |
+| #4342→#6 #4342→#6485） bus inbox open rep | `sessions/tg-rotate-2026-08-14-1532.md` | **inbox 误标未结案**：bus 早回过但 inbox 仍 open 会反 |
+| —— —已 「昨 不混 不混在已做项里 做项 | `sessions/tg-rotate-2026-08-14-1532.md` | **被问「昨晚活干没干」**：分条对照派单——已闭环 / 进行中 / 确实欠着； |
+| #6417 bus hadoop logs ops_system probe | `sessions/tg-rotate-2026-08-14-1532.md` | **站群关键词探查**：脚本在 `ops_system/_probe/site_ |
+| .log 15 16 2s 52 5410s） | `sessions/tg-rotate-2026-08-14-1532.md` | **补数验数节奏**：按 `_summary.tsv` + `verify_*. |
+| #6 08 09→07 13 28 48 | `sessions/tg-rotate-2026-08-14-1532.md` | **dwd_*_r 历史补数分工（#6488）**：狂人起作业（`chain_r |
+| ddl sr 「后 」私 不上 交付 | `sessions/tg-rotate-2026-08-14-1532.md` | **交付缺口常见形态**：口径/DDL 已在仓或平台，但未单独打包成「后端对接包 |
+| ddl l」 md omdb ou outgoing | `sessions/tg-rotate-2026-08-14-1532.md` | **私聊要表结构时**：从仓库整理成「对接说明 md + 纯 DDL sql」两 |
+| 04.dws ddl design.md dws_app_event_funn  | `sessions/tg-rotate-2026-08-14-1532.md` | **DDL 双份**：主跑 Paimon 在 `ops_system/04.dw |
+| 18 54 app_id dt dws.dws_app_event_funnel | `sessions/tg-rotate-2026-08-14-1532.md` | **大漏斗后端对接**：表 `dws.dws_app_event_funnel_ |
+| agent bus execution lesson outgoing 「没 | `sessions/tg-rotate-2026-08-14-1532.md` | [LESSON: agent-execution/汇报任务进度前先查集群日志、o |
 | ## .p 08 14 2026 _d | `~/.dc-platform/memory/lessons/2026-08-14-daily_report-唤醒写入-wake_feed-但-executor-未消费时-补跑-s.md` | 2026-08-14-daily_report-唤醒写入-wake_feed-但 |
 | ## 08 14 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-bus-reply-报秒数与选型-勿等催.md` | 2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-b |
 | ## 08 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改-周五-等具体日期.md` | 2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改 |
@@ -30,18 +45,3 @@
 | 404 analysis api d_d d_h keyword | `sessions/tg-rotate-2026-08-13-1730.md` | [LESSON: keyword-analysis/关键词页空白先查 ops-a |
 | lesson ownership workbook.md 分工 分工归属只认 则 | `sessions/tg-rotate-2026-08-13-1730.md` | [LESSON: ownership/分工归属只认 workbook.md 实查 |
 | +业 ads ap api app+业务日 datacheck | `sessions/tg-rotate-2026-08-13-1730.md` | [LESSON: datacheck/活跃账号对数必须先对齐 app+业务日，再 |
-| 04 33464 40 404→空） 4→ 520031 | `sessions/tg-rotate-2026-08-13-1730.md` | 关键词分析页空白根因常为 ops-api 与 PRD 路径不一致**（KPI 有 |
-| api etl ops prod show tables | `sessions/tg-rotate-2026-08-13-1730.md` | 又初边界**：只查数/验口径/探表；**不改 ETL、前端、ops-api**； |
-| 122523 82000 api app vs 一日 | `sessions/tg-rotate-2026-08-13-1730.md` | 82000 vs 122523 类问题**：先按 app 在库里/API 反查哪 |
-| bitm bitmap dws_app_user_d sum 加总 历史坑 | `sessions/tg-rotate-2026-08-13-1730.md` | 历史坑**：`dws_app_user_d` 日表若用 SUM 跨维度加总可能重 |
-| 中日 以前 前才 勿拿 参考 及以 | `sessions/tg-rotate-2026-08-13-1730.md` | T 日活跃只能当实时参考**，未收盘；**T-1 及以前才是闭合日活**，对数勿 |
-| ## 08 13 2026 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-08-13-活跃数核查统一走用户活跃-v2-与-dau_count-v1-仅-pv-会系统性偏低.md` | 2026-08-13-活跃数核查统一走用户活跃-v2-与-dau_count-v |
-| ## 08 13 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-13-搜索引擎占比-无标准字段时-用自然新增占比作临时代理并-bus-确认业务定义-禁止把站内搜索或渠.md` | 2026-08-13-搜索引擎占比-无标准字段时-用自然新增占比作临时代理并-b |
-| ## 08 13 2026 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-08-13-两页同指标不一致时-先查表-api-etl-完成度与分时快照时刻-再查口径定义.md` | 2026-08-13-两页同指标不一致时-先查表-api-etl-完成度与分时快 |
-| 00 11 14.0 16.0 21 7.8 | `sessions/tg-rotate-2026-08-13-1229.md` | 8.12 分时累计活跃典型轨迹：约 11:00 ≈ 7.8 万、21:00 ≈  |
-| 13.8 7.8 vs 一致 上述 上述来源应一致 | `sessions/tg-rotate-2026-08-13-1229.md` | **日批跑完后**上述来源应一致；若白天看到 13.8 万 vs 7.8 万，优 |
-| 001 active ads_app_metrics_daily_d ads_p | `sessions/tg-rotate-2026-08-13-1229.md` | YC-001 活跃账号数可对齐链路：`ads_product_day_stat_ |
-| app prod seo 「单 「组 」和 | `sessions/tg-rotate-2026-08-13-1229.md` | 批量查多项目 SEO 占比时，固定对齐 **app 编码 + T-1 + pro |
-| ads.ads_product_day_stat_d channel new_r | `sessions/tg-rotate-2026-08-13-1229.md` | 最接近的代理口径是**自然新增占比**：`new_reg_nature_coun |
-| baidu bing google seo 不对 不是 | `sessions/tg-rotate-2026-08-13-1229.md` | 按渠道名匹配 baidu/google/bing 等，T-1 这批 SEO 项目 |
-| 不能 不能当作外链搜索引擎流量占比 作外 关表 关键 关键词相关表统计的是 | `sessions/tg-rotate-2026-08-13-1229.md` | 关键词相关表统计的是**站内搜索**，不能当作外链搜索引擎流量占比。 |

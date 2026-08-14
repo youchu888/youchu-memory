@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-14 | [主人允许无二次指令时自主推进已派活；分工变被动（如补数只验数）不覆盖其它仍归己的](./2026-08-14-主人允许无二次指令时自主推进已派活-分工变被动-如补数只验数-不覆盖其它仍归己的独立任务.md) | agent-autonomy,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-14 | [派活默认闭环：一次性独立任务（如 _probe 上集群）不因盯盘/回执让路 in](./2026-08-14-派活默认闭环-一次性独立任务-如-_probe-上集群-不因盯盘-回执让路-indefinite.md) | task-priority,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-14 | [汇报任务进度前先查集群日志、outgoing 产物、bus 结案状态，禁止未核实](./2026-08-14-汇报任务进度前先查集群日志-outgoing-产物-bus-结案状态-禁止未核实就下-没干-没跑.md) | agent-execution,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-14 | [DAILY_REPORT 唤醒写入 wake_feed 但 executor 未](./2026-08-14-daily_report-唤醒写入-wake_feed-但-executor-未消费时-补跑-s.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-14 | [Spark/YARN 补数或 A/B 判定跑完后须立刻 bus reply 报秒](./2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-bus-reply-报秒数与选型-勿等催.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-14 | [写明日动作前先对当天周几，周四及以后禁写「周中」作截止，改「周五」等具体日期](./2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改-周五-等具体日期.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |

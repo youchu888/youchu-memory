@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [主人允许无二次指令时自主推进已派活；分工变被动（如补数只验数）不覆盖其它](lessons/2026-08-14-主人允许无二次指令时自主推进已派活-分工变被动-如补数只验数-不覆盖其它仍归己的独立任务.md) — 会话轮换蒸馏
+- [派活默认闭环：一次性独立任务（如 _probe 上集群）不因盯盘/回执让](lessons/2026-08-14-派活默认闭环-一次性独立任务-如-_probe-上集群-不因盯盘-回执让路-indefinite.md) — 会话轮换蒸馏
+- [汇报任务进度前先查集群日志、outgoing 产物、bus 结案状态，禁](lessons/2026-08-14-汇报任务进度前先查集群日志-outgoing-产物-bus-结案状态-禁止未核实就下-没干-没跑.md) — 会话轮换蒸馏
 - [DAILY_REPORT 唤醒写入 wake_feed 但 execut](lessons/2026-08-14-daily_report-唤醒写入-wake_feed-但-executor-未消费时-补跑-s.md) — 会话轮换蒸馏
 - [Spark/YARN 补数或 A/B 判定跑完后须立刻 bus repl](lessons/2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-bus-reply-报秒数与选型-勿等催.md) — 会话轮换蒸馏
 - [写明日动作前先对当天周几，周四及以后禁写「周中」作截止，改「周五」等具体](lessons/2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改-周五-等具体日期.md) — 会话轮换蒸馏
