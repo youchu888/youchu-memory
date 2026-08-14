@@ -32,6 +32,10 @@ launchctl print gui/$UID/com.youchu.daily-report-fallback
 rg AI_HARD_TIMEOUT_SEC omdb/tgbot/.env
 ```
 
+## 后续（2026-08-14）
+
+08-12 只写了要求，**代码当时没改**。08-12～08-14 连续三天仍断在同一点。真正修法见 `2026-08-14-daily-report-executor-must-parse-DAILY_REPORT.md`。
+
 ## 关联
 
 - `agent_bus_cursor_executor.py`

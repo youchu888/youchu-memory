@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [日报 21:30 断点：executor 必须真解析 DAILY_REPORT；写 lesson 不算修完](lessons/2026-08-14-daily-report-executor-must-parse-DAILY_REPORT.md) — `_parse_wake_line` 只认 AGENT_BUS 会丢掉日报；fallback 须直推/直跑；改完 kickstart
 - [主人允许无二次指令时自主推进已派活；分工变被动（如补数只验数）不覆盖其它](lessons/2026-08-14-主人允许无二次指令时自主推进已派活-分工变被动-如补数只验数-不覆盖其它仍归己的独立任务.md) — 会话轮换蒸馏
 - [派活默认闭环：一次性独立任务（如 _probe 上集群）不因盯盘/回执让](lessons/2026-08-14-派活默认闭环-一次性独立任务-如-_probe-上集群-不因盯盘-回执让路-indefinite.md) — 会话轮换蒸馏
 - [汇报任务进度前先查集群日志、outgoing 产物、bus 结案状态，禁](lessons/2026-08-14-汇报任务进度前先查集群日志-outgoing-产物-bus-结案状态-禁止未核实就下-没干-没跑.md) — 会话轮换蒸馏
