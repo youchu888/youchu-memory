@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
-# 双机都装：工作日 21:20 冲刺上传当日任务到 youchu-memory（在 21:30 写日报之前）
+# 双机都装：冲刺上传当日任务到 youchu-memory（写日报之前）
+# 主人 2026-08-15：周一至周五 21:20；周六 18:20（Asia/Shanghai）
 set -euo pipefail
+
+# launchd Weekday: 1=Mon … 6=Sat
+calendar_intervals() {
+  local h_wd="$1" m_wd="$2" h_sat="$3" m_sat="$4" wd
+  printf '  <key>StartCalendarInterval</key>\n  <array>\n'
+  for wd in 1 2 3 4 5; do
+    printf '    <dict>\n      <key>Weekday</key>\n      <integer>%s</integer>\n      <key>Hour</key>\n      <integer>%s</integer>\n      <key>Minute</key>\n      <integer>%s</integer>\n    </dict>\n' "$wd" "$h_wd" "$m_wd"
+  done
+  printf '    <dict>\n      <key>Weekday</key>\n      <integer>6</integer>\n      <key>Hour</key>\n      <integer>%s</integer>\n      <key>Minute</key>\n      <integer>%s</integer>\n    </dict>\n  </array>\n' "$h_sat" "$m_sat"
+}
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 # 本脚本可放在 .cursor/scripts 或 memory/scripts
@@ -48,13 +59,7 @@ cat >"$PLIST" <<EOF
     <string>/bin/bash</string>
     <string>${RUNNER}</string>
   </array>
-  <key>StartCalendarInterval</key>
-  <dict>
-    <key>Hour</key>
-    <integer>21</integer>
-    <key>Minute</key>
-    <integer>20</integer>
-  </dict>
+$(calendar_intervals 21 20 18 20)
   <key>RunAtLoad</key>
   <false/>
   <key>WorkingDirectory</key>
@@ -80,6 +85,6 @@ launchctl bootout "gui/$(id -u)/${LABEL}" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$PLIST"
 launchctl enable "gui/$(id -u)/${LABEL}" 2>/dev/null || true
 
-echo "[install] ${LABEL} @21:20 Asia/Shanghai plist=$PLIST"
+echo "[install] ${LABEL} @Mon–Fri 21:20 / Sat 18:20 Asia/Shanghai plist=$PLIST"
 echo "[install] 新 Mac / 旧 Mac 都要跑本安装脚本一次"
 echo "[note] CHCODE_ROOT unused; ROOT=$ROOT"

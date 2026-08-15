@@ -3,7 +3,7 @@
 
 默认仅权威主机 old-mac 可实发；new-mac 会跳过。
 
-用法（旧 Mac 21:30 定稿后）:
+用法（旧 Mac 定稿后：周一至周五 21:30 / 周六 18:30）:
   python3 ~/.dc-platform/memory/scripts/post_daily_report_to_dm.py
   python3 ~/.dc-platform/memory/scripts/post_daily_report_to_dm.py --date YYYY-MM-DD
   python3 ~/.dc-platform/memory/scripts/post_daily_report_to_dm.py --dry-run

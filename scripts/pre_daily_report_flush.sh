@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# 日报前置冲刺（双机都要装）：工作日 21:20 把「当天任务」落到 work-log/hosts 并推 youchu-memory。
-# 主人钦定顺序：双机 21:30 前上传当日任务 → 互相同步 → 再整理日报 → 推 TG。
+# 日报前置冲刺（双机都要装）：把「当天任务」落到 work-log/hosts 并推 youchu-memory。
+# 主人 2026-08-15：周一至周五 21:20（赶 21:30）；周六 18:20（赶 18:30）。周日跳过。
 set -euo pipefail
 
 export TZ="${TZ:-Asia/Shanghai}"

@@ -36,9 +36,10 @@ echo 'export WORKLOG_HOST_ID=old-mac' > ~/.dc-platform/memory/.env.host  # bot �
 
 **顺序（硬）**：新旧机上传当日任务 → youchu-memory 同步 → 写日报 → old-mac 推 TG。
 
-定时：
-- **21:20** 双机 `com.youchu.pre-daily-report-flush`（落 work-log + push）
-- **21:30** 仅 old-mac `com.youchu.daily-report-wake`（再 sync → 写稿 → 推 TG）
+定时（主人 2026-08-15）：
+- **冲刺** 双机 `com.youchu.pre-daily-report-flush`：周一至周五 21:20 / 周六 18:20
+- **推送** 仅 old-mac `com.youchu.daily-report-wake`：周一至周五 21:30 / 周六 18:30
+- **兜底** 仅 old-mac `com.youchu.daily-report-fallback`：+15 分钟
 
 ```bash
 bash ~/.dc-platform/scripts/prepare_daily_report_sync.sh          # 今日
