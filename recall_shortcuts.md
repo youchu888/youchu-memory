@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## +来 08 15 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首页-来路非空-初稿口径.md` | 2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首 |
+| ## 08 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-15-指标库文档按大漏斗模板写-口径对齐-prod-已定-dev-session-比率字段查询侧现算不.md` | 2026-08-15-指标库文档按大漏斗模板写-口径对齐-prod-已定-dev |
+| dbprogramming intake test 上传 与设 为定 | `sessions/tg-rotate-2026-08-15-0934.md` | 指标库任务 intake：`dbprogramming` · test · 目标 |
+| design_page_visit_analysis_20260805.html | `sessions/tg-rotate-2026-08-15-0934.md` | 本地旧稿（如 `design_page_visit_analysis_20260 |
+| 04 04）的修订点 08 4） §3 于评 | `sessions/tg-rotate-2026-08-15-0934.md` | §3 产品确认项逐条标状态（本次 7 项全绿），并注明相对初稿（如 08-04） |
+| 10 dropout_page_cnt stay_page_cnt 不落库 个分 | `sessions/tg-rotate-2026-08-15-0934.md` | 跳出率 = `dropout_page_cnt / stay_page_cnt` |
+| 002 20260804 canonical dev dws_app_page_ | `sessions/tg-rotate-2026-08-15-0934.md` | 页面访问分析 canonical 口径：`dws_app_page_visit_ |
+| docs html metric name slug yyyymmdd.html | `sessions/tg-rotate-2026-08-15-0934.md` | 定稿流程：先对齐评审意见与现网口径 → 本地 HTML 重写 → 上传平台指标库 |
+| 0~ ~4 「大 」0 一走 产品 | `sessions/tg-rotate-2026-08-15-0934.md` | 指标库设计文档统一走「大漏斗模板」0~4 节：链路 → 逐字段规则 → 数据质量 |
+| +来 lesson library metric unknown 「会 | `sessions/tg-rotate-2026-08-15-0934.md` | [LESSON: metric-library,口径/页面访问「进入」=来路空或 |
+| jump_only page_key uid unknown §2 不写 | `sessions/tg-rotate-2026-08-15-0934.md` | §2 数据质量须写入探查结论：page_key 双字段、unknown 来路、j |
+| unknown 「会 「进 「进入页」 」已 为空 | `sessions/tg-rotate-2026-08-15-0934.md` | 「进入页」= 来路为空或 `unknown`；初稿「会话首页 + 来路非空」已废 |
 | ## .m 08 15 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-15-用户贴定稿并说-按这个上传云端-时-先写-reports-日报-日期-md-再-upload-a.md` | 2026-08-15-用户贴定稿并说-按这个上传云端-时-先写-reports- |
 | top1 top2 从当 修订 做项 动作 | `sessions/tg-rotate-2026-08-15-0632.md` | 【明日动作】可从当日续做项推断；示例 TOP1 补数逐日核对（带截止日）、TOP |
 | top 两步 任务 务通 历史 历史明细补数已跑日期的量级核对 | `sessions/tg-rotate-2026-08-15-0632.md` | 站群来源搜索词任务通常含两步：**当日 TOP 词条探查回传** + **历史明 |
@@ -33,15 +45,3 @@
 | agent bus execution lesson outgoing 「没 | `sessions/tg-rotate-2026-08-14-1532.md` | [LESSON: agent-execution/汇报任务进度前先查集群日志、o |
 | ## .p 08 14 2026 _d | `~/.dc-platform/memory/lessons/2026-08-14-daily_report-唤醒写入-wake_feed-但-executor-未消费时-补跑-s.md` | 2026-08-14-daily_report-唤醒写入-wake_feed-但 |
 | ## 08 14 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-bus-reply-报秒数与选型-勿等催.md` | 2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-b |
-| ## 08 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改-周五-等具体日期.md` | 2026-08-14-写明日动作前先对当天周几-周四及以后禁写-周中-作截止-改 |
-| stage1 v2.5.2 与渠 互动 互动覆盖度交底与渠道口径待定项先整理入团 | `sessions/tg-rotate-2026-08-14-0630.md` | 漫画分析字段字典 v2.5.2 口径层通过后，互动覆盖度交底与渠道口径待定项先整 |
-| 001 vs yc 一致 上午 不一 | `sessions/tg-rotate-2026-08-14-0630.md` | YC-001 数据概览 vs 用户活跃上午不一致，日批完成后复验两页口径一致，差 |
-| 「搜 」时 不是 不是投放渠道 交核 仓无 | `sessions/tg-rotate-2026-08-14-0630.md` | 数仓无现成「搜索引擎占比」时，可先用自然新增占比作代理交核对；正口径是**网页端 |
-| bus reply spark yarn 不回 与选 | `sessions/tg-rotate-2026-08-14-0630.md` | Spark/YARN 补数链跑完须**立刻 bus reply 结案**报秒数与 |
-| 5410s batch13 day_small.sql small 于基 仍走 | `sessions/tg-rotate-2026-08-14-0630.md` | BATCH13 判据：small 表秒数 **低于基准 5410s 用缓存版** |
-| bus summary.tsv yarn 一回 三选 催办 | `sessions/tg-rotate-2026-08-14-0630.md` | bus 催办 A/B 补数时，先查 YARN/日志/_summary.tsv 再 |
-| 「周 「明 」已 」截 」） 中」 | `sessions/tg-rotate-2026-08-14-0630.md` | 写「明日动作」截止须先对当天周几；周四写「周中」已过期，改具体日期（如「周五」） |
-| 「上 」须 上传 上传前不改字 不动 不改 | `sessions/tg-rotate-2026-08-14-0630.md` | 用户说「上传云端」须以其给的定稿**原封不动**上传；先更新本地报告文件再跑上传 |
-| .cursor dd.md log mac） mm post_daily_rep | `sessions/tg-rotate-2026-08-14-0630.md` | 日报漏推补跑顺序：`prepare_daily_report_sync` → 写 |
-| 21 30 45 agent_loop_wake_daily_report cu | `sessions/tg-rotate-2026-08-14-0630.md` | `AGENT_LOOP_WAKE_DAILY_REPORT` 21:30 已写入 |
-| agent bus lesson reply spark yarn | `sessions/tg-rotate-2026-08-14-0630.md` | [LESSON: agent-bus/Spark/YARN 补数或 A/B 判定 |

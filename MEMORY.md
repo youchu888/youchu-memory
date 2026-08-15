@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [页面访问「进入」=来路空或 unknown，禁止沿用「会话首页+来路非空](lessons/2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首页-来路非空-初稿口径.md) — 会话轮换蒸馏
+- [指标库文档按大漏斗模板写，口径对齐 prod/已定 dev sessio](lessons/2026-08-15-指标库文档按大漏斗模板写-口径对齐-prod-已定-dev-session-比率字段查询侧现算不.md) — 会话轮换蒸馏
 - [用户贴定稿并说「按这个上传云端」时，先写 reports/日报-日期.m](lessons/2026-08-15-用户贴定稿并说-按这个上传云端-时-先写-reports-日报-日期-md-再-upload-a.md) — 会话轮换蒸馏
 - [日报 21:30 断点：executor 必须真解析 DAILY_REPORT；写 lesson 不算修完](lessons/2026-08-14-daily-report-executor-must-parse-DAILY_REPORT.md) — `_parse_wake_line` 只认 AGENT_BUS 会丢掉日报；fallback 须直推/直跑；改完 kickstart
 - [主人允许无二次指令时自主推进已派活；分工变被动（如补数只验数）不覆盖其它](lessons/2026-08-14-主人允许无二次指令时自主推进已派活-分工变被动-如补数只验数-不覆盖其它仍归己的独立任务.md) — 会话轮换蒸馏
