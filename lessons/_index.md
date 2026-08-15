@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-16 | [未结项汇报必须二分「又初欠账」与「等外部拍板」，避免把 pending RP 说](./2026-08-16-未结项汇报必须二分-又初欠账-与-等外部拍板-避免把-pending-rp-说成又初完全没推进.md) | status-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-16 | [review|stage7 待审须 bus 私催 + 协作群 @，带 bus# ](./2026-08-16-review-stage7-待审须-bus-私催-协作群-带-bus-与-session-cod.md) | dev-session,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-16 | [terminology|见指标库 HTML「蓝底」图例时写「数据侧初稿、请产品确](./2026-08-16-terminology-见指标库-html-蓝底-图例时写-数据侧初稿-请产品确认-禁止读成审核.md) | docs,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-15 | [poller 遇 API 超时必须续心跳；启动脚本先写 pid 再 bootstrap](./2026-08-15-poller-timeout-先写pid再bootstrap-超时也续心跳.md) | agent-bus, poller, launchd | 超时不续心跳 + start 先 --once 会让 daemon 连环拉起 |
 | 2026-08-15 | [日报推送：周六 18:30，其余工作日 21:30](./2026-08-15-daily-report-sat-1830-weekday-2130.md) | daily-report, launchd, schedule | 周六整条链路前移；flush 18:20 / wake 18:30 / fallback 18:45；新机须重装 flush |
 | 2026-08-15 | [页面访问「进入」=来路空或 unknown，禁止沿用「会话首页+来路非空」初稿口](./2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首页-来路非空-初稿口径.md) | metric-library,口径,session-rotate | 会话轮换前自动蒸馏 |

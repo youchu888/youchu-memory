@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 16 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-16-未结项汇报必须二分-又初欠账-与-等外部拍板-避免把-pending-rp-说成又初完全没推进.md` | 2026-08-16-未结项汇报必须二分-又初欠账-与-等外部拍板-避免把-pe |
+| ## 08 16 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-16-review-stage7-待审须-bus-私催-协作群-带-bus-与-session-cod.md` | 2026-08-16-review-stage7-待审须-bus-私催-协作群- |
+| ## 08 16 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-16-terminology-见指标库-html-蓝底-图例时写-数据侧初稿-请产品确认-禁止读成审核.md` | 2026-08-16-terminology-见指标库-html-蓝底-图例时写 |
+| 002 20260729 20260804 dc_cursor_bot dev  | `sessions/tg-rotate-2026-08-16-0615.md` | 催审范例：停留时长 `dev-20260729-002` → 蓝猫；页面访问 D |
+| checklist di en g（ hadoop hold | `sessions/tg-rotate-2026-08-16-0615.md` | **不算又初卡死**：test 验数已过但 stage7 RP pending（ |
+| bus#6552 spark stage4 v0.2 三处 三处硬门槛落地 | `sessions/tg-rotate-2026-08-16-0615.md` | **又初欠账**典型：历史明细补数续核对、指标库 v0.2 本地稿上传平台并按  |
+| hold log memory_open vs work 「明 | `sessions/tg-rotate-2026-08-16-0615.md` | 主人问「还有什么没完成 / 有没有卡着」时，先查 work-log、MEMORY |
+| dev session 与文 停留 停留时长等） 内容 | `sessions/tg-rotate-2026-08-16-0615.md` | **蓝猫** = 数据开发同学（如内容排行、停留时长等）；**野花** = 另一 |
+| html 「产 「数 「蓝 「蓝底」 」一 | `sessions/tg-rotate-2026-08-16-0615.md` | 文档图例 **「蓝底」** = HTML 里蓝色底色初稿格，表示「数据侧拟口径、 |
+| lesson pending report rp status 「又 | `sessions/tg-rotate-2026-08-16-0615.md` | [LESSON: status-report/未结项汇报必须二分「又初欠账」与「 |
+| bus bus# code dev hold lesson | `sessions/tg-rotate-2026-08-16-0615.md` | [LESSON: dev-session/review/stage7 待审须 b |
+| docs ht html「蓝底」图例时写「数据侧初稿 lesson l「 ml | `sessions/tg-rotate-2026-08-16-0615.md` | [LESSON: docs/terminology/见指标库 HTML「蓝底」图 |
+| 「已 「明 」只 上传 上平 与已 | `sessions/tg-rotate-2026-08-16-0615.md` | 日报「已完成」只写当日真有交付闭环的项；**本地定稿待上传** 应放「明日动作」 |
+| bus bus# code dev session test | `sessions/tg-rotate-2026-08-16-0615.md` | 主人说「需要排版的就催」→ 仅对 **等审核/排版** 项催办：**bus 私催 |
+| dev session 与文 停留 停留时长等） 内容 | `sessions/tg-rotate-2026-08-16-0615.md` | 蓝猫** = 数据开发同学（如内容排行、停留时长等）；**野花** = 另一类  |
 | ## +来 08 15 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首页-来路非空-初稿口径.md` | 2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首 |
 | ## 08 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-15-指标库文档按大漏斗模板写-口径对齐-prod-已定-dev-session-比率字段查询侧现算不.md` | 2026-08-15-指标库文档按大漏斗模板写-口径对齐-prod-已定-dev |
 | dbprogramming intake test 上传 与设 为定 | `sessions/tg-rotate-2026-08-15-0934.md` | 指标库任务 intake：`dbprogramming` · test · 目标 |
@@ -30,18 +45,3 @@
 | .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-08-15-0632.md` | 用户贴**已定稿**日报正文并说「按这个上传云端」时，先落本地 `.cursor |
 | ## 08 14 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-14-主人允许无二次指令时自主推进已派活-分工变被动-如补数只验数-不覆盖其它仍归己的独立任务.md` | 2026-08-14-主人允许无二次指令时自主推进已派活-分工变被动-如补数只验 |
 | ## 08 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-14-派活默认闭环-一次性独立任务-如-_probe-上集群-不因盯盘-回执让路-indefinite.md` | 2026-08-14-派活默认闭环-一次性独立任务-如-_probe-上集群-不 |
-| ## 08 14 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-14-汇报任务进度前先查集群日志-outgoing-产物-bus-结案状态-禁止未核实就下-没干-没跑.md` | 2026-08-14-汇报任务进度前先查集群日志-outgoing-产物-bus |
-| bus 一次 不能 不能无限 不能无限后搁 不需 | `sessions/tg-rotate-2026-08-14-1532.md` | **优先级陷阱**：补数盯盘、bus 回执、口径交底占满注意力时，知秋点名的一次 |
-| bus 「没 「跑 」会 任务 会误 | `sessions/tg-rotate-2026-08-14-1532.md` | **汇报前必查现场**：探查类任务先查集群日志、bus 结案记录，再答「跑没跑」 |
-| #4342→#6 #4342→#6485） bus inbox open rep | `sessions/tg-rotate-2026-08-14-1532.md` | **inbox 误标未结案**：bus 早回过但 inbox 仍 open 会反 |
-| —— —已 「昨 不混 不混在已做项里 做项 | `sessions/tg-rotate-2026-08-14-1532.md` | **被问「昨晚活干没干」**：分条对照派单——已闭环 / 进行中 / 确实欠着； |
-| #6417 bus hadoop logs ops_system probe | `sessions/tg-rotate-2026-08-14-1532.md` | **站群关键词探查**：脚本在 `ops_system/_probe/site_ |
-| .log 15 16 2s 52 5410s） | `sessions/tg-rotate-2026-08-14-1532.md` | **补数验数节奏**：按 `_summary.tsv` + `verify_*. |
-| #6 08 09→07 13 28 48 | `sessions/tg-rotate-2026-08-14-1532.md` | **dwd_*_r 历史补数分工（#6488）**：狂人起作业（`chain_r |
-| ddl sr 「后 」私 不上 交付 | `sessions/tg-rotate-2026-08-14-1532.md` | **交付缺口常见形态**：口径/DDL 已在仓或平台，但未单独打包成「后端对接包 |
-| ddl l」 md omdb ou outgoing | `sessions/tg-rotate-2026-08-14-1532.md` | **私聊要表结构时**：从仓库整理成「对接说明 md + 纯 DDL sql」两 |
-| 04.dws ddl design.md dws_app_event_funn  | `sessions/tg-rotate-2026-08-14-1532.md` | **DDL 双份**：主跑 Paimon 在 `ops_system/04.dw |
-| 18 54 app_id dt dws.dws_app_event_funnel | `sessions/tg-rotate-2026-08-14-1532.md` | **大漏斗后端对接**：表 `dws.dws_app_event_funnel_ |
-| agent bus execution lesson outgoing 「没 | `sessions/tg-rotate-2026-08-14-1532.md` | [LESSON: agent-execution/汇报任务进度前先查集群日志、o |
-| ## .p 08 14 2026 _d | `~/.dc-platform/memory/lessons/2026-08-14-daily_report-唤醒写入-wake_feed-但-executor-未消费时-补跑-s.md` | 2026-08-14-daily_report-唤醒写入-wake_feed-但 |
-| ## 08 14 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-bus-reply-报秒数与选型-勿等催.md` | 2026-08-14-spark-yarn-补数或-a-b-判定跑完后须立刻-b |

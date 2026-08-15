@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [未结项汇报必须二分「又初欠账」与「等外部拍板」，避免把 pending ](lessons/2026-08-16-未结项汇报必须二分-又初欠账-与-等外部拍板-避免把-pending-rp-说成又初完全没推进.md) — 会话轮换蒸馏
+- [review|stage7 待审须 bus 私催 + 协作群 @，带 b](lessons/2026-08-16-review-stage7-待审须-bus-私催-协作群-带-bus-与-session-cod.md) — 会话轮换蒸馏
+- [terminology|见指标库 HTML「蓝底」图例时写「数据侧初稿、](lessons/2026-08-16-terminology-见指标库-html-蓝底-图例时写-数据侧初稿-请产品确认-禁止读成审核.md) — 会话轮换蒸馏
 - [poller 遇 API 超时必须续心跳；启动脚本先写 pid 再 bootstrap](lessons/2026-08-15-poller-timeout-先写pid再bootstrap-超时也续心跳.md) — 超时不续心跳会连环重启
 - [日报推送：周六 18:30，其余工作日 21:30](lessons/2026-08-15-daily-report-sat-1830-weekday-2130.md) — 周六整条链路前移；新机须重装 flush
 - [页面访问「进入」=来路空或 unknown，禁止沿用「会话首页+来路非空](lessons/2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首页-来路非空-初稿口径.md) — 会话轮换蒸馏
