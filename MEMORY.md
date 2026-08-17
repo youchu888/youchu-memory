@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [原 bus 被误结案后补正式回执须 `--no-dedup` 新发 re](lessons/2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发-reply-并检查-dedup-是否.md) — 会话轮换蒸馏
+- [prod 有分区有数不能证明口径对；bounce 争议看 DWM is_](lessons/2026-08-17-prod-有分区有数不能证明口径对-bounce-争议看-dwm-is_bounce-与-dws.md) — 会话轮换蒸馏
+- [狂人 bus 含 Q1/Q2/Q3 或「不许跳过三问」时禁止快车道 re](lessons/2026-08-17-狂人-bus-含-q1-q2-q3-或-不许跳过三问-时禁止快车道-reply_only-结案-.md) — 会话轮换蒸馏
 - [未结项汇报必须二分「又初欠账」与「等外部拍板」，避免把 pending ](lessons/2026-08-16-未结项汇报必须二分-又初欠账-与-等外部拍板-避免把-pending-rp-说成又初完全没推进.md) — 会话轮换蒸馏
 - [review|stage7 待审须 bus 私催 + 协作群 @，带 b](lessons/2026-08-16-review-stage7-待审须-bus-私催-协作群-带-bus-与-session-cod.md) — 会话轮换蒸馏
 - [terminology|见指标库 HTML「蓝底」图例时写「数据侧初稿、](lessons/2026-08-16-terminology-见指标库-html-蓝底-图例时写-数据侧初稿-请产品确认-禁止读成审核.md) — 会话轮换蒸馏

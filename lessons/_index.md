@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-17 | [原 bus 被误结案后补正式回执须 `--no-dedup` 新发 reply，](./2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发-reply-并检查-dedup-是否.md) | agent-bus,补发,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-17 | [prod 有分区有数不能证明口径对；bounce 争议看 DWM is_boun](./2026-08-17-prod-有分区有数不能证明口径对-bounce-争议看-dwm-is_bounce-与-dws.md) | session_duration,bounce,datacheck,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-17 | [狂人 bus 含 Q1/Q2/Q3 或「不许跳过三问」时禁止快车道 reply_](./2026-08-17-狂人-bus-含-q1-q2-q3-或-不许跳过三问-时禁止快车道-reply_only-结案-.md) | agent-bus,worker_ant,口径争议,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-16 | [未结项汇报必须二分「又初欠账」与「等外部拍板」，避免把 pending RP 说](./2026-08-16-未结项汇报必须二分-又初欠账-与-等外部拍板-避免把-pending-rp-说成又初完全没推进.md) | status-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-16 | [review|stage7 待审须 bus 私催 + 协作群 @，带 bus# ](./2026-08-16-review-stage7-待审须-bus-私催-协作群-带-bus-与-session-cod.md) | dev-session,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-16 | [terminology|见指标库 HTML「蓝底」图例时写「数据侧初稿、请产品确](./2026-08-16-terminology-见指标库-html-蓝底-图例时写-数据侧初稿-请产品确认-禁止读成审核.md) | docs,session-rotate | 会话轮换前自动蒸馏 |

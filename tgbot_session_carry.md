@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-16 · 最新归档：`sessions/tg-rotate-2026-08-16-0615.md`
+> 更新：2026-08-17 · 最新归档：`sessions/tg-rotate-2026-08-17-1044.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 狂人派单若带 **Q1/Q2/Q3** 或「不许跳过三问」，回执必须**逐条按模板填**；报运行态、test 有 bucket0、或「已完成/待命/rest」**不算答复**。
+- 含 **HOLD、打回、三问、口径争议** 的 bus **禁止走快车道** `reply_only` 自动「待命/rest」结案；应进 Cursor 主会话按格式交作业。
+- session_duration bounce 争议根因**：08-04 `a17b55f6` 改为仅 `is_valid=1` 进 DWS，与知秋 07-21「bounce 第 0 档」冲突；开发侧自行解读 PRD，**未与产品书面确认**（Q1=没确认过）。
+- Q3 铁律**：产品未拍板前开发**不能代决**；选项 (a) 维持无 bucket0 或 (b) bounce 进第 0 档并重跑 45 天；**45 天 prod 重跑继续 HOLD**。
+- 口径争议项工作簿/周报应标 **HOLD · 等产品拍板**，禁止标「已完成」；DDL COMMENT 补丁可先行，不等同口径结案。
+- [LESSON: agent-bus,worker_ant,口径争议|狂人 bus 含 Q1/Q2/Q3 或「不许跳过三问」时禁止快车道 reply_only 结案，必须进主会话逐条填三问后再 reply]
+- [LESSON: session_duration,bounce,datacheck|prod 有分区有数不能证明口径对；bounce 争议看 DWM is_bounce 与 DWS bucket0/bounce_cnt 是否对齐，未拍板前标 HOLD、禁 45 天 prod 重跑]
+- **表在跑、分区有数 ≠ 口径正确**；口径争议（如 bounce 是否进 DWS）须单独正面答，不能拿 prod 有数据当结案依据。
+- 快车道误结案后：原 bus 已 closed 时，补发须用 `agent_bus_send.py --no-dedup` 发新 reply（如 bus#6588），否则 dedup 会挡掉。
+- **session_duration bounce 争议根因**：08-04 `a17b55f6` 改为仅 `is_valid=1` 进 DWS，与知秋 07-21「bounce 第 0 档」冲突；开发侧自行解读 PRD，**未与产品书面确认**（Q1=没确认过）。
+- 仓库/指标库/平台**均无 PRD v1.0.2 §5.5.4 逐字原文**；现有表述只写 `<5s/>12h 不进 DWS`，**未写清 bounce 是整表排除还是单独计 bounce_cnt**——这是 08-04 误读来源（Q2）。
+- **Q3 铁律**：产品未拍板前开发**不能代决**；选项 (a) 维持无 bucket0 或 (b) bounce 进第 0 档并重跑 45 天；**45 天 prod 重跑继续 HOLD**。
+- prod 复验判据：DWS `bucket0=0`、`bounce_cnt=0`，但 DWM `is_bounce=1` 有量（如 08-14 约 856 万）——争议在**口径分层**，不是表没跑。
+- 狂人同一要求多轮（#6556→#6573→#6586）仍须当**未结案**处理，直到 Q1/Q2/Q3 正式发出；私聊追问说明 bus 侧已误结案，须立刻补发而非再报状态。
+- 周报（W33 范式）：自然周 + 有效工作日、分专项【本周完成/卡点/下周计划】、口径争议写「test 验通但 prod 冻结 HOLD」、P0 卡点单列产品拍板项。
 - 蓝猫** = 数据开发同学（如内容排行、停留时长等）；**野花** = 另一类 dev session 审核人；角色分工勿与文档配色混写
 - 主人说「需要排版的就催」→ 仅对 **等审核/排版** 项催办：**bus 私催审核人 + 协作群 @**，正文带 **bus#、dev session code、test 验数结论**
 - 日报「已完成」只写当日真有交付闭环的项；**本地定稿待上传** 应放「明日动作」，勿与已上平台项混标完成
-- [LESSON: docs|terminology|见指标库 HTML「蓝底」图例时写「数据侧初稿、请产品确认」，禁止读成审核人蓝猫或把产品角色改写成数据同学]
-- [LESSON: dev-session|review|stage7 待审须 bus 私催 + 协作群 @，带 bus# 与 session code；HOLD/知秋令/未上传稿/又初集群证据项禁止误催]
-- [LESSON: status-report|未结项汇报必须二分「又初欠账」与「等外部拍板」，避免把 pending RP 说成又初完全没推进]
-- 文档图例 **「蓝底」** = HTML 里蓝色底色初稿格，表示「数据侧拟口径、请产品确认」；**不是**审核人「蓝猫」，对外写「产品」一律指业务拍板方（知秋侧）
-- **蓝猫** = 数据开发同学（如内容排行、停留时长等）；**野花** = 另一类 dev session 审核人；角色分工勿与文档配色混写
-- 主人问「还有什么没完成 / 有没有卡着」时，先查 work-log、MEMORY_OPEN、昨日「明日动作」，再分两类汇报：**又初还能推的欠账** vs **等审核 / 知秋令 / HOLD**
-- **又初欠账**典型：历史明细补数续核对、指标库 v0.2 本地稿上传平台并按 bus#6552 三处硬门槛落地、大漏斗 Spark 集群 stage4 全量证据
-- **不算又初卡死**：test 验数已过但 stage7 RP pending（等蓝猫/野花）、知秋令 HOLD 的归因、狂人 checklist HOLD 的设备标签、需 hadoop 侧推进的 POC
-- 催审范例：停留时长 `dev-20260729-002` → 蓝猫；页面访问 DWS `dev-20260804-002` → 野花；协作群同步 @ `dc_cursor_bot`、`mudan99_bot`
-- **不该催**：知秋令/HOLD 项、本地稿尚未上传平台的文档、需又初自己跑集群补 stage4 证据的任务
-- 停留 bounce 修复验收口径：test 发版后 **T-1 分档 0 = bounce** 须与 DWM 对齐，才算可再提 RP
-- 日报上传：以主人定稿 **原封不动** 写入 `reports/日报-YYYY-MM-DD.md` 再传云端；API 超时 **重试一次** 即可，成功多为 `updated` 覆盖
-- 「进入页」= 来路为空或 `unknown`；初稿「会话首页 + 来路非空」已废弃，写文档/验数勿混用
-- §2 数据质量须写入探查结论：page_key 双字段、unknown 来路、jump_only、空 uid 过滤等，避免只写指标定义不写边界
-- [LESSON: metric-library,口径|页面访问「进入」=来路空或 unknown，禁止沿用「会话首页+来路非空」初稿口径]
 
