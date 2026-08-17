@@ -2,7 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
-| 2026-08-17 | [血缘与现网不一致时以 prod 海豚 live task 为准；旧表停更须 de](./2026-08-17-血缘与现网不一致时以-prod-海豚-live-task-为准-旧表停更须-deprecated.md) | lineage,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-17 | [指标库 #6552：区分「认可(v0.1既有)」与「评审新增三处必改」，publi](./2026-08-17-metric-library-6552-区分认可与三处必改-req_ref四件套.md) | metric-library,bus-6552,session-rotate | bus#6625 纠正：req_ref 四件套 + 禁比率 + aggregation 白名单 |
 | 2026-08-17 | [表级拓扑机器验过后，人工只盯列级：同名列归属、WHERE过滤、聚合口径、停更/视](./2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过滤-聚合口径-停更-视图架构.md) | lineage,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-17 | [周报说人话只改措辞不改版式，保留原分块/卡点/周会一句话结构](./2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结构.md) | weekly-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-17 | [原 bus 被误结案后补正式回执须 `--no-dedup` 新发 reply，](./2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发-reply-并检查-dedup-是否.md) | agent-bus,补发,session-rotate | 会话轮换前自动蒸馏 |

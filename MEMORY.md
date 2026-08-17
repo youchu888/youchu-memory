@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [指标库 #6552：区分「认可」与「三处必改」，published 四件套含 req_ref](lessons/2026-08-17-metric-library-6552-区分认可与三处必改-req_ref四件套.md) — bus#6625 纠正
 - [血缘与现网不一致时以 prod 海豚 live task 为准；旧表停更](lessons/2026-08-17-血缘与现网不一致时以-prod-海豚-live-task-为准-旧表停更须-deprecated.md) — 会话轮换蒸馏
 - [表级拓扑机器验过后，人工只盯列级：同名列归属、WHERE过滤、聚合口径、](lessons/2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过滤-聚合口径-停更-视图架构.md) — 会话轮换蒸馏
 - [周报说人话只改措辞不改版式，保留原分块/卡点/周会一句话结构](lessons/2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结构.md) — 会话轮换蒸馏
