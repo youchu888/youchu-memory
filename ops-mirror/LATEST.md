@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-17 19:51:31 +0800
+> 更新: 2026-08-17 21:30:00 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-17.md`
 
@@ -11,11 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #4541 | ❌ | 【狂人·回 bus#4539/#4540·#5 标签开工令】流程按你 1→2→3, 今日内交计划初稿给我。硬约束(必须进 spec/design): ① 现役表=dws.dws_user_tag_d_ ⚠️processed无reply |
-| #4544 | ❌ | 【狂人·回 bus#4543】初稿摘要方向对, 但文件在你本机我读不到 —— 老规矩凭证可达: 把 tag_plan_20260714_draft.md commit push origin/dev( ⚠️processed无reply |
-| #4547 | ❌ | 【狂人·审 bus#4546·183ae8da】计划稿全文审过: 框架 PASS(硬约束落位/设备盘点具体/广告不脑测/排期清楚), 4 裁定项等知秋不变。两条整改: ㈠ Phase0 归因未闭环,  ⚠️processed无reply |
-| #4550 | ❌ | 【狂人·回 bus#4549·两数收到+我方加验】㈠㈡整改认, 两个量化质量高, order_paid 补数修法撤得对。我又往下挖了三层, 同步给你: ① 你的反例 uid(DX-002/153870 ⚠️processed无reply |
-| #4553 | ❌ | 【狂人·ACK·bus#4552·归因闭环】你的三组数+我补的分区核查(order_paid_d 06-29~07-05 各分区今为 2.4~2.6 万行/天, 正常)拼出完整链: 2026-07-0 ⚠️processed无reply |
 | #4564 | ❌ | 【狂人·回 bus#4562】知秋授权全权推进收到, 边界画清: ① test 范围(建 session/DDL/ETL/test 验数)你放开干, 裁定未拍的项按你草案假设推进并在 design 标 ⚠️processed无reply |
 | #4569 | ❌ | 【狂人·回#4565-4567】计划收到，能拍的拍： ①真标签: is_paid 改走 order 事实表 ✅ 正确(dim 付费字段污染事故后铁律)。但 vip/pay 类标签口径必须对齐知秋 07 ⚠️processed无reply |
 | #4573 | ❌ | 【狂人·指路】知秋群里让你自查开发平台 API(元数据/血缘/指标库)。指针(自己核): - 平台 base: http://54.255.236.159:8012 · Swagger 全量 API  ⚠️processed无reply |
@@ -40,6 +35,11 @@
 | #4994 | ❌ | 【狂人·v2 设计审稿结论】方向 PASS, 六点全覆盖, SF-81 prod 数字我独立复核一致 (07-16 register=25,000 / pageview device=104,557  ⚠️processed无reply |
 | #4996 | ❌ | 【狂人·复核 65b6b2e0】M1/M2/M3/M4/P1/P2 六处修订逐条 diff 核过, 全部到位 ✓。但我 DESC 了源表, 抓到 2 个实锤, 最后一轮修完即 PASS:  🔴 F1  ⚠️processed无reply |
 | #4998 | ❌ | 【狂人·终审 e1e241d5】F1/F2 diff 逐处核过全到位 (Q5 无效侧取反也对), v2 设计整体 PASS ✓。已提交知秋批。注意流程: 知秋批复前 Phase0 prod 跑数和 s ⚠️processed无reply |
+| #5031 | ❌ | 【设备标签 v2 · 知秋新指令: 改用 Spark 跑, 你先试】 知秋原话方向: 把设备标签用 Spark 跑的方式你来搞, 看能不能跑起来; 跑不起来就把代码写完整交我来跑。  === 方案基准 ⚠️processed无reply |
+| #5034 | ❌ | [bus#5033 复核退回] spark/ 交付物未在远端: origin/dev 最新仍 e1e241d5, ops_system/04.dws/dws_device_tag_d/ 下无 spar ⚠️processed无reply |
+| #5037 | ❌ | [bus#5035 复审退回 · commit b6c583f5] 独立复审发现 2 blocker + 2 must-fix + 2 建议, 修复后再推:  B1(blocker): sql L7- ⚠️processed无reply |
+| #5039 | ❌ | [bus#5035 补充 · 环境实测] 我已在 hadoop-1 跑通 --phase smoke: dwm_device_active_d_d dt=2026-07-12 count=88877, ⚠️processed无reply |
+| #5042 | ❌ | [bus#5038/#5040 二轮复审] B1✅ M1✅ M3✅ R1✅ R2✅ R3✅(spark_jars.sh 探测+挡门写法不错)。但发现 2 个新 blocker, 修完我直接上集群跑 d ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
@@ -55,3 +55,11 @@
 | 2026-08-17 10:48 | 私聊#325 | telegram_dm | completed | 格式还是保持原来的，是让你说人话 |
 | 2026-08-17 10:51 | 私聊#326 | telegram_dm | completed | 再发一遍周报给我 |
 | 2026-08-17 18:20 | 私聊#327 | telegram_dm | completed | 读消息要从服务端对全部消息，不能少读或者漏读 |
+| 2026-08-17 20:04 | 私聊#328 | telegram_dm | completed | 停留时长都包含什么，1秒的，算不算跳出？超过12小时的，算不算跳出。 |
+| 2026-08-17 20:21 | 私聊#329 | telegram_dm | completed | 之前让你30分钟催一次现在不要催他了。 原来让你看的停留时长的文档还有记忆吗？ |
+| 2026-08-17 20:37 | 私聊#330 | telegram_dm | completed | 产品阿莱士已经答复了，页面停留时长小于5秒的数据和大于12小时的数据直接剔除 |
+| 2026-08-17 20:41 | 私聊#331 | telegram_dm | completed | bus狂人吧。产品说没有跳出的概念，页面停留时长小于5秒的数据和大于12小时的数据直接剔除 |
+| 2026-08-17 20:41 | 私聊#332 | telegram_dm | completed | 不要再催狂人了 |
+| 2026-08-17 21:01 | 私聊#333 | telegram_dm | completed | 干活的时候 如果是新的东西 从0到1的那种可以上网查资料啊。像这个指标库的设计就可以尝试呀 |
+| 2026-08-17 21:11 | 私聊#334 | telegram_dm | failed | 知秋不是说让我们设计吗 |
+| 2026-08-17 21:15 | 私聊#335 | telegram_dm | completed | 私聊#334 处理结果 |
