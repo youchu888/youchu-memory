@@ -5,6 +5,10 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [设计主体写齐后按 commit→bus狂人→DDL草案→bus知秋 顺序](lessons/2026-08-17-设计主体写齐后按-commit-bus狂人-ddl草案-bus知秋-顺序主动闭环-不等逐条授权.md) — 会话轮换蒸馏
+- [又初负责概念层模型+迁移路径+DDL草案；狂人等模型交稿后再做264条语](lessons/2026-08-17-又初负责概念层模型-迁移路径-ddl草案-狂人等模型交稿后再做264条语义归纳-设计阶段不改现网.md) — 会话轮换蒸馏
+- [从0到1设计先查业界语义层/指标库实践，写进设计稿§0，并显式标注采纳项](lessons/2026-08-17-从0到1设计先查业界语义层-指标库实践-写进设计稿-0-并显式标注采纳项与因-6552铁律不照搬.md) — 会话轮换蒸馏
+- [TG 绿点跟当天极客随机打卡计划走，TCP 不随下线断开](lessons/2026-08-17-tg-visible-online-follows-jike-punch-plan.md) — UpdateStatus 对齐签到/签退计划
 - [指标库 #6552：区分「认可」与「三处必改」，published 四件套含 req_ref](lessons/2026-08-17-metric-library-6552-区分认可与三处必改-req_ref四件套.md) — bus#6625 纠正
 - [血缘与现网不一致时以 prod 海豚 live task 为准；旧表停更](lessons/2026-08-17-血缘与现网不一致时以-prod-海豚-live-task-为准-旧表停更须-deprecated.md) — 会话轮换蒸馏
 - [表级拓扑机器验过后，人工只盯列级：同名列归属、WHERE过滤、聚合口径、](lessons/2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过滤-聚合口径-停更-视图架构.md) — 会话轮换蒸馏

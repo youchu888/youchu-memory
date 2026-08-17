@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-17 · 最新归档：`sessions/tg-rotate-2026-08-17-1644.md`
+> 更新：2026-08-17 · 最新归档：`sessions/tg-rotate-2026-08-17-2226.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 从 0 到 1 的新设计（如指标库概念层）应**先查业界资料**（语义层、指标目录、dbt MetricFlow 等），再落到团队约束；结论写进设计稿 **§0 业界参考与对齐**，并标明**采纳项 vs 因铁律不照搬项**。
+- 指标库定位是「**带门禁的指标层**」，不是 Headless BI；业界三分法：数据目录 / 语义层 / BI，我们落在语义层一侧。
+- bus#6655 分工：**又初**出概念模型、门禁、U1–U7、264 条迁移路径、DDL 草案；**狂人**在模型定稿/交稿后做 Phase2 语义归纳（75 条拆条、67 多实现定 concept）；**不**替狂人逐条填 264 条、**不**先批量改现网 status。
+- 团队铁律（#6552）比业界对齐更硬：`req_ref` 四件套、**禁比率进 canonical**、**先拆同名不同义再设 `is_primary`**、aggregation 白名单、三表口径导出倒推；对齐 dbt 时**不能放松**这些门禁。
+- 设计闭环优先级：**稿写完 → commit/push → bus 狂人交稿 → 出 DDL 草案 → bus 转知秋**；有完整计划时**主动推进**，不要等主人再催「等什么呢」。
+- [LESSON: metric-library,design,0-to-1|从0到1设计先查业界语义层/指标库实践，写进设计稿§0，并显式标注采纳项与因#6552铁律不照搬项]
+- 概念层三层模型：`metric_concept`（实际指标，人工定义）→ `metric_label`（1:N 名字）→ `metric_implementation`（表.列 + formula，可多条、标主实现）；扫表结果只进 `metric_impl_candidate` staging，**不直接从列名晋升**。
+- 设计交付物三件套：`docs/metric_library_concept_model_v0.2_20260817.md`（概念模型 + §0）、`docs/metric_library_system_v0.2_20260815.md`（止血态门禁）、`docs/metric_library_concept_model_ddl_draft.md`（MySQL 8 DDL + 回滚 + Phase0 冒烟清单）。
+- 设计稿阶段**刻意不动现网**：不改 MySQL 表、不上 prod API、不执行 DDL；Phase0 test 旁路建表等知秋拍板后再跑。
+- 知秋 DDL 审阅需拍板 5 项：test 是否建表、口语别名真源（`metric_label.biz_term` vs `aliases.md`）、264 条是否允许批量改 `lifecycle_status`、derived 只存分子/分母（比率查询侧现算）、是否与狂人 Phase2 并行（先建空表再写入）。
+- 页面停留时长产品定稿：阿莱士确认**不作跳出统计**；墙钟 **<5 秒或 >12 小时**的会话**整段剔除**，不进五档；有效会话口径需同步协作方并回退测试环境跳出草案。
+- 日报上传云端：**用户给定正文原封不动**落盘并上传，不改字；TG 私聊推送走 old-mac 定时任务，上传动作本身不另发 TG。
 - AI 批量生成的列级血缘**未经人工复核**，上线前必须对照现网海豚 task SQL 逐列核对，错了会误导影响分析。
 - 机器核对已覆盖表级拓扑（FROM/JOIN 双向比对）：106/123 一致、0 差异时，**不要再花时间验「上游是不是那几张表」**。
 - 周报「说人话」**不等于**改成日报结构；保留原周报版式（`### 专项分块`、`【卡点】`、下周表格、日报索引、「一句话给周会」），只改措辞。
 - 周报正文去掉 `stage3`、`v189`、`bucket0`、`agent-bus`、`poller` 等内部说法，换成业务部门能直接听懂的表述；状态写「已完成」，不写「进行中」。
 - 周报汇总口径：正式日报 + 双机 work-log 合并稿 + `hosts`；`new-mac` / `old-mac` 缺流水要**如实点明**，不假装双机齐全。
 - 「一句话给周会」也要说人话：上周交付、当前卡点、本周动作各一句，方便复制进周会。
-- 血缘核对 fallback：海豚元库连不上时，用 MCP 拉 live task SQL 做人工抽查，详报落 `.claude/database/reports/lineage_<bus>/`。
-- 停更旧表 + 新表并行时（如 `dws_user_tag_d` vs `dws_user_tag_d_d`）：以**现网在跑 task 的目标表和 FROM/JOIN** 为准，旧表应 deprecated、为新表重建血缘。
-- 列级血缘错不只来自源表选错：`WHERE` 过滤（如 `is_valid=1` 滤掉 bounce）会导致聚合列（如 `bounce_cnt`）与血缘描述不一致，prod 未发版时仓内 SQL 已对也仍算问题。
-- prod 表可能是 **VIEW** 而非物理 INSERT，核对要先确认架构，不能按普通写入 task 套。
-- 人工核对重心转到机器做不出的列级四类：同名列归属（JOIN 多表时的 `app_id`/`dt`/`channel`/`uid`）、WHERE 过滤、聚合口径、视图/停更表等特殊架构。
-- 狂人派单若带 **Q1/Q2/Q3** 或「不许跳过三问」，回执必须**逐条按模板填**；报运行态、test 有 bucket0、或「已完成/待命/rest」**不算答复**。
-- 含 **HOLD、打回、三问、口径争议** 的 bus **禁止走快车道** `reply_only` 自动「待命/rest」结案；应进 Cursor 主会话按格式交作业。
-- session_duration bounce 争议根因**：08-04 `a17b55f6` 改为仅 `is_valid=1` 进 DWS，与知秋 07-21「bounce 第 0 档」冲突；开发侧自行解读 PRD，**未与产品书面确认**（Q1=没确认过）。
-- Q3 铁律**：产品未拍板前开发**不能代决**；选项 (a) 维持无 bucket0 或 (b) bounce 进第 0 档并重跑 45 天；**45 天 prod 重跑继续 HOLD**。
-- 口径争议项工作簿/周报应标 **HOLD · 等产品拍板**，禁止标「已完成」；DDL COMMENT 补丁可先行，不等同口径结案。
-- [LESSON: agent-bus,worker_ant,口径争议|狂人 bus 含 Q1/Q2/Q3 或「不许跳过三问」时禁止快车道 reply_only 结案，必须进主会话逐条填三问后再 reply]
-- [LESSON: session_duration,bounce,datacheck|prod 有分区有数不能证明口径对；bounce 争议看 DWM is_bounce 与 DWS bucket0/bounce_cnt 是否对齐，未拍板前标 HOLD、禁 45 天 prod 重跑]
 

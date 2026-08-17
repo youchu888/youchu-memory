@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-设计主体写齐后按-commit-bus狂人-ddl草案-bus知秋-顺序主动闭环-不等逐条授权.md` | 2026-08-17-设计主体写齐后按-commit-bus狂人-ddl草案-b |
+| ## +d +迁 08 17 2026 | `~/.dc-platform/memory/lessons/2026-08-17-又初负责概念层模型-迁移路径-ddl草案-狂人等模型交稿后再做264条语义归纳-设计阶段不改现网.md` | 2026-08-17-又初负责概念层模型-迁移路径-ddl草案-狂人等模型交稿后 |
+| ## #6 08 0到 17 1设 | `~/.dc-platform/memory/lessons/2026-08-17-从0到1设计先查业界语义层-指标库实践-写进设计稿-0-并显式标注采纳项与因-6552铁律不照搬.md` | 2026-08-17-从0到1设计先查业界语义层-指标库实践-写进设计稿-0-并 |
+| mac old tg 上传 上传动作本身不 上传动作本身不另发 | `sessions/tg-rotate-2026-08-17-2226.md` | 日报上传云端：**用户给定正文原封不动**落盘并上传，不改字；TG 私聊推送走  |
+| 12 不作 不作跳出统计 不进 不进五档 五档 | `sessions/tg-rotate-2026-08-17-2226.md` | 页面停留时长产品定稿：阿莱士确认**不作跳出统计**；墙钟 **<5 秒或 >1 |
+| 264 aliases.md ddl derived lifecycle_sta | `sessions/tg-rotate-2026-08-17-2226.md` | 知秋 DDL 审阅需拍板 5 项：test 是否建表、口语别名真源（`metri |
+| api ddl mysql phase0 prod test | `sessions/tg-rotate-2026-08-17-2226.md` | 设计稿阶段**刻意不动现网**：不改 MySQL 表、不上 prod API、不 |
+| ddl docs metric_library_concept_model_dd | `sessions/tg-rotate-2026-08-17-2226.md` | 设计交付物三件套：`docs/metric_library_concept_mo |
+| .列 formula metric_concept metric_impl_ca | `sessions/tg-rotate-2026-08-17-2226.md` | 概念层三层模型：`metric_concept`（实际指标，人工定义）→ `me |
+| #6 0到 1设 2铁 52 55 | `sessions/tg-rotate-2026-08-17-2226.md` | [LESSON: metric-library,design,0-to-1/从0 |
+| bus commit ddl push 「等 不要 | `sessions/tg-rotate-2026-08-17-2226.md` | 设计闭环优先级：**稿写完 → commit/push → bus 狂人交稿 → |
+| #6 2） 52 55 65 aggregation | `sessions/tg-rotate-2026-08-17-2226.md` | 团队铁律（#6552）比业界对齐更硬：`req_ref` 四件套、**禁比率进  |
+| 264 67 75 bus#6655 concept） ddl | `sessions/tg-rotate-2026-08-17-2226.md` | bus#6655 分工：**又初**出概念模型、门禁、U1–U7、264 条迁移 |
+| bi headless 一侧 三分 不是 业界 | `sessions/tg-rotate-2026-08-17-2226.md` | 指标库定位是「**带门禁的指标层**」，不是 Headless BI；业界三分法 |
+| dbt metricflow vs §0 不照 与对 | `sessions/tg-rotate-2026-08-17-2226.md` | 从 0 到 1 的新设计（如指标库概念层）应**先查业界资料**（语义层、指标目 |
 | ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-血缘与现网不一致时以-prod-海豚-live-task-为准-旧表停更须-deprecated.md` | 2026-08-17-血缘与现网不一致时以-prod-海豚-live-task- |
 | ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过滤-聚合口径-停更-视图架构.md` | 2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过 |
 | ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结构.md` | 2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结 |
@@ -30,18 +45,3 @@
 | 45 bounce bounce_cnt bucket0 datacheck d | `sessions/tg-rotate-2026-08-17-1044.md` | [LESSON: session_duration,bounce,datache |
 | agent bus lesson q1 q2 q3 | `sessions/tg-rotate-2026-08-17-1044.md` | [LESSON: agent-bus,worker_ant,口径争议/狂人 bu |
 | comment ddl hold 「已 丁可 不等 | `sessions/tg-rotate-2026-08-17-1044.md` | 口径争议项工作簿/周报应标 **HOLD · 等产品拍板**，禁止标「已完成」； |
-| 45 bounce bucket0 hold prod q3 | `sessions/tg-rotate-2026-08-17-1044.md` | Q3 铁律**：产品未拍板前开发**不能代决**；选项 (a) 维持无 buck |
-| 04 07 08 21「bounce a17b55f6 bounce | `sessions/tg-rotate-2026-08-17-1044.md` | session_duration bounce 争议根因**：08-04 `a1 |
-| bus cursor es hold re reply_only | `sessions/tg-rotate-2026-08-17-1044.md` | 含 **HOLD、打回、三问、口径争议** 的 bus **禁止走快车道** ` |
-| buc bucket0 q1 q2 q3 rest」 | `sessions/tg-rotate-2026-08-17-1044.md` | 狂人派单若带 **Q1/Q2/Q3** 或「不许跳过三问」，回执必须**逐条按模 |
-| ## 08 16 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-16-未结项汇报必须二分-又初欠账-与-等外部拍板-避免把-pending-rp-说成又初完全没推进.md` | 2026-08-16-未结项汇报必须二分-又初欠账-与-等外部拍板-避免把-pe |
-| ## 08 16 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-16-review-stage7-待审须-bus-私催-协作群-带-bus-与-session-cod.md` | 2026-08-16-review-stage7-待审须-bus-私催-协作群- |
-| ## 08 16 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-16-terminology-见指标库-html-蓝底-图例时写-数据侧初稿-请产品确认-禁止读成审核.md` | 2026-08-16-terminology-见指标库-html-蓝底-图例时写 |
-| 002 20260729 20260804 dc_cursor_bot dev  | `sessions/tg-rotate-2026-08-16-0615.md` | 催审范例：停留时长 `dev-20260729-002` → 蓝猫；页面访问 D |
-| checklist di en g（ hadoop hold | `sessions/tg-rotate-2026-08-16-0615.md` | **不算又初卡死**：test 验数已过但 stage7 RP pending（ |
-| bus#6552 spark stage4 v0.2 三处 三处硬门槛落地 | `sessions/tg-rotate-2026-08-16-0615.md` | **又初欠账**典型：历史明细补数续核对、指标库 v0.2 本地稿上传平台并按  |
-| hold log memory_open vs work 「明 | `sessions/tg-rotate-2026-08-16-0615.md` | 主人问「还有什么没完成 / 有没有卡着」时，先查 work-log、MEMORY |
-| dev session 与文 停留 停留时长等） 内容 | `sessions/tg-rotate-2026-08-16-0615.md` | **蓝猫** = 数据开发同学（如内容排行、停留时长等）；**野花** = 另一 |
-| html 「产 「数 「蓝 「蓝底」 」一 | `sessions/tg-rotate-2026-08-16-0615.md` | 文档图例 **「蓝底」** = HTML 里蓝色底色初稿格，表示「数据侧拟口径、 |
-| lesson pending report rp status 「又 | `sessions/tg-rotate-2026-08-16-0615.md` | [LESSON: status-report/未结项汇报必须二分「又初欠账」与「 |
-| bus bus# code dev hold lesson | `sessions/tg-rotate-2026-08-16-0615.md` | [LESSON: dev-session/review/stage7 待审须 b |
