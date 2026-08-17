@@ -1,8 +1,8 @@
 {
   "outbound_bus_id": 6621,
   "sent_at": "2026-08-17T17:26:51+08:00",
-  "nudge_count": 5,
-  "last_nudge_at": "2026-08-17T19:57:00+08:00",
+  "nudge_count": 6,
+  "last_nudge_at": "2026-08-17T20:27:00+08:00",
   "status": "waiting",
   "stop": false
 }
