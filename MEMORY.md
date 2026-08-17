@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [血缘与现网不一致时以 prod 海豚 live task 为准；旧表停更](lessons/2026-08-17-血缘与现网不一致时以-prod-海豚-live-task-为准-旧表停更须-deprecated.md) — 会话轮换蒸馏
+- [表级拓扑机器验过后，人工只盯列级：同名列归属、WHERE过滤、聚合口径、](lessons/2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过滤-聚合口径-停更-视图架构.md) — 会话轮换蒸馏
+- [周报说人话只改措辞不改版式，保留原分块/卡点/周会一句话结构](lessons/2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结构.md) — 会话轮换蒸馏
 - [原 bus 被误结案后补正式回执须 `--no-dedup` 新发 re](lessons/2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发-reply-并检查-dedup-是否.md) — 会话轮换蒸馏
 - [prod 有分区有数不能证明口径对；bounce 争议看 DWM is_](lessons/2026-08-17-prod-有分区有数不能证明口径对-bounce-争议看-dwm-is_bounce-与-dws.md) — 会话轮换蒸馏
 - [狂人 bus 含 Q1/Q2/Q3 或「不许跳过三问」时禁止快车道 re](lessons/2026-08-17-狂人-bus-含-q1-q2-q3-或-不许跳过三问-时禁止快车道-reply_only-结案-.md) — 会话轮换蒸馏

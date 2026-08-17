@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-血缘与现网不一致时以-prod-海豚-live-task-为准-旧表停更须-deprecated.md` | 2026-08-17-血缘与现网不一致时以-prod-海豚-live-task- |
+| ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过滤-聚合口径-停更-视图架构.md` | 2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过 |
+| ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结构.md` | 2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结 |
+| app_id channel dt in jo oi | `sessions/tg-rotate-2026-08-17-1644.md` | 人工核对重心转到机器做不出的列级四类：同名列归属（JOIN 多表时的 `app_ |
+| insert prod task view 不能 不能按普通写入 | `sessions/tg-rotate-2026-08-17-1644.md` | prod 表可能是 **VIEW** 而非物理 INSERT，核对要先确认架构， |
+| bo bounce_cnt bounce）会导致聚合列（如 ce e） is_v | `sessions/tg-rotate-2026-08-17-1644.md` | 列级血缘错不只来自源表选错：`WHERE` 过滤（如 `is_valid=1`  |
+| deprecated dws_user_tag_d dws_user_tag_d | `sessions/tg-rotate-2026-08-17-1644.md` | 停更旧表 + 新表并行时（如 `dws_user_tag_d` vs `dws_ |
+| .cla .claude bus database fallback linea | `sessions/tg-rotate-2026-08-17-1644.md` | 血缘核对 fallback：海豚元库连不上时，用 MCP 拉 live task |
+| 「一 「一句话给周会」也要说人话 」也 一句 上周 上周交付 | `sessions/tg-rotate-2026-08-17-1644.md` | 「一句话给周会」也要说人话：上周交付、当前卡点、本周动作各一句，方便复制进周会。 |
+| hosts log mac new old work | `sessions/tg-rotate-2026-08-17-1644.md` | 周报汇总口径：正式日报 + 双机 work-log 合并稿 + `hosts`； |
+| agent bucket0 bus poller stage3 v189 | `sessions/tg-rotate-2026-08-17-1644.md` | 周报正文去掉 `stage3`、`v189`、`bucket0`、`agent- |
+| ### 「一 「一句 「一句话给周会」） 「说 」） | `sessions/tg-rotate-2026-08-17-1644.md` | 周报「说人话」**不等于**改成日报结构；保留原周报版式（`### 专项分块`、 |
+| 106 123 fr join om ro | `sessions/tg-rotate-2026-08-17-1644.md` | 机器核对已覆盖表级拓扑（FROM/JOIN 双向比对）：106/123 一致、0 |
+| ai sql task 上线 上线前必须对照现网海豚 了会 | `sessions/tg-rotate-2026-08-17-1644.md` | AI 批量生成的列级血缘**未经人工复核**，上线前必须对照现网海豚 task  |
 | ## 08 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发-reply-并检查-dedup-是否.md` | 2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发 |
 | ## 08 17 2026 45 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-prod-有分区有数不能证明口径对-bounce-争议看-dwm-is_bounce-与-dws.md` | 2026-08-17-prod-有分区有数不能证明口径对-bounce-争议看- |
 | ## 08 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-狂人-bus-含-q1-q2-q3-或-不许跳过三问-时禁止快车道-reply_only-结案-.md` | 2026-08-17-狂人-bus-含-q1-q2-q3-或-不许跳过三问-时禁 |
@@ -31,17 +45,3 @@
 | html 「产 「数 「蓝 「蓝底」 」一 | `sessions/tg-rotate-2026-08-16-0615.md` | 文档图例 **「蓝底」** = HTML 里蓝色底色初稿格，表示「数据侧拟口径、 |
 | lesson pending report rp status 「又 | `sessions/tg-rotate-2026-08-16-0615.md` | [LESSON: status-report/未结项汇报必须二分「又初欠账」与「 |
 | bus bus# code dev hold lesson | `sessions/tg-rotate-2026-08-16-0615.md` | [LESSON: dev-session/review/stage7 待审须 b |
-| docs ht html「蓝底」图例时写「数据侧初稿 lesson l「 ml | `sessions/tg-rotate-2026-08-16-0615.md` | [LESSON: docs/terminology/见指标库 HTML「蓝底」图 |
-| 「已 「明 」只 上传 上平 与已 | `sessions/tg-rotate-2026-08-16-0615.md` | 日报「已完成」只写当日真有交付闭环的项；**本地定稿待上传** 应放「明日动作」 |
-| bus bus# code dev session test | `sessions/tg-rotate-2026-08-16-0615.md` | 主人说「需要排版的就催」→ 仅对 **等审核/排版** 项催办：**bus 私催 |
-| dev session 与文 停留 停留时长等） 内容 | `sessions/tg-rotate-2026-08-16-0615.md` | 蓝猫** = 数据开发同学（如内容排行、停留时长等）；**野花** = 另一类  |
-| ## +来 08 15 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首页-来路非空-初稿口径.md` | 2026-08-15-页面访问-进入-来路空或-unknown-禁止沿用-会话首 |
-| ## 08 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-15-指标库文档按大漏斗模板写-口径对齐-prod-已定-dev-session-比率字段查询侧现算不.md` | 2026-08-15-指标库文档按大漏斗模板写-口径对齐-prod-已定-dev |
-| dbprogramming intake test 上传 与设 为定 | `sessions/tg-rotate-2026-08-15-0934.md` | 指标库任务 intake：`dbprogramming` · test · 目标 |
-| design_page_visit_analysis_20260805.html | `sessions/tg-rotate-2026-08-15-0934.md` | 本地旧稿（如 `design_page_visit_analysis_20260 |
-| 04 04）的修订点 08 4） §3 于评 | `sessions/tg-rotate-2026-08-15-0934.md` | §3 产品确认项逐条标状态（本次 7 项全绿），并注明相对初稿（如 08-04） |
-| 10 dropout_page_cnt stay_page_cnt 不落库 个分 | `sessions/tg-rotate-2026-08-15-0934.md` | 跳出率 = `dropout_page_cnt / stay_page_cnt` |
-| 002 20260804 canonical dev dws_app_page_ | `sessions/tg-rotate-2026-08-15-0934.md` | 页面访问分析 canonical 口径：`dws_app_page_visit_ |
-| docs html metric name slug yyyymmdd.html | `sessions/tg-rotate-2026-08-15-0934.md` | 定稿流程：先对齐评审意见与现网口径 → 本地 HTML 重写 → 上传平台指标库 |
-| 0~ ~4 「大 」0 一走 产品 | `sessions/tg-rotate-2026-08-15-0934.md` | 指标库设计文档统一走「大漏斗模板」0~4 节：链路 → 逐字段规则 → 数据质量 |
-| +来 lesson library metric unknown 「会 | `sessions/tg-rotate-2026-08-15-0934.md` | [LESSON: metric-library,口径/页面访问「进入」=来路空或 |

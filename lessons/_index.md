@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-17 | [血缘与现网不一致时以 prod 海豚 live task 为准；旧表停更须 de](./2026-08-17-血缘与现网不一致时以-prod-海豚-live-task-为准-旧表停更须-deprecated.md) | lineage,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-17 | [表级拓扑机器验过后，人工只盯列级：同名列归属、WHERE过滤、聚合口径、停更/视](./2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过滤-聚合口径-停更-视图架构.md) | lineage,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-17 | [周报说人话只改措辞不改版式，保留原分块/卡点/周会一句话结构](./2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结构.md) | weekly-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-17 | [原 bus 被误结案后补正式回执须 `--no-dedup` 新发 reply，](./2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发-reply-并检查-dedup-是否.md) | agent-bus,补发,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-17 | [prod 有分区有数不能证明口径对；bounce 争议看 DWM is_boun](./2026-08-17-prod-有分区有数不能证明口径对-bounce-争议看-dwm-is_bounce-与-dws.md) | session_duration,bounce,datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-17 | [狂人 bus 含 Q1/Q2/Q3 或「不许跳过三问」时禁止快车道 reply_](./2026-08-17-狂人-bus-含-q1-q2-q3-或-不许跳过三问-时禁止快车道-reply_only-结案-.md) | agent-bus,worker_ant,口径争议,session-rotate | 会话轮换前自动蒸馏 |
