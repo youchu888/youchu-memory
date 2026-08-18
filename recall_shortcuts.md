@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-18-test-sr-建表走-dev-session-mcp-ddl-paimon-staging-另.md` | 2026-08-18-test-sr-建表走-dev-session-mcp-d |
+| ## 08 18 2026 agent_session_rotate canon | `~/.dc-platform/memory/lessons/2026-08-18-mysql-8-条件唯一用生成列-null-不参与-unique-metric_label-唯一.md` | 2026-08-18-mysql-8-条件唯一用生成列-null-不参与-uni |
+| ## 08 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-test-ddl-须等-5-条拍板-知秋.md` | 2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-t |
+| 18 30 54 app_id dt is_new | `sessions/tg-rotate-2026-08-18-2130.md` | 大漏斗宽表结构：主键 `(dt, app_id, is_new)`；18 事件  |
+| 001 04.dws 20260807 big db.run_ddl_etl d | `sessions/tg-rotate-2026-08-18-2130.md` | 大漏斗 test 建表：表 `dws.dws_app_event_funnel_ |
+| 75 ddl phase2 prod test u1 | `sessions/tg-rotate-2026-08-18-2130.md` | 狂人点头改稿后 Phase2 语义归纳（75 条拆条、U1/U3 优先）可启动； |
+| 409 4d15c1ed canonical_code co concept d | `sessions/tg-rotate-2026-08-18-2130.md` | DDL 硬伤定案（commit `4d15c1ed`）：`metric_labe |
+| #6664 bus#6662 bus#6673 commit dev origi | `sessions/tg-rotate-2026-08-18-2130.md` | 跨角色协作：设计交 bus#6662/#6664 给知秋/狂人；超时无回执用 b |
+| 175 264 27 75 89 formula | `sessions/tg-rotate-2026-08-18-2130.md` | 现网 `metric_standard` 快照：264 条；175 有 form |
+| 264 ddl derived dev es lifecycle | `sessions/tg-rotate-2026-08-18-2130.md` | 又初侧设计闭环后仍须等外部拍板 5 项（test Phase0 建表、别名真源、 |
+| 75 metric_library metric_library_concept | `sessions/tg-rotate-2026-08-18-2130.md` | 概念层设计三件套：`metric_library_concept_model_v |
+| .2 0. 264 2」 metadata v0 | `sessions/tg-rotate-2026-08-18-2130.md` | 指标库分「概念设计 v0.2」与「现网 metadata 存量」两条线；设计交付 |
+| ddl lesson library lifecycle metric phas | `sessions/tg-rotate-2026-08-18-2130.md` | [LESSON: metric-library/DDL 评审后改稿 push 不 |
+| concept diverged_owner diverged_since g6 | `sessions/tg-rotate-2026-08-18-2130.md` | 设计稿补充铁律：`orphaned` 仅 implementation 层派生禁 |
+| biz_term_key bus#6676 concept implementa | `sessions/tg-rotate-2026-08-18-2130.md` | 狂人 bus#6676 U1~U7 评审结论：三层 concept/label/ |
 | ## 08 18 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-18-工作簿进展读当日-work-log-实活-禁捞旧-bus-挂账与每日重复模板-今天确认清楚再回-.md` | 2026-08-18-工作簿进展读当日-work-log-实活-禁捞旧-bus- |
 | ## 08 17 18 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-18-停留时长-有效会话-08-17-阿莱士-与离开事件埋点-产品未答-分层维护-prod-有分区-已.md` | 2026-08-18-停留时长-有效会话-08-17-阿莱士-与离开事件埋点-产 |
 | ## 08 18 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-18-对外一句会被人当事实用的话-先查-memory-私聊-session-代码-拿不准先说-正在核对.md` | 2026-08-18-对外一句会被人当事实用的话-先查-memory-私聊-se |
@@ -30,18 +45,3 @@
 | ddl docs metric_library_concept_model_dd | `sessions/tg-rotate-2026-08-17-2226.md` | 设计交付物三件套：`docs/metric_library_concept_mo |
 | .列 formula metric_concept metric_impl_ca | `sessions/tg-rotate-2026-08-17-2226.md` | 概念层三层模型：`metric_concept`（实际指标，人工定义）→ `me |
 | #6 0到 1设 2铁 52 55 | `sessions/tg-rotate-2026-08-17-2226.md` | [LESSON: metric-library,design,0-to-1/从0 |
-| bus commit ddl push 「等 不要 | `sessions/tg-rotate-2026-08-17-2226.md` | 设计闭环优先级：**稿写完 → commit/push → bus 狂人交稿 → |
-| #6 2） 52 55 65 aggregation | `sessions/tg-rotate-2026-08-17-2226.md` | 团队铁律（#6552）比业界对齐更硬：`req_ref` 四件套、**禁比率进  |
-| 264 67 75 bus#6655 concept） ddl | `sessions/tg-rotate-2026-08-17-2226.md` | bus#6655 分工：**又初**出概念模型、门禁、U1–U7、264 条迁移 |
-| bi headless 一侧 三分 不是 业界 | `sessions/tg-rotate-2026-08-17-2226.md` | 指标库定位是「**带门禁的指标层**」，不是 Headless BI；业界三分法 |
-| dbt metricflow vs §0 不照 与对 | `sessions/tg-rotate-2026-08-17-2226.md` | 从 0 到 1 的新设计（如指标库概念层）应**先查业界资料**（语义层、指标目 |
-| ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-血缘与现网不一致时以-prod-海豚-live-task-为准-旧表停更须-deprecated.md` | 2026-08-17-血缘与现网不一致时以-prod-海豚-live-task- |
-| ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过滤-聚合口径-停更-视图架构.md` | 2026-08-17-表级拓扑机器验过后-人工只盯列级-同名列归属-where过 |
-| ## 08 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结构.md` | 2026-08-17-周报说人话只改措辞不改版式-保留原分块-卡点-周会一句话结 |
-| app_id channel dt in jo oi | `sessions/tg-rotate-2026-08-17-1644.md` | 人工核对重心转到机器做不出的列级四类：同名列归属（JOIN 多表时的 `app_ |
-| insert prod task view 不能 不能按普通写入 | `sessions/tg-rotate-2026-08-17-1644.md` | prod 表可能是 **VIEW** 而非物理 INSERT，核对要先确认架构， |
-| bo bounce_cnt bounce）会导致聚合列（如 ce e） is_v | `sessions/tg-rotate-2026-08-17-1644.md` | 列级血缘错不只来自源表选错：`WHERE` 过滤（如 `is_valid=1`  |
-| deprecated dws_user_tag_d dws_user_tag_d | `sessions/tg-rotate-2026-08-17-1644.md` | 停更旧表 + 新表并行时（如 `dws_user_tag_d` vs `dws_ |
-| .cla .claude bus database fallback linea | `sessions/tg-rotate-2026-08-17-1644.md` | 血缘核对 fallback：海豚元库连不上时，用 MCP 拉 live task |
-| 「一 「一句话给周会」也要说人话 」也 一句 上周 上周交付 | `sessions/tg-rotate-2026-08-17-1644.md` | 「一句话给周会」也要说人话：上周交付、当前卡点、本周动作各一句，方便复制进周会。 |
-| hosts log mac new old work | `sessions/tg-rotate-2026-08-17-1644.md` | 周报汇总口径：正式日报 + 双机 work-log 合并稿 + `hosts`； |

@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [test SR 建表走 dev session + MCP DDL；Pa](lessons/2026-08-18-test-sr-建表走-dev-session-mcp-ddl-paimon-staging-另.md) — 会话轮换蒸馏
+- [MySQL 8 条件唯一用生成列 NULL 不参与 UNIQUE；`me](lessons/2026-08-18-mysql-8-条件唯一用生成列-null-不参与-unique-metric_label-唯一.md) — 会话轮换蒸馏
+- [DDL 评审后改稿 push 不等于建表；Phase0 test DDL](lessons/2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-test-ddl-须等-5-条拍板-知秋.md) — 会话轮换蒸馏
 - [工作簿进展读当日 work-log 实活，禁捞旧 bus 挂账与每日重复](lessons/2026-08-18-工作簿进展读当日-work-log-实活-禁捞旧-bus-挂账与每日重复模板-今天确认清楚再回-.md) — 会话轮换蒸馏
 - [停留时长：有效会话（08-17 阿莱士）与离开事件埋点（产品未答）分层维](lessons/2026-08-18-停留时长-有效会话-08-17-阿莱士-与离开事件埋点-产品未答-分层维护-prod-有分区-已.md) — 会话轮换蒸馏
 - [对外一句会被人当事实用的话，先查 memory/私聊/session/代](lessons/2026-08-18-对外一句会被人当事实用的话-先查-memory-私聊-session-代码-拿不准先说-正在核对.md) — 会话轮换蒸馏
