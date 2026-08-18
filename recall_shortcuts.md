@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 18 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-18-工作簿进展读当日-work-log-实活-禁捞旧-bus-挂账与每日重复模板-今天确认清楚再回-.md` | 2026-08-18-工作簿进展读当日-work-log-实活-禁捞旧-bus- |
+| ## 08 17 18 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-18-停留时长-有效会话-08-17-阿莱士-与离开事件埋点-产品未答-分层维护-prod-有分区-已.md` | 2026-08-18-停留时长-有效会话-08-17-阿莱士-与离开事件埋点-产 |
+| ## 08 18 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-18-对外一句会被人当事实用的话-先查-memory-私聊-session-代码-拿不准先说-正在核对.md` | 2026-08-18-对外一句会被人当事实用的话-先查-memory-私聊-se |
+| 45 bus log work …」 …」开头） | `sessions/tg-rotate-2026-08-18-1030.md` | **工作簿「今天只报今天的事」**：近况优先读**当日 work-log 实活* |
+| memory sess session vs 事件 事项 | `sessions/tg-rotate-2026-08-18-1030.md` | **更正回执要分层补发**：发现混答后，按事项拆开更正（例：有效会话已确认 vs |
+| 08 17 bus q1–q3 「没 」易 | `sessions/tg-rotate-2026-08-18-1030.md` | **bus 要求 Q1–Q3 时逐条对齐题目填**：写清问过/没问过、对象、日期 |
+| 不确 乱回 乱回会误导协作方 事会 事实 于把 | `sessions/tg-rotate-2026-08-18-1030.md` | **乱回会误导协作方**：狂人、知秋、同事会把回执当事实推进、对账、催产品；未核 |
+| @） @）一律先确认再发 bu dev log memory.md | `sessions/tg-rotate-2026-08-18-1030.md` | **对外回复（bus、私聊、群 @）一律先确认再发**：先查 `memory.m |
+| dws hold prod 「跑通 不代 不代表业务口径已闭环 | `sessions/tg-rotate-2026-08-18-1030.md` | **「跑通 ≠ 口径完成」**：prod 五档 DWS 日批正常、分区在跑，只代 |
+| hold prod progress_page_stay workbook_pr | `sessions/tg-rotate-2026-08-18-1030.md` | **`workbook_progress_service.py` 的 `_pro |
+| 12h 5s bounce memory 「问 一句 | `sessions/tg-rotate-2026-08-18-1030.md` | **停留时长口径要分层**：**有效会话规则**（无 bounce、墙钟 <5s |
+| bus lesson log tgbot work workbook | `sessions/tg-rotate-2026-08-18-1030.md` | [LESSON: workbook,tgbot/工作簿进展读当日 work-lo |
+| bus hold prod session 代码 代码逻辑 | `sessions/tg-rotate-2026-08-18-1030.md` | 状态类词（已完成/HOLD/没问过）发前须实查**：代码逻辑、session、p |
+| 45 bus log work …」 …」开头） | `sessions/tg-rotate-2026-08-18-1030.md` | 工作簿「今天只报今天的事」**：近况优先读**当日 work-log 实活**（ |
+| 12h 5s bounce memory 「问 一句 | `sessions/tg-rotate-2026-08-18-1030.md` | 停留时长口径要分层**：**有效会话规则**（无 bounce、墙钟 <5s 或 |
 | ## 08 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-设计主体写齐后按-commit-bus狂人-ddl草案-bus知秋-顺序主动闭环-不等逐条授权.md` | 2026-08-17-设计主体写齐后按-commit-bus狂人-ddl草案-b |
 | ## +d +迁 08 17 2026 | `~/.dc-platform/memory/lessons/2026-08-17-又初负责概念层模型-迁移路径-ddl草案-狂人等模型交稿后再做264条语义归纳-设计阶段不改现网.md` | 2026-08-17-又初负责概念层模型-迁移路径-ddl草案-狂人等模型交稿后 |
 | ## #6 08 0到 17 1设 | `~/.dc-platform/memory/lessons/2026-08-17-从0到1设计先查业界语义层-指标库实践-写进设计稿-0-并显式标注采纳项与因-6552铁律不照搬.md` | 2026-08-17-从0到1设计先查业界语义层-指标库实践-写进设计稿-0-并 |
@@ -30,18 +45,3 @@
 | .cla .claude bus database fallback linea | `sessions/tg-rotate-2026-08-17-1644.md` | 血缘核对 fallback：海豚元库连不上时，用 MCP 拉 live task |
 | 「一 「一句话给周会」也要说人话 」也 一句 上周 上周交付 | `sessions/tg-rotate-2026-08-17-1644.md` | 「一句话给周会」也要说人话：上周交付、当前卡点、本周动作各一句，方便复制进周会。 |
 | hosts log mac new old work | `sessions/tg-rotate-2026-08-17-1644.md` | 周报汇总口径：正式日报 + 双机 work-log 合并稿 + `hosts`； |
-| agent bucket0 bus poller stage3 v189 | `sessions/tg-rotate-2026-08-17-1644.md` | 周报正文去掉 `stage3`、`v189`、`bucket0`、`agent- |
-| ### 「一 「一句 「一句话给周会」） 「说 」） | `sessions/tg-rotate-2026-08-17-1644.md` | 周报「说人话」**不等于**改成日报结构；保留原周报版式（`### 专项分块`、 |
-| 106 123 fr join om ro | `sessions/tg-rotate-2026-08-17-1644.md` | 机器核对已覆盖表级拓扑（FROM/JOIN 双向比对）：106/123 一致、0 |
-| ai sql task 上线 上线前必须对照现网海豚 了会 | `sessions/tg-rotate-2026-08-17-1644.md` | AI 批量生成的列级血缘**未经人工复核**，上线前必须对照现网海豚 task  |
-| ## 08 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发-reply-并检查-dedup-是否.md` | 2026-08-17-原-bus-被误结案后补正式回执须-no-dedup-新发 |
-| ## 08 17 2026 45 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-prod-有分区有数不能证明口径对-bounce-争议看-dwm-is_bounce-与-dws.md` | 2026-08-17-prod-有分区有数不能证明口径对-bounce-争议看- |
-| ## 08 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-狂人-bus-含-q1-q2-q3-或-不许跳过三问-时禁止快车道-reply_only-结案-.md` | 2026-08-17-狂人-bus-含-q1-q2-q3-或-不许跳过三问-时禁 |
-| 45 bounce bucket0 hold prod q3 | `sessions/tg-rotate-2026-08-17-1044.md` | **Q3 铁律**：产品未拍板前开发**不能代决**；选项 (a) 维持无 bu |
-| 04 08 12h 2） 5s bounce | `sessions/tg-rotate-2026-08-17-1044.md` | 仓库/指标库/平台**均无 PRD v1.0.2 §5.5.4 逐字原文**；现 |
-| 04 07 08 21「bounce a17b55f6 bounce | `sessions/tg-rotate-2026-08-17-1044.md` | **session_duration bounce 争议根因**：08-04 ` |
-| agent_bus_send.py bus bus#6588） closed d | `sessions/tg-rotate-2026-08-17-1044.md` | 快车道误结案后：原 bus 已 closed 时，补发须用 `agent_bus |
-| bounce dw dws）须单独正面答 prod s） ws | `sessions/tg-rotate-2026-08-17-1044.md` | **表在跑、分区有数 ≠ 口径正确**；口径争议（如 bounce 是否进 DW |
-| 45 bounce bounce_cnt bucket0 datacheck d | `sessions/tg-rotate-2026-08-17-1044.md` | [LESSON: session_duration,bounce,datache |
-| agent bus lesson q1 q2 q3 | `sessions/tg-rotate-2026-08-17-1044.md` | [LESSON: agent-bus,worker_ant,口径争议/狂人 bu |
-| comment ddl hold 「已 丁可 不等 | `sessions/tg-rotate-2026-08-17-1044.md` | 口径争议项工作簿/周报应标 **HOLD · 等产品拍板**，禁止标「已完成」； |

@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [工作簿进展读当日 work-log 实活，禁捞旧 bus 挂账与每日重复](lessons/2026-08-18-工作簿进展读当日-work-log-实活-禁捞旧-bus-挂账与每日重复模板-今天确认清楚再回-.md) — 会话轮换蒸馏
+- [停留时长：有效会话（08-17 阿莱士）与离开事件埋点（产品未答）分层维](lessons/2026-08-18-停留时长-有效会话-08-17-阿莱士-与离开事件埋点-产品未答-分层维护-prod-有分区-已.md) — 会话轮换蒸馏
+- [对外一句会被人当事实用的话，先查 memory/私聊/session/代](lessons/2026-08-18-对外一句会被人当事实用的话-先查-memory-私聊-session-代码-拿不准先说-正在核对.md) — 会话轮换蒸馏
 - [设计主体写齐后按 commit→bus狂人→DDL草案→bus知秋 顺序](lessons/2026-08-17-设计主体写齐后按-commit-bus狂人-ddl草案-bus知秋-顺序主动闭环-不等逐条授权.md) — 会话轮换蒸馏
 - [又初负责概念层模型+迁移路径+DDL草案；狂人等模型交稿后再做264条语](lessons/2026-08-17-又初负责概念层模型-迁移路径-ddl草案-狂人等模型交稿后再做264条语义归纳-设计阶段不改现网.md) — 会话轮换蒸馏
 - [从0到1设计先查业界语义层/指标库实践，写进设计稿§0，并显式标注采纳项](lessons/2026-08-17-从0到1设计先查业界语义层-指标库实践-写进设计稿-0-并显式标注采纳项与因-6552铁律不照搬.md) — 会话轮换蒸馏
