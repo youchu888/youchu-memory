@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-18 · 最新归档：`sessions/tg-rotate-2026-08-18-2130.md`
+> 更新：2026-08-19 · 最新归档：`sessions/tg-rotate-2026-08-19-0632.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 对外回复（私聊/Cursor）禁止用「主人」等称呼；直接说事，用「你」，少汇报腔、少旁白体
+- 内部规则/记忆文档可保留「主人」作决策出处记录，但**对外输出必须剥离**
+- 日报标准链路：双机各自写 work-log → memory git 同步 → 读合并稿 + `hosts/new-mac|old-mac` → 扫当日 transcript/派单去重 → old-mac 推 TG；**禁止跳过同步直接写稿**
+- 用户给出定稿正文并说「上传云端」：以用户正文**原封不动**落本地并上传，禁止擅自改写后再传
+- [LESSON: daily-report|写/推日报前必须先跑双机 work-log 同步并读合并稿，禁止仅靠 transcript 在同步完成前定稿]
+- [LESSON: communication|对外回复禁用「主人」，用「你」直说；内部记忆可留出处词，输出必须剥离]
+- 定时推送（如 21:35）若早于双机同步完成，会产出「不完整双机汇总」；new-mac 晚间实活若未进 work-log，只能靠 transcript 补，不算规范版
+- 实活做完应**及时写入可同步的 work-log**（尤其 new-mac），不能等 21:20 flush 兜底或日报推送后再补
+- 被质疑日报是否多设备汇总时，应如实核对时点：work-log 是否齐、同步何时完成、推送是否早于合并稿
+- 用户要求「重新整理日报」：先跑双机同步，再以合并稿 + 全量私聊/派单为准重写，并推 TG **覆盖**旧版
+- 日报正文归因用**知秋**等人名，不用机器人名（狂人/worker_ant）；也不写「按主人要求」
+- 停留时长对外回执：不能把「生产有分区」当「已完成」；有效会话规则（已确认）与离开埋点（待产品答复）须分层写清，工作簿保持 HOLD
+- 指标库 v0.2 改稿要点：标签唯一约束、同名指标消歧；又初侧未动测试建表时要在日报里写清边界
+- 大漏斗 test 宽表：18 事件 × 用户/会话/次数三类计数 = 54 列；建表完成≠可写入，待接日批/补数验证
 - 狂人 bus#6676 U1~U7 评审结论：三层 concept/label/implementation 方向对；staging + 5 条门禁可挡 U5；**MySQL 8 无部分索引时用生成列 NULL 不参与唯一**（`primary_slot`/`biz_term_key`）实现条件唯一
 - 设计稿补充铁律：`orphaned` 仅 implementation 层派生禁双写；G6 复核队列 + `v_metric_impl_candidate_rejected_review`；**granularity 是 concept 固有属性**；`diverged_since`/`diverged_owner` + 7 工作日 SLA
 - [LESSON: metric-library|DDL 评审后改稿 push 不等于建表；Phase0 test DDL 须等 5 条拍板 + 知秋别名真源/lifecycle 两项，禁止抢跑]
 - 指标库分「概念设计 v0.2」与「现网 metadata 存量」两条线；设计交付 ≠ 可发布口径库，264 条存量仍处止血态治理阶段
-- 概念层设计三件套：`metric_library_concept_model_v0.2`、`metric_library_system_v0.2`（#6552 四件套/75 条拆条流）、`metric_library_concept_model_ddl_draft`（旁路四表，**未执行**）
-- 又初侧设计闭环后仍须等外部拍板 5 项（test Phase0 建表、别名真源、264 条 lifecycle 批量改、derived 存法、是否与 Phase2 并行）才能动 DDL / dev-session
-- 现网 `metric_standard` 快照：264 条；175 有 formula；**75 条同名多实现**是 Phase2 拆条输入；89 仍缺 formula；27 绑定软下线
-- 跨角色协作：设计交 bus#6662/#6664 给知秋/狂人；超时无回执用 bus#6673 合并催办，材料固定指向 `origin/dev` commit + 三份文档路径
-- DDL 硬伤定案（commit `4d15c1ed`）：`metric_label` 改 `UNIQUE(concept, kind, text)` + `label_primary_slot`；去掉 `canonical_code`；legacy 解析须带 `table_fqn`，多条命中 **409 消歧**
-- 狂人点头改稿后 Phase2 语义归纳（75 条拆条、U1/U3 优先）可启动；**test/prod DDL 与现网写操作仍等知秋两项拍板**
-- 大漏斗 test 建表：表 `dws.dws_app_event_funnel_d_d`（test SR）；DDL 源 `ops_system/04.dws/dws_app_event_funnel_d_d/`；须绑 dev session `dev-20260807-big-funnel-001` 经 MCP `db.run_ddl_etl` 执行
-- 大漏斗宽表结构：主键 `(dt, app_id, is_new)`；18 事件 × 3 指标 = 54 列；动态日分区近 30 天～未来 3 天；建完表为空，日批走 Spark/Paimon 另链路
-- Paimon/staging（如 `dws_app_event_funnel_metric_stg_d`）不在 SR DDL 一步搞定；需在 Hadoop 跑 `run_paimon_ddl.sh`，与 SR 宽表分开交付说明
-- 停留时长口径要分层**：**有效会话规则**（无 bounce、墙钟 <5s 或 >12h 剔除）与 **离开事件埋点**（单页测不出时长）是两件事，对外回执、工作簿、memory 均须分开写，禁止揉成一句「问过/没问过」。
-- 工作簿「今天只报今天的事」**：近况优先读**当日 work-log 实活**（「已做」以「今日：…」开头），不要每天复读旧 bus 挂账、硬编码「已知事实」或固定卡点套话（如「45 天重跑仍冻结」）。
-- 状态类词（已完成/HOLD/没问过）发前须实查**：代码逻辑、session、prod 分区、bus 结案是否真对齐，禁止凭印象或旧模板。
-- [LESSON: workbook,tgbot|工作簿进展读当日 work-log 实活，禁捞旧 bus 挂账与每日重复模板；今天确认清楚再回，明天再报明天]
-- **停留时长口径要分层**：**有效会话规则**（无 bounce、墙钟 <5s 或 >12h 剔除）与 **离开事件埋点**（单页测不出时长）是两件事，对外回执、工作簿、memory 均须分开写，禁止揉成一句「问过/没问过」。
 

@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [用户指定正文上传云端时原封不动落稿上传，不得先改措辞再传](lessons/2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传.md) — 会话轮换蒸馏
+- [对外回复禁用「主人」，用「你」直说；内部记忆可留出处词，输出必须剥离](lessons/2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md) — 会话轮换蒸馏
+- [写/推日报前必须先跑双机 work-log 同步并读合并稿，禁止仅靠 t](lessons/2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿-禁止仅靠-transcript-在同.md) — 会话轮换蒸馏
 - [test SR 建表走 dev session + MCP DDL；Pa](lessons/2026-08-18-test-sr-建表走-dev-session-mcp-ddl-paimon-staging-另.md) — 会话轮换蒸馏
 - [MySQL 8 条件唯一用生成列 NULL 不参与 UNIQUE；`me](lessons/2026-08-18-mysql-8-条件唯一用生成列-null-不参与-unique-metric_label-唯一.md) — 会话轮换蒸馏
 - [DDL 评审后改稿 push 不等于建表；Phase0 test DDL](lessons/2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-test-ddl-须等-5-条拍板-知秋.md) — 会话轮换蒸馏

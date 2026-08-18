@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-19 | [用户指定正文上传云端时原封不动落稿上传，不得先改措辞再传](./2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传.md) | daily-report-upload,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-19 | [对外回复禁用「主人」，用「你」直说；内部记忆可留出处词，输出必须剥离](./2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md) | communication,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-19 | [写/推日报前必须先跑双机 work-log 同步并读合并稿，禁止仅靠 trans](./2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿-禁止仅靠-transcript-在同.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-18 | [test SR 建表走 dev session + MCP DDL；Paimon](./2026-08-18-test-sr-建表走-dev-session-mcp-ddl-paimon-staging-另.md) | dbprogramming,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-18 | [MySQL 8 条件唯一用生成列 NULL 不参与 UNIQUE；`metric](./2026-08-18-mysql-8-条件唯一用生成列-null-不参与-unique-metric_label-唯一.md) | metric-library,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-18 | [DDL 评审后改稿 push 不等于建表；Phase0 test DDL 须等 ](./2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-test-ddl-须等-5-条拍板-知秋.md) | metric-library,session-rotate | 会话轮换前自动蒸馏 |

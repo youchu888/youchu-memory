@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传.md` | 2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传 |
+| ## 08 19 2026 agent_session_rotate commu | `~/.dc-platform/memory/lessons/2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md` | 2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出 |
+| ## 08 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿-禁止仅靠-transcript-在同.md` | 2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿 |
+| hold 「已 「生 」当 不能 不能把「生产有分区」当「已完成」 | `sessions/tg-rotate-2026-08-19-0632.md` | 停留时长对外回执：不能把「生产有分区」当「已完成」；有效会话规则（已确认）与离开 |
+| worker_ant） 「按 不写 不用 不用机器人名（狂人 主人 | `sessions/tg-rotate-2026-08-19-0632.md` | 日报正文归因用**知秋**等人名，不用机器人名（狂人/worker_ant）；也 |
+| tg 「重 为准 以合 先跑 先跑双机同步 | `sessions/tg-rotate-2026-08-19-0632.md` | 用户要求「重新整理日报」：先跑双机同步，再以合并稿 + 全量私聊/派单为准重写， |
+| log work 于合 何时 合并 同步 | `sessions/tg-rotate-2026-08-19-0632.md` | 被质疑日报是否多设备汇总时，应如实核对时点：work-log 是否齐、同步何时完 |
+| 20 21 flush log mac） new | `sessions/tg-rotate-2026-08-19-0632.md` | 实活做完应**及时写入可同步的 work-log**（尤其 new-mac），不 |
+| 21 35 35）若早于双机同步完成 5） log mac | `sessions/tg-rotate-2026-08-19-0632.md` | 定时推送（如 21:35）若早于双机同步完成，会产出「不完整双机汇总」；new- |
+| communication lesson 「主 「你 」直 主人 | `sessions/tg-rotate-2026-08-19-0632.md` | [LESSON: communication/对外回复禁用「主人」，用「你」直说 |
+| daily lesson log report tra transcript | `sessions/tg-rotate-2026-08-19-0632.md` | [LESSON: daily-report/写/推日报前必须先跑双机 work- |
+| 「上 上传 不动 云端 以用 以用户正文 | `sessions/tg-rotate-2026-08-19-0632.md` | 用户给出定稿正文并说「上传云端」：以用户正文**原封不动**落本地并上传，禁止擅 |
+| git hosts log ma mac memory | `sessions/tg-rotate-2026-08-19-0632.md` | 日报标准链路：双机各自写 work-log → memory git 同步 →  |
+| 「主 」作 主人 人」 作决 保留 | `sessions/tg-rotate-2026-08-19-0632.md` | 内部规则/记忆文档可保留「主人」作决策出处记录，但**对外输出必须剥离** |
+| cu cursor）禁止用「主人」等称呼 or rs r） so | `sessions/tg-rotate-2026-08-19-0632.md` | 对外回复（私聊/Cursor）禁止用「主人」等称呼；直接说事，用「你」，少汇报腔 |
 | ## 08 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-18-test-sr-建表走-dev-session-mcp-ddl-paimon-staging-另.md` | 2026-08-18-test-sr-建表走-dev-session-mcp-d |
 | ## 08 18 2026 agent_session_rotate canon | `~/.dc-platform/memory/lessons/2026-08-18-mysql-8-条件唯一用生成列-null-不参与-unique-metric_label-唯一.md` | 2026-08-18-mysql-8-条件唯一用生成列-null-不参与-uni |
 | ## 08 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-test-ddl-须等-5-条拍板-知秋.md` | 2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-t |
@@ -30,18 +45,3 @@
 | @） @）一律先确认再发 bu dev log memory.md | `sessions/tg-rotate-2026-08-18-1030.md` | **对外回复（bus、私聊、群 @）一律先确认再发**：先查 `memory.m |
 | dws hold prod 「跑通 不代 不代表业务口径已闭环 | `sessions/tg-rotate-2026-08-18-1030.md` | **「跑通 ≠ 口径完成」**：prod 五档 DWS 日批正常、分区在跑，只代 |
 | hold prod progress_page_stay workbook_pr | `sessions/tg-rotate-2026-08-18-1030.md` | **`workbook_progress_service.py` 的 `_pro |
-| 12h 5s bounce memory 「问 一句 | `sessions/tg-rotate-2026-08-18-1030.md` | **停留时长口径要分层**：**有效会话规则**（无 bounce、墙钟 <5s |
-| bus lesson log tgbot work workbook | `sessions/tg-rotate-2026-08-18-1030.md` | [LESSON: workbook,tgbot/工作簿进展读当日 work-lo |
-| bus hold prod session 代码 代码逻辑 | `sessions/tg-rotate-2026-08-18-1030.md` | 状态类词（已完成/HOLD/没问过）发前须实查**：代码逻辑、session、p |
-| 45 bus log work …」 …」开头） | `sessions/tg-rotate-2026-08-18-1030.md` | 工作簿「今天只报今天的事」**：近况优先读**当日 work-log 实活**（ |
-| 12h 5s bounce memory 「问 一句 | `sessions/tg-rotate-2026-08-18-1030.md` | 停留时长口径要分层**：**有效会话规则**（无 bounce、墙钟 <5s 或 |
-| ## 08 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-17-设计主体写齐后按-commit-bus狂人-ddl草案-bus知秋-顺序主动闭环-不等逐条授权.md` | 2026-08-17-设计主体写齐后按-commit-bus狂人-ddl草案-b |
-| ## +d +迁 08 17 2026 | `~/.dc-platform/memory/lessons/2026-08-17-又初负责概念层模型-迁移路径-ddl草案-狂人等模型交稿后再做264条语义归纳-设计阶段不改现网.md` | 2026-08-17-又初负责概念层模型-迁移路径-ddl草案-狂人等模型交稿后 |
-| ## #6 08 0到 17 1设 | `~/.dc-platform/memory/lessons/2026-08-17-从0到1设计先查业界语义层-指标库实践-写进设计稿-0-并显式标注采纳项与因-6552铁律不照搬.md` | 2026-08-17-从0到1设计先查业界语义层-指标库实践-写进设计稿-0-并 |
-| mac old tg 上传 上传动作本身不 上传动作本身不另发 | `sessions/tg-rotate-2026-08-17-2226.md` | 日报上传云端：**用户给定正文原封不动**落盘并上传，不改字；TG 私聊推送走  |
-| 12 不作 不作跳出统计 不进 不进五档 五档 | `sessions/tg-rotate-2026-08-17-2226.md` | 页面停留时长产品定稿：阿莱士确认**不作跳出统计**；墙钟 **<5 秒或 >1 |
-| 264 aliases.md ddl derived lifecycle_sta | `sessions/tg-rotate-2026-08-17-2226.md` | 知秋 DDL 审阅需拍板 5 项：test 是否建表、口语别名真源（`metri |
-| api ddl mysql phase0 prod test | `sessions/tg-rotate-2026-08-17-2226.md` | 设计稿阶段**刻意不动现网**：不改 MySQL 表、不上 prod API、不 |
-| ddl docs metric_library_concept_model_dd | `sessions/tg-rotate-2026-08-17-2226.md` | 设计交付物三件套：`docs/metric_library_concept_mo |
-| .列 formula metric_concept metric_impl_ca | `sessions/tg-rotate-2026-08-17-2226.md` | 概念层三层模型：`metric_concept`（实际指标，人工定义）→ `me |
-| #6 0到 1设 2铁 52 55 | `sessions/tg-rotate-2026-08-17-2226.md` | [LESSON: metric-library,design,0-to-1/从0 |
