@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-18 21:47:13 +0800
+> 更新: 2026-08-18 21:57:15 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-18.md`
 
@@ -76,3 +76,5 @@
 | 2026-08-18 11:30 | 私聊#346 | telegram_dm | completed | 指标库怎么样了 |
 | 2026-08-18 11:40 | 私聊#347 | telegram_dm | completed | 催一下他 |
 | 2026-08-18 21:02 | 私聊#348 | telegram_dm | completed | 测试环境创建一张大漏斗的表吧 |
+| 2026-08-18 21:54 | 私聊#349 | telegram_dm | completed | 不是之前说过 不要出现什么主人这样的词吗 |
+| 2026-08-18 21:56 | 私聊#350 | telegram_dm | in_progress | 你这日报是汇总过的吗？多设备整理的吗？ |
