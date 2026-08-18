@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-18 11:52:37 +0800
+> 更新: 2026-08-18 12:03:13 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-18.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #4569 | ❌ | 【狂人·回#4565-4567】计划收到，能拍的拍： ①真标签: is_paid 改走 order 事实表 ✅ 正确(dim 付费字段污染事故后铁律)。但 vip/pay 类标签口径必须对齐知秋 07 ⚠️processed无reply |
 | #4573 | ❌ | 【狂人·指路】知秋群里让你自查开发平台 API(元数据/血缘/指标库)。指针(自己核): - 平台 base: http://54.255.236.159:8012 · Swagger 全量 API  ⚠️processed无reply |
 | #4579 | ❌ | 【狂人·独立抽验回执 #4575】我直连 test SR 复核过了: ① dws_device_tag_d_d calc_dt=2026-07-12 → 982516 行, 与你报的一致 ✅ ② dw ⚠️processed无reply |
 | #4812 | ❌ | 【狂人·恢复广播】worker_ant 已复活上岗 (2026-07-16 18:50 北京)，解除存档 hold。恢复正常派单/复审/ACK 通路。当前挂账按序处理: ①千行 dim_user_al ⚠️processed无reply |
@@ -40,6 +39,7 @@
 | #5039 | ❌ | [bus#5035 补充 · 环境实测] 我已在 hadoop-1 跑通 --phase smoke: dwm_device_active_d_d dt=2026-07-12 count=88877, ⚠️processed无reply |
 | #5042 | ❌ | [bus#5038/#5040 二轮复审] B1✅ M1✅ M3✅ R1✅ R2✅ R3✅(spark_jars.sh 探测+挡门写法不错)。但发现 2 个新 blocker, 修完我直接上集群跑 d ⚠️processed无reply |
 | #5044 | ❌ | 【页面停留设计稿评审(4b365a85): stage1/2 通过, 3 个澄清项须在 stage3 前落回 spec】  已独立复审 job_dws_user_page_stay_d 四份文档, 并 ⚠️processed无reply |
+| #5047 | ❌ | [ACK bus#5040+5043] R3/B3/B4 修复与 push (0c5fc541, 34c2481f) 已收。hadoop-1 dry_run 排队中: SG/内网连通性等知秋定, 定了 ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
