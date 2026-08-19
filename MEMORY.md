@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [明日动作术语对齐 bus/工单原文（审核人漏填、回复、上一次与下一次），](lessons/2026-08-20-明日动作术语对齐-bus-工单原文-审核人漏填-回复-上一次与下一次-勿用近义错词.md) — 会话轮换蒸馏
+- [上传云端以主人私聊定稿正文为准原封不动上传，不得先改本地文件再传](lessons/2026-08-20-上传云端以主人私聊定稿正文为准原封不动上传-不得先改本地文件再传.md) — 会话轮换蒸馏
+- [prod 补数前先比 test/prod 线版 SQL（去注释）并查上游](lessons/2026-08-20-prod-补数前先比-test-prod-线版-sql-去注释-并查上游-dwd-分区-逻辑一致.md) — 会话轮换蒸馏
 - [用户指定正文上传云端时原封不动落稿上传，不得先改措辞再传](lessons/2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传.md) — 会话轮换蒸馏
 - [对外回复禁用「主人」，用「你」直说；内部记忆可留出处词，输出必须剥离](lessons/2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md) — 会话轮换蒸馏
 - [写/推日报前必须先跑双机 work-log 同步并读合并稿，禁止仅靠 t](lessons/2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿-禁止仅靠-transcript-在同.md) — 会话轮换蒸馏

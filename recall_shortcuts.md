@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 20 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-20-明日动作术语对齐-bus-工单原文-审核人漏填-回复-上一次与下一次-勿用近义错词.md` | 2026-08-20-明日动作术语对齐-bus-工单原文-审核人漏填-回复-上一 |
+| ## 08 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-20-上传云端以主人私聊定稿正文为准原封不动上传-不得先改本地文件再传.md` | 2026-08-20-上传云端以主人私聊定稿正文为准原封不动上传-不得先改本地文 |
+| ## 08 20 2026 agent_session_rotate analy | `~/.dc-platform/memory/lessons/2026-08-20-prod-补数前先比-test-prod-线版-sql-去注释-并查上游-dwd-分区-逻辑一致.md` | 2026-08-20-prod-补数前先比-test-prod-线版-sql-去 |
+| #6 002） 20260729 66 67 79 | `sessions/tg-rotate-2026-08-20-0638.md` | 明日动作用词对齐工单/bus 原文：「回复」非「回覆」，「上一次与下一次」非「上 |
+| force tg top v0.2） 「今 主人 | `sessions/tg-rotate-2026-08-20-0638.md` | 主人改「今日结果」：只留指定 TOP 项（本次留漫画分析补数 + 指标库 v0. |
+| hosts log mac new old prepare_daily_repo | `sessions/tg-rotate-2026-08-20-0638.md` | 写日报前先跑双机 work-log 同步（`prepare_daily_repo |
+| 06 25 task 不影 仍正 仍正常跑 | `sessions/tg-rotate-2026-08-20-0638.md` | 单 task 补历史不影响定时 T-1；次日 06:25 仍正常跑 |
+| 07 18 20～08 30 4.4～4.7 pi | `sessions/tg-rotate-2026-08-20-0638.md` | prod 近一月补数：`TASK_ONLY` + `RUN_MODE_SERIA |
+| 181879084574848 22699282398336 _a _日 ad  | `sessions/tg-rotate-2026-08-20-0638.md` | 漫画分析 task：test `22699282398336`、prod `18 |
+| 07 08 18 20～08 30 dwd_comic_event_d | `sessions/tg-rotate-2026-08-20-0638.md` | 补数前先查 prod 分区缺口和上游 `dwd_comic_event_d` 是 |
+| design doc params prod 一致 一致才允许 | `sessions/tg-rotate-2026-08-20-0638.md` | 文件头 `doc/params`、design 版本号差异不算逻辑不一致；一致才 |
+| 05.ads ads_c ads_comic_analysis_account_ | `sessions/tg-rotate-2026-08-20-0638.md` | test/prod 一致性：拉海豚线版 SQL，去注释后比逻辑；与仓库 `ops |
+| ads ads_comic_analysis_account_d scope 先 | `sessions/tg-rotate-2026-08-20-0638.md` | 漫画分析链路当前只有账号维 ADS 表 `ads_comic_analysis_ |
+| bus daily lesson report 一次 上一 | `sessions/tg-rotate-2026-08-20-0638.md` | [LESSON: daily-report,bus/明日动作术语对齐 bus/工 |
+| #356 agent 「按 」时 上传 上传云端以主人私聊贴的正文为准原封不动传 | `sessions/tg-rotate-2026-08-20-0638.md` | 上传云端以主人私聊贴的正文为准原封不动传；说「按我发的传」时以 #356 定稿版 |
 | ## 08 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传.md` | 2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传 |
 | ## 08 19 2026 agent_session_rotate commu | `~/.dc-platform/memory/lessons/2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md` | 2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出 |
 | ## 08 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿-禁止仅靠-transcript-在同.md` | 2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿 |
@@ -30,18 +45,3 @@
 | #6664 bus#6662 bus#6673 commit dev origi | `sessions/tg-rotate-2026-08-18-2130.md` | 跨角色协作：设计交 bus#6662/#6664 给知秋/狂人；超时无回执用 b |
 | 175 264 27 75 89 formula | `sessions/tg-rotate-2026-08-18-2130.md` | 现网 `metric_standard` 快照：264 条；175 有 form |
 | 264 ddl derived dev es lifecycle | `sessions/tg-rotate-2026-08-18-2130.md` | 又初侧设计闭环后仍须等外部拍板 5 项（test Phase0 建表、别名真源、 |
-| 75 metric_library metric_library_concept | `sessions/tg-rotate-2026-08-18-2130.md` | 概念层设计三件套：`metric_library_concept_model_v |
-| .2 0. 264 2」 metadata v0 | `sessions/tg-rotate-2026-08-18-2130.md` | 指标库分「概念设计 v0.2」与「现网 metadata 存量」两条线；设计交付 |
-| ddl lesson library lifecycle metric phas | `sessions/tg-rotate-2026-08-18-2130.md` | [LESSON: metric-library/DDL 评审后改稿 push 不 |
-| concept diverged_owner diverged_since g6 | `sessions/tg-rotate-2026-08-18-2130.md` | 设计稿补充铁律：`orphaned` 仅 implementation 层派生禁 |
-| biz_term_key bus#6676 concept implementa | `sessions/tg-rotate-2026-08-18-2130.md` | 狂人 bus#6676 U1~U7 评审结论：三层 concept/label/ |
-| ## 08 18 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-18-工作簿进展读当日-work-log-实活-禁捞旧-bus-挂账与每日重复模板-今天确认清楚再回-.md` | 2026-08-18-工作簿进展读当日-work-log-实活-禁捞旧-bus- |
-| ## 08 17 18 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-18-停留时长-有效会话-08-17-阿莱士-与离开事件埋点-产品未答-分层维护-prod-有分区-已.md` | 2026-08-18-停留时长-有效会话-08-17-阿莱士-与离开事件埋点-产 |
-| ## 08 18 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-18-对外一句会被人当事实用的话-先查-memory-私聊-session-代码-拿不准先说-正在核对.md` | 2026-08-18-对外一句会被人当事实用的话-先查-memory-私聊-se |
-| 45 bus log work …」 …」开头） | `sessions/tg-rotate-2026-08-18-1030.md` | **工作簿「今天只报今天的事」**：近况优先读**当日 work-log 实活* |
-| memory sess session vs 事件 事项 | `sessions/tg-rotate-2026-08-18-1030.md` | **更正回执要分层补发**：发现混答后，按事项拆开更正（例：有效会话已确认 vs |
-| 08 17 bus q1–q3 「没 」易 | `sessions/tg-rotate-2026-08-18-1030.md` | **bus 要求 Q1–Q3 时逐条对齐题目填**：写清问过/没问过、对象、日期 |
-| 不确 乱回 乱回会误导协作方 事会 事实 于把 | `sessions/tg-rotate-2026-08-18-1030.md` | **乱回会误导协作方**：狂人、知秋、同事会把回执当事实推进、对账、催产品；未核 |
-| @） @）一律先确认再发 bu dev log memory.md | `sessions/tg-rotate-2026-08-18-1030.md` | **对外回复（bus、私聊、群 @）一律先确认再发**：先查 `memory.m |
-| dws hold prod 「跑通 不代 不代表业务口径已闭环 | `sessions/tg-rotate-2026-08-18-1030.md` | **「跑通 ≠ 口径完成」**：prod 五档 DWS 日批正常、分区在跑，只代 |
-| hold prod progress_page_stay workbook_pr | `sessions/tg-rotate-2026-08-18-1030.md` | **`workbook_progress_service.py` 的 `_pro |
