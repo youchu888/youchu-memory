@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-19 | [日报定时能唤醒，但 executor 额度耗尽不降级 → 等人催](./2026-08-19-daily-report-executor-must-fallback-on-quota.md) | daily-report, cursor-executor, quota | 21:30 通了；composer-2.5 耗尽须立刻换 fast，禁止同模型空转 |
 | 2026-08-19 | [用户指定正文上传云端时原封不动落稿上传，不得先改措辞再传](./2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传.md) | daily-report-upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-19 | [对外回复禁用「主人」，用「你」直说；内部记忆可留出处词，输出必须剥离](./2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md) | communication,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-19 | [写/推日报前必须先跑双机 work-log 同步并读合并稿，禁止仅靠 trans](./2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿-禁止仅靠-transcript-在同.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |

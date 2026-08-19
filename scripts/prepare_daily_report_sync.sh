@@ -19,8 +19,8 @@ missing=0
 for host in new-mac old-mac; do
   f="$WL/hosts/$host/$DAY.md"
   if [[ -f "$f" ]]; then
-    lines=$(grep -E '^- ' "$f" | wc -l | tr -d ' ')
-    echo "OK  $host  $f  (bullet≈$lines)"
+    lines=$(grep -cE '^- ' "$f" 2>/dev/null || true)
+    echo "OK  $host  $f  (bullet≈${lines:-0})"
   else
     echo "MISS $host  (无 $DAY.md)"
     missing=1
