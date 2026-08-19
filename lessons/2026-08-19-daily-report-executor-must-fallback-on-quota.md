@@ -20,11 +20,12 @@ domain: ops
 
 ## 正确做法
 
-1. executor `_run_work_with_retry`：命中 `resource_exhausted` / quota **立刻换下一个模型**（`composer-2.5` → `composer-2.5-fast`），不要同模型空转。
-2. `cursor-executor-run.sh` 把 `CURSOR_MODEL_WORK` / `CURSOR_MODEL_FAST` 映射到 `AGENT_BUS_CURSOR_*`。
-3. 写稿与补推都失败时，给 ALLOWED_USERS 发一条失败私聊，禁止静默。
-4. 同步脚本：`grep -c ... || true`，零 bullet 不算失败。
-5. 改完 `launchctl kickstart -k gui/$UID/com.youchu.cursor-executor`。
+1. 工作模型用 Cursor **`auto`**（按任务路由，不要锁死 composer-2.5）。
+2. executor `_run_work_with_retry`：命中 `resource_exhausted` / quota **立刻换链上下一个**（auto → composer-2.5-fast → composer-2.5），不要同模型空转。
+3. `cursor-executor-run.sh` 导出 `AGENT_BUS_CURSOR_MODEL=auto` 与 `AGENT_BUS_CURSOR_FALLBACK`。
+4. 写稿与补推都失败时，给 ALLOWED_USERS 发一条失败私聊，禁止静默。
+5. 同步脚本：`grep -c ... || true`，零 bullet 不算失败。
+6. 改完 `launchctl kickstart` executor 与 tgbot，确认日志 `work=auto`。
 
 ## 验证
 
