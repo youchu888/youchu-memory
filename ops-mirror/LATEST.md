@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-20 21:49:10 +0800
+> 更新: 2026-08-20 23:46:47 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-20.md`
 
@@ -68,3 +68,4 @@
 | 2026-08-20 20:42 | 私聊#370 | telegram_dm | completed | 怎么又timeout |
 | 2026-08-20 20:43 | 私聊#371 | telegram_dm | completed | dws.dws_app_page_visit_d_d 确认下进入次数字段和跳转次数字段取数逻辑？来源和分布是不是要查 dwd_app_page_view_d ， |
 | 2026-08-20 20:46 | 私聊#372 | telegram_dm | completed | 整理下 成文档 |
+| 2026-08-20 23:08 | 私聊#373 | telegram_dm | completed | 按照这个上传云端 # 日报 · 又初·2026-08-20 [REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026- |
