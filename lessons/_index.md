@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-20 | [Spark prod 可用；用户标签链必须走 wrapper_daily_v3，禁手工逐步跑](./2026-08-20-spark-prod-hadoop1-可用-标签链须走-wrapper_daily_v3-禁手工逐步跑.md) | spark, yarn, user-tag, wrapper_daily_v3 | bus#6901：hadoop-1 yarn client；base 起不幂等须 wrapper+水位；03:10 错峰；prod 分区等知秋 |
 | 2026-08-20 | [明日动作术语对齐 bus/工单原文（审核人漏填、回复、上一次与下一次），勿用近义](./2026-08-20-明日动作术语对齐-bus-工单原文-审核人漏填-回复-上一次与下一次-勿用近义错词.md) | daily-report,bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-20 | [上传云端以主人私聊定稿正文为准原封不动上传，不得先改本地文件再传](./2026-08-20-上传云端以主人私聊定稿正文为准原封不动上传-不得先改本地文件再传.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-20 | [prod 补数前先比 test/prod 线版 SQL（去注释）并查上游 DWD](./2026-08-20-prod-补数前先比-test-prod-线版-sql-去注释-并查上游-dwd-分区-逻辑一致.md) | complement,comic-analysis,session-rotate | 会话轮换前自动蒸馏 |
