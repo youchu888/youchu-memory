@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-20 17:02:51 +0800
+> 更新: 2026-08-20 17:13:22 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-20.md`
 
@@ -55,3 +55,4 @@
 | 2026-08-19 22:08 | 私聊#357 | telegram_dm | completed | 按我发的传 |
 | 2026-08-20 12:53 | 私聊#358 | telegram_dm | completed | dwd_app_page_view_d ads_product_day_stat_d 这两张表prod有的吧？ |
 | 2026-08-20 17:00 | 私聊#359 | telegram_dm | completed | 简单说下指标库的实现思路 |
+| 2026-08-20 17:04 | 私聊#360 | telegram_dm | completed | 简单说下指标库的实现思路，说人话 |
