@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 21 agent_session_rotate app | `~/.dc-platform/memory/lessons/2026-08-21-看进入-跳转次数用-dws-看来源-去向分布必须回查-dwd_app_page_view_d-按.md` | 2026-08-21-看进入-跳转次数用-dws-看来源-去向分布必须回查-dw |
+| ## 00 00+19 00–15 00–20 08 | `~/.dc-platform/memory/lessons/2026-08-21-绿点休息窗-平日-13-00-15-00-19-00-20-00-周六仅-13-00-15-00.md` | 2026-08-21-绿点休息窗-平日-13-00-15-00-19-00-20 |
+| agent bot cursor etl spec tg | `sessions/tg-rotate-2026-08-21-0000.md` | Cursor 查 ETL/spec 若耗时数分钟，TG bot 可能 **tim |
+| .m 04.dws _进 dws_app_page_visit_d_d md o | `sessions/tg-rotate-2026-08-21-0000.md` | 表口径文档落仓：`ops_system/04.dws/dws_app_page_ |
+| sum uid uv 不是 丢弃 两列 | `sessions/tg-rotate-2026-08-21-0000.md` | 两列公共过滤：**仅统计有 uid 账号流量**，空 uid 丢弃；均为 **S |
+| jump_cnt referrer_page_key unknown ≠来 且目 | `sessions/tg-rotate-2026-08-21-0000.md` | **`jump_cnt`（跳转次数）**：同源，按来路页 `referrer_p |
+| dwd.dwd_app_page_view_d entry_cnt page p | `sessions/tg-rotate-2026-08-21-0000.md` | **`entry_cnt`（进入次数）**：源 `dwd.dwd_app_pag |
+| app dt dws.dws_app_page_visit_d_d page_k | `sessions/tg-rotate-2026-08-21-0000.md` | `dws.dws_app_page_visit_d_d` 粒度为 `dt × a |
+| tg 关进 口头 后需 启相 在线 | `sessions/tg-rotate-2026-08-21-0000.md` | 改 TG 在线/绿点逻辑后需**重启相关进程**并口头确认生效时段 |
+| 00 00–15 00–20 13 19 一至 | `sessions/tg-rotate-2026-08-21-0000.md` | 休息窗终版：**周一至周五** 13:00–15:00、19:00–20:00  |
+| app dwd_a dwd_app_page_view_d dws lesson | `sessions/tg-rotate-2026-08-21-0000.md` | [LESSON: dws-app-page-visit/看进入/跳转次数用 DW |
+| dwd.dwd_app_page_view_d dws page_key ref | `sessions/tg-rotate-2026-08-21-0000.md` | 要看页面间来源/去向分布，必须查 **`dwd.dwd_app_page_vie |
+| tg 上下 上班 下班 不动 不要 | `sessions/tg-rotate-2026-08-21-0000.md` | 其余上班时段 TG **保持长绿**；极客签到/签退上下班时间**原样不动**， |
+| bot tg 「休 「在 」只 」解 | `sessions/tg-rotate-2026-08-21-0000.md` | TG 绿点「休息窗」只控制**能否变灰**，与又初/bot **是否即时回消息无 |
 | ## 00 00–15 00–20 08 13 | `~/.dc-platform/memory/lessons/2026-08-20-休息窗-13-00-15-00-与-19-00-20-00-在-should_appear_on.md` | 2026-08-20-休息窗-13-00-15-00-与-19-00-20-00 |
 | ## 08 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-20-取值条件不同导致结果不同即拆新指标-禁止同名不同义硬合并.md` | 2026-08-20-取值条件不同导致结果不同即拆新指标-禁止同名不同义硬合并 |
 | ## 08 20 2026 agent_session_rotate base | `~/.dc-platform/memory/lessons/2026-08-20-标签链-prod-只跑-wrapper_daily_v3-sh-禁手工逐步跑-base-否则水位.md` | 2026-08-20-标签链-prod-只跑-wrapper_daily_v3- |
@@ -31,17 +45,3 @@
 | 181879084574848 22699282398336 _a _日 ad  | `sessions/tg-rotate-2026-08-20-0638.md` | 漫画分析 task：test `22699282398336`、prod `18 |
 | 07 08 18 20～08 30 dwd_comic_event_d | `sessions/tg-rotate-2026-08-20-0638.md` | 补数前先查 prod 分区缺口和上游 `dwd_comic_event_d` 是 |
 | design doc params prod 一致 一致才允许 | `sessions/tg-rotate-2026-08-20-0638.md` | 文件头 `doc/params`、design 版本号差异不算逻辑不一致；一致才 |
-| 05.ads ads_c ads_comic_analysis_account_ | `sessions/tg-rotate-2026-08-20-0638.md` | test/prod 一致性：拉海豚线版 SQL，去注释后比逻辑；与仓库 `ops |
-| ads ads_comic_analysis_account_d scope 先 | `sessions/tg-rotate-2026-08-20-0638.md` | 漫画分析链路当前只有账号维 ADS 表 `ads_comic_analysis_ |
-| bus daily lesson report 一次 上一 | `sessions/tg-rotate-2026-08-20-0638.md` | [LESSON: daily-report,bus/明日动作术语对齐 bus/工 |
-| #356 agent 「按 」时 上传 上传云端以主人私聊贴的正文为准原封不动传 | `sessions/tg-rotate-2026-08-20-0638.md` | 上传云端以主人私聊贴的正文为准原封不动传；说「按我发的传」时以 #356 定稿版 |
-| ## 08 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传.md` | 2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传 |
-| ## 08 19 2026 agent_session_rotate commu | `~/.dc-platform/memory/lessons/2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md` | 2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出 |
-| ## 08 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿-禁止仅靠-transcript-在同.md` | 2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿 |
-| hold 「已 「生 」当 不能 不能把「生产有分区」当「已完成」 | `sessions/tg-rotate-2026-08-19-0632.md` | 停留时长对外回执：不能把「生产有分区」当「已完成」；有效会话规则（已确认）与离开 |
-| worker_ant） 「按 不写 不用 不用机器人名（狂人 主人 | `sessions/tg-rotate-2026-08-19-0632.md` | 日报正文归因用**知秋**等人名，不用机器人名（狂人/worker_ant）；也 |
-| tg 「重 为准 以合 先跑 先跑双机同步 | `sessions/tg-rotate-2026-08-19-0632.md` | 用户要求「重新整理日报」：先跑双机同步，再以合并稿 + 全量私聊/派单为准重写， |
-| log work 于合 何时 合并 同步 | `sessions/tg-rotate-2026-08-19-0632.md` | 被质疑日报是否多设备汇总时，应如实核对时点：work-log 是否齐、同步何时完 |
-| 20 21 flush log mac） new | `sessions/tg-rotate-2026-08-19-0632.md` | 实活做完应**及时写入可同步的 work-log**（尤其 new-mac），不 |
-| 21 35 35）若早于双机同步完成 5） log mac | `sessions/tg-rotate-2026-08-19-0632.md` | 定时推送（如 21:35）若早于双机同步完成，会产出「不完整双机汇总」；new- |
-| communication lesson 「主 「你 」直 主人 | `sessions/tg-rotate-2026-08-19-0632.md` | [LESSON: communication/对外回复禁用「主人」，用「你」直说 |

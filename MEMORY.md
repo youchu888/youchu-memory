@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [看进入/跳转次数用 DWS；看来源→去向分布必须回查 dwd_app_p](lessons/2026-08-21-看进入-跳转次数用-dws-看来源-去向分布必须回查-dwd_app_page_view_d-按.md) — 会话轮换蒸馏
+- [绿点休息窗：平日 13:00–15:00+19:00–20:00，周六仅](lessons/2026-08-21-绿点休息窗-平日-13-00-15-00-19-00-20-00-周六仅-13-00-15-00.md) — 会话轮换蒸馏
 - [休息窗 13:00–15:00 与 19:00–20:00 在 shou](lessons/2026-08-20-休息窗-13-00-15-00-与-19-00-20-00-在-should_appear_on.md) — 会话轮换蒸馏
 - [取值条件不同导致结果不同即拆新指标，禁止同名不同义硬合并](lessons/2026-08-20-取值条件不同导致结果不同即拆新指标-禁止同名不同义硬合并.md) — 会话轮换蒸馏
 - [标签链 prod 只跑 wrapper_daily_v3.sh，禁手工逐](lessons/2026-08-20-标签链-prod-只跑-wrapper_daily_v3-sh-禁手工逐步跑-base-否则水位.md) — 会话轮换蒸馏
