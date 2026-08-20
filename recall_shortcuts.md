@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 00 00–15 00–20 08 13 | `~/.dc-platform/memory/lessons/2026-08-20-休息窗-13-00-15-00-与-19-00-20-00-在-should_appear_on.md` | 2026-08-20-休息窗-13-00-15-00-与-19-00-20-00 |
+| ## 08 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-20-取值条件不同导致结果不同即拆新指标-禁止同名不同义硬合并.md` | 2026-08-20-取值条件不同导致结果不同即拆新指标-禁止同名不同义硬合并 |
+| ## 08 20 2026 agent_session_rotate base | `~/.dc-platform/memory/lessons/2026-08-20-标签链-prod-只跑-wrapper_daily_v3-sh-禁手工逐步跑-base-否则水位.md` | 2026-08-20-标签链-prod-只跑-wrapper_daily_v3- |
+| 03 08 15 20 2026 57 | `sessions/tg-rotate-2026-08-20-1912.md` | prod Spark 可用：`hadoop-1` · `/opt/bigdata |
+| —— —口 「指 」手 不应 不应承担「指标大姨妈式」手工维稳——口径会变 | `sessions/tg-rotate-2026-08-20-1912.md` | 人的角色是录需求、审发布；不应承担「指标大姨妈式」手工维稳——口径会变，不能指望 |
+| +a ai 「需 不是 不是人工维护指标清单 不靠 | `sessions/tg-rotate-2026-08-20-1912.md` | 知秋定调：指标库核心是数据模型，不是人工维护指标清单；日常新增不靠界面手填，走「 |
+| .列 formula metric_concept metric_impleme | `sessions/tg-rotate-2026-08-20-1912.md` | 三层模型：`metric_concept`（业务口径/窗口/聚合，改口径升版）→ |
+| ads.ads_product_day_st ads.ads_product_d | `sessions/tg-rotate-2026-08-20-1912.md` | prod 已确认存在 `dwd.dwd_app_page_view_d`、`ad |
+| lesson library metric 不同 义硬 件不 | `sessions/tg-rotate-2026-08-20-1912.md` | [LESSON: metric-library/取值条件不同导致结果不同即拆新指 |
+| base lesson prod spark wrapper_daily_v3. | `sessions/tg-rotate-2026-08-20-1912.md` | [LESSON: spark/标签链 prod 只跑 wrapper_daily |
+| prod 上线 不替 主人 人决 决策 | `sessions/tg-rotate-2026-08-20-1912.md` | prod 分区是否上线必须问知秋拍板，又初不替主人决策。 |
+| base wrapper_daily_v3.sh 不提 交会 会导 位不 | `sessions/tg-rotate-2026-08-20-1912.md` | 标签链只走 `wrapper_daily_v3.sh`，禁手工逐步跑 base； |
+| 一致 不同 不能 不能同名硬塞 件不 但口 | `sessions/tg-rotate-2026-08-20-1912.md` | 指标边界：统计取值条件不同、结果不同 → 必须拆成不同指标，不能同名硬塞；别名可 |
+| ai bitmap_union_count propose published  | `sessions/tg-rotate-2026-08-20-1912.md` | 发布硬规矩：AI 只能 `propose`，`published` 必须人审；晋 |
+| bi etl metric_standard starrocks 「口 不是 | `sessions/tg-rotate-2026-08-20-1912.md` | 指标库定位是「口径登记 + 物理绑定 + 发布门禁」，不是第四套 BI；ETL  |
 | ## 08 20 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-20-明日动作术语对齐-bus-工单原文-审核人漏填-回复-上一次与下一次-勿用近义错词.md` | 2026-08-20-明日动作术语对齐-bus-工单原文-审核人漏填-回复-上一 |
 | ## 08 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-20-上传云端以主人私聊定稿正文为准原封不动上传-不得先改本地文件再传.md` | 2026-08-20-上传云端以主人私聊定稿正文为准原封不动上传-不得先改本地文 |
 | ## 08 20 2026 agent_session_rotate analy | `~/.dc-platform/memory/lessons/2026-08-20-prod-补数前先比-test-prod-线版-sql-去注释-并查上游-dwd-分区-逻辑一致.md` | 2026-08-20-prod-补数前先比-test-prod-线版-sql-去 |
@@ -30,18 +45,3 @@
 | 20 21 flush log mac） new | `sessions/tg-rotate-2026-08-19-0632.md` | 实活做完应**及时写入可同步的 work-log**（尤其 new-mac），不 |
 | 21 35 35）若早于双机同步完成 5） log mac | `sessions/tg-rotate-2026-08-19-0632.md` | 定时推送（如 21:35）若早于双机同步完成，会产出「不完整双机汇总」；new- |
 | communication lesson 「主 「你 」直 主人 | `sessions/tg-rotate-2026-08-19-0632.md` | [LESSON: communication/对外回复禁用「主人」，用「你」直说 |
-| daily lesson log report tra transcript | `sessions/tg-rotate-2026-08-19-0632.md` | [LESSON: daily-report/写/推日报前必须先跑双机 work- |
-| 「上 上传 不动 云端 以用 以用户正文 | `sessions/tg-rotate-2026-08-19-0632.md` | 用户给出定稿正文并说「上传云端」：以用户正文**原封不动**落本地并上传，禁止擅 |
-| git hosts log ma mac memory | `sessions/tg-rotate-2026-08-19-0632.md` | 日报标准链路：双机各自写 work-log → memory git 同步 →  |
-| 「主 」作 主人 人」 作决 保留 | `sessions/tg-rotate-2026-08-19-0632.md` | 内部规则/记忆文档可保留「主人」作决策出处记录，但**对外输出必须剥离** |
-| cu cursor）禁止用「主人」等称呼 or rs r） so | `sessions/tg-rotate-2026-08-19-0632.md` | 对外回复（私聊/Cursor）禁止用「主人」等称呼；直接说事，用「你」，少汇报腔 |
-| ## 08 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-18-test-sr-建表走-dev-session-mcp-ddl-paimon-staging-另.md` | 2026-08-18-test-sr-建表走-dev-session-mcp-d |
-| ## 08 18 2026 agent_session_rotate canon | `~/.dc-platform/memory/lessons/2026-08-18-mysql-8-条件唯一用生成列-null-不参与-unique-metric_label-唯一.md` | 2026-08-18-mysql-8-条件唯一用生成列-null-不参与-uni |
-| ## 08 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-test-ddl-须等-5-条拍板-知秋.md` | 2026-08-18-ddl-评审后改稿-push-不等于建表-phase0-t |
-| 18 30 54 app_id dt is_new | `sessions/tg-rotate-2026-08-18-2130.md` | 大漏斗宽表结构：主键 `(dt, app_id, is_new)`；18 事件  |
-| 001 04.dws 20260807 big db.run_ddl_etl d | `sessions/tg-rotate-2026-08-18-2130.md` | 大漏斗 test 建表：表 `dws.dws_app_event_funnel_ |
-| 75 ddl phase2 prod test u1 | `sessions/tg-rotate-2026-08-18-2130.md` | 狂人点头改稿后 Phase2 语义归纳（75 条拆条、U1/U3 优先）可启动； |
-| 409 4d15c1ed canonical_code co concept d | `sessions/tg-rotate-2026-08-18-2130.md` | DDL 硬伤定案（commit `4d15c1ed`）：`metric_labe |
-| #6664 bus#6662 bus#6673 commit dev origi | `sessions/tg-rotate-2026-08-18-2130.md` | 跨角色协作：设计交 bus#6662/#6664 给知秋/狂人；超时无回执用 b |
-| 175 264 27 75 89 formula | `sessions/tg-rotate-2026-08-18-2130.md` | 现网 `metric_standard` 快照：264 条；175 有 form |
-| 264 ddl derived dev es lifecycle | `sessions/tg-rotate-2026-08-18-2130.md` | 又初侧设计闭环后仍须等外部拍板 5 项（test Phase0 建表、别名真源、 |
