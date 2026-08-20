@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-20 12:49:38 +0800
+> 更新: 2026-08-20 13:00:08 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-20.md`
 
@@ -53,3 +53,4 @@
 | 2026-08-19 21:59 | 私聊#355 | telegram_dm | completed | 今日结果留top1，加一个指标库的，其余的不要。明日动作top1怎么还有错别字呢？ |
 | 2026-08-19 22:05 | 私聊#356 | telegram_dm | completed | 📋 又初 · 日报 2026-08-19 （定稿自动推送） # 日报 · 又初·2026-08-19 [REPORT-ORG:天穹部门] [LEVEL:L1]  |
 | 2026-08-19 22:08 | 私聊#357 | telegram_dm | completed | 按我发的传 |
+| 2026-08-20 12:53 | 私聊#358 | telegram_dm | completed | dwd_app_page_view_d ads_product_day_stat_d 这两张表prod有的吧？ |
