@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-20 19:40:58 +0800
+> 更新: 2026-08-20 21:30:06 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-20.md`
 
@@ -60,3 +60,11 @@
 | 2026-08-20 19:09 | 私聊#362 | telegram_dm | in_progress | 中午13.00到15.00，晚上19.00到20.00 是休息时间，tg可以不绿 其余时间要绿 |
 | 2026-08-20 19:28 | 私聊#363 | telegram_dm | completed | 上面的问题收到了吗 |
 | 2026-08-20 19:32 | 私聊#364 | telegram_dm | in_progress | 周六19.00是下班时间可以不考虑在内，周一到周五保持就好 |
+| 2026-08-20 19:49 | 私聊#365 | telegram_dm | completed | 怎么不回复呢？干啥呢 |
+| 2026-08-20 19:51 | 私聊#366 | telegram_dm | completed | 不是让你休息，是让tg这个时间节点内可以不在线 |
+| 2026-08-20 19:57 | 私聊#367 | telegram_dm | in_progress | 周一到周五，休息时间为13.00-15.00，19.00-20.00，周六为13.00-15.00，这些时间段为休息时间 tg可以为灰，其余时间为上班时间，tg |
+| 2026-08-20 20:10 | 私聊#368 | telegram_dm | completed | 处理怎么样了 为什么不回复 |
+| 2026-08-20 20:36 | 私聊#369 | telegram_dm | failed | dws.dws_app_page_visit_d_d 确认下进入次数字段和跳转次数字段取数逻辑 |
+| 2026-08-20 20:42 | 私聊#370 | telegram_dm | completed | 怎么又timeout |
+| 2026-08-20 20:43 | 私聊#371 | telegram_dm | completed | dws.dws_app_page_visit_d_d 确认下进入次数字段和跳转次数字段取数逻辑？来源和分布是不是要查 dwd_app_page_view_d ， |
+| 2026-08-20 20:46 | 私聊#372 | telegram_dm | completed | 整理下 成文档 |
