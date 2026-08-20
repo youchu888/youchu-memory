@@ -104,11 +104,11 @@
     "host": "old-mac"
   },
   "2026-08-20": {
-    "posted_at": "2026-08-20T21:36:28+08:00",
+    "posted_at": "2026-08-20T21:57:35+08:00",
     "chat_ids": [
       8740305767
     ],
     "path": "/Users/mac/.dc-platform/memory/work-log/reports/2026-08-20-日报.md",
-    "host": "old-mac"
+    "host": "new-mac"
   }
 }
