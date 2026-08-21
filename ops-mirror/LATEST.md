@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-21 11:42:35 +0800
+> 更新: 2026-08-21 11:53:08 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-21.md`
 
@@ -72,4 +72,4 @@
 | 2026-08-21 10:57 | 私聊#379 | telegram_dm | completed | dws_app_page_visit_d_d 这个是页面访问的表吧 |
 | 2026-08-21 11:15 | 私聊#380 | telegram_dm | completed | 页面访问没问题的话 发布生产吧。之前是谁发布的 |
 | 2026-08-21 11:35 | 私聊#381 | telegram_dm | completed | select * from ads.ads_product_day_stat_d where dt ='2026-08-20' and app_id ='SF- |
-| 2026-08-21 11:40 | 私聊#382 | telegram_dm | in_progress | 补跑，这个是哪个任务流？prod是不是也有同样的问题 |
+| 2026-08-21 11:40 | 私聊#382 | telegram_dm | completed | 补跑，这个是哪个任务流？prod是不是也有同样的问题 |
