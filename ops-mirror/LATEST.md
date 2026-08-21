@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-21 10:49:37 +0800
+> 更新: 2026-08-21 11:00:09 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-21.md`
 
@@ -69,3 +69,4 @@
 | 2026-08-21 08:31 | 私聊#376 | telegram_dm | completed | 自刷新的先不要管，确认了再说 |
 | 2026-08-21 08:33 | 私聊#377 | telegram_dm | completed | 测试发版了 也补数了对吧？我要让产品确认了 |
 | 2026-08-21 10:22 | 私聊#378 | telegram_dm | completed | 页面访问有21号数据吗 |
+| 2026-08-21 10:57 | 私聊#379 | telegram_dm | completed | dws_app_page_visit_d_d 这个是页面访问的表吧 |
