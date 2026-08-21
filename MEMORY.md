@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [同工作流下游 SUCCESS 但字段全 NULL 时优先查任务依赖顺序与](lessons/2026-08-21-同工作流下游-success-但字段全-null-时优先查任务依赖顺序与上游分区就绪时间-别误判.md) — 会话轮换蒸馏
+- [补数秒失败先查目标静态分区是否存在，缺分区先 ADD PARTITION](lessons/2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-partition-再重跑.md) — 会话轮换蒸馏
+- [改进入/跳转口径前先对照现网：`entry_cnt` 与「站内跳入」语义](lessons/2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内跳入-语义相反-用户-跳出-对应-ju.md) — 会话轮换蒸馏
 - [看进入/跳转次数用 DWS；看来源→去向分布必须回查 dwd_app_p](lessons/2026-08-21-看进入-跳转次数用-dws-看来源-去向分布必须回查-dwd_app_page_view_d-按.md) — 会话轮换蒸馏
 - [绿点休息窗：平日 13:00–15:00+19:00–20:00，周六仅](lessons/2026-08-21-绿点休息窗-平日-13-00-15-00-19-00-20-00-周六仅-13-00-15-00.md) — 会话轮换蒸馏
 - [休息窗 13:00–15:00 与 19:00–20:00 在 shou](lessons/2026-08-20-休息窗-13-00-15-00-与-19-00-20-00-在-should_appear_on.md) — 会话轮换蒸馏

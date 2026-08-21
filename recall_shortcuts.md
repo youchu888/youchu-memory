@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 21 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-21-同工作流下游-success-但字段全-null-时优先查任务依赖顺序与上游分区就绪时间-别误判.md` | 2026-08-21-同工作流下游-success-但字段全-null-时优先查 |
+| ## 08 2026 21 add agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-partition-再重跑.md` | 2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-pa |
+| ## 08 2026 21 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内跳入-语义相反-用户-跳出-对应-ju.md` | 2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内 |
+| null success video_play_cnt 一定 上游 不一 | `sessions/tg-rotate-2026-08-21-1202.md` | **`video_play_cnt` 当日 NULL 不一定是任务失败**：任务 |
+| prod publish request sql test 上次 | `sessions/tg-rotate-2026-08-21-1202.md` | **又初不能直发 prod**：test 验过后走 `request-publi |
+| app dws.dws_app_page_visit_d_d page_k pa | `sessions/tg-rotate-2026-08-21-1202.md` | **页面访问日表**：`dws.dws_app_page_visit_d_d`， |
+| 21 「今 」→ 一般 业务 业务日最新一般是昨天 | `sessions/tg-rotate-2026-08-21-1202.md` | **日批 T-1**：问「今天有没有 21 号数据」→ 业务日最新一般是昨天；当 |
+| 027 page_key referrer referrer_page_key  | `sessions/tg-rotate-2026-08-21-1202.md` | **自刷新（`referrer_page_key = page_key`）会显著 |
+| 027 124 app jha page_key tj | `sessions/tg-rotate-2026-08-21-1202.md` | **跨 app 对账来源/去向**：TJ-027 与 JHA-124 的 `pa |
+| p20260721 会直 先查 再重 分区 区后 | `sessions/tg-rotate-2026-08-21-1202.md` | **补数秒失败先查分区**：静态分区表缺目标分区（如 `p20260721`）会 |
+| 0）→ app diff dws↔dwd etl publish | `sessions/tg-rotate-2026-08-21-1202.md` | **改口径标准链路**：改 ETL/SQL → test 发布 → 补约一个月  |
+| 1800s dropout dropout_page_cnt jump_cnt  | `sessions/tg-rotate-2026-08-21-1202.md` | **口语「跳出」≠ 表字段 `dropout_*`**：用户说的离开本页去别页  |
+| entry_cnt referrer_page_key unknown 「进 」 | `sessions/tg-rotate-2026-08-21-1202.md` | **页面访问「进入」改口径前必须先对齐现网**：旧 `entry_cnt` =  |
+| _a _日 ad ads_product_day_stat_d app dag | `sessions/tg-rotate-2026-08-21-1202.md` | `wf_ads_日报表_日` DAG 顺序坑**：`ads_product_da |
+| entry_cnt referrer_page_key unknown 「进 」 | `sessions/tg-rotate-2026-08-21-1202.md` | 页面访问「进入」改口径前必须先对齐现网**：旧 `entry_cnt` = 来路 |
 | ## 08 2026 21 agent_session_rotate app | `~/.dc-platform/memory/lessons/2026-08-21-看进入-跳转次数用-dws-看来源-去向分布必须回查-dwd_app_page_view_d-按.md` | 2026-08-21-看进入-跳转次数用-dws-看来源-去向分布必须回查-dw |
 | ## 00 00+19 00–15 00–20 08 | `~/.dc-platform/memory/lessons/2026-08-21-绿点休息窗-平日-13-00-15-00-19-00-20-00-周六仅-13-00-15-00.md` | 2026-08-21-绿点休息窗-平日-13-00-15-00-19-00-20 |
 | agent bot cursor etl spec tg | `sessions/tg-rotate-2026-08-21-0000.md` | Cursor 查 ETL/spec 若耗时数分钟，TG bot 可能 **tim |
@@ -30,18 +45,3 @@
 | lesson library metric 不同 义硬 件不 | `sessions/tg-rotate-2026-08-20-1912.md` | [LESSON: metric-library/取值条件不同导致结果不同即拆新指 |
 | base lesson prod spark wrapper_daily_v3. | `sessions/tg-rotate-2026-08-20-1912.md` | [LESSON: spark/标签链 prod 只跑 wrapper_daily |
 | prod 上线 不替 主人 人决 决策 | `sessions/tg-rotate-2026-08-20-1912.md` | prod 分区是否上线必须问知秋拍板，又初不替主人决策。 |
-| base wrapper_daily_v3.sh 不提 交会 会导 位不 | `sessions/tg-rotate-2026-08-20-1912.md` | 标签链只走 `wrapper_daily_v3.sh`，禁手工逐步跑 base； |
-| 一致 不同 不能 不能同名硬塞 件不 但口 | `sessions/tg-rotate-2026-08-20-1912.md` | 指标边界：统计取值条件不同、结果不同 → 必须拆成不同指标，不能同名硬塞；别名可 |
-| ai bitmap_union_count propose published  | `sessions/tg-rotate-2026-08-20-1912.md` | 发布硬规矩：AI 只能 `propose`，`published` 必须人审；晋 |
-| bi etl metric_standard starrocks 「口 不是 | `sessions/tg-rotate-2026-08-20-1912.md` | 指标库定位是「口径登记 + 物理绑定 + 发布门禁」，不是第四套 BI；ETL  |
-| ## 08 20 2026 agent_session_rotate bus | `~/.dc-platform/memory/lessons/2026-08-20-明日动作术语对齐-bus-工单原文-审核人漏填-回复-上一次与下一次-勿用近义错词.md` | 2026-08-20-明日动作术语对齐-bus-工单原文-审核人漏填-回复-上一 |
-| ## 08 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-20-上传云端以主人私聊定稿正文为准原封不动上传-不得先改本地文件再传.md` | 2026-08-20-上传云端以主人私聊定稿正文为准原封不动上传-不得先改本地文 |
-| ## 08 20 2026 agent_session_rotate analy | `~/.dc-platform/memory/lessons/2026-08-20-prod-补数前先比-test-prod-线版-sql-去注释-并查上游-dwd-分区-逻辑一致.md` | 2026-08-20-prod-补数前先比-test-prod-线版-sql-去 |
-| #6 002） 20260729 66 67 79 | `sessions/tg-rotate-2026-08-20-0638.md` | 明日动作用词对齐工单/bus 原文：「回复」非「回覆」，「上一次与下一次」非「上 |
-| force tg top v0.2） 「今 主人 | `sessions/tg-rotate-2026-08-20-0638.md` | 主人改「今日结果」：只留指定 TOP 项（本次留漫画分析补数 + 指标库 v0. |
-| hosts log mac new old prepare_daily_repo | `sessions/tg-rotate-2026-08-20-0638.md` | 写日报前先跑双机 work-log 同步（`prepare_daily_repo |
-| 06 25 task 不影 仍正 仍正常跑 | `sessions/tg-rotate-2026-08-20-0638.md` | 单 task 补历史不影响定时 T-1；次日 06:25 仍正常跑 |
-| 07 18 20～08 30 4.4～4.7 pi | `sessions/tg-rotate-2026-08-20-0638.md` | prod 近一月补数：`TASK_ONLY` + `RUN_MODE_SERIA |
-| 181879084574848 22699282398336 _a _日 ad  | `sessions/tg-rotate-2026-08-20-0638.md` | 漫画分析 task：test `22699282398336`、prod `18 |
-| 07 08 18 20～08 30 dwd_comic_event_d | `sessions/tg-rotate-2026-08-20-0638.md` | 补数前先查 prod 分区缺口和上游 `dwd_comic_event_d` 是 |
-| design doc params prod 一致 一致才允许 | `sessions/tg-rotate-2026-08-20-0638.md` | 文件头 `doc/params`、design 版本号差异不算逻辑不一致；一致才 |
