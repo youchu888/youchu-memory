@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [关极客打卡改 .env 并延迟重启过签退窗；双机 tgbot 都要改，V](lessons/2026-08-22-关极客打卡改-env-并延迟重启过签退窗-双机-tgbot-都要改-vpn-抽查不受影响.md) — 会话轮换蒸馏
+- [补跑前先核 SUCCESS PI 与上游；下游 NULL 先判上游是否本](lessons/2026-08-22-补跑前先核-success-pi-与上游-下游-null-先判上游是否本日无数-避免重复补跑.md) — 会话轮换蒸馏
+- [跳出率只用 dropout_page_cnt/stay_page_cnt](lessons/2026-08-22-跳出率只用-dropout_page_cnt-stay_page_cnt-pv-与-jump-不.md) — 会话轮换蒸馏
 - [同工作流下游 SUCCESS 但字段全 NULL 时优先查任务依赖顺序与](lessons/2026-08-21-同工作流下游-success-但字段全-null-时优先查任务依赖顺序与上游分区就绪时间-别误判.md) — 会话轮换蒸馏
 - [补数秒失败先查目标静态分区是否存在，缺分区先 ADD PARTITION](lessons/2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-partition-再重跑.md) — 会话轮换蒸馏
 - [改进入/跳转口径前先对照现网：`entry_cnt` 与「站内跳入」语义](lessons/2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内跳入-语义相反-用户-跳出-对应-ju.md) — 会话轮换蒸馏

@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## .env 08 2026 22 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-22-关极客打卡改-env-并延迟重启过签退窗-双机-tgbot-都要改-vpn-抽查不受影响.md` | 2026-08-22-关极客打卡改-env-并延迟重启过签退窗-双机-tgbot |
+| ## 08 2026 22 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-22-补跑前先核-success-pi-与上游-下游-null-先判上游是否本日无数-避免重复补跑.md` | 2026-08-22-补跑前先核-success-pi-与上游-下游-null- |
+| ## 08 2026 22 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-22-跳出率只用-dropout_page_cnt-stay_page_cnt-pv-与-jump-不.md` | 2026-08-22-跳出率只用-dropout_page_cnt-stay_p |
+| .env 00–22 0） 22 30 30）后再重启 | `sessions/tg-rotate-2026-08-22-0604.md` | 暂停极客打卡：`JIKE_CHECKIN_ENABLED=false`，**签退 |
+| 07 20 21～08 prod test v196 | `sessions/tg-rotate-2026-08-22-0604.md` | test 页面访问新口径 v196 + 07-21～08-20 已齐；**pro |
+| .m 04.dws _产 _进 dws_app_page_visit_d_d m | `sessions/tg-rotate-2026-08-22-0604.md` | 产品说明落盘：`ops_system/04.dws/dws_app_page_v |
+| 0.84%） 08 20 303 jump jump_cnt | `sessions/tg-rotate-2026-08-22-0604.md` | **废弃公式** `(pv_cnt − jump_cnt) / pv_cnt`  |
+| dropout dropout_page_cnt is_dropo is_dro | `sessions/tg-rotate-2026-08-22-0604.md` | **跳出率定稿口径**：`dropout_page_cnt ÷ stay_pag |
+| entry jump pv read_ks_video）jump unknown | `sessions/tg-rotate-2026-08-22-0604.md` | 自刷新、unknown 来路、会话末页/无效去向：只抬 `pv`/`entry` |
+| 97.1% bug jump jump_cnt page_key pv | `sessions/tg-rotate-2026-08-22-0604.md` | **`pv_cnt > jump_cnt` 是预期分布**（prod 约 97. |
+| 07 20 21 22～08 31 32284 | `sessions/tg-rotate-2026-08-22-0604.md` | `dws_app_page_visit_d_d` prod 补数：ALTER 生 |
+| video_play_cnt →蓝 →野 ≠长 不是 不是又初簿内主责 | `sessions/tg-rotate-2026-08-22-0604.md` | `video_play_cnt` / 视频播放**不是又初簿内主责**（又初：归 |
+| 08 20 32240） 68 ads_product_day_stat_d d | `sessions/tg-rotate-2026-08-22-0604.md` | `ads_product_day_stat_d` · `video_play_c |
+| datacheck dropout_page_cnt jump lesson p | `sessions/tg-rotate-2026-08-22-0604.md` | [LESSON: page_visit,datacheck/跳出率只用 drop |
+| 0.84%） 08 20 303 jump jump_cnt | `sessions/tg-rotate-2026-08-22-0604.md` | 废弃公式** `(pv_cnt − jump_cnt) / pv_cnt` 会大 |
 | ## 08 2026 21 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-21-同工作流下游-success-但字段全-null-时优先查任务依赖顺序与上游分区就绪时间-别误判.md` | 2026-08-21-同工作流下游-success-但字段全-null-时优先查 |
 | ## 08 2026 21 add agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-partition-再重跑.md` | 2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-pa |
 | ## 08 2026 21 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内跳入-语义相反-用户-跳出-对应-ju.md` | 2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内 |
@@ -30,18 +45,3 @@
 | app dt dws.dws_app_page_visit_d_d page_k | `sessions/tg-rotate-2026-08-21-0000.md` | `dws.dws_app_page_visit_d_d` 粒度为 `dt × a |
 | tg 关进 口头 后需 启相 在线 | `sessions/tg-rotate-2026-08-21-0000.md` | 改 TG 在线/绿点逻辑后需**重启相关进程**并口头确认生效时段 |
 | 00 00–15 00–20 13 19 一至 | `sessions/tg-rotate-2026-08-21-0000.md` | 休息窗终版：**周一至周五** 13:00–15:00、19:00–20:00  |
-| app dwd_a dwd_app_page_view_d dws lesson | `sessions/tg-rotate-2026-08-21-0000.md` | [LESSON: dws-app-page-visit/看进入/跳转次数用 DW |
-| dwd.dwd_app_page_view_d dws page_key ref | `sessions/tg-rotate-2026-08-21-0000.md` | 要看页面间来源/去向分布，必须查 **`dwd.dwd_app_page_vie |
-| tg 上下 上班 下班 不动 不要 | `sessions/tg-rotate-2026-08-21-0000.md` | 其余上班时段 TG **保持长绿**；极客签到/签退上下班时间**原样不动**， |
-| bot tg 「休 「在 」只 」解 | `sessions/tg-rotate-2026-08-21-0000.md` | TG 绿点「休息窗」只控制**能否变灰**，与又初/bot **是否即时回消息无 |
-| ## 00 00–15 00–20 08 13 | `~/.dc-platform/memory/lessons/2026-08-20-休息窗-13-00-15-00-与-19-00-20-00-在-should_appear_on.md` | 2026-08-20-休息窗-13-00-15-00-与-19-00-20-00 |
-| ## 08 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-20-取值条件不同导致结果不同即拆新指标-禁止同名不同义硬合并.md` | 2026-08-20-取值条件不同导致结果不同即拆新指标-禁止同名不同义硬合并 |
-| ## 08 20 2026 agent_session_rotate base | `~/.dc-platform/memory/lessons/2026-08-20-标签链-prod-只跑-wrapper_daily_v3-sh-禁手工逐步跑-base-否则水位.md` | 2026-08-20-标签链-prod-只跑-wrapper_daily_v3- |
-| 03 08 15 20 2026 57 | `sessions/tg-rotate-2026-08-20-1912.md` | prod Spark 可用：`hadoop-1` · `/opt/bigdata |
-| —— —口 「指 」手 不应 不应承担「指标大姨妈式」手工维稳——口径会变 | `sessions/tg-rotate-2026-08-20-1912.md` | 人的角色是录需求、审发布；不应承担「指标大姨妈式」手工维稳——口径会变，不能指望 |
-| +a ai 「需 不是 不是人工维护指标清单 不靠 | `sessions/tg-rotate-2026-08-20-1912.md` | 知秋定调：指标库核心是数据模型，不是人工维护指标清单；日常新增不靠界面手填，走「 |
-| .列 formula metric_concept metric_impleme | `sessions/tg-rotate-2026-08-20-1912.md` | 三层模型：`metric_concept`（业务口径/窗口/聚合，改口径升版）→ |
-| ads.ads_product_day_st ads.ads_product_d | `sessions/tg-rotate-2026-08-20-1912.md` | prod 已确认存在 `dwd.dwd_app_page_view_d`、`ad |
-| lesson library metric 不同 义硬 件不 | `sessions/tg-rotate-2026-08-20-1912.md` | [LESSON: metric-library/取值条件不同导致结果不同即拆新指 |
-| base lesson prod spark wrapper_daily_v3. | `sessions/tg-rotate-2026-08-20-1912.md` | [LESSON: spark/标签链 prod 只跑 wrapper_daily |
-| prod 上线 不替 主人 人决 决策 | `sessions/tg-rotate-2026-08-20-1912.md` | prod 分区是否上线必须问知秋拍板，又初不替主人决策。 |

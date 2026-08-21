@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-22 | [关极客打卡改 .env 并延迟重启过签退窗；双机 tgbot 都要改，VPN/抽](./2026-08-22-关极客打卡改-env-并延迟重启过签退窗-双机-tgbot-都要改-vpn-抽查不受影响.md) | jike_checkin,tgbot,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-22 | [补跑前先核 SUCCESS PI 与上游；下游 NULL 先判上游是否本日无数，](./2026-08-22-补跑前先核-success-pi-与上游-下游-null-先判上游是否本日无数-避免重复补跑.md) | complement,ads,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-22 | [跳出率只用 dropout_page_cnt/stay_page_cnt；pv ](./2026-08-22-跳出率只用-dropout_page_cnt-stay_page_cnt-pv-与-jump-不.md) | page_visit,datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-21 | [同工作流下游 SUCCESS 但字段全 NULL 时优先查任务依赖顺序与上游分区](./2026-08-21-同工作流下游-success-但字段全-null-时优先查任务依赖顺序与上游分区就绪时间-别误判.md) | datacheck,dolphin,dag,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-21 | [补数秒失败先查目标静态分区是否存在，缺分区先 ADD PARTITION 再重跑](./2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-partition-再重跑.md) | complement,partition,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-21 | [改进入/跳转口径前先对照现网：`entry_cnt` 与「站内跳入」语义相反，用](./2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内跳入-语义相反-用户-跳出-对应-ju.md) | page-visit,metric,session-rotate | 会话轮换前自动蒸馏 |
