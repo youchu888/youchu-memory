@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-21 16:07:32 +0800
+> 更新: 2026-08-21 16:18:09 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-21.md`
 
@@ -48,7 +48,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-08-20 12:53 | 私聊#358 | telegram_dm | completed | dwd_app_page_view_d ads_product_day_stat_d 这两张表prod有的吧？ |
 | 2026-08-20 17:00 | 私聊#359 | telegram_dm | completed | 简单说下指标库的实现思路 |
 | 2026-08-20 17:04 | 私聊#360 | telegram_dm | completed | 简单说下指标库的实现思路，说人话 |
 | 2026-08-20 18:44 | 私聊#361 | telegram_dm | completed | 读一下大数据开发群下午的消息，整理一下我和知秋讨论的关于指标库的内容 |
@@ -77,4 +76,5 @@
 | 2026-08-21 12:06 | 私聊#384 | telegram_dm | completed | 补跑 |
 | 2026-08-21 12:40 | 私聊#385 | telegram_dm | completed | 视频播放是我们的任务吗 |
 | 2026-08-21 13:56 | 私聊#386 | telegram_dm | completed | 执行好了，继续补数吧 |
-| 2026-08-21 16:07 | 私聊#387 | telegram_dm | in_progress | 页面访问的，有pv_cnt比jump_cnt高的，看看什么情况 |
+| 2026-08-21 16:07 | 私聊#387 | telegram_dm | completed | 页面访问的，有pv_cnt比jump_cnt高的，看看什么情况 |
+| 2026-08-21 16:13 | 私聊#388 | telegram_dm | completed | 跳出率咱们算出来会有负值么，捞一下负值 |
