@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-23 | [日报上传必须与用户定稿逐字一致，先落盘再上传；同日重复上传为 updated 覆](./2026-08-23-日报上传必须与用户定稿逐字一致-先落盘再上传-同日重复上传为-updated-覆盖-勿擅自改措辞.md) | daily-report,upload,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-23 | [指标库 Phase 0 四表：DDL §1 五问知秋拍板前禁止在 test me](./2026-08-23-指标库-phase-0-四表-ddl-1-五问知秋拍板前禁止在-test-metadata-建表.md) | metric-library,phase0,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-23 | [归因报告脚本跑完后必须核对是否已私聊/发出文件，不能仅以「文件已生成」结案](./2026-08-23-归因报告脚本跑完后必须核对是否已私聊-发出文件-不能仅以-文件已生成-结案.md) | attribution-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-22 | [关极客打卡改 .env 并延迟重启过签退窗；双机 tgbot 都要改，VPN/抽](./2026-08-22-关极客打卡改-env-并延迟重启过签退窗-双机-tgbot-都要改-vpn-抽查不受影响.md) | jike_checkin,tgbot,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-22 | [补跑前先核 SUCCESS PI 与上游；下游 NULL 先判上游是否本日无数，](./2026-08-22-补跑前先核-success-pi-与上游-下游-null-先判上游是否本日无数-避免重复补跑.md) | complement,ads,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-22 | [跳出率只用 dropout_page_cnt/stay_page_cnt；pv ](./2026-08-22-跳出率只用-dropout_page_cnt-stay_page_cnt-pv-与-jump-不.md) | page_visit,datacheck,session-rotate | 会话轮换前自动蒸馏 |

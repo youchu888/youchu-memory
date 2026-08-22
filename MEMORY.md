@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [日报上传必须与用户定稿逐字一致，先落盘再上传；同日重复上传为 updat](lessons/2026-08-23-日报上传必须与用户定稿逐字一致-先落盘再上传-同日重复上传为-updated-覆盖-勿擅自改措辞.md) — 会话轮换蒸馏
+- [指标库 Phase 0 四表：DDL §1 五问知秋拍板前禁止在 tes](lessons/2026-08-23-指标库-phase-0-四表-ddl-1-五问知秋拍板前禁止在-test-metadata-建表.md) — 会话轮换蒸馏
+- [归因报告脚本跑完后必须核对是否已私聊/发出文件，不能仅以「文件已生成」结](lessons/2026-08-23-归因报告脚本跑完后必须核对是否已私聊-发出文件-不能仅以-文件已生成-结案.md) — 会话轮换蒸馏
 - [关极客打卡改 .env 并延迟重启过签退窗；双机 tgbot 都要改，V](lessons/2026-08-22-关极客打卡改-env-并延迟重启过签退窗-双机-tgbot-都要改-vpn-抽查不受影响.md) — 会话轮换蒸馏
 - [补跑前先核 SUCCESS PI 与上游；下游 NULL 先判上游是否本](lessons/2026-08-22-补跑前先核-success-pi-与上游-下游-null-先判上游是否本日无数-避免重复补跑.md) — 会话轮换蒸馏
 - [跳出率只用 dropout_page_cnt/stay_page_cnt](lessons/2026-08-22-跳出率只用-dropout_page_cnt-stay_page_cnt-pv-与-jump-不.md) — 会话轮换蒸馏
