@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md` | 2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-enti |
+| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改-ddl-建表或按未定增量落库.md` | 2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改 |
+| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-改指标库表结构前先定理论层次-registry-metric-store-semantic-la.md` | 2026-08-24-改指标库表结构前先定理论层次-registry-metri |
+| ddl v0.2 v0.3 三层 三层底座 不建表 | `sessions/tg-rotate-2026-08-24-1836.md` | 知秋待拍板二选一：A 仅保留 v0.2 三层底座，或 B 走 v0.3 综合方案 |
+| entity event layer metricflow role seman | `sessions/tg-rotate-2026-08-24-1836.md` | 与狂人 v0.3 同族：都走 semantic layer / MetricFl |
+| _r ef en eq it nt | `sessions/tg-rotate-2026-08-24-1836.md` | 建议三层分工：A 轻本体（业务对象与关系）→ B 语义/指标核心（entity、 |
+| context layer metric ontology registry 不 | `sessions/tg-rotate-2026-08-24-1836.md` | 纯维度集市不够（痛点是口径治理与多实现）；纯 Metric Registry 偏 |
+| 2025–2026 entity et ic layer me | `sessions/tg-rotate-2026-08-24-1836.md` | 2025–2026 对外主流叫 **Semantic Layer**；可执行内核 |
+| entity join owner req_ref 上下 下文 | `sessions/tg-rotate-2026-08-24-1836.md` | 现稿缺口：entity、合法切片/join 路径、适用范围与认证态、req_re |
+| core implementation label metric metric_ | `sessions/tg-rotate-2026-08-24-1836.md` | 现稿 `metric_concept / label / implementat |
+| context layer metric ontology semantic s | `sessions/tg-rotate-2026-08-24-1836.md` | 指标模型理论可粗分五派：维度建模/指标集市、Metric Store、Seman |
+| ddl governance lesson library metric v0. | `sessions/tg-rotate-2026-08-24-1836.md` | [LESSON: metric-library-governance/知秋在 v |
+| design eg et gi ic is | `sessions/tg-rotate-2026-08-24-1836.md` | [LESSON: metric-library-design/改指标库表结构前先 |
+| 264 ads ai bi canonical dbt | `sessions/tg-rotate-2026-08-24-1836.md` | 对照已钉约束（不做 Headless BI、AI 只 propose、挂已有 D |
+| ddl §10. §10.1） 三份 主稿 于对 | `sessions/tg-rotate-2026-08-24-1836.md` | 向工作狂人转交指标库设计时，应打包主稿、配套门禁稿、DDL 草案三份，正文写清各 |
 | ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-work-log-双机-hosts-缺口须在周报正文标注-勿假装双机流水齐全.md` | 2026-08-24-work-log-双机-hosts-缺口须在周报正文标注- |
 | ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-prod-是否存在-spark-paimo.md` | 2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-pr |
 | ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-绿点-打卡-问机制先读-should_appear_online-与计划时间生成-勿把-jike.md` | 2026-08-24-绿点-打卡-问机制先读-should_appear_onl |
@@ -30,18 +45,3 @@
 | ack agent 一路 不假 不假设另一路已交付 交付 | `sessions/tg-rotate-2026-08-23-0614.md` | 并行 agent 场景：长任务占一路时，新私聊须独立冷启动读记忆，先 ack/查 |
 | 81 sf —— —写 一背 乎全 | `sessions/tg-rotate-2026-08-23-0614.md` | 回写状态仍几乎全影子期，仅 SF-81 开回写——写报告时要带这一背景，避免产品 |
 | %） 092 169 6% 96 96% | `sessions/tg-rotate-2026-08-23-0614.md` | 归因周报核心口径：开通产品数、有产出数、候选/成功量、综合成功率；需单列表现好（ |
-| .htm .html .md outgoing runbook 「已 | `sessions/tg-rotate-2026-08-23-0614.md` | 本周归因产品报告走现成 runbook/脚本生成，产物为 `outgoing/本 |
-| daily lesson report updated upload 一致 | `sessions/tg-rotate-2026-08-23-0614.md` | [LESSON: daily-report,upload/日报上传必须与用户定稿 |
-| ddl lesson library metadata metric metri | `sessions/tg-rotate-2026-08-23-0614.md` | [LESSON: metric-library,phase0/指标库 Phase |
-| attribution lesson report 「文 」结 不能 | `sessions/tg-rotate-2026-08-23-0614.md` | [LESSON: attribution-report/归因报告脚本跑完后必须核 |
-| ddl derived es metadata metric_label pha | `sessions/tg-rotate-2026-08-23-0614.md` | Phase 0 建表门禁：DDL 草案 §1 五问（test 旁路建四表、口语真 |
-| ## .env 08 2026 22 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-22-关极客打卡改-env-并延迟重启过签退窗-双机-tgbot-都要改-vpn-抽查不受影响.md` | 2026-08-22-关极客打卡改-env-并延迟重启过签退窗-双机-tgbot |
-| ## 08 2026 22 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-22-补跑前先核-success-pi-与上游-下游-null-先判上游是否本日无数-避免重复补跑.md` | 2026-08-22-补跑前先核-success-pi-与上游-下游-null- |
-| ## 08 2026 22 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-22-跳出率只用-dropout_page_cnt-stay_page_cnt-pv-与-jump-不.md` | 2026-08-22-跳出率只用-dropout_page_cnt-stay_p |
-| .env 00–22 0） 22 30 30）后再重启 | `sessions/tg-rotate-2026-08-22-0604.md` | 暂停极客打卡：`JIKE_CHECKIN_ENABLED=false`，**签退 |
-| 07 20 21～08 prod test v196 | `sessions/tg-rotate-2026-08-22-0604.md` | test 页面访问新口径 v196 + 07-21～08-20 已齐；**pro |
-| .m 04.dws _产 _进 dws_app_page_visit_d_d m | `sessions/tg-rotate-2026-08-22-0604.md` | 产品说明落盘：`ops_system/04.dws/dws_app_page_v |
-| 0.84%） 08 20 303 jump jump_cnt | `sessions/tg-rotate-2026-08-22-0604.md` | **废弃公式** `(pv_cnt − jump_cnt) / pv_cnt`  |
-| dropout dropout_page_cnt is_dropo is_dro | `sessions/tg-rotate-2026-08-22-0604.md` | **跳出率定稿口径**：`dropout_page_cnt ÷ stay_pag |
-| entry jump pv read_ks_video）jump unknown | `sessions/tg-rotate-2026-08-22-0604.md` | 自刷新、unknown 来路、会话末页/无效去向：只抬 `pv`/`entry` |
-| 97.1% bug jump jump_cnt page_key pv | `sessions/tg-rotate-2026-08-22-0604.md` | **`pv_cnt > jump_cnt` 是预期分布**（prod 约 97. |

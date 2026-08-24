@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-24 · 最新归档：`sessions/tg-rotate-2026-08-24-1015.md`
+> 更新：2026-08-24 · 最新归档：`sessions/tg-rotate-2026-08-24-1836.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 向工作狂人转交指标库设计时，应打包主稿、配套门禁稿、DDL 草案三份，正文写清各自用途，并指明审阅入口（如主稿 §10.1），便于对方直接开审
+- 对照已钉约束（不做 Headless BI、AI 只 propose、挂已有 DWS/ADS 列、同名拆条、禁比率进 canonical、published 要 req_ref、先治 264 条脏库），最贴方案是 **以 Metric Store 为核的轻量 Semantic Layer**（≈ dbt MetricFlow 路线）
+- [LESSON: metric-library-design|改指标库表结构前先定理论层次（Registry / Metric Store / Semantic Layer），对照业务约束选「Metric Store 为核的轻语义层」，勿默认纯登记表或全量 Ontology]
+- [LESSON: metric-library-governance|知秋在 v0.2 底座 vs v0.3 超集拍板前，禁止改 DDL、建表或按未定增量落库]
+- 指标模型理论可粗分五派：维度建模/指标集市、Metric Store、Semantic Layer、Ontology、Context Layer；讨论前先定「做到哪一层」，再动表结构
+- 现稿 `metric_concept / label / implementation` 定位是 **Metric Store + 轻语义壳**，是 metric core 草稿，不是完整指标模型
+- 现稿缺口：entity、合法切片/join 路径、适用范围与认证态、req_ref/owner/血缘/策略等上下文、指标间可推理的业务关系
+- 2025–2026 对外主流叫 **Semantic Layer**；可执行内核多数是「Metric Store + 一点 entity/维度语义」，不是纯登记表也不是全量本体
+- 纯维度集市不够（痛点是口径治理与多实现）；纯 Metric Registry 偏轻；全量 Ontology 过重；完整 Context Layer 宜中期挂接、首刀不重造
+- 建议三层分工：A 轻本体（业务对象与关系）→ B 语义/指标核心（entity、维度、指标、派生、时间语义、认证）→ C 上下文治理（req_ref、owner、血缘、质量、策略、发布态）；中期以 B 为主，C 只绑定现有能力
+- 与狂人 v0.3 同族：都走 semantic layer / MetricFlow 侧；立场一致；v0.2 三层是底座，v0.3 在其上加 entity/event/role 为超集
+- 知秋待拍板二选一：A 仅保留 v0.2 三层底座，或 B 走 v0.3 综合方案（三层保留）；**拍板前不改 DDL、不建表**
+- 画 ER 时：v0.2 三层作实线底座，v0.3 增量（entity/event/role）用虚线标注「待拍板」，避免把未定方案画成已定
+- 三方对齐流程：主人定倾向 → 理论调研收讨论稿 → bus 狂人 → 狂人转知秋 → 回执对齐关系 → 知秋拍板后再改设计稿/DDL
 - 页面访问 YC-PV-001**：「进入」需有来路；访问次数可高于跳转属正常；跳出率公式已定稿不会负值；测试对账后发产并补近月分区。
 - [LESSON: tgbot|绿点|打卡|问机制先读 `should_appear_online()` 与计划时间生成，勿把 `JIKE_CHECKIN_ENABLED` 当成绿点开关]
 - [LESSON: 周报|work-log|双机|hosts 缺口须在周报正文标注，勿假装双机流水齐全]
 - **TG 绿点与极客打卡解耦**：`JIKE_CHECKIN_ENABLED=false` 只关真实打卡；计划上下班时间仍会生成，绿点跟计划走，不跟签到状态。
-- **绿点刷新**：`tgbot` 里 Telethon 约每 45 秒 `UpdateStatus`；亮/灰由 `should_appear_online()` 决定。
-- **亮绿条件**：工作日（非周日、非法定假、非请假）且在当天计划上班窗内；上班随机约 09:30–10:00，下班工作日约 22:00–22:30、周六约 19:00–19:30，到点变灰。
-- **休息窗只控展示**：周一～五 13:00–15:00、19:00–20:00 强制灰；周六仅 13:00–15:00；窗外该绿还绿；灰≠不回消息。
-- **与绿点无关**：VPN 续期、居家抽查、bot 收发不绑绿点；TCP 保活窗固定 09:30–22:30，逻辑独立。
-- **周报素材链**：正式日报 + 双机 work-log 合并稿 + `hosts/old-mac` / `hosts/new-mac`；定稿落 `.cursor/work-log/reports/`，并镜像 memory。
-- **周报 W34 口径**：自然周 08-17～08-23，有效工作日 6 天（周一至周六）；08-22、08-23 缺 `new-mac` 手写流水须在稿内标注。
-- **页面访问 YC-PV-001**：「进入」需有来路；访问次数可高于跳转属正常；跳出率公式已定稿不会负值；测试对账后发产并补近月分区。
-- **停留时长 #9**：不作跳出；墙钟 <5s 或 >12h 会话整段剔除不进五档；「生产有分区」≠ 已完成，须等离开事件埋点产品答复。
-- **指标库概念层 v0.2**：概念/命名/实现三层；标签唯一、同名不同义拆条、统计窗口与落库粒度分开、迁移一律草稿态；测试元数据建表等 Phase 0 拍板。
-- **`dws_app_event_funnel_d_d`**：大漏斗日汇总宽表，粒度 `dt × app_id × is_new`；约 18 事件 × 用户/会话/次数 ≈ 54 列；主链路 Spark→Paimon，SR 为备同步。
-- **大漏斗现网状态**：测试 SR 表在、0 行（日批未灌）；生产 SR 无表；对外可查数据尚无，日批写入与全量压测待上游/调度衔接。
-- Phase 0 建表门禁：DDL 草案 §1 五问（test 旁路建四表、口语真源进 `metric_label`、存量可迁不删、derived 只存分子分母、与 Phase2 并行）须知秋拍板；**拍板前不在 test metadata 执行 DDL**
-- [LESSON: attribution-report|归因报告脚本跑完后必须核对是否已私聊/发出文件，不能仅以「文件已生成」结案]
-- [LESSON: metric-library,phase0|指标库 Phase 0 四表：DDL §1 五问知秋拍板前禁止在 test metadata 建表；`metric.search` 仍走 `metric_standard` 即未落地]
 

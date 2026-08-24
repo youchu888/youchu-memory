@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [画 ER 时 v0.2 三层实线作底座，v0.3 entity/even](lessons/2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md) — 会话轮换蒸馏
+- [知秋在 v0.2 底座 vs v0.3 超集拍板前，禁止改 DDL、建表](lessons/2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改-ddl-建表或按未定增量落库.md) — 会话轮换蒸馏
+- [改指标库表结构前先定理论层次（Registry / Metric Sto](lessons/2026-08-24-改指标库表结构前先定理论层次-registry-metric-store-semantic-la.md) — 会话轮换蒸馏
 - [work-log|双机|hosts 缺口须在周报正文标注，勿假装双机流水](lessons/2026-08-24-work-log-双机-hosts-缺口须在周报正文标注-勿假装双机流水齐全.md) — 会话轮换蒸馏
 - [大漏斗|探表|答「有没有数」须分环境查 SR 行数与 prod 是否存在](lessons/2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-prod-是否存在-spark-paimo.md) — 会话轮换蒸馏
 - [绿点|打卡|问机制先读 `should_appear_online()`](lessons/2026-08-24-绿点-打卡-问机制先读-should_appear_online-与计划时间生成-勿把-jike.md) — 会话轮换蒸馏

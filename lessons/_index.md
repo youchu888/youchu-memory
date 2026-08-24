@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-24 | [画 ER 时 v0.2 三层实线作底座，v0.3 entity/event/ro](./2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md) | metric-library-er,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-24 | [知秋在 v0.2 底座 vs v0.3 超集拍板前，禁止改 DDL、建表或按未定](./2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改-ddl-建表或按未定增量落库.md) | metric-library-governance,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-24 | [改指标库表结构前先定理论层次（Registry / Metric Store /](./2026-08-24-改指标库表结构前先定理论层次-registry-metric-store-semantic-la.md) | metric-library-design,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-24 | [work-log|双机|hosts 缺口须在周报正文标注，勿假装双机流水齐全](./2026-08-24-work-log-双机-hosts-缺口须在周报正文标注-勿假装双机流水齐全.md) | 周报,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-24 | [大漏斗|探表|答「有没有数」须分环境查 SR 行数与 prod 是否存在，Spa](./2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-prod-是否存在-spark-paimo.md) | dws,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-24 | [绿点|打卡|问机制先读 `should_appear_online()` 与计划](./2026-08-24-绿点-打卡-问机制先读-should_appear_online-与计划时间生成-勿把-jike.md) | tgbot,session-rotate | 会话轮换前自动蒸馏 |
