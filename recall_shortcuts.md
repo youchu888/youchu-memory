@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-08-25-0616.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
+| ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric_library_er_diagram.md` | 2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric |
+| ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-spec-表名再推文档库-勿用旧临时名或旧.md` | 2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-sp |
+| #410 #411 er 一任 不必 不必让用户重述需求 | `sessions/tg-rotate-2026-08-25-0616.md` | 私聊 #410/#411 的指标库 ER 任务，因前序会话失败未交；恢复会话后同 |
+| docs git metric_library_er_diagram.md me | `sessions/tg-rotate-2026-08-25-0616.md` | 交付文档库后，仓库内同步留镜像：**`docs/metric_library_e |
+| 65） er id metric_library_er metric_libra | `sessions/tg-rotate-2026-08-25-0616.md` | 文档库推送指标库 ER：分类 **指标库**；slug 建议带版本与日期，如 * |
+| candida candidate） ce co ep glossary | `sessions/tg-rotate-2026-08-25-0616.md` | 配色约定：蓝 = v0.2 指标核（concept / label / impl |
+| .html .md docs metric_library_er_diagram | `sessions/tg-rotate-2026-08-25-0616.md` | 会话中断后续做，先查本地是否已有半成品（如 `docs/metric_libra |
+| cursor ide resume 不等 不等于业务逻辑或数据本身出错 业务 | `sessions/tg-rotate-2026-08-25-0616.md` | Cursor 会话 `resume` 被丢弃时，故障在 IDE 连接/会话恢复， |
+| cursor diagram er lesson library metric | `sessions/tg-rotate-2026-08-25-0616.md` | [LESSON: cursor-session,metric-library,e |
+| er 「正 「正常了可以干活吗」类探活 」类 一步 上） | `sessions/tg-rotate-2026-08-25-0616.md` | 「正常了可以干活吗」类探活：短答可干活 + 点明根因（会话连不上）+ 列出可续两 |
+| commit push slug spec 「画 」时 | `sessions/tg-rotate-2026-08-25-0616.md` | 用户问「画好了吗 / 推文档库」时，标准链路：**核对 spec 版本 → 对齐 |
+| domain_entity entity_dict er event_ext r | `sessions/tg-rotate-2026-08-25-0616.md` | 指标库 ER 图必须以用户指定的 **`spec_v0.3_20260824.m |
 | resume 业务 两条 两条恢复路径 传输 免把 | `sessions/tg-rotate-2026-08-24-1918.md` | 失败模板刻意简短：告知已清 resume + 两条恢复路径，避免把传输错误包装成 |
 | agent 不是 不是秒回 不进 后的 回类 | `sessions/tg-rotate-2026-08-24-1918.md` | 私聊秒回类（在吗、寒暄）不进完整 Agent 链；本条是 Agent 正式处理后 |
 | res resume transcript 会触 体积） 值轮 | `sessions/tg-rotate-2026-08-24-1918.md` | 共用 resume 过长会触发定时/阈值轮换（日切、transcript 体积） |
@@ -32,16 +45,3 @@
 | design eg et gi ic is | `sessions/tg-rotate-2026-08-24-1836.md` | [LESSON: metric-library-design/改指标库表结构前先 |
 | 264 ads ai bi canonical dbt | `sessions/tg-rotate-2026-08-24-1836.md` | 对照已钉约束（不做 Headless BI、AI 只 propose、挂已有 D |
 | ddl §10. §10.1） 三份 主稿 于对 | `sessions/tg-rotate-2026-08-24-1836.md` | 向工作狂人转交指标库设计时，应打包主稿、配套门禁稿、DDL 草案三份，正文写清各 |
-| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-work-log-双机-hosts-缺口须在周报正文标注-勿假装双机流水齐全.md` | 2026-08-24-work-log-双机-hosts-缺口须在周报正文标注- |
-| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-prod-是否存在-spark-paimo.md` | 2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-pr |
-| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-绿点-打卡-问机制先读-should_appear_online-与计划时间生成-勿把-jike.md` | 2026-08-24-绿点-打卡-问机制先读-should_appear_onl |
-| #9 12h 5s 「生 「生产有分区」≠ 」≠ | `sessions/tg-rotate-2026-08-24-1015.md` | **停留时长 #9**：不作跳出；墙钟 <5s 或 >12h 会话整段剔除不进五 |
-| 001 pv yc 「进 「进入」需有来路 」需 | `sessions/tg-rotate-2026-08-24-1015.md` | **页面访问 YC-PV-001**：「进入」需有来路；访问次数可高于跳转属正常 |
-| 08 17～08 22 23 mac new | `sessions/tg-rotate-2026-08-24-1015.md` | **周报 W34 口径**：自然周 08-17～08-23，有效工作日 6 天（ |
-| .cursor hosts log mac memory new | `sessions/tg-rotate-2026-08-24-1015.md` | **周报素材链**：正式日报 + 双机 work-log 合并稿 + `host |
-| 09 30 30–22 bot tcp vpn | `sessions/tg-rotate-2026-08-24-1015.md` | **与绿点无关**：VPN 续期、居家抽查、bot 收发不绑绿点；TCP 保活窗 |
-| 00 00–15 00–20 13 19 ≠不 | `sessions/tg-rotate-2026-08-24-1015.md` | **休息窗只控展示**：周一～五 13:00–15:00、19:00–20:00 |
-| 00 00–19 00–22 09 19 22 | `sessions/tg-rotate-2026-08-24-1015.md` | **亮绿条件**：工作日（非周日、非法定假、非请假）且在当天计划上班窗内；上班随 |
-| 45 sho should_appear_online telethon tgb | `sessions/tg-rotate-2026-08-24-1015.md` | **绿点刷新**：`tgbot` 里 Telethon 约每 45 秒 `Upd |
-| false jike_checkin_enabled tg 上下 下班 不跟 | `sessions/tg-rotate-2026-08-24-1015.md` | **TG 绿点与极客打卡解耦**：`JIKE_CHECKIN_ENABLED=f |
-| hosts lesson log work 假装 勿假 | `sessions/tg-rotate-2026-08-24-1015.md` | [LESSON: 周报/work-log/双机/hosts 缺口须在周报正文标注 |

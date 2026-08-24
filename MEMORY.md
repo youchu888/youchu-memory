@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [指标库 ER 推文档库后须同步落仓 `docs/metric_libra](lessons/2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric_library_er_diagram.md) — 会话轮换蒸馏
+- [会话 resume 失败续做时，先查本地稿并对齐最新 spec 表名再推](lessons/2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-spec-表名再推文档库-勿用旧临时名或旧.md) — 会话轮换蒸馏
 - [画 ER 时 v0.2 三层实线作底座，v0.3 entity/even](lessons/2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md) — 会话轮换蒸馏
 - [知秋在 v0.2 底座 vs v0.3 超集拍板前，禁止改 DDL、建表](lessons/2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改-ddl-建表或按未定增量落库.md) — 会话轮换蒸馏
 - [改指标库表结构前先定理论层次（Registry / Metric Sto](lessons/2026-08-24-改指标库表结构前先定理论层次-registry-metric-store-semantic-la.md) — 会话轮换蒸馏

@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-25 | [指标库 ER 推文档库后须同步落仓 `docs/metric_library_e](./2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric_library_er_diagram.md) | doc-library,delivery,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-25 | [会话 resume 失败续做时，先查本地稿并对齐最新 spec 表名再推文档库，](./2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-spec-表名再推文档库-勿用旧临时名或旧.md) | cursor-session,metric-library,er-diagram,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-24 | [画 ER 时 v0.2 三层实线作底座，v0.3 entity/event/ro](./2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md) | metric-library-er,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-24 | [知秋在 v0.2 底座 vs v0.3 超集拍板前，禁止改 DDL、建表或按未定](./2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改-ddl-建表或按未定增量落库.md) | metric-library-governance,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-24 | [改指标库表结构前先定理论层次（Registry / Metric Store /](./2026-08-24-改指标库表结构前先定理论层次-registry-metric-store-semantic-la.md) | metric-library-design,session-rotate | 会话轮换前自动蒸馏 |
