@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| resume 业务 两条 两条恢复路径 传输 免把 | `sessions/tg-rotate-2026-08-24-1918.md` | 失败模板刻意简短：告知已清 resume + 两条恢复路径，避免把传输错误包装成 |
+| agent 不是 不是秒回 不进 后的 回类 | `sessions/tg-rotate-2026-08-24-1918.md` | 私聊秒回类（在吗、寒暄）不进完整 Agent 链；本条是 Agent 正式处理后 |
+| res resume transcript 会触 体积） 值轮 | `sessions/tg-rotate-2026-08-24-1918.md` | 共用 resume 过长会触发定时/阈值轮换（日切、transcript 体积） |
+| #283 #284 #329 #394 api cursor | `sessions/tg-rotate-2026-08-24-1918.md` | 历史上 #283/#284、#329、#394 等同模板失败，事后验证多为 Cu |
+| cu or rs so ur 「没 | `sessions/tg-rotate-2026-08-24-1918.md` | 队列里任务可能**积压很久**才跑并失败（Cursor 侧卡住），看起来像「没干 |
+| ag agent agent」会走 en ge in_progre | `sessions/tg-rotate-2026-08-24-1918.md` | 「重启 agent」会走 `rotate_workspace_session`： |
+| agen agent」 cursor es me re | `sessions/tg-rotate-2026-08-24-1918.md` | 用户侧标准恢复：**原句重发**即可（resume 已清，下一条会新开 Curs |
+| bot connect cursor_chat_id expired faile | `sessions/tg-rotate-2026-08-24-1918.md` | Bot 检测到 `failed to connect/resume`、`sess |
+| cu etl or rs so sql | `sessions/tg-rotate-2026-08-24-1918.md` | TG 私聊报「Cursor 会话连接失败」属于**传输/会话层**故障，不是业务 |
+| es le lesson lesson「传输故障 n「 on | `sessions/tg-rotate-2026-08-24-1918.md` | （已有 lesson「传输故障 vs 业务逻辑」「轮换前先沉淀」，本条无新增铁律 |
+| bot hit resume 「为 」时 一会 | `sessions/tg-rotate-2026-08-24-1918.md` | 用户问「为什么一直失败」时，多半是同一会话反复 hit 失效 resume；Bo |
+| for plan quota unavailable your 一排 | `sessions/tg-rotate-2026-08-24-1918.md` | 此类错误与**模型额度用尽**、`unavailable for your pl |
 | ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md` | 2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-enti |
 | ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改-ddl-建表或按未定增量落库.md` | 2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改 |
 | ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-改指标库表结构前先定理论层次-registry-metric-store-semantic-la.md` | 2026-08-24-改指标库表结构前先定理论层次-registry-metri |
@@ -33,15 +45,3 @@
 | 45 sho should_appear_online telethon tgb | `sessions/tg-rotate-2026-08-24-1015.md` | **绿点刷新**：`tgbot` 里 Telethon 约每 45 秒 `Upd |
 | false jike_checkin_enabled tg 上下 下班 不跟 | `sessions/tg-rotate-2026-08-24-1015.md` | **TG 绿点与极客打卡解耦**：`JIKE_CHECKIN_ENABLED=f |
 | hosts lesson log work 假装 勿假 | `sessions/tg-rotate-2026-08-24-1015.md` | [LESSON: 周报/work-log/双机/hosts 缺口须在周报正文标注 |
-| jike_checkin_enabled lesson should_appea | `sessions/tg-rotate-2026-08-24-1015.md` | [LESSON: tgbot/绿点/打卡/问机制先读 `should_appea |
-| 001 pv yc 「进 「进入」需有来路 」需 | `sessions/tg-rotate-2026-08-24-1015.md` | 页面访问 YC-PV-001**：「进入」需有来路；访问次数可高于跳转属正常；跳 |
-| ## 08 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-23-日报上传必须与用户定稿逐字一致-先落盘再上传-同日重复上传为-updated-覆盖-勿擅自改措辞.md` | 2026-08-23-日报上传必须与用户定稿逐字一致-先落盘再上传-同日重复上传 |
-| ## 08 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-23-指标库-phase-0-四表-ddl-1-五问知秋拍板前禁止在-test-metadata-建表.md` | 2026-08-23-指标库-phase-0-四表-ddl-1-五问知秋拍板前禁 |
-| ## 08 2026 23 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-08-23-归因报告脚本跑完后必须核对是否已私聊-发出文件-不能仅以-文件已生成-结案.md` | 2026-08-23-归因报告脚本跑完后必须核对是否已私聊-发出文件-不能仅以- |
-| ddl go gran granularity mcp metadata | `sessions/tg-rotate-2026-08-23-0614.md` | 验 Phase 0 是否落地：`metric.search` 仍走旧 `metr |
-| 264 concept） definition draft granularit | `sessions/tg-rotate-2026-08-23-0614.md` | 概念层拆条边界：`granularity` → **`time_window`* |
-| bus#6850 bus#6990 c18e2bdc ddl dev（ docs | `sessions/tg-rotate-2026-08-23-0614.md` | 指标库 Phase 0：设计稿 `docs/metric_library_con |
-| hold log memory_open work 「明 」+ | `sessions/tg-rotate-2026-08-23-0614.md` | 续推进日计划：对照昨日日报「明日动作」+ 当日 work-log + `MEMO |
-| ack agent 一路 不假 不假设另一路已交付 交付 | `sessions/tg-rotate-2026-08-23-0614.md` | 并行 agent 场景：长任务占一路时，新私聊须独立冷启动读记忆，先 ack/查 |
-| 81 sf —— —写 一背 乎全 | `sessions/tg-rotate-2026-08-23-0614.md` | 回写状态仍几乎全影子期，仅 SF-81 开回写——写报告时要带这一背景，避免产品 |
-| %） 092 169 6% 96 96% | `sessions/tg-rotate-2026-08-23-0614.md` | 归因周报核心口径：开通产品数、有产出数、候选/成功量、综合成功率；需单列表现好（ |
