@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [work-log|双机|hosts 缺口须在周报正文标注，勿假装双机流水](lessons/2026-08-24-work-log-双机-hosts-缺口须在周报正文标注-勿假装双机流水齐全.md) — 会话轮换蒸馏
+- [大漏斗|探表|答「有没有数」须分环境查 SR 行数与 prod 是否存在](lessons/2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-prod-是否存在-spark-paimo.md) — 会话轮换蒸馏
+- [绿点|打卡|问机制先读 `should_appear_online()`](lessons/2026-08-24-绿点-打卡-问机制先读-should_appear_online-与计划时间生成-勿把-jike.md) — 会话轮换蒸馏
 - [日报上传必须与用户定稿逐字一致，先落盘再上传；同日重复上传为 updat](lessons/2026-08-23-日报上传必须与用户定稿逐字一致-先落盘再上传-同日重复上传为-updated-覆盖-勿擅自改措辞.md) — 会话轮换蒸馏
 - [指标库 Phase 0 四表：DDL §1 五问知秋拍板前禁止在 tes](lessons/2026-08-23-指标库-phase-0-四表-ddl-1-五问知秋拍板前禁止在-test-metadata-建表.md) — 会话轮换蒸馏
 - [归因报告脚本跑完后必须核对是否已私聊/发出文件，不能仅以「文件已生成」结](lessons/2026-08-23-归因报告脚本跑完后必须核对是否已私聊-发出文件-不能仅以-文件已生成-结案.md) — 会话轮换蒸馏

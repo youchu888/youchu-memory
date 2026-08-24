@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-work-log-双机-hosts-缺口须在周报正文标注-勿假装双机流水齐全.md` | 2026-08-24-work-log-双机-hosts-缺口须在周报正文标注- |
+| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-prod-是否存在-spark-paimo.md` | 2026-08-24-大漏斗-探表-答-有没有数-须分环境查-sr-行数与-pr |
+| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-绿点-打卡-问机制先读-should_appear_online-与计划时间生成-勿把-jike.md` | 2026-08-24-绿点-打卡-问机制先读-should_appear_onl |
+| #9 12h 5s 「生 「生产有分区」≠ 」≠ | `sessions/tg-rotate-2026-08-24-1015.md` | **停留时长 #9**：不作跳出；墙钟 <5s 或 >12h 会话整段剔除不进五 |
+| 001 pv yc 「进 「进入」需有来路 」需 | `sessions/tg-rotate-2026-08-24-1015.md` | **页面访问 YC-PV-001**：「进入」需有来路；访问次数可高于跳转属正常 |
+| 08 17～08 22 23 mac new | `sessions/tg-rotate-2026-08-24-1015.md` | **周报 W34 口径**：自然周 08-17～08-23，有效工作日 6 天（ |
+| .cursor hosts log mac memory new | `sessions/tg-rotate-2026-08-24-1015.md` | **周报素材链**：正式日报 + 双机 work-log 合并稿 + `host |
+| 09 30 30–22 bot tcp vpn | `sessions/tg-rotate-2026-08-24-1015.md` | **与绿点无关**：VPN 续期、居家抽查、bot 收发不绑绿点；TCP 保活窗 |
+| 00 00–15 00–20 13 19 ≠不 | `sessions/tg-rotate-2026-08-24-1015.md` | **休息窗只控展示**：周一～五 13:00–15:00、19:00–20:00 |
+| 00 00–19 00–22 09 19 22 | `sessions/tg-rotate-2026-08-24-1015.md` | **亮绿条件**：工作日（非周日、非法定假、非请假）且在当天计划上班窗内；上班随 |
+| 45 sho should_appear_online telethon tgb | `sessions/tg-rotate-2026-08-24-1015.md` | **绿点刷新**：`tgbot` 里 Telethon 约每 45 秒 `Upd |
+| false jike_checkin_enabled tg 上下 下班 不跟 | `sessions/tg-rotate-2026-08-24-1015.md` | **TG 绿点与极客打卡解耦**：`JIKE_CHECKIN_ENABLED=f |
+| hosts lesson log work 假装 勿假 | `sessions/tg-rotate-2026-08-24-1015.md` | [LESSON: 周报/work-log/双机/hosts 缺口须在周报正文标注 |
+| jike_checkin_enabled lesson should_appea | `sessions/tg-rotate-2026-08-24-1015.md` | [LESSON: tgbot/绿点/打卡/问机制先读 `should_appea |
+| 001 pv yc 「进 「进入」需有来路 」需 | `sessions/tg-rotate-2026-08-24-1015.md` | 页面访问 YC-PV-001**：「进入」需有来路；访问次数可高于跳转属正常；跳 |
 | ## 08 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-23-日报上传必须与用户定稿逐字一致-先落盘再上传-同日重复上传为-updated-覆盖-勿擅自改措辞.md` | 2026-08-23-日报上传必须与用户定稿逐字一致-先落盘再上传-同日重复上传 |
 | ## 08 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-23-指标库-phase-0-四表-ddl-1-五问知秋拍板前禁止在-test-metadata-建表.md` | 2026-08-23-指标库-phase-0-四表-ddl-1-五问知秋拍板前禁 |
 | ## 08 2026 23 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-08-23-归因报告脚本跑完后必须核对是否已私聊-发出文件-不能仅以-文件已生成-结案.md` | 2026-08-23-归因报告脚本跑完后必须核对是否已私聊-发出文件-不能仅以- |
@@ -30,18 +45,3 @@
 | dropout dropout_page_cnt is_dropo is_dro | `sessions/tg-rotate-2026-08-22-0604.md` | **跳出率定稿口径**：`dropout_page_cnt ÷ stay_pag |
 | entry jump pv read_ks_video）jump unknown | `sessions/tg-rotate-2026-08-22-0604.md` | 自刷新、unknown 来路、会话末页/无效去向：只抬 `pv`/`entry` |
 | 97.1% bug jump jump_cnt page_key pv | `sessions/tg-rotate-2026-08-22-0604.md` | **`pv_cnt > jump_cnt` 是预期分布**（prod 约 97. |
-| 07 20 21 22～08 31 32284 | `sessions/tg-rotate-2026-08-22-0604.md` | `dws_app_page_visit_d_d` prod 补数：ALTER 生 |
-| video_play_cnt →蓝 →野 ≠长 不是 不是又初簿内主责 | `sessions/tg-rotate-2026-08-22-0604.md` | `video_play_cnt` / 视频播放**不是又初簿内主责**（又初：归 |
-| 08 20 32240） 68 ads_product_day_stat_d d | `sessions/tg-rotate-2026-08-22-0604.md` | `ads_product_day_stat_d` · `video_play_c |
-| datacheck dropout_page_cnt jump lesson p | `sessions/tg-rotate-2026-08-22-0604.md` | [LESSON: page_visit,datacheck/跳出率只用 drop |
-| 0.84%） 08 20 303 jump jump_cnt | `sessions/tg-rotate-2026-08-22-0604.md` | 废弃公式** `(pv_cnt − jump_cnt) / pv_cnt` 会大 |
-| ## 08 2026 21 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-21-同工作流下游-success-但字段全-null-时优先查任务依赖顺序与上游分区就绪时间-别误判.md` | 2026-08-21-同工作流下游-success-但字段全-null-时优先查 |
-| ## 08 2026 21 add agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-partition-再重跑.md` | 2026-08-21-补数秒失败先查目标静态分区是否存在-缺分区先-add-pa |
-| ## 08 2026 21 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内跳入-语义相反-用户-跳出-对应-ju.md` | 2026-08-21-改进入-跳转口径前先对照现网-entry_cnt-与-站内 |
-| null success video_play_cnt 一定 上游 不一 | `sessions/tg-rotate-2026-08-21-1202.md` | **`video_play_cnt` 当日 NULL 不一定是任务失败**：任务 |
-| prod publish request sql test 上次 | `sessions/tg-rotate-2026-08-21-1202.md` | **又初不能直发 prod**：test 验过后走 `request-publi |
-| app dws.dws_app_page_visit_d_d page_k pa | `sessions/tg-rotate-2026-08-21-1202.md` | **页面访问日表**：`dws.dws_app_page_visit_d_d`， |
-| 21 「今 」→ 一般 业务 业务日最新一般是昨天 | `sessions/tg-rotate-2026-08-21-1202.md` | **日批 T-1**：问「今天有没有 21 号数据」→ 业务日最新一般是昨天；当 |
-| 027 page_key referrer referrer_page_key  | `sessions/tg-rotate-2026-08-21-1202.md` | **自刷新（`referrer_page_key = page_key`）会显著 |
-| 027 124 app jha page_key tj | `sessions/tg-rotate-2026-08-21-1202.md` | **跨 app 对账来源/去向**：TJ-027 与 JHA-124 的 `pa |
-| p20260721 会直 先查 再重 分区 区后 | `sessions/tg-rotate-2026-08-21-1202.md` | **补数秒失败先查分区**：静态分区表缺目标分区（如 `p20260721`）会 |
