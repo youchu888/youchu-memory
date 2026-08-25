@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 25 60 ack | `~/.dc-platform/memory/lessons/2026-08-25-收到-mode-work-派单-60-秒内-ack-完工-reply-结案-审稿类任务按回执缺口.md` | 2026-08-25-收到-mode-work-派单-60-秒内-ack-完工- |
+| ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本地补丁被后续版本覆盖后再审仍报缺.md` | 2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本 |
+| ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完请主人在私聊目视验收.md` | 2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完 |
+| id reply 一审 上传 下一 了哪 | `sessions/tg-rotate-2026-08-25-2018.md` | 覆盖上传开发平台可视化后：reply 里写清改了哪些 §、平台路径/id，并提示 |
+| 1– c1 c4 dim_uses g7 published | `sessions/tg-rotate-2026-08-25-2018.md` | 「组合约束」类增补（C1–C4：dim_uses 成对、G7-b 三角等式、pu |
+| er metric_standard §1 §12.5 §13.3 §15 | `sessions/tg-rotate-2026-08-25-2018.md` | 审稿常见缺口清单（本轮）：§1 九数基线、§12.5 事件字典自增长、§13.3 |
+| git） memory youchu 一台 仍用 任务 | `sessions/tg-rotate-2026-08-25-2018.md` | 推送脚本/日报相关改动要同步进 `youchu-memory`（memory g |
+| post_dail post_daily_report_to_dm.py tg  | `sessions/tg-rotate-2026-08-25-2018.md` | TG 日报私聊推送默认**只发正文**：去掉「📋 又初 · 日报 …（定稿自动推 |
+| merge 「组 」版 不是 为底 以现 | `sessions/tg-rotate-2026-08-25-2018.md` | 再审/补稿前**必须先对平台现网正文**（本地稿 ≠ 现网）；若现网已是较新的「 |
+| #f4f5f7 cdn er hi html mermaid | `sessions/tg-rotate-2026-08-25-2018.md` | 可视化 HTML 铁律：纯 HTML/SVG 手工 ER，禁 mermaid C |
+| 0–4+2.5） 1– 66） 67 g1 g7 | `sessions/tg-rotate-2026-08-25-2018.md` | 设计可视化审稿（如 metric_library v0.3 id=66）：对照源 |
+| 60 ack agent bus cursor reply | `sessions/tg-rotate-2026-08-25-2018.md` | agent-bus 派单：60 秒内先 `ack`，干完再 `reply` 结案 |
+| date dd dd.md mm post_da post_daily_repo | `sessions/tg-rotate-2026-08-25-2018.md` | 主人说「重新推送昨天日报」时：先定位 `reports/日报-YYYY-MM-D |
 | ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-08-25-0616.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric_library_er_diagram.md` | 2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric |
 | ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-spec-表名再推文档库-勿用旧临时名或旧.md` | 2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-sp |
@@ -32,16 +45,3 @@
 | for plan quota unavailable your 一排 | `sessions/tg-rotate-2026-08-24-1918.md` | 此类错误与**模型额度用尽**、`unavailable for your pl |
 | ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md` | 2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-enti |
 | ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改-ddl-建表或按未定增量落库.md` | 2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改 |
-| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-改指标库表结构前先定理论层次-registry-metric-store-semantic-la.md` | 2026-08-24-改指标库表结构前先定理论层次-registry-metri |
-| ddl v0.2 v0.3 三层 三层底座 不建表 | `sessions/tg-rotate-2026-08-24-1836.md` | 知秋待拍板二选一：A 仅保留 v0.2 三层底座，或 B 走 v0.3 综合方案 |
-| entity event layer metricflow role seman | `sessions/tg-rotate-2026-08-24-1836.md` | 与狂人 v0.3 同族：都走 semantic layer / MetricFl |
-| _r ef en eq it nt | `sessions/tg-rotate-2026-08-24-1836.md` | 建议三层分工：A 轻本体（业务对象与关系）→ B 语义/指标核心（entity、 |
-| context layer metric ontology registry 不 | `sessions/tg-rotate-2026-08-24-1836.md` | 纯维度集市不够（痛点是口径治理与多实现）；纯 Metric Registry 偏 |
-| 2025–2026 entity et ic layer me | `sessions/tg-rotate-2026-08-24-1836.md` | 2025–2026 对外主流叫 **Semantic Layer**；可执行内核 |
-| entity join owner req_ref 上下 下文 | `sessions/tg-rotate-2026-08-24-1836.md` | 现稿缺口：entity、合法切片/join 路径、适用范围与认证态、req_re |
-| core implementation label metric metric_ | `sessions/tg-rotate-2026-08-24-1836.md` | 现稿 `metric_concept / label / implementat |
-| context layer metric ontology semantic s | `sessions/tg-rotate-2026-08-24-1836.md` | 指标模型理论可粗分五派：维度建模/指标集市、Metric Store、Seman |
-| ddl governance lesson library metric v0. | `sessions/tg-rotate-2026-08-24-1836.md` | [LESSON: metric-library-governance/知秋在 v |
-| design eg et gi ic is | `sessions/tg-rotate-2026-08-24-1836.md` | [LESSON: metric-library-design/改指标库表结构前先 |
-| 264 ads ai bi canonical dbt | `sessions/tg-rotate-2026-08-24-1836.md` | 对照已钉约束（不做 Headless BI、AI 只 propose、挂已有 D |
-| ddl §10. §10.1） 三份 主稿 于对 | `sessions/tg-rotate-2026-08-24-1836.md` | 向工作狂人转交指标库设计时，应打包主稿、配套门禁稿、DDL 草案三份，正文写清各 |

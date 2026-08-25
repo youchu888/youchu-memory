@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-25 | [收到 mode=work 派单 60 秒内 ack、完工 reply 结案，审稿](./2026-08-25-收到-mode-work-派单-60-秒内-ack-完工-reply-结案-审稿类任务按回执缺口.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-25 | [补设计可视化前先拉平台现网正文作 merge 底稿，避免本地补丁被后续版本覆盖后](./2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本地补丁被后续版本覆盖后再审仍报缺.md) | dev-platform,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-25 | [TG 重推日报前先确认推送脚本已改为只发正文无标题头，推完请主人在私聊目视验收](./2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完请主人在私聊目视验收.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-25 | [指标库 ER 推文档库后须同步落仓 `docs/metric_library_e](./2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric_library_er_diagram.md) | doc-library,delivery,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-25 | [会话 resume 失败续做时，先查本地稿并对齐最新 spec 表名再推文档库，](./2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-spec-表名再推文档库-勿用旧临时名或旧.md) | cursor-session,metric-library,er-diagram,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-24 | [画 ER 时 v0.2 三层实线作底座，v0.3 entity/event/ro](./2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md) | metric-library-er,session-rotate | 会话轮换前自动蒸馏 |
