@@ -5,6 +5,16 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 26 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-26-用户确认-传好了是吧-类追问时只复报日期-云端-id-状态-勿重复执行-upload-脚本.md` | 2026-08-26-用户确认-传好了是吧-类追问时只复报日期-云端-id-状态 |
+| bus 不写 与内 专项 专项复盘 业务 | `sessions/tg-rotate-2026-08-26-0620.md` | 日报写作仍遵守：【今日结果】约 3 条、业务话展开、【死锁阻碍】【专项复盘】默认 |
+| 08 1（ 27） op p1 to | `sessions/tg-rotate-2026-08-26-0620.md` | 续做 TOP1（截止 08-27）：按 v0.3 定稿推进建表、元数据与联调落地 |
+| 08 2026 25 er v0.3 一期 | `sessions/tg-rotate-2026-08-26-0620.md` | 2026-08-25 指标库 v0.3 当日交付：ER 图定稿（指标/维度/实体 |
+| 一致 与主 主人 云端 人给 仍按 | `sessions/tg-rotate-2026-08-26-0620.md` | 若本地已有同日定稿，仍按用户新贴正文覆盖后再传，保证云端与主人给定稿一致。 |
+| id 「传 」时 一句 一句肯定 上传 | `sessions/tg-rotate-2026-08-26-0620.md` | 用户追问「传好了是吧」时，一句肯定 + 复报日期/ID/状态即可，不必重复跑上传 |
+| id inserted 三项 上传 上传成功回执至少带三项 与留 | `sessions/tg-rotate-2026-08-26-0620.md` | 上传成功回执至少带三项：日期、云端记录 ID、状态（`inserted` 新建  |
+| .cursor date dd dd.md log mm | `sessions/tg-rotate-2026-08-26-0620.md` | 本地定稿固定路径：`.cursor/work-log/reports/日报-YY |
+| daily id lesson report up upload | `sessions/tg-rotate-2026-08-26-0620.md` | [LESSON: daily-report/用户确认「传好了是吧」类追问时只复报 |
+| 「按 」时 一准 上传 个上 为唯 | `sessions/tg-rotate-2026-08-26-0620.md` | 用户说「按照这个上传云端」时，以粘贴的日报正文为唯一准绳：先落本地定稿，再上传， |
 | ## 08 2026 25 60 ack | `~/.dc-platform/memory/lessons/2026-08-25-收到-mode-work-派单-60-秒内-ack-完工-reply-结案-审稿类任务按回执缺口.md` | 2026-08-25-收到-mode-work-派单-60-秒内-ack-完工- |
 | ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本地补丁被后续版本覆盖后再审仍报缺.md` | 2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本 |
 | ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完请主人在私聊目视验收.md` | 2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完 |
@@ -35,13 +45,3 @@
 | agent 不是 不是秒回 不进 后的 回类 | `sessions/tg-rotate-2026-08-24-1918.md` | 私聊秒回类（在吗、寒暄）不进完整 Agent 链；本条是 Agent 正式处理后 |
 | res resume transcript 会触 体积） 值轮 | `sessions/tg-rotate-2026-08-24-1918.md` | 共用 resume 过长会触发定时/阈值轮换（日切、transcript 体积） |
 | #283 #284 #329 #394 api cursor | `sessions/tg-rotate-2026-08-24-1918.md` | 历史上 #283/#284、#329、#394 等同模板失败，事后验证多为 Cu |
-| cu or rs so ur 「没 | `sessions/tg-rotate-2026-08-24-1918.md` | 队列里任务可能**积压很久**才跑并失败（Cursor 侧卡住），看起来像「没干 |
-| ag agent agent」会走 en ge in_progre | `sessions/tg-rotate-2026-08-24-1918.md` | 「重启 agent」会走 `rotate_workspace_session`： |
-| agen agent」 cursor es me re | `sessions/tg-rotate-2026-08-24-1918.md` | 用户侧标准恢复：**原句重发**即可（resume 已清，下一条会新开 Curs |
-| bot connect cursor_chat_id expired faile | `sessions/tg-rotate-2026-08-24-1918.md` | Bot 检测到 `failed to connect/resume`、`sess |
-| cu etl or rs so sql | `sessions/tg-rotate-2026-08-24-1918.md` | TG 私聊报「Cursor 会话连接失败」属于**传输/会话层**故障，不是业务 |
-| es le lesson lesson「传输故障 n「 on | `sessions/tg-rotate-2026-08-24-1918.md` | （已有 lesson「传输故障 vs 业务逻辑」「轮换前先沉淀」，本条无新增铁律 |
-| bot hit resume 「为 」时 一会 | `sessions/tg-rotate-2026-08-24-1918.md` | 用户问「为什么一直失败」时，多半是同一会话反复 hit 失效 resume；Bo |
-| for plan quota unavailable your 一排 | `sessions/tg-rotate-2026-08-24-1918.md` | 此类错误与**模型额度用尽**、`unavailable for your pl |
-| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-entity-event-role-虚线标待拍.md` | 2026-08-24-画-er-时-v0-2-三层实线作底座-v0-3-enti |
-| ## 08 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改-ddl-建表或按未定增量落库.md` | 2026-08-24-知秋在-v0-2-底座-vs-v0-3-超集拍板前-禁止改 |
