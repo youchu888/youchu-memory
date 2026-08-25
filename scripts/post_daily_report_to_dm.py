@@ -155,7 +155,9 @@ def send_text(token: str, chat_id: int, text: str) -> dict:
 
 
 def build_payload(day: str, body: str) -> str:
-    return f"📋 又初 · 日报 {day}\n（定稿自动推送）\n\n{body.strip()}\n"
+    # 主人 2026-08-25：不要「📋 又初 · 日报 …（定稿自动推送）」头，直接推日报正文
+    _ = day  # 保留签名，便于调用方不变
+    return f"{body.strip()}\n"
 
 
 def _worklog_host_id() -> str:
