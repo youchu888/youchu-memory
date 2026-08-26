@@ -1,10 +1,20 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-26 · 最新归档：`sessions/tg-rotate-2026-08-26-0620.md`
+> 更新：2026-08-27 · 最新归档：`sessions/tg-rotate-2026-08-27-0651.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 「注册事件」在脏表里事件名是 **`user_register`**，不要未经核对就混写 `register` / `user_register`。
+- 第一遍 SQL 列名/事件名写错时，**立刻改 SQL 重查并交付**，不要只解释或重复「在查」；被问「变傻了」时简短认错 + 说明已修正即可。
+- [LESSON: paimon,dirty_data,sql|查 `dwd_standard_dirty_data_df` 前先对元数据，禁用臆测列（如无 `create_time`）；注册事件用 `user_register`，勿混 `register`]
+- 查 **Paimon 脏表**（`paimon.dw.dwd_standard_dirty_data_df`）前，**先对元数据/列名**再写 SQL；该表**无 `create_time`**，可用 `process_time`。
+- 标准流程：**先条数**（`COUNT(*)` + `COUNT(DISTINCT event_id)` 看是否重复），**再导明细 CSV**；条数群里报，文件自动发。
+- 脏数据明细常用列：`dt, app_id, event, event_id, event_time, error_type, error_column, error_value, record_level, target_table, source_table, error_info_list, raw_data, process_time`。
+- 排查注册脏数据时，用 `get_json_string(raw_data, '$.payload.type') AS payload_type` 看 payload 类型。
+- 本次 TSYH-002（`dt=当天`）`user_register`：**4115 条**，`event_id` 去重也是 4115，**无重复**。
+- 4115 条共性：全是 **`payload.type=device`**；拦因统一 **`dictValues` / 字段 `type`**（注册 type 不在字典里被清洗）。
+- 过滤条件模板：`dt = '业务日' AND app_id = 'TSYH-002' AND event = 'user_register'`；明细按 `event_time, event_id` 排序导出。
 - 用户说「按照这个上传云端」时，以粘贴的日报正文为唯一准绳：先落本地定稿，再上传，正文禁止改写或润色。
 - [LESSON: daily-report|用户确认「传好了是吧」类追问时只复报日期/云端 ID/状态，勿重复执行 upload 脚本]
 - 本地定稿固定路径：`.cursor/work-log/reports/日报-YYYY-MM-DD.md`；上传命令：`.cursor/scripts/upload_work_report.py --date YYYY-MM-DD`。
@@ -13,14 +23,4 @@
 - 若本地已有同日定稿，仍按用户新贴正文覆盖后再传，保证云端与主人给定稿一致。
 - 2026-08-25 指标库 v0.3 当日交付：ER 图定稿（指标/维度/实体边界）、设计稿推数据开发平台文档库、一期建表与角色种子草案就绪。
 - 续做 TOP1（截止 08-27）：按 v0.3 定稿推进建表、元数据与联调落地。
-- 日报写作仍遵守：【今日结果】约 3 条、业务话展开、【死锁阻碍】【专项复盘】默认留空、不写 bus 编号与内部黑话。
-- 主人说「重新推送昨天日报」时：先定位 `reports/日报-YYYY-MM-DD.md` 定稿，再跑 `post_daily_report_to_dm.py --date YYYY-MM-DD`，不要拿旧缓存或半成品推。
-- agent-bus 派单：60 秒内先 `ack`，干完再 `reply` 结案；同一 Cursor 主会话处理，勿 spawn 新 Agent。
-- 设计可视化审稿（如 metric_library v0.3 id=66）：对照源稿 id=67 逐条核对章节门禁（G1–G7、U1–U10、Phase 0–4+2.5），缺啥补啥，不要只回「主体达标」。
-- 可视化 HTML 铁律：纯 HTML/SVG 手工 ER，禁 mermaid CDN；v0.3 新增字段用 `hi` 黄底高亮；浅色卡片底 `#f4f5f7`，TOC 可快跳。
-- 再审/补稿前**必须先对平台现网正文**（本地稿 ≠ 现网）；若现网已是较新的「组合约束」版，应以现网为底再 merge 缺失段落，而不是盲目重传本地旧补丁。
-- TG 日报私聊推送默认**只发正文**：去掉「📋 又初 · 日报 …（定稿自动推送）」类标题头；改 `post_daily_report_to_dm.py` 后要让主人在 TG 目视确认格式。
-- 推送脚本/日报相关改动要同步进 `youchu-memory`（memory git），避免另一台机或定时任务仍用带头版本。
-- 审稿常见缺口清单（本轮）：§1 九数基线、§12.5 事件字典自增长、§13.3 四机制、§15 三表导出、§16 `metric_standard` 映射；ER 锚点错位需单独修。
-- 「组合约束」类增补（C1–C4：dim_uses 成对、G7-b 三角等式、published 多件套等）与上述核心缺口**都要保留**，不能后补一版把前一轮补丁盖掉。
 

@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 27 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md` | 2026-08-27-脏数据任务先-count-count-distinct-e |
+| ## 08 2026 27 agent_session_rotate cre | `~/.dc-platform/memory/lessons/2026-08-27-查-dwd_standard_dirty_data_df-前先对元数据-禁用臆测列-如无-cre.md` | 2026-08-27-查-dwd_standard_dirty_data_df- |
+| 002 and app_id dt event event_id | `sessions/tg-rotate-2026-08-27-0651.md` | 过滤条件模板：`dt = '业务日' AND app_id = 'TSYH-00 |
+| 4115 device dictvalues payload.type type | `sessions/tg-rotate-2026-08-27-0651.md` | 4115 条共性：全是 **`payload.type=device`**；拦因 |
+| 002（ 4115 dt event_id tsyh user_register | `sessions/tg-rotate-2026-08-27-0651.md` | 本次 TSYH-002（`dt=当天`）`user_register`：**41 |
+| $.payload.type as get_json_string payloa | `sessions/tg-rotate-2026-08-27-0651.md` | 排查注册脏数据时，用 `get_json_string(raw_data, '$ |
+| app_id dt error_column error_info_list e | `sessions/tg-rotate-2026-08-27-0651.md` | 脏数据明细常用列：`dt, app_id, event, event_id, e |
+| count csv distinct event_id 件自 先条数 | `sessions/tg-rotate-2026-08-27-0651.md` | 标准流程：**先条数**（`COUNT(*)` + `COUNT(DISTINC |
+| create_time paimon paimon.dw.dwd_standar | `sessions/tg-rotate-2026-08-27-0651.md` | 查 **Paimon 脏表**（`paimon.dw.dwd_standard_ |
+| create_time dirty_data dwd_standard_dirt | `sessions/tg-rotate-2026-08-27-0651.md` | [LESSON: paimon,dirty_data,sql/查 `dwd_st |
+| sql 「变 「在 」时 不要 不要只解释或重复「在查」 | `sessions/tg-rotate-2026-08-27-0651.md` | 第一遍 SQL 列名/事件名写错时，**立刻改 SQL 重查并交付**，不要只解 |
+| register user_register 「注 「注册事件」在脏表里事件名是 | `sessions/tg-rotate-2026-08-27-0651.md` | 「注册事件」在脏表里事件名是 **`user_register`**，不要未经核 |
 | ## 08 2026 26 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-26-用户确认-传好了是吧-类追问时只复报日期-云端-id-状态-勿重复执行-upload-脚本.md` | 2026-08-26-用户确认-传好了是吧-类追问时只复报日期-云端-id-状态 |
 | bus 不写 与内 专项 专项复盘 业务 | `sessions/tg-rotate-2026-08-26-0620.md` | 日报写作仍遵守：【今日结果】约 3 条、业务话展开、【死锁阻碍】【专项复盘】默认 |
 | 08 1（ 27） op p1 to | `sessions/tg-rotate-2026-08-26-0620.md` | 续做 TOP1（截止 08-27）：按 v0.3 定稿推进建表、元数据与联调落地 |
@@ -33,15 +45,3 @@
 | ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-spec-表名再推文档库-勿用旧临时名或旧.md` | 2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-sp |
 | #410 #411 er 一任 不必 不必让用户重述需求 | `sessions/tg-rotate-2026-08-25-0616.md` | 私聊 #410/#411 的指标库 ER 任务，因前序会话失败未交；恢复会话后同 |
 | docs git metric_library_er_diagram.md me | `sessions/tg-rotate-2026-08-25-0616.md` | 交付文档库后，仓库内同步留镜像：**`docs/metric_library_e |
-| 65） er id metric_library_er metric_libra | `sessions/tg-rotate-2026-08-25-0616.md` | 文档库推送指标库 ER：分类 **指标库**；slug 建议带版本与日期，如 * |
-| candida candidate） ce co ep glossary | `sessions/tg-rotate-2026-08-25-0616.md` | 配色约定：蓝 = v0.2 指标核（concept / label / impl |
-| .html .md docs metric_library_er_diagram | `sessions/tg-rotate-2026-08-25-0616.md` | 会话中断后续做，先查本地是否已有半成品（如 `docs/metric_libra |
-| cursor ide resume 不等 不等于业务逻辑或数据本身出错 业务 | `sessions/tg-rotate-2026-08-25-0616.md` | Cursor 会话 `resume` 被丢弃时，故障在 IDE 连接/会话恢复， |
-| cursor diagram er lesson library metric | `sessions/tg-rotate-2026-08-25-0616.md` | [LESSON: cursor-session,metric-library,e |
-| er 「正 「正常了可以干活吗」类探活 」类 一步 上） | `sessions/tg-rotate-2026-08-25-0616.md` | 「正常了可以干活吗」类探活：短答可干活 + 点明根因（会话连不上）+ 列出可续两 |
-| commit push slug spec 「画 」时 | `sessions/tg-rotate-2026-08-25-0616.md` | 用户问「画好了吗 / 推文档库」时，标准链路：**核对 spec 版本 → 对齐 |
-| domain_entity entity_dict er event_ext r | `sessions/tg-rotate-2026-08-25-0616.md` | 指标库 ER 图必须以用户指定的 **`spec_v0.3_20260824.m |
-| resume 业务 两条 两条恢复路径 传输 免把 | `sessions/tg-rotate-2026-08-24-1918.md` | 失败模板刻意简短：告知已清 resume + 两条恢复路径，避免把传输错误包装成 |
-| agent 不是 不是秒回 不进 后的 回类 | `sessions/tg-rotate-2026-08-24-1918.md` | 私聊秒回类（在吗、寒暄）不进完整 Agent 链；本条是 Agent 正式处理后 |
-| res resume transcript 会触 体积） 值轮 | `sessions/tg-rotate-2026-08-24-1918.md` | 共用 resume 过长会触发定时/阈值轮换（日切、transcript 体积） |
-| #283 #284 #329 #394 api cursor | `sessions/tg-rotate-2026-08-24-1918.md` | 历史上 #283/#284、#329、#394 等同模板失败，事后验证多为 Cu |

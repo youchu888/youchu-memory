@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-27 | [脏数据任务先 COUNT + COUNT(DISTINCT event_id) ](./2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md) | dirty_data,datacheck,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-27 | [查 `dwd_standard_dirty_data_df` 前先对元数据，禁用](./2026-08-27-查-dwd_standard_dirty_data_df-前先对元数据-禁用臆测列-如无-cre.md) | paimon,dirty_data,sql,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-26 | [TG 先报有数后报 0 行：Agent 看 prod、SQL 队列连 test](./2026-08-26-tg-sql-queue-test-vs-agent-prod.md) | tgbot, sql-queue, my.cnf | Agent/MCP 连 prod，query_queue 用 test my.cnf → 前后矛盾 |
 | 2026-08-26 | [TG SQL 答完禁止再发「这个回答合适吗？」](./2026-08-26-tg-ban-ask-answer-ok-feedback.md) | tgbot, feedback, ux | 曾关掉又被 patch 回滚；空实现+禁调用+重启才生效 |
 | 2026-08-26 | [用户确认「传好了是吧」类追问时只复报日期/云端 ID/状态，勿重复执行 uplo](./2026-08-26-用户确认-传好了是吧-类追问时只复报日期-云端-id-状态-勿重复执行-upload-脚本.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |

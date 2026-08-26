@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [脏数据任务先 COUNT + COUNT(DISTINCT event_](lessons/2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md) — 会话轮换蒸馏
+- [查 `dwd_standard_dirty_data_df` 前先对元数](lessons/2026-08-27-查-dwd_standard_dirty_data_df-前先对元数据-禁用臆测列-如无-cre.md) — 会话轮换蒸馏
 - [用户确认「传好了是吧」类追问时只复报日期/云端 ID/状态，勿重复执行 ](lessons/2026-08-26-用户确认-传好了是吧-类追问时只复报日期-云端-id-状态-勿重复执行-upload-脚本.md) — 会话轮换蒸馏
 - [收到 mode=work 派单 60 秒内 ack、完工 reply 结](lessons/2026-08-25-收到-mode-work-派单-60-秒内-ack-完工-reply-结案-审稿类任务按回执缺口.md) — 会话轮换蒸馏
 - [补设计可视化前先拉平台现网正文作 merge 底稿，避免本地补丁被后续版](lessons/2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本地补丁被后续版本覆盖后再审仍报缺.md) — 会话轮换蒸馏
