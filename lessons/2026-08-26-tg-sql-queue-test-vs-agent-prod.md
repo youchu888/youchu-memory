@@ -30,8 +30,8 @@ domain: ops
 
 同一 SQL：bot runner 行数应与 MCP `sr_prod` 一致（允许分钟级增长差）。
 
-## 关联
+## 主人纠正（2026-08-26）
 
-- `omdb/tgbot/config.py` → `MY_CNF_PATH`
-- `omdb/tgbot/query_runner.py`
-- PINNED / feedback：禁「这个回答合适吗？」
+**不要**把默认 my.cnf 改成 prod。正确做法是：**先分析清指令**——指令写了查 prod，就必须按 prod 执行；分析偏了、口称 prod 实查 test，才是根因。
+
+见 `feedback_analyze_instruction_env.md` / PINNED #22。
