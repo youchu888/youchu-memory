@@ -1426,37 +1426,17 @@ async def cb_admin_save(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
             pass
 
 
-# ── Feedback 按钮（答完主动征询） ──
+# ── Feedback 按钮（已停用；保留 callback 兼容历史消息） ──
+# 主人多次禁止 SQL 答完后主动发「这个回答合适吗？」+ 👍/👎。
+# 禁止再启用 _ask_feedback_after_sql；用户要纠错会自己说。
 
 # token -> {uid, user_text, sql, result_brief, expire_at}
 _pending_feedback: dict[str, dict] = {}
 
 
 async def _ask_feedback_after_sql(job: 'query_queue.QueryJob', result_brief: str):
-    """SQL 出结果后新发消息征询 👍/👎"""
-    chat_id = job.meta.get('tg_chat_id') or job.chat_id
-    user_text = job.meta.get('user_text') or ""
-    token = _new_token()
-    _pending_feedback[token] = {
-        'uid': job.user_id,
-        'user_text': user_text,
-        'sql': job.sql,
-        'result_brief': result_brief,
-        'expire_at': time.time() + 1800,
-    }
-    keyboard = [[
-        InlineKeyboardButton("👍 满意", callback_data=f"feedback:ok:{token}"),
-        InlineKeyboardButton("👎 不对，告诉我哪不对", callback_data=f"feedback:bad:{token}"),
-    ]]
-    try:
-        await _send_chat_message(
-            chat_id,
-            "这个回答合适吗？",
-            mention_prefix=job.meta.get('mention_prefix'),
-            reply_markup=InlineKeyboardMarkup(keyboard),
-        )
-    except Exception as e:
-        log.warning(f"[feedback] ask failed: {e}")
+    """已停用：不再主动征询反馈。"""
+    return
 
 
 async def cb_feedback(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
@@ -1712,7 +1692,6 @@ async def _on_query_done(job: 'query_queue.QueryJob'):
 
     if res is None:
         await _send_job_message(job, f"❌ SQL 完成但 result 为 None（{elapsed}）")
-        await _ask_feedback_after_sql(job, "result=None")
         return
 
     # 1. 决定要不要发 CSV
@@ -1787,10 +1766,6 @@ async def _on_query_done(job: 'query_queue.QueryJob'):
                 await _bot_app.bot.send_document(**kwargs)
         except Exception as e:
             log.warning(f"[SQL] send csv failed: {e}")
-
-    # 6. 答完了征询 👍 / 👎
-    result_brief = summary[:500] if summary else (res.preview or f"{res.rows} 行")[:500]
-    await _ask_feedback_after_sql(job, result_brief)
 
 
 # ── Reminders ──
