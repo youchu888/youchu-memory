@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-27 | [日报只写当天真实完成与真实进度；禁止硬凑、禁止跟别人回执写卡点](./2026-08-27-日报只写当天真实完成与真实进度禁止硬凑与跟别人回执.md) | daily-report, authenticity | 主人纠正：禁硬凑；以交办与交付为准，不跟别人回执写结果 |
 | 2026-08-27 | [脏数据任务先 COUNT + COUNT(DISTINCT event_id) ](./2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md) | dirty_data,datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-27 | [查 `dwd_standard_dirty_data_df` 前先对元数据，禁用](./2026-08-27-查-dwd_standard_dirty_data_df-前先对元数据-禁用臆测列-如无-cre.md) | paimon,dirty_data,sql,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-26 | [TG 先报有数后报 0 行：Agent 看 prod、SQL 队列连 test](./2026-08-26-tg-sql-queue-test-vs-agent-prod.md) | tgbot, sql-queue, my.cnf | Agent/MCP 连 prod，query_queue 用 test my.cnf → 前后矛盾 |
