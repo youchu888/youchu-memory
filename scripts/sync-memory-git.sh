@@ -24,10 +24,13 @@ if [[ -f "$CANON" && "$CANON" -nt "$SELF" ]]; then
   exec bash "$SELF" "$@"
 fi
 
-# 记忆冷启动/周清理脚本：仓内 canonical → 运行时 ~/.dc-platform/scripts
+# 记忆冷启动/周清理/OneHR 打卡：仓内 canonical → 运行时 ~/.dc-platform/scripts
 RUNTIME_SCRIPTS="${HOME}/.dc-platform/scripts"
-mkdir -p "$RUNTIME_SCRIPTS"
-for s in load-memory-context.sh memory_weekly_hygiene.sh; do
+mkdir -p "$RUNTIME_SCRIPTS" "$RUNTIME_SCRIPTS/docs"
+for s in load-memory-context.sh memory_weekly_hygiene.sh \
+  onehr_checkin_auto.py onehr_checkin_scheduler.py onehr_checkin_run.sh \
+  onehr_telegram_devices_screenshot.sh install-onehr-checkin-launchd.sh \
+  uninstall-onehr-checkin-launchd.sh; do
   src="$MEM/scripts/$s"
   dst="$RUNTIME_SCRIPTS/$s"
   if [[ -f "$src" ]]; then
@@ -37,6 +40,25 @@ for s in load-memory-context.sh memory_weekly_hygiene.sh; do
     fi
   fi
 done
+for doc in onehr_checkin_auto.md onehr_checkin_old_mac_setup.md; do
+  src="$MEM/scripts/docs/$doc"
+  dst="$RUNTIME_SCRIPTS/docs/$doc"
+  if [[ -f "$src" ]]; then
+    if [[ ! -f "$dst" || "$src" -nt "$dst" ]]; then
+      cp -f "$src" "$dst"
+    fi
+  fi
+done
+RUNTIME_CONFIG="${HOME}/.dc-platform/config"
+mkdir -p "$RUNTIME_CONFIG"
+src_cfg="$MEM/config/onehr.env.example"
+dst_cfg="$RUNTIME_CONFIG/onehr.env.example"
+if [[ -f "$src_cfg" ]]; then
+  if [[ ! -f "$dst_cfg" || "$src_cfg" -nt "$dst_cfg" ]]; then
+    cp -f "$src_cfg" "$dst_cfg"
+  fi
+fi
+# 不覆盖已有 onehr.env（含密码）
 
 cd "$MEM"
 
