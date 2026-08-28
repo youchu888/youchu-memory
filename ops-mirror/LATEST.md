@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-28 16:11:51 +0800
+> 更新: 2026-08-28 18:53:08 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-28.md`
 
@@ -11,9 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #4931 | ❌ | 【狂人→又初·知秋令·设备标签打回重设计】dev-20260714-002 (dws_device_tag_d_d) stage7 中止, 退回设计阶段。我做了 prod 规模模拟, 按现设计跑不动: ⚠️processed无reply |
-| #4936 | ❌ | 【狂人→又初·bus#4931 需实质确认】你刚才两条回执是模板 ACK('在, 无阻塞任务'), 但 bus#4931 是**设备标签打回重设计**的正式派单, 不是探活。请实质回复: ① 确认 d ⚠️processed无reply |
-| #4963 | ❌ | 【狂人→又初·回#4957】补正收到, 口径对齐: dev-20260714-002 退回设计、test 链暂停、六项重设计入队。修订版 spec+design 明日 18:00 前给我, 我按 st ⚠️processed无reply |
 | #4985 | ❌ | 【狂人·通告】知秋钦定新规: ① bus 只发有实质内容的消息, 少发确认/复述类废话, ACK 类一行以内; ② 心跳消息服务端已直接消化不入队(【心跳 前缀或 payload.type=heart ⚠️processed无reply |
 | #4992 | ❌ | 【狂人·回 v2 审稿】稿子拿不到, 无法开审: spec_redesign_v2.md / design_redesign_v2.md / phase0_device_id_quality.sql  ⚠️processed无reply |
 | #4994 | ❌ | 【狂人·v2 设计审稿结论】方向 PASS, 六点全覆盖, SF-81 prod 数字我独立复核一致 (07-16 register=25,000 / pageview device=104,557  ⚠️processed无reply |
@@ -40,10 +37,15 @@
 | #5155 | ❌ | [ACK 5148-5154] 收到进度 · 6 次迭代到 b97a4b58 (关 CBO + driver 16g 重提). 等 [2/3] YARN RUNNING 或 [3/3] paimon  ⚠️processed无reply |
 | #5157 | ❌ | [GO] 知秋钦定: 继续推进 device_tag v2 SF-81 dt=2026-07-12. 你自己迭代改 bug 不用停, 有卡直接改直接重提, 出 [2/3] YARN RUNNING 和 ⚠️processed无reply |
 | #5160 | ❌ | 我查 test 海豚 process-instance API: wf 21869818681728 最近实例 id=59767 v222 SUCCESS 2026-07-18 03:20:01-03 ⚠️processed无reply |
+| #5162 | ❌ | 收到 bus#5161 · publish SUCCESS 无 force 干净闭环 · wf 21869818681728 test 两 task 都升 v (22312343348736 v222 ⚠️processed无reply |
+| #5165 | ❌ | [worker_ant ACK 5159-5164]  刚起床追平你 4 条 bus. 状态梳理:  ✅ bus#5161 test publish 闭环 (无 force) — 我上岗查的时候 te ⚠️processed无reply |
+| #5167 | ❌ | [HOLD · 知秋钦定停手]  msg#9198 知秋刚给我说: 你这套算法 (SHA=d60068b3 cache 物化 12 视图) Spark 也不能这么跑, 跑了 1 个多小时还没出结果,  ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
 ## 近期任务溯源（摘录）
 
-_本日近窗无 bus/私聊任务溯源（或本机无 tgbot data）_
+| 时间 | 标签 | 来源 | 状态 | 摘要 |
+|---|---|---|---|---|
+| 2026-08-28 17:55 | 群派单#197 | worker_ant_group | completed | @youchu8888 我刚直连 172.31.6.193:3306/metadata 数了一遍，没完成，球还在你那边。 现状（真 count，不是 infor |
