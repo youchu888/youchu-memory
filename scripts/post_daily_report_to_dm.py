@@ -13,12 +13,14 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
 import json
 import os
 import re
 import sys
 import urllib.error
 import urllib.request
+from contextlib import contextmanager
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -28,6 +30,18 @@ MEMORY_ROOT = Path.home() / ".dc-platform" / "memory"
 MEMORY_REPORTS = MEMORY_ROOT / "work-log" / "reports"
 LOCAL_REPORTS = Path.home() / "Desktop" / "CHcode" / ".cursor" / "work-log" / "reports"
 MARKER_PATH = MEMORY_ROOT / "work-log" / "reports" / ".daily_report_dm_posted.json"
+LOCK_PATH = MEMORY_ROOT / "work-log" / "reports" / ".daily_report_dm_post.lock"
+
+
+@contextmanager
+def _post_lock():
+    LOCK_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with LOCK_PATH.open("w", encoding="utf-8") as fh:
+        fcntl.flock(fh.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
 
 
 def _find_tgbot_dir() -> Path:
@@ -248,28 +262,33 @@ def main() -> int:
             print(part)
         return 0
 
-    if not token:
-        print(f"ERROR: TG_BOT_TOKEN empty (looked in {TGBOT_DIR}/.env)", file=sys.stderr)
-        return 2
+    with _post_lock():
+        if already_posted(day) and not args.force:
+            print(f"skipped: already posted for {day} (use --force to repost)")
+            return 0
 
-    sent_chats: list[int] = []
-    for uid in users:
-        for i, part in enumerate(parts):
-            try:
-                send_text(token, uid, part)
-            except urllib.error.HTTPError as e:
-                err = e.read().decode("utf-8", errors="replace")
-                print(f"ERROR: send to {uid} part {i+1} failed: {e.code} {err}", file=sys.stderr)
-                return 1
-            except Exception as e:  # noqa: BLE001
-                print(f"ERROR: send to {uid} part {i+1} failed: {e}", file=sys.stderr)
-                return 1
-        sent_chats.append(uid)
-        print(f"posted to chat_id={uid} parts={len(parts)}")
+        if not token:
+            print(f"ERROR: TG_BOT_TOKEN empty (looked in {TGBOT_DIR}/.env)", file=sys.stderr)
+            return 2
 
-    mark_posted(day, chat_ids=sent_chats, path=str(path))
-    print(f"OK day={day} file={path} host={_worklog_host_id() or 'unknown'}")
-    return 0
+        sent_chats: list[int] = []
+        for uid in users:
+            for i, part in enumerate(parts):
+                try:
+                    send_text(token, uid, part)
+                except urllib.error.HTTPError as e:
+                    err = e.read().decode("utf-8", errors="replace")
+                    print(f"ERROR: send to {uid} part {i+1} failed: {e.code} {err}", file=sys.stderr)
+                    return 1
+                except Exception as e:  # noqa: BLE001
+                    print(f"ERROR: send to {uid} part {i+1} failed: {e}", file=sys.stderr)
+                    return 1
+            sent_chats.append(uid)
+            print(f"posted to chat_id={uid} parts={len(parts)}")
+
+        mark_posted(day, chat_ids=sent_chats, path=str(path))
+        print(f"OK day={day} file={path} host={_worklog_host_id() or 'unknown'}")
+        return 0
 
 
 if __name__ == "__main__":
