@@ -172,6 +172,11 @@ _heal_rebase_conflicts() {
         git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
         git add -- "$f"
         ;;
+      ops-mirror/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].md)
+        # 任务摘要镜像：取远端，稍后用 ops_mirror 重算
+        git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
+        git add -- "$f"
+        ;;
       *)
         only_safe=0
         echo "warn: 非白名单冲突，不敢自动解: $f"

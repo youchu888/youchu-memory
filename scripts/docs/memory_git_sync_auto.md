@@ -7,6 +7,7 @@
 - **本机 id**：`memory/.env.host` 里 `WORKLOG_HOST_ID=old-mac|new-mac`
 - **主控**：旧 Mac 常驻 bot/poller；新 Mac 靠 Git 看记忆 + `ops-mirror/LATEST.md`（任务摘要）
 - **每次 sync 还会**：`worklog_dual_mac_sync.py` + `ops_mirror_to_memory.py`
+- **OneHR 打卡**：仓内 `scripts/onehr_*` + `config/onehr.env.example` 自动覆盖到 `~/.dc-platform/scripts/`；old-mac 接入见 `scripts/docs/onehr_checkin_old_mac_setup.md`
 
 架构说明：`feedback_dual_mac_hub_sync.md`
 
