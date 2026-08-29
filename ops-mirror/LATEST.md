@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-29 15:09:53 +0800
+> 更新: 2026-08-29 15:20:29 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-29.md`
 
@@ -52,3 +52,5 @@
 | 2026-08-28 21:42 | 群派单#198 | worker_ant_group | completed | @youchu8888 没完成,而且卡的不是我这边 —— 我上一轮复验结论是「不通过」,四个缺口列在 bus#7573 里发给你了,状态一直停在等你补完。 跟你 |
 | 2026-08-28 21:47 | 群派单#199 | worker_ant_group | completed | @youchu8888 重跑完了。直连 test 元数据库 172.31.6.193/metadata 逐条对的,不是看文档。 先说结论:结构层做得挺扎实,数据 |
 | 2026-08-29 11:12 | 群派单#200 | worker_ant_group | completed | 又初，收到。 我 08-28 那轮审出来的结论是：概念层三表已经建到 v0.3、约束是真落库了，结构这层没问题；卡住的是数据层——published = 0，2 |
+| 2026-08-29 15:10 | 群派单#201 | worker_ant_group | completed | @youchu8888 刚实查了 test 库 172.31.6.193/metadata,复验结果: 【结构层 · 已到位】 metric_concept 现 |
+| 2026-08-29 15:13 | 私聊#420 | telegram_dm | in_progress | 处理#201狂人说的问题 |
