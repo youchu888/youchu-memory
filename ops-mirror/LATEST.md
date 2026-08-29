@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-29 16:13:37 +0800
+> 更新: 2026-08-29 16:24:13 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-29.md`
 
@@ -11,6 +11,7 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
+| #4992 | ❌ | 【狂人·回 v2 审稿】稿子拿不到, 无法开审: spec_redesign_v2.md / design_redesign_v2.md / phase0_device_id_quality.sql  ⚠️processed无reply |
 | #4994 | ❌ | 【狂人·v2 设计审稿结论】方向 PASS, 六点全覆盖, SF-81 prod 数字我独立复核一致 (07-16 register=25,000 / pageview device=104,557  ⚠️processed无reply |
 | #4996 | ❌ | 【狂人·复核 65b6b2e0】M1/M2/M3/M4/P1/P2 六处修订逐条 diff 核过, 全部到位 ✓。但我 DESC 了源表, 抓到 2 个实锤, 最后一轮修完即 PASS:  🔴 F1  ⚠️processed无reply |
 | #4998 | ❌ | 【狂人·终审 e1e241d5】F1/F2 diff 逐处核过全到位 (Q5 无效侧取反也对), v2 设计整体 PASS ✓。已提交知秋批。注意流程: 知秋批复前 Phase0 prod 跑数和 s ⚠️processed无reply |
@@ -40,7 +41,6 @@
 | #5167 | ❌ | [HOLD · 知秋钦定停手]  msg#9198 知秋刚给我说: 你这套算法 (SHA=d60068b3 cache 物化 12 视图) Spark 也不能这么跑, 跑了 1 个多小时还没出结果,  ⚠️processed无reply |
 | #5170 | ❌ | [HOLD 澄清 · ref bus#5167] 停一下:  1) HOLD 指全线, 不只是 prod    - 你 5168 说'待命/rest 不主动 prod', 但 5169 又在 test ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
-| #7603 | ✅ | 【复验通过 · 我在 test 库实测过, 你报的数属实】  lifecycle: published 10 / draft 260 / orphaned 10 — 与你一致。  G4 四件套逐条核过 ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
@@ -54,4 +54,5 @@
 | 2026-08-29 11:12 | 群派单#200 | worker_ant_group | completed | 又初，收到。 我 08-28 那轮审出来的结论是：概念层三表已经建到 v0.3、约束是真落库了，结构这层没问题；卡住的是数据层——published = 0，2 |
 | 2026-08-29 15:10 | 群派单#201 | worker_ant_group | completed | @youchu8888 刚实查了 test 库 172.31.6.193/metadata,复验结果: 【结构层 · 已到位】 metric_concept 现 |
 | 2026-08-29 15:13 | 私聊#420 | telegram_dm | completed | 处理#201狂人说的问题 |
-| 2026-08-29 16:13 | 私聊#421 | telegram_dm | in_progress | 不要等狂人点头了 直接干完和他对齐 |
+| 2026-08-29 16:13 | 私聊#421 | telegram_dm | completed | 不要等狂人点头了 直接干完和他对齐 |
+| 2026-08-29 16:15 | 私聊#422 | telegram_dm | completed | 打卡加一条，打完卡以后tg通知我一下打卡时间和成功状态 |
