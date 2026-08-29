@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 29 agent_session_rotate agg | `~/.dc-platform/memory/lessons/2026-08-29-derived-比率指标禁止-default_aggregation-ratio-按-v0-3-.md` | 2026-08-29-derived-比率指标禁止-default_aggreg |
+| ## 08 0」≠ 2026 29 5「 | `~/.dc-platform/memory/lessons/2026-08-29-g5-库内违规-0-应用层已落地-复验须分开报库内数据与-service-router-是否做-.md` | 2026-08-29-g5-库内违规-0-应用层已落地-复验须分开报库内数据与- |
+| .3 0. avg bitmap_union_count count count | `sessions/tg-rotate-2026-08-29-1554.md` | **ratio 口径（v0.3 §11）**：白名单仅 `sum/count/b |
+| al at ce da diverged_pending er | `sessions/tg-rotate-2026-08-29-1554.md` | **G5 分两层**：库内 `diverged_pending` 且 `is_p |
+| 10 p1 phase1.5 seed unblock user_registe | `sessions/tg-rotate-2026-08-29-1554.md` | Unblock 二选一：P1 迁存量，或先推 **Phase1.5 种子 10  |
+| active default_aggregation definition en | `sessions/tg-rotate-2026-08-29-1554.md` | **G4 四件套**：`definition` + `req_ref` + ≥1 |
+| 10 172.31.6.193 260 count draft metadata | `sessions/tg-rotate-2026-08-29-1554.md` | 推 published 前先真 COUNT：`published / draft |
+| api draft g4 lifecycle phase1 published | `sessions/tg-rotate-2026-08-29-1554.md` | Phase1 过关 ≠ 只灌 draft：test 上须真有 `lifecycl |
+| agg default_aggregation derived fk lesso | `sessions/tg-rotate-2026-08-29-1554.md` | [LESSON: metric-library,derived,ratio,wh |
+| avg×2 count_distinct×4 内尚 再清 勿擅 勿擅自批量改 | `sessions/tg-rotate-2026-08-29-1554.md` | 库内尚有 `avg×2`、`count_distinct×4` 同类禁项：须对方 |
+| al at ce da diverged_pending er | `sessions/tg-rotate-2026-08-29-1554.md` | G5 分两层**：库内 `diverged_pending` 且 `is_pri |
+| #7 #7603 02 60 76 bus | `sessions/tg-rotate-2026-08-29-1554.md` | 样例推送 SQL：`docs/metric_library_phase1_pub |
+| 260 definition draft lifecycle p1 publis | `sessions/tg-rotate-2026-08-29-1554.md` | 260 条 draft 缺 `definition`/`req_ref`：**禁 |
+| #201 g4 v0.3 不是 不是改表结构 卡点 | `sessions/tg-rotate-2026-08-29-1554.md` | 狂人 #201 卡点：**数据层**（published=0、G4 空跑），不是 |
 | ## 08 2026 27 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md` | 2026-08-27-脏数据任务先-count-count-distinct-e |
 | ## 08 2026 27 agent_session_rotate cre | `~/.dc-platform/memory/lessons/2026-08-27-查-dwd_standard_dirty_data_df-前先对元数据-禁用臆测列-如无-cre.md` | 2026-08-27-查-dwd_standard_dirty_data_df- |
 | 002 and app_id dt event event_id | `sessions/tg-rotate-2026-08-27-0651.md` | 过滤条件模板：`dt = '业务日' AND app_id = 'TSYH-00 |
@@ -31,17 +45,3 @@
 | ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本地补丁被后续版本覆盖后再审仍报缺.md` | 2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本 |
 | ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完请主人在私聊目视验收.md` | 2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完 |
 | id reply 一审 上传 下一 了哪 | `sessions/tg-rotate-2026-08-25-2018.md` | 覆盖上传开发平台可视化后：reply 里写清改了哪些 §、平台路径/id，并提示 |
-| 1– c1 c4 dim_uses g7 published | `sessions/tg-rotate-2026-08-25-2018.md` | 「组合约束」类增补（C1–C4：dim_uses 成对、G7-b 三角等式、pu |
-| er metric_standard §1 §12.5 §13.3 §15 | `sessions/tg-rotate-2026-08-25-2018.md` | 审稿常见缺口清单（本轮）：§1 九数基线、§12.5 事件字典自增长、§13.3 |
-| git） memory youchu 一台 仍用 任务 | `sessions/tg-rotate-2026-08-25-2018.md` | 推送脚本/日报相关改动要同步进 `youchu-memory`（memory g |
-| post_dail post_daily_report_to_dm.py tg  | `sessions/tg-rotate-2026-08-25-2018.md` | TG 日报私聊推送默认**只发正文**：去掉「📋 又初 · 日报 …（定稿自动推 |
-| merge 「组 」版 不是 为底 以现 | `sessions/tg-rotate-2026-08-25-2018.md` | 再审/补稿前**必须先对平台现网正文**（本地稿 ≠ 现网）；若现网已是较新的「 |
-| #f4f5f7 cdn er hi html mermaid | `sessions/tg-rotate-2026-08-25-2018.md` | 可视化 HTML 铁律：纯 HTML/SVG 手工 ER，禁 mermaid C |
-| 0–4+2.5） 1– 66） 67 g1 g7 | `sessions/tg-rotate-2026-08-25-2018.md` | 设计可视化审稿（如 metric_library v0.3 id=66）：对照源 |
-| 60 ack agent bus cursor reply | `sessions/tg-rotate-2026-08-25-2018.md` | agent-bus 派单：60 秒内先 `ack`，干完再 `reply` 结案 |
-| date dd dd.md mm post_da post_daily_repo | `sessions/tg-rotate-2026-08-25-2018.md` | 主人说「重新推送昨天日报」时：先定位 `reports/日报-YYYY-MM-D |
-| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-08-25-0616.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
-| ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric_library_er_diagram.md` | 2026-08-25-指标库-er-推文档库后须同步落仓-docs-metric |
-| ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-spec-表名再推文档库-勿用旧临时名或旧.md` | 2026-08-25-会话-resume-失败续做时-先查本地稿并对齐最新-sp |
-| #410 #411 er 一任 不必 不必让用户重述需求 | `sessions/tg-rotate-2026-08-25-0616.md` | 私聊 #410/#411 的指标库 ER 任务，因前序会话失败未交；恢复会话后同 |
-| docs git metric_library_er_diagram.md me | `sessions/tg-rotate-2026-08-25-0616.md` | 交付文档库后，仓库内同步留镜像：**`docs/metric_library_e |
