@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 2026 29 agent_session_rotate agg | `~/.dc-platform/memory/lessons/2026-08-29-derived-比率指标-default_aggregation-留空-用分子-分母-fk-表达.md` | 2026-08-29-derived-比率指标-default_aggregat |
+| ## 08 2026 29 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bus-reply-对齐复核-禁止空等事前.md` | 2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bu |
+| test 「已 一步 下一 下一步」 先实查 | `sessions/tg-rotate-2026-08-29-1656.md` | 汇报指标库进展：先实查 test 库再答，分「已过关 / 卡点 / 下一步」 |
+| 260 definition draft published req_ref 不 | `sessions/tg-rotate-2026-08-29-1656.md` | 260 条 draft 缺 `definition` + `req_ref`，不 |
+| 10 230 26 264 419 candidate | `sessions/tg-rotate-2026-08-29-1656.md` | 10 条 G4 四件套齐全；impl 419、candidate 230、存量  |
+| +约 10 1（ 260 as draft | `sessions/tg-rotate-2026-08-29-1656.md` | 指标库 Phase1（test）结构 v0.3 三表+约束已过关；lifecyc |
+| 12 agg derived fk g2 order_pa | `sessions/tg-rotate-2026-08-29-1656.md` | test 库曾清 12 条 derived 的 `agg=ratio`（含已 p |
+| bitmap_union_count count max min sum 仍是 | `sessions/tg-rotate-2026-08-29-1656.md` | 白名单仍是 `sum` / `count` / `bitmap_union_co |
+| default_aggregation derived fk g2 ratio  | `sessions/tg-rotate-2026-08-29-1656.md` | 指标库 G2：`ratio` 不在 `default_aggregation`  |
+| eh hr lesson ne on onehr打卡 | `sessions/tg-rotate-2026-08-29-1656.md` | [LESSON: onehr打卡/「打完卡通知」只加成功/失败后的 TG 私聊； |
+| agent bu bus bus协作 lesson reply | `sessions/tg-rotate-2026-08-29-1656.md` | [LESSON: agent-bus协作/拍板/清库类任务主人说「不等点头」时： |
+| 00 19 ap pi 下班 为验 | `sessions/tg-rotate-2026-08-29-1656.md` | 未到打卡窗（如下班 19:00 前）API 会拒；禁止为验通知提前/强制打卡 |
+| api ce er g5 ic published | `sessions/tg-rotate-2026-08-29-1656.md` | G5 应用层门禁（service 校验）未落地；API 尚未切概念层读，需更多正 |
+| bus 「不 不等 不等事前确认 不要 主人 | `sessions/tg-rotate-2026-08-29-1656.md` | 主人令「不要等狂人点头」：拍板类清库/改口径可先干完，再 bus 回执请他只读复 |
 | ## 08 2026 29 agent_session_rotate agg | `~/.dc-platform/memory/lessons/2026-08-29-derived-比率指标禁止-default_aggregation-ratio-按-v0-3-.md` | 2026-08-29-derived-比率指标禁止-default_aggreg |
 | ## 08 0」≠ 2026 29 5「 | `~/.dc-platform/memory/lessons/2026-08-29-g5-库内违规-0-应用层已落地-复验须分开报库内数据与-service-router-是否做-.md` | 2026-08-29-g5-库内违规-0-应用层已落地-复验须分开报库内数据与- |
 | .3 0. avg bitmap_union_count count count | `sessions/tg-rotate-2026-08-29-1554.md` | **ratio 口径（v0.3 §11）**：白名单仅 `sum/count/b |
@@ -31,17 +45,3 @@
 | create_time dirty_data dwd_standard_dirt | `sessions/tg-rotate-2026-08-27-0651.md` | [LESSON: paimon,dirty_data,sql/查 `dwd_st |
 | sql 「变 「在 」时 不要 不要只解释或重复「在查」 | `sessions/tg-rotate-2026-08-27-0651.md` | 第一遍 SQL 列名/事件名写错时，**立刻改 SQL 重查并交付**，不要只解 |
 | register user_register 「注 「注册事件」在脏表里事件名是 | `sessions/tg-rotate-2026-08-27-0651.md` | 「注册事件」在脏表里事件名是 **`user_register`**，不要未经核 |
-| ## 08 2026 26 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-26-用户确认-传好了是吧-类追问时只复报日期-云端-id-状态-勿重复执行-upload-脚本.md` | 2026-08-26-用户确认-传好了是吧-类追问时只复报日期-云端-id-状态 |
-| bus 不写 与内 专项 专项复盘 业务 | `sessions/tg-rotate-2026-08-26-0620.md` | 日报写作仍遵守：【今日结果】约 3 条、业务话展开、【死锁阻碍】【专项复盘】默认 |
-| 08 1（ 27） op p1 to | `sessions/tg-rotate-2026-08-26-0620.md` | 续做 TOP1（截止 08-27）：按 v0.3 定稿推进建表、元数据与联调落地 |
-| 08 2026 25 er v0.3 一期 | `sessions/tg-rotate-2026-08-26-0620.md` | 2026-08-25 指标库 v0.3 当日交付：ER 图定稿（指标/维度/实体 |
-| 一致 与主 主人 云端 人给 仍按 | `sessions/tg-rotate-2026-08-26-0620.md` | 若本地已有同日定稿，仍按用户新贴正文覆盖后再传，保证云端与主人给定稿一致。 |
-| id 「传 」时 一句 一句肯定 上传 | `sessions/tg-rotate-2026-08-26-0620.md` | 用户追问「传好了是吧」时，一句肯定 + 复报日期/ID/状态即可，不必重复跑上传 |
-| id inserted 三项 上传 上传成功回执至少带三项 与留 | `sessions/tg-rotate-2026-08-26-0620.md` | 上传成功回执至少带三项：日期、云端记录 ID、状态（`inserted` 新建  |
-| .cursor date dd dd.md log mm | `sessions/tg-rotate-2026-08-26-0620.md` | 本地定稿固定路径：`.cursor/work-log/reports/日报-YY |
-| daily id lesson report up upload | `sessions/tg-rotate-2026-08-26-0620.md` | [LESSON: daily-report/用户确认「传好了是吧」类追问时只复报 |
-| 「按 」时 一准 上传 个上 为唯 | `sessions/tg-rotate-2026-08-26-0620.md` | 用户说「按照这个上传云端」时，以粘贴的日报正文为唯一准绳：先落本地定稿，再上传， |
-| ## 08 2026 25 60 ack | `~/.dc-platform/memory/lessons/2026-08-25-收到-mode-work-派单-60-秒内-ack-完工-reply-结案-审稿类任务按回执缺口.md` | 2026-08-25-收到-mode-work-派单-60-秒内-ack-完工- |
-| ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本地补丁被后续版本覆盖后再审仍报缺.md` | 2026-08-25-补设计可视化前先拉平台现网正文作-merge-底稿-避免本 |
-| ## 08 2026 25 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完请主人在私聊目视验收.md` | 2026-08-25-tg-重推日报前先确认推送脚本已改为只发正文无标题头-推完 |
-| id reply 一审 上传 下一 了哪 | `sessions/tg-rotate-2026-08-25-2018.md` | 覆盖上传开发平台可视化后：reply 里写清改了哪些 §、平台路径/id，并提示 |

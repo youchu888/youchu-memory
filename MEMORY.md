@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [derived 比率指标：`default_aggregation` 留](lessons/2026-08-29-derived-比率指标-default_aggregation-留空-用分子-分母-fk-表达.md) — 会话轮换蒸馏
+- [拍板/清库类任务主人说「不等点头」时：先执行落库，再 bus reply](lessons/2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bus-reply-对齐复核-禁止空等事前.md) — 会话轮换蒸馏
 - [derived 比率指标禁止 `default_aggregation=](lessons/2026-08-29-derived-比率指标禁止-default_aggregation-ratio-按-v0-3-.md) — 会话轮换蒸馏
 - [G5「库内违规=0」≠ 应用层已落地；复验须分开报库内数据与 servi](lessons/2026-08-29-g5-库内违规-0-应用层已落地-复验须分开报库内数据与-service-router-是否做-.md) — 会话轮换蒸馏
 - [脏数据任务先 COUNT + COUNT(DISTINCT event_](lessons/2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md) — 会话轮换蒸馏
