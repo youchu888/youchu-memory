@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-08-29 | [打卡：不到点不打；打完再 TG 私聊通知](./2026-08-29-打卡通知-不到点不打-打完再TG私聊.md) | onehr,punch,notify | 私聊#423：禁提前打卡，成功/失败才通知 |
 | 2026-08-29 | [derived 比率指标禁止 `default_aggregation=rati](./2026-08-29-derived-比率指标禁止-default_aggregation-ratio-按-v0-3-.md) | metric-library,derived,ratio,whitelist,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-29 | [G5「库内违规=0」≠ 应用层已落地；复验须分开报库内数据与 service/r](./2026-08-29-g5-库内违规-0-应用层已落地-复验须分开报库内数据与-service-router-是否做-.md) | metric-library,G5,application-layer,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-27 | [日报只写当天真实完成与真实进度；禁止硬凑、禁止跟别人回执写卡点](./2026-08-27-日报只写当天真实完成与真实进度禁止硬凑与跟别人回执.md) | daily-report, authenticity | 主人纠正：禁硬凑；以交办与交付为准，不跟别人回执写结果 |
