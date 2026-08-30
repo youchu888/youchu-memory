@@ -5,6 +5,16 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| tg 上传 作日 六等 关系 即可 | `sessions/tg-rotate-2026-08-30-2110.md` | 周六等非工作日同样适用：有定稿即可上传，与 TG 推送日程无绑定关系 |
+| id inserted 「未 云端 云端记录 功回 | `sessions/tg-rotate-2026-08-30-2110.md` | 成功回执应含四要素：**日期**、**云端记录 ID**、**状态**（如 `i |
+| api code ep.jsyyds.com https report subm | `sessions/tg-rotate-2026-08-30-2110.md` | API：`https://ep.jsyyds.com/api/v1/report |
+| config.js downloads git 不进 作报 凭证读 | `sessions/tg-rotate-2026-08-30-2110.md` | 凭证读 `~/Downloads/工作报告/config.js`（apiToke |
+| .cursor date dd mm python3 scripts | `sessions/tg-rotate-2026-08-30-2110.md` | 标准脚本：`python3 .cursor/scripts/upload_wor |
+| 上传 与上 传脚 位定 原样 原样上传 | `sessions/tg-rotate-2026-08-30-2110.md` | 开工顺序：定位定稿 → 核对正文与上传脚本 → **原样上传** → 回报结果 |
+| .cursor as dd.md ia log mm | `sessions/tg-rotate-2026-08-30-2110.md` | 定稿路径：`.cursor/work-log/reports/日报-YYYY-M |
+| —— ——禁止润色 —禁 上传 上传铁律 不动 | `sessions/tg-rotate-2026-08-30-2110.md` | 上传铁律：**原封不动**——禁止润色、补字、改格式后再传 |
+| 「按 上传 不改写 不重 不重新生成 个上 | `sessions/tg-rotate-2026-08-30-2110.md` | 口语「按这个上传云端」= 以**已定稿**日报为准，**不重新生成、不改写**正 |
+| tg 「上 「上传云端」与写日报 」与 上传 与写 | `sessions/tg-rotate-2026-08-30-2110.md` | 「上传云端」与写日报、推 TG 是**独立指令**；主人单独说时才执行，写稿/推 |
 | ## 08 2026 29 agent_session_rotate agg | `~/.dc-platform/memory/lessons/2026-08-29-derived-比率指标-default_aggregation-留空-用分子-分母-fk-表达.md` | 2026-08-29-derived-比率指标-default_aggregat |
 | ## 08 2026 29 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bus-reply-对齐复核-禁止空等事前.md` | 2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bu |
 | test 「已 一步 下一 下一步」 先实查 | `sessions/tg-rotate-2026-08-29-1656.md` | 汇报指标库进展：先实查 test 库再答，分「已过关 / 卡点 / 下一步」 |
@@ -35,13 +45,3 @@
 | #201 g4 v0.3 不是 不是改表结构 卡点 | `sessions/tg-rotate-2026-08-29-1554.md` | 狂人 #201 卡点：**数据层**（published=0、G4 空跑），不是 |
 | ## 08 2026 27 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md` | 2026-08-27-脏数据任务先-count-count-distinct-e |
 | ## 08 2026 27 agent_session_rotate cre | `~/.dc-platform/memory/lessons/2026-08-27-查-dwd_standard_dirty_data_df-前先对元数据-禁用臆测列-如无-cre.md` | 2026-08-27-查-dwd_standard_dirty_data_df- |
-| 002 and app_id dt event event_id | `sessions/tg-rotate-2026-08-27-0651.md` | 过滤条件模板：`dt = '业务日' AND app_id = 'TSYH-00 |
-| 4115 device dictvalues payload.type type | `sessions/tg-rotate-2026-08-27-0651.md` | 4115 条共性：全是 **`payload.type=device`**；拦因 |
-| 002（ 4115 dt event_id tsyh user_register | `sessions/tg-rotate-2026-08-27-0651.md` | 本次 TSYH-002（`dt=当天`）`user_register`：**41 |
-| $.payload.type as get_json_string payloa | `sessions/tg-rotate-2026-08-27-0651.md` | 排查注册脏数据时，用 `get_json_string(raw_data, '$ |
-| app_id dt error_column error_info_list e | `sessions/tg-rotate-2026-08-27-0651.md` | 脏数据明细常用列：`dt, app_id, event, event_id, e |
-| count csv distinct event_id 件自 先条数 | `sessions/tg-rotate-2026-08-27-0651.md` | 标准流程：**先条数**（`COUNT(*)` + `COUNT(DISTINC |
-| create_time paimon paimon.dw.dwd_standar | `sessions/tg-rotate-2026-08-27-0651.md` | 查 **Paimon 脏表**（`paimon.dw.dwd_standard_ |
-| create_time dirty_data dwd_standard_dirt | `sessions/tg-rotate-2026-08-27-0651.md` | [LESSON: paimon,dirty_data,sql/查 `dwd_st |
-| sql 「变 「在 」时 不要 不要只解释或重复「在查」 | `sessions/tg-rotate-2026-08-27-0651.md` | 第一遍 SQL 列名/事件名写错时，**立刻改 SQL 重查并交付**，不要只解 |
-| register user_register 「注 「注册事件」在脏表里事件名是 | `sessions/tg-rotate-2026-08-27-0651.md` | 「注册事件」在脏表里事件名是 **`user_register`**，不要未经核 |

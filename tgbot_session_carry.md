@@ -1,10 +1,20 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-29 · 最新归档：`sessions/tg-rotate-2026-08-29-1656.md`
+> 更新：2026-08-30 · 最新归档：`sessions/tg-rotate-2026-08-30-2110.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 「上传云端」与写日报、推 TG 是**独立指令**；主人单独说时才执行，写稿/推 TG 后**禁止**自动上传
+- 口语「按这个上传云端」= 以**已定稿**日报为准，**不重新生成、不改写**正文
+- 上传铁律：**原封不动**——禁止润色、补字、改格式后再传
+- 定稿路径：`.cursor/work-log/reports/日报-YYYY-MM-DD.md`；未指定日期则用当日（Asia/Shanghai）
+- 开工顺序：定位定稿 → 核对正文与上传脚本 → **原样上传** → 回报结果
+- 标准脚本：`python3 .cursor/scripts/upload_work_report.py --date YYYY-MM-DD`
+- 凭证读 `~/Downloads/工作报告/config.js`（apiToken，**不进 Git**）
+- API：`https://ep.jsyyds.com/api/v1/report/submit`；成功 `code=0`；同日同类型再次上传会**覆盖**
+- 成功回执应含四要素：**日期**、**云端记录 ID**、**状态**（如 `inserted` / 覆盖）、**本地定稿路径**，并明确「未改字」
+- 周六等非工作日同样适用：有定稿即可上传，与 TG 推送日程无绑定关系
 - 主人令「不要等狂人点头」：拍板类清库/改口径可先干完，再 bus 回执请他只读复核，不等事前确认
 - G5 应用层门禁（service 校验）未落地；API 尚未切概念层读，需更多正式 published 后再切
 - 未到打卡窗（如下班 19:00 前）API 会拒；禁止为验通知提前/强制打卡
@@ -13,14 +23,4 @@
 - 指标库 G2：`ratio` 不在 `default_aggregation` 白名单；derived 比率用分子/分母 FK，`default_aggregation` 留空
 - 白名单仍是 `sum` / `count` / `bitmap_union_count` / `max` / `min`
 - test 库曾清 12 条 derived 的 `agg=ratio`（含已 published 的 `order_paid_rate`）；清后 G2 缺 FK=0
-- 指标库 Phase1（test）结构 v0.3 三表+约束已过关；lifecycle 约 published 10 / draft 260 / orphaned 10
-- 10 条 G4 四件套齐全；impl 419、candidate 230、存量 `metric_standard` 264 未动
-- 260 条 draft 缺 `definition` + `req_ref`，不能硬推 published，须按事件分批补语义
-- 汇报指标库进展：先实查 test 库再答，分「已过关 / 卡点 / 下一步」
-- OneHR「加一条打卡通知」= 到点自动打完后再 TG 私聊推时间与成功/失败，不是立刻补打
-- 上班卡已打过时不重复打；只保留计划窗内自动跑 + 结果通知
-- 狂人 #201 卡点：**数据层**（published=0、G4 空跑），不是 v0.3 结构层；解法是推已齐门禁的样例，不是改表结构。
-- 260 条 draft 缺 `definition`/`req_ref`：**禁止**批量改 lifecycle；要上 published 须 P1 补齐再迁。
-- 样例推送 SQL：`docs/metric_library_phase1_publish_samples_20260829.sql`；修完 bus 报三数请对方只读重验（#7602 → #7603 PASS）。
-- G5 分两层**：库内 `diverged_pending` 且 `is_primary` 违规可为 0；**应用层**门禁（service/router 做 G4/G5 validate）当时**未落地**，勿混为一谈。
 
