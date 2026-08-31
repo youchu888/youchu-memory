@@ -5,6 +5,7 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-08-31-1108.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | tg 上传 作日 六等 关系 即可 | `sessions/tg-rotate-2026-08-30-2110.md` | 周六等非工作日同样适用：有定稿即可上传，与 TG 推送日程无绑定关系 |
 | id inserted 「未 云端 云端记录 功回 | `sessions/tg-rotate-2026-08-30-2110.md` | 成功回执应含四要素：**日期**、**云端记录 ID**、**状态**（如 `i |
 | api code ep.jsyyds.com https report subm | `sessions/tg-rotate-2026-08-30-2110.md` | API：`https://ep.jsyyds.com/api/v1/report |
@@ -44,4 +45,3 @@
 | 260 definition draft lifecycle p1 publis | `sessions/tg-rotate-2026-08-29-1554.md` | 260 条 draft 缺 `definition`/`req_ref`：**禁 |
 | #201 g4 v0.3 不是 不是改表结构 卡点 | `sessions/tg-rotate-2026-08-29-1554.md` | 狂人 #201 卡点：**数据层**（published=0、G4 空跑），不是 |
 | ## 08 2026 27 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md` | 2026-08-27-脏数据任务先-count-count-distinct-e |
-| ## 08 2026 27 agent_session_rotate cre | `~/.dc-platform/memory/lessons/2026-08-27-查-dwd_standard_dirty_data_df-前先对元数据-禁用臆测列-如无-cre.md` | 2026-08-27-查-dwd_standard_dirty_data_df- |

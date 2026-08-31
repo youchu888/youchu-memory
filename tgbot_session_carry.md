@@ -1,10 +1,11 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-08-30 · 最新归档：`sessions/tg-rotate-2026-08-30-2110.md`
+> 更新：2026-08-31 · 最新归档：`sessions/tg-rotate-2026-08-31-1108.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」）。
 - 「上传云端」与写日报、推 TG 是**独立指令**；主人单独说时才执行，写稿/推 TG 后**禁止**自动上传
 - 口语「按这个上传云端」= 以**已定稿**日报为准，**不重新生成、不改写**正文
 - 上传铁律：**原封不动**——禁止润色、补字、改格式后再传
@@ -22,5 +23,4 @@
 - [LESSON: onehr打卡|「打完卡通知」只加成功/失败后的 TG 私聊；禁止为验通知提前/强制打卡，须等到计划窗内自动跑完]
 - 指标库 G2：`ratio` 不在 `default_aggregation` 白名单；derived 比率用分子/分母 FK，`default_aggregation` 留空
 - 白名单仍是 `sum` / `count` / `bitmap_union_count` / `max` / `min`
-- test 库曾清 12 条 derived 的 `agg=ratio`（含已 published 的 `order_paid_rate`）；清后 G2 缺 FK=0
 

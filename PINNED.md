@@ -15,7 +15,7 @@
 10. **INSERT 必须显式列名** — 防列错位（尤其加列后）。
 11. **StarRocks：禁 `$[yyyyMMdd]` 类宏进直连 SQL** — 用字面量或会话变量。
 12. **核查认可后写回 playbook** — lesson 记坑；playbook 记可跑步骤。
-13. **工作簿以最新一日为准** — 读到新簿立刻更新 `project_youchu_workbook_tasks.md`。
+13. **工作簿以最新一日为准** — 读到新簿立刻更新 `project_youchu_workbook_tasks.md`；原文+进展镜像主人私聊。
 14. **群聊仅显式 @初儿/@又初 才回** — 裸喊名/探活收条不回。
 15. **日报只写已完成 + 通俗书面** — 禁 bus#；推送仅 old-mac。
 16. **健壮性优先** — 失败可自愈、不滚雪球、改完当场 smoke。

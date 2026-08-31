@@ -191,6 +191,7 @@
 - [VPN 续期不因请假/节假日停止](feedback_vpn_renew_every_day.md) — 主人 07-27：每天必续；请假/放假也不停 launchd。
 - [VPN 续期按导入时刻滚动](lessons/2026-07-09-vpn-renew-by-import-time.md) — imported_at 记上次导入；满 23h 提前续；本机上次 2026-07-09 09:23，计划 07-10 08:23。
 - [周报写法以 W28 为样板](feedback_weekly_report_style_w28.md) — 主人认可；按工作簿主责分节；禁 bus#；只写数据工作。
+- [工作簿也要镜像到私聊](lessons/2026-08-31-工作簿也要镜像到私聊.md) — 原文+发群进展进主人私聊；不要求 @又初；inbound_dm 同日一次
 - [工作簿任务板（活文档）](project_youchu_workbook_tasks.md) — 以最新每日工作簿覆盖又初主责；读消息即更新。
 - [工作簿负责人以最新一日为准](lessons/2026-07-13-workbook-ownership-latest.md) — 禁沿用过期归属；07-12 起停留时长改派又初。
 - [停留时长进度+群知秋钦定要点](lessons/2026-07-15-stay-duration-and-group-directives.md) — 停留 Phase1(page_stay/sid)test闭环待prod提审；Phase2 知秋令转 DWS 会话时长(账户+设备/墙钟/五档待拍)；宏/人工节点/分层铁律 + 归因/标签开工令。
