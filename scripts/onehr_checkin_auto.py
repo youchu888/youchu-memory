@@ -13,6 +13,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -56,6 +57,48 @@ def log(msg: str, log_file: Optional[Path] = None) -> None:
             fh.write(line + "\n")
 
 
+def _load_tgbot_env() -> Dict[str, str]:
+    env: Dict[str, str] = {}
+    for path in (
+        Path.home() / "Desktop/CHcode/omdb/tgbot/.env",
+        Path("/Users/mac/Desktop/CHcode/omdb/tgbot/.env"),
+    ):
+        if not path.is_file():
+            continue
+        for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, val = line.partition("=")
+            env[key.strip()] = val.strip().strip('"').strip("'")
+        break
+    return env
+
+
+def notify_tg(title: str, message: str) -> None:
+    """打卡结果推到主人 TG 私聊（时间 + 成功/失败）。"""
+    env = _load_tgbot_env()
+    token = env.get("TG_BOT_TOKEN") or os.environ.get("TG_BOT_TOKEN") or ""
+    raw_users = env.get("ALLOWED_USERS") or os.environ.get("ALLOWED_USERS") or ""
+    uids = [int(x) for x in re.split(r"[,\s]+", raw_users) if x.strip().isdigit()]
+    if not token or not uids:
+        return
+    now = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M:%S")
+    text = f"{title}\n时间: {now}（Asia/Shanghai）\n{message}"
+    body = json.dumps({"chat_id": uids[0], "text": text}, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(
+        f"https://api.telegram.org/bot{token}/sendMessage",
+        data=body,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            resp.read()
+    except Exception as exc:  # noqa: BLE001 — 通知失败不挡打卡主流程
+        print(f"[warn] TG 通知失败: {exc}", flush=True)
+
+
 def notify(title: str, message: str) -> None:
     safe_title = title.replace('"', '\\"')
     safe_msg = message.replace('"', '\\"')
@@ -64,6 +107,7 @@ def notify(title: str, message: str) -> None:
         check=False,
         capture_output=True,
     )
+    notify_tg(title, message)
 
 
 def api_json(
@@ -162,14 +206,31 @@ def fetch_today(base_url: str, token: str) -> dict:
     return payload
 
 
-def latest_screenshot(screenshot_dir: Path) -> Optional[Path]:
+MAX_FRESH_SCREENSHOT_SEC = 180
+
+
+def screenshot_age_sec(path: Path) -> float:
+    return max(0.0, time.time() - path.stat().st_mtime)
+
+
+def latest_screenshot(
+    screenshot_dir: Path,
+    max_age_sec: int = MAX_FRESH_SCREENSHOT_SEC,
+) -> Optional[Path]:
+    """只接受刚截出来的图。禁止拿目录里几天前的旧 PNG 顶上去。"""
     if not screenshot_dir.is_dir():
         return None
     files = sorted(screenshot_dir.glob("telegram_devices_*.png"), key=lambda p: p.stat().st_mtime)
-    return files[-1] if files else None
+    if not files:
+        return None
+    newest = files[-1]
+    age = screenshot_age_sec(newest)
+    if age > max_age_sec:
+        return None
+    return newest
 
 
-def take_screenshot(script: Path, capture_only: bool = False) -> Path:
+def _take_screenshot_once(script: Path, capture_only: bool = False) -> Path:
     if not script.is_file():
         raise RuntimeError(f"截图脚本不存在: {script}")
     cmd = [str(script)]
@@ -187,6 +248,26 @@ def take_screenshot(script: Path, capture_only: bool = False) -> Path:
     if m and Path(m.group(1)).is_file():
         return Path(m.group(1))
     raise RuntimeError(f"无法解析截图路径:\n{proc.stdout}\n{proc.stderr}")
+
+
+def take_screenshot(script: Path, capture_only: bool = False, retries: int = 3) -> Path:
+    last_err = "截图失败"
+    for attempt in range(1, retries + 1):
+        try:
+            path = _take_screenshot_once(
+                script,
+                capture_only=(capture_only or attempt > 1),
+            )
+            age = screenshot_age_sec(path)
+            if age > MAX_FRESH_SCREENSHOT_SEC:
+                last_err = f"截到的文件过旧 age={int(age)}s path={path}"
+            else:
+                return path
+        except RuntimeError as exc:
+            last_err = str(exc)
+        if attempt < retries:
+            time.sleep(1.5)
+    raise RuntimeError(last_err)
 
 
 def load_state() -> dict:
@@ -367,16 +448,33 @@ def main() -> int:
             if screenshot_path is None:
                 try:
                     screenshot_path = take_screenshot(screenshot_script, capture_only=args.capture_only)
-                    log(f"截图完成 {screenshot_path}", log_file)
+                    log(
+                        f"截图完成 {screenshot_path} age={int(screenshot_age_sec(screenshot_path))}s",
+                        log_file,
+                    )
                 except RuntimeError as exc:
-                    log(f"截图失败，尝试使用目录最新图: {exc}", log_file)
+                    log(f"截图失败，不使用过期旧图: {exc}", log_file)
                     screenshot_path = latest_screenshot(screenshot_dir)
+                    if screenshot_path is not None:
+                        log(
+                            f"使用刚截出的文件 {screenshot_path} "
+                            f"age={int(screenshot_age_sec(screenshot_path))}s",
+                            log_file,
+                        )
             if screenshot_path is None:
-                msg = f"无法获取截图 {label}"
+                msg = f"无法获取新鲜截图 {label}（拒绝上传超过 {MAX_FRESH_SCREENSHOT_SEC}s 的旧图）"
                 log(f"ERROR {msg}", log_file)
                 notify("OneHR 打卡失败", msg)
                 rc = 1
                 continue
+            age = int(screenshot_age_sec(screenshot_path))
+            if age > MAX_FRESH_SCREENSHOT_SEC and args.screenshot is None:
+                msg = f"截图过旧 age={age}s path={screenshot_path}"
+                log(f"ERROR {msg}", log_file)
+                notify("OneHR 打卡失败", msg)
+                rc = 1
+                continue
+            log(f"将上传截图 {screenshot_path} age={age}s", log_file)
 
         try:
             status, payload = submit_slot(base_url, token, business_date, slot, screenshot_path)

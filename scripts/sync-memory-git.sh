@@ -29,7 +29,8 @@ RUNTIME_SCRIPTS="${HOME}/.dc-platform/scripts"
 mkdir -p "$RUNTIME_SCRIPTS" "$RUNTIME_SCRIPTS/docs"
 for s in load-memory-context.sh memory_weekly_hygiene.sh \
   onehr_checkin_auto.py onehr_checkin_scheduler.py onehr_checkin_run.sh \
-  onehr_telegram_devices_screenshot.sh install-onehr-checkin-launchd.sh \
+  onehr_telegram_devices_screenshot.sh onehr_tg_window_info.swift \
+  install-onehr-checkin-launchd.sh \
   uninstall-onehr-checkin-launchd.sh; do
   src="$MEM/scripts/$s"
   dst="$RUNTIME_SCRIPTS/$s"

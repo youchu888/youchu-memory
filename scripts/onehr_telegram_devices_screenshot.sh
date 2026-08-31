@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# OneHR 考勤 · 第 1 步：本机截取 Telegram「设备管理 / 已登录设备」页
+# OneHR 考勤 · 截取 Telegram「设备管理」页
 #
 # 用法：
-#   onehr_telegram_devices_screenshot.sh          # 自动打开设置并导航后截图
-#   onehr_telegram_devices_screenshot.sh --capture-only   # 仅截当前 Telegram 前台窗口
+#   onehr_telegram_devices_screenshot.sh          # deeplink 打开设备管理后截图
+#   onehr_telegram_devices_screenshot.sh --capture-only   # 只截当前 Telegram 窗口
 #
-# 依赖：Telegram.app、辅助功能权限（终端 / Cursor / iTerm 需允许控制电脑）
+# 窗口定位走 CoreGraphics（不依赖 System Events，避免 launchd AppleEvent 超时后误传旧图）
 # 输出：~/Desktop/CH/telegram/telegram_devices_YYYYMMDD_HHMMSS.png
 
 set -euo pipefail
@@ -17,6 +17,9 @@ fi
 
 TG_APP="${TELEGRAM_APP:-Telegram}"
 OUT_DIR="${ONEHR_SCREENSHOT_DIR:-$HOME/Desktop/CH/telegram}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+HELPER_SRC="$SCRIPT_DIR/onehr_tg_window_info.swift"
+HELPER_BIN="$SCRIPT_DIR/onehr_tg_window_info"
 mkdir -p "$OUT_DIR"
 
 timestamp="$(date +%Y%m%d_%H%M%S)"
@@ -27,98 +30,46 @@ if [[ ! -d "/Applications/${TG_APP}.app" ]]; then
   exit 1
 fi
 
-open -a "$TG_APP" >/dev/null 2>&1 || true
-sleep 0.8
-
-navigate_and_bounds() {
-  osascript <<'APPLESCRIPT'
-on windowBounds()
-  tell application "System Events"
-    tell process "Telegram"
-      set frontmost to true
-      set pos to position of window 1
-      set sz to size of window 1
-      return pos & "|" & sz
-    end tell
-  end tell
-end windowBounds
-
-tell application "Telegram" to activate
-delay 0.4
-
-if not (CAPTURE_ONLY as boolean) then
-  tell application "System Events"
-    tell process "Telegram"
-      set frontmost to true
-      keystroke "," using command down
-      delay 1.0
-      set {wx, wy} to position of window 1
-      set {ww, wh} to size of window 1
-      -- 侧栏「设备管理」行：按窗口比例定位（1220x1021 下约 130,440）
-      set cx to wx + (ww * 130 / 1220)
-      set cy to wy + (wh * 440 / 1021)
-      click at {cx, cy}
-      delay 1.0
-    end tell
-  end tell
-end if
-
-return my windowBounds()
-APPLESCRIPT
+ensure_helper() {
+  if [[ ! -f "$HELPER_SRC" ]]; then
+    echo "ERROR: 缺少 $HELPER_SRC" >&2
+    return 1
+  fi
+  if [[ ! -x "$HELPER_BIN" || "$HELPER_SRC" -nt "$HELPER_BIN" ]]; then
+    /usr/bin/swiftc -O -o "$HELPER_BIN" "$HELPER_SRC"
+  fi
 }
 
-# 注入 bash 变量到 AppleScript
-if [[ "$CAPTURE_ONLY" == true ]]; then
-  bounds="$(CAPTURE_ONLY=true osascript <<'APPLESCRIPT'
-tell application "Telegram" to activate
-delay 0.3
-tell application "System Events"
-  tell process "Telegram"
-    set frontmost to true
-    set pos to position of window 1
-    set sz to size of window 1
-    return (item 1 of pos as text) & "," & (item 2 of pos as text) & "|" & (item 1 of sz as text) & "," & (item 2 of sz as text)
-  end tell
-end tell
-APPLESCRIPT
-)"
-else
-  bounds="$(osascript <<'APPLESCRIPT'
-tell application "Telegram" to activate
-delay 0.3
-tell application "System Events"
-  tell process "Telegram"
-    set frontmost to true
-    keystroke "," using command down
-    delay 1.0
-    set {wx, wy} to position of window 1
-    set {ww, wh} to size of window 1
-    set cx to wx + (ww * 130 / 1220)
-    set cy to wy + (wh * 440 / 1021)
-    click at {cx, cy}
-    delay 1.0
-    set pos to position of window 1
-    set sz to size of window 1
-    return (item 1 of pos as text) & "," & (item 2 of pos as text) & "|" & (item 1 of sz as text) & "," & (item 2 of sz as text)
-  end tell
-end tell
-APPLESCRIPT
-)"
+open -a "$TG_APP" >/dev/null 2>&1 || true
+sleep 0.5
+
+nav_info=""
+if [[ "$CAPTURE_ONLY" != true ]]; then
+  open "tg://settings/devices" >/dev/null 2>&1 || true
+  nav_info="deeplink:tg://settings/devices"
+  sleep 1.8
 fi
 
-pos="${bounds%%|*}"
-sz="${bounds#*|}"
+ensure_helper
+info="$("$HELPER_BIN" "$TG_APP")"
+wid="${info%%$'\t'*}"
+region="${info#*$'\t'}"
+pos="${region%%|*}"
+sz="${region#*|}"
 x="${pos%,*}"
 y="${pos#*,}"
 w="${sz%,*}"
 h="${sz#*,}"
 
-if [[ -z "$x" || -z "$y" || -z "$w" || -z "$h" ]]; then
-  echo "ERROR: 无法读取 Telegram 窗口位置（检查辅助功能权限）" >&2
+if [[ -z "$wid" || -z "$x" || -z "$y" || -z "$w" || -z "$h" ]]; then
+  echo "ERROR: 无法读取 Telegram 窗口（helper 输出: ${info:-empty}）" >&2
   exit 1
 fi
 
-/usr/sbin/screencapture -x "-R${x},${y},${w},${h}" "$outfile"
+# 优先按窗口 ID 截，失败再按区域
+if ! /usr/sbin/screencapture -x -l"$wid" "$outfile" 2>/dev/null; then
+  /usr/sbin/screencapture -x "-R${x},${y},${w},${h}" "$outfile"
+fi
 
 if [[ ! -s "$outfile" ]]; then
   echo "ERROR: 截图失败 $outfile" >&2
@@ -126,4 +77,7 @@ if [[ ! -s "$outfile" ]]; then
 fi
 
 echo "OK $outfile"
-echo "  region: x=${x} y=${y} w=${w} h=${h}"
+echo "  window_id=${wid} region: x=${x} y=${y} w=${w} h=${h}"
+if [[ -n "$nav_info" ]]; then
+  echo "  navigate: ${nav_info}"
+fi

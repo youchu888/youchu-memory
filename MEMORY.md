@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [server_monitor 告警处置 SOP bus#7708](lessons/2026-08-31-server-monitor-incident-sop-bus7708.md) — 先验仍在发生；禁信根因；DEPENDENT是果；download-log 禁 detail
 - [derived 比率指标：`default_aggregation` 留](lessons/2026-08-29-derived-比率指标-default_aggregation-留空-用分子-分母-fk-表达.md) — 会话轮换蒸馏
 - [拍板/清库类任务主人说「不等点头」时：先执行落库，再 bus reply](lessons/2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bus-reply-对齐复核-禁止空等事前.md) — 会话轮换蒸馏
 - [derived 比率指标禁止 `default_aggregation=](lessons/2026-08-29-derived-比率指标禁止-default_aggregation-ratio-按-v0-3-.md) — 会话轮换蒸馏
@@ -191,6 +192,7 @@
 - [VPN 续期不因请假/节假日停止](feedback_vpn_renew_every_day.md) — 主人 07-27：每天必续；请假/放假也不停 launchd。
 - [VPN 续期按导入时刻滚动](lessons/2026-07-09-vpn-renew-by-import-time.md) — imported_at 记上次导入；满 23h 提前续；本机上次 2026-07-09 09:23，计划 07-10 08:23。
 - [周报写法以 W28 为样板](feedback_weekly_report_style_w28.md) — 主人认可；按工作簿主责分节；禁 bus#；只写数据工作。
+- [OneHR 打卡禁止上传过期截图](lessons/2026-08-31-OneHR打卡禁止上传过期截图.md) — launchd 超时后误传旧 PNG；只收 180 秒内新截
 - [工作簿也要镜像到私聊](lessons/2026-08-31-工作簿也要镜像到私聊.md) — 原文+发群进展进主人私聊；不要求 @又初；inbound_dm 同日一次
 - [工作簿任务板（活文档）](project_youchu_workbook_tasks.md) — 以最新每日工作簿覆盖又初主责；读消息即更新。
 - [工作簿负责人以最新一日为准](lessons/2026-07-13-workbook-ownership-latest.md) — 禁沿用过期归属；07-12 起停留时长改派又初。

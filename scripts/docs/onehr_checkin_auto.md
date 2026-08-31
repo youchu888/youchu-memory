@@ -9,7 +9,7 @@
 | 下班卡 | 19:00–19:30 | 周六 |
 | 周日 | 不打卡 | — |
 
-**调度方式**：`onehr_checkin_scheduler.py` 每天在窗口内**随机**选一个时刻（同 `jike_checkin_watcher.py`），到点再截图上传。不是固定 cron 多点重试。
+截图失败**禁止**回退目录里几天前的 PNG。只上传 3 分钟内新截的图。窗口定位用 CoreGraphics，不走 System Events。
 
 ## 组件
 
