@@ -7,6 +7,7 @@
 ## 进行中
 
 - [ ] **prod 海豚告警处置（old-mac 专责）**：按 `playbook_server_monitor_incident.md`（bus#7708）；先 part_01 收工判定；写操作先请示。等狂人补完整 SOP（白名单/可直接修）。
+- [ ] **TG 问狂人标题修复（old-mac 应用）**：memory 已推 `patches/tgbot-ask-outcome-title/` → old-mac 跑 `apply_tgbot_ask_outcome_title.sh` 并 restart tgbot。
 - [x] **记忆系统 P0**：`PINNED.md` + `MEMORY_OPEN.md` + 瘦身 bootstrap（pinned/OPEN/recent-by-mtime）+ `memory_weekly_hygiene.sh`。存量索引/正文保留。
 - [ ] **记忆系统 P1 养成**：每周跑 hygiene；新经验沉前查重；纠正≥2 次写入 PINNED。
 - [ ] **页面访问 DWS 对接**：`ops_system/04.dws/dws_app_page_visit_d_d/` 本地改动未要求则先别 commit。
