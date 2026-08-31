@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-01 | [加 Spark 任务只改 SQL + steps.json 挂槽位，tagTar](./2026-09-01-加-spark-任务只改-sql-steps-json-挂槽位-tagtargets-必填-先-.md) | spark-scheduler,pipeline-runner,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-01 | [判为 prod 事故后可直接改代码并立即修复，处理完再报；非事故 prod 变更](./2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报-非事故-prod-变更仍须等知秋-go.md) | prod-incident,authorization,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-01 | [prod 告警处置顺序：先分 env → 问此刻是否仍在发生（DS state=](./2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生-ds-state-1-不信-monit.md) | prod-monitor,oncall,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-31 | [TG 问狂人超时勿标「狂人回复」](./2026-08-31-tg-ask-outcome-title-not-kuangren-reply.md) | tgbot, worker_ant, ux | ask_outcome_title；memory patch apply_tgbot_ask_outcome_title.sh |
 | 2026-08-31 | [server_monitor 告警处置 SOP bus#7708](./2026-08-31-server-monitor-incident-sop-bus7708.md) | server_monitor, dolphin, incident, download-log | old-mac 专责；先验仍在发生；禁信根因；DEPENDENT是果；playbook_server_monitor_incident.md |
 | 2026-08-31 | [OneHR 打卡禁止上传过期截图；窗口定位不走 System Events](./2026-08-31-OneHR打卡禁止上传过期截图.md) | onehr, punch, screenshot, launchd | launchd System Events 超时后误传 08-28 旧图；只收 180s 内新截；CG helper |

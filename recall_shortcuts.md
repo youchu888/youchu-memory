@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-加-spark-任务只改-sql-steps-json-挂槽位-tagtargets-必填-先-.md` | 2026-09-01-加-spark-任务只改-sql-steps-json-挂 |
+| ## 01 09 2026 agent_session_rotate autho | `~/.dc-platform/memory/lessons/2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报-非事故-prod-变更仍须等知秋-go.md` | 2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报- |
+| ## 01 09 1h 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生-ds-state-1-不信-monit.md` | 2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生- |
+| _x dependent detail download ds env | `sessions/tg-rotate-2026-09-01-0626.md` | prod 值班六条：① **先分 env**，test 断流/僵尸 wf **一 |
+| +人 07 27 50 dwm_device_ui dwm_device_uid | `sessions/tg-rotate-2026-09-01-0626.md` | 设备标签现状：paimon 建齐但数据停在 **07-27**；enroll 闸 |
+| device_fingerprint device_id dim dwm dws | `sessions/tg-rotate-2026-09-01-0626.md` | 设备标签硬约束：主键/join 一律 **`device_fingerprint |
+| 04 04「不上 08 11 11「捡回来」+ 1「 | `sessions/tg-rotate-2026-09-01-0626.md` | 设备标签：08-04「不上 prod」**作废**；08-11「捡回来」+ 知秋 |
+| groups impl name params.sqlfile probes s | `sessions/tg-rotate-2026-09-01-0626.md` | 调度三层：`slots`（整点跑哪些组）→ `groups`（组内步顺序）→ ` |
+| full_chain full_chain.json group js json | `sessions/tg-rotate-2026-09-01-0626.md` | Spark pipeline-runner **加任务 = 写 SQL 文件 + |
+| explain full_chain.json lesson pipeline  | `sessions/tg-rotate-2026-09-01-0626.md` | [LESSON: spark-scheduler,pipeline-runner |
+| 1h dependent download ds env failure | `sessions/tg-rotate-2026-09-01-0626.md` | [LESSON: prod-monitor,oncall/prod 告警处置顺序 |
+| #7735 60 ack agent bus cursor | `sessions/tg-rotate-2026-09-01-0626.md` | agent-bus 派单：同一 Cursor 主会话处理，**60 秒内 ACK |
+| 04.dws docs dws_app_event_funnel_d_d eve | `sessions/tg-rotate-2026-09-01-0626.md` | 大漏斗按已定稿口径写：`docs/event_dictionary_big_fu |
+| ... cast dt explain full_chain.json paim | `sessions/tg-rotate-2026-09-01-0626.md` | Spark SQL 硬规矩：源表用 `_r` 版；`_r` 数值列 VARCHA |
+| .cursor dd.md log markdown mm reports | `sessions/tg-rotate-2026-09-01-0626.md` | 日报「上传云端」须以定稿 Markdown **原封不动**落盘（`.curso |
 | ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-08-31-1108.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | tg 上传 作日 六等 关系 即可 | `sessions/tg-rotate-2026-08-30-2110.md` | 周六等非工作日同样适用：有定稿即可上传，与 TG 推送日程无绑定关系 |
 | id inserted 「未 云端 云端记录 功回 | `sessions/tg-rotate-2026-08-30-2110.md` | 成功回执应含四要素：**日期**、**云端记录 ID**、**状态**（如 `i |
@@ -30,18 +45,3 @@
 | 00 19 ap pi 下班 为验 | `sessions/tg-rotate-2026-08-29-1656.md` | 未到打卡窗（如下班 19:00 前）API 会拒；禁止为验通知提前/强制打卡 |
 | api ce er g5 ic published | `sessions/tg-rotate-2026-08-29-1656.md` | G5 应用层门禁（service 校验）未落地；API 尚未切概念层读，需更多正 |
 | bus 「不 不等 不等事前确认 不要 主人 | `sessions/tg-rotate-2026-08-29-1656.md` | 主人令「不要等狂人点头」：拍板类清库/改口径可先干完，再 bus 回执请他只读复 |
-| ## 08 2026 29 agent_session_rotate agg | `~/.dc-platform/memory/lessons/2026-08-29-derived-比率指标禁止-default_aggregation-ratio-按-v0-3-.md` | 2026-08-29-derived-比率指标禁止-default_aggreg |
-| ## 08 0」≠ 2026 29 5「 | `~/.dc-platform/memory/lessons/2026-08-29-g5-库内违规-0-应用层已落地-复验须分开报库内数据与-service-router-是否做-.md` | 2026-08-29-g5-库内违规-0-应用层已落地-复验须分开报库内数据与- |
-| .3 0. avg bitmap_union_count count count | `sessions/tg-rotate-2026-08-29-1554.md` | **ratio 口径（v0.3 §11）**：白名单仅 `sum/count/b |
-| al at ce da diverged_pending er | `sessions/tg-rotate-2026-08-29-1554.md` | **G5 分两层**：库内 `diverged_pending` 且 `is_p |
-| 10 p1 phase1.5 seed unblock user_registe | `sessions/tg-rotate-2026-08-29-1554.md` | Unblock 二选一：P1 迁存量，或先推 **Phase1.5 种子 10  |
-| active default_aggregation definition en | `sessions/tg-rotate-2026-08-29-1554.md` | **G4 四件套**：`definition` + `req_ref` + ≥1 |
-| 10 172.31.6.193 260 count draft metadata | `sessions/tg-rotate-2026-08-29-1554.md` | 推 published 前先真 COUNT：`published / draft |
-| api draft g4 lifecycle phase1 published | `sessions/tg-rotate-2026-08-29-1554.md` | Phase1 过关 ≠ 只灌 draft：test 上须真有 `lifecycl |
-| agg default_aggregation derived fk lesso | `sessions/tg-rotate-2026-08-29-1554.md` | [LESSON: metric-library,derived,ratio,wh |
-| avg×2 count_distinct×4 内尚 再清 勿擅 勿擅自批量改 | `sessions/tg-rotate-2026-08-29-1554.md` | 库内尚有 `avg×2`、`count_distinct×4` 同类禁项：须对方 |
-| al at ce da diverged_pending er | `sessions/tg-rotate-2026-08-29-1554.md` | G5 分两层**：库内 `diverged_pending` 且 `is_pri |
-| #7 #7603 02 60 76 bus | `sessions/tg-rotate-2026-08-29-1554.md` | 样例推送 SQL：`docs/metric_library_phase1_pub |
-| 260 definition draft lifecycle p1 publis | `sessions/tg-rotate-2026-08-29-1554.md` | 260 条 draft 缺 `definition`/`req_ref`：**禁 |
-| #201 g4 v0.3 不是 不是改表结构 卡点 | `sessions/tg-rotate-2026-08-29-1554.md` | 狂人 #201 卡点：**数据层**（published=0、G4 空跑），不是 |
-| ## 08 2026 27 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-08-27-脏数据任务先-count-count-distinct-event_id-验重复-再导明细-配合.md` | 2026-08-27-脏数据任务先-count-count-distinct-e |

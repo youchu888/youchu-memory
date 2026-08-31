@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [加 Spark 任务只改 SQL + steps.json 挂槽位，ta](lessons/2026-09-01-加-spark-任务只改-sql-steps-json-挂槽位-tagtargets-必填-先-.md) — 会话轮换蒸馏
+- [判为 prod 事故后可直接改代码并立即修复，处理完再报；非事故 pro](lessons/2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报-非事故-prod-变更仍须等知秋-go.md) — 会话轮换蒸馏
+- [prod 告警处置顺序：先分 env → 问此刻是否仍在发生（DS st](lessons/2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生-ds-state-1-不信-monit.md) — 会话轮换蒸馏
 - [server_monitor 告警处置 SOP bus#7708](lessons/2026-08-31-server-monitor-incident-sop-bus7708.md) — old-mac 专责；先验仍在发生；禁信根因；DEPENDENT是果；playbook_server_monitor_incident.md
 - [playbook · server_monitor 告警处置](playbook_server_monitor_incident.md) — part_01→04；写操作先请示
 - [derived 比率指标：`default_aggregation` 留](lessons/2026-08-29-derived-比率指标-default_aggregation-留空-用分子-分母-fk-表达.md) — 会话轮换蒸馏
