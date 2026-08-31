@@ -7,7 +7,7 @@
 2. **禁止改插件 version / 自打自装 vsix** — 只报 bug；官方包由野花下发。
 3. **已定规矩先确认再改** — feedback/rules 破例须用户明确说「改」。
 4. **提交即 push** — 说入库/commit 成功后立刻 `git push`（除非用户禁止）。
-5. **commit 第一人称直述** — 禁「我/主人/旁白体」。
+5. **产出物互斥** — 先判定在做 commit/日报/bus/群进展，只遵循对应专条；commit 钩子禁旁白与 bus#；日报禁 bus#。见 `output-channel-matrix.mdc`。
 6. **Dev Session 1–6 禁空标 done** — 每 stage 要有产物与证据；stage7 等审核。
 7. **datacheck 默认只查 T-1** — 用户未指定日期禁止扫多日。
 8. **agent-bus：60s ACK → 干完 reply 才结案** — 禁拉取时 mark_processed。
