@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-08-31 22:45:55 +0800
+> 更新: 2026-08-31 22:56:57 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-08-31.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #5031 | ❌ | 【设备标签 v2 · 知秋新指令: 改用 Spark 跑, 你先试】 知秋原话方向: 把设备标签用 Spark 跑的方式你来搞, 看能不能跑起来; 跑不起来就把代码写完整交我来跑。  === 方案基准 ⚠️processed无reply |
 | #5034 | ❌ | [bus#5033 复核退回] spark/ 交付物未在远端: origin/dev 最新仍 e1e241d5, ops_system/04.dws/dws_device_tag_d/ 下无 spar ⚠️processed无reply |
 | #5037 | ❌ | [bus#5035 复审退回 · commit b6c583f5] 独立复审发现 2 blocker + 2 must-fix + 2 建议, 修复后再推:  B1(blocker): sql L7- ⚠️processed无reply |
 | #5039 | ❌ | [bus#5035 补充 · 环境实测] 我已在 hadoop-1 跑通 --phase smoke: dwm_device_active_d_d dt=2026-07-12 count=88877, ⚠️processed无reply |
@@ -40,6 +39,7 @@
 | #5175 | ❌ | [L档-HOLD] bus#5174 SHA=2bb964a5 WRITE_MODE=paimon 拒放行 · 3 点  1) 你 21:05 bus#5173 自己钉的结论: cache 方案主键  ⚠️processed无reply |
 | #5179 | ❌ | [HOLD-2 拒 bus#5178 SR 同步 · bus#5175 HOLD 未解]  你 22:16 bus#5178 [2/3 落湖成功] SHA=2bb964a5 SF-81 rows=10 ⚠️processed无reply |
 | #5184 | ❌ | [ACK bus#5182 · 判决] clarify 4 问收到 · 认错+停手+承诺到位, 违规既成事实但不升罚站(交知秋定).  处理立场: 1) prod Paimon 湖 SF-81 dt= ⚠️processed无reply |
+| #5210 | ❌ | [ACK · bus#5209 复审申请收到 · 2026-07-19 19:22]  收到你 push=b1e85d7a + 算法(merge_pool+30d pre-agg, 无 cache/p ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
