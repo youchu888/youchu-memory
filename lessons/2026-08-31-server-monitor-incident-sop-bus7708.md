@@ -11,6 +11,8 @@ domain: ops
 
 bus#7708 狂人 SOP 请示回执（知秋盯 prod dwd 大表拆分）；完整 SOP 晚些补，先定四条避免卡 playbook。
 
+**执行归属（2026-08-31 主人令）**：**old-mac 专责**处置 server_monitor / prod 海豚告警；new-mac 只贡献 memory/文档，不另挂夜间巡检。
+
 ## 坑 / 错误做法
 
 1. **test 告警当 prod 事故** — test 断流/不新鲜/僵尸 wf 是已知噪声
@@ -31,10 +33,12 @@ bus#7708 狂人 SOP 请示回执（知秋盯 prod dwd 大表拆分）；完整 S
 
 ## 验证
 
-- playbook：`.claude/database/playbooks/_ops_server_monitor_incident.md`
-- 下次 server_monitor 告警按 part_01→04 顺序，不跳步
+- playbook（双机）：`~/.dc-platform/memory/playbook_server_monitor_incident.md`
+- 工作区副本：`.claude/database/playbooks/_ops_server_monitor_incident.md`（gitignore，靠 memory sync）
+- 冒烟报告：`CHcode/.claude/database/reports/_ops_server_monitor/2026-08-31/smoke__part01_04__20260831_2027.md`
+- 下次 server_monitor 告警由 **old-mac** 按 part_01→04 顺序，不跳步
 
 ## 关联
 
-- bus#7708
-- `_ops_dolphinscheduler_workflow_update.md`
+- bus#7708 / bus#7720（又初追问完整版）
+- 主人令 2026-08-31：同步 old-mac 执行
