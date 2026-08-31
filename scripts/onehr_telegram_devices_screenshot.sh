@@ -4,22 +4,30 @@
 # 用法：
 #   onehr_telegram_devices_screenshot.sh          # deeplink 打开设备管理后截图
 #   onehr_telegram_devices_screenshot.sh --capture-only   # 只截当前 Telegram 窗口
+#   onehr_telegram_devices_screenshot.sh --skip-validate  # 跳过内容校验（调试用）
 #
 # 窗口定位走 CoreGraphics（不依赖 System Events，避免 launchd AppleEvent 超时后误传旧图）
+# 截图后用 Vision OCR 校验必须是设备管理页，拒绝聊天壁纸/风景图
 # 输出：~/Desktop/CH/telegram/telegram_devices_YYYYMMDD_HHMMSS.png
 
 set -euo pipefail
 
 CAPTURE_ONLY=false
-if [[ "${1:-}" == "--capture-only" ]]; then
-  CAPTURE_ONLY=true
-fi
+SKIP_VALIDATE=false
+for arg in "$@"; do
+  case "$arg" in
+    --capture-only) CAPTURE_ONLY=true ;;
+    --skip-validate) SKIP_VALIDATE=true ;;
+  esac
+done
 
 TG_APP="${TELEGRAM_APP:-Telegram}"
 OUT_DIR="${ONEHR_SCREENSHOT_DIR:-$HOME/Desktop/CH/telegram}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HELPER_SRC="$SCRIPT_DIR/onehr_tg_window_info.swift"
 HELPER_BIN="$SCRIPT_DIR/onehr_tg_window_info"
+VALIDATE_SRC="$SCRIPT_DIR/onehr_tg_screenshot_validate.swift"
+VALIDATE_BIN="$SCRIPT_DIR/onehr_tg_screenshot_validate"
 mkdir -p "$OUT_DIR"
 
 timestamp="$(date +%Y%m%d_%H%M%S)"
@@ -30,27 +38,35 @@ if [[ ! -d "/Applications/${TG_APP}.app" ]]; then
   exit 1
 fi
 
-ensure_helper() {
-  if [[ ! -f "$HELPER_SRC" ]]; then
-    echo "ERROR: 缺少 $HELPER_SRC" >&2
+ensure_bin() {
+  local src="$1" bin="$2"
+  if [[ ! -f "$src" ]]; then
+    echo "ERROR: 缺少 $src" >&2
     return 1
   fi
-  if [[ ! -x "$HELPER_BIN" || "$HELPER_SRC" -nt "$HELPER_BIN" ]]; then
-    /usr/bin/swiftc -O -o "$HELPER_BIN" "$HELPER_SRC"
+  if [[ ! -x "$bin" || "$src" -nt "$bin" ]]; then
+    /usr/bin/swiftc -O -o "$bin" "$src"
   fi
 }
 
+# 前置到前台，避免截到后台错窗
+osascript -e "tell application \"$TG_APP\" to activate" >/dev/null 2>&1 || true
 open -a "$TG_APP" >/dev/null 2>&1 || true
-sleep 0.5
+sleep 0.8
 
 nav_info=""
 if [[ "$CAPTURE_ONLY" != true ]]; then
+  # deeplink 偶发不切换页面：连开两次 + 拉长等待
   open "tg://settings/devices" >/dev/null 2>&1 || true
-  nav_info="deeplink:tg://settings/devices"
-  sleep 1.8
+  sleep 1.2
+  open "tg://settings/devices" >/dev/null 2>&1 || true
+  nav_info="deeplink:tg://settings/devices×2"
+  sleep 2.5
+  osascript -e "tell application \"$TG_APP\" to activate" >/dev/null 2>&1 || true
+  sleep 0.4
 fi
 
-ensure_helper
+ensure_bin "$HELPER_SRC" "$HELPER_BIN"
 info="$("$HELPER_BIN" "$TG_APP")"
 wid="${info%%$'\t'*}"
 region="${info#*$'\t'}"
@@ -74,6 +90,17 @@ fi
 if [[ ! -s "$outfile" ]]; then
   echo "ERROR: 截图失败 $outfile" >&2
   exit 1
+fi
+
+if [[ "$SKIP_VALIDATE" != true ]]; then
+  ensure_bin "$VALIDATE_SRC" "$VALIDATE_BIN"
+  if ! validate_out="$("$VALIDATE_BIN" "$outfile" 2>&1)"; then
+    echo "ERROR: 截图内容不是设备管理页，已删除坏图" >&2
+    echo "  validate: $validate_out" >&2
+    rm -f "$outfile"
+    exit 3
+  fi
+  echo "  validate: $validate_out"
 fi
 
 echo "OK $outfile"

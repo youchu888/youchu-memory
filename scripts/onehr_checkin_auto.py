@@ -207,17 +207,49 @@ def fetch_today(base_url: str, token: str) -> dict:
 
 
 MAX_FRESH_SCREENSHOT_SEC = 180
+VALIDATE_BIN = Path.home() / ".dc-platform/scripts/onehr_tg_screenshot_validate"
+VALIDATE_SRC = Path.home() / ".dc-platform/scripts/onehr_tg_screenshot_validate.swift"
 
 
 def screenshot_age_sec(path: Path) -> float:
     return max(0.0, time.time() - path.stat().st_mtime)
 
 
+def ensure_validate_bin() -> Path:
+    """编译 Vision 校验 helper（若源码更新）。"""
+    if not VALIDATE_SRC.is_file():
+        raise RuntimeError(f"缺少校验源码: {VALIDATE_SRC}")
+    need = (not VALIDATE_BIN.is_file()) or (
+        VALIDATE_SRC.stat().st_mtime > VALIDATE_BIN.stat().st_mtime
+    )
+    if need:
+        proc = subprocess.run(
+            ["/usr/bin/swiftc", "-O", "-o", str(VALIDATE_BIN), str(VALIDATE_SRC)],
+            capture_output=True,
+            text=True,
+        )
+        if proc.returncode != 0:
+            raise RuntimeError(f"编译校验 helper 失败: {proc.stderr.strip()}")
+    return VALIDATE_BIN
+
+
+def validate_devices_screenshot(path: Path) -> str:
+    """确认 PNG 是 Telegram 设备管理页，不是聊天壁纸/风景图。返回校验摘要。"""
+    if not path.is_file():
+        raise RuntimeError(f"截图不存在: {path}")
+    bin_path = ensure_validate_bin()
+    proc = subprocess.run([str(bin_path), str(path)], capture_output=True, text=True)
+    detail = (proc.stdout or proc.stderr or "").strip()
+    if proc.returncode != 0:
+        raise RuntimeError(detail or f"截图内容校验失败 path={path}")
+    return detail or "OK"
+
+
 def latest_screenshot(
     screenshot_dir: Path,
     max_age_sec: int = MAX_FRESH_SCREENSHOT_SEC,
 ) -> Optional[Path]:
-    """只接受刚截出来的图。禁止拿目录里几天前的旧 PNG 顶上去。"""
+    """只接受刚截出来的、且内容校验通过的图。禁止拿目录里几天前的旧 PNG 顶上去。"""
     if not screenshot_dir.is_dir():
         return None
     files = sorted(screenshot_dir.glob("telegram_devices_*.png"), key=lambda p: p.stat().st_mtime)
@@ -226,6 +258,10 @@ def latest_screenshot(
     newest = files[-1]
     age = screenshot_age_sec(newest)
     if age > max_age_sec:
+        return None
+    try:
+        validate_devices_screenshot(newest)
+    except RuntimeError:
         return None
     return newest
 
@@ -251,22 +287,23 @@ def _take_screenshot_once(script: Path, capture_only: bool = False) -> Path:
 
 
 def take_screenshot(script: Path, capture_only: bool = False, retries: int = 3) -> Path:
+    """截图并校验内容。重试时默认重新导航设备页（不用 capture-only），避免截到聊天壁纸。"""
     last_err = "截图失败"
     for attempt in range(1, retries + 1):
         try:
-            path = _take_screenshot_once(
-                script,
-                capture_only=(capture_only or attempt > 1),
-            )
+            # 仅当调用方显式要求时才 capture-only；失败重试必须重新 deeplink
+            path = _take_screenshot_once(script, capture_only=capture_only)
             age = screenshot_age_sec(path)
             if age > MAX_FRESH_SCREENSHOT_SEC:
                 last_err = f"截到的文件过旧 age={int(age)}s path={path}"
             else:
+                # bash 脚本已校验；再防一层（例如 --screenshot 手工传入）
+                validate_devices_screenshot(path)
                 return path
         except RuntimeError as exc:
             last_err = str(exc)
         if attempt < retries:
-            time.sleep(1.5)
+            time.sleep(2.0)
     raise RuntimeError(last_err)
 
 
@@ -472,6 +509,15 @@ def main() -> int:
                 msg = f"截图过旧 age={age}s path={screenshot_path}"
                 log(f"ERROR {msg}", log_file)
                 notify("OneHR 打卡失败", msg)
+                rc = 1
+                continue
+            try:
+                vdetail = validate_devices_screenshot(screenshot_path)
+                log(f"截图内容校验通过 {vdetail}", log_file)
+            except RuntimeError as exc:
+                msg = f"截图内容不是设备管理页，拒绝上传: {exc}"
+                log(f"ERROR {msg}", log_file)
+                notify("OneHR 打卡失败", msg[:120])
                 rc = 1
                 continue
             log(f"将上传截图 {screenshot_path} age={age}s", log_file)

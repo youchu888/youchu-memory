@@ -5,6 +5,7 @@
 | 2026-08-31 | [TG 问狂人超时勿标「狂人回复」](./2026-08-31-tg-ask-outcome-title-not-kuangren-reply.md) | tgbot, worker_ant, ux | ask_outcome_title；memory patch apply_tgbot_ask_outcome_title.sh |
 | 2026-08-31 | [server_monitor 告警处置 SOP bus#7708](./2026-08-31-server-monitor-incident-sop-bus7708.md) | server_monitor, dolphin, incident, download-log | old-mac 专责；先验仍在发生；禁信根因；DEPENDENT是果；playbook_server_monitor_incident.md |
 | 2026-08-31 | [OneHR 打卡禁止上传过期截图；窗口定位不走 System Events](./2026-08-31-OneHR打卡禁止上传过期截图.md) | onehr, punch, screenshot, launchd | launchd System Events 超时后误传 08-28 旧图；只收 180s 内新截；CG helper |
+| 2026-08-31 | [OneHR 打卡截图必须是设备管理页；拒绝壁纸/风景图](./2026-08-31-OneHR打卡截图必须是设备管理页.md) | onehr, punch, screenshot, validate | deeplink未切页截到壁纸；Vision校验+禁capture-only重试 |
 | 2026-08-31 | [工作簿也要镜像到私聊（原文 + 发群进展）](./2026-08-31-工作簿也要镜像到私聊.md) | tgbot, workbook, dm-mirror, status_mirror | 工作簿不要求 @又初也进私聊；原文+发群进展各一份；inbound_dm 同日一次 |
 | 2026-08-29 | [derived 比率指标：`default_aggregation` 留空，用分](./2026-08-29-derived-比率指标-default_aggregation-留空-用分子-分母-fk-表达.md) | 指标库G2,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-29 | [拍板/清库类任务主人说「不等点头」时：先执行落库，再 bus reply 对齐复](./2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bus-reply-对齐复核-禁止空等事前.md) | agent-bus协作,session-rotate | 会话轮换前自动蒸馏 |

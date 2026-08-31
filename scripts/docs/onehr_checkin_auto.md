@@ -13,13 +13,16 @@
 
 截图失败**禁止**回退目录里几天前的 PNG。只上传 3 分钟内新截的图。窗口定位用 CoreGraphics，不走 System Events。
 
+截图还必须通过 **设备管理页内容校验**（`onehr_tg_screenshot_validate`：体积 + Vision OCR）。聊天壁纸/风景图即便是刚截的也会拒绝上传；失败会重试并重新打开 `tg://settings/devices`。
+
 ## 组件
 
 | 文件 | 作用 |
 |------|------|
 | `onehr_checkin_scheduler.py` | 随机计划 + 守护循环 |
 | `onehr_checkin_auto.py` | 登录 OneHR → API 上传 |
-| `onehr_telegram_devices_screenshot.sh` | Telegram 设备页截图 |
+| `onehr_telegram_devices_screenshot.sh` | Telegram 设备页截图 + 导航加强 |
+| `onehr_tg_screenshot_validate.swift` | 校验截图确为设备管理页 |
 
 ## 配置
 
