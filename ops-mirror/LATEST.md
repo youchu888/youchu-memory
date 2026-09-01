@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-01 16:35:04 +0800
+> 更新: 2026-09-01 16:45:52 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-01.md`
 
@@ -63,3 +63,4 @@
 | 2026-09-01 11:26 | 私聊#436 | telegram_dm | completed | 1. **login/page_view _r 只约 50 天**：07-13 前沉默设备的 last_login_time / last_active_tim |
 | 2026-09-01 11:37 | 私聊#437 | telegram_dm | completed | spark的任务调度，现在支持一个表开发一个表测试。初儿你去问狂人，有特定的命令，整个测试分4步，就是可以一步一步调用，静态检测语法，分析执行计划，跑什么验证， |
 | 2026-09-01 16:11 | 私聊#438 | telegram_dm | completed | 什么玩意一直发进度，做完了就不要发了阿，你是傻子吗？ |
+| 2026-09-01 16:37 | 私聊#439 | telegram_dm | completed | 指标库的进度呢 |
