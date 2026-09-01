@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [指纹/uid_map 本地改完须 push 并请知秋再审 PASS 后才](lessons/2026-09-01-指纹-uid_map-本地改完须-push-并请知秋再审-pass-后才可沙箱四步-未-pass.md) — 会话轮换蒸馏
+- [主人要任务进度时用人话逐项写节点/卡点/需确认项，并实查 task 板+](lessons/2026-09-01-主人要任务进度时用人话逐项写节点-卡点-需确认项-并实查-task-板-work-log-git.md) — 会话轮换蒸馏
+- [09:01 群进展/工作簿只写 T-1 截止累计进度；当天实活写 wor](lessons/2026-09-01-09-01-群进展-工作簿只写-t-1-截止累计进度-当天实活写-work-log-次日工作簿再.md) — 会话轮换蒸馏
 - [task 板与 work-log 超过 1 天未对齐即执行缺口，先刷新 ](lessons/2026-09-01-task-板与-work-log-超过-1-天未对齐即执行缺口-先刷新-task-板再答进展问.md) — 会话轮换蒸馏
 - [workbook_progress_service 增补项必须读 wor](lessons/2026-09-01-workbook_progress_service-增补项必须读-workbook_supple.md) — 会话轮换蒸馏
 - [读到群簿或有大活交付后，当天同步 task 板 + supplement](lessons/2026-09-01-读到群簿或有大活交付后-当天同步-task-板-supplemental-work-log-大活.md) — 会话轮换蒸馏
