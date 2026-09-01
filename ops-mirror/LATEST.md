@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-01 11:30:55 +0800
+> 更新: 2026-09-01 11:41:52 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-01.md`
 
@@ -61,3 +61,4 @@
 | 2026-09-01 10:59 | 私聊#434 | telegram_dm | completed | spark相关的问题昨天收到狂人的回复了吧 |
 | 2026-09-01 11:03 | 私聊#435 | telegram_dm | completed | 按照规则去改这两个任务吧，有卡点私聊询问我，定时汇报进度 |
 | 2026-09-01 11:26 | 私聊#436 | telegram_dm | completed | 1. **login/page_view _r 只约 50 天**：07-13 前沉默设备的 last_login_time / last_active_tim |
+| 2026-09-01 11:37 | 私聊#437 | telegram_dm | completed | spark的任务调度，现在支持一个表开发一个表测试。初儿你去问狂人，有特定的命令，整个测试分4步，就是可以一步一步调用，静态检测语法，分析执行计划，跑什么验证， |
