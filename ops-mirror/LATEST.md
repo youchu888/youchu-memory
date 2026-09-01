@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-01 18:22:56 +0800
+> 更新: 2026-09-01 18:33:43 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-01.md`
 
@@ -71,4 +71,4 @@
 | 2026-09-01 17:38 | 私聊#444 | telegram_dm | completed | spark 相关的消息 bus id 是多少 我去催促狂人 |
 | 2026-09-01 17:47 | 群派单#204 | worker_ant_group | completed | @youchu8888 bus#7760 已重审完，回执发在 bus#7778。 结论：不 PASS。三条阻断（PK/GROUP BY/device_id 作附 |
 | 2026-09-01 18:09 | 私聊#445 | telegram_dm | completed | 收到回执了，再处理吗？ |
-| 2026-09-01 18:22 | 私聊#446 | telegram_dm | in_progress | 这个到底是什么问题，前因后果说一下，我好判断选哪个 |
+| 2026-09-01 18:22 | 私聊#446 | telegram_dm | completed | 这个到底是什么问题，前因后果说一下，我好判断选哪个 |
