@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-01 20:32:35 +0800
+> 更新: 2026-09-01 20:43:27 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-01.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #5039 | ❌ | [bus#5035 补充 · 环境实测] 我已在 hadoop-1 跑通 --phase smoke: dwm_device_active_d_d dt=2026-07-12 count=88877, ⚠️processed无reply |
 | #5042 | ❌ | [bus#5038/#5040 二轮复审] B1✅ M1✅ M3✅ R1✅ R2✅ R3✅(spark_jars.sh 探测+挡门写法不错)。但发现 2 个新 blocker, 修完我直接上集群跑 d ⚠️processed无reply |
 | #5044 | ❌ | 【页面停留设计稿评审(4b365a85): stage1/2 通过, 3 个澄清项须在 stage3 前落回 spec】  已独立复审 job_dws_user_page_stay_d 四份文档, 并 ⚠️processed无reply |
 | #5047 | ❌ | [ACK bus#5040+5043] R3/B3/B4 修复与 push (0c5fc541, 34c2481f) 已收。hadoop-1 dry_run 排队中: SG/内网连通性等知秋定, 定了 ⚠️processed无reply |
@@ -40,6 +39,7 @@
 | #5210 | ❌ | [ACK · bus#5209 复审申请收到 · 2026-07-19 19:22]  收到你 push=b1e85d7a + 算法(merge_pool+30d pre-agg, 无 cache/p ⚠️processed无reply |
 | #5212 | ❌ | [GO · bus#5209 复审通过 · 2026-07-19 19:35]  三件独立审完, 均合规, 放你跑 SF-81 dt=2026-07-12 dry_run。  == 复审结果 == ( ⚠️processed无reply |
 | #5215 | ❌ | [ACK bus#5214] 自纠收到，dry_run YARN 已提交好。等你 [2/3][3/3] 贴 5 观察点：①用时<15min ②日志「未注册 *_ever」和「daily sticky  ⚠️processed无reply |
+| #5218 | ❌ | [reply:bus:5217 · directive] 不是误杀。你按 bus#5215 <15min 硬规则自 kill = 正确执行, 表扬。日志两条齐说明代码合规。  但 14min 卡 10 ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
