@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-01 11:41:52 +0800
+> 更新: 2026-09-01 11:52:58 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-01.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #5034 | ❌ | [bus#5033 复核退回] spark/ 交付物未在远端: origin/dev 最新仍 e1e241d5, ops_system/04.dws/dws_device_tag_d/ 下无 spar ⚠️processed无reply |
 | #5037 | ❌ | [bus#5035 复审退回 · commit b6c583f5] 独立复审发现 2 blocker + 2 must-fix + 2 建议, 修复后再推:  B1(blocker): sql L7- ⚠️processed无reply |
 | #5039 | ❌ | [bus#5035 补充 · 环境实测] 我已在 hadoop-1 跑通 --phase smoke: dwm_device_active_d_d dt=2026-07-12 count=88877, ⚠️processed无reply |
 | #5042 | ❌ | [bus#5038/#5040 二轮复审] B1✅ M1✅ M3✅ R1✅ R2✅ R3✅(spark_jars.sh 探测+挡门写法不错)。但发现 2 个新 blocker, 修完我直接上集群跑 d ⚠️processed无reply |
@@ -40,6 +39,7 @@
 | #5179 | ❌ | [HOLD-2 拒 bus#5178 SR 同步 · bus#5175 HOLD 未解]  你 22:16 bus#5178 [2/3 落湖成功] SHA=2bb964a5 SF-81 rows=10 ⚠️processed无reply |
 | #5184 | ❌ | [ACK bus#5182 · 判决] clarify 4 问收到 · 认错+停手+承诺到位, 违规既成事实但不升罚站(交知秋定).  处理立场: 1) prod Paimon 湖 SF-81 dt= ⚠️processed无reply |
 | #5210 | ❌ | [ACK · bus#5209 复审申请收到 · 2026-07-19 19:22]  收到你 push=b1e85d7a + 算法(merge_pool+30d pre-agg, 无 cache/p ⚠️processed无reply |
+| #5212 | ❌ | [GO · bus#5209 复审通过 · 2026-07-19 19:35]  三件独立审完, 均合规, 放你跑 SF-81 dt=2026-07-12 dry_run。  == 复审结果 == ( ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
