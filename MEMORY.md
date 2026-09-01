@@ -9,7 +9,8 @@
 - [判为 prod 事故后可直接改代码并立即修复，处理完再报；非事故 pro](lessons/2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报-非事故-prod-变更仍须等知秋-go.md) — 会话轮换蒸馏
 - [prod 告警处置顺序：先分 env → 问此刻是否仍在发生（DS st](lessons/2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生-ds-state-1-不信-monit.md) — 会话轮换蒸馏
 - [server_monitor 告警处置 SOP bus#7708](lessons/2026-08-31-server-monitor-incident-sop-bus7708.md) — old-mac 专责；先验仍在发生；禁信根因；DEPENDENT是果；playbook_server_monitor_incident.md
-- [playbook · server_monitor 告警处置](playbook_server_monitor_incident.md) — part_01→04；写操作先请示
+- [playbook · server_monitor 告警处置](playbook_server_monitor_incident.md) — 告警驱动；part_01→04；事故立刻修修完再报（#7742）；主人 09-01 确认按狂人安排
+- [feedback · 盯盘按狂人安排](feedback_prod_monitor_follow_worker_ant.md) — 不另建夜间全量扫；收到 prod 告警再处置
 - [derived 比率指标：`default_aggregation` 留](lessons/2026-08-29-derived-比率指标-default_aggregation-留空-用分子-分母-fk-表达.md) — 会话轮换蒸馏
 - [拍板/清库类任务主人说「不等点头」时：先执行落库，再 bus reply](lessons/2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bus-reply-对齐复核-禁止空等事前.md) — 会话轮换蒸馏
 - [derived 比率指标禁止 `default_aggregation=](lessons/2026-08-29-derived-比率指标禁止-default_aggregation-ratio-按-v0-3-.md) — 会话轮换蒸馏

@@ -1,8 +1,8 @@
 # server_monitor / prod 海豚告警处置 SOP
 
 > **执行主机**：**old-mac 专责**（tgbot / monitor 告警入口在权威机；new-mac 不另建夜间巡检）  
-> **权威来源**：bus#7708（狂人阶段性回执，2026-08-31）  
-> **完整版 SOP**：狂人晚些补（又初 bus#7706 追问中）  
+> **权威来源**：bus#7708 + bus#7742（值班 SOP / 事故授权，2026-08-31）；主人 2026-09-01 确认按此执行  
+> **完整版 SOP**：狂人仍可补白名单细节；执行以本 playbook + #7742 六条为准  
 > **本机副本**：`~/.dc-platform/memory/playbook_server_monitor_incident.md`（双机 memory sync）  
 > **工作区副本**（gitignore）：`CHcode/.claude/database/playbooks/_ops_server_monitor_incident.md`  
 > **关联**：lesson `2026-08-31-server-monitor-incident-sop-bus7708.md`
@@ -12,10 +12,11 @@
 | 项 | 约定 |
 |---|---|
 | **触发** | `server_monitor`（`54.255.236.159` / `prod_monitor/server_tick.py`）推 TG 或 agent-bus 的 prod 海豚告警 |
-| **不负责** | 另建本机「每晚全量扫海豚」定时任务（检测已在服务端 monitor 脚本） |
+| **不负责** | 另建本机「每晚全量扫海豚」定时任务（检测已在服务端 monitor 脚本；狂人：处置≠再检测） |
 | **环境** | **仅 prod**；test 断流 / 不新鲜 / 僵尸 wf 为已知噪声，**忽略** |
-| **写操作** | prod 补数 / complement / publish / 改 SQL → **灰区，先请示知秋或 bus 狂人**（bus#861） |
-| **prod 海豚通道** | 诊断：**平台 MCP/API 或 GET 直连**；禁止本地私自发 prod 写操作 |
+| **写操作·事故** | 六条判据确认是 **prod 事故** → **立刻处理（含改代码）**，不用等点头；处理完再报（知秋 #7742：「不能等」） |
+| **写操作·非事故** | 日常 prod 变更、口径/指标定义、设计加表加字段 → **仍等知秋 GO** |
+| **prod 海豚通道** | 诊断：平台 MCP/API 或 GET 直连；事故修复走平台能力，禁无痕本地瞎改 |
 
 ## 1. 硬规则（处置前必读）
 
