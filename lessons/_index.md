@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-01 | [task 板与 work-log 超过 1 天未对齐即执行缺口，先刷新 task](./2026-09-01-task-板与-work-log-超过-1-天未对齐即执行缺口-先刷新-task-板再答进展问.md) | workbook,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-01 | [workbook_progress_service 增补项必须读 workboo](./2026-09-01-workbook_progress_service-增补项必须读-workbook_supple.md) | workbook,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-01 | [读到群簿或有大活交付后，当天同步 task 板 + supplemental +](./2026-09-01-读到群簿或有大活交付后-当天同步-task-板-supplemental-work-log-大活.md) | workbook,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [req_ref|phase1-migration|Phase1 存量指标无 PR](./2026-09-01-req_ref-phase1-migration-phase1-存量指标无-prd-挂点时-用-.md) | metric-library,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [device-fingerprint|_r-retention|四路 `_r` ](./2026-09-01-device-fingerprint-_r-retention-四路-_r-保留期不一致时-禁止.md) | uid_map,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [agent-bus-review|wait-state|任务已交审或进入等 PA](./2026-09-01-agent-bus-review-wait-state-任务已交审或进入等-pass-状态时-立.md) | tg-progress,session-rotate | 会话轮换前自动蒸馏 |

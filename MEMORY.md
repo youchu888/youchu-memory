@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [task 板与 work-log 超过 1 天未对齐即执行缺口，先刷新 ](lessons/2026-09-01-task-板与-work-log-超过-1-天未对齐即执行缺口-先刷新-task-板再答进展问.md) — 会话轮换蒸馏
+- [workbook_progress_service 增补项必须读 wor](lessons/2026-09-01-workbook_progress_service-增补项必须读-workbook_supple.md) — 会话轮换蒸馏
+- [读到群簿或有大活交付后，当天同步 task 板 + supplement](lessons/2026-09-01-读到群簿或有大活交付后-当天同步-task-板-supplemental-work-log-大活.md) — 会话轮换蒸馏
 - [req_ref|phase1-migration|Phase1 存量指标](lessons/2026-09-01-req_ref-phase1-migration-phase1-存量指标无-prd-挂点时-用-.md) — 会话轮换蒸馏
 - [device-fingerprint|_r-retention|四路 `](lessons/2026-09-01-device-fingerprint-_r-retention-四路-_r-保留期不一致时-禁止.md) — 会话轮换蒸馏
 - [agent-bus-review|wait-state|任务已交审或进入](lessons/2026-09-01-agent-bus-review-wait-state-任务已交审或进入等-pass-状态时-立.md) — 会话轮换蒸馏

@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-task-板与-work-log-超过-1-天未对齐即执行缺口-先刷新-task-板再答进展问.md` | 2026-09-01-task-板与-work-log-超过-1-天未对齐即执行 |
+| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-workbook_progress_service-增补项必须读-workbook_supple.md` | 2026-09-01-workbook_progress_service-增补项 |
+| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-读到群簿或有大活交付后-当天同步-task-板-supplemental-work-log-大活.md` | 2026-09-01-读到群簿或有大活交付后-当天同步-task-板-suppl |
+| bus force log push repost supplemental | `sessions/tg-rotate-2026-09-01-2142.md` | **大活交付须触发二次同步**：push / 交审 / 批处理 / bus 口径 |
+| 01 09 log or push） rk | `sessions/tg-rotate-2026-09-01-2142.md` | **09:01 自动汇报 ≠ 全天闭环**：定时发送若早于当天实活（work-l |
+| #13 00 09 log pinned projec | `sessions/tg-rotate-2026-09-01-2142.md` | **PINNED #13 铁律**：读到 09:00 群工作簿或当天有新进展 → |
+| .cursor .m bus log md project_youchu_wor | `sessions/tg-rotate-2026-09-01-2142.md` | **工作簿三件套须同频**：`project_youchu_workbook_t |
+| lesson local_tracking_items workbook wor | `sessions/tg-rotate-2026-09-01-2142.md` | [LESSON: workbook/workbook_progress_serv |
+| 01 09 lesson log supplemental task | `sessions/tg-rotate-2026-09-01-2142.md` | [LESSON: workbook/读到群簿或有大活交付后，当天同步 task  |
+| dim hold hold」 pass push spark | `sessions/tg-rotate-2026-09-01-2142.md` | Spark/复审链状态表达**：代码本地已改但未 push、等狂人 PASS 前 |
+| log task work 「为 」时 不复 | `sessions/tg-rotate-2026-09-01-2142.md` | 进展汇报答问顺序**：先核对 task 板、work-log、各专项实态，再汇总 |
+| json local_tra local_tracking_items work | `sessions/tg-rotate-2026-09-01-2142.md` | 代码与配置须真读 JSON**：`workbook_progress_servi |
+| 00 01 09 11 一句 一次 | `sessions/tg-rotate-2026-09-01-2142.md` | 11:00 后仍有交付**：不要只依赖 09:01 一次；应自动补发或私聊一句实 |
+| #13 00 09 log pinned project | `sessions/tg-rotate-2026-09-01-2142.md` | PINNED #13 铁律**：读到 09:00 群工作簿或当天有新进展 → * |
+| .cursor .m bus log md project_youchu_wor | `sessions/tg-rotate-2026-09-01-2142.md` | 工作簿三件套须同频**：`project_youchu_workbook_tas |
 | ## 01 09 2026 agent_session_rotate base_ | `~/.dc-platform/memory/lessons/2026-09-01-req_ref-phase1-migration-phase1-存量指标无-prd-挂点时-用-.md` | 2026-09-01-req_ref-phase1-migration-phas |
 | ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-device-fingerprint-_r-retention-四路-_r-保留期不一致时-禁止.md` | 2026-09-01-device-fingerprint-_r-retenti |
 | ## 01 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-01-agent-bus-review-wait-state-任务已交审或进入等-pass-状态时-立.md` | 2026-09-01-agent-bus-review-wait-state-任 |
@@ -30,18 +45,3 @@
 | #7 35 5） 73 77 bu | `sessions/tg-rotate-2026-09-01-1113.md` | Spark 加任务（bus#7735）：**只写 SQL + `steps.js |
 | feedback mem memory memory_open playbook | `sessions/tg-rotate-2026-09-01-1113.md` | 约定变更后须同步改 `MEMORY_OPEN` / playbook / fee |
 | +牡 下发 不动 与修 丹搭 人下 | `sessions/tg-rotate-2026-09-01-1113.md` | 值班安排是又初+牡丹搭班，狂人下发六条判据与修复半径；没接到告警就不动，但告警漏 |
-| bus#7742 go 事故 事故授权 仍等 代码 | `sessions/tg-rotate-2026-09-01-1113.md` | bus#7742 事故授权：**确认是事故可立刻修（含改代码），修完再报**；日 |
-| download env lo log part_01 playbook | `sessions/tg-rotate-2026-09-01-1113.md` | 收到 **env=prod** 告警后固定链路：先验「此刻还在不在」→ 定位真失 |
-| bus#7738 device device_fingerpr device_f | `sessions/tg-rotate-2026-09-01-1113.md` | [LESSON: device-fingerprint/设备标签/uid_map |
-| 一次 不要 不要边做边猜 主人 人要 任务 | `sessions/tg-rotate-2026-09-01-1113.md` | 长任务按主人要求**定时私聊汇报**；卡点一次性列清选项私聊拍板，不要边做边猜 |
-| prod server_monitor 一套 不是 不是又初另起一套夜间全量巡检 | `sessions/tg-rotate-2026-09-01-1113.md` | prod 盯盘口径是**告警驱动**，不是又初另起一套夜间全量巡检；检测已在 ` |
-| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-加-spark-任务只改-sql-steps-json-挂槽位-tagtargets-必填-先-.md` | 2026-09-01-加-spark-任务只改-sql-steps-json-挂 |
-| ## 01 09 2026 agent_session_rotate autho | `~/.dc-platform/memory/lessons/2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报-非事故-prod-变更仍须等知秋-go.md` | 2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报- |
-| ## 01 09 1h 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生-ds-state-1-不信-monit.md` | 2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生- |
-| _x dependent detail download ds env | `sessions/tg-rotate-2026-09-01-0626.md` | prod 值班六条：① **先分 env**，test 断流/僵尸 wf **一 |
-| +人 07 27 50 dwm_device_ui dwm_device_uid | `sessions/tg-rotate-2026-09-01-0626.md` | 设备标签现状：paimon 建齐但数据停在 **07-27**；enroll 闸 |
-| device_fingerprint device_id dim dwm dws | `sessions/tg-rotate-2026-09-01-0626.md` | 设备标签硬约束：主键/join 一律 **`device_fingerprint |
-| 04 04「不上 08 11 11「捡回来」+ 1「 | `sessions/tg-rotate-2026-09-01-0626.md` | 设备标签：08-04「不上 prod」**作废**；08-11「捡回来」+ 知秋 |
-| groups impl name params.sqlfile probes s | `sessions/tg-rotate-2026-09-01-0626.md` | 调度三层：`slots`（整点跑哪些组）→ `groups`（组内步顺序）→ ` |
-| full_chain full_chain.json group js json | `sessions/tg-rotate-2026-09-01-0626.md` | Spark pipeline-runner **加任务 = 写 SQL 文件 + |
-| explain full_chain.json lesson pipeline  | `sessions/tg-rotate-2026-09-01-0626.md` | [LESSON: spark-scheduler,pipeline-runner |
