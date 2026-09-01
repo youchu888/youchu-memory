@@ -56,11 +56,16 @@ sleep 0.8
 
 nav_info=""
 if [[ "$CAPTURE_ONLY" != true ]]; then
-  # deeplink 偶发不切换页面：连开两次 + 拉长等待
+  # 1) 先打开设备页，确认落到设置
+  open "tg://settings/devices" >/dev/null 2>&1 || true
+  sleep 1.2
+  # 2) 跳到别的设置再回来，逼客户端重新拉会话列表（否则长期停在同页，截图几乎不变）
+  open "tg://settings/privacy" >/dev/null 2>&1 || true
+  sleep 1.0
   open "tg://settings/devices" >/dev/null 2>&1 || true
   sleep 1.2
   open "tg://settings/devices" >/dev/null 2>&1 || true
-  nav_info="deeplink:tg://settings/devices×2"
+  nav_info="refresh:devices→privacy→devices×2"
   sleep 2.5
   osascript -e "tell application \"$TG_APP\" to activate" >/dev/null 2>&1 || true
   sleep 0.4

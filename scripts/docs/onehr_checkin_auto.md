@@ -13,6 +13,9 @@
 
 截图失败**禁止**回退目录里几天前的 PNG。只上传 3 分钟内新截的图。窗口定位用 CoreGraphics，不走 System Events。
 
+截图前会 **privacy → devices 往返一次**，逼客户端重新拉取会话列表（「在线」状态/排序可能更新）。
+「其他设备」的最后活跃时间/地点，仍取决于那些设备是否真的上线，脚本不能伪造。
+
 截图还必须通过 **设备管理页内容校验**（`onehr_tg_screenshot_validate`：体积 + Vision OCR）。聊天壁纸/风景图即便是刚截的也会拒绝上传；失败会重试并重新打开 `tg://settings/devices`。
 
 ## 组件

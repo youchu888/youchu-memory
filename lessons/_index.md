@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-01 | [设备标签/uid_map 主键用 device_fingerprint，无指纹丢](./2026-09-01-设备标签-uid_map-主键用-device_fingerprint-无指纹丢弃-改造顺序-u.md) | device-fingerprint,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-01 | [Spark 新任务只写 SQL+steps.json 挂槽不改 Scala；源 ](./2026-09-01-spark-新任务只写-sql-steps-json-挂槽不改-scala-源-_r-cast-.md) | spark-steps,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-01 | [告警驱动处置：prod 告警→验还在→找失败 SQL→download-log；](./2026-09-01-告警驱动处置-prod-告警-验还在-找失败-sql-download-log-确认事故可立刻修.md) | prod-monitor,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [加 Spark 任务只改 SQL + steps.json 挂槽位，tagTar](./2026-09-01-加-spark-任务只改-sql-steps-json-挂槽位-tagtargets-必填-先-.md) | spark-scheduler,pipeline-runner,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [判为 prod 事故后可直接改代码并立即修复，处理完再报；非事故 prod 变更](./2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报-非事故-prod-变更仍须等知秋-go.md) | prod-incident,authorization,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [prod 告警处置顺序：先分 env → 问此刻是否仍在发生（DS state=](./2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生-ds-state-1-不信-monit.md) | prod-monitor,oncall,session-rotate | 会话轮换前自动蒸馏 |

@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 01 09 2026 agent_session_rotate bus#7 | `~/.dc-platform/memory/lessons/2026-09-01-设备标签-uid_map-主键用-device_fingerprint-无指纹丢弃-改造顺序-u.md` | 2026-09-01-设备标签-uid_map-主键用-device_finge |
+| ## 01 09 2026 agent_session_rotate cast | `~/.dc-platform/memory/lessons/2026-09-01-spark-新任务只写-sql-steps-json-挂槽不改-scala-源-_r-cast-.md` | 2026-09-01-spark-新任务只写-sql-steps-json-挂槽 |
+| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-告警驱动处置-prod-告警-验还在-找失败-sql-download-log-确认事故可立刻修.md` | 2026-09-01-告警驱动处置-prod-告警-验还在-找失败-sql-do |
+| dim dwm dws pk uid_map 先落 | `sessions/tg-rotate-2026-09-01-1113.md` | 多步改造默认顺序：先落地缺的 **`uid_map`** → 再改 dim /  |
+| #7735 bus#7738 d」 od pr prod」的过期说法 | `sessions/tg-rotate-2026-09-01-1113.md` | bus#7738 覆盖了 #7735 里「先不上 prod」的过期说法，以较新交 |
+| #7 38 73 77 8） bu | `sessions/tg-rotate-2026-09-01-1113.md` | 设备标签（bus#7738）：主键改 **`device_fingerprint |
+| full_chain.json prod sandbox_steps_fragm | `sessions/tg-rotate-2026-09-01-1113.md` | 挂槽改造先用沙箱 `steps/sandbox_steps_fragment.j |
+| #7 35 5） 73 77 bu | `sessions/tg-rotate-2026-09-01-1113.md` | Spark 加任务（bus#7735）：**只写 SQL + `steps.js |
+| feedback mem memory memory_open playbook | `sessions/tg-rotate-2026-09-01-1113.md` | 约定变更后须同步改 `MEMORY_OPEN` / playbook / fee |
+| +牡 下发 不动 与修 丹搭 人下 | `sessions/tg-rotate-2026-09-01-1113.md` | 值班安排是又初+牡丹搭班，狂人下发六条判据与修复半径；没接到告警就不动，但告警漏 |
+| bus#7742 go 事故 事故授权 仍等 代码 | `sessions/tg-rotate-2026-09-01-1113.md` | bus#7742 事故授权：**确认是事故可立刻修（含改代码），修完再报**；日 |
+| download env lo log part_01 playbook | `sessions/tg-rotate-2026-09-01-1113.md` | 收到 **env=prod** 告警后固定链路：先验「此刻还在不在」→ 定位真失 |
+| bus#7738 device device_fingerpr device_f | `sessions/tg-rotate-2026-09-01-1113.md` | [LESSON: device-fingerprint/设备标签/uid_map |
+| 一次 不要 不要边做边猜 主人 人要 任务 | `sessions/tg-rotate-2026-09-01-1113.md` | 长任务按主人要求**定时私聊汇报**；卡点一次性列清选项私聊拍板，不要边做边猜 |
+| prod server_monitor 一套 不是 不是又初另起一套夜间全量巡检 | `sessions/tg-rotate-2026-09-01-1113.md` | prod 盯盘口径是**告警驱动**，不是又初另起一套夜间全量巡检；检测已在 ` |
 | ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-加-spark-任务只改-sql-steps-json-挂槽位-tagtargets-必填-先-.md` | 2026-09-01-加-spark-任务只改-sql-steps-json-挂 |
 | ## 01 09 2026 agent_session_rotate autho | `~/.dc-platform/memory/lessons/2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报-非事故-prod-变更仍须等知秋-go.md` | 2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报- |
 | ## 01 09 1h 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生-ds-state-1-不信-monit.md` | 2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生- |
@@ -30,18 +45,3 @@
 | .cursor as dd.md ia log mm | `sessions/tg-rotate-2026-08-30-2110.md` | 定稿路径：`.cursor/work-log/reports/日报-YYYY-M |
 | —— ——禁止润色 —禁 上传 上传铁律 不动 | `sessions/tg-rotate-2026-08-30-2110.md` | 上传铁律：**原封不动**——禁止润色、补字、改格式后再传 |
 | 「按 上传 不改写 不重 不重新生成 个上 | `sessions/tg-rotate-2026-08-30-2110.md` | 口语「按这个上传云端」= 以**已定稿**日报为准，**不重新生成、不改写**正 |
-| tg 「上 「上传云端」与写日报 」与 上传 与写 | `sessions/tg-rotate-2026-08-30-2110.md` | 「上传云端」与写日报、推 TG 是**独立指令**；主人单独说时才执行，写稿/推 |
-| ## 08 2026 29 agent_session_rotate agg | `~/.dc-platform/memory/lessons/2026-08-29-derived-比率指标-default_aggregation-留空-用分子-分母-fk-表达.md` | 2026-08-29-derived-比率指标-default_aggregat |
-| ## 08 2026 29 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bus-reply-对齐复核-禁止空等事前.md` | 2026-08-29-拍板-清库类任务主人说-不等点头-时-先执行落库-再-bu |
-| test 「已 一步 下一 下一步」 先实查 | `sessions/tg-rotate-2026-08-29-1656.md` | 汇报指标库进展：先实查 test 库再答，分「已过关 / 卡点 / 下一步」 |
-| 260 definition draft published req_ref 不 | `sessions/tg-rotate-2026-08-29-1656.md` | 260 条 draft 缺 `definition` + `req_ref`，不 |
-| 10 230 26 264 419 candidate | `sessions/tg-rotate-2026-08-29-1656.md` | 10 条 G4 四件套齐全；impl 419、candidate 230、存量  |
-| +约 10 1（ 260 as draft | `sessions/tg-rotate-2026-08-29-1656.md` | 指标库 Phase1（test）结构 v0.3 三表+约束已过关；lifecyc |
-| 12 agg derived fk g2 order_pa | `sessions/tg-rotate-2026-08-29-1656.md` | test 库曾清 12 条 derived 的 `agg=ratio`（含已 p |
-| bitmap_union_count count max min sum 仍是 | `sessions/tg-rotate-2026-08-29-1656.md` | 白名单仍是 `sum` / `count` / `bitmap_union_co |
-| default_aggregation derived fk g2 ratio  | `sessions/tg-rotate-2026-08-29-1656.md` | 指标库 G2：`ratio` 不在 `default_aggregation`  |
-| eh hr lesson ne on onehr打卡 | `sessions/tg-rotate-2026-08-29-1656.md` | [LESSON: onehr打卡/「打完卡通知」只加成功/失败后的 TG 私聊； |
-| agent bu bus bus协作 lesson reply | `sessions/tg-rotate-2026-08-29-1656.md` | [LESSON: agent-bus协作/拍板/清库类任务主人说「不等点头」时： |
-| 00 19 ap pi 下班 为验 | `sessions/tg-rotate-2026-08-29-1656.md` | 未到打卡窗（如下班 19:00 前）API 会拒；禁止为验通知提前/强制打卡 |
-| api ce er g5 ic published | `sessions/tg-rotate-2026-08-29-1656.md` | G5 应用层门禁（service 校验）未落地；API 尚未切概念层读，需更多正 |
-| bus 「不 不等 不等事前确认 不要 主人 | `sessions/tg-rotate-2026-08-29-1656.md` | 主人令「不要等狂人点头」：拍板类清库/改口径可先干完，再 bus 回执请他只读复 |

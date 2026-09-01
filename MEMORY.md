@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [设备标签/uid_map 主键用 device_fingerprint，](lessons/2026-09-01-设备标签-uid_map-主键用-device_fingerprint-无指纹丢弃-改造顺序-u.md) — 会话轮换蒸馏
+- [Spark 新任务只写 SQL+steps.json 挂槽不改 Scal](lessons/2026-09-01-spark-新任务只写-sql-steps-json-挂槽不改-scala-源-_r-cast-.md) — 会话轮换蒸馏
+- [告警驱动处置：prod 告警→验还在→找失败 SQL→download-](lessons/2026-09-01-告警驱动处置-prod-告警-验还在-找失败-sql-download-log-确认事故可立刻修.md) — 会话轮换蒸馏
 - [加 Spark 任务只改 SQL + steps.json 挂槽位，ta](lessons/2026-09-01-加-spark-任务只改-sql-steps-json-挂槽位-tagtargets-必填-先-.md) — 会话轮换蒸馏
 - [判为 prod 事故后可直接改代码并立即修复，处理完再报；非事故 pro](lessons/2026-09-01-判为-prod-事故后可直接改代码并立即修复-处理完再报-非事故-prod-变更仍须等知秋-go.md) — 会话轮换蒸馏
 - [prod 告警处置顺序：先分 env → 问此刻是否仍在发生（DS st](lessons/2026-09-01-prod-告警处置顺序-先分-env-问此刻是否仍在发生-ds-state-1-不信-monit.md) — 会话轮换蒸馏
