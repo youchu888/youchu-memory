@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 01 09 2026 agent_session_rotate base_ | `~/.dc-platform/memory/lessons/2026-09-01-req_ref-phase1-migration-phase1-存量指标无-prd-挂点时-用-.md` | 2026-09-01-req_ref-phase1-migration-phas |
+| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-device-fingerprint-_r-retention-四路-_r-保留期不一致时-禁止.md` | 2026-09-01-device-fingerprint-_r-retenti |
+| ## 01 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-01-agent-bus-review-wait-state-任务已交审或进入等-pass-状态时-立.md` | 2026-09-01-agent-bus-review-wait-state-任 |
+| entity event_ext fk） landi landing_page  | `sessions/tg-rotate-2026-09-01-1843.md` | 页面访问类指标 **entity 对齐 `event_ext` 用 `user` |
+| ad app_page_view+session draft→published | `sessions/tg-rotate-2026-09-01-1843.md` | 指标库 draft→published 推荐批次：**order → user_ |
+| diverged_pending enrich（definition entit | `sessions/tg-rotate-2026-09-01-1843.md` | **`diverged_pending` 一律 HOLD**：可 enrich（ |
+| base_name legacy metric_standard phase1  | `sessions/tg-rotate-2026-09-01-1843.md` | 指标库 Phase1 存量迁移：`req_ref` 可用过渡前缀 **`lega |
+| 13 15 17 19 pass 「等 | `sessions/tg-rotate-2026-09-01-1843.md` | **任务进入「等审/已交材料」后必须立刻取消后续定时进度推送**；只在有 PAS |
+| phase1） spark uid_map 仍须 他线 关改 | `sessions/tg-rotate-2026-09-01-1843.md` | 等审期间可并行其他线（如指标库 Phase1），但 Spark/uid_map  |
+| 07 13 50 dim dim（ last_active_time | `sessions/tg-rotate-2026-09-01-1843.md` | dim 活跃宇宙拍板 **选项 C**：login/page_view `_r` |
+| device_fingerprint dim dwm dwm_device_ui | `sessions/tg-rotate-2026-09-01-1843.md` | 设备标签 v2：主键改 `device_fingerprint`；顺序固定为 * |
+| device fingerprint lesson retention sql  | `sessions/tg-rotate-2026-09-01-1843.md` | [LESSON: uid_map/device-fingerprint/_r-r |
+| agent bus lesson pass progress review | `sessions/tg-rotate-2026-09-01-1843.md` | [LESSON: tg-progress/agent-bus-review/wa |
+| 13 15 17 19 pass 「等 | `sessions/tg-rotate-2026-09-01-1843.md` | 任务进入「等审/已交材料」后必须立刻取消后续定时进度推送**；只在有 PASS/ |
+| explain pass push review ss ssh | `sessions/tg-rotate-2026-09-01-1843.md` | 沙箱 explain：**材料 push 完 → 交狂人 review → 收到 |
 | ## 01 09 2026 agent_session_rotate bus#7 | `~/.dc-platform/memory/lessons/2026-09-01-设备标签-uid_map-主键用-device_fingerprint-无指纹丢弃-改造顺序-u.md` | 2026-09-01-设备标签-uid_map-主键用-device_finge |
 | ## 01 09 2026 agent_session_rotate cast | `~/.dc-platform/memory/lessons/2026-09-01-spark-新任务只写-sql-steps-json-挂槽不改-scala-源-_r-cast-.md` | 2026-09-01-spark-新任务只写-sql-steps-json-挂槽 |
 | ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-告警驱动处置-prod-告警-验还在-找失败-sql-download-log-确认事故可立刻修.md` | 2026-09-01-告警驱动处置-prod-告警-验还在-找失败-sql-do |
@@ -30,18 +45,3 @@
 | groups impl name params.sqlfile probes s | `sessions/tg-rotate-2026-09-01-0626.md` | 调度三层：`slots`（整点跑哪些组）→ `groups`（组内步顺序）→ ` |
 | full_chain full_chain.json group js json | `sessions/tg-rotate-2026-09-01-0626.md` | Spark pipeline-runner **加任务 = 写 SQL 文件 + |
 | explain full_chain.json lesson pipeline  | `sessions/tg-rotate-2026-09-01-0626.md` | [LESSON: spark-scheduler,pipeline-runner |
-| 1h dependent download ds env failure | `sessions/tg-rotate-2026-09-01-0626.md` | [LESSON: prod-monitor,oncall/prod 告警处置顺序 |
-| #7735 60 ack agent bus cursor | `sessions/tg-rotate-2026-09-01-0626.md` | agent-bus 派单：同一 Cursor 主会话处理，**60 秒内 ACK |
-| 04.dws docs dws_app_event_funnel_d_d eve | `sessions/tg-rotate-2026-09-01-0626.md` | 大漏斗按已定稿口径写：`docs/event_dictionary_big_fu |
-| ... cast dt explain full_chain.json paim | `sessions/tg-rotate-2026-09-01-0626.md` | Spark SQL 硬规矩：源表用 `_r` 版；`_r` 数值列 VARCHA |
-| .cursor dd.md log markdown mm reports | `sessions/tg-rotate-2026-09-01-0626.md` | 日报「上传云端」须以定稿 Markdown **原封不动**落盘（`.curso |
-| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-08-31-1108.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
-| tg 上传 作日 六等 关系 即可 | `sessions/tg-rotate-2026-08-30-2110.md` | 周六等非工作日同样适用：有定稿即可上传，与 TG 推送日程无绑定关系 |
-| id inserted 「未 云端 云端记录 功回 | `sessions/tg-rotate-2026-08-30-2110.md` | 成功回执应含四要素：**日期**、**云端记录 ID**、**状态**（如 `i |
-| api code ep.jsyyds.com https report subm | `sessions/tg-rotate-2026-08-30-2110.md` | API：`https://ep.jsyyds.com/api/v1/report |
-| config.js downloads git 不进 作报 凭证读 | `sessions/tg-rotate-2026-08-30-2110.md` | 凭证读 `~/Downloads/工作报告/config.js`（apiToke |
-| .cursor date dd mm python3 scripts | `sessions/tg-rotate-2026-08-30-2110.md` | 标准脚本：`python3 .cursor/scripts/upload_wor |
-| 上传 与上 传脚 位定 原样 原样上传 | `sessions/tg-rotate-2026-08-30-2110.md` | 开工顺序：定位定稿 → 核对正文与上传脚本 → **原样上传** → 回报结果 |
-| .cursor as dd.md ia log mm | `sessions/tg-rotate-2026-08-30-2110.md` | 定稿路径：`.cursor/work-log/reports/日报-YYYY-M |
-| —— ——禁止润色 —禁 上传 上传铁律 不动 | `sessions/tg-rotate-2026-08-30-2110.md` | 上传铁律：**原封不动**——禁止润色、补字、改格式后再传 |
-| 「按 上传 不改写 不重 不重新生成 个上 | `sessions/tg-rotate-2026-08-30-2110.md` | 口语「按这个上传云端」= 以**已定稿**日报为准，**不重新生成、不改写**正 |

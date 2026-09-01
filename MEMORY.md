@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [req_ref|phase1-migration|Phase1 存量指标](lessons/2026-09-01-req_ref-phase1-migration-phase1-存量指标无-prd-挂点时-用-.md) — 会话轮换蒸馏
+- [device-fingerprint|_r-retention|四路 `](lessons/2026-09-01-device-fingerprint-_r-retention-四路-_r-保留期不一致时-禁止.md) — 会话轮换蒸馏
+- [agent-bus-review|wait-state|任务已交审或进入](lessons/2026-09-01-agent-bus-review-wait-state-任务已交审或进入等-pass-状态时-立.md) — 会话轮换蒸馏
 - [设备标签/uid_map 主键用 device_fingerprint，](lessons/2026-09-01-设备标签-uid_map-主键用-device_fingerprint-无指纹丢弃-改造顺序-u.md) — 会话轮换蒸馏
 - [Spark 新任务只写 SQL+steps.json 挂槽不改 Scal](lessons/2026-09-01-spark-新任务只写-sql-steps-json-挂槽不改-scala-源-_r-cast-.md) — 会话轮换蒸馏
 - [告警驱动处置：prod 告警→验还在→找失败 SQL→download-](lessons/2026-09-01-告警驱动处置-prod-告警-验还在-找失败-sql-download-log-确认事故可立刻修.md) — 会话轮换蒸馏

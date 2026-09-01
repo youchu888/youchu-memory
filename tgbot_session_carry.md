@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-09-01 · 最新归档：`sessions/tg-rotate-2026-09-01-1113.md`
+> 更新：2026-09-01 · 最新归档：`sessions/tg-rotate-2026-09-01-1843.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 沙箱 explain：**材料 push 完 → 交狂人 review → 收到 PASS 再跑**；未审过禁止先 SSH 试跑。
+- 任务进入「等审/已交材料」后必须立刻取消后续定时进度推送**；只在有 PASS/打回或状态变更时主动通知，禁止 13/15/17/19 式刷屏。
+- [LESSON: tg-progress|agent-bus-review|wait-state|任务已交审或进入等 PASS 状态时，立即取消所有定时进度提醒；仅在审结、打回或需拍板时再私聊通知]
+- [LESSON: uid_map|device-fingerprint|_r-retention|四路 `_r` 保留期不一致时，禁止用统一全表扫描默认「生涯首次/换号」语义；须显式分路定义或统一窗口，并在方案/SQL 注释写死字段含义]
+- 设备标签 v2：主键改 `device_fingerprint`；顺序固定为 **先 `dwm_device_uid_map_d` → 再 dim / 六张 dwm / `dws_device_tag_d_d`**，审过前下游一律 HOLD。
+- dim 活跃宇宙拍板 **选项 C**：login/page_view `_r` 只认近约 50 天；07-13 前沉默设备不进 dim（`last_login_time` / `last_active_time` 相关逻辑按此收敛）。
+- 等审期间可并行其他线（如指标库 Phase1），但 Spark/uid_map 相关改动仍须等审结，有卡点再私聊拍板。
+- **任务进入「等审/已交材料」后必须立刻取消后续定时进度推送**；只在有 PASS/打回或状态变更时主动通知，禁止 13/15/17/19 式刷屏。
+- 指标库 Phase1 存量迁移：`req_ref` 可用过渡前缀 **`legacy:metric_standard/<base_name>`**；有真实 PRD/session 后再替换，不动已 published 口径。
+- **`diverged_pending` 一律 HOLD**：可 enrich（definition/entity/event），**不升 published**；等口径对齐或 P2 消歧后再推。
+- 指标库 draft→published 推荐批次：**order → user_register+user_login → ad → app_page_view+session → video 单独批 → other 先归类再推**；retention 量小不优先。
+- 页面访问类指标 **entity 对齐 `event_ext` 用 `user`**，不能用 `page`/`landing_page`（会撞 FK）。
+- Spark 指纹改造催审重点：**bus#7756 / #7760**，仓库 commit **`2f95e122`**；背景规则见 **#7735 / #7738**。
+- bus#7778 新阻断：四路 `_r` **保留期不齐**（register/order ~243 天 vs login/page_view ~50 天）；写法层已过，卡在 **uid_map 全表重算时字段语义混用两种历史窗口**。
+- **dim 选项 C ≠ uid_map 字段定义**：C 管「谁进 dim」；uid_map 的 `first_uid`/`uid_cnt`/`last_uid_dt` 须单独定案，不能靠 `WHERE dt <= '${DT}'` 四路 UNION 默认拼成「真全史首次」。
 - prod 盯盘口径是**告警驱动**，不是又初另起一套夜间全量巡检；检测已在 `server_monitor`（54.255.236.159），禁止再造监控
 - 长任务按主人要求**定时私聊汇报**；卡点一次性列清选项私聊拍板，不要边做边猜
 - [LESSON: device-fingerprint|设备标签/uid_map 主键用 device_fingerprint，无指纹丢弃；改造顺序 uid_map→dim/dwm/dws，以 bus#7738 覆盖旧 prod 禁令]
-- 收到 **env=prod** 告警后固定链路：先验「此刻还在不在」→ 定位真失败 SQL → `download-log` 判因 → 从 playbook `part_01` 起处置
-- bus#7742 事故授权：**确认是事故可立刻修（含改代码），修完再报**；日常非事故变更仍等知秋 GO
-- 值班安排是又初+牡丹搭班，狂人下发六条判据与修复半径；没接到告警就不动，但告警漏接算值班未站稳
-- 约定变更后须同步改 `MEMORY_OPEN` / playbook / feedback，并推到 youchu-memory 供双机拉齐
-- Spark 加任务（bus#7735）：**只写 SQL + `steps.json` 挂槽位，不改 Scala**；源表用 `_r`、数值列入口 CAST、`tagTargets` 必填、`${DT}`/`${OUT_DB}`、行为键 `UPPER(TRIM)`
-- 挂槽改造先用沙箱 `steps/sandbox_steps_fragment.json`，**未验证前别动 prod `full_chain.json`**
-- 设备标签（bus#7738）：主键改 **`device_fingerprint`**，`device_id` 仅附属；无指纹行丢弃；拦阻已解除，等 pipeline-runner 接上
-- bus#7738 覆盖了 #7735 里「先不上 prod」的过期说法，以较新交底为准
-- 多步改造默认顺序：先落地缺的 **`uid_map`** → 再改 dim / 六张 dwm / dws 宽表 PK
-- dim 重建若 `_r` 只保留约 50 天，07-13 前沉默设备的 `last_login_time` / `last_active_time` 需业务拍板（置空 / 保留旧 dim / 只认近 50 天）
-- 日报「上传云端」须以定稿 Markdown **原封不动**落盘（`.cursor/work-log/reports/日报-YYYY-MM-DD.md`）再跑 `upload_work_report.py`，禁止改写后再传
-- Spark SQL 硬规矩：源表用 `_r` 版；`_r` 数值列 VARCHAR 须 CAST；天表只 `WHERE dt='${DT}'`；必须幂等；paimon 列顺序对齐；验收先 `run_test.sh run --step=... --explain`，**别动生产 `full_chain.json`**
-- 大漏斗按已定稿口径写：`docs/event_dictionary_big_funnel_20260801.html` + 平台 `metric_big_funnel_event_dictionary`；仓库骨架在 `ops_system/04.dws/dws_app_event_funnel_d_d/spark/`（metrics + wide 两阶段），不重开口径
-- agent-bus 派单：同一 Cursor 主会话处理，**60 秒内 ACK → 干完 reply 结案**；reply 成功前不 mark 结案；引用历史结论前须核对是否已被后续决策作废（如设备标签 #7735 过期说法）
-- [LESSON: prod-monitor,oncall|prod 告警处置顺序：先分 env → 问此刻是否仍在发生（DS state=1，不信 monitor 快 1h 的时间戳）→ 追首个 FAILURE 真 task → download-log 取证，禁信根因字段与 DEPENDENT]
 
