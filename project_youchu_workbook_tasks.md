@@ -4,7 +4,7 @@
 > **另**：大活自开也要登「自开任务」+ `workbook_supplemental.json`  
 > **更新规则**：每读到新簿 → 立刻整表覆盖 task 板；**群内进展只报「截至汇报日前一日」**，当天实活写 work-log、次日 09:01 再报  
 > **当前团队簿日期**：`2026-09-01`（项 1 页面统计 · 项 2 渠道归因影子序列）  
-> **上次更新**：2026-09-02 11:28 Asia/Shanghai（主人令：页面访问/归因不盯卡点，日常维护继续）
+> **上次更新**：2026-09-02 17:29 Asia/Shanghai（多线推进；库链路卡点已 TG）
 
 ## 团队簿主责（2026-09-01 · 狂人 09:00 簿）
 
@@ -24,9 +24,9 @@
 
 | 代号 | 任务 | 状态 | 2026-09-01 实活 |
 |------|------|------|-----------------|
-| YC-SPARK-UID | 设备标签指纹 + uid_map（bus#7738/#7787/#7814） | **改阻断中** | #7814 不 PASS（两处阻断）；inbox 漏正文 → bus#7828 请狂人重发；TG 已私聊主人；收到即改 |
-| YC-SPARK-FUNNEL | 大漏斗 Spark（bus#7735） | **等狂人复审** | stage SQL + sandbox steps 已在 `2f95e122`；与 uid_map 同链 bus#7760/#7756 |
-| YC-METRIC-P1 | 指标库 Phase1 数据层 | **进行中** | published 约 **10→106**；diverged 全 HOLD；4 批脚本在 `docs/` **未 commit** |
+| YC-SPARK-UID | 设备标签指纹 + uid_map（#7738/#7787/#7830） | **等复审 PASS** | `bb905feb` 已按 #7830 四点改完（#7831）；enroll=P2；PASS 前 dim/dwm/宽表 HOLD |
+| YC-SPARK-FUNNEL | 大漏斗 Spark（#7735） | **sandbox 已对齐待入库** | 本地补 `OUT_DB=test.dws` + `tagTargets=test.dws.*`（对齐 uid_map 审阅口径）；bus#7834 已报狂人；待说入库再 push |
+| YC-METRIC-P1 | 指标库 Phase1 数据层 | **卡网络** | order/user/ad/page 已推至约 published106；下一批 video 脚本 `docs/metric_library_phase1_enrich_publish_video_batch_20260902.py` 已写；本机 metadata/SR TCP→HTTP404，TG#9514 |
 
 ## 非又初（知会，勿冒领）
 
@@ -41,6 +41,7 @@
 
 | 日期 | 变更 |
 |------|------|
+| 2026-09-02 | 多线推进：uid_map=`bb905feb` 等复审；大漏斗 sandbox 对齐 test.dws；指标库 video 脚本就绪但 metadata/SR 网络劫持 |
 | 2026-09-02 | 主人令：页面访问/归因 **不盯卡点**（分区巡检、日常扫链继续；灰度/口径等产品线卡点等有安排再动） |
 | 2026-09-02 | uid_map #7787 口径补 push；本机 pull 对齐 `e5132b22` |
 | 2026-09-01 | **整表刷新**：对齐 09-01 团队簿；补 Spark 指纹/大漏斗/指标库 Phase1/prod 值班；页面停留改 HOLD |
