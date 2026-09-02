@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-02 | [DB 连不上先验 VPN/网络，勿先断密码过期](./2026-09-02-db-connect-fail-vpn-before-blame-password.md) | my.cnf,vpn,starrocks,network | 1045≠密码过期；对照平台 API cred+VPN 稳定后复测 |
 | 2026-09-02 | [任务要自主往下推；卡点用 TG 私聊问主人，勿等主人追问](./2026-09-02-任务要自主往下推-卡点用-tg-私聊问主人-勿等主人追问.md) | autonomy,tg-dm,agent-bus,workflow | 审回执/下一步直接干；卡点私聊+ bus 要材料 |
 | 2026-09-02 | [定稿推 TG ≠ 已上传云端；核对须分开查 dm_posted 与 upload](./2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md) | daily-report,cloud-upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [OneHR 设备页必须设置侧栏非聊天 overlay](./2026-09-01-OneHR设备页必须设置侧栏非聊天overlay.md) | onehr, punch, screenshot | privacy往返致左聊天右设备；改 settings→devices + 侧栏 OCR |

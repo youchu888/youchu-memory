@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [DB 连不上先验 VPN/网络，勿先断密码过期](lessons/2026-09-02-db-connect-fail-vpn-before-blame-password.md) — 1045 须对照平台 API + VPN 复测
 - [定稿推 TG ≠ 已上传云端；核对须分开查 dm_posted 与 up](lessons/2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md) — 会话轮换蒸馏
 - [任务要自主往下推；卡点用 TG 私聊问主人，勿等主人追问](lessons/2026-09-02-任务要自主往下推-卡点用-tg-私聊问主人-勿等主人追问.md) — 审回执直接干；卡点私聊
 - [指纹/uid_map 本地改完须 push 并请知秋再审 PASS 后才](lessons/2026-09-01-指纹-uid_map-本地改完须-push-并请知秋再审-pass-后才可沙箱四步-未-pass.md) — 会话轮换蒸馏
