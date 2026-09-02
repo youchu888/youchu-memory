@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-03 | [日报云端上传须主人指令触发；定稿原样传，追问时用记录 ID 复核而非重传](./2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id-复核而非重传.md) | daily-report-cloud,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-03 | [沙箱 explain 必须用 run_test.sh，禁止 run_step_o](./2026-09-03-沙箱-explain-必须用-run_test-sh-禁止-run_step_once-sh.md) | sandbox-explain,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-03 | [换 VPN 后会话 resume 易断，连接失败时让用户「重启 agent」并接](./2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户-重启-agent-并接上上一轮任务续做.md) | cursor-vpn,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-02 | [DB 连不上先验 VPN/网络，勿先断密码过期](./2026-09-02-db-connect-fail-vpn-before-blame-password.md) | my.cnf,vpn,starrocks,network | 1045≠密码过期；对照平台 API cred+VPN 稳定后复测 |
 | 2026-09-02 | [任务要自主往下推；卡点用 TG 私聊问主人，勿等主人追问](./2026-09-02-任务要自主往下推-卡点用-tg-私聊问主人-勿等主人追问.md) | autonomy,tg-dm,agent-bus,workflow | 审回执/下一步直接干；卡点私聊+ bus 要材料 |
 | 2026-09-02 | [定稿推 TG ≠ 已上传云端；核对须分开查 dm_posted 与 upload](./2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md) | daily-report,cloud-upload,session-rotate | 会话轮换前自动蒸馏 |

@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [日报云端上传须主人指令触发；定稿原样传，追问时用记录 ID 复核而非重传](lessons/2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id-复核而非重传.md) — 会话轮换蒸馏
+- [沙箱 explain 必须用 run_test.sh，禁止 run_st](lessons/2026-09-03-沙箱-explain-必须用-run_test-sh-禁止-run_step_once-sh.md) — 会话轮换蒸馏
+- [换 VPN 后会话 resume 易断，连接失败时让用户「重启 agen](lessons/2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户-重启-agent-并接上上一轮任务续做.md) — 会话轮换蒸馏
 - [DB 连不上先验 VPN/网络，勿先断密码过期](lessons/2026-09-02-db-connect-fail-vpn-before-blame-password.md) — 1045 须对照平台 API + VPN 复测
 - [定稿推 TG ≠ 已上传云端；核对须分开查 dm_posted 与 up](lessons/2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md) — 会话轮换蒸馏
 - [任务要自主往下推；卡点用 TG 私聊问主人，勿等主人追问](lessons/2026-09-02-任务要自主往下推-卡点用-tg-私聊问主人-勿等主人追问.md) — 审回执直接干；卡点私聊

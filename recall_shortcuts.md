@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 03 09 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id-复核而非重传.md` | 2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id |
+| ## 03 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-03-沙箱-explain-必须用-run_test-sh-禁止-run_step_once-sh.md` | 2026-09-03-沙箱-explain-必须用-run_test-sh-禁止 |
+| ## 03 09 2026 ag agent | `~/.dc-platform/memory/lessons/2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户-重启-agent-并接上上一轮任务续做.md` | 2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户- |
+| 上传 不到 优先 传失 假定 先提 | `sessions/tg-rotate-2026-09-03-0615.md` | 填报页查不到时优先提示按日期筛选/刷新缓存，而非假定上传失败 |
+| dd.md log memory mm reports work | `sessions/tg-rotate-2026-09-03-0615.md` | 日报上传云端仅在主人明说「上传云端」时执行；稿源用 memory 定稿 `wor |
+| 00~23 ap app_filter_e app） d_d metric_st | `sessions/tg-rotate-2026-09-03-0615.md` | 大漏斗沙箱打回三类修法：`params.render` 补 `app_filte |
+| ag agent」强制新开 cursor en ge nt | `sessions/tg-rotate-2026-09-03-0615.md` | VPN 切换后 Cursor 会话 resume 可能失败；提示用户重发指令或发 |
+| explain lesson run_s run_step_once.sh ru | `sessions/tg-rotate-2026-09-03-0615.md` | [LESSON: sandbox-explain/沙箱 explain 必须用  |
+| d） ed er id in ns | `sessions/tg-rotate-2026-09-03-0615.md` | 上传成功应回传：日期、云端记录 ID、首次状态（inserted）；主人追问「没 |
+| #7 38 60 78 83 8） | `sessions/tg-rotate-2026-09-03-0615.md` | 复审派单（bus#7838）闭环：60 秒内 ACK → 改完 push → r |
+| cast create daily database exists first | `sessions/tg-rotate-2026-09-03-0615.md` | uid_map 沙箱 PASS 门槛：daily SQL 内嵌 `CREATE  |
+| explain run_step_once.sh run_test.sh 已明  | `sessions/tg-rotate-2026-09-03-0615.md` | 沙箱 explain 统一走 `run_test.sh`，禁止用 `run_st |
+| date dev everything git origin pus | `sessions/tg-rotate-2026-09-03-0615.md` | 「换了 VPN 重新推」标准动作：先 `git status` / 对比 `or |
 | ## 02 09 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md` | 2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted |
 | tg 「昨 」→ 三件 上传 主人 | `sessions/tg-rotate-2026-09-02-0913.md` | 主人问「昨天日报有没有上传云端」→ 先核三件套：**定稿是否存在 / TG 是否 |
 | id inserted record 云端 传成 功回 | `sessions/tg-rotate-2026-09-02-0913.md` | 补传成功回执应含：日期、云端 record ID、状态（如 `inserted` |
@@ -32,16 +45,3 @@
 | ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-task-板与-work-log-超过-1-天未对齐即执行缺口-先刷新-task-板再答进展问.md` | 2026-09-01-task-板与-work-log-超过-1-天未对齐即执行 |
 | ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-workbook_progress_service-增补项必须读-workbook_supple.md` | 2026-09-01-workbook_progress_service-增补项 |
 | ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-读到群簿或有大活交付后-当天同步-task-板-supplemental-work-log-大活.md` | 2026-09-01-读到群簿或有大活交付后-当天同步-task-板-suppl |
-| bus force log push repost supplemental | `sessions/tg-rotate-2026-09-01-2142.md` | **大活交付须触发二次同步**：push / 交审 / 批处理 / bus 口径 |
-| 01 09 log or push） rk | `sessions/tg-rotate-2026-09-01-2142.md` | **09:01 自动汇报 ≠ 全天闭环**：定时发送若早于当天实活（work-l |
-| #13 00 09 log pinned projec | `sessions/tg-rotate-2026-09-01-2142.md` | **PINNED #13 铁律**：读到 09:00 群工作簿或当天有新进展 → |
-| .cursor .m bus log md project_youchu_wor | `sessions/tg-rotate-2026-09-01-2142.md` | **工作簿三件套须同频**：`project_youchu_workbook_t |
-| lesson local_tracking_items workbook wor | `sessions/tg-rotate-2026-09-01-2142.md` | [LESSON: workbook/workbook_progress_serv |
-| 01 09 lesson log supplemental task | `sessions/tg-rotate-2026-09-01-2142.md` | [LESSON: workbook/读到群簿或有大活交付后，当天同步 task  |
-| dim hold hold」 pass push spark | `sessions/tg-rotate-2026-09-01-2142.md` | Spark/复审链状态表达**：代码本地已改但未 push、等狂人 PASS 前 |
-| log task work 「为 」时 不复 | `sessions/tg-rotate-2026-09-01-2142.md` | 进展汇报答问顺序**：先核对 task 板、work-log、各专项实态，再汇总 |
-| json local_tra local_tracking_items work | `sessions/tg-rotate-2026-09-01-2142.md` | 代码与配置须真读 JSON**：`workbook_progress_servi |
-| 00 01 09 11 一句 一次 | `sessions/tg-rotate-2026-09-01-2142.md` | 11:00 后仍有交付**：不要只依赖 09:01 一次；应自动补发或私聊一句实 |
-| #13 00 09 log pinned project | `sessions/tg-rotate-2026-09-01-2142.md` | PINNED #13 铁律**：读到 09:00 群工作簿或当天有新进展 → * |
-| .cursor .m bus log md project_youchu_wor | `sessions/tg-rotate-2026-09-01-2142.md` | 工作簿三件套须同频**：`project_youchu_workbook_tas |
-| ## 01 09 2026 agent_session_rotate base_ | `~/.dc-platform/memory/lessons/2026-09-01-req_ref-phase1-migration-phase1-存量指标无-prd-挂点时-用-.md` | 2026-09-01-req_ref-phase1-migration-phas |
