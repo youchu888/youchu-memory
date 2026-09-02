@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [定稿推 TG ≠ 已上传云端；核对须分开查 dm_posted 与 up](lessons/2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md) — 会话轮换蒸馏
 - [指纹/uid_map 本地改完须 push 并请知秋再审 PASS 后才](lessons/2026-09-01-指纹-uid_map-本地改完须-push-并请知秋再审-pass-后才可沙箱四步-未-pass.md) — 会话轮换蒸馏
 - [主人要任务进度时用人话逐项写节点/卡点/需确认项，并实查 task 板+](lessons/2026-09-01-主人要任务进度时用人话逐项写节点-卡点-需确认项-并实查-task-板-work-log-git.md) — 会话轮换蒸馏
 - [09:01 群进展/工作簿只写 T-1 截止累计进度；当天实活写 wor](lessons/2026-09-01-09-01-群进展-工作簿只写-t-1-截止累计进度-当天实活写-work-log-次日工作簿再.md) — 会话轮换蒸馏

@@ -1,10 +1,18 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-09-01 · 最新归档：`sessions/tg-rotate-2026-09-01-2244.md`
+> 更新：2026-09-02 · 最新归档：`sessions/tg-rotate-2026-09-02-0913.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」）。
+- 日报定稿后**默认只推 TG**，**不会自动上传云端**；云端上传须主人明确说「上传云端」
+- 核对「是否已上传云端」：查当日 work-log 有无 `upload_work_report.py` 执行记录，**不能**因 TG 已推就推断云端已传
+- TG 是否已推：查 `.daily_report_dm_posted.json`（含推送时间戳）
+- 定稿稿源：`~/.dc-platform/memory/work-log/reports/日报-YYYY-MM-DD.md`；本地镜像 `.cursor/work-log/reports/日报-YYYY-MM-DD.md`
+- 历史日报可补传：定稿仍在则跑 `python3 .cursor/scripts/upload_work_report.py --date YYYY-MM-DD`，**原稿原样**上传，上传前不改字
+- 补传成功回执应含：日期、云端 record ID、状态（如 `inserted`）；让用户在填报页按日期核对
+- 主人问「昨天日报有没有上传云端」→ 先核三件套：**定稿是否存在 / TG 是否已推 / 云端是否已传**，分项回报
 - 工作簿口径**：09:01 群进展只写「截至汇报日之前」的累计状态（等同 T-1 截止）；当天新干的活进 work-log，**次日**工作簿再报，禁止混进当天那份。
 - 进度汇报约定**（#450）：说人话；每项写「节点 / 卡点 / 要不要主人拍板」；实查 task 板、work-log、本地代码、git，禁止凭印象。
 - 设备指纹 + uid 映射**（最高优先）：bus#7787 定起点 **2026-08-01**；本地 SQL/spec 已改，远程仍 `2f95e122`；push → 请知秋再审 → PASS → 沙箱四步；dim / 六张 dwm / 宽表 **全 HOLD**。
@@ -15,12 +23,4 @@
 - [LESSON: fingerprint,uid-map,HOLD|指纹/uid_map 本地改完须 push 并请知秋再审 PASS 后才可沙箱四步；未 PASS 前 dim/dwm/宽表一律 HOLD]
 - **工作簿口径**：09:01 群进展只写「截至汇报日之前」的累计状态（等同 T-1 截止）；当天新干的活进 work-log，**次日**工作簿再报，禁止混进当天那份。
 - **举例**：9/1 晚上 push uid_map → 9/1 工作簿不报；9/2 写「9/1 截止：本地已改完，待 push / 待再审」。
-- **task 板分两块**：「截至汇报前」vs「当日实活（不进当天群进展）」，整理时先对齐口径再填。
-- **进度汇报约定**（#450）：说人话；每项写「节点 / 卡点 / 要不要主人拍板」；实查 task 板、work-log、本地代码、git，禁止凭印象。
-- **设备指纹 + uid 映射**（最高优先）：bus#7787 定起点 **2026-08-01**；本地 SQL/spec 已改，远程仍 `2f95e122`；push → 请知秋再审 → PASS → 沙箱四步；dim / 六张 dwm / 宽表 **全 HOLD**。
-- **大漏斗 Spark**：与 uid_map 同交审链（bus#7756/#7760）；等 PASS，prod 未动。
-- **指标库 Phase1**：test published 约 10→106；**diverged 全 HOLD**，只 enrich 不升正式；4 批脚本在 `docs/` 未 commit；video ~29、other ~112 待归类；顺序 legacy req_ref → user/login → ad → page → video…
-- 工作簿三件套须同频**：`project_youchu_workbook_tasks.md`（权威任务板）、`workbook_supplemental.json`（自开/增补项）、`.cursor/work-log/当日.md` 必须按**当天实活**一起更新；只写 work-log 不回写 task 板，群/bus 进展就会和 reality 脱节。
-- PINNED #13 铁律**：读到 09:00 群工作簿或当天有新进展 → **当天内整表覆盖** `project_youchu_workbook_tasks.md`；大活自开也要登「自开任务」，不能只记 work-log。
-- 11:00 后仍有交付**：不要只依赖 09:01 一次；应自动补发或私聊一句实态摘要，避免下午活漏报。
 

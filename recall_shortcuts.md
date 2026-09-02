@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 02 09 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md` | 2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted |
+| tg 「昨 」→ 三件 上传 主人 | `sessions/tg-rotate-2026-09-02-0913.md` | 主人问「昨天日报有没有上传云端」→ 先核三件套：**定稿是否存在 / TG 是否 |
+| id inserted record 云端 传成 功回 | `sessions/tg-rotate-2026-09-02-0913.md` | 补传成功回执应含：日期、云端 record ID、状态（如 `inserted` |
+| .cursor date dd mm python3 scripts | `sessions/tg-rotate-2026-09-02-0913.md` | 历史日报可补传：定稿仍在则跑 `python3 .cursor/scripts/ |
+| .cursor .dc dd.m dd.md log memory | `sessions/tg-rotate-2026-09-02-0913.md` | 定稿稿源：`~/.dc-platform/memory/work-log/rep |
+| .daily_report_dm_posted.json tg 否已 含推 已推 | `sessions/tg-rotate-2026-09-02-0913.md` | TG 是否已推：查 `.daily_report_dm_posted.json` |
+| log tg upload_work_report.py work 「是 上传 | `sessions/tg-rotate-2026-09-02-0913.md` | 核对「是否已上传云端」：查当日 work-log 有无 `upload_work |
+| tg 「上 上传 不会 不会自动上传云端 主人 | `sessions/tg-rotate-2026-09-02-0913.md` | 日报定稿后**默认只推 TG**，**不会自动上传云端**；云端上传须主人明确说 |
+| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-09-02-0913.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-指纹-uid_map-本地改完须-push-并请知秋再审-pass-后才可沙箱四步-未-pass.md` | 2026-09-01-指纹-uid_map-本地改完须-push-并请知秋再审- |
 | ## +w 01 09 2026 agent | `~/.dc-platform/memory/lessons/2026-09-01-主人要任务进度时用人话逐项写节点-卡点-需确认项-并实查-task-板-work-log-git.md` | 2026-09-01-主人要任务进度时用人话逐项写节点-卡点-需确认项-并实查- |
 | ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-09-01-群进展-工作簿只写-t-1-截止累计进度-当天实活写-work-log-次日工作簿再.md` | 2026-09-01-09-01-群进展-工作簿只写-t-1-截止累计进度-当天 |
@@ -36,12 +45,3 @@
 | #13 00 09 log pinned project | `sessions/tg-rotate-2026-09-01-2142.md` | PINNED #13 铁律**：读到 09:00 群工作簿或当天有新进展 → * |
 | .cursor .m bus log md project_youchu_wor | `sessions/tg-rotate-2026-09-01-2142.md` | 工作簿三件套须同频**：`project_youchu_workbook_tas |
 | ## 01 09 2026 agent_session_rotate base_ | `~/.dc-platform/memory/lessons/2026-09-01-req_ref-phase1-migration-phase1-存量指标无-prd-挂点时-用-.md` | 2026-09-01-req_ref-phase1-migration-phas |
-| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-device-fingerprint-_r-retention-四路-_r-保留期不一致时-禁止.md` | 2026-09-01-device-fingerprint-_r-retenti |
-| ## 01 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-01-agent-bus-review-wait-state-任务已交审或进入等-pass-状态时-立.md` | 2026-09-01-agent-bus-review-wait-state-任 |
-| entity event_ext fk） landi landing_page  | `sessions/tg-rotate-2026-09-01-1843.md` | 页面访问类指标 **entity 对齐 `event_ext` 用 `user` |
-| ad app_page_view+session draft→published | `sessions/tg-rotate-2026-09-01-1843.md` | 指标库 draft→published 推荐批次：**order → user_ |
-| diverged_pending enrich（definition entit | `sessions/tg-rotate-2026-09-01-1843.md` | **`diverged_pending` 一律 HOLD**：可 enrich（ |
-| base_name legacy metric_standard phase1  | `sessions/tg-rotate-2026-09-01-1843.md` | 指标库 Phase1 存量迁移：`req_ref` 可用过渡前缀 **`lega |
-| 13 15 17 19 pass 「等 | `sessions/tg-rotate-2026-09-01-1843.md` | **任务进入「等审/已交材料」后必须立刻取消后续定时进度推送**；只在有 PAS |
-| phase1） spark uid_map 仍须 他线 关改 | `sessions/tg-rotate-2026-09-01-1843.md` | 等审期间可并行其他线（如指标库 Phase1），但 Spark/uid_map  |
-| 07 13 50 dim dim（ last_active_time | `sessions/tg-rotate-2026-09-01-1843.md` | dim 活跃宇宙拍板 **选项 C**：login/page_view `_r` |

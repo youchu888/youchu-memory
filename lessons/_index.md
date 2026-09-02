@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-02 | [定稿推 TG ≠ 已上传云端；核对须分开查 dm_posted 与 upload](./2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md) | daily-report,cloud-upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [OneHR 设备页必须设置侧栏非聊天 overlay](./2026-09-01-OneHR设备页必须设置侧栏非聊天overlay.md) | onehr, punch, screenshot | privacy往返致左聊天右设备；改 settings→devices + 侧栏 OCR |
 | 2026-09-01 | [指纹/uid_map 本地改完须 push 并请知秋再审 PASS 后才可沙箱四](./2026-09-01-指纹-uid_map-本地改完须-push-并请知秋再审-pass-后才可沙箱四步-未-pass.md) | fingerprint,uid-map,HOLD,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-01 | [主人要任务进度时用人话逐项写节点/卡点/需确认项，并实查 task 板+work](./2026-09-01-主人要任务进度时用人话逐项写节点-卡点-需确认项-并实查-task-板-work-log-git.md) | progress-report,agent-bus,session-rotate | 会话轮换前自动蒸馏 |
