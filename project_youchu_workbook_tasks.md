@@ -24,7 +24,7 @@
 
 | 代号 | 任务 | 状态 | 2026-09-01 实活 |
 |------|------|------|-----------------|
-| YC-SPARK-UID | 设备标签指纹 + uid_map（bus#7738/#7787） | **等知秋/狂人再审** | P1 指纹版已 push（`2f95e122`）；**#7787** 起点 8/1 + 分路口径 **9/2 push**；下一步沙箱 explain；dim/dwm/dws **HOLD** |
+| YC-SPARK-UID | 设备标签指纹 + uid_map（bus#7738/#7787/#7814） | **改阻断中** | #7814 不 PASS（两处阻断）；inbox 漏正文 → bus#7828 请狂人重发；TG 已私聊主人；收到即改 |
 | YC-SPARK-FUNNEL | 大漏斗 Spark（bus#7735） | **等狂人复审** | stage SQL + sandbox steps 已在 `2f95e122`；与 uid_map 同链 bus#7760/#7756 |
 | YC-METRIC-P1 | 指标库 Phase1 数据层 | **进行中** | published 约 **10→106**；diverged 全 HOLD；4 批脚本在 `docs/` **未 commit** |
 

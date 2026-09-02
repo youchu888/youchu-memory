@@ -10,6 +10,7 @@
 - [x] **TG 问狂人标题修复（old-mac 应用）**：2026-09-01 old-mac 已 apply + restart（标题：超时→已转问狂人）。
 - [x] **记忆系统 P0**：`PINNED.md` + `MEMORY_OPEN.md` + 瘦身 bootstrap（pinned/OPEN/recent-by-mtime）+ `memory_weekly_hygiene.sh`。存量索引/正文保留。
 - [ ] **记忆系统 P1 养成**：每周跑 hygiene；新经验沉前查重；纠正≥2 次写入 PINNED。
+- [ ] **设备标签指纹 #7814**：狂人「不 PASS / 两处阻断」；本机 inbox 漏正文 → 已 TG 私聊主人 + bus#7828 请重发；收到立刻改+push+再交审。
 - [x] **页面访问 / 归因**：主人 2026-09-02 — **不盯卡点**（灰度/口径等产品线卡点挂起）；**分区巡检、日常扫链继续**；有安排再通知。
 - [ ] **页面访问 DWS 对接**：`ops_system/04.dws/dws_app_page_visit_d_d/` 本地改动未要求则先别 commit。
 
