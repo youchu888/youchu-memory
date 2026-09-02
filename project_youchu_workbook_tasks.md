@@ -25,7 +25,7 @@
 | 代号 | 任务 | 状态 | 2026-09-01 实活 |
 |------|------|------|-----------------|
 | YC-SPARK-UID | 设备标签指纹 + uid_map（#7738/#7787/#7830） | **等复审 PASS** | `bb905feb` 已按 #7830 四点改完（#7831）；enroll=P2；PASS 前 dim/dwm/宽表 HOLD |
-| YC-SPARK-FUNNEL | 大漏斗 Spark（#7735） | **sandbox 已对齐待入库** | 本地补 `OUT_DB=test.dws` + `tagTargets=test.dws.*`（对齐 uid_map 审阅口径）；bus#7834 已报狂人；待说入库再 push |
+| YC-SPARK-FUNNEL | 大漏斗 Spark（#7735） | **等狂人 PASS** | sandbox `OUT_DB=test.dws` 已 push **`0de62fd0`**（远端亦有 `009bc16f`）；与 uid_map 同链 |
 | YC-METRIC-P1 | 指标库 Phase1 数据层 | **进行中** | published **106→120**（+14 video 批；`video_show_from_channel` diverged HOLD）；脚本本地未 commit |
 
 ## 非又初（知会，勿冒领）
