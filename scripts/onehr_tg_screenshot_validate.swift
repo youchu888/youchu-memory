@@ -106,6 +106,22 @@ if settingsHits.count < 2 {
     exit(2)
 }
 
+// 必须是主号「又初」，避免账号往返后停在 Ethan
+let primaryHints = ["又初", "youchu8888", "@youchu"]
+let hasPrimary = primaryHints.contains {
+    sidebarText.localizedCaseInsensitiveContains($0) || sidebarLower.contains($0.lowercased())
+}
+let ethanOnly = sidebarText.localizedCaseInsensitiveContains("Ethan")
+    && !sidebarText.contains("又初")
+    && !sidebarLower.contains("youchu")
+if ethanOnly || !hasPrimary {
+    fputs(
+        "FAIL: not primary account 又初 (hasPrimary=\(hasPrimary) ethanOnly=\(ethanOnly))\n",
+        stderr
+    )
+    exit(2)
+}
+
 let devicePageHints = [
     "登录设备", "当前设备", "强制注销", "闲置时限", "其他设备",
     "device management", "current device", "force logout", "inactivity",
@@ -121,6 +137,6 @@ if deviceHits.isEmpty {
 }
 
 print(
-    "OK settings=\(settingsHits.prefix(3).joined(separator: ",")) device=\(deviceHits.prefix(2).joined(separator: ",")) bytes=\(byteSize)"
+    "OK account=又初 settings=\(settingsHits.prefix(3).joined(separator: ",")) device=\(deviceHits.prefix(2).joined(separator: ",")) bytes=\(byteSize)"
 )
 exit(0)

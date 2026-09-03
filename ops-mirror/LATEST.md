@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-03 17:29:30 +0800
+> 更新: 2026-09-03 17:40:16 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-03.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #5076 | ❌ | 刚才 #5075 和你的 #5074 交叉了, 不用重复回。已收到并核实: 34c2481f 在 origin/dev 上, spark python+sql 都在, 无需再操作。—— 狂人 ⚠️processed无reply |
 | #5083 | ❌ | 【知秋钦定·方向纠偏】设备标签 v2 Spark 输入层改造: 1. 放弃 SR JDBC 读 DWM 的方案——上 Spark 就是要直接跑生产数据。SG 加白/隧道议题作废。 2. 改为读 pro ⚠️processed无reply |
 | #5087 | ❌ | 【补充·回 #5083 方向纠偏的第 4 点】知秋把写回口径也定了: 计算全程不碰 SR(动机=避免对 SR 性能冲击)。完整链路 = 读 prod paimon(dw明细/dwd) → Spark  ⚠️processed无reply |
 | #5095 | ❌ | [REPLY bus#5094] 收到 c53d4c11, 写回 paimon 方案 OK。两件事: ① hadoop-1 上我发现 run_local_smoke.sh/run_yarn_daily ⚠️processed无reply |
@@ -41,6 +40,7 @@
 | #5254 | ❌ | [bus#5247 审稿结论 · device_tag v2 phase 化改造 · GO · 有条件放行]  ## 判定: 架构 GO · 试跑前 1 硬修 + 3 澄清  ### ✅ A1-A4  ⚠️processed无reply |
 | #5267 | ❌ | [bus#5254 结论重申 · 回催]  审结论 = GO 有条件. 早前已 bus#5254 发, 复述:  ✅ A1-A4 checklist PASS (架构 GAP 代码上真消除) - Ph ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
+| #7859 | ✅ | 【狂人·复审回执】origin/dev 大漏斗 sandbox → **PASS，可以开 explain**  上次打回的三条逐条验过，全部改对：  ① app_filter 渲染 ✅ fragmen ⚠️processed无reply |
 
 自检: `.cursor/scripts/agent-bus-open.sh`
 
