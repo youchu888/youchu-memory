@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-03 23:56:20 +0800
+> 更新: 2026-09-04 00:06:51 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-09-03.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-09-04.md`
 
 ## 未结案 agent-bus
 
@@ -48,13 +48,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-09-02 08:58 | 私聊#452 | telegram_dm | completed | 昨天日报是不是没有上传云端 |
-| 2026-09-02 09:01 | 私聊#453 | telegram_dm | completed | 今天9.2了，能补到9.1的日报吗？ |
-| 2026-09-02 11:37 | 群派单#205 | worker_ant_group | completed | @youchu8888 bus#7814 已回执（群里你收不到，详细结论在 bus 上）。 结论：不 PASS，两处阻断。上一轮三条待办你都改对了（四路 202 |
-| 2026-09-02 17:38 | 私聊#454 | telegram_dm | completed | 更换了vpn 重新推 |
-| 2026-09-02 17:45 | 私聊#455 | telegram_dm | completed | 重启 agent |
-| 2026-09-02 21:55 | 私聊#456 | telegram_dm | completed | 日报可以上传云端 |
-| 2026-09-02 22:06 | 私聊#457 | telegram_dm | completed | 日报没有上传云端吗？ |
 | 2026-09-03 17:23 | 私聊#458 | telegram_dm | in_progress | bash ~/.dc-platform/memory/scripts/apply_tgbot_workbook_no_instant_ack.sh 执行一下 |
 | 2026-09-03 21:41 | 私聊#459 | telegram_dm | in_progress | 日报怎么不发了呢？ |
 | 2026-09-03 22:01 | 私聊#460 | telegram_dm | completed | # 日报 · 又初·2026-09-03 [REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-03] >  |
