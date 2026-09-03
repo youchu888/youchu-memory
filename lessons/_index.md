@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-03 | [狂人 bus 清单问进度：清单主责 + 自开实责，统一查「截至汇报前」，禁止秒回](./2026-09-03-workbook-progress-list-plus-owned-no-instant-ack.md) | workbook,agent-bus,progress,cutoff | 主人当面定口径 |
 | 2026-09-03 | [日报云端上传须主人指令触发；定稿原样传，追问时用记录 ID 复核而非重传](./2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id-复核而非重传.md) | daily-report-cloud,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-03 | [沙箱 explain 必须用 run_test.sh，禁止 run_step_o](./2026-09-03-沙箱-explain-必须用-run_test-sh-禁止-run_step_once-sh.md) | sandbox-explain,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-03 | [换 VPN 后会话 resume 易断，连接失败时让用户「重启 agent」并接](./2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户-重启-agent-并接上上一轮任务续做.md) | cursor-vpn,session-rotate | 会话轮换前自动蒸馏 |

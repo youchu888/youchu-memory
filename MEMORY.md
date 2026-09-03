@@ -308,3 +308,5 @@
 - feedback: feedback_deprecate_must_offline_dolphin_task.md — 合表废弃须同批删旧海豚 task
 - [主人说话风格复用](feedback_主人说话风格复用.md) — 群聊/狂人/对主人：短、直接、先结论，禁汇报腔
 - [自开任务必须登工作簿](feedback_自开任务必须登工作簿.md) — 非狂人簿的主人交办/自开活也要写入 workbook「自开任务」
+
+- [狂人 bus 清单问进度：清单主责+自开实责·截至汇报前·禁秒回](lessons/2026-09-03-workbook-progress-list-plus-owned-no-instant-ack.md) — 2026-09-03
