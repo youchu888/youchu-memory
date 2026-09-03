@@ -281,29 +281,33 @@ def _parse_screenshot_ok(stdout: str) -> Optional[Path]:
 
 
 def _take_screenshot_once(script: Path, capture_only: bool = False) -> Path:
-    """优先经「又初打卡截图.app」拉起，便于 TCC 辅助功能/屏幕录制落到同一 bundle。"""
+    """优先直接 exec「又初打卡截图.app」内包装脚本，便于 TCC 落到同一 bundle。
+
+    不用 `open -W`：对 shell 型 CFBundleExecutable，LaunchServices 常提前返回，
+    导致 last_screenshot.path 未写完就当成功，打卡链路误判。
+    """
     use_app = CAPTURE_APP.is_dir() and os.environ.get("ONEHR_USE_CAPTURE_APP", "1") != "0"
+    app_bin = CAPTURE_APP / "Contents/MacOS/YouchuOneHRCapture"
     LAST_SCREENSHOT_PATH.parent.mkdir(parents=True, exist_ok=True)
     try:
         LAST_SCREENSHOT_PATH.unlink()
     except FileNotFoundError:
         pass
 
-    if use_app:
-        # open -W：等 App 主进程（包装脚本）退出；stdout 不可用，读 last_screenshot.path
-        cmd = ["open", "-W", "-n", "-a", str(CAPTURE_APP), "--args"]
+    if use_app and app_bin.is_file():
+        cmd = [str(app_bin)]
         if capture_only:
             cmd.append("--capture-only")
         proc = subprocess.run(cmd, capture_output=True, text=True)
-        if LAST_SCREENSHOT_PATH.is_file():
-            path = Path(LAST_SCREENSHOT_PATH.read_text(encoding="utf-8").strip())
-            if path.is_file():
+        if proc.returncode == 0:
+            path = _parse_screenshot_ok(proc.stdout)
+            if path is not None:
                 return path
-        # App 失败时回落直跑脚本（交互环境仍可用）
-        if proc.returncode != 0:
-            err = (proc.stderr or proc.stdout or "").strip()
-            # continue to direct fallback below
-            _ = err
+            if LAST_SCREENSHOT_PATH.is_file():
+                path2 = Path(LAST_SCREENSHOT_PATH.read_text(encoding="utf-8").strip())
+                if path2.is_file():
+                    return path2
+        # App 失败时回落直跑脚本（python3.13 也已开辅助功能）
 
     if not script.is_file():
         raise RuntimeError(f"截图脚本不存在: {script}")
