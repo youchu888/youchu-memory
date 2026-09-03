@@ -5,6 +5,16 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 04 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-04-主人问-日报怎么不发了-须先拆-tg-推送与云端上传两条线-再决定查-old-mac-定时链路还.md` | 2026-09-04-主人问-日报怎么不发了-须先拆-tg-推送与云端上传两条线 |
+| 03 09 2026 88066 api id | `sessions/tg-rotate-2026-09-04-0647.md` | 上传云端 API 同日同类型会覆盖；本次 2026-09-03 为 `inser |
+| 1～3 专项 专项复盘 业务向 今日 今日结果 | `sessions/tg-rotate-2026-09-04-0647.md` | 日报正文写法仍按定稿模板：`【今日结果】` 业务向 1～3 条、`【死锁阻碍】` |
+| mac new old post_daily_report_to_dm.py p | `sessions/tg-rotate-2026-09-04-0647.md` | TG 自动推送依赖 old-mac 定时链路（`prepare_daily_re |
+| id insert update 一句 上传 不必 | `sessions/tg-rotate-2026-09-04-0647.md` | 云端上传成功回执应带：**日期、记录 ID、insert/update 状态、本 |
+| ld mac ol post_daily_report_to_dm. post_ | `sessions/tg-rotate-2026-09-04-0647.md` | 日报有**两条独立链路**：TG 私聊自动推送（old-mac 定时 `post |
+| ac ack」类配置变更 apply_tgbot_workbook_no_ins | `sessions/tg-rotate-2026-09-04-0647.md` | `apply_tgbot_workbook_no_instant_ack.sh` |
+| tg 上传 两条 两条线可并行缺失 主人 主人可直接贴已定稿日报走云端上传 | `sessions/tg-rotate-2026-09-04-0647.md` | 私聊补传场景：TG 定时未触发时，主人可直接贴已定稿日报走云端上传；两条线可并行 |
+| .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-04-0647.md` | 主人私聊贴定稿正文并说「上传云端」→ **原封不动**落盘到 `.cursor/ |
+| tg 「日 」时 不发 主人 主人问「日报怎么不发了」时 | `sessions/tg-rotate-2026-09-04-0647.md` | 主人问「日报怎么不发了」时，先区分是 **TG 没推** 还是 **云端没传** |
 | ## 03 09 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id-复核而非重传.md` | 2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id |
 | ## 03 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-03-沙箱-explain-必须用-run_test-sh-禁止-run_step_once-sh.md` | 2026-09-03-沙箱-explain-必须用-run_test-sh-禁止 |
 | ## 03 09 2026 ag agent | `~/.dc-platform/memory/lessons/2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户-重启-agent-并接上上一轮任务续做.md` | 2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户- |
@@ -35,13 +45,3 @@
 | push uid_map 不报 举例 作簿 再审 | `sessions/tg-rotate-2026-09-01-2244.md` | **举例**：9/1 晚上 push uid_map → 9/1 工作簿不报；9 |
 | 01 09 log work 「截 」的 | `sessions/tg-rotate-2026-09-01-2244.md` | **工作簿口径**：09:01 群进展只写「截至汇报日之前」的累计状态（等同 T |
 | dim dwm fingerprint hold lesson map | `sessions/tg-rotate-2026-09-01-2244.md` | [LESSON: fingerprint,uid-map,HOLD/指纹/uid |
-| +w agent bus lesson log+git or | `sessions/tg-rotate-2026-09-01-2244.md` | [LESSON: progress-report,agent-bus/主人要任务 |
-| 01 09 daily lesson log report | `sessions/tg-rotate-2026-09-01-2244.md` | [LESSON: daily-report,workbook,work-log/ |
-| phase1 「要 「要你拍板 」也 不用 不用」也是有效结论 | `sessions/tg-rotate-2026-09-01-2244.md` | 「要你拍板：不用」也是有效结论**：口径已定（如 8/1 起点、Phase1 顺 |
-| #7 #7760） 56 75 77 bu | `sessions/tg-rotate-2026-09-01-2244.md` | 大漏斗 Spark**：与 uid_map 同交审链（bus#7756/#776 |
-| 01 08 2026 2f95e122 bus#7787 dim | `sessions/tg-rotate-2026-09-01-2244.md` | 设备指纹 + uid 映射**（最高优先）：bus#7787 定起点 **202 |
-| git log task work 「节 不要 | `sessions/tg-rotate-2026-09-01-2244.md` | 进度汇报约定**（#450）：说人话；每项写「节点 / 卡点 / 要不要主人拍板 |
-| 01 09 lo log work 「截 | `sessions/tg-rotate-2026-09-01-2244.md` | 工作簿口径**：09:01 群进展只写「截至汇报日之前」的累计状态（等同 T-1 |
-| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-task-板与-work-log-超过-1-天未对齐即执行缺口-先刷新-task-板再答进展问.md` | 2026-09-01-task-板与-work-log-超过-1-天未对齐即执行 |
-| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-workbook_progress_service-增补项必须读-workbook_supple.md` | 2026-09-01-workbook_progress_service-增补项 |
-| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-读到群簿或有大活交付后-当天同步-task-板-supplemental-work-log-大活.md` | 2026-09-01-读到群簿或有大活交付后-当天同步-task-板-suppl |

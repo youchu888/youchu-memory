@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [主人问「日报怎么不发了」须先拆 TG 推送与云端上传两条线，再决定查 o](lessons/2026-09-04-主人问-日报怎么不发了-须先拆-tg-推送与云端上传两条线-再决定查-old-mac-定时链路还.md) — 会话轮换蒸馏
 - [日报云端上传须主人指令触发；定稿原样传，追问时用记录 ID 复核而非重传](lessons/2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id-复核而非重传.md) — 会话轮换蒸馏
 - [沙箱 explain 必须用 run_test.sh，禁止 run_st](lessons/2026-09-03-沙箱-explain-必须用-run_test-sh-禁止-run_step_once-sh.md) — 会话轮换蒸馏
 - [换 VPN 后会话 resume 易断，连接失败时让用户「重启 agen](lessons/2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户-重启-agent-并接上上一轮任务续做.md) — 会话轮换蒸馏
