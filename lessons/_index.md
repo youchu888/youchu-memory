@@ -245,3 +245,4 @@
 | 2026-07-28 | deprecate-must-offline-old-dolphin-task | high | dolphin,deprecate,half-migration | 合表废弃必须同批删旧海豚 task，禁半迁移 |
 | 2026-08-03 | [查岗未回：work_online 克隆 session 双连抢更新](./2026-08-03-查岗未回因work_online克隆session双连抢更新.md) | attendance,tgbot,telethon | 同 auth_key 双连导致 NewMessage 丢失 |
 | 2026-08-04 | [新 Mac 出站不同步：回旧机勿改链路](./2026-08-04-new-mac-outbound-tg-direct.md) | agent-bus,tg,new-mac,dual-mac | bot 活归旧机；新机勿加直推 |
+| 2026-09-03 | [Spark 读 dwd 一律 `_r` 空表不报错](./2026-09-03-spark-读dwd一律_r后缀空表不报错.md) | spark,dwd,_r,funnel | bus#7863 |
