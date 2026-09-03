@@ -248,3 +248,4 @@
 | 2026-09-03 | [Spark 读 dwd 一律 `_r` 空表不报错](./2026-09-03-spark-读dwd一律_r后缀空表不报错.md) | spark,dwd,_r,funnel | bus#7863 |
 
 | 2026-09-03 | OneHR截图勿用openW拉App | onehr,tcc,screenshot | `2026-09-03-OneHR截图勿用openW拉App.md` |
+| 2026-09-03 | [大漏斗禁扫超大表须读事件_r](./2026-09-03-大漏斗禁扫超大表须读事件_r.md) | funnel,dwd,_r,sdk_init | bus#7880 |
