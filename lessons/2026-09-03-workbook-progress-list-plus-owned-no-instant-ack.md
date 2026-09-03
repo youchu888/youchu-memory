@@ -25,10 +25,16 @@ cd omdb/tgbot && .venv/bin/python scripts/post_workbook_progress_to_group.py --d
 # 期望：先探针十余秒；含清单项 + supplemental；口径截至 T-1；无「精简·1~2分钟补发」
 ```
 
-旧 Mac 跑 bot：同步本目录改动后 `bash omdb/tgbot/restart.sh`。
+`omdb/tgbot/` 不入 CHcode → 走 memory 补丁。旧机：
+
+```bash
+bash ~/.dc-platform/memory/scripts/apply_tgbot_workbook_no_instant_ack.sh
+```
+
+**禁止**在 new-mac 上长期跑 bot（旧机权威）；本机只改源码/打补丁。
 
 ## 关联
 
 - `feedback_workbook_progress_list_plus_owned_cutoff.md`
-- `omdb/tgbot/workbook_progress_service.py`
-- `omdb/tgbot/group_workbook_progress_handler.py`
+- `patches/tgbot-workbook-no-instant-ack/`
+- `scripts/apply_tgbot_workbook_no_instant_ack.sh`

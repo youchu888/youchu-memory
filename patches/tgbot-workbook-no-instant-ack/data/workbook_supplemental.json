@@ -1,0 +1,27 @@
+{
+  "updated": "2026-09-03",
+  "note": "自开/增补项；群进展必须 load_supplemental_items() 读取，禁止硬编码",
+  "items": [
+    {
+      "no": "YC-SPARK-UID",
+      "title": "设备标签指纹 + uid_map",
+      "assignee": "又初",
+      "status": "等复审 PASS",
+      "note": "bb905feb/5ea30e4e 已交审(#7831)；PASS 前 dim/dwm/宽表 HOLD；尚未 explain"
+    },
+    {
+      "no": "YC-SPARK-FUNNEL",
+      "title": "大漏斗 Spark sandbox",
+      "assignee": "又初",
+      "status": "等狂人 PASS",
+      "note": "sandbox 已 push（0de62fd0→9d29f0f5）；与 uid_map 同链等审"
+    },
+    {
+      "no": "YC-METRIC-P1",
+      "title": "指标库 Phase1 数据层",
+      "assignee": "又初",
+      "status": "进行中",
+      "note": "published 120（video）；下一批 other 归类；diverged HOLD"
+    }
+  ]
+}
