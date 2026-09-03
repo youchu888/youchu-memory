@@ -173,3 +173,7 @@ echo "OK $outfile"
 if [[ -n "$nav_info" ]]; then
   echo "  navigate: ${nav_info}"
 fi
+# 供 launchd 经「又初打卡截图.app」调用时回传路径（open -W 吃不到 stdout）
+LAST_PATH="${ONEHR_LAST_SCREENSHOT_PATH:-$HOME/.dc-platform/onehr/last_screenshot.path}"
+mkdir -p "$(dirname "$LAST_PATH")"
+printf '%s\n' "$outfile" >"$LAST_PATH"
