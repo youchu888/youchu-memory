@@ -6,8 +6,8 @@
 
 ## 进行中
 
-- [ ] **大漏斗 sandbox**：本地已补 `OUT_DB=test.dws` + test tagTargets；待入库 push 后并审。
-- [ ] **指标库 Phase1 video 批**：脚本已落盘；本机 metadata/SR 链路 HTTP404（TG#9514），网络通后再跑。
+- [x] **大漏斗 sandbox**：已 push（`0de62fd0`/`9d29f0f5`）；等狂人与 uid_map 同链 PASS。
+- [x] **指标库 Phase1 video 批**：已 apply，published 120；下一批 other 归类。
 
 - [ ] **prod 海豚告警处置（old-mac 专责）**：主人 2026-09-01 确认**按狂人安排**——告警驱动处置（不另建夜间全量扫）；playbook=`playbook_server_monitor_incident.md`（bus#7708+#7742）；先 part_01；**确认事故→立刻修含改代码，修完再报**；日常非事故变更仍等知秋 GO。
 - [x] **TG 问狂人标题修复（old-mac 应用）**：2026-09-01 old-mac 已 apply + restart（标题：超时→已转问狂人）。
