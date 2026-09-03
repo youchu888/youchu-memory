@@ -29,12 +29,24 @@ OUT_DIR="${ONEHR_SCREENSHOT_DIR:-$HOME/Desktop/CH/telegram}"
 PRIMARY_ACCOUNT="${ONEHR_TG_PRIMARY_ACCOUNT:-又初}"
 BOUNCE_ACCOUNT="${ONEHR_TG_BOUNCE_ACCOUNT:-Ethan}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-HELPER_SRC="$SCRIPT_DIR/onehr_tg_window_info.swift"
-HELPER_BIN="$SCRIPT_DIR/onehr_tg_window_info"
-VALIDATE_SRC="$SCRIPT_DIR/onehr_tg_screenshot_validate.swift"
-VALIDATE_BIN="$SCRIPT_DIR/onehr_tg_screenshot_validate"
-CLICK_SRC="$SCRIPT_DIR/onehr_tg_click_account.swift"
-CLICK_BIN="$SCRIPT_DIR/onehr_tg_click_account"
+# launchd 经「又初打卡截图.app」时优先用 App bundle 内 helper（TCC 绑在 App 上）
+HELPER_DIR="${ONEHR_HELPER_DIR:-$SCRIPT_DIR}"
+HELPER_SRC="$HELPER_DIR/onehr_tg_window_info.swift"
+HELPER_BIN="$HELPER_DIR/onehr_tg_window_info"
+VALIDATE_SRC="$HELPER_DIR/onehr_tg_screenshot_validate.swift"
+VALIDATE_BIN="$HELPER_DIR/onehr_tg_screenshot_validate"
+CLICK_SRC="$HELPER_DIR/onehr_tg_click_account.swift"
+CLICK_BIN="$HELPER_DIR/onehr_tg_click_account"
+# 源码若不在 HELPER_DIR（App 内仅有二进制），回落到 scripts 目录源码以便重编译
+if [[ ! -f "$HELPER_SRC" && -f "$SCRIPT_DIR/onehr_tg_window_info.swift" ]]; then
+  HELPER_SRC="$SCRIPT_DIR/onehr_tg_window_info.swift"
+fi
+if [[ ! -f "$VALIDATE_SRC" && -f "$SCRIPT_DIR/onehr_tg_screenshot_validate.swift" ]]; then
+  VALIDATE_SRC="$SCRIPT_DIR/onehr_tg_screenshot_validate.swift"
+fi
+if [[ ! -f "$CLICK_SRC" && -f "$SCRIPT_DIR/onehr_tg_click_account.swift" ]]; then
+  CLICK_SRC="$SCRIPT_DIR/onehr_tg_click_account.swift"
+fi
 mkdir -p "$OUT_DIR"
 
 timestamp="$(date +%Y%m%d_%H%M%S)"
@@ -47,8 +59,15 @@ fi
 
 ensure_bin() {
   local src="$1" bin="$2"
+  # App bundle 内已有预编译二进制时直接用（避免 launchd 下无写权限/无编译器）
+  if [[ -x "$bin" && ( ! -f "$src" || ! "$src" -nt "$bin" ) ]]; then
+    return 0
+  fi
   if [[ ! -f "$src" ]]; then
-    echo "ERROR: 缺少 $src" >&2
+    if [[ -x "$bin" ]]; then
+      return 0
+    fi
+    echo "ERROR: 缺少 $src / $bin" >&2
     return 1
   fi
   if [[ ! -x "$bin" || "$src" -nt "$bin" ]]; then
