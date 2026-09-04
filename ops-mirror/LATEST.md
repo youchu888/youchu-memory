@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-04 23:53:36 +0800
+> 更新: 2026-09-05 00:04:07 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-09-04.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-09-05.md`
 
 ## 未结案 agent-bus
 
@@ -48,9 +48,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-09-03 17:23 | 私聊#458 | telegram_dm | in_progress | bash ~/.dc-platform/memory/scripts/apply_tgbot_workbook_no_instant_ack.sh 执行一下 |
-| 2026-09-03 21:41 | 私聊#459 | telegram_dm | in_progress | 日报怎么不发了呢？ |
-| 2026-09-03 22:01 | 私聊#460 | telegram_dm | completed | # 日报 · 又初·2026-09-03 [REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-03] >  |
 | 2026-09-04 10:43 | 私聊#461 | telegram_dm | completed | paimon.dwd.dwd_sdk_init_d_r 好了，大漏斗是不是可以开干了 |
 | 2026-09-04 11:06 | 私聊#462 | telegram_dm | completed | 现在表有了阿 |
 | 2026-09-04 11:06 | 私聊#463 | telegram_dm | completed | 我们自己干 |
