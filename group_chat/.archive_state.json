@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-04 03:47:11",
+  "last_run": "2026-09-04 20:24:00",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1607,8 +1607,11 @@
       "2026-09-02 21:01:54|agent_bus_in|0|[agent-bus#7838] 【复审 0de62fd0 · uid_map PASS / 大漏斗打回】\n\n■ uid_map(dwm_device_uid_map_d) = PASS,可以开沙箱 explain\n · daily SQL 内嵌 CREATE DATABASE/TABLE IF NOT EXISTS + ${OUT_DB},建表 9 列与最终 SELECT 9 列逐项对齐(app_id/device_fingerprint/uid/first_uid/first_uid_dt/last_uid_dt/uid_cnt/device_id/update_time),类型也对得上(first/last_uid_dt 都 CAST AS DATE、uid_cnt CAST AS INT)\n · primary-key=app_id,device_fingerprint 与 current_agg 的 GROUP BY 一致,不会主键冲突\n · sandbox_steps_full.json 里 params.render.OUT_DB=test.dwm 位置对、tagTargets 指 test.dwm,没串生产\n · 小冗余(不拦截): full.json 里 groups.device_uid_map_d 定义了但 slots 直接引用步名,这个组没被任何槽位用到,StepsLoader 不报错,可留可删\n · 推生产前记一条: 内嵌的是 CREATE TABLE IF NOT EXISTS,生产表若已存在且 schema 不同会静默跳过、不报错也不改表,推之前得单独核一次 schema\n\n■ 大漏斗(dws_app_event_funnel_d_d) = 打回,三条,前两条不改跑不起来\n\n 1) 🔴 stage_metrics 里有 ${app_filter_e} / ${app_filter_v} / ${app_filter_n} / ${app_filter_c} 四个变量(行 20/26/32/38),但 params.render 只给了 OUT_DB。SparkSqlExecutor 的替换只做两层:StepContext.render 认 ${DT}/${HH},params.render 认你自己写的 key —— 这四个都不在,会原样留在 SQL 里,第一条语句就语法错。补进 params.render,或者把 app 白名单写死进 SQL。\n\n 2) 🔴 只有 sandbox_steps_fragment.json,没有带 slots 的 full.json。StepsLoader 硬校验 slots 00~23 必须写全(缺一个就 sys.error),fragment 没有 slots 段,直接拿它跑起不来。照 uid_map 那份 full.json 补一个即可,两步排同一个槽位、按 stage_metrics → stage_wide 顺序。\n\n 3) ⚠️ 两个 stage SQL 都没内嵌建表,DDL 还是独立文件。explain 档 spark_sql 是真去解析 INSERT OVERWRITE 的目标表,表不存在 explain 就会失败,所以你得先在 test.dws 把 stg_d 和 d_d 建出来。建议照 uid_map 的做法把 CREATE DATABASE/TABLE IF NOT EXISTS 分别内嵌进 stage_metrics(stg_d)和 stage_wide(d_d)顶部,两个模块风格也就统一了。\n\n■ 已核过没问题的:stage_wide 第 69 行读的是 ${OUT_DB}.dws_app_event_funnel_metric_stg_d,不是写死 paimon.dws —— 两阶段都在 test 库里闭环,这条上轮提的已经改对了。\n\n■ docs/metric_library_phase1_enrich_publish_video_batch_20260902.py 属于指标库入库脚本,不在指纹链范围内,本轮没审。\n\n改完 1)2) 两条再 push,我再看一遍就放行。||observe",
       "2026-09-02 21:56:45|telegram_dm|8740305767|[私聊#456] 日报可以上传云端|正在核对今日定稿并原样上传云端。\n已上传云端。\n\n- **日期**：2026-09-02  \n- **云端记录 ID**：87051  \n- **状态**：inserted（新建成功）  \n- **稿源**：`~/.dc-platform/memory/work-log/reports/日报-2026-09-02.md`（定稿原样上传）\n\n填报页按 9.2 查一下应该能看到。|",
       "2026-09-02 22:08:00|telegram_dm|8740305767|[私聊#457] 日报没有上传云端吗？|**已经上传了。**\n\n你 21:55 左右说「日报可以上传云端」后，又初已按定稿原样上传：\n\n- **日期**：2026-09-02  \n- **云端记录 ID**：87051  \n- **首次状态**：inserted（新建成功）\n\n刚才又核对了一遍，云端仍是同一条记录（`87051`，状态 `updated`），说明 9.2 日报已在云端。\n\n填报页请按 **2026-09-02** 查；若还看不到，可能是页面筛选或缓存，刷新后再试。|"
+    ],
+    "2026-09-03": [
+      "2026-09-03 16:25:24|telegram_group|8740305767|[群聊·@youchu8888]: @worker_ant_bot \n\n请复审 origin/dev：uid_map（bb905feb/5ea30e4e，回 #7831）+ 大漏斗 sandbox（0de62fd0/9d29f0f5），给 PASS/打回，好开 explain。||observe"
     ]
   },
-  "last_hot_lines": 2,
-  "last_archived_lines": 2
+  "last_hot_lines": 13,
+  "last_archived_lines": 1
 }
