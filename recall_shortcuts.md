@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 00） 04 09 2026 81 | `~/.dc-platform/memory/lessons/2026-09-04-test-验收须全-app-空-filter-跑完-stage_metrics-stage_wi.md` | 2026-09-04-test-验收须全-app-空-filter-跑完-sta |
+| ## #7900 04 09 2026 7900 | `~/.dc-platform/memory/lessons/2026-09-04-狂人侧消息常被压缩截断-reply-须贴回-7900-等待审原文一字不动并写明-commit-t.md` | 2026-09-04-狂人侧消息常被压缩截断-reply-须贴回-7900-等待 |
+| ## 04 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-04-explain-pass-后同一轮会话内立刻接-metric-wide-真跑-开跑前确认源表-t.md` | 2026-09-04-explain-pass-后同一轮会话内立刻接-metri |
+| #7900 #7911 commit+tag reply 一字 一字不动贴回 | `sessions/tg-rotate-2026-09-04-2115.md` | 狂人侧 **上下文会被压缩丢原文**（#7906/#7900/#7911 均发生 |
+| #7908 60s ack agent bus reply | `sessions/tg-rotate-2026-09-04-2115.md` | agent-bus 出站 `#7908` 等是 **reply 结案回执**，不 |
+| #7900 test 不挡 先冒 冒烟 出数 | `sessions/tg-rotate-2026-09-04-2115.md` | **#7900 复审不挡当天 test 出数**；可先冒烟/真跑，复审并行 |
+| dws_app_event_funnel_d_d dws_app_event_f | `sessions/tg-rotate-2026-09-04-2115.md` | 出数链路固定顺序：`dws_app_event_funnel_metric_st |
+| 04 05 09 2026 dt 与源 | `sessions/tg-rotate-2026-09-04-2115.md` | 大漏斗 `--dt` 是**任务日**，业务数据段 = T-1：任务日 `202 |
+| 04 09 sdk_init 先核 免空 再开 | `sessions/tg-rotate-2026-09-04-2115.md` | 真跑前先核对 **源表分区有数**（如 `sdk_init` 只有 `09-04 |
+| #7900 agent bus commit+tag lesson reply | `sessions/tg-rotate-2026-09-04-2115.md` | [LESSON: agent-bus/狂人侧消息常被压缩截断，reply 须贴回 |
+| dt explain funnel lesson metric→wide pas | `sessions/tg-rotate-2026-09-04-2115.md` | [LESSON: funnel/explain PASS 后同一轮会话内立刻接  |
+| #7911） bus pass reply test 「今 | `sessions/tg-rotate-2026-09-04-2115.md` | 长时间无回可先查是否已有 reply，再发 **bus 催促**（如 #7911 |
+| 11 18 563013e7 8b613fb6 count distinct | `sessions/tg-rotate-2026-09-04-2115.md` | 狂人 **stage_metrics 复审**对象：`563013e7` + 冻 |
+| explain hadoop yarn 不要 不要死磕直连 入口 | `sessions/tg-rotate-2026-09-04-2115.md` | `hadoop-1` 直连常被拒，查 explain/YARN 实况应走**已知 |
+| explain metric pass test.dws wi wide | `sessions/tg-rotate-2026-09-04-2115.md` | 大漏斗沙箱 **explain PASS ≠ 已出数**；explain 结束后 |
 | ## 04 09 2026 ack agent | `~/.dc-platform/memory/lessons/2026-09-04-ack-被-silent-丢时用-no-dedup-重发-以-reply-成功为结案依据.md` | 2026-09-04-ack-被-silent-丢时用-no-dedup-重发- |
 | ## #7880 04 09 2026 7880 | `~/.dc-platform/memory/lessons/2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人拍板可自行推进-改完-push-bus.md` | 2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人 |
 | ## 04 09 2026 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-09-04-摘-new-改-stage_metrics-时-_h_r-天计次固定-count-distinc.md` | 2026-09-04-摘-new-改-stage_metrics-时-_h_r- |
@@ -30,18 +45,3 @@
 | tg 上传 两条 两条线可并行缺失 主人 主人可直接贴已定稿日报走云端上传 | `sessions/tg-rotate-2026-09-04-0647.md` | 私聊补传场景：TG 定时未触发时，主人可直接贴已定稿日报走云端上传；两条线可并行 |
 | .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-04-0647.md` | 主人私聊贴定稿正文并说「上传云端」→ **原封不动**落盘到 `.cursor/ |
 | tg 「日 」时 不发 主人 主人问「日报怎么不发了」时 | `sessions/tg-rotate-2026-09-04-0647.md` | 主人问「日报怎么不发了」时，先区分是 **TG 没推** 还是 **云端没传** |
-| ## 03 09 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id-复核而非重传.md` | 2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id |
-| ## 03 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-03-沙箱-explain-必须用-run_test-sh-禁止-run_step_once-sh.md` | 2026-09-03-沙箱-explain-必须用-run_test-sh-禁止 |
-| ## 03 09 2026 ag agent | `~/.dc-platform/memory/lessons/2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户-重启-agent-并接上上一轮任务续做.md` | 2026-09-03-换-vpn-后会话-resume-易断-连接失败时让用户- |
-| 上传 不到 优先 传失 假定 先提 | `sessions/tg-rotate-2026-09-03-0615.md` | 填报页查不到时优先提示按日期筛选/刷新缓存，而非假定上传失败 |
-| dd.md log memory mm reports work | `sessions/tg-rotate-2026-09-03-0615.md` | 日报上传云端仅在主人明说「上传云端」时执行；稿源用 memory 定稿 `wor |
-| 00~23 ap app_filter_e app） d_d metric_st | `sessions/tg-rotate-2026-09-03-0615.md` | 大漏斗沙箱打回三类修法：`params.render` 补 `app_filte |
-| ag agent」强制新开 cursor en ge nt | `sessions/tg-rotate-2026-09-03-0615.md` | VPN 切换后 Cursor 会话 resume 可能失败；提示用户重发指令或发 |
-| explain lesson run_s run_step_once.sh ru | `sessions/tg-rotate-2026-09-03-0615.md` | [LESSON: sandbox-explain/沙箱 explain 必须用  |
-| d） ed er id in ns | `sessions/tg-rotate-2026-09-03-0615.md` | 上传成功应回传：日期、云端记录 ID、首次状态（inserted）；主人追问「没 |
-| #7 38 60 78 83 8） | `sessions/tg-rotate-2026-09-03-0615.md` | 复审派单（bus#7838）闭环：60 秒内 ACK → 改完 push → r |
-| cast create daily database exists first | `sessions/tg-rotate-2026-09-03-0615.md` | uid_map 沙箱 PASS 门槛：daily SQL 内嵌 `CREATE  |
-| explain run_step_once.sh run_test.sh 已明  | `sessions/tg-rotate-2026-09-03-0615.md` | 沙箱 explain 统一走 `run_test.sh`，禁止用 `run_st |
-| date dev everything git origin pus | `sessions/tg-rotate-2026-09-03-0615.md` | 「换了 VPN 重新推」标准动作：先 `git status` / 对比 `or |
-| ## 02 09 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md` | 2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted |
-| tg 「昨 」→ 三件 上传 主人 | `sessions/tg-rotate-2026-09-02-0913.md` | 主人问「昨天日报有没有上传云端」→ 先核三件套：**定稿是否存在 / TG 是否 |

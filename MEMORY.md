@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [test 验收须全 app 空 filter 跑完 stage_metr](lessons/2026-09-04-test-验收须全-app-空-filter-跑完-stage_metrics-stage_wi.md) — 会话轮换蒸馏
+- [狂人侧消息常被压缩截断，reply 须贴回 #7900 等待审原文一字不](lessons/2026-09-04-狂人侧消息常被压缩截断-reply-须贴回-7900-等待审原文一字不动并写明-commit-t.md) — 会话轮换蒸馏
+- [explain PASS 后同一轮会话内立刻接 metric→wide ](lessons/2026-09-04-explain-pass-后同一轮会话内立刻接-metric-wide-真跑-开跑前确认源表-t.md) — 会话轮换蒸馏
 - [ACK 被 silent 丢时用 --no-dedup 重发，以 rep](lessons/2026-09-04-ack-被-silent-丢时用-no-dedup-重发-以-reply-成功为结案依据.md) — 会话轮换蒸馏
 - [_r 表齐后仍须对齐 #7880 选表规则再改 SQL；主人拍板可自行推](lessons/2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人拍板可自行推进-改完-push-bus.md) — 会话轮换蒸馏
 - [摘 new 改 stage_metrics 时 _h_r 天计次固定 C](lessons/2026-09-04-摘-new-改-stage_metrics-时-_h_r-天计次固定-count-distinc.md) — 会话轮换蒸馏

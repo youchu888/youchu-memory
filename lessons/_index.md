@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-04 | [test 验收须全 app 空 filter 跑完 stage_metrics→](./2026-09-04-test-验收须全-app-空-filter-跑完-stage_metrics-stage_wi.md) | funnel,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-04 | [狂人侧消息常被压缩截断，reply 须贴回 #7900 等待审原文一字不动并写明](./2026-09-04-狂人侧消息常被压缩截断-reply-须贴回-7900-等待审原文一字不动并写明-commit-t.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-04 | [explain PASS 后同一轮会话内立刻接 metric→wide 真跑，开](./2026-09-04-explain-pass-后同一轮会话内立刻接-metric-wide-真跑-开跑前确认源表-t.md) | funnel,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-04 | [ACK 被 silent 丢时用 --no-dedup 重发，以 reply 成](./2026-09-04-ack-被-silent-丢时用-no-dedup-重发-以-reply-成功为结案依据.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-04 | [_r 表齐后仍须对齐 #7880 选表规则再改 SQL；主人拍板可自行推进，改完](./2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人拍板可自行推进-改完-push-bus.md) | 大漏斗,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-04 | [摘 new 改 stage_metrics 时 _h_r 天计次固定 COUNT](./2026-09-04-摘-new-改-stage_metrics-时-_h_r-天计次固定-count-distinc.md) | 大漏斗,session-rotate | 会话轮换前自动蒸馏 |
