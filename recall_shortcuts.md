@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 05 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-05-upload-上传云端必须以定稿-markdown-原封不动上传-定稿缺失时先同步双机写稿-禁止.md` | 2026-09-05-upload-上传云端必须以定稿-markdown-原封不 |
+| ## 05 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄清是要查定稿-tg-生成日报还是上传云.md` | 2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄 |
+| 「日 」即 一轮 上一 上传 云端 | `sessions/tg-rotate-2026-09-05-0617.md` | 连接失败后的续接：用户重发「日报上传云端」即可按标准流程继续，无需复述上一轮失败 |
+| tg 「上 「上传云端」不替代「生成日报」 「生 」不 上传 | `sessions/tg-rotate-2026-09-05-0617.md` | 「上传云端」不替代「生成日报」：写稿、推 TG 是独立链路；用户只说上传时不必再 |
+| id inserted updated 三项 云端 云端记录 | `sessions/tg-rotate-2026-09-05-0617.md` | 成功回执应报三项：日期、云端记录 ID、`inserted`/`updated` |
+| .cursor config.js date dd downloads mm | `sessions/tg-rotate-2026-09-05-0617.md` | 上传命令：`.cursor/scripts/upload_work_report |
+| ag agent」强制新开 cursor en ge nt | `sessions/tg-rotate-2026-09-05-0617.md` | Cursor 会话 resume 失败时会自动丢弃旧上下文，应提示用户重发指令或 |
+| daily lesson markdown report upload 上传 | `sessions/tg-rotate-2026-09-05-0617.md` | [LESSON: daily-report/upload/上传云端必须以定稿 M |
+| agent bus daily lesson report resume | `sessions/tg-rotate-2026-09-05-0617.md` | [LESSON: daily-report/resume/agent-bus/用 |
+| 04） 09 2026 「上 」且 上传 | `sessions/tg-rotate-2026-09-05-0617.md` | 用户指定「上传云端」且定稿日期明确时，以定稿文件日期为准（如周五晚传 2026- |
+| prepare_daily_report_sync.sh 不可 不可跳过写稿 不 | `sessions/tg-rotate-2026-09-05-0617.md` | 定稿不在 → 必须先走双机同步 + 写定稿（`prepare_daily_rep |
+| 上传 再传 写后 原样 后再 定稿 | `sessions/tg-rotate-2026-09-05-0617.md` | 定稿已在 → 直接原样上传，禁止改写、润色或补写后再传 |
+| dd.md memory mm reports yyyy 「上 | `sessions/tg-rotate-2026-09-05-0617.md` | 「上传云端」前置条件：当日定稿 `reports/日报-YYYY-MM-DD.m |
+| tg 「上 「日 「日报呢」与「上传云端」是不同意图 」与 」是 | `sessions/tg-rotate-2026-09-05-0617.md` | 「日报呢」与「上传云端」是不同意图：前者常指定稿/TG 是否已出，后者只执行云端 |
 | ## 00） 04 09 2026 81 | `~/.dc-platform/memory/lessons/2026-09-04-test-验收须全-app-空-filter-跑完-stage_metrics-stage_wi.md` | 2026-09-04-test-验收须全-app-空-filter-跑完-sta |
 | ## #7900 04 09 2026 7900 | `~/.dc-platform/memory/lessons/2026-09-04-狂人侧消息常被压缩截断-reply-须贴回-7900-等待审原文一字不动并写明-commit-t.md` | 2026-09-04-狂人侧消息常被压缩截断-reply-须贴回-7900-等待 |
 | ## 04 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-04-explain-pass-后同一轮会话内立刻接-metric-wide-真跑-开跑前确认源表-t.md` | 2026-09-04-explain-pass-后同一轮会话内立刻接-metri |
@@ -31,17 +45,3 @@
 | #7880 bus push stage_metrics 「我 」后 | `sessions/tg-rotate-2026-09-04-1247.md` | 主人拍板「我们自己干」后，可按 **#7880 已透出的选表规则** 先改 `s |
 | #7880 dwd_sdk_init_d_r new sql 一环 不是 | `sessions/tg-rotate-2026-09-04-1247.md` | 大漏斗摘 `new` 的卡点常不是 `_r` 表有没有，而是 **#7880 改 |
 | count daily.sql disabled distin distinct | `sessions/tg-rotate-2026-09-04-1247.md` | [LESSON: 大漏斗/摘 new 改 stage_metrics 时 _h_ |
-| bus commit pass sql 一句 人审 | `sessions/tg-rotate-2026-09-04-1247.md` | 催狂人审改 SQL 时，模板要带：**commit、文件路径、选表/计次规则摘要 |
-| explain metrics→wide pass sdk_init tes t | `sessions/tg-rotate-2026-09-04-1247.md` | 今天收口路径：explain PASS → 去 `--explain` 真跑 m |
-| push sql yarn 不上 会对 但集 | `sessions/tg-rotate-2026-09-04-1247.md` | 沙箱跑数前必须 **同步集群 SQL**；本地已 push 但集群还是旧版时，y |
-| count distinct dt event_id h_r 三条 | `sessions/tg-rotate-2026-09-04-1247.md` | `_h_r` 做天计次必须用 **`COUNT(DISTINCT event_i |
-| ## 04 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-04-主人问-日报怎么不发了-须先拆-tg-推送与云端上传两条线-再决定查-old-mac-定时链路还.md` | 2026-09-04-主人问-日报怎么不发了-须先拆-tg-推送与云端上传两条线 |
-| 03 09 2026 88066 api id | `sessions/tg-rotate-2026-09-04-0647.md` | 上传云端 API 同日同类型会覆盖；本次 2026-09-03 为 `inser |
-| 1～3 专项 专项复盘 业务向 今日 今日结果 | `sessions/tg-rotate-2026-09-04-0647.md` | 日报正文写法仍按定稿模板：`【今日结果】` 业务向 1～3 条、`【死锁阻碍】` |
-| mac new old post_daily_report_to_dm.py p | `sessions/tg-rotate-2026-09-04-0647.md` | TG 自动推送依赖 old-mac 定时链路（`prepare_daily_re |
-| id insert update 一句 上传 不必 | `sessions/tg-rotate-2026-09-04-0647.md` | 云端上传成功回执应带：**日期、记录 ID、insert/update 状态、本 |
-| ld mac ol post_daily_report_to_dm. post_ | `sessions/tg-rotate-2026-09-04-0647.md` | 日报有**两条独立链路**：TG 私聊自动推送（old-mac 定时 `post |
-| ac ack」类配置变更 apply_tgbot_workbook_no_ins | `sessions/tg-rotate-2026-09-04-0647.md` | `apply_tgbot_workbook_no_instant_ack.sh` |
-| tg 上传 两条 两条线可并行缺失 主人 主人可直接贴已定稿日报走云端上传 | `sessions/tg-rotate-2026-09-04-0647.md` | 私聊补传场景：TG 定时未触发时，主人可直接贴已定稿日报走云端上传；两条线可并行 |
-| .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-04-0647.md` | 主人私聊贴定稿正文并说「上传云端」→ **原封不动**落盘到 `.cursor/ |
-| tg 「日 」时 不发 主人 主人问「日报怎么不发了」时 | `sessions/tg-rotate-2026-09-04-0647.md` | 主人问「日报怎么不发了」时，先区分是 **TG 没推** 还是 **云端没传** |
