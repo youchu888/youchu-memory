@@ -26,4 +26,4 @@
 - P1：连续一周按 hygiene checklist 跑过且 OPEN 无已结残留 → 勾掉养成项。
 - 页面访问：用户结案或改派后删行。
 
-- [x] **大漏斗摘 new 表**：`563013e7` 已 push；stage_metrics 全切 `*_r`（含 sdk_init）；legacy daily 冻结；等狂人审后开 sandbox explain（bus#7899）
+- [x] **大漏斗摘 new 表**：`563013e7`/`8b613fb6` 已 push；集群 SQL 已同步；**沙箱 explain 已起**（SF-81 · dt=2026-09-04 · `/tmp/funnel_explain_20260904.log`）；explain 过→真跑出数
