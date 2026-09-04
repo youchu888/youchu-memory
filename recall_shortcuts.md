@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 04 09 2026 ack agent | `~/.dc-platform/memory/lessons/2026-09-04-ack-被-silent-丢时用-no-dedup-重发-以-reply-成功为结案依据.md` | 2026-09-04-ack-被-silent-丢时用-no-dedup-重发- |
+| ## #7880 04 09 2026 7880 | `~/.dc-platform/memory/lessons/2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人拍板可自行推进-改完-push-bus.md` | 2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人 |
+| ## 04 09 2026 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-09-04-摘-new-改-stage_metrics-时-_h_r-天计次固定-count-distinc.md` | 2026-09-04-摘-new-改-stage_metrics-时-_h_r- |
+| #2287 #7 #7900）可与出数 00 0） 79 | `sessions/tg-rotate-2026-09-04-1247.md` | 狂人 bus 复审（如 #7900）可与出数 **并行**：「等 #2287 落 |
+| prod 不在 分区 前先 区为 区行 | `sessions/tg-rotate-2026-09-04-1247.md` | 开干前先 **prod 实查 `_r` 表**：表在不在、当日分区行数是否合理（ |
+| daily.sql disabled legacy new stage_metr | `sessions/tg-rotate-2026-09-04-1247.md` | **legacy `daily.sql` 冻结不投**：仍含 `new`，主线只 |
+| coin d_r dwd_sdk_init_d_r h_r login orde | `sessions/tg-rotate-2026-09-04-1247.md` | 选表口径：`register/login` → `*_v2_r`；`order_ |
+| 11 dw.dw_user_event_detail_new page_view | `sessions/tg-rotate-2026-09-04-1247.md` | 主干改造范围：`stage_metrics` 里 **11 个主干事件 + pa |
+| #7880 bus push stage_metrics 「我 」后 | `sessions/tg-rotate-2026-09-04-1247.md` | 主人拍板「我们自己干」后，可按 **#7880 已透出的选表规则** 先改 `s |
+| #7880 dwd_sdk_init_d_r new sql 一环 不是 | `sessions/tg-rotate-2026-09-04-1247.md` | 大漏斗摘 `new` 的卡点常不是 `_r` 表有没有，而是 **#7880 改 |
+| count daily.sql disabled distin distinct | `sessions/tg-rotate-2026-09-04-1247.md` | [LESSON: 大漏斗/摘 new 改 stage_metrics 时 _h_ |
+| bus commit pass sql 一句 人审 | `sessions/tg-rotate-2026-09-04-1247.md` | 催狂人审改 SQL 时，模板要带：**commit、文件路径、选表/计次规则摘要 |
+| explain metrics→wide pass sdk_init tes t | `sessions/tg-rotate-2026-09-04-1247.md` | 今天收口路径：explain PASS → 去 `--explain` 真跑 m |
+| push sql yarn 不上 会对 但集 | `sessions/tg-rotate-2026-09-04-1247.md` | 沙箱跑数前必须 **同步集群 SQL**；本地已 push 但集群还是旧版时，y |
+| count distinct dt event_id h_r 三条 | `sessions/tg-rotate-2026-09-04-1247.md` | `_h_r` 做天计次必须用 **`COUNT(DISTINCT event_i |
 | ## 04 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-04-主人问-日报怎么不发了-须先拆-tg-推送与云端上传两条线-再决定查-old-mac-定时链路还.md` | 2026-09-04-主人问-日报怎么不发了-须先拆-tg-推送与云端上传两条线 |
 | 03 09 2026 88066 api id | `sessions/tg-rotate-2026-09-04-0647.md` | 上传云端 API 同日同类型会覆盖；本次 2026-09-03 为 `inser |
 | 1～3 专项 专项复盘 业务向 今日 今日结果 | `sessions/tg-rotate-2026-09-04-0647.md` | 日报正文写法仍按定稿模板：`【今日结果】` 业务向 1～3 条、`【死锁阻碍】` |
@@ -30,18 +45,3 @@
 | date dev everything git origin pus | `sessions/tg-rotate-2026-09-03-0615.md` | 「换了 VPN 重新推」标准动作：先 `git status` / 对比 `or |
 | ## 02 09 2026 agent_session_rotate cloud | `~/.dc-platform/memory/lessons/2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted-与-upload-脚本执行记录.md` | 2026-09-02-定稿推-tg-已上传云端-核对须分开查-dm_posted |
 | tg 「昨 」→ 三件 上传 主人 | `sessions/tg-rotate-2026-09-02-0913.md` | 主人问「昨天日报有没有上传云端」→ 先核三件套：**定稿是否存在 / TG 是否 |
-| id inserted record 云端 传成 功回 | `sessions/tg-rotate-2026-09-02-0913.md` | 补传成功回执应含：日期、云端 record ID、状态（如 `inserted` |
-| .cursor date dd mm python3 scripts | `sessions/tg-rotate-2026-09-02-0913.md` | 历史日报可补传：定稿仍在则跑 `python3 .cursor/scripts/ |
-| .cursor .dc dd.m dd.md log memory | `sessions/tg-rotate-2026-09-02-0913.md` | 定稿稿源：`~/.dc-platform/memory/work-log/rep |
-| .daily_report_dm_posted.json tg 否已 含推 已推 | `sessions/tg-rotate-2026-09-02-0913.md` | TG 是否已推：查 `.daily_report_dm_posted.json` |
-| log tg upload_work_report.py work 「是 上传 | `sessions/tg-rotate-2026-09-02-0913.md` | 核对「是否已上传云端」：查当日 work-log 有无 `upload_work |
-| tg 「上 上传 不会 不会自动上传云端 主人 | `sessions/tg-rotate-2026-09-02-0913.md` | 日报定稿后**默认只推 TG**，**不会自动上传云端**；云端上传须主人明确说 |
-| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-09-02-0913.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
-| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-指纹-uid_map-本地改完须-push-并请知秋再审-pass-后才可沙箱四步-未-pass.md` | 2026-09-01-指纹-uid_map-本地改完须-push-并请知秋再审- |
-| ## +w 01 09 2026 agent | `~/.dc-platform/memory/lessons/2026-09-01-主人要任务进度时用人话逐项写节点-卡点-需确认项-并实查-task-板-work-log-git.md` | 2026-09-01-主人要任务进度时用人话逐项写节点-卡点-需确认项-并实查- |
-| ## 01 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-01-09-01-群进展-工作簿只写-t-1-截止累计进度-当天实活写-work-log-次日工作簿再.md` | 2026-09-01-09-01-群进展-工作簿只写-t-1-截止累计进度-当天 |
-| git log task work 「节 不要 | `sessions/tg-rotate-2026-09-01-2244.md` | **进度汇报约定**（#450）：说人话；每项写「节点 / 卡点 / 要不要主人 |
-| s「 task vs 「当 「截 「截至汇报前」vs「当日实活（不进当天群进展） | `sessions/tg-rotate-2026-09-01-2244.md` | **task 板分两块**：「截至汇报前」vs「当日实活（不进当天群进展）」，整 |
-| push uid_map 不报 举例 作簿 再审 | `sessions/tg-rotate-2026-09-01-2244.md` | **举例**：9/1 晚上 push uid_map → 9/1 工作簿不报；9 |
-| 01 09 log work 「截 」的 | `sessions/tg-rotate-2026-09-01-2244.md` | **工作簿口径**：09:01 群进展只写「截至汇报日之前」的累计状态（等同 T |
-| dim dwm fingerprint hold lesson map | `sessions/tg-rotate-2026-09-01-2244.md` | [LESSON: fingerprint,uid-map,HOLD/指纹/uid |

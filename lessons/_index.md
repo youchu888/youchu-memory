@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-04 | [ACK 被 silent 丢时用 --no-dedup 重发，以 reply 成](./2026-09-04-ack-被-silent-丢时用-no-dedup-重发-以-reply-成功为结案依据.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-04 | [_r 表齐后仍须对齐 #7880 选表规则再改 SQL；主人拍板可自行推进，改完](./2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人拍板可自行推进-改完-push-bus.md) | 大漏斗,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-04 | [摘 new 改 stage_metrics 时 _h_r 天计次固定 COUNT](./2026-09-04-摘-new-改-stage_metrics-时-_h_r-天计次固定-count-distinc.md) | 大漏斗,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-04 | [主人问「日报怎么不发了」须先拆 TG 推送与云端上传两条线，再决定查 old-m](./2026-09-04-主人问-日报怎么不发了-须先拆-tg-推送与云端上传两条线-再决定查-old-mac-定时链路还.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-03 | [狂人 bus 清单问进度：清单主责 + 自开实责，统一查「截至汇报前」，禁止秒回](./2026-09-03-workbook-progress-list-plus-owned-no-instant-ack.md) | workbook,agent-bus,progress,cutoff | 主人当面定口径 |
 | 2026-09-03 | [日报云端上传须主人指令触发；定稿原样传，追问时用记录 ID 复核而非重传](./2026-09-03-日报云端上传须主人指令触发-定稿原样传-追问时用记录-id-复核而非重传.md) | daily-report-cloud,session-rotate | 会话轮换前自动蒸馏 |
