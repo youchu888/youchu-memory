@@ -11,6 +11,7 @@ import argparse
 import json
 import os
 import re
+import socket
 import subprocess
 import sys
 import time
@@ -32,6 +33,9 @@ USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 )
+RETRYABLE_HTTP_STATUS = {408, 425, 429, 500, 502, 503, 504}
+MAX_API_ATTEMPTS = 4
+RETRY_BASE_DELAY_SEC = 2.0
 
 
 def load_env(path: Path) -> Dict[str, str]:
@@ -112,6 +116,90 @@ def notify(title: str, message: str) -> None:
     notify_tg(title, message)
 
 
+def _retry_delay(attempt: int) -> float:
+    return RETRY_BASE_DELAY_SEC * (2 ** max(0, attempt - 1))
+
+
+def _describe_exc(exc: BaseException) -> str:
+    if isinstance(exc, urllib.error.HTTPError):
+        return f"HTTP {exc.code}"
+    if isinstance(exc, urllib.error.URLError):
+        reason = getattr(exc, "reason", None)
+        if reason:
+            return f"URLError: {reason}"
+    return str(exc) or exc.__class__.__name__
+
+
+def _is_retryable_http_error(exc: urllib.error.HTTPError) -> bool:
+    return exc.code in RETRYABLE_HTTP_STATUS
+
+
+def _is_retryable_network_error(exc: BaseException) -> bool:
+    if isinstance(exc, urllib.error.HTTPError):
+        return _is_retryable_http_error(exc)
+    if isinstance(exc, urllib.error.URLError):
+        reason = getattr(exc, "reason", None)
+        if isinstance(reason, (TimeoutError, ConnectionResetError, ConnectionAbortedError, socket.timeout)):
+            return True
+        if isinstance(reason, OSError):
+            return True
+        text = str(reason or exc).lower()
+        return any(
+            part in text
+            for part in (
+                "connection reset",
+                "timed out",
+                "timeout",
+                "temporarily unavailable",
+                "connection aborted",
+                "connection refused",
+                "network is unreachable",
+                "remote end closed connection",
+            )
+        )
+    return isinstance(
+        exc, (TimeoutError, ConnectionResetError, ConnectionAbortedError, socket.timeout, OSError)
+    )
+
+
+def _urlopen_with_retry(req: urllib.request.Request, timeout: int | float) -> Tuple[int, bytes]:
+    last_exc: BaseException | None = None
+    for attempt in range(1, MAX_API_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return getattr(resp, "status", 200), resp.read()
+        except urllib.error.HTTPError as exc:
+            if not _is_retryable_http_error(exc) or attempt == MAX_API_ATTEMPTS:
+                raise
+            last_exc = exc
+            print(
+                f"[warn] OneHR 请求失败，{_describe_exc(exc)}，"
+                f"{_retry_delay(attempt):.1f}s 后重试 ({attempt}/{MAX_API_ATTEMPTS})",
+                flush=True,
+            )
+            time.sleep(_retry_delay(attempt))
+        except (
+            urllib.error.URLError,
+            TimeoutError,
+            ConnectionResetError,
+            ConnectionAbortedError,
+            socket.timeout,
+            OSError,
+        ) as exc:
+            if not _is_retryable_network_error(exc) or attempt == MAX_API_ATTEMPTS:
+                raise
+            last_exc = exc
+            print(
+                f"[warn] OneHR 网络抖动，{_describe_exc(exc)}，"
+                f"{_retry_delay(attempt):.1f}s 后重试 ({attempt}/{MAX_API_ATTEMPTS})",
+                flush=True,
+            )
+            time.sleep(_retry_delay(attempt))
+    if last_exc is not None:
+        raise last_exc
+    raise RuntimeError("urlopen retry loop exited unexpectedly")
+
+
 def api_json(
     method: str,
     url: str,
@@ -127,9 +215,8 @@ def api_json(
         headers["Authorization"] = f"Bearer {token}"
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            raw = resp.read()
-            return resp.status, json.loads(raw.decode("utf-8")) if raw else None
+        status, raw = _urlopen_with_retry(req, timeout=60)
+        return status, json.loads(raw.decode("utf-8")) if raw else None
     except urllib.error.HTTPError as exc:
         raw = exc.read()
         try:
@@ -178,9 +265,8 @@ def api_multipart(
     }
     req = urllib.request.Request(url, data=body, headers=headers, method="POST")
     try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            raw = resp.read()
-            return resp.status, json.loads(raw.decode("utf-8")) if raw else None
+        status, raw = _urlopen_with_retry(req, timeout=120)
+        return status, json.loads(raw.decode("utf-8")) if raw else None
     except urllib.error.HTTPError as exc:
         raw = exc.read()
         try:
