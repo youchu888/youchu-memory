@@ -26,4 +26,4 @@
 - P1：连续一周按 hygiene checklist 跑过且 OPEN 无已结残留 → 勾掉养成项。
 - 页面访问：用户结案或改派后删行。
 
-- [ ] **大漏斗摘 new 表**：等 `dwd_sdk_init_d_r` + 狂人统一改造清单；禁继续深挖 daily.sql（bus#7880）
+- [ ] **大漏斗摘 new 表**：`dwd_sdk_init_d_r` 已就绪（prod 今日分区约 81.8 万行）；**只差狂人统一改造清单**；禁抢跑改 daily（bus#7880→已催 #7896）
