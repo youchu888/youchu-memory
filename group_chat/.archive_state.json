@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-04 20:24:00",
+  "last_run": "2026-09-05 03:16:59",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1609,9 +1609,10 @@
       "2026-09-02 22:08:00|telegram_dm|8740305767|[私聊#457] 日报没有上传云端吗？|**已经上传了。**\n\n你 21:55 左右说「日报可以上传云端」后，又初已按定稿原样上传：\n\n- **日期**：2026-09-02  \n- **云端记录 ID**：87051  \n- **首次状态**：inserted（新建成功）\n\n刚才又核对了一遍，云端仍是同一条记录（`87051`，状态 `updated`），说明 9.2 日报已在云端。\n\n填报页请按 **2026-09-02** 查；若还看不到，可能是页面筛选或缓存，刷新后再试。|"
     ],
     "2026-09-03": [
-      "2026-09-03 16:25:24|telegram_group|8740305767|[群聊·@youchu8888]: @worker_ant_bot \n\n请复审 origin/dev：uid_map（bb905feb/5ea30e4e，回 #7831）+ 大漏斗 sandbox（0de62fd0/9d29f0f5），给 PASS/打回，好开 explain。||observe"
+      "2026-09-03 16:25:24|telegram_group|8740305767|[群聊·@youchu8888]: @worker_ant_bot \n\n请复审 origin/dev：uid_map（bb905feb/5ea30e4e，回 #7831）+ 大漏斗 sandbox（0de62fd0/9d29f0f5），给 PASS/打回，好开 explain。||observe",
+      "2026-09-03 22:02:31|telegram_dm|8740305767|[私聊#460] # 日报 · 又初·2026-09-03\n\n[REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-03]\n> 提交人: 又初\n> 工号: DN6517\n> 岗位: 后端 BE\n> 层级: L1\n> 日期: 2026-09-03\n\n## 【今日结果】\n- [TQ-002 | DMP系统] 大漏斗 Spark 沙箱：sandbox 复审 PASS 后按补审修正 DWD 读 _r 表、legacy daily 分区裁剪与抽检脚本三处并推送，已完成；\n- [TQ-002 | DMP系统] 指标库 Phase1 存量迁移：完成 other 批次 133 条 draft 指标归类（entity/event 映射）并发布 80 条至 published 状态（总 published 120→200），已完成；\n\n## 【死锁阻碍】\n- \n\n## 【专项复盘】\n- \n\n## 【明日动作】\n- TOP1: [TQ-002 | 大漏斗 Spark 沙箱] 待 uid_map 与大漏斗同链复审齐后在测试集群开 explain（截止：明日）\n- TOP2: [TQ-002 | 设备标签] uid_map 复审 PASS 后再推 dim/dwm 宽表链（截止：周五）\n- TOP3: [TQ-002 | 指标库] 剩余 70 条 draft 中 49 条 diverged 指标需人工对齐实现后升 published（截止：下周）\n\n按照这个上传云端|按你贴的正文原样落盘并上传云端。\n已按你贴的正文原封不动上传云端。\n\n- **日期**：2026-09-03  \n- **云端记录 ID**：`88066`  \n- **状态**：`inserted`（新建）  \n- **本地稿**：`.cursor/work-log/reports/日报-2026-09-03.md`\n\n关于「日报怎么不发了」：今天这份是你私聊贴定稿后上传的；若指 TG 自动推送，那是 old-mac 定时链路（`post_daily_report_to_dm.py`），和本次云端上传是两条线。需要我查一下 TG 推送为什么没触发，你说一声。|"
     ]
   },
-  "last_hot_lines": 13,
+  "last_hot_lines": 17,
   "last_archived_lines": 1
 }
