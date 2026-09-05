@@ -7,7 +7,7 @@
 ## 进行中
 
 - [x] **大漏斗 sandbox**：已 push（`0de62fd0`/`9d29f0f5`）；等狂人与 uid_map 同链 PASS。
-- [x] **指标库 Phase1 数据层主线**：other 批已 apply（9/3 → published 200）；尾批 9/5 再 +3（uv_ratio/max_x/max_y）→ **published 203** / draft 67 / orphaned 10。剩余 draft≈64 diverged HOLD + 2 avg 白名单卡点 + 1 运维字段。
+- [ ] **指标库上线（主人定稿 B′）**：定稿已落盘；已 bus 狂人/知秋确认；**同意后**按 D1–D5 推进消歧+G5，Phase4 等知秋 GO。
 
 - [ ] **prod 海豚告警处置（old-mac 专责）**：主人 2026-09-01 确认**按狂人安排**——告警驱动处置（不另建夜间全量扫）；playbook=`playbook_server_monitor_incident.md`（bus#7708+#7742）；先 part_01；**确认事故→立刻修含改代码，修完再报**；日常非事故变更仍等知秋 GO。
 - [x] **TG 问狂人标题修复（old-mac 应用）**：2026-09-01 old-mac 已 apply + restart（标题：超时→已转问狂人）。
