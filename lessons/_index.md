@@ -259,3 +259,4 @@
 
 | 2026-09-03 | OneHR截图勿用openW拉App | onehr,tcc,screenshot | `2026-09-03-OneHR截图勿用openW拉App.md` |
 | 2026-09-03 | [大漏斗禁扫超大表须读事件_r](./2026-09-03-大漏斗禁扫超大表须读事件_r.md) | funnel,dwd,_r,sdk_init | bus#7880 |
+| 2026-09-05 | [大漏斗沙箱开跑前核集群 SQL 是否定稿 _r 版](./2026-09-05-funnel-沙箱须先核集群-sql-是否定稿-_r-版禁扫-new.md) | funnel,sandbox,hadoop-1 | bus#8006 |
