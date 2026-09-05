@@ -140,15 +140,13 @@ elif [[ -x "$BUS_SCRIPTS/start-agent-bus-daemon.sh" ]]; then
   echo "[ok] daemon bg pid=$!"
 fi
 
-# LaunchAgent（若已装）踢一下，避免 bootout 后没起来
+# LaunchAgent：只踢 poller；tgbot 已手工拉起，避免 kickstart 再杀一轮
 UID_NUM="$(id -u)"
-for label in com.youchu.agent-bus-poller com.youchu.tgbot-dc com.dc.tgbot-daemon; do
-  if [[ -f "$HOME/Library/LaunchAgents/${label}.plist" ]]; then
-    launchctl kickstart -k "gui/${UID_NUM}/${label}" 2>/dev/null \
-      && echo "[ok] launchctl kickstart $label" \
-      || echo "[warn] launchctl kickstart $label 失败（可忽略若手工已起）"
-  fi
-done
+if [[ -f "$HOME/Library/LaunchAgents/com.youchu.agent-bus-poller.plist" ]]; then
+  launchctl kickstart -k "gui/${UID_NUM}/com.youchu.agent-bus-poller" 2>/dev/null \
+    && echo "[ok] launchctl kickstart com.youchu.agent-bus-poller" \
+    || echo "[warn] launchctl kickstart poller 失败（可忽略若手工已起）"
+fi
 
 echo
 echo "--- 4/4 verify ---"
