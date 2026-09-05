@@ -287,7 +287,8 @@ async def post_workbook_pipeline(
     if not is_workbook_roll_call(text):
         return False
 
-    save_full_workbook_text(text)
+    if not looks_like_canned_fallback(text):
+        save_full_workbook_text(text)
     workbook_date = _workbook_date(text)
     if skip_if_date_done and already_posted_for_date(workbook_date) and not force_repost:
         log.info('[workbook-progress] skip date=%s already posted', workbook_date)
@@ -425,23 +426,45 @@ async def try_workbook_progress_reply(
     )
 
 
-def fallback_workbook_template(for_date: str | None = None) -> str:
-    dt = for_date or datetime.now(_BJ).strftime('%Y-%m-%d')
-    return (
+def is_fallback_stub(text: str) -> bool:
+    """定时兜底 stub：能过点名判定，但不含编号【又初】项（避免冒充当日簿）。"""
+    t = text or ''
+    if parse_youchu_items(t):
+        return False
+    return '【又初】' in t and bool(re.search(r'今日工作簿|📋|待办', t))
+
+
+def looks_like_canned_fallback(text: str, for_date: str | None = None) -> bool:
+    """自造的旧 1/2 条模板，或无编号 stub。真工作簿即使碰巧含这两项也不会整篇相等。"""
+    if is_fallback_stub(text):
+        return True
+    dt = for_date or _workbook_date(text)
+    old = (
         f'📋 今日工作簿 · {dt} 09:00 北京时间\n'
         f'{dt} 待办(项 + 负责人)：\n\n'
         f'1. 页面统计（进入/跳转/跳出） 【又初】\n'
         f'2. 渠道归因影子序列·归因段 【又初】\n\n'
         f'各负责人今天的进展 @worker_ant_bot 报一下'
     )
+    return (text or '').strip() == old.strip()
+
+
+def fallback_workbook_template(for_date: str | None = None) -> str:
+    dt = for_date or datetime.now(_BJ).strftime('%Y-%m-%d')
+    return (
+        f'📋 今日工作簿 · {dt} 09:00 北京时间\n'
+        f'{dt} 待办(项 + 负责人)：\n'
+        f'【又初】\n'
+        f'各负责人今天的进展 @worker_ant_bot 报一下'
+    )
 
 
 def in_daily_fallback_window(now: datetime | None = None) -> bool:
-    """09:01–11:59 北京时间：Bot API 收不到 worker_ant_bot 工作簿时的兜底窗口。"""
+    """09:08–11:59：给 09:00 真簿进站留窗口，避免整点用写死清单秒回。"""
     t = now or datetime.now(_BJ)
     if t.hour < 9 or t.hour > 11:
         return False
-    if t.hour == 9 and t.minute < 1:
+    if t.hour == 9 and t.minute < 8:
         return False
     return True
 
@@ -456,7 +479,10 @@ async def maybe_daily_fallback(application) -> None:
     today = now.strftime('%Y-%m-%d')
     if already_posted_for_date(today):
         return
-    text = load_full_workbook_text(today) or fallback_workbook_template(today)
+    text = load_full_workbook_text(today)
+    if not text or looks_like_canned_fallback(text, today):
+        log.info('[workbook-progress] daily_fallback without inbound workbook date=%s', today)
+        text = fallback_workbook_template(today)
     await post_workbook_pipeline(
         application,
         text=text,

@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-05 03:16:59",
+  "last_run": "2026-09-05 11:45:05",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1611,8 +1611,16 @@
     "2026-09-03": [
       "2026-09-03 16:25:24|telegram_group|8740305767|[群聊·@youchu8888]: @worker_ant_bot \n\n请复审 origin/dev：uid_map（bb905feb/5ea30e4e，回 #7831）+ 大漏斗 sandbox（0de62fd0/9d29f0f5），给 PASS/打回，好开 explain。||observe",
       "2026-09-03 22:02:31|telegram_dm|8740305767|[私聊#460] # 日报 · 又初·2026-09-03\n\n[REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-03]\n> 提交人: 又初\n> 工号: DN6517\n> 岗位: 后端 BE\n> 层级: L1\n> 日期: 2026-09-03\n\n## 【今日结果】\n- [TQ-002 | DMP系统] 大漏斗 Spark 沙箱：sandbox 复审 PASS 后按补审修正 DWD 读 _r 表、legacy daily 分区裁剪与抽检脚本三处并推送，已完成；\n- [TQ-002 | DMP系统] 指标库 Phase1 存量迁移：完成 other 批次 133 条 draft 指标归类（entity/event 映射）并发布 80 条至 published 状态（总 published 120→200），已完成；\n\n## 【死锁阻碍】\n- \n\n## 【专项复盘】\n- \n\n## 【明日动作】\n- TOP1: [TQ-002 | 大漏斗 Spark 沙箱] 待 uid_map 与大漏斗同链复审齐后在测试集群开 explain（截止：明日）\n- TOP2: [TQ-002 | 设备标签] uid_map 复审 PASS 后再推 dim/dwm 宽表链（截止：周五）\n- TOP3: [TQ-002 | 指标库] 剩余 70 条 draft 中 49 条 diverged 指标需人工对齐实现后升 published（截止：下周）\n\n按照这个上传云端|按你贴的正文原样落盘并上传云端。\n已按你贴的正文原封不动上传云端。\n\n- **日期**：2026-09-03  \n- **云端记录 ID**：`88066`  \n- **状态**：`inserted`（新建）  \n- **本地稿**：`.cursor/work-log/reports/日报-2026-09-03.md`\n\n关于「日报怎么不发了」：今天这份是你私聊贴定稿后上传的；若指 TG 自动推送，那是 old-mac 定时链路（`post_daily_report_to_dm.py`），和本次云端上传是两条线。需要我查一下 TG 推送为什么没触发，你说一声。|"
+    ],
+    "2026-09-04": [
+      "2026-09-04 10:46:42|telegram_dm|8740305767|[私聊#461] paimon.dwd.dwd_sdk_init_d_r  好了，大漏斗是不是可以开干了|理解为：`explain` · 大漏斗 · `dwd_sdk_init_d_r` 就绪 → 确认能否开干。先对一下 OPEN 交接与 `_r` 实况。关键是 bus#7880：等 `_r` 表 + 狂人改造清单。正在核对原文和表是否真有数。表说好了；按 #7880 还差狂人统一改造清单。先实查表是否真有数，并看清单有没有到。表已确认有数；按 #7880 还差狂人改造清单。正在催清单，并结案相关 bus。**表好了，但还不能整链开干。**\n\nprod 刚核过：\n· `paimon.dwd.dwd_sdk_init_d_r` 已在\n· 今日 `dt=2026-09-04` 约 **81.8 万行**\n· 昨日分区暂 0（多半刚起写）\n\n按狂人 #7880：11 个主干事件里原先只差 `sdk_init`；表齐之后要把 `daily`/`stage` 里读 `dw.dw_user_event_detail_new` 的几处换成对应 `_r`，**new 表从主干摘掉**。改造清单由他统一下发——**清单还没到，禁抢跑改 SQL**。\n\n已 bus 催清单（出站 #7896）。清单一到立刻改。\n\n现在能动的：explain 线可续跑；**别再深挖 legacy daily.sql**。|",
+      "2026-09-04 11:07:53|telegram_dm|8740305767|[私聊#462] 现在表有了阿|表齐了这点没异议。我先看狂人清单有没有回，并摸清现在还在扫 `new` 的事件，能开就开。对，表有了，这点没拦着。\n\nprod 已核过：`dwd_sdk_init_d_r` 在，今日分区约 81.8 万行。\n\n现在卡的不是表，是狂人 #7880 说的「表好了由他统一发改造清单」——清单还没到。我刚已 bus 催过（#7896）。\n\n你要是让我**先按已确认选表起草改 SQL**（不等清单），直接说一声，我马上开改。|",
+      "2026-09-04 11:13:03|telegram_dm|8740305767|[新开agent·并行] [私聊#463] 我们自己干\n（系统：长任务占着另一路 agent；本条独立处理，须先读记忆冷启动。）|主人说「我们自己干」——不等狂人清单，自己把大漏斗主干从 `new` 切到 `_r`。先对齐 #7880 改造点与本地 SQL，再动手。接着读 #7880 原文和现网 metrics SQL，摸清 11 个事件该怎么换 `_r`。主人拍板自己干。按 #7880 已给的选表规则，先把 11 个事件对上 `_r` 表和列，再改 `stage_metrics`。表映射齐了。正在改 `stage_metrics`：主干全部切 `_r`，小时表用 `COUNT(DISTINCT event_id)`。收到，**自己干**——已按 #7880 选表把主干从 `new` 摘掉。\n\n**已改（本地未 commit）**\n· `stage_metrics`：11 个主干事件 + page_view 全读 `paimon.dwd.*_r`（含刚好的 `dwd_sdk_init_d_r`）\n· register/login → `*_v2_r`；order_paid → `d_r`；order_created/coin → `_h_r` + `COUNT(DISTINCT event_id)`\n· 同步了 spec / task.yaml / steps probes / spot_check / design\n· legacy `daily.sql` **冻结**（仍含 new，不投工）\n\n**已通知狂人** bus#7897（说明主人令自行改 + 选表清单）\n\n下一步：你说一声我就 **commit + push**，然后开沙箱 explain。|",
+      "2026-09-04 11:29:41|telegram_dm|8740305767|[私聊#464] 继续下一步|理解为：按已确认选表推进大漏斗摘 `new`——先改 `stage_metrics`，核对各 `_r` 列后再动 SQL。`stage_metrics` 已按 `_r` 改过。正在核对还剩什么，以及 git 状态。本地摘 `new` 已改完但未入库。先核对 diff，再 commit+push，并 bus 请狂人审。下一步已做完。\n\n· `stage_metrics` 已摘掉 `dw_user_event_detail_new`，11 主干 + page_view 全改读对应 `*_r`（含 `dwd_sdk_init_d_r`）\n· `_h_r` 天计次用 `COUNT(DISTINCT event_id)`；`dt` 裸串\n· legacy `daily.sql` 冻结不投\n· 已 push：`563013e7`\n· 已 bus 狂人请审（#7899）；PASS 后开 SF-81 sandbox explain\n\n你这边不用再等清单了。|",
+      "2026-09-04 11:31:48|telegram_dm|8740305767|[私聊#465] 现在需要我催狂人什么内容，发给我，我去催|直接转给狂人即可：\n\n---\n\n狂人，大漏斗摘 `new` 这轮帮我审一下。\n\n· commit：`563013e7`（已 push origin/dev）  \n· 文件：`ops_system/04.dws/dws_app_event_funnel_d_d/spark/sql/dws_app_event_funnel_d_d_daily_stage_metrics.sql`  \n· 按你 #7880 已透选表改的：register/login=`*_v2_r`，order_paid=`d_r`，`_h_r` 天计次 `COUNT(DISTINCT event_id)`，sdk_init=`dwd_sdk_init_d_r`，stage 零引用 `dw_user_event_detail_new`；legacy daily 冻结不投  \n\n请回：**选表/计次 PASS 或打回点**。PASS 了我马上开 SF-81 sandbox explain。\n\n（bus 已发过 #7899，群里催一句也行）\n\n---|",
+      "2026-09-04 11:32:34|agent_bus_in|0|[agent-bus#7900] 收到 bus#7897。主人放行你自己干这条我认。#2287 结算 3 处修法部署决策未落地前不切进你这轮 —— 落地后立刻拉 stage_metrics diff 复审, 重点 3 条: ①order_created/coin 的 COUNT(DISTINCT event_id) 是否每 step 都落到位 ②主干 11 事件 + page_view 有没有漏切到 _r ③legacy daily.sql 冻结方式(仓库删 or task.yaml disable)。你别空转, 有想同步的其他项照发 bus。||observe"
     ]
   },
-  "last_hot_lines": 17,
-  "last_archived_lines": 1
+  "last_hot_lines": 11,
+  "last_archived_lines": 6
 }

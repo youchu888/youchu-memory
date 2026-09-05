@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-05 | [工作簿 09:01 兜底仍像秒回：写死 1/2 条 + 正文印「禁止秒回模板」](./2026-09-05-workbook-daily-fallback-still-looks-instant.md) | workbook,progress,instant-ack | 主人感觉仍秒回 |
 | 2026-09-05 | [upload|上传云端必须以定稿 Markdown 原封不动上传；定稿缺失时先同](./2026-09-05-upload-上传云端必须以定稿-markdown-原封不动上传-定稿缺失时先同步双机写稿-禁止.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-05 | [resume|agent-bus|用户只说「日报呢」时先澄清是要查定稿/TG、生](./2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄清是要查定稿-tg-生成日报还是上传云.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-04 | [test 验收须全 app 空 filter 跑完 stage_metrics→](./2026-09-04-test-验收须全-app-空-filter-跑完-stage_metrics-stage_wi.md) | funnel,session-rotate | 会话轮换前自动蒸馏 |

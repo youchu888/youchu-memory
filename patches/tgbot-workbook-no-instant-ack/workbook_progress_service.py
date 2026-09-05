@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+import time
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -46,6 +47,7 @@ class LiveSnapshot:
     device_tag_max_dt: str = ''
     device_tag_rows: int = 0
     device_tag_prod: str = '未上线'
+    elapsed_sec: float = 0.0
     notes: list[str] = field(default_factory=list)
 
 
@@ -96,6 +98,7 @@ def fetch_live_snapshot(*, force: bool = False, cutoff_dt: str | None = None) ->
             pass
 
     snap = LiveSnapshot(ts=now.strftime('%Y-%m-%d %H:%M:%S'), cutoff_dt=cutoff)
+    t0 = time.monotonic()
 
     pv = _mysql_row(
         _PROD_CNF,
@@ -149,6 +152,7 @@ def fetch_live_snapshot(*, force: bool = False, cutoff_dt: str | None = None) ->
         "WHERE table_schema='dws' AND table_name='dws_device_tag_d'",
     )
     snap.device_tag_prod = '未上线' if not prod_dev or int(float(prod_dev[0] or 0)) == 0 else '已建表'
+    snap.elapsed_sec = time.monotonic() - t0
 
     try:
         _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -390,8 +394,9 @@ def build_progress_reply(
     if s.cutoff_dt != cutoff:
         s = fetch_live_snapshot(force=True, cutoff_dt=cutoff)
 
-    items = parse_youchu_items(text)
-    # 簿里没有又初项时，仍报 task 板主责 + supplemental（避免复读默认 3/4 旧标题）
+    parsed = parse_youchu_items(text)
+    items = list(parsed)
+    # 簿里没有又初项时，仍报 task 板主责 + supplemental（禁止用写死的「1.页面 2.归因」冒充当日簿）
     if not items:
         board = _TASK_BOARD.read_text(encoding='utf-8') if _TASK_BOARD.is_file() else ''
         for i, line in enumerate(board.splitlines(), 1):
@@ -429,13 +434,17 @@ def build_progress_reply(
     wl = _worklog_snippets(cutoff)
     ant = WORKER_ANT_BOT.lstrip('@')
 
+    elapsed = s.elapsed_sec or 0.0
     lines = [
         f'@{ant}',
         '',
         f'又初 · 工作簿 {dt} 进展（实查 · 口径截至 {cutoff}）',
-        f'探针时间 {s.ts} CST · 禁止秒回模板',
+        f'探针时间 {s.ts} CST · 实查 {elapsed:.0f}s',
         '',
     ]
+    if not parsed:
+        lines.append('清单来源：task 板 + 自开项（当日工作簿原文未进站，未用写死 1/2 条）')
+        lines.append('')
     if s.notes:
         lines.append('探针告警：' + '；'.join(s.notes))
         lines.append('')
