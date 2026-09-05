@@ -1,9 +1,6 @@
-"""群聊工作簿点名：收到原文后 T-1 实查再回（禁闹钟发群）。
+"""工作簿进展：只走 bus。群里不回（Bot API 收不到狂人 bot；主人钦定取消群回复）。
 
-触发源：
-- Bot 群旁听 / Telethon（真群消息 → 回群）
-- agent-bus 入站（真 bus 清单 → reply bus，不发群）
-- 禁止 daily_fallback 闹钟发群
+触发源：agent-bus 入站 → T-1 实查 → reply bus。
 """
 from __future__ import annotations
 
@@ -31,6 +28,9 @@ from config import (
 )
 
 log = logging.getLogger(__name__)
+
+# 主人 2026-09-05：Bot API 收不到狂人 bot 群消息 → 取消群回复，只保留 bus
+GROUP_WORKBOOK_REPLY_TO_GROUP = False
 
 _BJ = ZoneInfo('Asia/Shanghai')
 _COOLDOWN_SEC = 3600
@@ -345,55 +345,12 @@ async def post_workbook_pipeline(
     skip_if_date_done: bool = True,
     force_repost: bool = False,
 ) -> bool:
-    """群通道：必须先收到真群消息再发。禁止闹钟/无 msg_id 发群。"""
-    if not GROUP_WORKBOOK_PROGRESS_ENABLED:
-        return False
-    if source == 'daily_fallback':
-        log.info('[workbook-progress] refuse group post source=daily_fallback')
-        return False
-    if not is_workbook_roll_call(text) or looks_like_canned_fallback(text):
-        return False
-    if not msg_id and source not in {'manual_script', 'manual'} and not force_repost:
-        log.info('[workbook-progress] refuse group post without inbound msg_id source=%s', source)
-        return False
-
-    save_full_workbook_text(text)
-    workbook_date = _workbook_date(text)
-    if skip_if_date_done and already_posted_for_date(workbook_date) and not force_repost:
-        log.info('[workbook-progress] skip date=%s already posted group', workbook_date)
-        return False
-    if msg_id and _already_posted(msg_id, channel='group'):
-        log.info('[workbook-progress] skip msg_id=%s', msg_id)
-        return False
-    if not _cooldown_ok(MONITOR_GROUP_CHAT_ID, f'date:{workbook_date}'):
-        log.info('[workbook-progress] skip date=%s cooldown', workbook_date)
-        return False
-    if not _try_claim_brief_slot(workbook_date, force=force_repost):
-        log.info('[workbook-progress] skip date=%s claim failed', workbook_date)
-        return False
-
-    from workbook_progress_service import split_for_telegram
-
-    body = await _build_live_body(text, workbook_date)
-    if not body:
-        _release_brief_inflight(workbook_date)
-        return False
-
-    try:
-        await _send_group_messages(
-            application,
-            MONITOR_GROUP_CHAT_ID,
-            split_for_telegram(body),
-        )
-    except Exception:
-        _release_brief_inflight(workbook_date)
-        raise
-    _mark_posted(msg_id, workbook_date, brief=True, detailed=True, channel='group')
-    log.info(
-        '[workbook-progress] group posted date=%s source=%s msg_id=%s',
-        workbook_date, source, msg_id,
-    )
-    return True
+    """群回复已关闭。工作簿进展只走 bus。"""
+    del application, msg_id, skip_if_date_done, force_repost
+    if text and is_workbook_roll_call(text) and not looks_like_canned_fallback(text):
+        save_full_workbook_text(text)
+    log.info('[workbook-progress] group reply disabled (bus-only) source=%s', source)
+    return False
 
 
 async def reply_workbook_via_bus(text: str, *, bus_id: int) -> bool:
@@ -428,17 +385,10 @@ async def reply_workbook_via_bus(text: str, *, bus_id: int) -> bool:
 
 
 def schedule_workbook_pipeline(text: str, *, msg_id: int = 0, source: str = '') -> None:
-    """从同步上下文（tg_status 写入等）调度。"""
-    if not is_workbook_roll_call(text):
-        return
-    app = _app_ref
-    if not app:
-        log.warning('[workbook-progress] app not ready, queued date=%s', _workbook_date(text))
+    """群通道已关：只存原文，不发群。"""
+    del msg_id, source
+    if is_workbook_roll_call(text) and not looks_like_canned_fallback(text):
         save_full_workbook_text(text)
-        return
-    asyncio.create_task(
-        post_workbook_pipeline(app, text=text, msg_id=msg_id, source=source),
-    )
 
 
 async def _post_workbook_reply(
@@ -469,52 +419,23 @@ async def try_proactive_workbook_reply(
     reply_fn,
     application=None,
 ) -> bool:
-    if not GROUP_WORKBOOK_PROGRESS_ENABLED:
-        return False
-    chat = update.effective_chat
-    if not chat or chat.id != MONITOR_GROUP_CHAT_ID:
-        return False
-    user = update.effective_user
-    if not group_roll_call_handler.is_authority_sender(user):
-        uname = (getattr(user, 'username', None) or '').strip().lower()
-        if not is_authority_sender_username(uname):
-            return False
-    msg = update.message or update.effective_message
-    msg_id = int(getattr(msg, 'message_id', 0) or 0)
-    app = application or _app_ref
-    if not app:
-        await reply_fn(build_progress_reply(text) or '')
-        return True
-    return await _post_workbook_reply(
-        chat_id=chat.id,
-        text=text,
-        msg_id=msg_id,
-        application=app,
-        log_tag='proactive',
-    )
+    """不再回群。返回 False，让 bot 旁听后 return，不把工作簿当派活回群。"""
+    del update, reply_fn, application
+    if text and is_workbook_roll_call(text) and not looks_like_canned_fallback(text):
+        save_full_workbook_text(text)
+    return False
 
 
 async def try_workbook_progress_reply(
     application,
     rec: dict,
 ) -> bool:
-    if not GROUP_WORKBOOK_PROGRESS_ENABLED:
-        return False
-    chat_id = int(rec.get('chat_id') or 0)
-    if chat_id != MONITOR_GROUP_CHAT_ID:
-        return False
-    sender = (rec.get('sender_username') or WORKER_ANT_BOT).strip().lower()
-    if not is_authority_sender_username(sender):
-        return False
+    """Telethon 看见群簿也不回群；进展只走 bus。"""
+    del application
     text = rec.get('text') or ''
-    msg_id = int(rec.get('message_id') or 0)
-    return await _post_workbook_reply(
-        chat_id=chat_id,
-        text=text,
-        msg_id=msg_id,
-        application=application,
-        log_tag='telethon',
-    )
+    if text and is_workbook_roll_call(text) and not looks_like_canned_fallback(text):
+        save_full_workbook_text(text)
+    return False
 
 
 def is_fallback_stub(text: str) -> bool:

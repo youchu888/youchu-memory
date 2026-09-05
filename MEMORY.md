@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [TG/bus 长消息禁止砍尾，必须分片续发](lessons/2026-09-05-tg-bus-长消息禁止砍尾须分片续发.md) — 禁止 [:4096]/[:3500]；分片续发
+- [feedback · TG/bus 长消息必须分片](feedback_tg_bus_long_message_must_split.md) — 主人 2026-09-05 钦定
 - [upload|上传云端必须以定稿 Markdown 原封不动上传；定稿缺](lessons/2026-09-05-upload-上传云端必须以定稿-markdown-原封不动上传-定稿缺失时先同步双机写稿-禁止.md) — 会话轮换蒸馏
 - [resume|agent-bus|用户只说「日报呢」时先澄清是要查定稿/](lessons/2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄清是要查定稿-tg-生成日报还是上传云.md) — 会话轮换蒸馏
 - [test 验收须全 app 空 filter 跑完 stage_metr](lessons/2026-09-04-test-验收须全-app-空-filter-跑完-stage_metrics-stage_wi.md) — 会话轮换蒸馏

@@ -67,7 +67,10 @@ from group_workbook_progress_handler import (
     in_daily_fallback_window,
     looks_like_canned_fallback,
     parse_youchu_items,
+    GROUP_WORKBOOK_REPLY_TO_GROUP,
+    maybe_daily_fallback,
 )
+assert GROUP_WORKBOOK_REPLY_TO_GROUP is False, 'group workbook reply must stay off'
 assert build_detailed_reply('x') is None, 'detailed must be disabled'
 assert _report_cutoff_date('2026-09-03') == '2026-09-02'
 # 真验收：禁止再靠函数签名当「禁秒回已成功」
@@ -84,7 +87,6 @@ body = build_progress_reply(stub, snap=snap, workbook_date='2026-09-05') or ''
 assert '禁止秒回模板' not in body
 assert '原文未进站' in body
 import inspect
-from group_workbook_progress_handler import maybe_daily_fallback
 assert 'post_workbook_pipeline' not in inspect.getsource(maybe_daily_fallback), 'alarm must not post group'
 print('[ok] workbook no-instant-ack smoke')
 PY

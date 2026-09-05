@@ -1,4 +1,4 @@
-"""工作簿触发：真群入站回群；真 bus 入站实查后 reply bus。禁止闹钟发群。"""
+"""工作簿触发：只扫 bus 入站，实查后 reply。不回群。"""
 from __future__ import annotations
 
 import asyncio
@@ -134,23 +134,10 @@ def _scan_bus_inbox() -> list[dict]:
 
 async def _watcher_loop(application) -> None:
     wb.set_application(application)
-    log.info('[workbook-watcher] started poll=%ss (group inbound + bus inbound; no alarm)', _POLL_SEC)
+    log.info('[workbook-watcher] started poll=%ss (bus-only; no group reply)', _POLL_SEC)
     while True:
         try:
-            group_jobs = await asyncio.to_thread(_scan_status_incoming)
             bus_jobs = await asyncio.to_thread(_scan_bus_inbox)
-            for job in group_jobs:
-                if not job.get('msg_id'):
-                    log.info('[workbook-watcher] skip group job without msg_id')
-                    continue
-                asyncio.create_task(
-                    wb.post_workbook_pipeline(
-                        application,
-                        text=job['text'],
-                        msg_id=job['msg_id'],
-                        source=job.get('source') or 'tg_status',
-                    ),
-                )
             for job in bus_jobs:
                 asyncio.create_task(
                     wb.reply_workbook_via_bus(job['text'], bus_id=job['bus_id']),

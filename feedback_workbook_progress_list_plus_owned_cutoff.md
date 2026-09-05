@@ -24,8 +24,8 @@
 
 ## 落地
 
-- 自动群进展：`workbook_progress_service.py`（单条实查）+ `group_workbook_progress_handler.py`（禁双条 follow-up）  
-- bus 人工回复：同一套三步，先实查再 reply  
+- 自动群进展：**已关**（Bot API 收不到狂人 bot；主人 2026-09-05 取消群回复）
+- bus：入站后同一套三步实查再 `reply`
 - 权威板：`project_youchu_workbook_tasks.md` + `workbook_supplemental.json`
 
 ## 关联

@@ -18,6 +18,6 @@ bash ~/.dc-platform/memory/scripts/apply_tgbot_workbook_no_instant_ack.sh
 | `scripts/post_workbook_progress_to_group.py` | 手动发群须 `--file` |
 | `data/workbook_supplemental.json` | 自开项 |
 
-## 2026-09-05 主人钦定
+## 2026-09-05 主人再确认
 
-群收不到就不要闹钟往群里回；走 bus。收到清单后按实查进度 reply，禁止秒回罐头。
+Bot API **收不到**狂人 bot 的群消息 → **取消群里回复**，只保留 bus：收到清单后实查再 reply。

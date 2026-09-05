@@ -18,9 +18,9 @@ domain: ops
 
 ## 正确做法
 
-1. **真群消息**（Bot API / Telethon / tg_status 且有 msg_id）→ 实查后回群
-2. **真 bus 入站**（worker_ant 清单点名）→ 实查后 `agent_bus_send --kind reply`，**不发群**
-3. **没有入站 → 什么都不发**（废止群闹钟）
+1. **真群消息** → **不回群**（Bot API 收不到狂人 bot；主人取消群回复路径）
+2. **真 bus 入站**（worker_ant 清单点名）→ 实查后 `agent_bus_send --kind reply`
+3. **没有 bus 入站 → 什么都不发**（废止群闹钟）
 
 ## 验证
 
