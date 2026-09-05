@@ -36,6 +36,16 @@ python3 -c "from group_workbook_progress_handler import in_daily_fallback_window
 
 旧机改完须 `bash omdb/tgbot/restart.sh`。
 
+## 为什么会反复（同一根因）
+
+不是补丁没打上。09-03 当晚 `apply_tgbot_workbook_no_instant_ack.sh` 跑过、bot 也重启了，所以群里才出现「禁止秒回模板」——**那就是 09-03 补丁的产物**。
+
+反复的原因是三件事叠在一起：
+
+1. **每次改的是上一轮的技术理解，不是主人说的观感。** 07-24 禁「行，我来」；08 月禁硬编码句子、禁双条精简+详细；09-03 合成一条并加探针。主人说的「秒回 / 天天一样」是：**09:00 点名后立刻用同一套清单回一条**。这条主路径（`maybe_daily_fallback` + 写死 1/2 条）一直当「收不到真簿的安全网」留着。
+2. **验收是假绿灯。** apply 脚本只查函数签名，不查用户可见正文、不查 09:01 会不会发自造清单。脚本成功 ≠ 群里不像秒回。
+3. **09:01 兜底会抢坑。** 真簿即使随后进站，当天 `already_posted` 已占住，不再按原文重报。task 板还停在 09-01，于是每天都是页面+归因。
+
 ## 关联
 
 - lesson：`2026-09-03-workbook-progress-list-plus-owned-no-instant-ack.md`

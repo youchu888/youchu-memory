@@ -18,12 +18,11 @@ domain: ops
 3. 口径 = 截至汇报前（D→cutoff D-1）；单条回复，禁精简秒回/双条 follow-up
 4. 正文必须带当日探针数字（行数/分区），禁止复读硬编码
 
-## 验证
+## 验证（2026-09-05 更正）
 
-```bash
-cd omdb/tgbot && .venv/bin/python scripts/post_workbook_progress_to_group.py --dry-run
-# 期望：先探针十余秒；含清单项 + supplemental；口径截至 T-1；无「精简·1~2分钟补发」
-```
+**不够：** 只 assert `build_detailed_reply is None` / 函数签名有 `workbook_date`。09-03 补丁因此绿灯，但 09:01 仍用写死 1/2 条秒回。
+
+**必须：** 正文无「禁止秒回模板」；`fallback` stub 解析不出编号【又初】项；**09:01 不在兜底窗口**；未进站正文写明「原文未进站」。
 
 `omdb/tgbot/` 不入 CHcode → 走 memory 补丁。旧机：
 

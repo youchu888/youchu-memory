@@ -50,21 +50,37 @@ install_one data/workbook_supplemental.json
 rm -f "$TGBOT_DIR"/__pycache__/workbook_progress_service*.pyc \
   "$TGBOT_DIR"/__pycache__/group_workbook_progress_handler*.pyc 2>/dev/null || true
 
-PYTHON=python3
-if [[ -x "$TGBOT_DIR/.venv/bin/python" ]]; then
-  PYTHON="$TGBOT_DIR/.venv/bin/python"
-fi
+# shellcheck source=/dev/null
+source "$TGBOT_DIR/_env.sh"
+PYTHON="$(tgbot_python)"
 
 "$PYTHON" - <<PY
 import sys
+from datetime import datetime
+from zoneinfo import ZoneInfo
 sys.path.insert(0, r'''$TGBOT_DIR''')
-from workbook_progress_service import build_detailed_reply, build_progress_reply, _report_cutoff_date
+from workbook_progress_service import build_detailed_reply, build_progress_reply, _report_cutoff_date, LiveSnapshot
+from group_workbook_progress_handler import (
+    fallback_workbook_template,
+    in_daily_fallback_window,
+    looks_like_canned_fallback,
+    parse_youchu_items,
+)
 assert build_detailed_reply('x') is None, 'detailed must be disabled'
 assert _report_cutoff_date('2026-09-03') == '2026-09-02'
-# 签名：单条实查，无 expect_detailed_followup 秒回链路依赖
-import inspect
-sig = inspect.signature(build_progress_reply)
-assert 'workbook_date' in sig.parameters
+# 真验收：禁止再靠函数签名当「禁秒回已成功」
+src = open(r'''$TGBOT_DIR/workbook_progress_service.py''', encoding='utf-8').read()
+assert '禁止秒回模板' not in src, 'user-facing slogan 禁止秒回模板 must be gone'
+stub = fallback_workbook_template('2026-09-05')
+assert parse_youchu_items(stub) == [], 'fallback stub must not inject numbered 又初 items'
+assert looks_like_canned_fallback(stub, '2026-09-05')
+bj = ZoneInfo('Asia/Shanghai')
+assert in_daily_fallback_window(datetime(2026, 9, 5, 9, 1, tzinfo=bj)) is False, '09:01 must not be fallback window'
+assert in_daily_fallback_window(datetime(2026, 9, 5, 9, 8, tzinfo=bj)) is True
+snap = LiveSnapshot(ts='2026-09-05 12:00:00', cutoff_dt='2026-09-04', elapsed_sec=15)
+body = build_progress_reply(stub, snap=snap, workbook_date='2026-09-05') or ''
+assert '禁止秒回模板' not in body
+assert '原文未进站' in body
 print('[ok] workbook no-instant-ack smoke')
 PY
 
