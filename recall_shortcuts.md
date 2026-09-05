@@ -5,6 +5,17 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 06 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-inserted-updated-属正常-勿.md` | 2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-ins |
+| ## 06 09 2026 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-09-06-用户说-失败-先查-upload-日志与云端-record-id-tg-会话红状态-上传-api.md` | 2026-09-06-用户说-失败-先查-upload-日志与云端-record |
+| 上传 不明 仍不 传问 体场 其它） | `sessions/tg-rotate-2026-09-06-0607.md` | 若排除上传问题后仍不明，应**追问具体场景**（大漏斗 / 打卡 / 其它），再 |
+| agent api tg 上传 不能 不能只看 | `sessions/tg-rotate-2026-09-06-0607.md` | TG 里 agent 会话**变红/显示失败**，常与真实 API 结果脱钩；需 |
+| 05 09 2026 不到 云端 云端填报页看不到记录时 | `sessions/tg-rotate-2026-09-06-0607.md` | 云端填报页看不到记录时，优先核对**日期筛选**（如 `2026-09-05`） |
+| inserted update updated 上传 不是 不是失败） | `sessions/tg-rotate-2026-09-06-0607.md` | 同日同类型日报重复上传会走 **update 覆盖**（先 `inserted` |
+| code id upload_work_report.py 「上 」成 上传 | `sessions/tg-rotate-2026-09-06-0607.md` | 日报「上传云端」成功判定：查 `upload_work_report.py` 执 |
+| api explain）→ 任务 关任 再查 再查对应 | `sessions/tg-rotate-2026-09-06-0607.md` | 排查顺序：终端输出 → 相关任务日志（如 explain）→ 最近建表/跑数记录 |
+| daily inser inserted→updated lesson repo | `sessions/tg-rotate-2026-09-06-0607.md` | [LESSON: daily-report,upload/同日重复上传云端是 u |
+| ed er id in ns record | `sessions/tg-rotate-2026-09-06-0607.md` | 回报结论要带可核验字段：日期、云端 record ID、最终状态（inserte |
+| tg 「为 」时 一种 上传 不要 | `sessions/tg-rotate-2026-09-06-0607.md` | 用户问「为什么失败」时，先对齐**失败对象**（日报上传 / 大漏斗 / 打卡  |
 | ## 05 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-05-upload-上传云端必须以定稿-markdown-原封不动上传-定稿缺失时先同步双机写稿-禁止.md` | 2026-09-05-upload-上传云端必须以定稿-markdown-原封不 |
 | ## 05 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄清是要查定稿-tg-生成日报还是上传云.md` | 2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄 |
 | 「日 」即 一轮 上一 上传 云端 | `sessions/tg-rotate-2026-09-05-0617.md` | 连接失败后的续接：用户重发「日报上传云端」即可按标准流程继续，无需复述上一轮失败 |
@@ -34,14 +45,3 @@
 | 11 18 563013e7 8b613fb6 count distinct | `sessions/tg-rotate-2026-09-04-2115.md` | 狂人 **stage_metrics 复审**对象：`563013e7` + 冻 |
 | explain hadoop yarn 不要 不要死磕直连 入口 | `sessions/tg-rotate-2026-09-04-2115.md` | `hadoop-1` 直连常被拒，查 explain/YARN 实况应走**已知 |
 | explain metric pass test.dws wi wide | `sessions/tg-rotate-2026-09-04-2115.md` | 大漏斗沙箱 **explain PASS ≠ 已出数**；explain 结束后 |
-| ## 04 09 2026 ack agent | `~/.dc-platform/memory/lessons/2026-09-04-ack-被-silent-丢时用-no-dedup-重发-以-reply-成功为结案依据.md` | 2026-09-04-ack-被-silent-丢时用-no-dedup-重发- |
-| ## #7880 04 09 2026 7880 | `~/.dc-platform/memory/lessons/2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人拍板可自行推进-改完-push-bus.md` | 2026-09-04-_r-表齐后仍须对齐-7880-选表规则再改-sql-主人 |
-| ## 04 09 2026 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-09-04-摘-new-改-stage_metrics-时-_h_r-天计次固定-count-distinc.md` | 2026-09-04-摘-new-改-stage_metrics-时-_h_r- |
-| #2287 #7 #7900）可与出数 00 0） 79 | `sessions/tg-rotate-2026-09-04-1247.md` | 狂人 bus 复审（如 #7900）可与出数 **并行**：「等 #2287 落 |
-| prod 不在 分区 前先 区为 区行 | `sessions/tg-rotate-2026-09-04-1247.md` | 开干前先 **prod 实查 `_r` 表**：表在不在、当日分区行数是否合理（ |
-| daily.sql disabled legacy new stage_metr | `sessions/tg-rotate-2026-09-04-1247.md` | **legacy `daily.sql` 冻结不投**：仍含 `new`，主线只 |
-| coin d_r dwd_sdk_init_d_r h_r login orde | `sessions/tg-rotate-2026-09-04-1247.md` | 选表口径：`register/login` → `*_v2_r`；`order_ |
-| 11 dw.dw_user_event_detail_new page_view | `sessions/tg-rotate-2026-09-04-1247.md` | 主干改造范围：`stage_metrics` 里 **11 个主干事件 + pa |
-| #7880 bus push stage_metrics 「我 」后 | `sessions/tg-rotate-2026-09-04-1247.md` | 主人拍板「我们自己干」后，可按 **#7880 已透出的选表规则** 先改 `s |
-| #7880 dwd_sdk_init_d_r new sql 一环 不是 | `sessions/tg-rotate-2026-09-04-1247.md` | 大漏斗摘 `new` 的卡点常不是 `_r` 表有没有，而是 **#7880 改 |
-| count daily.sql disabled distin distinct | `sessions/tg-rotate-2026-09-04-1247.md` | [LESSON: 大漏斗/摘 new 改 stage_metrics 时 _h_ |

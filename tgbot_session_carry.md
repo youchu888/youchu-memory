@@ -1,10 +1,19 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-09-05 · 最新归档：`sessions/tg-rotate-2026-09-05-0617.md`
+> 更新：2026-09-06 · 最新归档：`sessions/tg-rotate-2026-09-06-0607.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 用户问「为什么失败」时，先对齐**失败对象**（日报上传 / 大漏斗 / 打卡 / TG 会话状态），不要默认某一种。
+- 回报结论要带可核验字段：日期、云端 record ID、最终状态（inserted/updated），便于用户自助核对。
+- [LESSON: daily-report,upload|同日重复上传云端是 updated 覆盖同一条记录，inserted→updated 属正常，勿误判为异常]
+- 排查顺序：终端输出 → 相关任务日志（如 explain）→ 最近建表/跑数记录 → 再查对应 API/脚本结果。
+- 日报「上传云端」成功判定：查 `upload_work_report.py` 执行结果；`code=0` 且有云端记录 ID 即成功。
+- 同日同类型日报重复上传会走 **update 覆盖**（先 `inserted` 后 `updated` 是正常行为，不是失败）。
+- 云端填报页看不到记录时，优先核对**日期筛选**（如 `2026-09-05`）和页面缓存，让用户刷新后再查。
+- TG 里 agent 会话**变红/显示失败**，常与真实 API 结果脱钩；需单独核对实际上传/任务日志，不能只看 TG 状态。
+- 若排除上传问题后仍不明，应**追问具体场景**（大漏斗 / 打卡 / 其它），再定向查对应链路。
 - 「日报呢」与「上传云端」是不同意图：前者常指定稿/TG 是否已出，后者只执行云端上传，不要混为一谈
 - 「上传云端」前置条件：当日定稿 `reports/日报-YYYY-MM-DD.md`（或 memory 镜像）必须已存在
 - 定稿已在 → 直接原样上传，禁止改写、润色或补写后再传
@@ -14,13 +23,4 @@
 - [LESSON: daily-report|upload|上传云端必须以定稿 Markdown 原封不动上传；定稿缺失时先同步双机写稿，禁止边传边改]
 - Cursor 会话 resume 失败时会自动丢弃旧上下文，应提示用户重发指令或发「重启 agent」强制新开
 - 上传命令：`.cursor/scripts/upload_work_report.py --date YYYY-MM-DD`；凭证读 `~/Downloads/工作报告/config.js`
-- 成功回执应报三项：日期、云端记录 ID、`inserted`/`updated` 状态
-- 「上传云端」不替代「生成日报」：写稿、推 TG 是独立链路；用户只说上传时不必再贴全文或重复推 TG
-- 连接失败后的续接：用户重发「日报上传云端」即可按标准流程继续，无需复述上一轮失败细节
-- 大漏斗沙箱 **explain PASS ≠ 已出数**；explain 结束后必须立刻接 metric 真跑 → wide 真跑，中间不能停，否则 `test.dws` 宽表仍 0 行
-- `hadoop-1` 直连常被拒，查 explain/YARN 实况应走**已知入口**，不要死磕直连
-- 狂人 **stage_metrics 复审**对象：`563013e7` + 冻结 tag `8b613fb6`；PASS 5 条含 11 张 `_r` 全切、`${DT}` 裸串、18 路 `COUNT(DISTINCT event_id)`、`reg_uids` 换 `dwd_user_register_d_v2_r` 等
-- 长时间无回可先查是否已有 reply，再发 **bus 催促**（如 #7911），写明「今天要出数、请优先审」+ 当前 test 进展 + 还差什么 PASS/打回
-- [LESSON: funnel|explain PASS 后同一轮会话内立刻接 metric→wide 真跑，开跑前确认源表 T-1 分区有数且 `--dt` 任务日与业务日对齐]
-- [LESSON: agent-bus|狂人侧消息常被压缩截断，reply 须贴回 #7900 等待审原文一字不动并写明 commit+tag，勿让进度汇报冒充复审单]
 

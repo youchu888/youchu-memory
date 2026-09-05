@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-06 | [同日重复上传云端是 updated 覆盖同一条记录，inserted→updat](./2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-inserted-updated-属正常-勿.md) | daily-report,upload,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-06 | [用户说「失败」先查 upload 日志与云端 record ID；TG 会话红状](./2026-09-06-用户说-失败-先查-upload-日志与云端-record-id-tg-会话红状态-上传-api.md) | daily-report,upload,tg,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-05 | [TG/bus 长消息禁止砍尾，必须分片续发](./2026-09-05-tg-bus-长消息禁止砍尾须分片续发.md) | tg,agent-bus,messaging,truncation | 禁止 [:4096]/[:3500]；分片+--text-file |
 | 2026-09-05 | [群收不到工作簿就不要闹钟发群：等 bus 入站后再按实查 reply](./2026-09-05-workbook-no-group-alarm-reply-on-bus.md) | workbook,agent-bus,progress | 主人钦定：无入站不发群 |
 | 2026-09-05 | [工作簿 09:01 兜底仍像秒回：写死 1/2 条 + 正文印「禁止秒回模板」](./2026-09-05-workbook-daily-fallback-still-looks-instant.md) | workbook,progress,instant-ack | 主人感觉仍秒回 |

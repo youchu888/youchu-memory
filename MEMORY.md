@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [同日重复上传云端是 updated 覆盖同一条记录，inserted→u](lessons/2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-inserted-updated-属正常-勿.md) — 会话轮换蒸馏
+- [用户说「失败」先查 upload 日志与云端 record ID；TG ](lessons/2026-09-06-用户说-失败-先查-upload-日志与云端-record-id-tg-会话红状态-上传-api.md) — 会话轮换蒸馏
 - [TG/bus 长消息禁止砍尾，必须分片续发](lessons/2026-09-05-tg-bus-长消息禁止砍尾须分片续发.md) — 禁止 [:4096]/[:3500]；分片续发
 - [feedback · TG/bus 长消息必须分片](feedback_tg_bus_long_message_must_split.md) — 主人 2026-09-05 钦定
 - [upload|上传云端必须以定稿 Markdown 原封不动上传；定稿缺](lessons/2026-09-05-upload-上传云端必须以定稿-markdown-原封不动上传-定稿缺失时先同步双机写稿-禁止.md) — 会话轮换蒸馏
