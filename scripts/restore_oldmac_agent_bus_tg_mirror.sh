@@ -79,17 +79,45 @@ fi
 
 echo
 echo "--- 2/4 restart TG bot (status_mirror) ---"
-if [[ -x "$TGBOT_DIR/restart.sh" ]]; then
-  bash "$TGBOT_DIR/restart.sh"
-elif [[ -x "$TGBOT_DIR/start.sh" ]]; then
+# 先停守护/监控，避免与 restart 抢杀刚拉起的 bot（SIGTERM 15 常见根因）
+if [[ -x "$TGBOT_DIR/stop_daemon.sh" ]]; then
+  bash "$TGBOT_DIR/stop_daemon.sh" 2>/dev/null || true
+fi
+if [[ -x "$TGBOT_DIR/stop_monitor.sh" ]]; then
+  bash "$TGBOT_DIR/stop_monitor.sh" 2>/dev/null || true
+fi
+UID_NUM="$(id -u)"
+for label in com.youchu.tgbot-dc com.dc.tgbot-daemon com.youchu.tgbot-daemon; do
+  launchctl bootout "gui/${UID_NUM}/${label}" 2>/dev/null || true
+done
+if [[ -x "$TGBOT_DIR/stop.sh" ]]; then
   bash "$TGBOT_DIR/stop.sh" 2>/dev/null || true
-  sleep 1
+fi
+pkill -f 'python.*omdb/tgbot/bot\.py' 2>/dev/null || true
+pkill -f 'python.*tgbot/bot\.py' 2>/dev/null || true
+rm -f /tmp/tgbot-dc.pid /tmp/tgbot-dc.heartbeat
+sleep 3
+if [[ -x "$TGBOT_DIR/start.sh" ]]; then
   bash "$TGBOT_DIR/start.sh"
 else
-  echo "[fail] tgbot restart/start.sh 不存在: $TGBOT_DIR" >&2
+  echo "[fail] tgbot start.sh 不存在: $TGBOT_DIR" >&2
   exit 1
 fi
-sleep 2
+sleep 3
+if [[ ! -f /tmp/tgbot-dc.pid ]] || ! kill -0 "$(cat /tmp/tgbot-dc.pid)" 2>/dev/null; then
+  echo "[fail] tgbot 启动失败，最近日志：" >&2
+  tail -n 80 /tmp/tgbot-dc.log 2>/dev/null || true
+  exit 1
+fi
+echo "[ok] tgbot pid=$(cat /tmp/tgbot-dc.pid)"
+# bot 起来后再开守护（避免启动窗口内互相 restart）
+if [[ -x "$TGBOT_DIR/start_daemon_bg.sh" ]]; then
+  bash "$TGBOT_DIR/start_daemon_bg.sh" 2>/dev/null || true
+elif [[ -x "$TGBOT_DIR/start_daemon.sh" ]]; then
+  nohup bash "$TGBOT_DIR/start_daemon.sh" >>/tmp/tgbot-dc-daemon.log 2>&1 &
+  echo $! >/tmp/tgbot-dc-daemon.pid
+  echo "[ok] tgbot daemon bg pid=$!"
+fi
 
 echo
 echo "--- 3/4 start poller + wake-bridge + daemon ---"
