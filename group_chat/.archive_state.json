@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-05 22:07:03",
+  "last_run": "2026-09-06 04:07:04",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1628,9 +1628,10 @@
       "2026-09-04 20:25:26|telegram_dm|8740305767|[私聊#469] 收到回复了吗？没有的话催促狂人一下，告诉他今天要跑出数据的，优先处理一下啊|先查狂人有没有回 #7908，没有就立刻催。没收到对 #7908 的新回。正在 bus 催狂人优先审。没有。到现在狂人还没回 #7908。\n\n已催 **bus#7911**：说明主人今天要出数、请优先审；并写明 test 侧 SF-81 已出数、还差 stage_metrics 那 3 条 PASS/打回。\n\n他回了我再转你。|",
       "2026-09-04 21:07:45|agent_bus_in|0|[agent-bus#7914] 大漏斗 stage_metrics 摘 new 复审 · **PASS**（对象: commit 563013e7 + 冻结 tag 8b613fb6，绕开 #7900 三条原文，直接按判据现场复审）。\n\n5 条全过:\n① 主干 11 张 _r 全切，day_uids UNION 14 张（禁扫 new）✓\n② 所有 _r 表 dt 用裸串 '${DT}'，不再 DATE 字面量 ✓\n③ 18 路 metrics 全改 COUNT(DISTINCT event_id)（含 vid/nov/com 补 event_id 列）✓\n④ reg_uids 换 dwd_user_register_d_v2_r，is_new 判定口径与 day_uids 内 register 一致 ✓\n⑤ legacy daily.sql 头 `-- FROZEN 2026-09-04` + task.yaml `legacy_sql.status=disabled` ✓\n\n顺手认可: sandbox_steps_fragment.json 补齐 sdk_init/register_v2/page_view 三张新表探针 ✓。\n\n主人今天钦定今天出数, 你可以直接投产。有勤时联系, 我这边随时接。||observe",
       "2026-09-04 21:11:35|agent_bus_in|0|[agent-bus#7916] 主人钦定的分工: **你把 test 全部跑到位, 我来验数据 → 挂调度 → 回写**。\n\n请你完成:\n\n① **test.dws 侧全 app 完整跑一遍**(不是 SF-81 单 app 冒烟, 是 app_filter_e/v/n/c 全空串的全量), dt=2026-09-04\n   - 顺序: `dws_app_event_funnel_metric_stg_d` → `dws_app_event_funnel_d_d`(stage_metrics → stage_wide)\n   - 用 sandbox_steps_full.json 的槽 00 一把跑, 命令按 _meta 里\"怎么跑\"那三行走\n\n② **跑完 bus 告诉我三样东西**:\n   a. yarn appId 与 driver 日志尾 20 行(两个 stage 都要)\n   b. `SELECT dt, app_id, is_new, metric_group, user_cnt, session_cnt, event_cnt FROM test.dws.dws_app_event_funnel_metric_stg_d WHERE dt='2026-09-04' ORDER BY app_id, metric_group, is_new` 前 200 行\n   c. `SELECT dt, app_id, is_new, COUNT(*) rows_cnt FROM test.dws.dws_app_event_funnel_d_d WHERE dt='2026-09-04' GROUP BY dt, app_id, is_new ORDER BY app_id, is_new`(宽表按 app × is_new 的行数分布)\n\n③ **注意**: sandbox_steps_full.json 里 probes 有没有跟 fragment 一样补齐 sdk_init_d_r / user_register_d_v2_r / app_page_view_d_r 三张? 你自查一下, 缺就补上并提 commit(现在只看到 fragment 版 diff 里补了)。\n\n跑通并给我上述三样数据 = 你这半段完成, 我接手验数 → 出结论 → 挂 pipeline-runner slot + 回写 SR 现网 dws。\n\n有报错随时 bus。||observe",
-      "2026-09-04 21:51:08|telegram_dm|8740305767|[私聊#470] 日报呢|❌ Cursor 会话连接失败（已自动丢弃旧 resume）。请重发刚才那句；或发「重启 agent」强制新开。|"
+      "2026-09-04 21:51:08|telegram_dm|8740305767|[私聊#470] 日报呢|❌ Cursor 会话连接失败（已自动丢弃旧 resume）。请重发刚才那句；或发「重启 agent」强制新开。|",
+      "2026-09-04 22:10:27|telegram_dm|8740305767|[私聊#471] 日报上传云端|主人要「日报上传云端」——先确认当日定稿是否已在，有则原样上传；没有就先同步双机、写定稿再传。定稿已在，按「上传云端」原样上传。已上传云端：`2026-09-04` · 记录 ID `89098` · `inserted`|"
     ]
   },
-  "last_hot_lines": 6,
-  "last_archived_lines": 8
+  "last_hot_lines": 5,
+  "last_archived_lines": 1
 }
