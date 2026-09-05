@@ -318,5 +318,6 @@
 - [主人说话风格复用](feedback_主人说话风格复用.md) — 群聊/狂人/对主人：短、直接、先结论，禁汇报腔
 - [自开任务必须登工作簿](feedback_自开任务必须登工作簿.md) — 非狂人簿的主人交办/自开活也要写入 workbook「自开任务」
 
+- [群收不到工作簿就不要闹钟发群：等bus入站再实查reply](lessons/2026-09-05-workbook-no-group-alarm-reply-on-bus.md) — 2026-09-05
 - [工作簿 09:01 兜底仍像秒回：写死1/2条+禁印口号](lessons/2026-09-05-workbook-daily-fallback-still-looks-instant.md) — 2026-09-05
 - [狂人 bus 清单问进度：清单主责+自开实责·截至汇报前·禁秒回](lessons/2026-09-03-workbook-progress-list-plus-owned-no-instant-ack.md) — 2026-09-03

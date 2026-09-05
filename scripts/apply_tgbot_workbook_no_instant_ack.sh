@@ -44,11 +44,13 @@ install_one() {
 
 install_one workbook_progress_service.py
 install_one group_workbook_progress_handler.py
+install_one workbook_trigger_watcher.py
 install_one scripts/post_workbook_progress_to_group.py
 install_one data/workbook_supplemental.json
 
 rm -f "$TGBOT_DIR"/__pycache__/workbook_progress_service*.pyc \
-  "$TGBOT_DIR"/__pycache__/group_workbook_progress_handler*.pyc 2>/dev/null || true
+  "$TGBOT_DIR"/__pycache__/group_workbook_progress_handler*.pyc \
+  "$TGBOT_DIR"/__pycache__/workbook_trigger_watcher*.pyc 2>/dev/null || true
 
 # shellcheck source=/dev/null
 source "$TGBOT_DIR/_env.sh"
@@ -81,6 +83,9 @@ snap = LiveSnapshot(ts='2026-09-05 12:00:00', cutoff_dt='2026-09-04', elapsed_se
 body = build_progress_reply(stub, snap=snap, workbook_date='2026-09-05') or ''
 assert '禁止秒回模板' not in body
 assert '原文未进站' in body
+import inspect
+from group_workbook_progress_handler import maybe_daily_fallback
+assert 'post_workbook_pipeline' not in inspect.getsource(maybe_daily_fallback), 'alarm must not post group'
 print('[ok] workbook no-instant-ack smoke')
 PY
 

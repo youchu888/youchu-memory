@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-05 12:16:40",
+  "last_run": "2026-09-05 16:00:12",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1619,9 +1619,10 @@
       "2026-09-04 11:29:41|telegram_dm|8740305767|[私聊#464] 继续下一步|理解为：按已确认选表推进大漏斗摘 `new`——先改 `stage_metrics`，核对各 `_r` 列后再动 SQL。`stage_metrics` 已按 `_r` 改过。正在核对还剩什么，以及 git 状态。本地摘 `new` 已改完但未入库。先核对 diff，再 commit+push，并 bus 请狂人审。下一步已做完。\n\n· `stage_metrics` 已摘掉 `dw_user_event_detail_new`，11 主干 + page_view 全改读对应 `*_r`（含 `dwd_sdk_init_d_r`）\n· `_h_r` 天计次用 `COUNT(DISTINCT event_id)`；`dt` 裸串\n· legacy `daily.sql` 冻结不投\n· 已 push：`563013e7`\n· 已 bus 狂人请审（#7899）；PASS 后开 SF-81 sandbox explain\n\n你这边不用再等清单了。|",
       "2026-09-04 11:31:48|telegram_dm|8740305767|[私聊#465] 现在需要我催狂人什么内容，发给我，我去催|直接转给狂人即可：\n\n---\n\n狂人，大漏斗摘 `new` 这轮帮我审一下。\n\n· commit：`563013e7`（已 push origin/dev）  \n· 文件：`ops_system/04.dws/dws_app_event_funnel_d_d/spark/sql/dws_app_event_funnel_d_d_daily_stage_metrics.sql`  \n· 按你 #7880 已透选表改的：register/login=`*_v2_r`，order_paid=`d_r`，`_h_r` 天计次 `COUNT(DISTINCT event_id)`，sdk_init=`dwd_sdk_init_d_r`，stage 零引用 `dw_user_event_detail_new`；legacy daily 冻结不投  \n\n请回：**选表/计次 PASS 或打回点**。PASS 了我马上开 SF-81 sandbox explain。\n\n（bus 已发过 #7899，群里催一句也行）\n\n---|",
       "2026-09-04 11:32:34|agent_bus_in|0|[agent-bus#7900] 收到 bus#7897。主人放行你自己干这条我认。#2287 结算 3 处修法部署决策未落地前不切进你这轮 —— 落地后立刻拉 stage_metrics diff 复审, 重点 3 条: ①order_created/coin 的 COUNT(DISTINCT event_id) 是否每 step 都落到位 ②主干 11 事件 + page_view 有没有漏切到 _r ③legacy daily.sql 冻结方式(仓库删 or task.yaml disable)。你别空转, 有想同步的其他项照发 bus。||observe",
-      "2026-09-04 11:55:52|telegram_dm|8740305767|[私聊#466] 现在到哪了，大漏斗这个今天要搞定数据的|先对一下现状和卡点，再判断今天怎么把数据跑出来。代码已齐；主人要今天出数。狂人审可并行，我这边先开沙箱 explain / SF-81 试跑。注意到 yarn 壳与 SQL 宏可能对不上。先同步集群代码并核对宏，再开跑。集群 SQL 还是旧版。正在同步最新代码并开 SF-81 沙箱 explain。**进度一句话：代码齐了，正在出数路上（explain 已起）。**\n\n已完成\n· 摘 `new`、全切 `*_r`：`563013e7`；legacy 冻结：`8b613fb6`\n· 集群 SQL 已同步（含 `dwd_sdk_init_d_r`）\n· 狂人 #7900：他等 #2287 再复审——**不挡我们今天出数**\n\n正在做\n· 沙箱 **explain** 已起：SF-81 · `dt=2026-09-04` · 写 `test.dws`\n· 日志：`/tmp/funnel_explain_20260904.log`（hadoop-1）\n· 选 09-04：`sdk_init_d_r` 今日约 211 万行，昨日分区还是 0\n\n接下来（今天收口）\n1. explain PASS → 去掉 `--explain` 真跑 metrics→wide  \n2. 验 `test.dws` 宽表有行、sdk_init/video 非全 0  \n3. 再报你；写 prod 另说一声\n\n不用催狂人也能推进今天出数。explain 完我继续真跑。|"
+      "2026-09-04 11:55:52|telegram_dm|8740305767|[私聊#466] 现在到哪了，大漏斗这个今天要搞定数据的|先对一下现状和卡点，再判断今天怎么把数据跑出来。代码已齐；主人要今天出数。狂人审可并行，我这边先开沙箱 explain / SF-81 试跑。注意到 yarn 壳与 SQL 宏可能对不上。先同步集群代码并核对宏，再开跑。集群 SQL 还是旧版。正在同步最新代码并开 SF-81 沙箱 explain。**进度一句话：代码齐了，正在出数路上（explain 已起）。**\n\n已完成\n· 摘 `new`、全切 `*_r`：`563013e7`；legacy 冻结：`8b613fb6`\n· 集群 SQL 已同步（含 `dwd_sdk_init_d_r`）\n· 狂人 #7900：他等 #2287 再复审——**不挡我们今天出数**\n\n正在做\n· 沙箱 **explain** 已起：SF-81 · `dt=2026-09-04` · 写 `test.dws`\n· 日志：`/tmp/funnel_explain_20260904.log`（hadoop-1）\n· 选 09-04：`sdk_init_d_r` 今日约 211 万行，昨日分区还是 0\n\n接下来（今天收口）\n1. explain PASS → 去掉 `--explain` 真跑 metrics→wide  \n2. 验 `test.dws` 宽表有行、sdk_init/video 非全 0  \n3. 再报你；写 prod 另说一声\n\n不用催狂人也能推进今天出数。explain 完我继续真跑。|",
+      "2026-09-04 15:41:01|telegram_dm|8740305767|[私聊#467] 目前什么进度|先对一下大漏斗沙箱 explain / 出数实况，再回你进度。hadoop-1 直连被拒，换已知入口查 explain 实况。explain 已结束；接着确认是否已真跑、以及 `test.dws` 是否有数。explain 已 PASS，真跑还没起。正在核对 test 表行数并立刻开真跑。先确认业务日与源表有数分区，再开真跑。源表确认：`sdk_init` 只有 `09-04` 有数。真跑用 `--dt=2026-09-05`（任务日→数据段 T-1=`09-04`）。一句话：**代码齐了，explain 已过；真跑刚拉起，数据还没落完。**\n\n· 已完成：摘 `new` 切 `_r` 已 push；沙箱 explain PASS（约 3 分钟，写 `test.dws`）\n· 卡点：上一轮 explain 完后没接着真跑，所以宽表还是空的（SF-81 · 09-03/09-04 = 0 行）\n· 刚开干：metric 真跑已起  \n  · SF-81 · 业务日 `2026-09-04`（任务日 09-05 → slot 对上今天，`sdk_init` 今日有数）  \n  · YARN `application_…_6804`  \n  · 日志 `/tmp/funnel_real_metric_20260904.log`\n· 接下来：metric 出数 → 再跑 wide → 验 sdk_init/video 非全 0 → 报你\n\n狂人 #7900 复审不挡今天出数。有结果我再私聊你。|"
     ]
   },
-  "last_hot_lines": 10,
+  "last_hot_lines": 9,
   "last_archived_lines": 1
 }

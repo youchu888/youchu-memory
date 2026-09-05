@@ -67,6 +67,9 @@ async def main() -> int:
         workbook = Path(args.file).read_text(encoding='utf-8')
     else:
         workbook = DEFAULT_WORKBOOK
+        if not args.dry_run:
+            print('refuse: live group post requires --file (no canned fallback)', file=sys.stderr)
+            return 2
 
     save_full_workbook_text(workbook)
 

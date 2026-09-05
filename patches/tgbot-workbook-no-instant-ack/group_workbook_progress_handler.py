@@ -1,9 +1,9 @@
-"""群聊工作簿点名：T-1 实查后再发**一条**进展（禁止精简秒回）。
+"""群聊工作簿点名：收到原文后 T-1 实查再回（禁闹钟发群）。
 
-触发源（任一）：
-- Bot 群旁听（知秋/狂人人工发工作簿）
-- Telethon dispatch（worker_ant_bot 发群，需 session）
-- tg_status / 定时兜底（Bot API 收不到其他 bot 时）
+触发源：
+- Bot 群旁听 / Telethon（真群消息 → 回群）
+- agent-bus 入站（真 bus 清单 → reply bus，不发群）
+- 禁止 daily_fallback 闹钟发群
 """
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ import fcntl
 import json
 import logging
 import re
+import sys
 import time
 from contextlib import contextmanager
 from dataclasses import dataclass
@@ -24,6 +25,7 @@ import group_roll_call_handler
 from config import (
     GROUP_WORKBOOK_PROGRESS_ENABLED,
     MONITOR_GROUP_CHAT_ID,
+    PROJECT_ROOT,
     TGBOT_DIR,
     WORKER_ANT_BOT,
 )
@@ -180,10 +182,16 @@ def _save_state(data: dict) -> None:
     _STATE_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
 
 
+def _posted_key(message_id: int, *, channel: str = 'group') -> str:
+    if channel == 'bus':
+        return f'bus:{int(message_id)}'
+    return str(int(message_id))
+
+
 def already_posted_for_date(workbook_date: str) -> bool:
+    """群通道当天是否已发过（不含 bus-only）。"""
     with _state_lock():
-        by_date = _load_state().get('by_date') or {}
-        rec = by_date.get(workbook_date) or {}
+        rec = (_load_state().get('by_date') or {}).get(workbook_date) or {}
         return bool(rec.get('brief') or rec.get('brief_inflight'))
 
 
@@ -216,35 +224,59 @@ def _release_brief_inflight(workbook_date: str) -> None:
         _save_state(data)
 
 
-def _mark_posted(message_id: int, workbook_date: str, *, brief: bool = True, detailed: bool = False) -> None:
+def _mark_posted(
+    message_id: int,
+    workbook_date: str,
+    *,
+    brief: bool = True,
+    detailed: bool = False,
+    channel: str = 'group',
+    bus_id: int = 0,
+) -> None:
     with _state_lock():
         data = _load_state()
         ids = list(data.get('posted_ids') or [])
-        if message_id and str(message_id) not in ids:
-            ids.append(str(message_id))
+        key = _posted_key(message_id or bus_id, channel=channel) if (message_id or bus_id) else ''
+        if key and key not in ids:
+            ids.append(key)
         data['posted_ids'] = ids[-200:]
         by_date = dict(data.get('by_date') or {})
         rec = dict(by_date.get(workbook_date) or {})
-        if brief:
-            rec['brief'] = True
-            rec.pop('brief_inflight', None)
-            rec.pop('claimed_at', None)
-        if detailed:
-            rec['detailed'] = True
+        if channel == 'bus':
+            rec['bus_sent'] = True
+            rec['bus_ts'] = datetime.now(_BJ).isoformat()
+            if bus_id:
+                rec['bus_id'] = bus_id
+                bids = list(rec.get('bus_ids') or [])
+                if str(bus_id) not in bids:
+                    bids.append(str(bus_id))
+                rec['bus_ids'] = bids[-20:]
+        else:
+            if brief:
+                rec['brief'] = True
+                rec.pop('brief_inflight', None)
+                rec.pop('claimed_at', None)
+            if detailed:
+                rec['detailed'] = True
+            if message_id:
+                rec['message_id'] = message_id
         rec['ts'] = datetime.now(_BJ).isoformat()
-        if message_id:
-            rec['message_id'] = message_id
         by_date[workbook_date] = rec
         data['by_date'] = by_date
-        data['last'] = {'workbook_date': workbook_date, 'message_id': message_id}
+        data['last'] = {
+            'workbook_date': workbook_date,
+            'message_id': message_id,
+            'channel': channel,
+            'bus_id': bus_id,
+        }
         _save_state(data)
 
 
-def _already_posted(message_id: int) -> bool:
+def _already_posted(message_id: int, *, channel: str = 'group') -> bool:
     if not message_id:
         return False
     data = _load_state()
-    return str(message_id) in (data.get('posted_ids') or [])
+    return _posted_key(message_id, channel=channel) in (data.get('posted_ids') or [])
 
 
 def _cooldown_ok(chat_id: int, dedupe_key: str) -> bool:
@@ -272,6 +304,38 @@ async def _send_group_messages(application, chat_id: int, parts: list[str]) -> N
         await bot.send_message(chat_id=chat_id, text=part, disable_web_page_preview=True)
 
 
+async def _build_live_body(text: str, workbook_date: str) -> str | None:
+    from workbook_progress_service import (
+        _report_cutoff_date,
+        build_progress_reply,
+        fetch_live_snapshot,
+    )
+
+    cutoff = _report_cutoff_date(workbook_date)
+    snap = await asyncio.to_thread(fetch_live_snapshot, force=True, cutoff_dt=cutoff)
+    full_text = load_full_workbook_text(workbook_date) or text
+    return build_progress_reply(full_text, snap=snap, workbook_date=workbook_date)
+
+
+def _send_bus_reply(body: str, *, bus_id: int) -> dict:
+    notify = str(Path(PROJECT_ROOT) / '.claude' / 'database' / 'scripts' / 'notify')
+    if notify not in sys.path:
+        sys.path.insert(0, notify)
+    from agent_bus_send import send as bus_send  # noqa: WPS433
+
+    try:
+        return bus_send(
+            from_agent='youchu_ai',
+            to_agent='worker_ant',
+            text=body,
+            reply_to_bus_id=int(bus_id),
+            kind='reply',
+            payload={'kind': 'reply', 'topic': 'workbook_progress'},
+        )
+    except SystemExit as exc:
+        return {'ok': False, 'error': str(exc)}
+
+
 async def post_workbook_pipeline(
     application,
     *,
@@ -281,19 +345,24 @@ async def post_workbook_pipeline(
     skip_if_date_done: bool = True,
     force_repost: bool = False,
 ) -> bool:
-    """先 T-1 实查，再发一条进展；禁止精简秒回 / 双条 follow-up。"""
+    """群通道：必须先收到真群消息再发。禁止闹钟/无 msg_id 发群。"""
     if not GROUP_WORKBOOK_PROGRESS_ENABLED:
         return False
-    if not is_workbook_roll_call(text):
+    if source == 'daily_fallback':
+        log.info('[workbook-progress] refuse group post source=daily_fallback')
+        return False
+    if not is_workbook_roll_call(text) or looks_like_canned_fallback(text):
+        return False
+    if not msg_id and source not in {'manual_script', 'manual'} and not force_repost:
+        log.info('[workbook-progress] refuse group post without inbound msg_id source=%s', source)
         return False
 
-    if not looks_like_canned_fallback(text):
-        save_full_workbook_text(text)
+    save_full_workbook_text(text)
     workbook_date = _workbook_date(text)
     if skip_if_date_done and already_posted_for_date(workbook_date) and not force_repost:
-        log.info('[workbook-progress] skip date=%s already posted', workbook_date)
+        log.info('[workbook-progress] skip date=%s already posted group', workbook_date)
         return False
-    if msg_id and _already_posted(msg_id):
+    if msg_id and _already_posted(msg_id, channel='group'):
         log.info('[workbook-progress] skip msg_id=%s', msg_id)
         return False
     if not _cooldown_ok(MONITOR_GROUP_CHAT_ID, f'date:{workbook_date}'):
@@ -303,18 +372,9 @@ async def post_workbook_pipeline(
         log.info('[workbook-progress] skip date=%s claim failed', workbook_date)
         return False
 
-    from workbook_progress_service import (
-        _report_cutoff_date,
-        build_progress_reply,
-        fetch_live_snapshot,
-        split_for_telegram,
-    )
+    from workbook_progress_service import split_for_telegram
 
-    cutoff = _report_cutoff_date(workbook_date)
-    # 实查可能要数十秒：先查完再发，观感是「慢回真进度」，不是秒回罐头
-    snap = await asyncio.to_thread(fetch_live_snapshot, force=True, cutoff_dt=cutoff)
-    full_text = load_full_workbook_text(workbook_date) or text
-    body = build_progress_reply(full_text, snap=snap, workbook_date=workbook_date)
+    body = await _build_live_body(text, workbook_date)
     if not body:
         _release_brief_inflight(workbook_date)
         return False
@@ -328,11 +388,42 @@ async def post_workbook_pipeline(
     except Exception:
         _release_brief_inflight(workbook_date)
         raise
-    _mark_posted(msg_id, workbook_date, brief=True, detailed=True)
+    _mark_posted(msg_id, workbook_date, brief=True, detailed=True, channel='group')
     log.info(
-        '[workbook-progress] posted date=%s cutoff=%s source=%s msg_id=%s',
-        workbook_date, cutoff, source, msg_id,
+        '[workbook-progress] group posted date=%s source=%s msg_id=%s',
+        workbook_date, source, msg_id,
     )
+    return True
+
+
+async def reply_workbook_via_bus(text: str, *, bus_id: int) -> bool:
+    """bus 入站后：T-1 实查再 reply。不发群。"""
+    if not GROUP_WORKBOOK_PROGRESS_ENABLED:
+        return False
+    if not bus_id:
+        return False
+    if not is_workbook_roll_call(text) or looks_like_canned_fallback(text):
+        return False
+    if _already_posted(bus_id, channel='bus'):
+        log.info('[workbook-progress] skip bus_id=%s already replied', bus_id)
+        return False
+
+    save_full_workbook_text(text)
+    workbook_date = _workbook_date(text)
+    body = await _build_live_body(text, workbook_date)
+    if not body:
+        return False
+    try:
+        result = await asyncio.to_thread(_send_bus_reply, body, bus_id=bus_id)
+    except Exception:
+        log.exception('[workbook-progress] bus reply failed bus_id=%s', bus_id)
+        return False
+    if not result or not result.get('ok'):
+        log.warning('[workbook-progress] bus reply not ok bus_id=%s result=%s', bus_id, result)
+        return False
+    _mark_posted(0, workbook_date, channel='bus', bus_id=bus_id)
+    log.info('[workbook-progress] bus replied date=%s bus_id=%s skipped=%s',
+             workbook_date, bus_id, result.get('skipped'))
     return True
 
 
@@ -469,24 +560,6 @@ def in_daily_fallback_window(now: datetime | None = None) -> bool:
     return True
 
 
-async def maybe_daily_fallback(application) -> None:
-    """Bot API 收不到 worker_ant_bot 时的定时兜底。"""
-    if not GROUP_WORKBOOK_PROGRESS_ENABLED:
-        return
-    now = datetime.now(_BJ)
-    if not in_daily_fallback_window(now):
-        return
-    today = now.strftime('%Y-%m-%d')
-    if already_posted_for_date(today):
-        return
-    text = load_full_workbook_text(today)
-    if not text or looks_like_canned_fallback(text, today):
-        log.info('[workbook-progress] daily_fallback without inbound workbook date=%s', today)
-        text = fallback_workbook_template(today)
-    await post_workbook_pipeline(
-        application,
-        text=text,
-        msg_id=0,
-        source='daily_fallback',
-        skip_if_date_done=True,
-    )
+async def maybe_daily_fallback(application) -> None:  # noqa: ARG001
+    """已废止：群收不到时禁止闹钟发群。改等 bus 入站后再实查 reply。"""
+    return
