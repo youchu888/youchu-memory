@@ -4,7 +4,7 @@
 > **另**：大活自开也要登「自开任务」+ `workbook_supplemental.json`  
 > **更新规则**：每读到新簿 → 立刻整表覆盖 task 板；**群内进展只报「截至汇报日前一日」**，当天实活写 work-log、次日 09:01 再报  
 > **当前团队簿日期**：`2026-09-01`（项 1 页面统计 · 项 2 渠道归因影子序列；截至 9/3 未见更新簿）  
-> **上次更新**：2026-09-03 16:15 Asia/Shanghai（主人问进度 · 实查 git + prod T-1）
+> **上次更新**：2026-09-05 15:32 Asia/Shanghai（指标库 Phase1 尾批 +3 published）
 
 ## 团队簿主责（2026-09-01 · 狂人 09:00 簿）
 
@@ -26,7 +26,7 @@
 |------|------|------|-----------------|
 | YC-SPARK-UID | 设备标签指纹 + uid_map（#7738/#7787/#7830） | **等复审 PASS** | `bb905feb`/`5ea30e4e` 已交审（#7831）；enroll=P2；PASS 前 dim/dwm/宽表 HOLD；**尚未 explain** |
 | YC-SPARK-FUNNEL | 大漏斗 Spark（#7735） | **等狂人 PASS** | sandbox 已 push（`0de62fd0` → 远端续修 `9d29f0f5` app_filter/full slots）；与 uid_map 同链等审 |
-| YC-METRIC-P1 | 指标库 Phase1 数据层 | **进行中** | published **120**（video +14）；diverged HOLD；脚本已在 `0de62fd0`；下一批 other 归类 |
+| YC-METRIC-P1 | 指标库 Phase1 数据层 | **进行中** | published **203**（other 批 9/3 + 尾批 9/5）；draft 67≈64 diverged HOLD + 2 avg 卡点 + update_time；脚本 `docs/metric_library_phase1_enrich_publish_*` |
 
 ## 非又初（知会，勿冒领）
 
@@ -41,6 +41,7 @@
 
 | 日期 | 变更 |
 |------|------|
+| 2026-09-05 | 指标库：确认 other 批 9/3 已落地；尾批 +3 → published **203**；OPEN/任务板纠偏 |
 | 2026-09-02 | 多线推进：uid_map=`bb905feb` 等复审；大漏斗 sandbox 对齐 test.dws；指标库 video 脚本就绪但 metadata/SR 网络劫持 |
 | 2026-09-02 | 主人令：页面访问/归因 **不盯卡点**（分区巡检、日常扫链继续；灰度/口径等产品线卡点等有安排再动） |
 | 2026-09-02 | uid_map #7787 口径补 push；本机 pull 对齐 `e5132b22` |
