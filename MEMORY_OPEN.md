@@ -7,7 +7,7 @@
 ## 进行中
 
 - [ ] **大漏斗挂 slot**：正式表已齐 `paimon.dws.dws_app_event_funnel_d_d` + `metric_stg`（#8024 改口放行）；等狂人挂回写；观察项勿当 bug 修；交付已钉禁算转化率。
-- [ ] **指标库上线（主人定稿 B′）**：Phase2 数据层 **已清完** — published **301** / draft **0** / orphaned **11**；diverged_pending=0。下一步：D5 写路径门禁 + prod 同步包；Phase4 等知秋书面 GO。
+- [ ] **指标库上线（主人定稿 B′）**：Phase2 数据层已清（published 301 / draft 0 / orphaned 11）。**D5 写路径门禁已落地**（`metric_gate` + concept publish/set-primary + legacy publish）。下一步：prod 同步包；Phase4 等知秋书面 GO。
 
 - [ ] **prod 海豚告警处置（old-mac 专责）**：主人 2026-09-01 确认**按狂人安排**——告警驱动处置（不另建夜间全量扫）；playbook=`playbook_server_monitor_incident.md`（bus#7708+#7742）；先 part_01；**确认事故→立刻修含改代码，修完再报**；日常非事故变更仍等知秋 GO。
 - [x] **TG 问狂人标题修复（old-mac 应用）**：2026-09-01 old-mac 已 apply + restart（标题：超时→已转问狂人）。
