@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [定时 TG 推送可能早于定稿；推送内容与明日动作须与主人最终稿对齐，初稿](lessons/2026-09-07-定时-tg-推送可能早于定稿-推送内容与明日动作须与主人最终稿对齐-初稿与定稿不一致按定稿为准.md) — 会话轮换蒸馏
+- [TG 已推错误初稿时，以主人改定稿覆盖本地与云端，再 `post_dai](lessons/2026-09-07-tg-已推错误初稿时-以主人改定稿覆盖本地与云端-再-post_daily_report_to_.md) — 会话轮换蒸馏
+- [写日报前须双机 sync 后合并 work-log + 全量 trans](lessons/2026-09-07-写日报前须双机-sync-后合并-work-log-全量-transcript-派单来源-wor.md) — 会话轮换蒸馏
 - [同日重复上传云端是 updated 覆盖同一条记录，inserted→u](lessons/2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-inserted-updated-属正常-勿.md) — 会话轮换蒸馏
 - [用户说「失败」先查 upload 日志与云端 record ID；TG ](lessons/2026-09-06-用户说-失败-先查-upload-日志与云端-record-id-tg-会话红状态-上传-api.md) — 会话轮换蒸馏
 - [TG/bus 长消息禁止砍尾，必须分片续发](lessons/2026-09-05-tg-bus-长消息禁止砍尾须分片续发.md) — 禁止 [:4096]/[:3500]；分片续发

@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-07 | [定时 TG 推送可能早于定稿；推送内容与明日动作须与主人最终稿对齐，初稿与定稿不](./2026-09-07-定时-tg-推送可能早于定稿-推送内容与明日动作须与主人最终稿对齐-初稿与定稿不一致按定稿为准.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-07 | [TG 已推错误初稿时，以主人改定稿覆盖本地与云端，再 `post_daily_r](./2026-09-07-tg-已推错误初稿时-以主人改定稿覆盖本地与云端-再-post_daily_report_to_.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-07 | [写日报前须双机 sync 后合并 work-log + 全量 transcrip](./2026-09-07-写日报前须双机-sync-后合并-work-log-全量-transcript-派单来源-wor.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-07 | [概念详情须展开 label+impl+SVG图](./2026-09-07-metric-concept-ui-expand-detail.md) | metric-library,ui | bus#8082 知秋打回 |
 | 2026-09-07 | [A灌包 entity/role 全撞 PK 只 skip](./2026-09-07-metric-library-A-entity-role-skip-on-pk.md) | metric-library,prod-sync,entity_dict | bus#8066 |
 | 2026-09-07 | [metric_kind=constant；G4 豁免 impl](./2026-09-07-metric-kind-constant-g4-skip-impl.md) | metric-library,G4,constant | bus#8060 window_days helper |
