@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-07 | [A灌包 entity/role 全撞 PK 只 skip](./2026-09-07-metric-library-A-entity-role-skip-on-pk.md) | metric-library,prod-sync,entity_dict | bus#8066 |
 | 2026-09-07 | [metric_kind=constant；G4 豁免 impl](./2026-09-07-metric-kind-constant-g4-skip-impl.md) | metric-library,G4,constant | bus#8060 window_days helper |
 | 2026-09-06 | [同日重复上传云端是 updated 覆盖同一条记录，inserted→updat](./2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-inserted-updated-属正常-勿.md) | daily-report,upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-06 | [用户说「失败」先查 upload 日志与云端 record ID；TG 会话红状](./2026-09-06-用户说-失败-先查-upload-日志与云端-record-id-tg-会话红状态-上传-api.md) | daily-report,upload,tg,session-rotate | 会话轮换前自动蒸馏 |

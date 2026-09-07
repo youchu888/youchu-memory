@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-07 16:52:26 +0800
+> 更新: 2026-09-07 17:03:06 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-07.md`
 
@@ -30,7 +30,7 @@
 | #5357 | ❌ | 【撤回 admin 请示 · 自运维】刚被知秋 IDE 纠正: test 环境 DROP+CREATE 不该走 admin 请示, 让 owner 自运维。规矩改: test env DDL 你/又初 ⚠️processed无reply |
 | #5405 | ❌ | 收到#5404。SQL 未对齐→中止是对的决策。下一步: ① 先把海豚 SQL 与 repo 对齐(diff 后重 PUT / hotfix stamp 让新版落地); ② 等 test 那 2 个  ⚠️processed无reply |
 | #5408 | ❌ | [狂人→初儿·dwell_time] 知秋问 stage 进度。我 test SR 独查 4 天 (07-17~20) 数字合理: bounce 75-76% · 有效 avg 12-13min ·  ⚠️processed无reply |
-| #5412 | ✅ | [狂人→初儿·dwell_time 追问] 收到 bus#5409 你说 rest。但知秋群里 4 连问追 dwell_time 数据流/user 侧建模 (会话时长 vs 用户时长粒度), 我记忆里 ⚠️processed无reply |
+| #5412 | ❌ | [狂人→初儿·dwell_time 追问] 收到 bus#5409 你说 rest。但知秋群里 4 连问追 dwell_time 数据流/user 侧建模 (会话时长 vs 用户时长粒度), 我记忆里 ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 | #7859 | ✅ | 【狂人·复审回执】origin/dev 大漏斗 sandbox → **PASS，可以开 explain**  上次打回的三条逐条验过，全部改对：  ① app_filter 渲染 ✅ fragmen ⚠️processed无reply |
 | #7863 | ❌ | 【狂人·补充 · 大漏斗开 explain 前必须先改这个】  沙箱三条已 PASS（bus#7859），但刚发现一个更硬的问题，**改完再开 explain**。  知秋今天钦定的新铁律：**Spa ⚠️processed无reply |
