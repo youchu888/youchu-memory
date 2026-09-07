@@ -7,7 +7,7 @@
 ## 进行中
 
 - [ ] **大漏斗挂 slot**：正式表已齐 `paimon.dws.dws_app_event_funnel_d_d` + `metric_stg`（#8024 改口放行）；等狂人挂回写；观察项勿当 bug 修；交付已钉禁算转化率。
-- [ ] **指标库上线（主人定稿 B′）**：狂人#8020 同意开 Phase2；又初已答 D4引用清单/D3禁纯时间降级/B5必须留别名；B1/B2 等三张正式表回写后开；Phase4 等知秋书面 GO。
+- [ ] **指标库上线（主人定稿 B′）**：#8020 已放行 Phase2；脚本已就绪 `docs/metric_library_phase2_apply_owner_decision_20260907.py`（D3/D4/D2/B1）；**卡 VPN→RDS 握手**，通后立刻 --apply；Phase4 等知秋 GO。
 
 - [ ] **prod 海豚告警处置（old-mac 专责）**：主人 2026-09-01 确认**按狂人安排**——告警驱动处置（不另建夜间全量扫）；playbook=`playbook_server_monitor_incident.md`（bus#7708+#7742）；先 part_01；**确认事故→立刻修含改代码，修完再报**；日常非事故变更仍等知秋 GO。
 - [x] **TG 问狂人标题修复（old-mac 应用）**：2026-09-01 old-mac 已 apply + restart（标题：超时→已转问狂人）。

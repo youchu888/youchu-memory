@@ -26,7 +26,7 @@
 |------|------|------|-----------------|
 | YC-SPARK-UID | 设备标签指纹 + uid_map（#7738/#7787/#7830） | **等复审 PASS** | `bb905feb`/`5ea30e4e` 已交审（#7831）；enroll=P2；PASS 前 dim/dwm/宽表 HOLD；**尚未 explain** |
 | YC-SPARK-FUNNEL | 大漏斗 Spark（#7735） | **等狂人 PASS** | sandbox 已 push（`0de62fd0` → 远端续修 `9d29f0f5` app_filter/full slots）；与 uid_map 同链等审 |
-| YC-METRIC-P1 | 指标库上线（主人定稿 B′） | **等确认** | 主人已定 D1–D5；bus 狂人/知秋；同意后消歧+G5；Phase4 等知秋 GO；锚点 published 203 |
+| YC-METRIC-P1 | 指标库上线（主人定稿 B′） | **Phase2 卡网络** | #8020 已放行；apply 脚本已写；RDS 握手超时待 VPN；通后 D3/D4/D2/B1；锚点 published 203 |
 
 ## 非又初（知会，勿冒领）
 
