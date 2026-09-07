@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-07 | [metric_kind=constant；G4 豁免 impl](./2026-09-07-metric-kind-constant-g4-skip-impl.md) | metric-library,G4,constant | bus#8060 window_days helper |
 | 2026-09-06 | [同日重复上传云端是 updated 覆盖同一条记录，inserted→updat](./2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-inserted-updated-属正常-勿.md) | daily-report,upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-06 | [用户说「失败」先查 upload 日志与云端 record ID；TG 会话红状](./2026-09-06-用户说-失败-先查-upload-日志与云端-record-id-tg-会话红状态-上传-api.md) | daily-report,upload,tg,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-05 | [TG/bus 长消息禁止砍尾，必须分片续发](./2026-09-05-tg-bus-长消息禁止砍尾须分片续发.md) | tg,agent-bus,messaging,truncation | 禁止 [:4096]/[:3500]；分片+--text-file |
