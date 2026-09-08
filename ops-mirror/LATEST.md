@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-08 12:46:44 +0800
+> 更新: 2026-09-08 12:58:49 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-08.md`
 
@@ -56,4 +56,4 @@
 | 2026-09-08 12:08 | 群派单#210 | worker_ant_group | completed | 找到了，反扒的确实是六个。查实如下： 七张 anti_crawler_* 表都在 paimon.test 库： · 六张只有 2026-06-22 孤零零一天数 |
 | 2026-09-08 12:10 | 群派单#211 | worker_ant_group | completed | 明白，都放 test 测，需要改的就改。开工了。 改动面已经摸清，不大：七个 ETL 一共 356 行，device_id 出现 23 处（device_sig |
 | 2026-09-08 12:17 | 群派单#212 | worker_ant_group | completed | 改 SQL 的过程中查到一个必须先跟你说的问题：指纹本身也有退化值，跟 sid 一个毛病，而且严重得多。 09-06 单日实测（dw_user_event_de |
-| 2026-09-08 12:42 | 群派单#213 | worker_ant_group | in_progress | 反扒六张表进度：七个 ETL 全部改完，语法和执行计划已全部验证通过，第一张正在真跑。 改完的：device_signals（主粒度换指纹）· ip_signa |
+| 2026-09-08 12:42 | 群派单#213 | worker_ant_group | completed | 反扒六张表进度：七个 ETL 全部改完，语法和执行计划已全部验证通过，第一张正在真跑。 改完的：device_signals（主粒度换指纹）· ip_signa |
