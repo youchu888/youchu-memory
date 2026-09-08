@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## .cursor .m 08 09 2026 | `~/.dc-platform/memory/lessons/2026-09-08-用户贴定稿说-上传云端-时正文零改写-先落-cursor-work-log-reports-日报.md` | 2026-09-08-用户贴定稿说-上传云端-时正文零改写-先落-cursor- |
+| ## 08 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-08-resume-失败时除提示重发-重启-agent-业务问句-打卡等-恢复后须续答原意-禁止只留连.md` | 2026-09-08-resume-失败时除提示重发-重启-agent-业务问句 |
+| 91814 agent api record 一上 一条 | `sessions/tg-rotate-2026-09-08-2243.md` | 会话摘录里同一上传动作在新旧 agent 各回执一次（均 record **91 |
+| c→ markdown nc sy sync→写稿→推 tg | `sessions/tg-rotate-2026-09-08-2243.md` | TG 私聊转发完整日报 Markdown 即视为定稿指令，不必再等「生成日报」流 |
+| 09 2026 top1 top2 三档 产环 | `sessions/tg-rotate-2026-09-08-2243.md` | 2026-09-09 续作优先级：TOP1 设备标签沙箱真跑并回报三档规模数；T |
+| 08 09 2026 三条 上线 下四 | `sessions/tg-rotate-2026-09-08-2243.md` | 2026-09-08 已完成项可归纳为三条业务线：归因升级生产审核发布且结果表/ |
+| config.js date dd downl downloads mm | `sessions/tg-rotate-2026-09-08-2243.md` | 日报上传走 `upload_work_report.py --date YYYY |
+| .cursor dd.md id inserted） log mm | `sessions/tg-rotate-2026-09-08-2243.md` | 上传前先写本地定稿：`.cursor/work-log/reports/日报-Y |
+| ag agent」强制新开 cursor en ge nt | `sessions/tg-rotate-2026-09-08-2243.md` | Cursor resume 失败时标准话术：提示「会话连接失败、旧 resume |
+| agent cursor lesson resume tg 业务 | `sessions/tg-rotate-2026-09-08-2243.md` | [LESSON: tg-cursor/resume 失败时除提示重发/重启 ag |
+| api id record 「上 「已 」且 | `sessions/tg-rotate-2026-09-08-2243.md` | 新开会话若重复执行「上传云端」且同日已定稿，应先查是否已有 record ID/ |
+| api 「按 「按照这个上传云端」 一正 上传 不动 | `sessions/tg-rotate-2026-09-08-2243.md` | 「按照这个上传云端」= 以用户粘贴的定稿为唯一正文来源，落盘与 API 提交均* |
+| cursor onehr 「没 」属 两件 件事 | `sessions/tg-rotate-2026-09-08-2243.md` | 用户私聊问「没打卡吗」属于 OneHR/居家抽查语境，与 Cursor 会话是否 |
 | ## 07 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-07-定时-tg-推送可能早于定稿-推送内容与明日动作须与主人最终稿对齐-初稿与定稿不一致按定稿为准.md` | 2026-09-07-定时-tg-推送可能早于定稿-推送内容与明日动作须与主人最 |
 | ## 07 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-07-tg-已推错误初稿时-以主人改定稿覆盖本地与云端-再-post_daily_report_to_.md` | 2026-09-07-tg-已推错误初稿时-以主人改定稿覆盖本地与云端-再-po |
 | ## 07 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-07-写日报前须双机-sync-后合并-work-log-全量-transcript-派单来源-wor.md` | 2026-09-07-写日报前须双机-sync-后合并-work-log-全量- |
@@ -32,16 +45,3 @@
 | ## 05 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-05-upload-上传云端必须以定稿-markdown-原封不动上传-定稿缺失时先同步双机写稿-禁止.md` | 2026-09-05-upload-上传云端必须以定稿-markdown-原封不 |
 | ## 05 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄清是要查定稿-tg-生成日报还是上传云.md` | 2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄 |
 | 「日 」即 一轮 上一 上传 云端 | `sessions/tg-rotate-2026-09-05-0617.md` | 连接失败后的续接：用户重发「日报上传云端」即可按标准流程继续，无需复述上一轮失败 |
-| tg 「上 「上传云端」不替代「生成日报」 「生 」不 上传 | `sessions/tg-rotate-2026-09-05-0617.md` | 「上传云端」不替代「生成日报」：写稿、推 TG 是独立链路；用户只说上传时不必再 |
-| id inserted updated 三项 云端 云端记录 | `sessions/tg-rotate-2026-09-05-0617.md` | 成功回执应报三项：日期、云端记录 ID、`inserted`/`updated` |
-| .cursor config.js date dd downloads mm | `sessions/tg-rotate-2026-09-05-0617.md` | 上传命令：`.cursor/scripts/upload_work_report |
-| ag agent」强制新开 cursor en ge nt | `sessions/tg-rotate-2026-09-05-0617.md` | Cursor 会话 resume 失败时会自动丢弃旧上下文，应提示用户重发指令或 |
-| daily lesson markdown report upload 上传 | `sessions/tg-rotate-2026-09-05-0617.md` | [LESSON: daily-report/upload/上传云端必须以定稿 M |
-| agent bus daily lesson report resume | `sessions/tg-rotate-2026-09-05-0617.md` | [LESSON: daily-report/resume/agent-bus/用 |
-| 04） 09 2026 「上 」且 上传 | `sessions/tg-rotate-2026-09-05-0617.md` | 用户指定「上传云端」且定稿日期明确时，以定稿文件日期为准（如周五晚传 2026- |
-| prepare_daily_report_sync.sh 不可 不可跳过写稿 不 | `sessions/tg-rotate-2026-09-05-0617.md` | 定稿不在 → 必须先走双机同步 + 写定稿（`prepare_daily_rep |
-| 上传 再传 写后 原样 后再 定稿 | `sessions/tg-rotate-2026-09-05-0617.md` | 定稿已在 → 直接原样上传，禁止改写、润色或补写后再传 |
-| dd.md memory mm reports yyyy 「上 | `sessions/tg-rotate-2026-09-05-0617.md` | 「上传云端」前置条件：当日定稿 `reports/日报-YYYY-MM-DD.m |
-| tg 「上 「日 「日报呢」与「上传云端」是不同意图 」与 」是 | `sessions/tg-rotate-2026-09-05-0617.md` | 「日报呢」与「上传云端」是不同意图：前者常指定稿/TG 是否已出，后者只执行云端 |
-| ## 00） 04 09 2026 81 | `~/.dc-platform/memory/lessons/2026-09-04-test-验收须全-app-空-filter-跑完-stage_metrics-stage_wi.md` | 2026-09-04-test-验收须全-app-空-filter-跑完-sta |
-| ## #7900 04 09 2026 7900 | `~/.dc-platform/memory/lessons/2026-09-04-狂人侧消息常被压缩截断-reply-须贴回-7900-等待审原文一字不动并写明-commit-t.md` | 2026-09-04-狂人侧消息常被压缩截断-reply-须贴回-7900-等待 |

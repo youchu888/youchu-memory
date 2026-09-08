@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [用户贴定稿说「上传云端」时正文零改写，先落 `.cursor/work-](lessons/2026-09-08-用户贴定稿说-上传云端-时正文零改写-先落-cursor-work-log-reports-日报.md) — 会话轮换蒸馏
+- [resume 失败时除提示重发/重启 agent，业务问句（打卡等）恢复](lessons/2026-09-08-resume-失败时除提示重发-重启-agent-业务问句-打卡等-恢复后须续答原意-禁止只留连.md) — 会话轮换蒸馏
 - [定时 TG 推送可能早于定稿；推送内容与明日动作须与主人最终稿对齐，初稿](lessons/2026-09-07-定时-tg-推送可能早于定稿-推送内容与明日动作须与主人最终稿对齐-初稿与定稿不一致按定稿为准.md) — 会话轮换蒸馏
 - [TG 已推错误初稿时，以主人改定稿覆盖本地与云端，再 `post_dai](lessons/2026-09-07-tg-已推错误初稿时-以主人改定稿覆盖本地与云端-再-post_daily_report_to_.md) — 会话轮换蒸馏
 - [写日报前须双机 sync 后合并 work-log + 全量 trans](lessons/2026-09-07-写日报前须双机-sync-后合并-work-log-全量-transcript-派单来源-wor.md) — 会话轮换蒸馏
