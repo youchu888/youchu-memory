@@ -7,14 +7,11 @@
 ## 进行中
 
 - [ ] **大漏斗挂 slot**：正式表已齐 `paimon.dws.dws_app_event_funnel_d_d` + `metric_stg`（#8024 改口放行）；等狂人挂回写；观察项勿当 bug 修；交付已钉禁算转化率。
-- [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 门禁 ✅；**prod 同步包已导出** `docs/metric_library_prod_sync_pack_20260907/`（bus#8065 已报狂人/请转知秋）。等知秋书面 GO 再灌 prod / Phase4 切读。
-
-- [ ] **prod 海豚告警处置（old-mac 专责）**：主人 2026-09-01 确认**按狂人安排**——告警驱动处置（不另建夜间全量扫）；playbook=`playbook_server_monitor_incident.md`（bus#7708+#7742）；先 part_01；**确认事故→立刻修含改代码，修完再报**；日常非事故变更仍等知秋 GO。
-- [x] **TG 问狂人标题修复（old-mac 应用）**：2026-09-01 old-mac 已 apply + restart（标题：超时→已转问狂人）。
-- [x] **记忆系统 P0**：`PINNED.md` + `MEMORY_OPEN.md` + 瘦身 bootstrap（pinned/OPEN/recent-by-mtime）+ `memory_weekly_hygiene.sh`。存量索引/正文保留。
-- [ ] **记忆系统 P1 养成**：每周跑 hygiene；新经验沉前查重；纠正≥2 次写入 PINNED。
-- [ ] **设备标签指纹**：`bb905feb` 已交复审（#7830/#7831）；等 PASS 再沙箱 explain；dim/dwm/宽表 HOLD。
-- [x] **页面访问 / 归因**：主人 2026-09-02 — **不盯卡点**（灰度/口径等产品线卡点挂起）；**分区巡检、日常扫链继续**；有安排再通知。
+- [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 ✅；prod 同步包已出；**#8181 已转知秋，GO 前灌产/切读 HOLD**。**#8066 撞车点 diff 已回**（`COLLISION_DIFF.md`；entity/role=`INSERT IGNORE`）。界面跟单一入口，勿在旧三菜单上加东西。
+- [ ] **设备标签 uid_map 指纹**：#8179 **PASS(带 M1–M3)**；工程隐患已改；可沙箱 explain/真跑；报三规模数；enroll⊂tag；**勿动 full_chain.json**；dim/dwm/宽表仍 HOLD 至挂槽审。
+- [ ] **prod 海豚告警处置（old-mac 专责）**：按狂人安排告警驱动；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
+- [ ] **记忆系统 P1 养成**：每周 hygiene；沉前查重；纠正≥2 次写 PINNED。
+- [x] **页面访问 / 归因**：主人 2026-09-02 — **不盯卡点**；分区巡检、日常扫链继续。
 - [ ] **页面访问 DWS 对接**：`ops_system/04.dws/dws_app_page_visit_d_d/` 本地改动未要求则先别 commit。
 
 ## 待跟进
