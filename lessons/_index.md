@@ -276,3 +276,4 @@
 | 2026-09-05 | [大漏斗沙箱开跑前核集群 SQL 是否定稿 _r 版](./2026-09-05-funnel-沙箱须先核集群-sql-是否定稿-_r-版禁扫-new.md) | funnel,sandbox,hadoop-1 | bus#8006 |
 | 2026-09-07 | [指标库 G4/G5 写路径门禁已挂 service + API](./2026-09-07-metric-g4-g5-write-gates.md) | metric-library,G4,G5,write-path,D5 | |
 | 2026-09-09 | [新增账号权威源 dim.register_time；app_user.new_users 少算先拆调度](./2026-09-09-new-users-vs-dim-register-authority.md) | datacheck, dim_user_all, dws_app_user_d, new_users | 基准用 dim；落表少先查小时窗+daily OVERWRITE |
+| 2026-09-09 | [注册业务日=event_time+两天分区+request_time绝对截止线](./2026-09-09-register-biz-day-event-time-plus-request-cutoff.md) | caliber, register, event_time, request_time | 禁 now()；未开工不改代码 |
