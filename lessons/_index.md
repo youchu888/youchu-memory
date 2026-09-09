@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-09 | [主人贴定稿说「上传云端」：本地落盘与 API 提交均不得改字](./2026-09-09-主人贴定稿说-上传云端-本地落盘与-api-提交均不得改字.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-09 | [注册人数业务日=事件时间归属；读 T/T+1 两分区，入仓时间卡次日 03:00](./2026-09-09-注册人数业务日-事件时间归属-读-t-t-1-两分区-入仓时间卡次日-03-00-截止.md) | 口径,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-09 | [新增账号活跃少算：先对用户维注册时间做覆盖核查，确认是日批缺口再查命名/字段](./2026-09-09-新增账号活跃少算-先对用户维注册时间做覆盖核查-确认是日批缺口再查命名-字段.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-08 | [用户贴定稿说「上传云端」时正文零改写，先落 `.cursor/work-log/](./2026-09-08-用户贴定稿说-上传云端-时正文零改写-先落-cursor-work-log-reports-日报.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-08 | [resume 失败时除提示重发/重启 agent，业务问句（打卡等）恢复后须续答](./2026-09-08-resume-失败时除提示重发-重启-agent-业务问句-打卡等-恢复后须续答原意-禁止只留连.md) | tg-cursor,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-08 | [海豚停跑占位禁纯 SELECT 1](./2026-09-08-dolphin-stop-placeholder-must-be-nonquery-not-select1.md) | dolphin,stop-placeholder,sqlType | SELECT×NON_QUERY 整 wf 挂；用 0 行 INSERT |

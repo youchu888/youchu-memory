@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 2026 agent_session_rotate api curs | `~/.dc-platform/memory/lessons/2026-09-09-主人贴定稿说-上传云端-本地落盘与-api-提交均不得改字.md` | 2026-09-09-主人贴定稿说-上传云端-本地落盘与-api-提交均不得改字 |
+| ## 00 03 09 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-09-注册人数业务日-事件时间归属-读-t-t-1-两分区-入仓时间卡次日-03-00-截止.md` | 2026-09-09-注册人数业务日-事件时间归属-读-t-t-1-两分区-入仓 |
+| ## 09 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-09-09-新增账号活跃少算-先对用户维注册时间做覆盖核查-确认是日批缺口再查命名-字段.md` | 2026-09-09-新增账号活跃少算-先对用户维注册时间做覆盖核查-确认是日批 |
+| op p1 p2 to 事件 事件漏斗改造（top2 | `sessions/tg-rotate-2026-09-09-2259.md` | **续做项**：归因看板设计评审（TOP1，次日）；事件漏斗改造（TOP2，周五 |
+| 09 2026 92937 id inserted 云端 | `sessions/tg-rotate-2026-09-09-2259.md` | **2026-09-09 日报云端**：`inserted`，记录 ID **9 |
+| 不能 义） 入围 分子 分母 分母算法需单独厘清（不能只看分子定义） | `sessions/tg-rotate-2026-09-09-2259.md` | **归因看板分母**：入围/分母算法需单独厘清（不能只看分子定义） |
+| 加工 加工逻辑 同步过 因看 审口径 对照 | `sessions/tg-rotate-2026-09-09-2259.md` | **归因看板设计评审**：对照**指标库规则**审口径，同步过**建表 + 加工 |
+| etl —— ——口径先拍板再动 —口 不改 人数 | `sessions/tg-rotate-2026-09-09-2259.md` | **注册人数当前状态**：确认稿已落，**暂不改代码**——口径先拍板再动 ET |
+| 00 03 两天 事件 人数 仓时 | `sessions/tg-rotate-2026-09-09-2259.md` | **注册人数读数窗口**：需**读两天分区**（跨日边界事件），并用**入仓时间 |
+| 不是 不是按分区日或入仓日简单对齐 业务 事件 事件时间 人数 | `sessions/tg-rotate-2026-09-09-2259.md` | **注册人数业务日（已定稿）**：按**事件时间**归属业务日，不是按分区日或入 |
+| vs 「少 」时 先对照 册时 前者 | `sessions/tg-rotate-2026-09-09-2259.md` | **新增账号对账**：活跃日表「少算」时，先对照**用户维注册时间**核查，区分 |
+| .cursor dd.md log mm reports upload_work | `sessions/tg-rotate-2026-09-09-2259.md` | **日报上传**：主人贴定稿正文 → 先落 `.cursor/work-log/ |
+| 不是 不是按分区日或入仓日简单对齐 业务 事件 事件时间 人数 | `sessions/tg-rotate-2026-09-09-2259.md` | 注册人数业务日（已定稿）**：按**事件时间**归属业务日，不是按分区日或入仓日 |
+| vs 「少 」时 先对照 册时 前者 | `sessions/tg-rotate-2026-09-09-2259.md` | 新增账号对账**：活跃日表「少算」时，先对照**用户维注册时间**核查，区分** |
+| .cursor dd. dd.md log mm reports | `sessions/tg-rotate-2026-09-09-2259.md` | 日报上传**：主人贴定稿正文 → 先落 `.cursor/work-log/re |
 | ## .cursor .m 08 09 2026 | `~/.dc-platform/memory/lessons/2026-09-08-用户贴定稿说-上传云端-时正文零改写-先落-cursor-work-log-reports-日报.md` | 2026-09-08-用户贴定稿说-上传云端-时正文零改写-先落-cursor- |
 | ## 08 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-08-resume-失败时除提示重发-重启-agent-业务问句-打卡等-恢复后须续答原意-禁止只留连.md` | 2026-09-08-resume-失败时除提示重发-重启-agent-业务问句 |
 | 91814 agent api record 一上 一条 | `sessions/tg-rotate-2026-09-08-2243.md` | 会话摘录里同一上传动作在新旧 agent 各回执一次（均 record **91 |
@@ -30,18 +45,3 @@
 | agent bus inbox） log provenance（ tas | `sessions/tg-rotate-2026-09-07-2207.md` | 写稿来源须合并：双机 work-log、当日全部 agent transcrip |
 | 「交 」的 上周 不干 不能 不能假设上周能扫全今天也能 | `sessions/tg-rotate-2026-09-07-2207.md` | 交付面分散、流水不干净时，自动写稿比「交付集中、流水干净」的日期更容易漏任务；不 |
 | 07 09 2026 bus g（ lo | `sessions/tg-rotate-2026-09-07-2207.md` | 日报自动初稿若只吃到部分 work-log（当日 ops-mirror / 旧  |
-| daily force lesson post_daily post_daily | `sessions/tg-rotate-2026-09-07-2207.md` | [LESSON: daily-report/TG 已推错误初稿时，以主人改定稿覆 |
-| ## 06 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-inserted-updated-属正常-勿.md` | 2026-09-06-同日重复上传云端是-updated-覆盖同一条记录-ins |
-| ## 06 09 2026 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-09-06-用户说-失败-先查-upload-日志与云端-record-id-tg-会话红状态-上传-api.md` | 2026-09-06-用户说-失败-先查-upload-日志与云端-record |
-| 上传 不明 仍不 传问 体场 其它） | `sessions/tg-rotate-2026-09-06-0607.md` | 若排除上传问题后仍不明，应**追问具体场景**（大漏斗 / 打卡 / 其它），再 |
-| agent api tg 上传 不能 不能只看 | `sessions/tg-rotate-2026-09-06-0607.md` | TG 里 agent 会话**变红/显示失败**，常与真实 API 结果脱钩；需 |
-| 05 09 2026 不到 云端 云端填报页看不到记录时 | `sessions/tg-rotate-2026-09-06-0607.md` | 云端填报页看不到记录时，优先核对**日期筛选**（如 `2026-09-05`） |
-| inserted update updated 上传 不是 不是失败） | `sessions/tg-rotate-2026-09-06-0607.md` | 同日同类型日报重复上传会走 **update 覆盖**（先 `inserted` |
-| code id upload_work_report.py 「上 」成 上传 | `sessions/tg-rotate-2026-09-06-0607.md` | 日报「上传云端」成功判定：查 `upload_work_report.py` 执 |
-| api explain）→ 任务 关任 再查 再查对应 | `sessions/tg-rotate-2026-09-06-0607.md` | 排查顺序：终端输出 → 相关任务日志（如 explain）→ 最近建表/跑数记录 |
-| daily inser inserted→updated lesson repo | `sessions/tg-rotate-2026-09-06-0607.md` | [LESSON: daily-report,upload/同日重复上传云端是 u |
-| ed er id in ns record | `sessions/tg-rotate-2026-09-06-0607.md` | 回报结论要带可核验字段：日期、云端 record ID、最终状态（inserte |
-| tg 「为 」时 一种 上传 不要 | `sessions/tg-rotate-2026-09-06-0607.md` | 用户问「为什么失败」时，先对齐**失败对象**（日报上传 / 大漏斗 / 打卡  |
-| ## 05 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-05-upload-上传云端必须以定稿-markdown-原封不动上传-定稿缺失时先同步双机写稿-禁止.md` | 2026-09-05-upload-上传云端必须以定稿-markdown-原封不 |
-| ## 05 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄清是要查定稿-tg-生成日报还是上传云.md` | 2026-09-05-resume-agent-bus-用户只说-日报呢-时先澄 |
-| 「日 」即 一轮 上一 上传 云端 | `sessions/tg-rotate-2026-09-05-0617.md` | 连接失败后的续接：用户重发「日报上传云端」即可按标准流程继续，无需复述上一轮失败 |
