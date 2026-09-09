@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-09 23:57:53 +0800
+> 更新: 2026-09-10 00:08:26 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-09-09.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-09-10.md`
 
 ## 未结案 agent-bus
 
@@ -48,16 +48,5 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-09-08 11:04 | 群派单#207 | worker_ant_group | completed | 收到，不过没看出要审哪一份 —— 群里这条只有"审核一下哈"，没带对象。 给我其中一样就能开工： · dev-session code（比如 dev-20260 |
-| 2026-09-08 11:06 | 群派单#208 | worker_ant_group | completed | 这件事已经做完了，bus#8153 发给猫猫了。摘要： 【审核结论】报告合格，可以给知秋。方法扎实——用 prod 不用 test、每条结论挂 SQL 可复跑、 |
-| 2026-09-08 12:02 | 群派单#209 | worker_ant_group | completed | 知秋，哪六个表？给我表名我直接开跑。 我这边查过了对不上号：今天 prod 全量核查 zero_tables=0，不是那批；结算移植清单里还有 8 张“待逐张分 |
-| 2026-09-08 12:08 | 群派单#210 | worker_ant_group | completed | 找到了，反扒的确实是六个。查实如下： 七张 anti_crawler_* 表都在 paimon.test 库： · 六张只有 2026-06-22 孤零零一天数 |
-| 2026-09-08 12:10 | 群派单#211 | worker_ant_group | completed | 明白，都放 test 测，需要改的就改。开工了。 改动面已经摸清，不大：七个 ETL 一共 356 行，device_id 出现 23 处（device_sig |
-| 2026-09-08 12:17 | 群派单#212 | worker_ant_group | completed | 改 SQL 的过程中查到一个必须先跟你说的问题：指纹本身也有退化值，跟 sid 一个毛病，而且严重得多。 09-06 单日实测（dw_user_event_de |
-| 2026-09-08 12:42 | 群派单#213 | worker_ant_group | completed | 反扒六张表进度：七个 ETL 全部改完，语法和执行计划已全部验证通过，第一张正在真跑。 改完的：device_signals（主粒度换指纹）· ip_signa |
-| 2026-09-08 13:30 | 群派单#214 | worker_ant_group | completed | 第一张跑完了：device_signals 指纹口径。数据日 2026-09-06，耗时 63 分钟。 结果三条都对上了： 1、规模收敛 —— 1186.6 万 |
-| 2026-09-08 13:41 | 群派单#215 | worker_ant_group | completed | 第二张 account 跑完，6 分钟。 09-06 新分区：146,293 行 / 580 个 app / 注册 486.9 万 / 登录 3588.2 万。 |
-| 2026-09-08 14:49 | 群派单#216 | worker_ant_group | completed | @hull1889 收到，已 bus 投给猫猫（id=8189，群里他收不到，只能走 bus）。 反爬 v6 现状（14:48 北京）——v6 就是把六张表从  |
-| 2026-09-08 22:03 | 私聊#475 | telegram_dm | completed | # 日报 · 又初·2026-09-08 [REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-08] >  |
 | 2026-09-09 18:39 | 群派单#217 | worker_ant_group | completed | 又初，晚了一步，我已经回过 #8331 了（bus#8332）。 不过那条回复不是转给产品的，你可以留着看：知秋昨天已经给过这个问题的原则，不需要产品再拍一次。 |
 | 2026-09-09 22:18 | 私聊#476 | telegram_dm | completed | # 日报 · 又初·2026-09-09 [REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-09] >  |
