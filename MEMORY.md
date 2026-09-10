@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [大漏斗升维须四方同步；page_view HAVING 须全局过闸](lessons/2026-09-11-funnel-升维须四方同步且page_view全局过闸.md) — bus#8357
 - [pipeline-runner test 四步与 test_sandbox 铁律：禁动 full_chain；--dt=任务日](lessons/2026-09-10-pipeline-runner-test四步与test_sandbox铁律.md) — bus#8354
 - [主人贴定稿并说「上传云端」时，正文一字不改落盘再提交；同日上传为覆盖更新](lessons/2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日上传为覆盖更新.md) — 会话轮换蒸馏
 - [prod 主键变更/重建表前，先确认补回责任方与天数，并核实下游已切读；](lessons/2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核实下游已切读-未切读则重建前必须错峰协.md) — 会话轮换蒸馏
