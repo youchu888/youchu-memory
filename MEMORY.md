@@ -158,6 +158,7 @@
 - [指定审核人发产须同时满足 publish_request_status=](lessons/2026-08-07-指定审核人发产须同时满足-publish_request_status-pending-与-pu.md) — 会话轮换蒸馏
 - [并行处理私聊/工作簿时仍须 60 秒内 agent-bus ACK，核查](lessons/2026-08-07-并行处理私聊-工作簿时仍须-60-秒内-agent-bus-ack-核查完再-reply-禁止漏.md) — 会话轮换蒸馏
 - [群工作簿进度发群前必须 prod 实查分区/验数，禁止只看 test 或](lessons/2026-08-07-群工作簿进度发群前必须-prod-实查分区-验数-禁止只看-test-或-dev-session.md) — 会话轮换蒸馏
+- [commit 说明须含汉字](lessons/2026-09-10-commit-message-must-be-chinese.md) — 可 feat(scope): 前缀，冒号后中文；禁整段英文；钩子+PINNED §25
 - [提交说明用第一人称直述](lessons/2026-07-31-first-person-commit-voice.md) — 直述做了什么/为什么；禁「我/主人/旁白体」；规则见 `.cursor/rules/first-person-commit-voice.mdc`
 - [报补数窗口与耗时时查全部分区 etl_time 与海豚实例，并区分「发起](lessons/2026-08-07-报补数窗口与耗时时查全部分区-etl_time-与海豚实例-并区分-发起窗口-与-表实际最早可落.md) — 会话轮换蒸馏
 - [日报正文只用业务说法（如「五月至今补刷」），禁止写入内部分区区间、耗时秒](lessons/2026-08-07-日报正文只用业务说法-如-五月至今补刷-禁止写入内部分区区间-耗时秒数-pi-等核对细节.md) — 会话轮换蒸馏

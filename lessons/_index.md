@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-10 | [commit 说明冒号后必须汉字](./2026-09-10-commit-message-must-be-chinese.md) | git, commit-message, chinese | 可 feat(scope): 前缀，正文中文；钩子拦无汉字 |
 | 2026-09-10 | [闲时沉淀当日实活；用时只快速检索，禁止临时重翻半仓](./2026-09-10-idle-crystallize-retrieve-fast-no-archaeology-on-demand.md) | daily-report, work-log, lessons, agent-speed | 收尾写 work-log/lesson；催改日报只检索+贴正文，禁考古 |
 | 2026-09-09 | [主人贴定稿说「上传云端」：本地落盘与 API 提交均不得改字](./2026-09-09-主人贴定稿说-上传云端-本地落盘与-api-提交均不得改字.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-09 | [注册人数业务日=事件时间归属；读 T/T+1 两分区，入仓时间卡次日 03:00](./2026-09-09-注册人数业务日-事件时间归属-读-t-t-1-两分区-入仓时间卡次日-03-00-截止.md) | 口径,session-rotate | 会话轮换前自动蒸馏 |
