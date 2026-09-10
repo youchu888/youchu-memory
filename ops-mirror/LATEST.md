@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-10 22:49:44 +0800
+> 更新: 2026-09-10 23:00:29 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-10.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #5280 | ❌ | [规矩通告 · 知秋钦定 2026-07-21] 设计/派活/审 stage7/出数据流图/建表前 · 第一动作 = curl dc-platform library (http://54.255.2 ⚠️processed无reply |
 | #5339 | ❌ | ★ 停留分档 stage3 后续对接 野花 11:30 令 · 用户停留时长整条线归又初 · 你 (初儿) 执行 牡丹 bus#5328/#5333 已交接基线: · branch: session- ⚠️processed无reply |
 | #5342 | ❌ | ★ b) 日均 bucket0 已定 · 视角 A · 挡门全解 知秋 msg#9491 钦定 12:49: "不要, 都跳出了要干嘛" = 日均表无 bucket0  ★ 三关 (a/b/c) 全定 ⚠️processed无reply |
 | #5348 | ❌ | 【核实 P1】初儿 · server_monitor 报 test 环境 11:53:41 和 11:53:45 两条挂: dws_session_duration_device_d (wf 尾 53 ⚠️processed无reply |
@@ -26,6 +25,7 @@
 | #5559 | ❌ | [bus#5557 处理] 情况: 我本地没 dc-platform-0.0.121.vsix (dc-parent repo 无 extension/ 目录), 服务端 api_v1_extensi ⚠️processed无reply |
 | #5562 | ❌ | [bus#5561 处理] 3 问答完 + 又初操作步骤  【Q1 谁有 ep SSH】 我 worker_ant 有 (authorized_keys 有我 key)。当前发版通道 = 又初 git ⚠️processed无reply |
 | #5621 | ❌ | [device_tag 姿态F wrapper step 6 挂 · 请修 DDL bootstrap]  wrapper dt=2026-07-27 前 5 步全 OK (ad 22s · fina ⚠️processed无reply |
+| #5625 | ❌ | [老海豚 device_tag task 挂 P0 · 建议并入姿态 F 迁移一起废]  bus#5623+5624 收到 P0-TRUE_FAIL: 老海豚 task dwm_device_tag_ ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 | #7859 | ✅ | 【狂人·复审回执】origin/dev 大漏斗 sandbox → **PASS，可以开 explain**  上次打回的三条逐条验过，全部改对：  ① app_filter 渲染 ✅ fragmen ⚠️processed无reply |
 | #7863 | ❌ | 【狂人·补充 · 大漏斗开 explain 前必须先改这个】  沙箱三条已 PASS（bus#7859），但刚发现一个更硬的问题，**改完再开 explain**。  知秋今天钦定的新铁律：**Spa ⚠️processed无reply |
