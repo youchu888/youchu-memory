@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日上传为覆盖更新.md` | 2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日 |
+| ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核实下游已切读-未切读则重建前必须错峰协.md` | 2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核 |
+| 09 10 2026 prod v1.0.11 与生 | `sessions/tg-rotate-2026-09-10-2239.md` | 2026-09-10 续做项（周五截止）：事件漏斗改造与生产对齐、协助发布归因看 |
+| 与字 业务 义变 交付物 入围 入围口径 | `sessions/tg-rotate-2026-09-10-2239.md` | **归因升级对接**交付物：确认新增业务表与字段，并整理**入围口径**与**运 |
+| prod 下游 下游是否已切读新表 两件 五天 件事 | `sessions/tg-rotate-2026-09-10-2239.md` | prod 重发/重建前需对齐两件事：**补回窗口**（如五天由对方补回）+ ** |
+| prod test 主键 产表 先写 先写重建表运维说明 | `sessions/tg-rotate-2026-09-10-2239.md` | **大漏斗生产表主键变更**：先写重建表运维说明；**test 环境按新主键建表 |
+| 下游 册设 写注 升维 单独 大漏 | `sessions/tg-rotate-2026-09-10-2239.md` | **大漏斗升维**对接要点：粒度需覆盖**注册设备**、**自然/渠道**；汇总 |
+| ack agent bus reply 上传 上传云端不阻塞对派单的 | `sessions/tg-rotate-2026-09-10-2239.md` | 日报上传与 agent-bus 回执可并行：上传云端不阻塞对派单的 ACK/re |
+| updated 一条 上传 不是 不是新建一条 传会 | `sessions/tg-rotate-2026-09-10-2239.md` | 同日重复上传会**覆盖**原记录（状态 `updated`），不是新建一条 |
+| .cursor date dd mm python3 scripts | `sessions/tg-rotate-2026-09-10-2239.md` | 上传脚本：`python3 .cursor/scripts/upload_wor |
+| lesson prod 下游 与天 主键 主键变更 | `sessions/tg-rotate-2026-09-10-2239.md` | [LESSON: 大漏斗/prod 主键变更/重建表前，先确认补回责任方与天数， |
+| .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-10-2239.md` | 主人说「上传云端」且已贴定稿正文时：先原样落盘 `.cursor/work-lo |
 | ## 09 2026 agent_session_rotate api curs | `~/.dc-platform/memory/lessons/2026-09-09-主人贴定稿说-上传云端-本地落盘与-api-提交均不得改字.md` | 2026-09-09-主人贴定稿说-上传云端-本地落盘与-api-提交均不得改字 |
 | ## 00 03 09 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-09-注册人数业务日-事件时间归属-读-t-t-1-两分区-入仓时间卡次日-03-00-截止.md` | 2026-09-09-注册人数业务日-事件时间归属-读-t-t-1-两分区-入仓 |
 | ## 09 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-09-09-新增账号活跃少算-先对用户维注册时间做覆盖核查-确认是日批缺口再查命名-字段.md` | 2026-09-09-新增账号活跃少算-先对用户维注册时间做覆盖核查-确认是日批 |
@@ -33,15 +45,3 @@
 | api id record 「上 「已 」且 | `sessions/tg-rotate-2026-09-08-2243.md` | 新开会话若重复执行「上传云端」且同日已定稿，应先查是否已有 record ID/ |
 | api 「按 「按照这个上传云端」 一正 上传 不动 | `sessions/tg-rotate-2026-09-08-2243.md` | 「按照这个上传云端」= 以用户粘贴的定稿为唯一正文来源，落盘与 API 提交均* |
 | cursor onehr 「没 」属 两件 件事 | `sessions/tg-rotate-2026-09-08-2243.md` | 用户私聊问「没打卡吗」属于 OneHR/居家抽查语境，与 Cursor 会话是否 |
-| ## 07 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-07-定时-tg-推送可能早于定稿-推送内容与明日动作须与主人最终稿对齐-初稿与定稿不一致按定稿为准.md` | 2026-09-07-定时-tg-推送可能早于定稿-推送内容与明日动作须与主人最 |
-| ## 07 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-07-tg-已推错误初稿时-以主人改定稿覆盖本地与云端-再-post_daily_report_to_.md` | 2026-09-07-tg-已推错误初稿时-以主人改定稿覆盖本地与云端-再-po |
-| ## 07 09 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-07-写日报前须双机-sync-后合并-work-log-全量-transcript-派单来源-wor.md` | 2026-09-07-写日报前须双机-sync-后合并-work-log-全量- |
-| 1～3 个可 主题 交付 付写 免只 | `sessions/tg-rotate-2026-09-07-2207.md` | 日报结果条按真实交付写 1～3 条；当天有指标库 + 归因等多线并行时，每条对应 |
-| log transcript work 「哪 不是 些实 | `sessions/tg-rotate-2026-09-07-2207.md` | 自动稿漏任务时，优先查「哪些实活没进 work-log / 没被 transcr |
-| force id tg 上传 上传云端（同日同类型会覆盖 不变 | `sessions/tg-rotate-2026-09-07-2207.md` | 补救顺序：定稿落盘 → 上传云端（同日同类型会覆盖，记录 ID 可不变）→ TG |
-| date dd force g」 mm post_daily_report_to | `sessions/tg-rotate-2026-09-07-2207.md` | 「上传云端」与「推 TG」是两条链路：云端用 `upload_work_repo |
-| .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-07-2207.md` | 主人贴出的定稿是最终权威版本：本地 `.cursor/work-log/repo |
-| 21 37 37）可能在主人改定前就发出 7） tg 「大 | `sessions/tg-rotate-2026-09-07-2207.md` | TG 定时推送（如 21:37）可能在主人改定前就发出**初稿**；明日动作也可 |
-| agent bus inbox） log provenance（ tas | `sessions/tg-rotate-2026-09-07-2207.md` | 写稿来源须合并：双机 work-log、当日全部 agent transcrip |
-| 「交 」的 上周 不干 不能 不能假设上周能扫全今天也能 | `sessions/tg-rotate-2026-09-07-2207.md` | 交付面分散、流水不干净时，自动写稿比「交付集中、流水干净」的日期更容易漏任务；不 |
-| 07 09 2026 bus g（ lo | `sessions/tg-rotate-2026-09-07-2207.md` | 日报自动初稿若只吃到部分 work-log（当日 ops-mirror / 旧  |
