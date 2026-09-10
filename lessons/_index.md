@@ -283,3 +283,4 @@
 | 2026-09-09 | [新增账号权威源 dim.register_time；app_user.new_users 少算先拆调度](./2026-09-09-new-users-vs-dim-register-authority.md) | datacheck, dim_user_all, dws_app_user_d, new_users | 基准用 dim；落表少先查小时窗+daily OVERWRITE |
 | 2026-09-09 | [注册业务日=event_time+两天分区+request_time绝对截止线](./2026-09-09-register-biz-day-event-time-plus-request-cutoff.md) | caliber, register, event_time, request_time | 禁 now()；未开工不改代码 |
 | 2026-09-10 | bus-给commit-hash须先确认已在origin | agent-bus, git | 给审核人 hash 前须 origin 可见，禁本地未推 |
+| 2026-09-10 | funnel-升维验收须runner-test禁SR手工灌数冒充 | funnel,sandbox,criticism | 升维须 runner test 落库；禁把 SR 手工灌数当已验 |
