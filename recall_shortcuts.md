@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库.md` | 2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库 |
+| ## 09 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置.md` | 2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置 |
+| +「 +「已完成」 「已 专项 专项复盘 了什 | `sessions/tg-rotate-2026-09-11-2259.md` | 日报正文写法：任务名 + 做了什么 + 结果 +「已完成」；`【死锁阻碍】`/` |
+| 1） op p1 to 与日 产发 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因升级生产发布后的验收动作：核对近月数据与日批（TOP1） |
+| 与全 交付 交审 付物 全量 册与 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因升级交付物含后端对接总册与全量升级包，已提交审核 |
+| 「只 为「 免全 全量 关改 升级 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因升级运行开关改为「只补缺失配置」，避免全量覆盖已有配置 |
+| 与无 候选 分分 分项 升级 因升 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因升级：得分分项与无候选原因已在测试环境落地并验数通过 |
+| 三项 两天 二列 二十 产侧 侧只 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因看板二十二列版本：生产侧只读核对两天、十三项全过，并完成指标登记 |
+| 侧完 入库 写列 列并 升维 回写 | `sessions/tg-rotate-2026-09-11-2259.md` | 大漏斗升维须补齐升维回写列并完成入库；测试表结构验收通过才算结构侧完成 |
+| 「按 入围 全局 升维 口径 回「 | `sessions/tg-rotate-2026-09-11-2259.md` | 大漏斗升维：页面浏览入围口径改回「按用户日全局过闸」 |
+| id inserted 上传 云端 云端记录 传成 | `sessions/tg-rotate-2026-09-11-2259.md` | 日报上传成功回执应带日期、云端记录 ID、状态（如 `inserted` 新建） |
+| lesson 做缺 全量 关只 刷覆 勿全 | `sessions/tg-rotate-2026-09-11-2259.md` | [LESSON: 归因升级/运行开关只做缺失配置补全，勿全量重刷覆盖已有配置] |
+| .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-11-2259.md` | 用户贴定稿并说「按这个上传云端」时，以粘贴正文为准：先原样落盘到 `.curso |
 | ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日上传为覆盖更新.md` | 2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日 |
 | ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核实下游已切读-未切读则重建前必须错峰协.md` | 2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核 |
 | 09 10 2026 prod v1.0.11 与生 | `sessions/tg-rotate-2026-09-10-2239.md` | 2026-09-10 续做项（周五截止）：事件漏斗改造与生产对齐、协助发布归因看 |
@@ -32,16 +45,3 @@
 | 不是 不是按分区日或入仓日简单对齐 业务 事件 事件时间 人数 | `sessions/tg-rotate-2026-09-09-2259.md` | 注册人数业务日（已定稿）**：按**事件时间**归属业务日，不是按分区日或入仓日 |
 | vs 「少 」时 先对照 册时 前者 | `sessions/tg-rotate-2026-09-09-2259.md` | 新增账号对账**：活跃日表「少算」时，先对照**用户维注册时间**核查，区分** |
 | .cursor dd. dd.md log mm reports | `sessions/tg-rotate-2026-09-09-2259.md` | 日报上传**：主人贴定稿正文 → 先落 `.cursor/work-log/re |
-| ## .cursor .m 08 09 2026 | `~/.dc-platform/memory/lessons/2026-09-08-用户贴定稿说-上传云端-时正文零改写-先落-cursor-work-log-reports-日报.md` | 2026-09-08-用户贴定稿说-上传云端-时正文零改写-先落-cursor- |
-| ## 08 09 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-08-resume-失败时除提示重发-重启-agent-业务问句-打卡等-恢复后须续答原意-禁止只留连.md` | 2026-09-08-resume-失败时除提示重发-重启-agent-业务问句 |
-| 91814 agent api record 一上 一条 | `sessions/tg-rotate-2026-09-08-2243.md` | 会话摘录里同一上传动作在新旧 agent 各回执一次（均 record **91 |
-| c→ markdown nc sy sync→写稿→推 tg | `sessions/tg-rotate-2026-09-08-2243.md` | TG 私聊转发完整日报 Markdown 即视为定稿指令，不必再等「生成日报」流 |
-| 09 2026 top1 top2 三档 产环 | `sessions/tg-rotate-2026-09-08-2243.md` | 2026-09-09 续作优先级：TOP1 设备标签沙箱真跑并回报三档规模数；T |
-| 08 09 2026 三条 上线 下四 | `sessions/tg-rotate-2026-09-08-2243.md` | 2026-09-08 已完成项可归纳为三条业务线：归因升级生产审核发布且结果表/ |
-| config.js date dd downl downloads mm | `sessions/tg-rotate-2026-09-08-2243.md` | 日报上传走 `upload_work_report.py --date YYYY |
-| .cursor dd.md id inserted） log mm | `sessions/tg-rotate-2026-09-08-2243.md` | 上传前先写本地定稿：`.cursor/work-log/reports/日报-Y |
-| ag agent」强制新开 cursor en ge nt | `sessions/tg-rotate-2026-09-08-2243.md` | Cursor resume 失败时标准话术：提示「会话连接失败、旧 resume |
-| agent cursor lesson resume tg 业务 | `sessions/tg-rotate-2026-09-08-2243.md` | [LESSON: tg-cursor/resume 失败时除提示重发/重启 ag |
-| api id record 「上 「已 」且 | `sessions/tg-rotate-2026-09-08-2243.md` | 新开会话若重复执行「上传云端」且同日已定稿，应先查是否已有 record ID/ |
-| api 「按 「按照这个上传云端」 一正 上传 不动 | `sessions/tg-rotate-2026-09-08-2243.md` | 「按照这个上传云端」= 以用户粘贴的定稿为唯一正文来源，落盘与 API 提交均* |
-| cursor onehr 「没 」属 两件 件事 | `sessions/tg-rotate-2026-09-08-2243.md` | 用户私聊问「没打卡吗」属于 OneHR/居家抽查语境，与 Cursor 会话是否 |
