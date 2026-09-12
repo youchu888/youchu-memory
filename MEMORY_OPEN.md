@@ -6,7 +6,7 @@
 
 ## 进行中
 
-- [ ] **大漏斗优化对照**：user_attr CACHE 已开跑（日志 `/tmp/funnel_opt2_20260911.log`，首版语法失败已修）。基线 test SR dt=2026-09-11 5538 行。口径未改。完事对宽表，未覆盖 SR。
+- [x] **大漏斗优化对照** dt=2026-09-11：CACHE user_attr 4.5 分钟 + INSERT 85 分钟，比原 66 分钟更慢。宽表 11 秒。对 test SR：5538 主键一致，注册人数合计一致；142 行分桶有差，3 个 session 合计差 1～5。未覆盖 SR。原因是属性先缓存、事件后扫，不是同一快照。
 - [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 ✅；prod 同步包已出；**#8181 已转知秋，GO 前灌产/切读 HOLD**。**#8066 撞车点 diff 已回**（`COLLISION_DIFF.md`；entity/role=`INSERT IGNORE`）。界面跟单一入口，勿在旧三菜单上加东西。
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；**沙箱 explain PASS**（hadoop-1 `/tmp/uid_map_explain_20260907.log`）；sqlFile 须绝对路径；下一步真跑三规模数；不动 full_chain。
 - [ ] **prod 海豚告警处置（old-mac 专责）**：按狂人安排告警驱动；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
