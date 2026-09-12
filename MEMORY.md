@@ -7,6 +7,7 @@
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
 - [狂人 bus 秒回执可短须追加实际做了什么](lessons/2026-09-12-狂人bus有动作清单禁止快车道已知悉空结案.md) — ACK 保持；结案回执必须列出实际动作
 - [feedback · 狂人 bus 秒回执后须追加实际做了什么](feedback_agent_bus_action_items_must_work.md) — 禁只回「已知悉」当结案
+- [归因入围关联须按需求沿用，不得把新 JOIN 说成旧规则](lessons/2026-09-12-归因入围关联须按需求沿用-不得把新JOIN说成旧规则.md) — 需求不改关联字段；e3c7a674 加了安装 JOIN
 - [归因 V1.0.11 升级稿废弃，不与黑名单并行](lessons/2026-09-12-归因V1011升级稿废弃-不与黑名单并行.md) — 011 提审已撤；不等黑名单后再谈；007 已发产不回滚
 - [is_run|attribution|frontend|口径](lessons/2026-09-12-is_run-attribution-frontend-口径.md) — 会话轮换蒸馏
 - [页面浏览入围按用户日全局过闸，升维回写列齐再入库](lessons/2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库.md) — 会话轮换蒸馏
