@@ -6,7 +6,7 @@
 
 ## 进行中
 
-- [x] **大漏斗注册 event_time** test Paimon 指标+宽表已成功；已导出本地再写入 test SR `dws.dws_app_event_funnel_d_d` dt=2026-09-11（5538 行）。口径当天分区 + 左闭右开。
+- [ ] **大漏斗优化对照**：user_attr CACHE 已开跑（日志 `/tmp/funnel_opt2_20260911.log`，首版语法失败已修）。基线 test SR dt=2026-09-11 5538 行。口径未改。完事对宽表，未覆盖 SR。
 - [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 ✅；prod 同步包已出；**#8181 已转知秋，GO 前灌产/切读 HOLD**。**#8066 撞车点 diff 已回**（`COLLISION_DIFF.md`；entity/role=`INSERT IGNORE`）。界面跟单一入口，勿在旧三菜单上加东西。
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；**沙箱 explain PASS**（hadoop-1 `/tmp/uid_map_explain_20260907.log`）；sqlFile 须绝对路径；下一步真跑三规模数；不动 full_chain。
 - [ ] **prod 海豚告警处置（old-mac 专责）**：按狂人安排告警驱动；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
