@@ -3,6 +3,8 @@
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
 | 2026-09-12 | [狂人 bus 秒回执可短须追加实际做了什么](./2026-09-12-狂人bus有动作清单禁止快车道已知悉空结案.md) | agent-bus,worker_ant,reply_only | ACK 保持；结案回执必须列出实际动作 |
+| 2026-09-12 | [加筛选条件必须能指出需求原句，不能把 spec 概括当依据](./2026-09-12-加条件必须指出需求原句-不能把spec概括当依据.md) | attribution, spec, prd | 入围安装 JOIN 没有对应需求原句 |
+| 2026-09-12 | [归因链路关联看候选（同 app 同 IP），不是安装 device JOIN](./2026-09-12-归因链路关联看候选同app同IP-不是安装deviceJOIN.md) | attribution, candidate | 沿用的关联是落地页同 app 同 IP，不是安装 device_id |
 | 2026-09-12 | [归因入围关联须按需求沿用，不得把新 JOIN 说成旧规则](./2026-09-12-归因入围关联须按需求沿用-不得把新JOIN说成旧规则.md) | attribution, V1.0.11, enroll | 需求不改关联字段；e3c7a674 加了安装 JOIN，不是沿用 |
 | 2026-09-12 | [归因 V1.0.11 升级稿废弃，不与黑名单并行](./2026-09-12-归因V1011升级稿废弃-不与黑名单并行.md) | attribution, is_run_sync, blacklist | 升级稿废弃；011 提审已撤；007 已发产不回滚 |
 | 2026-09-12 | [is_run|attribution|frontend|口径](./2026-09-12-is_run-attribution-frontend-口径.md) | dim_app_attribution_config,session-rotate | 会话轮换前自动蒸馏 |
