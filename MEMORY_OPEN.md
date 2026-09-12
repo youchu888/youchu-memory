@@ -6,7 +6,7 @@
 
 ## 进行中
 
-- [ ] **大漏斗注册 event_time**：口径已改成当天分区 + `event_time` 过滤，迟到丢掉。stage1 仅 `run_test.sh --step=dws_app_event_funnel_metric_stg_d --dt=2026-09-12`（日志 `/tmp/funnel_test_20260911_event_time.log`）。旧两分区任务已停。宽表须再走 runner `--step=dws_app_event_funnel_d_d`，禁止框外串跑。
+- [ ] **大漏斗注册 event_time**：当天分区 + 左开右闭 `(当天 00:00, 次日 00:00]`，迟到丢掉。stage1 `run_test.sh --step=dws_app_event_funnel_metric_stg_d --dt=2026-09-12`（日志 `/tmp/funnel_test_20260911_lopen.log`）。宽表须再走 runner `--step=dws_app_event_funnel_d_d`。
 - [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 ✅；prod 同步包已出；**#8181 已转知秋，GO 前灌产/切读 HOLD**。**#8066 撞车点 diff 已回**（`COLLISION_DIFF.md`；entity/role=`INSERT IGNORE`）。界面跟单一入口，勿在旧三菜单上加东西。
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；**沙箱 explain PASS**（hadoop-1 `/tmp/uid_map_explain_20260907.log`）；sqlFile 须绝对路径；下一步真跑三规模数；不动 full_chain。
 - [ ] **prod 海豚告警处置（old-mac 专责）**：按狂人安排告警驱动；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
