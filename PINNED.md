@@ -30,3 +30,4 @@
 25. **git commit 说明用汉字** — 可 `feat(scope):` 前缀，冒号后必须中文；禁整段英文；钩子拦无汉字。
 26. **SR 按日分区建表必须带历史分区** — 默认 `history_partition_num=30` 且 `start=-10000`；禁止只留今天。见 `sr-create-history-partitions.mdc`。
 27. **已定 runner 就只走 runner** — `run_test.sh` / daemon 槽位；禁框外串步、yarn 壳、海豚替跑，除非明确授权。
+28. **可见文字不回头改历史** — 已提交的说明和文件不重写；此后新写的注释、文档、提交说明不要露出机器人痕迹。

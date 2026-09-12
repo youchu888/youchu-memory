@@ -118,7 +118,7 @@
 | 2026-08-20 | [prod 补数前先比 test/prod 线版 SQL（去注释）并查上游 DWD](./2026-08-20-prod-补数前先比-test-prod-线版-sql-去注释-并查上游-dwd-分区-逻辑一致.md) | complement,comic-analysis,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-19 | [日报定时能唤醒，但 executor 额度耗尽不降级 → 等人催](./2026-08-19-daily-report-executor-must-fallback-on-quota.md) | daily-report, cursor-executor, quota | 21:30 通了；composer-2.5 耗尽须立刻换 fast，禁止同模型空转 |
 | 2026-08-19 | [用户指定正文上传云端时原封不动落稿上传，不得先改措辞再传](./2026-08-19-用户指定正文上传云端时原封不动落稿上传-不得先改措辞再传.md) | daily-report-upload,session-rotate | 会话轮换前自动蒸馏 |
-| 2026-08-19 | [对外回复禁用「主人」，用「你」直说；内部记忆可留出处词，输出必须剥离](./2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md) | communication,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-08-19 | [对外回复禁用「主人」，用「你」直说；内部记忆可留出处词，输出必须剥离](./2026-08-19-对外回复禁用-主人-用-你-直说-内部记忆可留出处词-输出必须剥离.md) | communication,session-rotate | 已入库不回头改；只约束新写 |
 | 2026-08-19 | [写/推日报前必须先跑双机 work-log 同步并读合并稿，禁止仅靠 trans](./2026-08-19-写-推日报前必须先跑双机-work-log-同步并读合并稿-禁止仅靠-transcript-在同.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-18 | [test SR 建表走 dev session + MCP DDL；Paimon](./2026-08-18-test-sr-建表走-dev-session-mcp-ddl-paimon-staging-另.md) | dbprogramming,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-08-18 | [MySQL 8 条件唯一用生成列 NULL 不参与 UNIQUE；`metric](./2026-08-18-mysql-8-条件唯一用生成列-null-不参与-unique-metric_label-唯一.md) | metric-library,session-rotate | 会话轮换前自动蒸馏 |
