@@ -299,5 +299,5 @@
 | 2026-09-09 | [注册业务日=event_time+两天分区+request_time绝对截止线](./2026-09-09-register-biz-day-event-time-plus-request-cutoff.md) | caliber, register, event_time, request_time | 禁 now()；未开工不改代码 |
 | 2026-09-10 | bus-给commit-hash须先确认已在origin | agent-bus, git | 给审核人 hash 前须 origin 可见，禁本地未推 |
 | 2026-09-10 | funnel-升维验收须runner-test禁SR手工灌数冒充 | funnel,sandbox,criticism | 升维须 runner test 落库；禁把 SR 手工灌数当已验 |
-| 2026-09-10 | [pipeline-runner test四步与test_sandbox铁律](./2026-09-10-pipeline-runner-test四步与test_sandbox铁律.md) | pipeline-runner,sandbox,test_sandbox | 四步+禁动full_chain；--dt=任务日；挂步三件齐 |
+| 2026-09-10 | [pipeline-runner test四步与test_sandbox铁律](./2026-09-10-pipeline-runner-test四步与test_sandbox铁律.md) | pipeline-runner,sandbox,test_sandbox | 四步+禁动full_chain；已定 runner 禁框外串步 |
 | 2026-09-11 | [funnel升维须四方同步且page_view全局过闸](./2026-09-11-funnel-升维须四方同步且page_view全局过闸.md) | funnel,pushback,SR,sandbox | 缺SR/pushback不上线；HAVING禁细粒度 |

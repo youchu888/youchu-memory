@@ -29,3 +29,4 @@
 24. **闲时沉淀、用时检索** — 收尾写 work-log/lesson；催日报/补活只读流水改稿并贴聊天，禁临时考古半仓。
 25. **git commit 说明用汉字** — 可 `feat(scope):` 前缀，冒号后必须中文；禁整段英文；钩子拦无汉字。
 26. **SR 按日分区建表必须带历史分区** — 默认 `history_partition_num=30` 且 `start=-10000`；禁止只留今天。见 `sr-create-history-partitions.mdc`。
+27. **已定 runner 就只走 runner** — `run_test.sh` / daemon 槽位；禁框外串步、yarn 壳、海豚替跑，除非明确授权。
