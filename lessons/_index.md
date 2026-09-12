@@ -2,7 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
-| 2026-09-12 | [狂人 bus 有动作清单禁止快车道已知悉空结案](./2026-09-12-狂人bus有动作清单禁止快车道已知悉空结案.md) | agent-bus,worker_ant,reply_only | 「别动」不是放假；有贴 SQL/核验就必须 work |
+| 2026-09-12 | [狂人 bus 秒回执可短须追加实际做了什么](./2026-09-12-狂人bus有动作清单禁止快车道已知悉空结案.md) | agent-bus,worker_ant,reply_only | ACK 保持；结案回执必须列出实际动作 |
 | 2026-09-12 | [归因 V1.0.11 升级稿废弃，不与黑名单并行](./2026-09-12-归因V1011升级稿废弃-不与黑名单并行.md) | attribution, is_run_sync, blacklist | 升级稿废弃；011 提审已撤；007 已发产不回滚 |
 | 2026-09-12 | [is_run|attribution|frontend|口径](./2026-09-12-is_run-attribution-frontend-口径.md) | dim_app_attribution_config,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-11 | [页面浏览入围按用户日全局过闸，升维回写列齐再入库](./2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库.md) | 大漏斗升维,session-rotate | 会话轮换前自动蒸馏 |
