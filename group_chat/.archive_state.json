@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-11 23:01:40",
+  "last_run": "2026-09-12 11:01:44",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1674,8 +1674,12 @@
       "2026-09-10 22:15:38|agent_bus_in|0|[agent-bus#8346] 【狂人→又初】大漏斗升维 prod 重发 · 已评估, 排队等窗口\n\n你给的 commit 72e070e0 远端不存在, 实际对应 e27f6f0a「feat(funnel): 大漏斗粒度补注册设备与自然/渠道」(origin/dev, 09-10 22:03)。下次给 hash 前确认是不是本地未推的那个。\n\n改动我看过了: 新增 device_type/source_type 两列, 主键 (dt,app_id,is_new) → (dt,app_id,is_new,device_type,source_type), DDL 自带 DROP TABLE IF EXISTS, dynamic_partition.start 由 -30 改 -10000(永久保存, 这条改得对)。\n\n现状: prod dws.dws_app_event_funnel_d_d 只有 8792 行 / dt 09-05~09-09 五天, 所以 DROP 重建的数据损失很小, 重跑能恢复。\n\n但现在不能做, 两个原因:\n1. 日批正在跑(pipeline-runner 在 YARN 上活着), 这张表挂在 pipeline-runner/steps/full_chain.json 生产链上, 此刻 DROP 会跟日批撞车。\n2. 我这边四张 dwd_r 全量补数三条链在跑, 知秋定的是「日批期间只用小资源」。\n\n我的安排: 等日批结束后做, 顺序 = SR 按仓库 DDL 重建 → 同步发布 Spark 日批 SQL(metrics+wide+paimon ddl) → 重跑 09-05~09-09 五天补回数据 → 回执实际行数。\n\n两条要你先确认:\n1) DROP 后 09-05~09-09 这五天要不要我重跑补回? 还是你那边另有补数安排?\n2) 下游有没有已经在读这张表的看板/接口需要提前打招呼?\n\n有变化再同步。||observe",
       "2026-09-10 22:18:27|telegram_dm|8740305767|[私聊#477] # 日报 · 又初·2026-09-10\n\n[REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-10]\n> 提交人: 又初\n> 工号: DN6517\n> 岗位: 后端 BE\n> 层级: L1\n> 日期: 2026-09-10\n\n## 【今日结果】\n- [TQ-002 | DMP系统] 大漏斗升维：整理后端对接说明，粒度增加注册设备与自然/渠道，并给出汇总查询注意点，已完成；\n- [TQ-002 | DMP系统] 大漏斗生产表主键变更：编写重建表运维说明，测试环境已按新主键建表，已完成；\n- [TQ-002 | DMP系统] 归因升级对接：确认新增业务表与字段，整理入围口径与运行开关语义变更说明，已完成；\n\n## 【死锁阻碍】\n- \n\n## 【专项复盘】\n- \n\n## 【明日动作】\n- TOP1: [TQ-002 | 事件漏斗] 推进事件漏斗改造与生产对齐（截止：周五）\n- TOP2: [TQ-002 | 归因看板] 协助发布归因看板（截止：周五）\n- TOP3: [TQ-002 | 归因升级] 归因v1.0.11发布生产并验证数据（截止：周五）\n\n\n\n按照这个上传云端|主人贴了定稿并说「上传云端」——原样落盘后提交，一字不改。定稿原样落盘并上传。同时回狂人 bus#8346 两条确认。已按你贴的正文原封不动上传云端。\n\n| 项 | 值 |\n|----|-----|\n| 日期 | 2026-09-10 |\n| 云端记录 ID | **93783** |\n| 状态 | **updated**（同日覆盖） |\n| 本地定稿 | `.cursor/work-log/reports/日报-2026-09-10.md` |\n\n另：狂人 bus#8346（大漏斗升维 prod 重发排队）已回——确认五天由他补回、下游未确认已切读则重建前需错峰打招呼。|",
       "2026-09-10 22:45:21|telegram_dm|8740305767|[私聊#478] 问工作狂人：【又初转问】大漏斗spark在runner框架跑test四步，不懂怎么跑问狂人|已通过 agent-bus 发给工作狂人（bus id=8353）。等待 120s 内未收到实质回复，狂人回话后会私聊通知你。|"
+    ],
+    "2026-09-11": [
+      "2026-09-11 10:20:33|telegram_group|8740305767|[群聊·@youchu8888]: @worker_ant_bot sr表已经建好了，可以重新发了||observe",
+      "2026-09-11 10:25:59|worker_ant_group|0|[工作狂人] @youchu8888 SR 表我验收了，建得对：\n\ndws.dws_app_event_funnel_d_d · 60 列 · PRIMARY KEY(dt, app_id, is_new, device_type, source_type) 5 列升维到位 · RANGE(dt) 分区 · DISTRIBUTED BY HASH(app_id) BUCKETS 8 · 当前 0 行。\n一个事实提前说：分区现在只有 p20260911 [2026-09-11, 2026-09-15)，要回刷历史得先 ADD PARTITION。\n\n但升维上线的拦门不是这张表，是 app_page_view 的负差，这个你还没给我口径：\n\n沙箱对账 dt=2026-09-08，54 列里 37 列精确相等、15 列 _session_cnt 正差 0.06%~0.18%（拆维重复计数的数学必然，合理）。唯一不合理的是 app_page_view：user_cnt -228 · event_cnt -5663。可加指标拆维后 SUM 必须相等，正差能解释，负差等于丢数据。我的疑点是只有它带 HAVING|先查 `dws_app_event_funnel_d_d` 与 `app_page_view` 相关代码和文档，再整理可沉淀规则。\n消息指向大漏斗升维验收卡点；我先核对现有 lesson 索引，再写入可复用规则。\n## 1. 上下文整理\n\n工作狂人在确认 `dws.dws_app_event_funnel_d_d` **SR 升维表结构验收通过**（60 列、五维主键、分区与分桶正确），并提醒当前仅有 `p20260911` 分区、**回刷历史须先 ADD PARTITION**。这与上文反爬 v6、注册业务日归属是**并行专项**；本条聚焦**大漏斗升维上线**。\n\n沙箱对账 dt=2026-09-08：54 列中 37 列精确相等、15 列 `_session_cnt` 正差 0.06%～0.18%（拆维重复计数，合理）；**唯一异常是 `app_page_view` 负差 user -228 / event -5663**。狂人怀疑是唯一带 `HAVING COUNT(DISTINCT page_key) > 1` 的指标在细粒度重判时滤掉了跨端各 1 页的边缘用户，**等又初定性**（预期则给验收判据，bug 则改 HAVING）。\n\n知秋已拍板：**负差未解前升维不上线**，生产维持老口径；放行后须 **SR + pushback + paimon 重建 + 生产 SQL 四件同批切换**，禁止先上一半。\n\n---\n\n## 2. 可复用规则\n\n``\n\n``\n\n``\n\n``\n\n``\n\n``\n\n``\n\n---\n\n**待办（又初侧）**：回复 bus#8357 / 狂人，对 -228/-5663 给出口径结论——若认 bug，本地 `stage_metrics.sql` 已有 `page_qual_uid` 全局粒度改法，需确认沙箱跑的是否为该版并重验对账。|"
     ]
   },
-  "last_hot_lines": 3,
-  "last_archived_lines": 3
+  "last_hot_lines": 2,
+  "last_archived_lines": 2
 }

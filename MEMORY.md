@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [is_run|attribution|frontend|口径](lessons/2026-09-12-is_run-attribution-frontend-口径.md) — 会话轮换蒸馏
 - [页面浏览入围按用户日全局过闸，升维回写列齐再入库](lessons/2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库.md) — 会话轮换蒸馏
 - [运行开关只做缺失配置补全，勿全量重刷覆盖已有配置](lessons/2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置.md) — 会话轮换蒸馏
 - [大漏斗升维须四方同步；page_view HAVING 须全局过闸](lessons/2026-09-11-funnel-升维须四方同步且page_view全局过闸.md) — bus#8357

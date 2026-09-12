@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 12 2026 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-09-12-is_run-attribution-frontend-口径.md` | 2026-09-12-is_run-attribution-frontend-口 |
+| flag is_run 一套 与黑 两者 两者职责分离 | `sessions/tg-rotate-2026-09-12-1101.md` | 口径问答模板：`is_run` 管展示与黑名单；归因入围另有一套 flag，两者 |
+| flag is_run 「前 「归 」→ 不到 | `sessions/tg-rotate-2026-09-12-1101.md` | 排查「前端看不到 / 列表缺失」→ 先查 `is_run`；排查「归因没算 /  |
+| flag is_run 主要 主要是前端展示开关 入围 前端 | `sessions/tg-rotate-2026-09-12-1101.md` | 现网**归因计算入围**已不靠 `is_run`，看**双 flag**；`is |
+| is_run sync 不会 会保 保留 单状 | `sessions/tg-rotate-2026-09-12-1101.md` | sync **不会**把已有 `is_run = 0` 的行改回 1；拉黑/黑名 |
+| app is_run sync 会自 会自动写入 写入 | `sessions/tg-rotate-2026-09-12-1101.md` | 日批 sync 对**新入围 app** 会自动写入 `is_run = 1`。 |
+| ifnull is_run null 主列 列表 前端 | `sessions/tg-rotate-2026-09-12-1101.md` | 前端主列表过滤条件：`IFNULL(is_run, 0) = 1`；NULL 视 |
+| dim.dim_app_attribution_config.is_run 值先 | `sessions/tg-rotate-2026-09-12-1101.md` | `dim.dim_app_attribution_config.is_run`： |
+| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-09-12-1101.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | ## 09 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库.md` | 2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库 |
 | ## 09 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置.md` | 2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置 |
 | +「 +「已完成」 「已 专项 专项复盘 了什 | `sessions/tg-rotate-2026-09-11-2259.md` | 日报正文写法：任务名 + 做了什么 + 结果 +「已完成」；`【死锁阻碍】`/` |
@@ -36,12 +45,3 @@
 | op p1 p2 to 事件 事件漏斗改造（top2 | `sessions/tg-rotate-2026-09-09-2259.md` | **续做项**：归因看板设计评审（TOP1，次日）；事件漏斗改造（TOP2，周五 |
 | 09 2026 92937 id inserted 云端 | `sessions/tg-rotate-2026-09-09-2259.md` | **2026-09-09 日报云端**：`inserted`，记录 ID **9 |
 | 不能 义） 入围 分子 分母 分母算法需单独厘清（不能只看分子定义） | `sessions/tg-rotate-2026-09-09-2259.md` | **归因看板分母**：入围/分母算法需单独厘清（不能只看分子定义） |
-| 加工 加工逻辑 同步过 因看 审口径 对照 | `sessions/tg-rotate-2026-09-09-2259.md` | **归因看板设计评审**：对照**指标库规则**审口径，同步过**建表 + 加工 |
-| etl —— ——口径先拍板再动 —口 不改 人数 | `sessions/tg-rotate-2026-09-09-2259.md` | **注册人数当前状态**：确认稿已落，**暂不改代码**——口径先拍板再动 ET |
-| 00 03 两天 事件 人数 仓时 | `sessions/tg-rotate-2026-09-09-2259.md` | **注册人数读数窗口**：需**读两天分区**（跨日边界事件），并用**入仓时间 |
-| 不是 不是按分区日或入仓日简单对齐 业务 事件 事件时间 人数 | `sessions/tg-rotate-2026-09-09-2259.md` | **注册人数业务日（已定稿）**：按**事件时间**归属业务日，不是按分区日或入 |
-| vs 「少 」时 先对照 册时 前者 | `sessions/tg-rotate-2026-09-09-2259.md` | **新增账号对账**：活跃日表「少算」时，先对照**用户维注册时间**核查，区分 |
-| .cursor dd.md log mm reports upload_work | `sessions/tg-rotate-2026-09-09-2259.md` | **日报上传**：主人贴定稿正文 → 先落 `.cursor/work-log/ |
-| 不是 不是按分区日或入仓日简单对齐 业务 事件 事件时间 人数 | `sessions/tg-rotate-2026-09-09-2259.md` | 注册人数业务日（已定稿）**：按**事件时间**归属业务日，不是按分区日或入仓日 |
-| vs 「少 」时 先对照 册时 前者 | `sessions/tg-rotate-2026-09-09-2259.md` | 新增账号对账**：活跃日表「少算」时，先对照**用户维注册时间**核查，区分** |
-| .cursor dd. dd.md log mm reports | `sessions/tg-rotate-2026-09-09-2259.md` | 日报上传**：主人贴定稿正文 → 先落 `.cursor/work-log/re |
