@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自写条件不能当需求依据-口径争议以-gi.md` | 2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自 |
+| ## 09 12 2026 agent_session_rotate app_i | `~/.dc-platform/memory/lessons/2026-09-12-需求写沿用现有关联时-禁止新增-app_id-device_id-安装-join-并宣称沿用旧规.md` | 2026-09-12-需求写沿用现有关联时-禁止新增-app_id-device |
+| ## .0 .1 0. 09 1. | `~/.dc-platform/memory/lessons/2026-09-12-升级稿含-is_run_sync-已废弃-与黑名单互斥-不得再提审或开跑-已发产-session.md` | 2026-09-12-升级稿含-is_run_sync-已废弃-与黑名单互斥-不 |
+| app_id+device_id join prd spec 」时 不得 | `sessions/tg-rotate-2026-09-12-1601.md` | 需求写「**沿用现有关联、不调整关联字段和匹配优先级**」时，不得把新增的 `a |
+| dws_register_attribution_result_d spark  | `sessions/tg-rotate-2026-09-12-1601.md` | 归因升级**结果表**（`dws_register_attribution_re |
+| 1—— 2~t app_id channel ip join | `sessions/tg-rotate-2026-09-12-1601.md` | 落地页**候选匹配**仍是 **`app_id` + IP**、事件早于注册、≤ |
+| app_install attribution_fla attribution_ | `sessions/tg-rotate-2026-09-12-1601.md` | **上一版入围不连 `app_install`**：仅 `is_run=1` + |
+| ios natural organic self uid 不了 | `sessions/tg-rotate-2026-09-12-1601.md` | 注册侧前置筛选（与安装无关）：**iOS、自然渠道**（`organic`/`n |
+| 册最 同窗 同窗多次安装取 多次 安装 安装时间窗 | `sessions/tg-rotate-2026-09-12-1601.md` | 安装时间窗：**注册前 7 天 ~ 注册后 1 小时**；同窗多次安装取**离注 |
+| app_id attribution_fl attribution_flag d | `sessions/tg-rotate-2026-09-12-1601.md` | 注册↔安装配对键：**`app_id` + `device_id`**（两边非空 |
+| id 」不 」不是表 一对 一归 一次 | `sessions/tg-rotate-2026-09-12-1601.md` | 「**同一归因链路**」不是表、也没有链路 ID；指一次注册能否与一次安装**配 |
+| 001 20260907 20260911 bus dev is_run_syn | `sessions/tg-rotate-2026-09-12-1601.md` | 废弃 session 标准动作：先查待审状态 → **撤回发布申请**（如 `d |
+| app_id+device_id join lesson 入围 关联 写沿 | `sessions/tg-rotate-2026-09-12-1601.md` | [LESSON: 归因入围/需求写沿用现有关联时，禁止新增 app_id+dev |
+| 一条 上若 下线 不要 不要为停一条任务而下线整条日批 为停 | `sessions/tg-rotate-2026-09-12-1601.md` | 日批上若有补数在跑：**不要为停一条任务而下线整条日批**；先确认实例状态再处置 |
+| is_run_sync v1.0.11 上线 不等 不等黑名单上线再谈 两条 | `sessions/tg-rotate-2026-09-12-1601.md` | 归因 **V1.0.11 升级稿**（含 `is_run_sync` 回写）与* |
 | ## 09 12 2026 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-09-12-is_run-attribution-frontend-口径.md` | 2026-09-12-is_run-attribution-frontend-口 |
 | flag is_run 一套 与黑 两者 两者职责分离 | `sessions/tg-rotate-2026-09-12-1101.md` | 口径问答模板：`is_run` 管展示与黑名单；归因入围另有一套 flag，两者 |
 | flag is_run 「前 「归 」→ 不到 | `sessions/tg-rotate-2026-09-12-1101.md` | 排查「前端看不到 / 列表缺失」→ 先查 `is_run`；排查「归因没算 /  |
@@ -30,18 +45,3 @@
 | ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日上传为覆盖更新.md` | 2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日 |
 | ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核实下游已切读-未切读则重建前必须错峰协.md` | 2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核 |
 | 09 10 2026 prod v1.0.11 与生 | `sessions/tg-rotate-2026-09-10-2239.md` | 2026-09-10 续做项（周五截止）：事件漏斗改造与生产对齐、协助发布归因看 |
-| 与字 业务 义变 交付物 入围 入围口径 | `sessions/tg-rotate-2026-09-10-2239.md` | **归因升级对接**交付物：确认新增业务表与字段，并整理**入围口径**与**运 |
-| prod 下游 下游是否已切读新表 两件 五天 件事 | `sessions/tg-rotate-2026-09-10-2239.md` | prod 重发/重建前需对齐两件事：**补回窗口**（如五天由对方补回）+ ** |
-| prod test 主键 产表 先写 先写重建表运维说明 | `sessions/tg-rotate-2026-09-10-2239.md` | **大漏斗生产表主键变更**：先写重建表运维说明；**test 环境按新主键建表 |
-| 下游 册设 写注 升维 单独 大漏 | `sessions/tg-rotate-2026-09-10-2239.md` | **大漏斗升维**对接要点：粒度需覆盖**注册设备**、**自然/渠道**；汇总 |
-| ack agent bus reply 上传 上传云端不阻塞对派单的 | `sessions/tg-rotate-2026-09-10-2239.md` | 日报上传与 agent-bus 回执可并行：上传云端不阻塞对派单的 ACK/re |
-| updated 一条 上传 不是 不是新建一条 传会 | `sessions/tg-rotate-2026-09-10-2239.md` | 同日重复上传会**覆盖**原记录（状态 `updated`），不是新建一条 |
-| .cursor date dd mm python3 scripts | `sessions/tg-rotate-2026-09-10-2239.md` | 上传脚本：`python3 .cursor/scripts/upload_wor |
-| lesson prod 下游 与天 主键 主键变更 | `sessions/tg-rotate-2026-09-10-2239.md` | [LESSON: 大漏斗/prod 主键变更/重建表前，先确认补回责任方与天数， |
-| .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-10-2239.md` | 主人说「上传云端」且已贴定稿正文时：先原样落盘 `.cursor/work-lo |
-| ## 09 2026 agent_session_rotate api curs | `~/.dc-platform/memory/lessons/2026-09-09-主人贴定稿说-上传云端-本地落盘与-api-提交均不得改字.md` | 2026-09-09-主人贴定稿说-上传云端-本地落盘与-api-提交均不得改字 |
-| ## 00 03 09 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-09-注册人数业务日-事件时间归属-读-t-t-1-两分区-入仓时间卡次日-03-00-截止.md` | 2026-09-09-注册人数业务日-事件时间归属-读-t-t-1-两分区-入仓 |
-| ## 09 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-09-09-新增账号活跃少算-先对用户维注册时间做覆盖核查-确认是日批缺口再查命名-字段.md` | 2026-09-09-新增账号活跃少算-先对用户维注册时间做覆盖核查-确认是日批 |
-| op p1 p2 to 事件 事件漏斗改造（top2 | `sessions/tg-rotate-2026-09-09-2259.md` | **续做项**：归因看板设计评审（TOP1，次日）；事件漏斗改造（TOP2，周五 |
-| 09 2026 92937 id inserted 云端 | `sessions/tg-rotate-2026-09-09-2259.md` | **2026-09-09 日报云端**：`inserted`，记录 ID **9 |
-| 不能 义） 入围 分子 分母 分母算法需单独厘清（不能只看分子定义） | `sessions/tg-rotate-2026-09-09-2259.md` | **归因看板分母**：入围/分母算法需单独厘清（不能只看分子定义） |

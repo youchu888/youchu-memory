@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [改 ETL 前须摘 PRD 原句入 spec；spec 自写条件不能当需](lessons/2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自写条件不能当需求依据-口径争议以-gi.md) — 会话轮换蒸馏
+- [需求写沿用现有关联时，禁止新增 app_id+device_id 安装 ](lessons/2026-09-12-需求写沿用现有关联时-禁止新增-app_id-device_id-安装-join-并宣称沿用旧规.md) — 会话轮换蒸馏
+- [升级稿含 is_run_sync 已废弃，与黑名单互斥，不得再提审或开跑](lessons/2026-09-12-升级稿含-is_run_sync-已废弃-与黑名单互斥-不得再提审或开跑-已发产-session.md) — 会话轮换蒸馏
 - [狂人 bus 秒回执可短须追加实际做了什么](lessons/2026-09-12-狂人bus有动作清单禁止快车道已知悉空结案.md) — ACK 保持；结案回执必须列出实际动作
 - [feedback · 狂人 bus 秒回执后须追加实际做了什么](feedback_agent_bus_action_items_must_work.md) — 禁只回「已知悉」当结案
 - [加筛选条件必须能指出需求原句，不能把 spec 概括当依据](lessons/2026-09-12-加条件必须指出需求原句-不能把spec概括当依据.md) — 入围安装 JOIN 没有对应需求原句
