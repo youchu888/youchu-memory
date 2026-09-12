@@ -2,14 +2,13 @@
 
 > **体积目标 ≤3KB** · 每次冷启动全文注入 · **结了当场删行**  
 > 全量索引仍见 [`MEMORY.md`](MEMORY.md) / [`lessons/_index.md`](lessons/_index.md)  
-> 更新：2026-08-31
+> 更新：2026-09-12
 
 ## 进行中
 
 - [ ] **大漏斗挂 slot**：正式表已齐 `paimon.dws.dws_app_event_funnel_d_d` + `metric_stg`（#8024 改口放行）；等狂人挂回写；观察项勿当 bug 修；交付已钉禁算转化率。
 - [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 ✅；prod 同步包已出；**#8181 已转知秋，GO 前灌产/切读 HOLD**。**#8066 撞车点 diff 已回**（`COLLISION_DIFF.md`；entity/role=`INSERT IGNORE`）。界面跟单一入口，勿在旧三菜单上加东西。
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；**沙箱 explain PASS**（hadoop-1 `/tmp/uid_map_explain_20260907.log`）；sqlFile 须绝对路径；下一步真跑三规模数；不动 full_chain。
-- [ ] **归因 V1.0.11**：近月补数 SUCCESS + 验数通过；**stage7 RP pending → 野花**（`kakakh7787@gmail.com`）。
 - [ ] **prod 海豚告警处置（old-mac 专责）**：按狂人安排告警驱动；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
 - [ ] **记忆系统 P1 养成**：每周 hygiene；沉前查重；纠正≥2 次写 PINNED。
 - [x] **页面访问 / 归因**：主人 2026-09-02 — **不盯卡点**；分区巡检、日常扫链继续。

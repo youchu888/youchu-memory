@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [归因 V1.0.11 升级稿废弃，不与黑名单并行](lessons/2026-09-12-归因V1011升级稿废弃-不与黑名单并行.md) — 011 提审已撤；不等黑名单后再谈；007 已发产不回滚
 - [is_run|attribution|frontend|口径](lessons/2026-09-12-is_run-attribution-frontend-口径.md) — 会话轮换蒸馏
 - [页面浏览入围按用户日全局过闸，升维回写列齐再入库](lessons/2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库.md) — 会话轮换蒸馏
 - [运行开关只做缺失配置补全，勿全量重刷覆盖已有配置](lessons/2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置.md) — 会话轮换蒸馏
