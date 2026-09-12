@@ -6,7 +6,7 @@
 
 ## 进行中
 
-- [ ] **大漏斗再试两刀** dt=2026-09-11。生产链有这步但无已完成耗时。试验B（先按人收口再挂属性）已开跑，日志 `/tmp/funnel_exp_b_20260911.log`。试验A（每表只扫一遍）排队。基线仍是 test SR 66 分钟那版，未覆盖。本地 SQL 已回到优化前口径。
+- [ ] **大漏斗再试两刀** B 已完：INSERT 75 分钟，比 66 分钟更慢；session 合计偏高，未覆盖 SR。A（事件表只扫一遍）已开跑，日志 `/tmp/funnel_exp_a_20260911.log`。
 - [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 ✅；prod 同步包已出；**#8181 已转知秋，GO 前灌产/切读 HOLD**。**#8066 撞车点 diff 已回**（`COLLISION_DIFF.md`；entity/role=`INSERT IGNORE`）。界面跟单一入口，勿在旧三菜单上加东西。
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；**沙箱 explain PASS**（hadoop-1 `/tmp/uid_map_explain_20260907.log`）；sqlFile 须绝对路径；下一步真跑三规模数；不动 full_chain。
 - [ ] **prod 海豚告警处置（old-mac 专责）**：按狂人安排告警驱动；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
