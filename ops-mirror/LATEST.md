@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-12 10:17:12 +0800
+> 更新: 2026-09-12 10:27:43 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-12.md`
 
@@ -50,3 +50,4 @@
 |---|---|---|---|---|
 | 2026-09-11 10:24 | 群派单#218 | worker_ant_group | completed | @youchu8888 SR 表我验收了，建得对： dws.dws_app_event_funnel_d_d · 60 列 · PRIMARY KEY(dt,  |
 | 2026-09-11 22:32 | 私聊#479 | telegram_dm | completed | # 日报 · 又初·2026-09-11 [REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-11] >  |
+| 2026-09-12 10:26 | 私聊#480 | telegram_dm | completed | is_run的码值1是什么0是什么 |
