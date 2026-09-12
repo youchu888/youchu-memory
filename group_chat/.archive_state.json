@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-12 11:01:44",
+  "last_run": "2026-09-13 02:13:43",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1677,9 +1677,10 @@
     ],
     "2026-09-11": [
       "2026-09-11 10:20:33|telegram_group|8740305767|[群聊·@youchu8888]: @worker_ant_bot sr表已经建好了，可以重新发了||observe",
-      "2026-09-11 10:25:59|worker_ant_group|0|[工作狂人] @youchu8888 SR 表我验收了，建得对：\n\ndws.dws_app_event_funnel_d_d · 60 列 · PRIMARY KEY(dt, app_id, is_new, device_type, source_type) 5 列升维到位 · RANGE(dt) 分区 · DISTRIBUTED BY HASH(app_id) BUCKETS 8 · 当前 0 行。\n一个事实提前说：分区现在只有 p20260911 [2026-09-11, 2026-09-15)，要回刷历史得先 ADD PARTITION。\n\n但升维上线的拦门不是这张表，是 app_page_view 的负差，这个你还没给我口径：\n\n沙箱对账 dt=2026-09-08，54 列里 37 列精确相等、15 列 _session_cnt 正差 0.06%~0.18%（拆维重复计数的数学必然，合理）。唯一不合理的是 app_page_view：user_cnt -228 · event_cnt -5663。可加指标拆维后 SUM 必须相等，正差能解释，负差等于丢数据。我的疑点是只有它带 HAVING|先查 `dws_app_event_funnel_d_d` 与 `app_page_view` 相关代码和文档，再整理可沉淀规则。\n消息指向大漏斗升维验收卡点；我先核对现有 lesson 索引，再写入可复用规则。\n## 1. 上下文整理\n\n工作狂人在确认 `dws.dws_app_event_funnel_d_d` **SR 升维表结构验收通过**（60 列、五维主键、分区与分桶正确），并提醒当前仅有 `p20260911` 分区、**回刷历史须先 ADD PARTITION**。这与上文反爬 v6、注册业务日归属是**并行专项**；本条聚焦**大漏斗升维上线**。\n\n沙箱对账 dt=2026-09-08：54 列中 37 列精确相等、15 列 `_session_cnt` 正差 0.06%～0.18%（拆维重复计数，合理）；**唯一异常是 `app_page_view` 负差 user -228 / event -5663**。狂人怀疑是唯一带 `HAVING COUNT(DISTINCT page_key) > 1` 的指标在细粒度重判时滤掉了跨端各 1 页的边缘用户，**等又初定性**（预期则给验收判据，bug 则改 HAVING）。\n\n知秋已拍板：**负差未解前升维不上线**，生产维持老口径；放行后须 **SR + pushback + paimon 重建 + 生产 SQL 四件同批切换**，禁止先上一半。\n\n---\n\n## 2. 可复用规则\n\n``\n\n``\n\n``\n\n``\n\n``\n\n``\n\n``\n\n---\n\n**待办（又初侧）**：回复 bus#8357 / 狂人，对 -228/-5663 给出口径结论——若认 bug，本地 `stage_metrics.sql` 已有 `page_qual_uid` 全局粒度改法，需确认沙箱跑的是否为该版并重验对账。|"
+      "2026-09-11 10:25:59|worker_ant_group|0|[工作狂人] @youchu8888 SR 表我验收了，建得对：\n\ndws.dws_app_event_funnel_d_d · 60 列 · PRIMARY KEY(dt, app_id, is_new, device_type, source_type) 5 列升维到位 · RANGE(dt) 分区 · DISTRIBUTED BY HASH(app_id) BUCKETS 8 · 当前 0 行。\n一个事实提前说：分区现在只有 p20260911 [2026-09-11, 2026-09-15)，要回刷历史得先 ADD PARTITION。\n\n但升维上线的拦门不是这张表，是 app_page_view 的负差，这个你还没给我口径：\n\n沙箱对账 dt=2026-09-08，54 列里 37 列精确相等、15 列 _session_cnt 正差 0.06%~0.18%（拆维重复计数的数学必然，合理）。唯一不合理的是 app_page_view：user_cnt -228 · event_cnt -5663。可加指标拆维后 SUM 必须相等，正差能解释，负差等于丢数据。我的疑点是只有它带 HAVING|先查 `dws_app_event_funnel_d_d` 与 `app_page_view` 相关代码和文档，再整理可沉淀规则。\n消息指向大漏斗升维验收卡点；我先核对现有 lesson 索引，再写入可复用规则。\n## 1. 上下文整理\n\n工作狂人在确认 `dws.dws_app_event_funnel_d_d` **SR 升维表结构验收通过**（60 列、五维主键、分区与分桶正确），并提醒当前仅有 `p20260911` 分区、**回刷历史须先 ADD PARTITION**。这与上文反爬 v6、注册业务日归属是**并行专项**；本条聚焦**大漏斗升维上线**。\n\n沙箱对账 dt=2026-09-08：54 列中 37 列精确相等、15 列 `_session_cnt` 正差 0.06%～0.18%（拆维重复计数，合理）；**唯一异常是 `app_page_view` 负差 user -228 / event -5663**。狂人怀疑是唯一带 `HAVING COUNT(DISTINCT page_key) > 1` 的指标在细粒度重判时滤掉了跨端各 1 页的边缘用户，**等又初定性**（预期则给验收判据，bug 则改 HAVING）。\n\n知秋已拍板：**负差未解前升维不上线**，生产维持老口径；放行后须 **SR + pushback + paimon 重建 + 生产 SQL 四件同批切换**，禁止先上一半。\n\n---\n\n## 2. 可复用规则\n\n``\n\n``\n\n``\n\n``\n\n``\n\n``\n\n``\n\n---\n\n**待办（又初侧）**：回复 bus#8357 / 狂人，对 -228/-5663 给出口径结论——若认 bug，本地 `stage_metrics.sql` 已有 `page_qual_uid` 全局粒度改法，需确认沙箱跑的是否为该版并重验对账。|",
+      "2026-09-11 22:33:20|telegram_dm|8740305767|[私聊#479] # 日报 · 又初·2026-09-11\n\n[REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-09-11]\n> 提交人: 又初\n> 工号: DN6517\n> 岗位: 后端 BE\n> 层级: L1\n> 日期: 2026-09-11\n\n## 【今日结果】\n- [TQ-002 | DMP系统] 大漏斗升维：页面浏览入围改回按用户日全局过闸，补齐升维回写列并入库；测试表结构已通过验收，已完成；\n- [TQ-002 | DMP系统] 归因看板：二十二列版本在生产侧只读核对两天共十三项全部通过，并完成指标登记，已完成；\n- [TQ-002 | DMP系统] 归因升级：得分分项与无候选原因已在测试落地并验数；运行开关改为只补缺失配置；整理后端对接总册并建全量升级包提交审核，已完成；\n\n## 【死锁阻碍】\n- \n\n## 【专项复盘】\n- \n\n## 【明日动作】\n- TOP1: [TQ-002 | 归因升级] 生产发布后核对近月数据与日批（截止：明日）\n\n日报按照这个上传云端|按你贴的定稿原样落盘并上传云端。已按你贴的正文原封不动上传云端。\n\n| 项 | 值 |\n|----|-----|\n| 日期 | 2026-09-11 |\n| 云端记录 ID | **94855** |\n| 状态 | **inserted**（新建） |\n| 本地定稿 | `.cursor/work-log/reports/日报-2026-09-11.md` ||"
     ]
   },
-  "last_hot_lines": 2,
-  "last_archived_lines": 2
+  "last_hot_lines": 11,
+  "last_archived_lines": 1
 }
