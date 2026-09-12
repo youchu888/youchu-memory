@@ -10,7 +10,7 @@
 5. **产出物互斥+换轨** — 先判定 commit/日报/bus/群进展只跟对应专条；commit 必须从 git diff 从零写（禁粘 bus）；钩子拦旁白与 bus 残留。见 `output-channel-matrix.mdc`。
 6. **Dev Session 1–6 禁空标 done** — 每 stage 要有产物与证据；stage7 等审核。
 7. **datacheck 默认只查 T-1** — 用户未指定日期禁止扫多日。
-8. **agent-bus：60s ACK → 干完 reply 才结案** — 禁拉取时 mark_processed；禁快车道「已知悉」空回；HOLD/别动若夹带贴 SQL、核验、确认环境 → 按 work。
+8. **agent-bus：秒回执可短，结案必须写出实际做了什么** — ACK 保持原样；后面追加一条列出查了哪/改了哪/贴了什么；禁只回「已知悉」。
 9. **固定流程先跑 runbook** — 归因/补数等禁止对话里从零造轮子。
 10. **INSERT 必须显式列名** — 防列错位（尤其加列后）。
 11. **StarRocks：禁 `$[yyyyMMdd]` 类宏进直连 SQL** — 用字面量或会话变量。
