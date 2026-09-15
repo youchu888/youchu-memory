@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标已完成.md` | 2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标 |
+| ## .cursor .m 09 15 2026 | `~/.dc-platform/memory/lessons/2026-09-15-新机实活交付后须写入该机-cursor-work-log-当日-md-并-sync-memory.md` | 2026-09-15-新机实活交付后须写入该机-cursor-work-log- |
+| ## 09 15 2026 agent_session_rotate bulle | `~/.dc-platform/memory/lessons/2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿定稿-必须扫-transcript-派.md` | 2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿 |
+| dev log session test work 「新 | `sessions/tg-rotate-2026-09-15-2225.md` | 归因升级类「新机发布并推进同步」若 work-log 未记，仍可从 dev se |
+| flush —— —避 「今 「若 「若还有已交办且已闭环的活 | `sessions/tg-rotate-2026-09-15-2225.md` | 初稿偏少时主动向主人确认：「若还有已交办且已闭环的活，请点名」——避免把 flu |
+| 不写 不写进今日结果 今日 写进 动作 在测 | `sessions/tg-rotate-2026-09-15-2225.md` | 进行中/未验收项（如大漏斗新逻辑还在测）应放 **【明日动作】**，不写进今日结 |
+| cursor git log memory transcript work | `sessions/tg-rotate-2026-09-15-2225.md` | Cursor transcript **不跨机**；新机干的活若未落该机 wor |
+| bullet hosts mac new old 「今 | `sessions/tg-rotate-2026-09-15-2225.md` | 日报「今日结果偏少」≠ 双机没同步：先核对 `new-mac`/`old-mac |
+| daily lesson report 不硬凑 为凑 人线 | `sessions/tg-rotate-2026-09-15-2225.md` | [LESSON: daily-report,不硬凑/他人线未验收/自测未闭环只写 |
+| bullet≈0 daily hosts lesson log mac | `sessions/tg-rotate-2026-09-15-2225.md` | [LESSON: daily-report,new-mac,work-log/h |
+| bus tg 主人 主人点名漏记时 人点 以实 | `sessions/tg-rotate-2026-09-15-2225.md` | 主人点名漏记时：以实据还原（平台发布记录、测试进展、bus 回执）→ 改定稿 → |
+| 1.0.11） 「不 「不硬凑」铁律 「今 「已 」的 | `sessions/tg-rotate-2026-09-15-2225.md` | 「不硬凑」铁律：只写当日已闭环、可标「已完成」的交付；他人线在推、验收未过、覆盖 |
+| agent bus hosts inbox） session task_prov | `sessions/tg-rotate-2026-09-15-2225.md` | 写稿不能只看合并 hosts：hosts 空或偏少时，必须再扫本机 **全部 a |
+| .cursor .m 0） 18 20 20）没把实活写进 | `sessions/tg-rotate-2026-09-15-2225.md` | 21:30 写稿前跑过 `prepare_daily_report_sync.s |
 | ## 09 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自写条件不能当需求依据-口径争议以-gi.md` | 2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自 |
 | ## 09 12 2026 agent_session_rotate app_i | `~/.dc-platform/memory/lessons/2026-09-12-需求写沿用现有关联时-禁止新增-app_id-device_id-安装-join-并宣称沿用旧规.md` | 2026-09-12-需求写沿用现有关联时-禁止新增-app_id-device |
 | ## .0 .1 0. 09 1. | `~/.dc-platform/memory/lessons/2026-09-12-升级稿含-is_run_sync-已废弃-与黑名单互斥-不得再提审或开跑-已发产-session.md` | 2026-09-12-升级稿含-is_run_sync-已废弃-与黑名单互斥-不 |
@@ -31,17 +45,3 @@
 | ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-09-12-1101.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | ## 09 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库.md` | 2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库 |
 | ## 09 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置.md` | 2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置 |
-| +「 +「已完成」 「已 专项 专项复盘 了什 | `sessions/tg-rotate-2026-09-11-2259.md` | 日报正文写法：任务名 + 做了什么 + 结果 +「已完成」；`【死锁阻碍】`/` |
-| 1） op p1 to 与日 产发 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因升级生产发布后的验收动作：核对近月数据与日批（TOP1） |
-| 与全 交付 交审 付物 全量 册与 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因升级交付物含后端对接总册与全量升级包，已提交审核 |
-| 「只 为「 免全 全量 关改 升级 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因升级运行开关改为「只补缺失配置」，避免全量覆盖已有配置 |
-| 与无 候选 分分 分项 升级 因升 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因升级：得分分项与无候选原因已在测试环境落地并验数通过 |
-| 三项 两天 二列 二十 产侧 侧只 | `sessions/tg-rotate-2026-09-11-2259.md` | 归因看板二十二列版本：生产侧只读核对两天、十三项全过，并完成指标登记 |
-| 侧完 入库 写列 列并 升维 回写 | `sessions/tg-rotate-2026-09-11-2259.md` | 大漏斗升维须补齐升维回写列并完成入库；测试表结构验收通过才算结构侧完成 |
-| 「按 入围 全局 升维 口径 回「 | `sessions/tg-rotate-2026-09-11-2259.md` | 大漏斗升维：页面浏览入围口径改回「按用户日全局过闸」 |
-| id inserted 上传 云端 云端记录 传成 | `sessions/tg-rotate-2026-09-11-2259.md` | 日报上传成功回执应带日期、云端记录 ID、状态（如 `inserted` 新建） |
-| lesson 做缺 全量 关只 刷覆 勿全 | `sessions/tg-rotate-2026-09-11-2259.md` | [LESSON: 归因升级/运行开关只做缺失配置补全，勿全量重刷覆盖已有配置] |
-| .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-11-2259.md` | 用户贴定稿并说「按这个上传云端」时，以粘贴正文为准：先原样落盘到 `.curso |
-| ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日上传为覆盖更新.md` | 2026-09-10-主人贴定稿并说-上传云端-时-正文一字不改落盘再提交-同日 |
-| ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核实下游已切读-未切读则重建前必须错峰协.md` | 2026-09-10-prod-主键变更-重建表前-先确认补回责任方与天数-并核 |
-| 09 10 2026 prod v1.0.11 与生 | `sessions/tg-rotate-2026-09-10-2239.md` | 2026-09-10 续做项（周五截止）：事件漏斗改造与生产对齐、协助发布归因看 |

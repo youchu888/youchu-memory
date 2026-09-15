@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-15 | [他人线未验收/自测未闭环只写明日动作，禁止为凑条数硬拆或标已完成](./2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标已完成.md) | daily-report,不硬凑,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-15 | [新机实活交付后须写入该机 `.cursor/work-log/当日.md` 并 ](./2026-09-15-新机实活交付后须写入该机-cursor-work-log-当日-md-并-sync-memory.md) | daily-report,flush,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-15 | [hosts 同步齐但 bullet≈0 时，不得仅凭合并稿定稿；必须扫 tran](./2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿定稿-必须扫-transcript-派.md) | daily-report,new-mac,work-log,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-12 | [归因四条件测试验数对候选，不对入围](./2026-09-12-归因四条件测试验数对候选不对入围.md) | attribution, test, complement | 先确认 flag 入围大于 0；结果行数对候选数 |
 | 2026-09-12 | [SR 建表必须带历史分区](./2026-09-12-sr-建表必须带历史分区.md) | starrocks, ddl, partition | 默认 history_partition_num=30，禁止只留今天 |
 | 2026-09-12 | [改 ETL 前须摘 PRD 原句入 spec；spec 自写条件不能当需求依据，](./2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自写条件不能当需求依据-口径争议以-gi.md) | 需求对齐,session-rotate | 会话轮换前自动蒸馏 |
