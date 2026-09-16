@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-09-16 21:09:47",
+  "last_run": "2026-09-16 22:26:52",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1694,9 +1694,11 @@
       "2026-09-12 15:40:06|telegram_dm|8740305767|[私聊#490] 所以你是根据哪一句话，加的这个条件|去对当时加这条入围条件时写进提交和说明的原文，不拿现在的理解往回套。spec 里挂了 PRD 名，我去核对当时有没有摘到对应原句。当时没有对着需求原文里的某一句。我把「自己写进 spec、再当成依据」记下来。没有。需求文档里没有对应的一句话。\n\n当时提交 `e3c7a674` 只写了 `enroll via register+install attribution_flag`。`spec.md` 里标的是按《V1.0.11归因分析二期迭代》去做，第一条入围条件是我自己写的「同 app、同 device_id 的安装 flag 必须为 1」。那是实现概括，不是需求原文摘录。|"
     ],
     "2026-09-15": [
-      "2026-09-15 21:08:44|agent_bus_in|0|[agent-bus#8589] 【牡丹·收验】归因1.0.11 prod 验收（T-1=2026-09-14）未通过已收（北京时间 2026-09-15 21:07）。\n\n记下：\n- 仓内 SQL 对；prod result 仍旧稿（双flag+安装JOIN，无分项）\n- board 已四条件、E=11797 对齐；no_candidate 任务在但全0（缺补数）；is_run_sync 仍旧自动回写\n- 必须盖：dws_register_attribution_result_d；建议盖：is_run_sync 空跑\n- 不盖：board / no_candidate 任务 / metrics / dashboard_ext\n- 发对后补数链：result→apply→board→no_candidate（至少T-1），再验 bad_score=0、no_cand≈E−C\n- 报告与 session 已记\n\n我先转野花拍板；prod 覆盖/补数等知秋令，不擅自发。拍了再动并回你。||observe"
+      "2026-09-15 21:08:44|agent_bus_in|0|[agent-bus#8589] 【牡丹·收验】归因1.0.11 prod 验收（T-1=2026-09-14）未通过已收（北京时间 2026-09-15 21:07）。\n\n记下：\n- 仓内 SQL 对；prod result 仍旧稿（双flag+安装JOIN，无分项）\n- board 已四条件、E=11797 对齐；no_candidate 任务在但全0（缺补数）；is_run_sync 仍旧自动回写\n- 必须盖：dws_register_attribution_result_d；建议盖：is_run_sync 空跑\n- 不盖：board / no_candidate 任务 / metrics / dashboard_ext\n- 发对后补数链：result→apply→board→no_candidate（至少T-1），再验 bad_score=0、no_cand≈E−C\n- 报告与 session 已记\n\n我先转野花拍板；prod 覆盖/补数等知秋令，不擅自发。拍了再动并回你。||observe",
+      "2026-09-15 21:46:13|telegram_dm|8740305767|[私聊#491] 没有和新机同步吗？为什么今日结果才这么点|今日结果偏少，多半是双机 work-log 没齐。我先跑同步，再对照新旧机流水和定稿查缺了什么。双机 hosts 都有，但两边流水几乎空。接着扫 transcript 和派单，把今天真实交付补进日报。同步过了，不是新机缺席。\n\n21:30 写稿前已跑双机同步，核对是：`new-mac` / `old-mac` 当日 hosts 都在；我刚又重跑了一遍，结果一样。两边都是 `bullet≈0`——冲刺 flush 几乎没落实活，只剩旧 bus 噪音，所以合并不等于多出结果。\n\n今日结果只写一条，是按「不硬凑」来的：早盘实时明细断流，又初侧只读复核到闭环，这一条能标已完成。晚上归因 1.0.11 是野花线在推，验收未过、覆盖还在等拍板，按规矩不能塞进「今日结果」。\n\n若你记得还有别的已交办且已闭环的活，直接点名，我按定稿补进结果并重推 TG。双机同步已跑完：新旧机当日 hosts 都在，两边流水仍是空的，所以合并不会多出结果条。|",
+      "2026-09-15 21:55:48|telegram_dm|8740305767|[私聊#492] 我在new mac不是发布了归因升级相关的内容，还在测试大漏斗的新逻辑吗|你说得对，我去新机侧核对归因发布和大漏斗测试的实据，再补进今日结果。新机流水没记下，我改从平台会话、沙箱和群/bus 旁证里还原这两块。对，新机这两块漏记了。按你说的补进定稿并重推 TG。对，是新机这两块。冲刺 flush 没把实活写进 hosts，初稿就漏了。\n\n已按你说的改定稿并重推 TG：今日结果补上「归因升级：新机发布并推进同步」；大漏斗还在测、未闭环，放明日动作。稿在 `.cursor/work-log/reports/日报-2026-09-15.md`。改定稿已推到 TG 私聊，稿路径仍是 `.cursor/work-log/reports/日报-2026-09-15.md`。|"
     ]
   },
-  "last_hot_lines": 2,
-  "last_archived_lines": 1
+  "last_hot_lines": 1,
+  "last_archived_lines": 2
 }

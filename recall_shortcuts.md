@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 16 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘再调-upload_work_repo.md` | 2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘 |
+| top1 「已 」态 与「 业务 作写 | `sessions/tg-rotate-2026-09-16-2226.md` | 日报正文写业务结果与「已完成」态；死锁/复盘无内容则留空，明日动作写可执行的 T |
+| high less lessons memory memory_open pin | `sessions/tg-rotate-2026-09-16-2226.md` | 记忆冷启动仍须 PINNED + MEMORY_OPEN + 最近改动 + hi |
+| 09 16 2026 98421 inserted record | `sessions/tg-rotate-2026-09-16-2226.md` | 2026-09-16 本次上传结果：record **98421**，状态 ** |
+| .cursor dd.md id inserted log mm | `sessions/tg-rotate-2026-09-16-2226.md` | 定稿本地路径：`.cursor/work-log/reports/日报-YYYY |
+| tg upload_work_report.py 「上 」时 上传 上传链路独立 | `sessions/tg-rotate-2026-09-16-2226.md` | 上传链路独立于 TG 推送；仅「上传云端」时只跑 `upload_work_re |
+| 「按 」且 一真 上传 不得 与云 | `sessions/tg-rotate-2026-09-16-2226.md` | 用户说「按这个上传云端」且贴完整定稿时，以粘贴正文为唯一真源，本地落盘与云端上传 |
+| 一优 下一 仓（ 优先 决定 升维 | `sessions/tg-rotate-2026-09-16-2226.md` | 大漏斗升维下一优先：跟进沙箱测试结果，按结果决定是否改仓（截止次日）。 |
+| 「补 」而 全量 再认 同步 复配 | `sessions/tg-rotate-2026-09-16-2226.md` | 恢复配置类同步默认「补缺失行」而非全量覆盖；改完须走测试补验再认完成。 |
+| 份口 保留 免多 口径 只保 因对 | `sessions/tg-rotate-2026-09-16-2226.md` | 归因对接稿只保留最新版，避免多份口径稿并行造成验收歧义。 |
+| 09 16 2026 上发 与产 与启 | `sessions/tg-rotate-2026-09-16-2226.md` | 2026-09-16 日报四块交付：大漏斗口径（事件按对象去重、页面拆开人数与启 |
+| daily lesson log report upload upload_wo | `sessions/tg-rotate-2026-09-16-2226.md` | [LESSON: daily-report/用户私聊贴完整定稿并说「按这个上传云 |
 | ## 09 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标已完成.md` | 2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标 |
 | ## .cursor .m 09 15 2026 | `~/.dc-platform/memory/lessons/2026-09-15-新机实活交付后须写入该机-cursor-work-log-当日-md-并-sync-memory.md` | 2026-09-15-新机实活交付后须写入该机-cursor-work-log- |
 | ## 09 15 2026 agent_session_rotate bulle | `~/.dc-platform/memory/lessons/2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿定稿-必须扫-transcript-派.md` | 2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿 |
@@ -33,15 +45,3 @@
 | 001 20260907 20260911 bus dev is_run_syn | `sessions/tg-rotate-2026-09-12-1601.md` | 废弃 session 标准动作：先查待审状态 → **撤回发布申请**（如 `d |
 | app_id+device_id join lesson 入围 关联 写沿 | `sessions/tg-rotate-2026-09-12-1601.md` | [LESSON: 归因入围/需求写沿用现有关联时，禁止新增 app_id+dev |
 | 一条 上若 下线 不要 不要为停一条任务而下线整条日批 为停 | `sessions/tg-rotate-2026-09-12-1601.md` | 日批上若有补数在跑：**不要为停一条任务而下线整条日批**；先确认实例状态再处置 |
-| is_run_sync v1.0.11 上线 不等 不等黑名单上线再谈 两条 | `sessions/tg-rotate-2026-09-12-1601.md` | 归因 **V1.0.11 升级稿**（含 `is_run_sync` 回写）与* |
-| ## 09 12 2026 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-09-12-is_run-attribution-frontend-口径.md` | 2026-09-12-is_run-attribution-frontend-口 |
-| flag is_run 一套 与黑 两者 两者职责分离 | `sessions/tg-rotate-2026-09-12-1101.md` | 口径问答模板：`is_run` 管展示与黑名单；归因入围另有一套 flag，两者 |
-| flag is_run 「前 「归 」→ 不到 | `sessions/tg-rotate-2026-09-12-1101.md` | 排查「前端看不到 / 列表缺失」→ 先查 `is_run`；排查「归因没算 /  |
-| flag is_run 主要 主要是前端展示开关 入围 前端 | `sessions/tg-rotate-2026-09-12-1101.md` | 现网**归因计算入围**已不靠 `is_run`，看**双 flag**；`is |
-| is_run sync 不会 会保 保留 单状 | `sessions/tg-rotate-2026-09-12-1101.md` | sync **不会**把已有 `is_run = 0` 的行改回 1；拉黑/黑名 |
-| app is_run sync 会自 会自动写入 写入 | `sessions/tg-rotate-2026-09-12-1101.md` | 日批 sync 对**新入围 app** 会自动写入 `is_run = 1`。 |
-| ifnull is_run null 主列 列表 前端 | `sessions/tg-rotate-2026-09-12-1101.md` | 前端主列表过滤条件：`IFNULL(is_run, 0) = 1`；NULL 视 |
-| dim.dim_app_attribution_config.is_run 值先 | `sessions/tg-rotate-2026-09-12-1101.md` | `dim.dim_app_attribution_config.is_run`： |
-| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-09-12-1101.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
-| ## 09 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库.md` | 2026-09-11-页面浏览入围按用户日全局过闸-升维回写列齐再入库 |
-| ## 09 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置.md` | 2026-09-11-运行开关只做缺失配置补全-勿全量重刷覆盖已有配置 |
