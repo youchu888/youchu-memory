@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-16 | [对接文档只留最新一份](./2026-09-16-对接文档只留最新一份.md) | docs, 对接, hygiene | 带日期对接稿不堆版本；新稿落地删旧稿与跨目录副本 |
 | 2026-09-15 | [他人线未验收/自测未闭环只写明日动作，禁止为凑条数硬拆或标已完成](./2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标已完成.md) | daily-report,不硬凑,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-15 | [新机实活交付后须写入该机 `.cursor/work-log/当日.md` 并 ](./2026-09-15-新机实活交付后须写入该机-cursor-work-log-当日-md-并-sync-memory.md) | daily-report,flush,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-15 | [hosts 同步齐但 bullet≈0 时，不得仅凭合并稿定稿；必须扫 tran](./2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿定稿-必须扫-transcript-派.md) | daily-report,new-mac,work-log,session-rotate | 会话轮换前自动蒸馏 |
