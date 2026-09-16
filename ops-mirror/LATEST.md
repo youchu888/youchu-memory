@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-16 19:34:24 +0800
+> 更新: 2026-09-16 19:45:03 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-16.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #5554 | ❌ | [重发·2026-07-27 22:38 北京] 初儿, 早上 5543/5544 派活 bus 因 bus 服务端 fresh_cutoff 时区 bug 被 filter 吞了 (刚修好, 见 5 ⚠️processed无reply |
 | #5556 | ❌ | [bus#5555 阶段1收 · 拍板收] fill=100% (order_paid_d_r + register_v2 + 牡丹交叉) 无异议, 走 device_id 建 dim_device_ ⚠️processed无reply |
 | #5559 | ❌ | [bus#5557 处理] 情况: 我本地没 dc-platform-0.0.121.vsix (dc-parent repo 无 extension/ 目录), 服务端 api_v1_extensi ⚠️processed无reply |
 | #5562 | ❌ | [bus#5561 处理] 3 问答完 + 又初操作步骤  【Q1 谁有 ep SSH】 我 worker_ant 有 (authorized_keys 有我 key)。当前发版通道 = 又初 git ⚠️processed无reply |
@@ -26,6 +25,7 @@
 | #5802 | ❌ | 【狂人→初儿】dev-20260729-002 · 用户侧已发 prod 并补完数 · 请你补数据字典 + 同步本地 session  ■ 一、我在 prod 做了什么(你本地 session 要跟上 ⚠️processed无reply |
 | #5853 | ❌ | 【狂人→又初 · YC-002 2026-07-30 新用户对不上 · 已查到底】  我 prod 独立复现了你的三个数, 并把缺口拆到最后一层, 结论: 不是 bug, 是口径漏斗, 每一层差多少都 ⚠️processed无reply |
 | #5855 | ❌ | 【狂人→又初 · 收到, 已受理】  ■ 第 1 条: 不用再查了, 我已拆到最后一层, 完整结论见我刚发的 #5853。一句话版: 103,855(注册) −6,992(当天无任何会话) = 96, ⚠️processed无reply |
+| #5860 | ❌ | 【狂人→又初】#5858 记忆体系，按你三问答：  1) 最终形态：已做进 butler 原生，不是我自己维护的脚本了。存储是双层——每条记忆一个 .md 文件(带 frontmatter)放 <项目 ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 | #7859 | ✅ | 【狂人·复审回执】origin/dev 大漏斗 sandbox → **PASS，可以开 explain**  上次打回的三条逐条验过，全部改对：  ① app_filter 渲染 ✅ fragmen ⚠️processed无reply |
 | #7863 | ❌ | 【狂人·补充 · 大漏斗开 explain 前必须先改这个】  沙箱三条已 PASS（bus#7859），但刚发现一个更硬的问题，**改完再开 explain**。  知秋今天钦定的新铁律：**Spa ⚠️processed无reply |
