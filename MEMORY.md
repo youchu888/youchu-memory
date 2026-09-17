@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [大漏斗 SQL 须先入库再部署](lessons/2026-09-17-大漏斗SQL须先入库再部署-禁服务端独改.md) — 服务端新→拉回 ops+pipeline-runner；禁直改服务器；判据=仓库有新内容
 - [用户私聊贴完整定稿并说「按这个上传云端」时，以粘贴正文落盘再调 uplo](lessons/2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘再调-upload_work_repo.md) — 会话轮换蒸馏
 - [他人线未验收/自测未闭环只写明日动作，禁止为凑条数硬拆或标已完成](lessons/2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标已完成.md) — 会话轮换蒸馏
 - [新机实活交付后须写入该机 `.cursor/work-log/当日.md](lessons/2026-09-15-新机实活交付后须写入该机-cursor-work-log-当日-md-并-sync-memory.md) — 会话轮换蒸馏
