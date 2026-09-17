@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [三消费方需求并集定稿、粒度与对账判据写清后再走开发平台建表，禁止设计未定](lessons/2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表-禁止设计未定先本地建表.md) — 会话轮换蒸馏
+- [内容类启动次数按 session_id 与 content 组合去重后入](lessons/2026-09-17-内容类启动次数按-session_id-与-content-组合去重后入库-口径变更须附两版对比.md) — 会话轮换蒸馏
+- [指标口径变更须先改仓库入库逻辑、验数通过后再动线上服务端](lessons/2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端.md) — 会话轮换蒸馏
 - [大漏斗 SQL 须先入库再部署](lessons/2026-09-17-大漏斗SQL须先入库再部署-禁服务端独改.md) — 服务端新→拉回 ops+pipeline-runner；禁直改服务器；判据=仓库有新内容
 - [用户私聊贴完整定稿并说「按这个上传云端」时，以粘贴正文落盘再调 uplo](lessons/2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘再调-upload_work_repo.md) — 会话轮换蒸馏
 - [他人线未验收/自测未闭环只写明日动作，禁止为凑条数硬拆或标已完成](lessons/2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标已完成.md) — 会话轮换蒸馏

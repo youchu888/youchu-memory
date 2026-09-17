@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表-禁止设计未定先本地建表.md` | 2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表 |
+| ## 09 17 2026 agent_session_rotate conte | `~/.dc-platform/memory/lessons/2026-09-17-内容类启动次数按-session_id-与-content-组合去重后入库-口径变更须附两版对比.md` | 2026-09-17-内容类启动次数按-session_id-与-content |
+| ## 09 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端.md` | 2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端 |
+| transcript 「按 一源 上传 不另扫 个上 | `sessions/tg-rotate-2026-09-17-2212.md` | 用户说「按照这个上传云端」= 以**当条消息正文**为唯一源，不另扫 trans |
+| 002 dm dmp系统 mp p系 tq | `sessions/tg-rotate-2026-09-17-2212.md` | 日报正文：任务编号用 `[TQ-002 / DMP系统]`，对外写业务任务名；状 |
+| session sql） 与加 仅本 加工 发平 | `sessions/tg-rotate-2026-09-17-2212.md` | 新表/新加工链路：设计定稿后走**数据开发平台**建 session → 建表与 |
+| 「已 」（ 三个 三个消费方需求并集 个消 也可 | `sessions/tg-rotate-2026-09-17-2212.md` | 页面访问轻聚合：按**三个消费方需求并集**出设计稿；统计粒度、对账判据在设计阶 |
+| 「内 两版 两版对比说明 产品 会话 供产 | `sessions/tg-rotate-2026-09-17-2212.md` | 大漏斗「内容类启动次数」：口径改为**会话 × 内容**组合去重后入库；口径变更 |
+| .cursor dd.md id insert log mm | `sessions/tg-rotate-2026-09-17-2212.md` | 本地定稿路径：`.cursor/work-log/reports/日报-YYYY |
+| 上传 上传前不改字 不动 不改 不重排 为准 | `sessions/tg-rotate-2026-09-17-2212.md` | 日报上传云端：以用户贴的定稿正文为准，**原封不动**落本地后再传，上传前不改字 |
+| lesson 三消 三消费方需求并集定稿 与对 先本 再走 | `sessions/tg-rotate-2026-09-17-2212.md` | [LESSON: 页面访问轻聚合/三消费方需求并集定稿、粒度与对账判据写清后再走 |
+| 「明 一优 一律 下一 下周） 优先 | `sessions/tg-rotate-2026-09-17-2212.md` | 日报「明日动作」：写真实下一优先项并带截止（明日 / 下周），勿一律默认「明日」 |
+| et tl 一致 上服 与线 仓库 | `sessions/tg-rotate-2026-09-17-2212.md` | 大漏斗阶段指标：加工逻辑须**仓库与线上服务端一致**；变更顺序铁律为**先入库 |
 | ## 09 16 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘再调-upload_work_repo.md` | 2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘 |
 | top1 「已 」态 与「 业务 作写 | `sessions/tg-rotate-2026-09-16-2226.md` | 日报正文写业务结果与「已完成」态；死锁/复盘无内容则留空，明日动作写可执行的 T |
 | high less lessons memory memory_open pin | `sessions/tg-rotate-2026-09-16-2226.md` | 记忆冷启动仍须 PINNED + MEMORY_OPEN + 最近改动 + hi |
@@ -32,16 +45,3 @@
 | agent bus hosts inbox） session task_prov | `sessions/tg-rotate-2026-09-15-2225.md` | 写稿不能只看合并 hosts：hosts 空或偏少时，必须再扫本机 **全部 a |
 | .cursor .m 0） 18 20 20）没把实活写进 | `sessions/tg-rotate-2026-09-15-2225.md` | 21:30 写稿前跑过 `prepare_daily_report_sync.s |
 | ## 09 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自写条件不能当需求依据-口径争议以-gi.md` | 2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自 |
-| ## 09 12 2026 agent_session_rotate app_i | `~/.dc-platform/memory/lessons/2026-09-12-需求写沿用现有关联时-禁止新增-app_id-device_id-安装-join-并宣称沿用旧规.md` | 2026-09-12-需求写沿用现有关联时-禁止新增-app_id-device |
-| ## .0 .1 0. 09 1. | `~/.dc-platform/memory/lessons/2026-09-12-升级稿含-is_run_sync-已废弃-与黑名单互斥-不得再提审或开跑-已发产-session.md` | 2026-09-12-升级稿含-is_run_sync-已废弃-与黑名单互斥-不 |
-| app_id+device_id join prd spec 」时 不得 | `sessions/tg-rotate-2026-09-12-1601.md` | 需求写「**沿用现有关联、不调整关联字段和匹配优先级**」时，不得把新增的 `a |
-| dws_register_attribution_result_d spark  | `sessions/tg-rotate-2026-09-12-1601.md` | 归因升级**结果表**（`dws_register_attribution_re |
-| 1—— 2~t app_id channel ip join | `sessions/tg-rotate-2026-09-12-1601.md` | 落地页**候选匹配**仍是 **`app_id` + IP**、事件早于注册、≤ |
-| app_install attribution_fla attribution_ | `sessions/tg-rotate-2026-09-12-1601.md` | **上一版入围不连 `app_install`**：仅 `is_run=1` + |
-| ios natural organic self uid 不了 | `sessions/tg-rotate-2026-09-12-1601.md` | 注册侧前置筛选（与安装无关）：**iOS、自然渠道**（`organic`/`n |
-| 册最 同窗 同窗多次安装取 多次 安装 安装时间窗 | `sessions/tg-rotate-2026-09-12-1601.md` | 安装时间窗：**注册前 7 天 ~ 注册后 1 小时**；同窗多次安装取**离注 |
-| app_id attribution_fl attribution_flag d | `sessions/tg-rotate-2026-09-12-1601.md` | 注册↔安装配对键：**`app_id` + `device_id`**（两边非空 |
-| id 」不 」不是表 一对 一归 一次 | `sessions/tg-rotate-2026-09-12-1601.md` | 「**同一归因链路**」不是表、也没有链路 ID；指一次注册能否与一次安装**配 |
-| 001 20260907 20260911 bus dev is_run_syn | `sessions/tg-rotate-2026-09-12-1601.md` | 废弃 session 标准动作：先查待审状态 → **撤回发布申请**（如 `d |
-| app_id+device_id join lesson 入围 关联 写沿 | `sessions/tg-rotate-2026-09-12-1601.md` | [LESSON: 归因入围/需求写沿用现有关联时，禁止新增 app_id+dev |
-| 一条 上若 下线 不要 不要为停一条任务而下线整条日批 为停 | `sessions/tg-rotate-2026-09-12-1601.md` | 日批上若有补数在跑：**不要为停一条任务而下线整条日批**；先确认实例状态再处置 |
