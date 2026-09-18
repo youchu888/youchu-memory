@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>归因产品诊断报告 · 开通后至今</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1a1a1a;--muted:#667085;--line:#e5e7eb;--ok:#067647;--okbg:#ecfdf3;--warn:#b54708;--warnbg:#fffaeb;--bad:#b42318;--badbg:#fef3f2;--idle:#475467;--idlebg:#f2f4f7;--accent:#175cd3}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.55;font-size:15px;-webkit-text-size-adjust:100%}
+.wrap{max-width:720px;margin:0 auto;padding:16px 14px 48px}h1{font-size:1.35rem;margin:0 0 8px}h2{font-size:1.1rem;margin:28px 0 8px}h3{font-size:.95rem;margin:16px 0 8px;color:#344054}
+.lead,.gdesc,.meta,.subm,.foot,.cnt{color:var(--muted);font-size:.86rem}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.toc a{padding:8px 12px;background:var(--card);border:1px solid var(--line);border-radius:999px;color:var(--accent);text-decoration:none;font-size:.82rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}.stat b{display:block;font-size:1.35rem}.stat span{font-size:.78rem;color:var(--muted)}
+.callout{background:#eff8ff;border:1px solid #b2ddff;border-radius:12px;padding:12px 14px;margin:12px 0;font-size:.88rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;overflow:hidden}
+.card>summary{list-style:none;cursor:pointer;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:48px}
+.card>summary::-webkit-details-marker{display:none}.card>summary::after{content:"▾";color:var(--muted)}.card[open]>summary::after{content:"▴"}
+.app{font-weight:700;font-size:1.05rem}.badge{font-size:.72rem;padding:4px 8px;border-radius:999px}
+.b-running{background:var(--okbg);color:var(--ok)}.b-blocked{background:var(--warnbg);color:var(--warn)}.b-not_flagged{background:var(--badbg);color:var(--bad)}.b-idle{background:var(--idlebg);color:var(--idle)}
+.body{padding:0 14px 16px;border-top:1px solid var(--line)}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.metrics div{background:#f9fafb;border-radius:10px;padding:10px}.metrics b{display:block}.metrics span{font-size:.72rem;color:var(--muted)}
+.reasons,.fixes{margin:0;padding-left:18px}.reasons li,.fixes li{margin:0 0 10px}.reasons p{margin:4px 0 0;color:var(--muted);font-size:.88rem}
+.who{display:inline-block;background:#f2f4f7;border-radius:6px;padding:2px 8px;font-size:.75rem;margin-right:6px;font-weight:600}
+.foot{margin-top:28px;padding-top:12px;border-top:1px solid var(--line)}
+@media(min-width:560px){.stats,.metrics{grid-template-columns:repeat(4,1fr)}}
+</style></head><body><div class="wrap">
+<h1>归因产品诊断报告</h1>
+<p class="lead">全部已开通归因计算的产品（共 27 个），按产品拆开说明「为什么没归因到」和「怎么修」。<br/>
+统计：开通日与 2026-06-10 取较晚 → 2026-07-30。<br/>又初 · 2026-07-31 15:28 · 可直接手机打开转发</p>
+<div class="stats">
+<div class="stat"><b>4</b><span>已在产出</span></div>
+<div class="stat"><b>7</b><span>打标未产出</span></div>
+<div class="stat"><b>15</b><span>未打标未入围</span></div>
+<div class="stat"><b>1</b><span>暂无样本</span></div>
+</div>
+<div class="callout"><strong>一句话：</strong>开配置 ≠ 能归因。还要：客户端打标、落地页真实推广渠道、IP/时间对齐、设备信息过线。仅 <b>SF-81</b> 回写渠道，其余影子期。</div>
+<nav class="toc"><a href="#g-running">已在产出（4）</a><a href="#g-blocked">打标了但未产出（7）</a><a href="#g-not_flagged">未打标·未入围（15）</a><a href="#g-idle">暂无样本（1）</a></nav>
+<section id="g-running"><h2>已在产出 <span class="cnt">4</span></h2><p class="gdesc">链路已通；未归因主要看「无候选」和「分数未过线」。</p>
+<details class="card" open id="app-JHG-001">
+<summary><span class="app">JHG-001</span><span class="badge b-running">已在产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-001</p>
+<div class="metrics"><div><b>917,505</b><span>iOS自然量</span></div><div><b>73,955</b><span>需归因打标</span></div><div><b>2,744</b><span>有候选</span></div><div><b>2,011</b><span>归因成功</span></div></div>
+<div class="subm">打标率 8.06% · 近7日 7.01% · 透率 3.71% · 成功率 73.29% · 近7日推广点击 1,220,795/2,621,266</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>多数打标用户没有匹配到落地页（主流失）</strong><p>打标 73,955 → 有候选 2,744（透率 3.71%）。没进结果表≠归因失败，是没有候选。</p></li><li><strong>部分有候选用户分数未过线</strong><p>有候选 2,744，成功 2,011，未归因 733（均为低于门槛 40 分），多因设备字段缺失。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 + H5 + 投放</span>提升落地页与注册的同 IP 覆盖，检查投放页是否覆盖主注册场景。</li><li><span class="who">客户端</span>完整上报品牌、型号、系统名、系统版本。</li></ul>
+</div></details>
+<details class="card" open id="app-SF-81">
+<summary><span class="app">SF-81</span><span class="badge b-running">已在产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-29 · 统计 2026-06-29～2026-07-30 · 门槛 40 分 · 已开渠道回写 · SF-81</p>
+<div class="metrics"><div><b>52,505</b><span>iOS自然量</span></div><div><b>33,345</b><span>需归因打标</span></div><div><b>23,240</b><span>有候选</span></div><div><b>23,091</b><span>归因成功</span></div></div>
+<div class="subm">打标率 63.51% · 近7日 21.18% · 透率 69.70% · 成功率 99.36% · 近7日推广点击 575,493/575,493</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>部分有候选用户分数未过线</strong><p>有候选 23,240，成功 23,091，未归因 149（均为低于门槛 40 分），多因设备字段缺失。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端</span>完整上报品牌、型号、系统名、系统版本。</li></ul>
+</div></details>
+<details class="card" open id="app-SF-42">
+<summary><span class="app">SF-42</span><span class="badge b-running">已在产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-29 · 统计 2026-06-29～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · SF-42独立规则</p>
+<div class="metrics"><div><b>84,105</b><span>iOS自然量</span></div><div><b>13,295</b><span>需归因打标</span></div><div><b>8,063</b><span>有候选</span></div><div><b>7,918</b><span>归因成功</span></div></div>
+<div class="subm">打标率 15.81% · 近7日 25.08% · 透率 60.65% · 成功率 98.20% · 近7日推广点击 40,149/40,149</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>部分有候选用户分数未过线</strong><p>有候选 8,063，成功 7,918，未归因 145（均为低于门槛 40 分），多因设备字段缺失。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端</span>完整上报品牌、型号、系统名、系统版本。</li></ul>
+</div></details>
+<details class="card" open id="app-JHG-004">
+<summary><span class="app">JHG-004</span><span class="badge b-running">已在产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-29 · 统计 2026-06-29～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-004</p>
+<div class="metrics"><div><b>15,793</b><span>iOS自然量</span></div><div><b>2,562</b><span>需归因打标</span></div><div><b>655</b><span>有候选</span></div><div><b>580</b><span>归因成功</span></div></div>
+<div class="subm">打标率 16.22% · 近7日 35.83% · 透率 25.57% · 成功率 88.55% · 近7日推广点击 114,123/124,552</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>部分有候选用户分数未过线</strong><p>有候选 655，成功 580，未归因 75（均为低于门槛 40 分），多因设备字段缺失。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端</span>完整上报品牌、型号、系统名、系统版本。</li></ul>
+</div></details>
+</section><section id="g-blocked"><h2>打标了但未产出 <span class="cnt">7</span></h2><p class="gdesc">已打标但无结果——优先查落地页渠道与 IP。</p>
+<details class="card" open id="app-TJ-002">
+<summary><span class="app">TJ-002</span><span class="badge b-blocked">打标了但未产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-29 · 统计 2026-06-29～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · TJ-002独立规则</p>
+<div class="metrics"><div><b>367,738</b><span>iOS自然量</span></div><div><b>1,341</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.36% · 近7日 0.28% · 透率 0.00% · 成功率 — · 近7日推广点击 0/0</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>打标率极低（放大了后续问题）</strong><p>虽有打标 1,341 条，但仅占自然量的 0.36%（近7日 0.28%）。多数用户仍未入围。</p></li><li><strong>落地页渠道几乎全是 organic（关键阻断）</strong><p>已打标用户仍无结果：落地页缺少真实推广 channel，无法归因到投放。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端</span>提高打标覆盖率，不要只打极少数用户。</li><li><span class="who">H5 / 推广投放</span>落地页必须带真实推广 channel，禁止一律 organic。</li></ul>
+</div></details>
+<details class="card" open id="app-TJ-006">
+<summary><span class="app">TJ-006</span><span class="badge b-blocked">打标了但未产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · TJ-006</p>
+<div class="metrics"><div><b>4,029</b><span>iOS自然量</span></div><div><b>834</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 20.70% · 近7日 28.37% · 透率 0.00% · 成功率 — · 近7日推广点击 0/102,388</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>落地页渠道几乎全是 organic（关键阻断）</strong><p>已打标用户仍无结果：落地页缺少真实推广 channel，无法归因到投放。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">H5 / 推广投放</span>落地页必须带真实推广 channel，禁止一律 organic。</li></ul>
+</div></details>
+<details class="card" open id="app-TJ-043">
+<summary><span class="app">TJ-043</span><span class="badge b-blocked">打标了但未产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · TJ-043</p>
+<div class="metrics"><div><b>1,923</b><span>iOS自然量</span></div><div><b>42</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 2.18% · 近7日 17.39% · 透率 0.00% · 成功率 — · 近7日推广点击 0/51,217</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>有打标但匹配不到落地页候选（多为 IP 未对齐）</strong><p>打标 42 条，结果 0 行。常见：注册 IP ≠ 落地页 IP、间隔&gt;24h、代理/VPN。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 + H5</span>保证先访落地页再注册、同公网 IP、间隔≤24小时。</li></ul>
+</div></details>
+<details class="card" open id="app-JHG-005">
+<summary><span class="app">JHG-005</span><span class="badge b-blocked">打标了但未产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-005</p>
+<div class="metrics"><div><b>30,262</b><span>iOS自然量</span></div><div><b>12</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.04% · 近7日 0.00% · 透率 0.00% · 成功率 — · 近7日推广点击 209,689/231,505</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>打标率极低（放大了后续问题）</strong><p>虽有打标 12 条，但仅占自然量的 0.04%（近7日 0.0%）。多数用户仍未入围。</p></li><li><strong>有打标但匹配不到落地页候选（多为 IP 未对齐）</strong><p>打标 12 条，结果 0 行。常见：注册 IP ≠ 落地页 IP、间隔&gt;24h、代理/VPN。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端</span>提高打标覆盖率，不要只打极少数用户。</li><li><span class="who">客户端 + H5</span>保证先访落地页再注册、同公网 IP、间隔≤24小时。</li></ul>
+</div></details>
+<details class="card" open id="app-DX-002">
+<summary><span class="app">DX-002</span><span class="badge b-blocked">打标了但未产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · DX-002</p>
+<div class="metrics"><div><b>78,403</b><span>iOS自然量</span></div><div><b>11</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.01% · 近7日 0.14% · 透率 0.00% · 成功率 — · 近7日推广点击 235,800/293,392</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>打标率极低（放大了后续问题）</strong><p>虽有打标 11 条，但仅占自然量的 0.01%（近7日 0.14%）。多数用户仍未入围。</p></li><li><strong>有打标但匹配不到落地页候选（多为 IP 未对齐）</strong><p>打标 11 条，结果 0 行。常见：注册 IP ≠ 落地页 IP、间隔&gt;24h、代理/VPN。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端</span>提高打标覆盖率，不要只打极少数用户。</li><li><span class="who">客户端 + H5</span>保证先访落地页再注册、同公网 IP、间隔≤24小时。</li></ul>
+</div></details>
+<details class="card" open id="app-SF-98">
+<summary><span class="app">SF-98</span><span class="badge b-blocked">打标了但未产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-29 · 统计 2026-06-29～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · SF-98</p>
+<div class="metrics"><div><b>5,760</b><span>iOS自然量</span></div><div><b>4</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.07% · 近7日 0.00% · 透率 0.00% · 成功率 — · 近7日推广点击 339,888/339,888</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>打标率极低（放大了后续问题）</strong><p>虽有打标 4 条，但仅占自然量的 0.07%（近7日 0.0%）。多数用户仍未入围。</p></li><li><strong>有打标但匹配不到落地页候选（多为 IP 未对齐）</strong><p>打标 4 条，结果 0 行。常见：注册 IP ≠ 落地页 IP、间隔&gt;24h、代理/VPN。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端</span>提高打标覆盖率，不要只打极少数用户。</li><li><span class="who">客户端 + H5</span>保证先访落地页再注册、同公网 IP、间隔≤24小时。</li></ul>
+</div></details>
+<details class="card" open id="app-DX-036">
+<summary><span class="app">DX-036</span><span class="badge b-blocked">打标了但未产出</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · DX-036</p>
+<div class="metrics"><div><b>3,217,504</b><span>iOS自然量</span></div><div><b>3</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 0.00% · 成功率 — · 近7日推广点击 974,816/1,125,160</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>打标率极低（放大了后续问题）</strong><p>虽有打标 3 条，但仅占自然量的 0.0%（近7日 0.0%）。多数用户仍未入围。</p></li><li><strong>有打标但匹配不到落地页候选（多为 IP 未对齐）</strong><p>打标 3 条，结果 0 行。常见：注册 IP ≠ 落地页 IP、间隔&gt;24h、代理/VPN。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端</span>提高打标覆盖率，不要只打极少数用户。</li><li><span class="who">客户端 + H5</span>保证先访落地页再注册、同公网 IP、间隔≤24小时。</li></ul>
+</div></details>
+</section><section id="g-not_flagged"><h2>未打标·未入围 <span class="cnt">15</span></h2><p class="gdesc">配置已开，注册未打标，不进计算。</p>
+<details class="card" id="app-YC-001">
+<summary><span class="app">YC-001</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · YC-001</p>
+<div class="metrics"><div><b>461,544</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 509,013/538,015</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 461,544，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-YC-002">
+<summary><span class="app">YC-002</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · YC-002</p>
+<div class="metrics"><div><b>358,614</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 2,195,787/2,267,840</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 358,614，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHA-128">
+<summary><span class="app">JHA-128</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-29 · 统计 2026-06-29～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHA-128</p>
+<div class="metrics"><div><b>105,959</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 796,317/824,450</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 105,959，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHA-102">
+<summary><span class="app">JHA-102</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHA-102</p>
+<div class="metrics"><div><b>86,824</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 1,065,235/1,166,943</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 86,824，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHA-204">
+<summary><span class="app">JHA-204</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHA-204</p>
+<div class="metrics"><div><b>83,467</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 1,524,117/1,539,465</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 83,467，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHG-052">
+<summary><span class="app">JHG-052</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-07-25 · 统计 2026-07-25～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-052</p>
+<div class="metrics"><div><b>29,727</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 288,052/301,578</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 29,727，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-DX-055">
+<summary><span class="app">DX-055</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · DX-055</p>
+<div class="metrics"><div><b>27,769</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 27,949/49,909</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 27,769，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-TJ-008">
+<summary><span class="app">TJ-008</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · TJ-008</p>
+<div class="metrics"><div><b>12,088</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 0/65</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 12,088，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHG-059">
+<summary><span class="app">JHG-059</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-07-25 · 统计 2026-07-25～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-059</p>
+<div class="metrics"><div><b>6,364</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 153,447/156,967</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 6,364，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHG-092">
+<summary><span class="app">JHG-092</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-07-25 · 统计 2026-07-25～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-092</p>
+<div class="metrics"><div><b>5,660</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 506,526/506,526</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 5,660，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHG-064">
+<summary><span class="app">JHG-064</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-07-25 · 统计 2026-07-25～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-064</p>
+<div class="metrics"><div><b>5,287</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 335,041/335,041</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 5,287，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHG-015">
+<summary><span class="app">JHG-015</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-07-25 · 统计 2026-07-25～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-015独立规则</p>
+<div class="metrics"><div><b>602</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 26,840/26,840</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 602，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-TSPX-014">
+<summary><span class="app">TSPX-014</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · TSPX-014</p>
+<div class="metrics"><div><b>453</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 803/1,783</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 453，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-JHG-087">
+<summary><span class="app">JHG-087</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-07-25 · 统计 2026-07-25～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · JHG-087</p>
+<div class="metrics"><div><b>281</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 25,091/25,216</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 281，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+<details class="card" id="app-DX-100">
+<summary><span class="app">DX-100</span><span class="badge b-not_flagged">未打标·未入围</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-29 · 统计 2026-06-29～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · DX-100</p>
+<div class="metrics"><div><b>150</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 0/41</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>客户端未打「需归因」标记（主因）</strong><p>窗口内 iOS 自然量 150，attribution_flag=1 为 0。2026-06-10 起未打标不会进入归因计算。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">客户端 / 注册服务</span>对 iOS + 自然量且需查渠道的用户，注册 payload 写 attribution_flag=1（对标 JHG-001 / SF-81）。</li></ul>
+</div></details>
+</section><section id="g-idle"><h2>暂无样本 <span class="cnt">1</span></h2><p class="gdesc">几乎没有 iOS 自然量注册。</p>
+<details class="card" id="app-TJ-003">
+<summary><span class="app">TJ-003</span><span class="badge b-idle">暂无样本</span></summary>
+<div class="body">
+<p class="meta">开通日 2026-06-05 · 统计 2026-06-10～2026-07-30 · 门槛 40 分 · 影子期（只算不回写） · TJ-003</p>
+<div class="metrics"><div><b>0</b><span>iOS自然量</span></div><div><b>0</b><span>需归因打标</span></div><div><b>0</b><span>有候选</span></div><div><b>0</b><span>归因成功</span></div></div>
+<div class="subm">打标率 0.00% · 近7日 0.00% · 透率 — · 成功率 — · 近7日推广点击 0/0</div>
+<h3>为什么没有归因到 / 主要卡点</h3><ul class="reasons"><li><strong>本窗口几乎没有 iOS 自然量注册</strong><p>没有可归因的注册样本。</p></li></ul>
+<h3>怎么修</h3><ul class="fixes"><li><span class="who">产品/增长</span>确认是否仍投放 iOS，以及自然量是否正常入库。</li></ul>
+</div></details>
+</section>
+<div class="foot">文件可发微信打开。数据生产只读，截至 T-1=2026-07-30。</div>
+</div></body></html>

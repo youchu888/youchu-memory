@@ -1,0 +1,4 @@
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Monday, Sep 7, 2026, 4:29 PM (UTC+8)</timestamp>\n<user_query>\nmcp 是什么\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"先做冷启动读记忆，再简短回答「MCP 是什么」。"},{"type":"tool_use","name":"Read","input":{"path":"/Users/mac/Desktop/CHcode/.cursor/.agent-memory-bootstrap.md","limit":80}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"**MCP** = **Model Context Protocol**（模型上下文协议）。\n\n简单说：让 AI（比如 Cursor 里的我）通过统一接口调用外部工具/服务，而不是只能聊天、改本地文件。\n\n在你这个环境里，MCP 主要是 `user-dc-platform`：查库、海豚任务、指标、记忆、Dev Session 等，都走这套工具（例如 `db_run_query`、`dolphin_publish_task_sql`、`session_*`）。\n\n可以把它理解成：**AI 的「插件总线」**——协议规定怎么发现工具、怎么传参、怎么拿结果。"}]}}
+{"type":"turn_ended","status":"success"}

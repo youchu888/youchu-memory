@@ -1,0 +1,4 @@
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Friday, Sep 11, 2026, 9:23 PM (UTC+8)</timestamp>\n<user_query>\n鸡胗是鸡的胃吗\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"先按冷启动读一下记忆包，再直接答你的问题。"},{"type":"tool_use","name":"Read","input":{"path":"/Users/mac/Desktop/CHcode/.cursor/.agent-memory-bootstrap.md","limit":80}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"对，**鸡胗**就是鸡的**肌胃**（也叫砂囊），是鸡胃的一部分。\n\n鸡有两段胃：\n1. **腺胃**：先分泌消化液\n2. **肌胃（鸡胗）**：肌肉很厚，靠收缩研磨食物（常和沙砾一起）\n\n所以平时说的鸡胗，指的就是这块厚实、适合炒或卤的肌胃，不是整个胃。"}]}}
+{"type":"turn_ended","status":"success"}

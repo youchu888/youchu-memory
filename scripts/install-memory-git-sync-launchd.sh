@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # 安装 launchd：定时 git 同步 ~/.dc-platform/memory（两台各装一份，互相协调）
-# 间隔：环境变量 INTERVAL_SEC（默认 600 秒 = 10 分钟）
+# 间隔：环境变量 INTERVAL_SEC（默认 120 秒 = 2 分钟；可用 INTERVAL_SEC=600 改回 10 分钟）
 set -euo pipefail
 LABEL=com.youchu.memory-git-sync
 PLIST="$HOME/Library/LaunchAgents/${LABEL}.plist"
@@ -9,13 +9,14 @@ SCRIPT="$HERE/sync-memory-git.sh"
 # 同时落到标准位置，方便手动调用
 STD_DIR="$HOME/.dc-platform/scripts"
 LOG_DIR="$HOME/.dc-platform/logs"
-INTERVAL_SEC="${INTERVAL_SEC:-600}"
+INTERVAL_SEC="${INTERVAL_SEC:-120}"
 mkdir -p "$HOME/Library/LaunchAgents" "$LOG_DIR" "$STD_DIR"
 chmod +x "$HERE"/sync-memory-git.sh "$HERE"/install-memory-git-sync-launchd.sh "$HERE"/uninstall-memory-git-sync-launchd.sh 2>/dev/null || true
-chmod +x "$HERE"/worklog_dual_mac_sync.py 2>/dev/null || true
+chmod +x "$HERE"/worklog_dual_mac_sync.py "$HERE"/export_noncode_mirrors.py 2>/dev/null || true
 cp -f "$HERE"/sync-memory-git.sh "$HERE"/install-memory-git-sync-launchd.sh "$HERE"/uninstall-memory-git-sync-launchd.sh "$STD_DIR/"
-cp -f "$HERE"/worklog_dual_mac_sync.py "$STD_DIR/" 2>/dev/null || true
+cp -f "$HERE"/worklog_dual_mac_sync.py "$HERE"/export_noncode_mirrors.py "$STD_DIR/" 2>/dev/null || true
 chmod +x "$STD_DIR"/sync-memory-git.sh "$STD_DIR"/install-memory-git-sync-launchd.sh "$STD_DIR"/uninstall-memory-git-sync-launchd.sh
+chmod +x "$STD_DIR"/export_noncode_mirrors.py 2>/dev/null || true
 # plist 指向标准位置（稳定路径）
 SCRIPT="$STD_DIR/sync-memory-git.sh"
 

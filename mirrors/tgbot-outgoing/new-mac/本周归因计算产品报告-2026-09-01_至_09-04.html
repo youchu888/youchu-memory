@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>本周归因计算产品报告 · 09-01～09-04</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--blue:#2563eb;--red:#dc2626;--green:#059669;--amber:#d97706}
+*{box-sizing:border-box}
+body{margin:0;padding:16px 12px 40px;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55;font-size:15px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:1.25rem;margin:0 0 6px}
+.meta{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 12px}
+h2{font-size:1.02rem;margin:0 0 10px;padding-left:8px;border-left:4px solid var(--blue)}
+table{width:100%;border-collapse:collapse;font-size:.72rem;margin:8px 0}
+th,td{border:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}
+th{background:#f9fafb}
+.num{font-variant-numeric:tabular-nums;text-align:right}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.kpi .item{background:#f9fafb;border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.kpi .n{font-size:1.25rem;font-weight:700}
+.kpi .l{font-size:.72rem;color:var(--muted)}
+.badge{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px}
+.ok{background:#d1fae5;color:#065f46}.warn{background:#fef3c7;color:#92400e}.bad{background:#fee2e2;color:#991b1b}.info{background:#dbeafe;color:#1e40af}
+.callout{border-radius:10px;padding:10px 12px;margin:8px 0;font-size:.9rem}
+.c-amber{background:#fffbeb;border:1px solid #fde68a}
+.c-red{background:#fef2f2;border:1px solid #fecaca}
+.c-blue{background:#eff6ff;border:1px solid #bfdbfe}
+ul,ol{margin:6px 0;padding-left:18px} li{margin:4px 0}
+.muted{color:var(--muted);font-size:.86rem}
+code{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:.85em}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p>
+  <span class="badge info">归因周报</span>
+  <span class="badge">2026-09-01～09-04</span>
+  <span class="badge ok">prod 只读</span>
+</p>
+<h1>本周归因计算 · 产品报告</h1>
+<p class="meta">又初 · 2026-09-05 · 入围=iOS+自然量+打标；成功率=成功/有候选 · 对比上一份产品稿 08-25～08-28</p>
+
+<div class="card">
+<h2>一、总览</h2>
+<div class="kpi">
+  <div class="item"><div class="n">43</div><div class="l">配置已开</div></div>
+  <div class="item"><div class="n">10</div><div class="l">本周有结果产出</div></div>
+  <div class="item"><div class="n">6</div><div class="l">有打标无候选</div></div>
+  <div class="item"><div class="n">25</div><div class="l">有自然量未打标</div></div>
+  <div class="item"><div class="n">1,280</div><div class="l">候选合计</div></div>
+  <div class="item"><div class="n">84.5%</div><div class="l">综合成功率</div></div>
+</div>
+<div class="callout c-blue">上一份产品稿（08-25～28）：开通 43 / 产出 10 / 候选 1,450 / 成功 1,013 / 综合 69.86%。本周候选略降、成功率明显升（主因 DX-037 放量）。仅 <b>SF-81</b> 开渠道回写。日指标表仍断在 6/29，本报告用明细现算。</div>
+<div class="callout c-amber"><b>本周亮点</b>：DX-037 从上周 1 条试跑 → 候选 358 / 成功 354（成功率 98.88%），成为第二大产出。</div>
+<div class="callout c-red"><b>仍要紧</b>：SF-81 打标 210、结果表 <b>0 行</b>，连续第二周掉出产出（唯一开回写产品）。</div>
+</div>
+
+<div class="card">
+<h2>二、有产出（10）</h2>
+<div class="scroll">
+<table>
+<tr><th>App</th><th class="num">打标</th><th class="num">候选</th><th class="num">成功</th><th class="num">透率</th><th class="num">成功率</th><th>回写</th></tr>
+<tr><td>DX-092</td><td class="num">933</td><td class="num">385</td><td class="num">376</td><td class="num">41.26%</td><td class="num"><b>97.66%</b></td><td>关</td></tr><tr><td>DX-037</td><td class="num">655</td><td class="num">358</td><td class="num">354</td><td class="num">54.66%</td><td class="num"><b>98.88%</b></td><td>关（本周放量）</td></tr><tr><td>YC-169</td><td class="num">834</td><td class="num">145</td><td class="num">142</td><td class="num">17.39%</td><td class="num"><b>97.93%</b></td><td>关</td></tr><tr><td>JHG-001</td><td class="num">5,047</td><td class="num">115</td><td class="num">82</td><td class="num">2.28%</td><td class="num">71.30%</td><td>关</td></tr><tr style="background:#fef2f2"><td>JHA-128</td><td class="num">2,378</td><td class="num">111</td><td class="num">46</td><td class="num">4.67%</td><td class="num"><b>41.44%</b></td><td>关</td></tr><tr><td>JHG-004</td><td class="num">280</td><td class="num">64</td><td class="num">57</td><td class="num">22.86%</td><td class="num">89.06%</td><td>关</td></tr><tr style="background:#fef2f2"><td>DX-118</td><td class="num">243,110</td><td class="num">55</td><td class="num">3</td><td class="num">0.02%</td><td class="num"><b>5.45%</b></td><td>关</td></tr><tr style="background:#fef2f2"><td>JHA-102</td><td class="num">5,339</td><td class="num">40</td><td class="num">15</td><td class="num">0.75%</td><td class="num"><b>37.50%</b></td><td>关</td></tr><tr><td>SF-42</td><td class="num">795</td><td class="num">5</td><td class="num">5</td><td class="num">0.63%</td><td class="num"><b>100.00%</b></td><td>关（独立规则）</td></tr><tr><td>HX-056</td><td class="num">15</td><td class="num">2</td><td class="num">2</td><td class="num">13.33%</td><td class="num"><b>100.00%</b></td><td>关</td></tr>
+</table>
+</div>
+<p class="muted">未归因原因均为「分数低于门槛」（门槛 40）。</p>
+<div class="callout c-amber"><b>表现好</b>：DX-092 / DX-037 / YC-169 成功率约 98%；DX-037 透率约 55%，量级已接近 DX-092。JHG-004 回升至 64 候选、成功率约 89%。</div>
+<div class="callout c-red"><b>盯成功率</b>：DX-118 仅 5.45%（打标约 24.3 万但候选仅 55）；JHA-128 / JHA-102 约 41% / 38%。SF-42 打标 795、候选仅 5。</div>
+</div>
+
+<div class="card">
+<h2>分日（结果/成功）</h2>
+<div class="scroll">
+<table>
+<tr><th>日期</th><th>DX-092</th><th>DX-037</th><th>YC-169</th><th>JHG-001</th><th>JHA-128</th><th>JHG-004</th><th>DX-118</th><th>JHA-102</th><th>SF-42</th><th>HX-056</th></tr>
+<tr><td>09-01</td><td>93/91</td><td>87/85</td><td>40/39</td><td>17/10</td><td>35/8</td><td>5/4</td><td>8/0</td><td>10/3</td><td>1/1</td><td>1/1</td></tr><tr><td>09-02</td><td>96/93</td><td>80/80</td><td>27/27</td><td>32/25</td><td>27/18</td><td>27/23</td><td>14/0</td><td>11/6</td><td>3/3</td><td>1/1</td></tr><tr><td>09-03</td><td>94/92</td><td>88/86</td><td>33/32</td><td>28/18</td><td>20/8</td><td>17/15</td><td>11/2</td><td>10/3</td><td>1/1</td><td>—</td></tr><tr><td>09-04</td><td>102/100</td><td>103/103</td><td>45/44</td><td>38/29</td><td>29/12</td><td>15/15</td><td>22/1</td><td>9/3</td><td>—</td><td>—</td></tr>
+</table>
+</div>
+</div>
+
+<div class="card">
+<h2>三、有打标、无结果（6）</h2>
+<table>
+<tr><th>App</th><th class="num">自然量</th><th class="num">打标</th><th class="num">结果</th><th>备注</th></tr>
+<tr style="background:#fef2f2"><td>SF-81</td><td class="num">1,189</td><td class="num">210</td><td class="num">0</td><td>持续 0 候选；唯一开回写</td></tr><tr><td>TJ-002</td><td class="num">4,485</td><td class="num">100</td><td class="num">0</td><td>独立规则；持续 0 候选</td></tr><tr><td>TJ-006</td><td class="num">399</td><td class="num">96</td><td class="num">0</td><td>持续 0 候选</td></tr><tr><td>TJ-043</td><td class="num">154</td><td class="num">64</td><td class="num">0</td><td>持续 0 候选</td></tr><tr><td>DFA-03</td><td class="num">9</td><td class="num">9</td><td class="num">0</td><td>量极小</td></tr><tr><td>DX-094</td><td class="num">2,039</td><td class="num">1</td><td class="num">0</td><td>打标极少</td></tr>
+</table>
+<p class="muted">通常原因：注册 IP 与落地页 IP 无交集 / 时序不满足 / 落地页无有效推广渠道。</p>
+</div>
+
+<div class="card">
+<h2>四、有自然量、客户端未打标（25）</h2>
+<p>DX-036 · YC-001 · YC-002 · JHA-204 · YC-116 · DX-002 · JHG-005 · YC-109 · YC-114 · DX-055 · JHG-052 · TJ-008 · JHG-092 · DX-125 · JHA-126 · SF-74 · SF-57 · JHG-059 · JHG-064 · SF-50 · SF-53 · SF-98 · JHG-015 · TSPX-014 · JHG-087</p>
+<p class="muted">自然量较大且全未打标：DX-036（约 215,382）、YC-001（约 31,929）、YC-002（约 27,522）、JHA-204（约 9,953）、YC-116（约 7,270）。</p>
+</div>
+
+<div class="card">
+<h2>五、配置变动</h2>
+<p>本周（09-01～09-04）<b>无配置变更</b>。开通仍 43 个；渠道回写仍仅 <b>SF-81</b>。无 iOS 自然量：DX-100、TJ-003。</p>
+</div>
+
+<div class="card">
+<h2>六、结论与建议</h2>
+<ol>
+<li>真正跑通漏斗仍有 <b>10</b> 个产品；综合成功率约 <b>85%</b>（上周约 70%），主因 DX-037 放量。</li>
+<li><b>SF-81 连续两周 0 候选</b>仍是最要紧回归，需优先查落地页与注册匹配。</li>
+<li>结构问题仍是客户端未打标（25 个）：DX-036 / YC-001 / YC-002 自然量极大却全未打标。</li>
+<li>TJ-002 / TJ-006 / TJ-043 持续「有打标、0 候选」，建议继续查落地页 IP / 推广渠道。</li>
+<li>DX-118 打标暴增但成功率仅约 5.5%；JHA-128 / JHA-102 成功率仍偏低，建议打分诊断。</li>
+<li>日指标汇总表断流至 6/29；本报告以明细现算为准。</li>
+</ol>
+</div>
+
+<p class="muted">又初 · prod 只读现算 · 窗口 2026-09-01～2026-09-04</p>
+</div>
+</body>
+</html>

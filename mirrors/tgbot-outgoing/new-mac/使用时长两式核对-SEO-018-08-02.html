@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>使用时长两式核对 · SEO-018 08-02</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--txt:#1a1a1a;--muted:#666;--line:#e0e0e0;--ok:#0a7;--p0:#c33;--p2:#06c;--hold:#c90}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",PingFang SC,Microsoft YaHei,sans-serif;margin:0;padding:12px;background:var(--bg);color:var(--txt);font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%}
+  .wrap{max-width:520px;margin:0 auto}
+  h1{font-size:1.18rem;margin:0 0 8px;line-height:1.35}
+  h2{font-size:1.0rem;margin:18px 0 8px;padding-left:8px;border-left:3px solid #333}
+  .card{background:var(--card);border-radius:10px;padding:14px;margin:10px 0;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:4px;margin:0 4px 4px 0;color:#fff;background:#444}
+  .tag-ok{background:var(--ok)}.tag-p0{background:var(--p0)}.tag-p2{background:var(--p2)}.tag-hold{background:var(--hold)}
+  .muted{color:var(--muted);font-size:.86rem}
+  .banner{background:#eef6ff;border:1px solid #8ab4f8;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.9rem}
+  .banner-ok{background:#e8f8f0;border:1px solid #8fd4b0;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.9rem}
+  .banner-p0{background:#fdecea;border:1px solid #f0a8a0;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.9rem}
+  .banner-hold{background:#fff8e6;border:1px solid #e6c86a;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.9rem}
+  table{width:100%;border-collapse:collapse;font-size:.78rem;margin:8px 0}
+  th,td{border:1px solid var(--line);padding:6px 7px;text-align:left;vertical-align:top}
+  th{background:#f3f3f3;font-weight:600}
+  .num{font-variant-numeric:tabular-nums;text-align:right}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:.75rem;background:#f5f5f5;border-radius:3px;padding:1px 4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .mini{background:#fafafa;border:1px solid var(--line);border-radius:8px;padding:10px;text-align:center}
+  .mini .big{font-size:1.15rem;font-weight:700;font-variant-numeric:tabular-nums}
+  .mini .lab{font-size:.72rem;color:var(--muted);margin-top:2px}
+  .eq{font-family:ui-monospace,Consolas,monospace;font-size:.78rem;background:#fafafa;border:1px solid var(--line);border-radius:8px;padding:10px;margin:8px 0;line-height:1.7}
+  ul{margin:6px 0;padding-left:18px} li{margin:5px 0}
+  .toc a{display:block;padding:6px 0;border-bottom:1px solid var(--line);color:var(--txt);text-decoration:none;font-size:.9rem}
+  hr{border:none;border-top:1px solid var(--line);margin:16px 0}
+  .strike{color:var(--p0);text-decoration:line-through}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p>
+  <span class="tag tag-p2">SEO-018</span>
+  <span class="tag">2026-08-02</span>
+  <span class="tag tag-ok">已仔细核对</span>
+  <span class="tag tag-hold">使用时长</span>
+</p>
+
+<h1>使用时长分析 · 两式为何对不齐</h1>
+<p class="muted">2026-08-03 · 猫猫 · 知秋派核 · 阿莱士提问 · sr_prod 只读</p>
+
+<div class="banner">
+  <b>我做了什么</b>：核对「单次启动次数 × 平均单次时长」与「账号数 × 日均单用户时长」是否应相等；
+  回库复算 SEO-018 · 08-02；定位展示口径与 bounce 处理差异。
+</div>
+
+<div class="banner-ok">
+  <b>一句话结论</b>：总时长本身只有一份（<b>121,279 秒</b>），session / daily / DWM 三处一致。
+  两式对不齐，是因为页面「平均单次 7 秒」把 <b>bounce（秒退，时长 0）</b> 算进分母，分段启动次数却不含 bounce。
+</div>
+
+<div class="card toc">
+  <b>目录</b>
+  <a href="#s1">1. 问题从哪来</a>
+  <a href="#s2">2. 按截图算出的两式</a>
+  <a href="#s3">3. 库里的真值</a>
+  <a href="#s4">4. 不一致原因（通俗）</a>
+  <a href="#s5">5. 和 PRD「&lt;5秒 / &gt;12小时」的关系</a>
+  <a href="#s6">6. 正确复原总时长</a>
+  <a href="#s7">7. 给协作方的结论</a>
+</div>
+
+<h2 id="s1">1. 问题从哪来</h2>
+<div class="card">
+<ul>
+  <li>阿莱士：SEO-018 · 8.2 使用时长，两式还原的总时长不相等，理论上应相等。</li>
+  <li>知秋：@猫猫 算一下。</li>
+  <li>动作：只读查 <code>dws_session_duration_user_d</code> + <code>dwm_app_session_sid_d</code>，对齐截图分段与均时。</li>
+</ul>
+</div>
+
+<h2 id="s2">2. 按截图算出的两式</h2>
+<div class="grid2">
+  <div class="mini">
+    <div class="big strike">34,097s</div>
+    <div class="lab">① 4,871 × 7 秒<br/>单次（口径混）</div>
+  </div>
+  <div class="mini">
+    <div class="big">120,819s</div>
+    <div class="lab">② 1,173 × 103 秒<br/>日均（基本对）</div>
+  </div>
+</div>
+<div class="card">
+<table>
+  <tr><th>式</th><th>算式</th><th>结果</th></tr>
+  <tr><td>① 单次</td><td class="num">4,871 × 7</td><td class="num" style="color:var(--p0)"><b>34,097</b></td></tr>
+  <tr><td>② 日均</td><td class="num">1,173 × 103</td><td class="num"><b>120,819</b></td></tr>
+</table>
+<p class="muted">分段启动 4753+91+20+4+3=4871；账号 870+253+38+8+4=1173 — 与截图一致。</p>
+</div>
+
+<h2 id="s3">3. 库里的真值</h2>
+<div class="card">
+<table>
+  <tr><th>来源</th><th>总时长</th></tr>
+  <tr><td>DWS <code>stat_grain=session</code></td><td class="num"><b>121,279</b> 秒</td></tr>
+  <tr><td>DWS <code>stat_grain=daily</code></td><td class="num"><b>121,279</b> 秒</td></tr>
+  <tr><td>DWM 有效会话合计</td><td class="num"><b>121,279</b> 秒</td></tr>
+</table>
+<p>→ <b>总分是平的</b>，不存在两套总时长。</p>
+</div>
+
+<div class="card">
+  <b>单次会话拆分（DWM / DWS 一致）</b>
+  <table>
+    <tr><th>类型</th><th>次数</th><th>时长</th></tr>
+    <tr><td>bounce（秒退，仅 1 PV）</td><td class="num">12,605</td><td class="num">0</td></tr>
+    <tr><td>有效会话（5s～12h）</td><td class="num">4,871</td><td class="num">121,279</td></tr>
+    <tr><td>合计（进均时分母）</td><td class="num">17,476</td><td class="num">121,279</td></tr>
+  </table>
+</div>
+
+<h2 id="s4">4. 不一致原因（通俗）</h2>
+<div class="banner-p0">
+  <b>打个比方</b>：平均分把「缺考记 0 分」的人也算进人数 → 平均被拉低；
+  但数「参考人数」时又不算缺考的 → 用这个平均 × 参考人数，还原不出总分。
+</div>
+<div class="card">
+<ul>
+  <li><b>平均 7 秒</b> = 121,279 ÷ <b>17,476</b>（含 12,605 次 bounce）≈ 6.94 → 显示 7 秒</li>
+  <li><b>分段次数 4,871</b>：柱状图 <b>不含</b> bounce</li>
+  <li>① 用「含 bounce 的平均」×「不含 bounce 的次数」→ <span style="color:var(--p0)">34,097（偏小）</span></li>
+  <li>② 日均人数与人均时长基本同一批人 → 120,819 ≈ 真值</li>
+</ul>
+<div class="eq">
+错：7 × 4,871 = 34,097<br/>
+对：6.94 × 17,476 = 121,279<br/>
+或：24.90 × 4,871 = 121,279（只用有效会话）
+</div>
+</div>
+
+<h2 id="s5">5. 和 PRD「&lt;5秒 / &gt;12小时」的关系</h2>
+<div class="banner-hold">
+  PRD 5.5.4 要求过滤：单 session &lt;5 秒、或 &gt;12 小时。
+</div>
+<div class="card">
+<table>
+  <tr><th>情况</th><th>是否已排除</th><th>说明</th></tr>
+  <tr><td>&lt;5s 且非 bounce</td><td><b>已排除</b></td><td>不进五档、不进总时长</td></tr>
+  <tr><td>&gt;12 小时</td><td><b>已排除</b></td><td>同上</td></tr>
+  <tr><td>bounce（时长 0，也属 &lt;5s）</td><td><b>未完全排除</b></td><td>单独留 bucket0；均时分母仍计入</td></tr>
+</table>
+<p class="muted">当日无效非 bounce 约 12,234 条已滤掉。拉低均时的是 bounce 12,605，不是「两种 PRD 过滤都没做」。</p>
+</div>
+
+<h2 id="s6">6. 正确复原总时长</h2>
+<div class="card">
+<table>
+  <tr><th>口径</th><th>算式</th><th>结果</th></tr>
+  <tr><td>单次（与展示均时一致）</td><td>17,476 × 6.94</td><td class="num">121,279</td></tr>
+  <tr><td>单次（仅有效会话）</td><td>4,871 × 24.90</td><td class="num">121,279</td></tr>
+  <tr><td>日均（真去重 1,171）</td><td>1,171 × 103.57</td><td class="num">121,279</td></tr>
+  <tr><td>日均（截图 SUM 1,173）</td><td>1,173 × 103</td><td class="num">120,819 ≈</td></tr>
+</table>
+<p class="muted">日均 1173 vs 真去重 1171：跨维 SUM(user_cnt) 多 2 人，属轻微汇总误差。</p>
+</div>
+
+<h2 id="s7">7. 给协作方的结论</h2>
+<div class="card">
+<ol>
+  <li>两式理论上都应 = 同一总时长；库内已平（121,279s）。</li>
+  <li>截图① 对不齐，是 <b>均时含 bounce、次数不含 bounce</b>。</li>
+  <li>不是 PRD 两种无效时长都没滤；&lt;5s/&gt;12h 非 bounce 已滤；bounce 被单独保留进了均时分母。</li>
+  <li>优化建议：均时与分段对 bounce 处理一致——要么均时也不含 bounce（则均时≈24.9s），要么分段展示含 bounce / 注明分母口径。</li>
+</ol>
+</div>
+
+<hr/>
+<p class="muted">
+表：<code>dws.dws_session_duration_user_d</code> · <code>dwm.dwm_app_session_sid_d</code><br/>
+环境：sr_prod 只读 · 未改产 · 2026-08-03
+</p>
+
+</div>
+</body>
+</html>

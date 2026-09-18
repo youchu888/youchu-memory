@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>归因审计报告 · 2026-07-02</title>
+<style>
+:root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; }
+body { margin: 0; padding: 16px; background: #f5f6f8; color: #1a1a1a; line-height: 1.5; }
+.wrap { max-width: 1200px; margin: 0 auto; }
+h1 { font-size: 1.35rem; margin: 0 0 8px; }
+.meta { color: #666; font-size: 0.9rem; margin-bottom: 20px; }
+.card { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+h2 { font-size: 1.05rem; margin: 0 0 12px; border-left: 4px solid #2563eb; padding-left: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th, td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; word-break: break-word; }
+th { background: #f9fafb; }
+tr.warn { background: #fff7ed; }
+tr.ok { background: #f0fdf4; }
+pre { background: #1e293b; color: #e2e8f0; padding: 12px; border-radius: 8px; overflow-x: auto; font-size: 0.8rem; }
+.tag { display: inline-block; background: #dbeafe; color: #1d4ed8; padding: 2px 8px; border-radius: 4px; margin: 2px; font-size: 0.8rem; }
+@media (max-width: 640px) { th, td { padding: 6px 4px; font-size: 0.75rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>注册归因审计报告</h1>
+<p class="meta">业务日 <strong>2026-07-02</strong> · prod · 生成 2026-07-03 · 目录 <code>reports/attribution</code></p>
+
+<div class="card">
+<h2>1. 用户清单去重（20 个 app_id）</h2>
+<p><span class="tag">DX-002</span><span class="tag">DX-036</span><span class="tag">DX-055</span><span class="tag">DX-100</span><span class="tag">JHA-102</span><span class="tag">JHA-128</span><span class="tag">JHA-204</span><span class="tag">JHG-001</span><span class="tag">JHG-004</span><span class="tag">JHG-005</span><span class="tag">SF-42</span><span class="tag">SF-81</span><span class="tag">SF-98</span><span class="tag">TJ-002</span><span class="tag">TJ-003</span><span class="tag">TJ-006</span><span class="tag">TJ-008</span><span class="tag">TSPX-014</span><span class="tag">YC-001</span><span class="tag">YC-002</span></p>
+<p>别名：伊甸维度-欲漫涩→JHA-102；恒丰2部-欲漫涩→DX-100；伊甸维度-oio禁漫→JHA-128；SF-81 为 DWD 实际 code（白名单原为 DF-SF81）。</p>
+</div>
+
+<div class="card">
+<h2>2. 归因配置核对（用户清单 vs 原15白名单）</h2>
+<table>
+<thead><tr><th>app_id</th><th>原15白名单</th><th>配置状态</th><th>is_run</th></tr></thead>
+<tbody><tr class='ok'><td>DX-002</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>DX-036</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>DX-055</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>DX-100</td><td>否</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>JHA-102</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>JHA-128</td><td>否</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>JHA-204</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>JHG-001</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>JHG-004</td><td>否</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>JHG-005</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>SF-42</td><td>否</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>SF-81</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>SF-98</td><td>否</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>TJ-002</td><td>否</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>TJ-003</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>TJ-006</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>TJ-008</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>TSPX-014</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>YC-001</td><td>是</td><td>已配置</td><td>1</td></tr>
+<tr class='ok'><td>YC-002</td><td>是</td><td>已配置</td><td>1</td></tr></tbody>
+</table>
+</div>
+
+<div class="card">
+<h2>3. 原15白名单 · 昨日归因成功率与失败原因</h2>
+<p>入围口径：is_run=1 + iOS + organic + <code>attribution_flag=1</code>。成功率 = 成功数 / 有 IP 候选数。prod 归因 ETL 于 2026-06-29 发布，数据按当前 SQL 逻辑。</p>
+<table>
+<thead><tr>
+<th>白名单 app</th><th>DWD code</th><th>iOS归因入围</th><th>iOS自然</th>
+<th>有候选</th><th>成功</th><th>失败</th><th>成功率%</th><th>诊断</th>
+</tr></thead>
+<tbody><tr><td>JHG-005</td><td>JHG-005</td><td>0</td><td>777</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>JHG-001</td><td>JHG-001</td><td>1335</td><td>15442</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有入围注册但 result 表无成功行（见明细）</td></tr>
+<tr><td>DX-002</td><td>DX-002</td><td>0</td><td>1610</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>DX-055</td><td>DX-055</td><td>0</td><td>468</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>DX-036</td><td>DX-036</td><td>0</td><td>59096</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>JHA-102</td><td>JHA-102</td><td>0</td><td>1648</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>JHA-204</td><td>JHA-204</td><td>0</td><td>1337</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>TJ-003</td><td>TJ-003</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>当日无 iOS 自然量注册</td></tr>
+<tr><td>TJ-006</td><td>TJ-006</td><td>18</td><td>85</td><td>0</td><td>0</td><td>0</td><td>—</td><td>无落地页 IP 候选（click/view 未匹配）</td></tr>
+<tr><td>TJ-008</td><td>TJ-008</td><td>0</td><td>92</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>TJ-043</td><td>TJ-043</td><td>0</td><td>42</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>DF-SF81</td><td>SF-81</td><td>415</td><td>773</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有入围注册但 result 表无成功行（见明细）</td></tr>
+<tr><td>YC-001</td><td>YC-001</td><td>0</td><td>9297</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>YC-002</td><td>YC-002</td><td>0</td><td>4548</td><td>0</td><td>0</td><td>0</td><td>—</td><td>有 iOS 自然量但 attribution_flag≠1（客户端未标记需归因）</td></tr>
+<tr><td>TSPX-014</td><td>TSPX-014</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>当日无 iOS 自然量注册</td></tr></tbody>
+</table>
+</div>
+
+<div class="card">
+<h2>4. 配置与补数</h2>
+<p>本次已在 prod 补配 7 个新 app（含 SF-81），并完成 2026-07-02 的 result_d + metrics 补跑。</p>
+</div>
+</div>
+</body>
+</html>

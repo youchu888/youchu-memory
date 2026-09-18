@@ -1,0 +1,28 @@
+{
+  "dt": "2026-07-01",
+  "user_apps": [
+    "DX-002",
+    "DX-036",
+    "DX-055",
+    "DX-100",
+    "JHA-102",
+    "JHA-128",
+    "JHA-204",
+    "JHG-001",
+    "JHG-004",
+    "JHG-005",
+    "SF-42",
+    "SF-81",
+    "SF-98",
+    "TJ-002",
+    "TJ-003",
+    "TJ-006",
+    "TJ-008",
+    "TSPX-014",
+    "YC-001",
+    "YC-002"
+  ],
+  "missing_config": [],
+  "html": "/Users/mac/Desktop/CHcode/.claude/database/reports/attribution/attribution_audit_2026-07-01.html",
+  "sql": null
+}

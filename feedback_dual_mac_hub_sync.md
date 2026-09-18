@@ -11,17 +11,20 @@
 
 ## 同步什么 / 不同步什么
 
-**双向同步（经 `youchu-memory` Git，约 10 分钟）**：
+**双向同步（经 `youchu-memory` Git，约 2 分钟）**：
 
 - lesson / feedback / MEMORY / sessions
 - work-log（各机 `hosts/<id>/` → 合并稿）
 - **ops-mirror**：近期 bus/任务溯源 + 未结案 bus 摘要（旧机权威写 `LATEST.md`）
 - 群聊冷归档
+- **`mirrors/`**：核查报告与 playbook 副本、近窗 agent-transcripts（按机）、tgbot outgoing 文稿
 
 **不同步（有意）**：
 
-- TG 聊天原文、`tgbot.db`、Telethon session、`.env`
-- agent-bus 完整 state（435MB+，且双机同时 poll 会抢单）
+- 业务代码仓正文
+- TG 聊天原文库、`tgbot.db`、Telethon session、`.env`
+- agent-bus 完整 state（体积大，且双机同时 poll 会抢单）
+- VPN / 私钥
 
 ## 实时派单怎么走
 

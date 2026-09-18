@@ -1,0 +1,3 @@
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Saturday, Sep 5, 2026, 6:05 PM (UTC+8)</timestamp>\n<user_query>\n早上7点是什么时辰\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"早上7点是**辰时**的起点。\n\n按十二时辰：\n- **卯时**：05:00–07:00  \n- **辰时**：07:00–09:00  \n\n所以整点 7:00 算辰时开始（刚过卯时末）。"}]}}
+{"type":"turn_ended","status":"success"}

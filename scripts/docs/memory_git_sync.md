@@ -43,12 +43,12 @@ bash ~/.dc-platform/scripts/sync-memory-git.sh "docs: 停留分档交接"
 
 ## 定时自动同步（两台各装一份）
 
-launchd 每 10 分钟跑一次 `sync-memory-git.sh`（先 pull --rebase 再 push，双机互相协调）：
+launchd 每 2 分钟跑一次 `sync-memory-git.sh`（先 pull --rebase 再 push，双机互相协调）：
 
 ```bash
 bash ~/.dc-platform/scripts/install-memory-git-sync-launchd.sh
 # 自定义间隔（秒）：
-INTERVAL_SEC=300 bash ~/.dc-platform/scripts/install-memory-git-sync-launchd.sh
+INTERVAL_SEC=600 bash ~/.dc-platform/scripts/install-memory-git-sync-launchd.sh  # 改回 10 分钟
 # 卸载：
 bash ~/.dc-platform/scripts/uninstall-memory-git-sync-launchd.sh
 ```

@@ -12,6 +12,8 @@ __pycache__/
 *.key
 *_secret*
 *credentials*
+*.session
+*.session-journal
 
 # 过大或易冲突的热数据（需要时可改回跟踪）
 group_chat/context.jsonl
@@ -21,3 +23,6 @@ task_time_log.jsonl
 
 # 本机 host 身份（勿提交）
 .env.host
+
+# mirrors 临时
+mirrors/**/*.tmp

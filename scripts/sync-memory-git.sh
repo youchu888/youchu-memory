@@ -107,6 +107,7 @@ fi
 
 WL_SYNC="$MEM/scripts/worklog_dual_mac_sync.py"
 OPS_MIRROR="$MEM/scripts/ops_mirror_to_memory.py"
+NONCODE_MIRROR="$MEM/scripts/export_noncode_mirrors.py"
 _run_worklog() {
   if [[ -f "$WL_SYNC" ]]; then
     python3 "$WL_SYNC" || echo "warn: worklog_dual_mac_sync 失败（继续 memory sync）"
@@ -117,9 +118,15 @@ _run_ops_mirror() {
     python3 "$OPS_MIRROR" || echo "warn: ops_mirror_to_memory 失败（继续 memory sync）"
   fi
 }
+_run_noncode_mirrors() {
+  if [[ -f "$NONCODE_MIRROR" ]]; then
+    python3 "$NONCODE_MIRROR" || echo "warn: export_noncode_mirrors 失败（继续 memory sync）"
+  fi
+}
 
 _run_worklog
 _run_ops_mirror
+_run_noncode_mirrors
 
 git add -A
 if git diff --cached --quiet && git diff --quiet; then
@@ -178,6 +185,20 @@ _heal_rebase_conflicts() {
         git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
         git add -- "$f"
         ;;
+      mirrors/README.md|mirrors/LAST_EXPORT_*)
+        git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
+        git add -- "$f"
+        ;;
+      mirrors/agent-transcripts/*|mirrors/tgbot-outgoing/*)
+        # 按机隔离目录：冲突时保本机
+        git checkout --ours -- "$f" 2>/dev/null || git checkout --theirs -- "$f"
+        git add -- "$f"
+        ;;
+      mirrors/datacheck-*)
+        # 报告/剧本：取较新侧（theirs），本机下一轮 export 会补回更新文件
+        git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
+        git add -- "$f"
+        ;;
       *)
         only_safe=0
         echo "warn: 非白名单冲突，不敢自动解: $f"
@@ -207,6 +228,8 @@ _pull_rebase() {
   git rebase --abort 2>/dev/null || true
   git reset --hard "origin/$BRANCH"
   _run_worklog
+  _run_ops_mirror
+  _run_noncode_mirrors
   git add -A
   if ! git diff --cached --quiet; then
     git commit -m "chore: auto-heal resync $(date '+%Y-%m-%d %H:%M') @$(hostname -s)" || true
