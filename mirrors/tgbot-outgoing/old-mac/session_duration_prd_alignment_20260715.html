@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>运营系统-使用时长 · PRD v1.0.2 数仓对齐</title>
+  <style>
+    :root { --bg:#f6f8fa; --card:#fff; --text:#24292f; --muted:#57606a; --accent:#0969da; --ok:#1a7f37; --warn:#9a6700; --bad:#cf222e; --border:#d0d7de; }
+    * { box-sizing: border-box; }
+    body { margin:0; font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; color:var(--text); background:var(--bg); }
+    .wrap { max-width:920px; margin:0 auto; padding:24px 16px 48px; }
+    header { background:linear-gradient(135deg,#0550ae,#0969da); color:#fff; padding:28px 24px; border-radius:12px; margin-bottom:20px; }
+    header h1 { margin:0 0 8px; font-size:1.45rem; }
+    header p { margin:0; opacity:.92; font-size:.95rem; }
+    section { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px 22px; margin-bottom:16px; }
+    h2 { margin:0 0 14px; font-size:1.15rem; color:var(--accent); border-bottom:2px solid #ddf4ff; padding-bottom:8px; }
+    h3 { margin:18px 0 10px; font-size:1rem; }
+    table { width:100%; border-collapse:collapse; font-size:.92rem; margin:10px 0; }
+    th, td { border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:#f6f8fa; font-weight:600; }
+    code { background:#eff1f3; padding:1px 5px; border-radius:4px; font-size:.88em; }
+    .ok { color:var(--ok); font-weight:600; }
+    .bad { color:var(--bad); font-weight:600; }
+    .warn { color:var(--warn); font-weight:600; }
+    ul { margin:8px 0; padding-left:1.3rem; }
+    li { margin:6px 0; }
+    .meta { color:var(--muted); font-size:.88rem; margin-top:6px; }
+    .q { background:#fff8c5; border-left:4px solid var(--warn); padding:12px 14px; border-radius:0 8px 8px 0; margin:12px 0; }
+    footer { text-align:center; color:var(--muted); font-size:.85rem; margin-top:24px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>运营系统 · 使用时长 PRD v1.0.2 · 数仓对齐说明</h1>
+    <p>又初 · 2026-07-15 · test T-1 = 2026-07-14 · 待知秋确认</p>
+  </header>
+
+  <section>
+    <h2>1. PRD 来源</h2>
+    <ul>
+      <li>文档：<strong>运营系统-使用时长-PRD v1.0.2</strong>（2026-07-09 阿莱士修订 §5.5.4 无效/异常时长）</li>
+      <li>来源：主人私聊#108 全文粘贴；飞书 wiki 需登录未能自动读取</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. 数据链路</h2>
+    <pre style="background:#f6f8fa;padding:12px;border-radius:8px;overflow:auto;font-size:.85rem;line-height:1.5;">dwd.dwd_app_page_view_d
+        │
+        ▼  sid 轻汇总（墙钟 = MAX(event_time) − MIN(event_time)）
+dwm.dwm_app_session_sid_d              ← 用户侧（uid）
+dwm.dwm_app_session_sid_device_d       ← 设备侧（device_id）
+        │
+        ▼  is_valid 过滤 + duration_bucket 五档
+dws.dws_session_duration_user_d        ← 单次（Y = 启动次数）
+dws.dws_session_duration_device_d
+dws.dws_session_daily_user_d           ← 日均（Y = 账号/设备数）
+dws.dws_session_daily_device_d</pre>
+    <p class="meta">page_stay 保留作页面级旁路，不作为 DWS 主时长指标。</p>
+  </section>
+
+  <section>
+    <h2>3. PRD ↔ 数仓映射</h2>
+    <table>
+      <thead>
+        <tr><th>PRD 功能</th><th>指标口径</th><th>数仓表</th><th>状态</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>单次使用时长 · 分组柱状图</td>
+          <td>session 墙钟分五档 → 启动次数</td>
+          <td><code>dws_session_duration_user_d</code> / <code>_device_d</code></td>
+          <td class="ok">✅ test T-1</td>
+        </tr>
+        <tr>
+          <td>日均使用时长 · 分组柱状图</td>
+          <td>当日有效 session 累加后分五档 → 账号/设备数</td>
+          <td><code>dws_session_daily_user_d</code> / <code>_device_d</code></td>
+          <td class="ok">✅ test T-1 ETL</td>
+        </tr>
+        <tr>
+          <td>平均单次/日均时长</td>
+          <td>hh:mm:ss（前端格式化）</td>
+          <td>DWS <code>avg_*_duration_sec</code></td>
+          <td class="ok">✅</td>
+        </tr>
+        <tr>
+          <td>筛选：新老/设备/来源/国家/用户类型</td>
+          <td>切片维</td>
+          <td>dwm JOIN 日快照 + source_type</td>
+          <td class="warn">✅ 账号；设备 is_new 待算法</td>
+        </tr>
+        <tr>
+          <td>无效过滤 &lt;5s / &gt;12h（§5.5.4）</td>
+          <td>is_valid=0 不进 DWS</td>
+          <td>dwm <code>is_valid</code></td>
+          <td class="ok">✅</td>
+        </tr>
+        <tr>
+          <td>五档分组（§5.5.3）</td>
+          <td>bucket 1–5</td>
+          <td>dwm + DWS CASE</td>
+          <td class="ok">✅</td>
+        </tr>
+        <tr>
+          <td>跨日 session 切分（§5.6）</td>
+          <td>午夜切分计入两日</td>
+          <td>—</td>
+          <td class="bad">❌ 未实现</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>五档秒级边界（已定稿）</h3>
+    <table>
+      <thead><tr><th>bucket</th><th>PRD 分组</th><th>秒级区间</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>1–3 分钟</td><td>[5, 180]</td></tr>
+        <tr><td>2</td><td>4–7 分钟</td><td>(180, 420]</td></tr>
+        <tr><td>3</td><td>8–15 分钟</td><td>(420, 900]</td></tr>
+        <tr><td>4</td><td>16–30 分钟</td><td>(900, 1800]</td></tr>
+        <tr><td>5</td><td>31 分钟+</td><td>(1800, 43200]</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>4. test T-1 验数（2026-07-14）</h2>
+    <p><strong>dwm</strong> · n = 1,164,040 session；有效 is_valid=1 约 <strong>22.9%</strong>（75% 为单 PV bounce=0s）</p>
+    <table>
+      <thead><tr><th>指标</th><th>数值</th></tr></thead>
+      <tbody>
+        <tr><td>单次 user · session_cnt 合计</td><td>266,134（与 dwm 有效行对齐）</td></tr>
+        <tr><td>日均 user · user_cnt 合计</td><td>201,802</td></tr>
+        <tr><td>五档启动次数分布</td><td>b1=32k · b2=74k · b3=81k · b4=59k · b5=20k</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>5. test 海豚 task</h2>
+    <table>
+      <thead><tr><th>task</th><th>code</th></tr></thead>
+      <tbody>
+        <tr><td>dwm_app_session_sid_d</td><td>22312343918080</td></tr>
+        <tr><td>dwm_app_session_sid_device_d</td><td>22357755019392</td></tr>
+        <tr><td>dws_session_duration_user_d</td><td>22357755272832</td></tr>
+        <tr><td>dws_session_duration_device_d</td><td>22357755654144</td></tr>
+        <tr><td>dws_session_daily_user_d</td><td>22357870925056</td></tr>
+        <tr><td>dws_session_daily_device_d</td><td>22357871175296</td></tr>
+      </tbody>
+    </table>
+    <p class="meta">单次/日均 DWS 共 4 task 已发布（wf_dws_汇总_日 · v126–129）</p>
+  </section>
+
+  <section>
+    <h2>6. 仍开放项</h2>
+    <ol>
+      <li><strong>跨日 session</strong>（§5.6）：当前按 <code>dt</code> 分区内 PV 聚合，跨午夜未切分</li>
+      <li><strong>设备侧 is_new</strong>：dwm 设备表 <code>is_new=NULL</code>，PRD 设备筛选「新老用户」待口径</li>
+      <li><strong>DWS 表 schema</strong>：test 旧表 PK 含 channel；canonical DDL 已去 channel，需 admin DROP 重建或迁 _v2</li>
+      <li><strong>prod</strong>：stage7 pending，等审核</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>7. 待知秋拍板</h2>
+    <div class="q">
+      <p><strong>Q1 · 跨日 session 切分</strong><br />
+      当前未按 23:59:59 / 00:00:00 切分。本期 PRD 是否必须实现？</p>
+    </div>
+    <div class="q">
+      <p><strong>Q2 · 单 PV bounce</strong><br />
+      duration=0 的单 PV 会话被 &lt;5s 规则全部过滤（约 75%）。若符合 PRD 意图，是否需在 DWS 单独出 bounce 率指标？</p>
+    </div>
+  </section>
+
+  <footer>
+    又初 · DN6517 · 仓库路径：ops_system/04.dws/dws_session_duration_d/
+  </footer>
+</div>
+</body>
+</html>

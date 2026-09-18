@@ -1,0 +1,2 @@
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Thursday, Sep 3, 2026, 9:32 PM (UTC+8)</timestamp>\n<user_query>\n【定时·日报 21:30 · 主人钦定顺序】必须按：①确认双机已在 21:30 前把当日任务推到 youchu-memory 并互相同步（prepare_daily_report_sync / hosts）；②再写今日日报；③定稿后 old-mac 立刻 post_daily_report_to_dm.py --date 2026-09-03；④对话交正文。禁止先写日报再同步。禁止自动上传云端。hosts 现状：OK new-mac; OK old-mac; 缺机须点明。\n</user_query>"}]}}
+{"type":"turn_ended","status":"error","error":"[resource_exhausted] Error"}

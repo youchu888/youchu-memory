@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>产品归因失败诊断与修复建议 · 2026-06-24 ~ 2026-07-23</title>
+<style>
+:root{--bg:#f3f4f6;--card:#fff;--pri:#1d4ed8;--warn:#ea580c;--bad:#dc2626;--ok:#16a34a;--muted:#6b7280}
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue',sans-serif;margin:0;background:var(--bg);color:#111827;line-height:1.6;font-size:15px}
+.wrap{max-width:920px;margin:0 auto;padding:16px}
+.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;border-radius:14px;padding:20px 18px;margin-bottom:16px}
+.hero h1{margin:0 0 8px;font-size:1.35rem}
+.hero p{margin:0;opacity:.92;font-size:.92rem}
+.card{background:var(--card);border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.card h2{font-size:1.05rem;margin:0 0 10px;padding-left:10px;border-left:4px solid var(--pri)}
+.card h3{font-size:.95rem;margin:18px 0 8px;color:#374151}
+.badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.75rem;font-weight:600;margin-right:6px}
+.badge.bad{background:#fee2e2;color:var(--bad)}
+.badge.warn{background:#ffedd5;color:var(--warn)}
+.badge.ok{background:#dcfce7;color:var(--ok)}
+.badge.muted{background:#e5e7eb;color:#374151}
+table{width:100%;border-collapse:collapse;font-size:.84rem;margin:8px 0}
+th,td{border:1px solid #e5e7eb;padding:8px;vertical-align:top}
+th{background:#f9fafb;text-align:left}
+.num{font-variant-numeric:tabular-nums}
+ul{padding-left:1.2rem;margin:.4rem 0}
+li{margin:.35rem 0}
+code,pre{background:#f3f4f6;border-radius:6px;font-size:.82rem}
+code{padding:1px 5px}
+pre{padding:10px;overflow:auto;white-space:pre-wrap;word-break:break-all}
+.fix{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 12px;margin-top:8px}
+.fix strong{color:#166534}
+.evidence{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 12px;margin-top:8px}
+.evidence strong{color:#92400e}
+.ref{font-size:.8rem;color:var(--muted);margin-top:6px}
+.tagrow{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.tag{background:#dbeafe;color:#1e40af;padding:3px 8px;border-radius:6px;font-size:.78rem}
+@media(max-width:600px){table{font-size:.78rem}th,td{padding:6px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>注册归因 · 失败原因与修复建议</h1>
+    <p>统计窗 <b>2026-06-24 ~ 2026-07-23</b> · prod · 生成 2026-07-24 · 又初</p>
+    <p style="margin-top:6px;font-size:.85rem">入围口径：iOS + organic + <code>attribution_flag=1</code> + <code>is_run=1</code></p>
+  </div>
+
+  <div class="card">
+    <h2>一页结论</h2>
+    <table>
+      <thead><tr><th>产品</th><th>状态</th><th>核心失败原因</th><th>优先级</th></tr></thead>
+      <tbody>
+        <tr><td>YD-002 / YD-036 / YD-092</td><td><span class="badge bad">无数据</span></td><td>prod 全年无 <code>user_register</code> 明细</td><td>P0 核对 app_id / 是否上线</td></tr>
+        <tr><td>JHG-015 / 052 / 059 / 064 / 087 / 092</td><td><span class="badge warn">链路未开</span></td><td>未配 <code>is_run</code> 且客户端 <code>attribution_flag</code> 全 0</td><td>P0 配置 + 埋点</td></tr>
+        <tr><td>JHG-004</td><td><span class="badge warn">部分成功</span></td><td>75% 入围用户无落地页候选；失败条打分低于阈值 40</td><td>P1 埋点 + 落地页</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>归因链路（与代码一致）</h2>
+    <pre>客户端 user_register.payload.attribution_flag=1
+    ↓
+dwd_user_register_d_v2（device=ios, channel=organic, flag=1）
+    ↓ 白名单 dim_app_attribution_config.is_run=1
+匹配落地页 click/view（同 app_id + 同 IP，注册前 24h 内，channel≠organic）
+    ↓ 品牌/型号/系统/时间档打分 ≥ min_threshold(40)
+dws_register_attribution_result_d（仅 source_event_id 非空才落表）</pre>
+    <p class="ref">参考：<code>ops_system/04.dws/dws.dws_register_attribution_result_d/dws_register_attribution_result_d.sql</code>、<code>归因对接说明.md</code></p>
+  </div>
+
+  <!-- YD -->
+  <div class="card">
+    <h2>YD-002 · YD-036 · YD-092</h2>
+    <span class="badge bad">失败类型：无注册数据</span>
+    <div class="evidence">
+      <strong>数据证据</strong>
+      <ul>
+        <li>近 30 天 <code>dwd_user_register_d_v2</code> 行数：<span class="num">0</span></li>
+        <li>2026 年以来 prod 亦无该 app_id 注册记录</li>
+      </ul>
+    </div>
+    <div class="fix">
+      <strong>修复建议</strong>
+      <ol>
+        <li><b>产品侧</b>：确认 app_id 是否与埋点/后台配置一致（大小写、横杠）。</li>
+        <li><b>客户端</b>：确认已集成 SDK 且 <code>user_register</code> 事件正常上报（可先查 test/灰度环境）。</li>
+        <li><b>数据侧</b>：有注册后再开归因——先配 <code>dim_app_attribution_config.is_run=1</code>，再在 iOS 自然量注册 payload 带 <code>attribution_flag: 1</code>。</li>
+      </ol>
+    </div>
+    <p class="ref">埋点字段：<code>payload.attribution_flag</code> → DWD 列 <code>attribution_flag</code>（见 fanout / register ETL）</p>
+  </div>
+
+  <!-- JHG batch -->
+  <div class="card">
+    <h2>JHG-015 / JHG-052 / JHG-059 / JHG-064 / JHG-087 / JHG-092</h2>
+    <span class="badge warn">失败类型：归因链路未开通</span>
+    <table>
+      <thead><tr><th>产品</th><th>总注册</th><th>iOS 自然量</th><th>flag=1</th><th>is_run</th><th>result 行</th></tr></thead>
+      <tbody>
+        <tr><td>JHG-015</td><td class="num">35,912</td><td class="num">350</td><td class="num">0</td><td>未配置</td><td class="num">0</td></tr>
+        <tr><td>JHG-052</td><td class="num">1,794,282</td><td class="num">17,570</td><td class="num">0</td><td>未配置</td><td class="num">0</td></tr>
+        <tr><td>JHG-059</td><td class="num">391,456</td><td class="num">3,830</td><td class="num">0</td><td>未配置</td><td class="num">0</td></tr>
+        <tr><td>JHG-064</td><td class="num">317,456</td><td class="num">3,106</td><td class="num">0</td><td>未配置</td><td class="num">0</td></tr>
+        <tr><td>JHG-087</td><td class="num">42,168</td><td class="num">177</td><td class="num">0</td><td>未配置</td><td class="num">0</td></tr>
+        <tr><td>JHG-092</td><td class="num">479,512</td><td class="num">3,302</td><td class="num">0</td><td>未配置</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+    <h3>根因拆解</h3>
+    <ul>
+      <li><b>数仓未开算</b>：<code>dim.dim_app_attribution_config</code> 无这些 app 或 <code>is_run≠1</code>，ETL <code>target_apps</code> CTE 直接过滤。</li>
+      <li><b>客户端未打标</b>：有 iOS 自然量，但 <code>attribution_flag=1</code> 为 0——注册 payload 未传或恒为 0。</li>
+    </ul>
+    <div class="fix">
+      <strong>修复建议（两步缺一不可）</strong>
+      <ol>
+        <li><b>数仓配置</b>：在 <code>dim_app_attribution_config</code> 为目标 app 插入/更新：<code>is_run=1</code>、<code>min_threshold=40</code>（与 JHG-004 对齐）、<code>is_rewrite_channel=0</code>（影子期只算不回写）。T+1 日批生效。</li>
+        <li><b>客户端埋点</b>：iOS App Store 自然量用户注册时，<code>user_register</code> 事件 payload 增加：
+<pre>{
+  "attribution_flag": 1
+}</pre>
+          仅对「需要服务端归因」的自然量传 1；非 iOS / 非 organic 传了也会被数仓过滤，不报错。</li>
+        <li><b>落地页</b>：同步确认 H5/落地页已上报 <code>landing_page_click</code> / <code>landing_page_view</code>，且 <code>channel</code> 为投放渠道（非 organic）。</li>
+      </ol>
+    </div>
+    <p class="ref">代码入口：result ETL 第 71–79 行（白名单 + ios + organic + flag）；对接文档 §7.1</p>
+  </div>
+
+  <!-- JHG-004 -->
+  <div class="card">
+    <h2>JHG-004（唯一已开归因）</h2>
+    <span class="badge ok">候选内成功率 88.4%</span>
+    <span class="badge warn">整体覆盖率 25.1%</span>
+    <table>
+      <thead><tr><th>指标</th><th>数值</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>iOS 自然注册</td><td class="num">9,235</td><td>channel=organic 且 device=ios</td></tr>
+        <tr><td>入围（flag=1）</td><td class="num">1,863</td><td>客户端打标；自 <b>2026-06-29</b> 起有数</td></tr>
+        <tr><td>进入 result 表</td><td class="num">467</td><td>仅「有落地页 IP 候选」才落表</td></tr>
+        <tr><td>归因成功</td><td class="num">413</td><td>score ≥ 40</td></tr>
+        <tr><td>归因失败（表内）</td><td class="num">54</td><td>全部为 score_below_threshold</td></tr>
+        <tr><td>未进 result（表外）</td><td class="num">1,396</td><td>有 flag 但 24h 内无同 IP 落地页候选</td></tr>
+      </tbody>
+    </table>
+
+    <h3>失败原因 ①：未进结果表（1,396 条，占入围 75%）</h3>
+    <div class="evidence">
+      <strong>根因</strong>
+      <ul>
+        <li>ETL 最终 <code>WHERE source_event_id IS NOT NULL</code>——没有匹配到落地页 click/view 的注册<strong>不会出现在后台结果表</strong>。</li>
+        <li>匹配条件：同 <code>app_id</code> + 注册 IP = 点击 IP，注册前 ≤24h，来源 <code>channel</code> 非空且非 organic。</li>
+        <li>该 app 窗内落地页 click <span class="num">445,077</span> / view <span class="num">97,092</span> 条，说明数据有量，但<strong>与注册 IP+时间窗对不上</strong>（常见于未走落地页、IP 变化、点击晚于注册）。</li>
+        <li>近 7 日仅约 <span class="num">38%</span> iOS 自然注册打了 <code>attribution_flag=1</code>（如 07-23：120/313）。</li>
+      </ul>
+    </div>
+    <div class="fix">
+      <strong>修复建议</strong>
+      <ul>
+        <li><b>产品流程</b>：确保用户路径为「落地页点击/浏览 → 再注册」，且同一网络环境（减少蜂窝/WiFi 切换导致 IP 不一致）。</li>
+        <li><b>落地页埋点</b>：确认 <code>landing_page_click</code> / <code>landing_page_view</code> 的 <code>channel</code> 写入真实投放渠道，勿写 organic。</li>
+        <li><b>客户端</b>：扩大 <code>attribution_flag=1</code> 覆盖——当前大量 iOS 自然量未打标，无法进入归因计算。</li>
+        <li><b>后台预期</b>：「无候选」用户当前不出现在 result 表；若产品要看全量失败明细，需数仓改造（放宽落表条件），需单独立项。</li>
+      </ul>
+    </div>
+
+    <h3>失败原因 ②：打分低于阈值（54 条）</h3>
+    <div class="evidence">
+      <strong>根因</strong>
+      <ul>
+        <li><code>unattributed_reason=score_below_threshold</code>，阈值 <span class="num">40</span>，失败条平均分 <span class="num">21.7</span>。</li>
+        <li>分数分布：&lt;20 分 18 条 · 20–29 分 9 条 · 30–39 分 27 条。</li>
+        <li>失败条注册侧 <code>device_brand</code> / <code>device_model</code> <b>100% 为空</b>——品牌/型号维度无法得分，主要靠时间档加分，容易低于 40。</li>
+        <li>平均注册-点击时间差约 <span class="num">6</span> 小时，时间档加分偏低。</li>
+      </ul>
+    </div>
+    <div class="fix">
+      <strong>修复建议</strong>
+      <ul>
+        <li><b>客户端（优先）</b>：<code>user_register</code> 补齐设备字段，与落地页事件保持一致：
+          <code>device_brand</code>、<code>device_model</code>、<code>system_name</code>、<code>system_version</code>（勿传 unknown/空串）。</li>
+        <li><b>投放侧</b>：缩短落地页到注册的间隔，提高时间档得分（10 分钟内 +40 分）。</li>
+        <li><b>数仓（需业务拍板）</b>：评估是否下调 <code>min_threshold</code> 或调高设备维度分值——改 <code>dim_app_attribution_config</code>，T+1 生效。</li>
+      </ul>
+    </div>
+    <p class="ref">打分逻辑：result ETL 品牌/型号/系统/时间档累加；空值清洗后不一致则 0 分（第 62–69、206–208 行）</p>
+
+    <h3>JHG-004 日趋势（result 候选）</h3>
+    <table>
+      <thead><tr><th>日期</th><th>候选</th><th>成功</th><th>成功率</th></tr></thead>
+      <tbody>
+        <tr><td>2026-07-19</td><td class="num">18</td><td class="num">16</td><td>88.9%</td></tr>
+        <tr><td>2026-07-20</td><td class="num">22</td><td class="num">20</td><td>90.9%</td></tr>
+        <tr><td>2026-07-21</td><td class="num">19</td><td class="num">17</td><td>89.5%</td></tr>
+        <tr><td>2026-07-22</td><td class="num">24</td><td class="num">21</td><td>87.5%</td></tr>
+        <tr><td>2026-07-23</td><td class="num">28</td><td class="num">25</td><td>89.3%</td></tr>
+      </tbody>
+    </table>
+    <p class="ref">候选内成功率稳定 ~88–91%，问题主要在「进不了 result」而非「进了但判失败」。</p>
+  </div>
+
+  <div class="card">
+    <h2>埋点检查清单（给客户端 / 投放）</h2>
+    <table>
+      <thead><tr><th>事件</th><th>关键字段</th><th>要求</th></tr></thead>
+      <tbody>
+        <tr><td><code>user_register</code></td><td><code>attribution_flag</code></td><td>iOS 自然量需传 <code>1</code>，否则数仓不算</td></tr>
+        <tr><td><code>user_register</code></td><td><code>device</code>, <code>channel</code></td><td><code>ios</code> + <code>organic</code> 才入围</td></tr>
+        <tr><td><code>user_register</code></td><td>brand/model/system*</td><td>非空、与落地页一致，否则打分偏低</td></tr>
+        <tr><td><code>landing_page_click</code></td><td><code>ip</code>, <code>channel</code>, <code>event_time</code></td><td>注册前 24h、channel≠organic</td></tr>
+        <tr><td><code>landing_page_view</code></td><td>同上</td><td>click 无候选时的备选来源</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>数仓配置检查清单（给数据 / 运营后台）</h2>
+    <ul>
+      <li><code>dim_app_attribution_config</code>：目标 app <code>is_run=1</code>，<code>app_id</code> 大小写与 DWD 一致。</li>
+      <li>影子期保持 <code>is_rewrite_channel=0</code>，只出结果不改用户渠道。</li>
+      <li>海豚 <code>wf_dws_汇总_日</code> 中 <code>dws_register_attribution_result_d</code> 日批 SUCCESS。</li>
+      <li>验收 SQL（示例）：<code>SELECT dt, COUNT(*), SUM(attribution_status='success') FROM dws.dws_register_attribution_result_d WHERE app_id='…' AND dt='…' GROUP BY dt</code></li>
+    </ul>
+  </div>
+
+  <div class="card" style="font-size:.85rem;color:var(--muted)">
+    <p>报告路径：<code>.claude/database/reports/attribution/attribution_products_failure_fix_2026-07-23.html</code></p>
+    <p>关联脚本：<code>.claude/database/scripts/attribution_monthly_product_report.py</code> · 对接文档：<code>ops_system/04.dws/dws.dws_register_attribution_result_d/归因对接说明.md</code></p>
+  </div>
+</div>
+</body>
+</html>

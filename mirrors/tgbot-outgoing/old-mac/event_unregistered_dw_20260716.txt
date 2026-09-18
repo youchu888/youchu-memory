@@ -1,0 +1,34 @@
+# 知秋 51 event · prod OM 未登记 16 个 · 07-15 老 dw 行数
+# 口径: prod OM API 404=未登记；老 dw=event_time 07-15 单日
+# 时间: 2026-07-16
+
+## 汇总
+51 → prod OM 已登记 35 / 未登记 16
+未登记里 07-15 老 dw 有量的: recommend 俩 + SDK ad 七项（低量遗留）
+
+## 未登记 16 · 07-15 老 dw 行数
+event                    prod_OM   old_dw_cnt   备注
+recommend_list_view      404       (见下SQL)    new 也有量，不能只用 anti-join
+recommend_list_click     404       (见下SQL)    同上
+im_conversation_view     404       0
+im_connection_success    404       0
+im_message_content       404       0
+im_event                 404       0
+ad_request               404       990          new 整类为0，即 total
+ad_fill                  404       1810
+ad_no_fill               404       76
+ad_load_success          404       641
+ad_load_fail             404       0
+ad_impression_sdk        404       0
+ad_click_sdk             404       3
+ad_close                 404       45
+ad_skip                  404       0
+ad_error                 404       704
+
+## 参考（非 total）
+recommend anti-join 缺口( old有 new无 ): view 1,925,188 · click 209,889
+
+## 数据来源
+· IM 四类 + ad_load_fail/ad_impression_sdk/ad_skip: 07-15 prod 老 dw 未见行
+· ad_request~ad_error 七项: prod 07-15 实测(dw_events_only_in_old 同口径)
+· recommend total: 待 SQL 坐实（bot 队列补跑）

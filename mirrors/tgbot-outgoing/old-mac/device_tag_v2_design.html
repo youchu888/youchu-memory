@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>设备标签 v2 设计文档</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #1a1a2e;
+    background: #f5f7fa;
+  }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    color: #fff;
+    padding: 28px 20px 22px;
+  }
+  .header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.02em; }
+  .header .meta { margin-top: 6px; font-size: 0.82rem; color: #a8b8d8; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 0 40px; }
+
+  /* Section */
+  .section {
+    background: #fff;
+    margin: 16px 12px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    overflow: hidden;
+  }
+  .section-header {
+    background: #0f3460;
+    color: #fff;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-header .badge {
+    background: rgba(255,255,255,0.18);
+    border-radius: 4px;
+    padding: 1px 8px;
+    font-size: 0.75rem;
+  }
+  .section-body { padding: 16px 18px; }
+
+  /* Flow diagram */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .flow-node {
+    border-radius: 10px;
+    padding: 12px 16px;
+    position: relative;
+  }
+  .flow-node.src { background: #e8f4f8; border-left: 4px solid #3498db; }
+  .flow-node.dwm { background: #e8f8e8; border-left: 4px solid #27ae60; }
+  .flow-node.snap { background: #fff3e0; border-left: 4px solid #e67e22; }
+  .flow-node.uid { background: #fef9e7; border-left: 4px solid #f39c12; }
+  .flow-node.keys { background: #f5e8ff; border-left: 4px solid #8e44ad; }
+  .flow-node.wide { background: #ffe8e8; border-left: 4px solid #e74c3c; }
+  .flow-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; color: #666; margin-bottom: 4px; }
+  .flow-tables { font-size: 0.82rem; color: #2c3e50; }
+  .flow-tables code { background: rgba(0,0,0,0.06); border-radius: 3px; padding: 1px 5px; font-size: 0.8rem; }
+  .flow-arrow {
+    text-align: center;
+    color: #aaa;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    padding: 2px 0;
+  }
+  .note-box {
+    margin-top: 14px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 0.83rem;
+    color: #444;
+  }
+  .note-box ul { padding-left: 16px; }
+  .note-box li { margin-bottom: 4px; }
+
+  /* Tables */
+  .table-section { margin-bottom: 0; }
+  .table-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f3460;
+    padding: 12px 18px 6px;
+    border-top: 1px solid #f0f0f0;
+  }
+  .table-title:first-of-type { border-top: none; }
+  .table-sub { font-size: 0.77rem; color: #888; font-weight: normal; margin-left: 6px; }
+  .table-wrap { overflow-x: auto; padding: 0 18px 14px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    min-width: 480px;
+  }
+  th {
+    background: #f0f4fb;
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 8px 10px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #f4f4f4;
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fafbff; }
+  td code, th code {
+    background: #eef2ff;
+    color: #3d52a0;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 0.78rem;
+  }
+  .tag {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-right: 3px;
+  }
+  .tag-pk { background: #ffe0e0; color: #c0392b; }
+  .tag-src { background: #e0f0ff; color: #1565c0; }
+  .tag-calc { background: #e8ffe0; color: #2e7d32; }
+
+  /* Summary table */
+  .summary-table th { font-size: 0.79rem; }
+  .summary-table td { font-size: 0.79rem; }
+
+  /* Comparison */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 4px 0 6px;
+  }
+  @media(max-width: 500px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+  .compare-card {
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .compare-card.user { background: #e8f4f8; border: 1px solid #b3d9ec; }
+  .compare-card.device { background: #e8f8e8; border: 1px solid #a8dba8; }
+  .compare-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; color: #2c3e50; }
+  .compare-card ul { padding-left: 14px; font-size: 0.81rem; color: #444; }
+  .compare-card li { margin-bottom: 4px; }
+
+  /* Gate rules */
+  .gate-grid { display: flex; flex-direction: column; gap: 8px; }
+  .gate-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.83rem;
+  }
+  .gate-badge {
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: #fff;
+    background: #0f3460;
+    flex-shrink: 0;
+  }
+
+  /* Sticky sub-nav */
+  .subnav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 8px 12px;
+    display: flex;
+    gap: 6px;
+  }
+  .subnav a {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    text-decoration: none;
+    color: #0f3460;
+    background: #eef2ff;
+    font-weight: 500;
+    transition: background 0.15s;
+  }
+  .subnav a:hover { background: #0f3460; color: #fff; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container" style="max-width:900px;margin:0 auto;padding:0 12px;">
+    <h1>设备标签 v2 · 设计文档</h1>
+    <div class="meta">版本：v2.2 &nbsp;·&nbsp; 2026-07-21 &nbsp;·&nbsp; 作者：又初</div>
+  </div>
+</div>
+
+<nav class="subnav">
+  <a href="#s1">数据流</a>
+  <a href="#s2">表字典</a>
+  <a href="#s3">汇总</a>
+  <a href="#s4">与用户标签对比</a>
+</nav>
+
+<div class="container">
+
+  <!-- Section 1: 数据流 -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      一、数据流总览
+      <span class="badge">日批 T+1</span>
+    </div>
+    <div class="section-body">
+      <div class="flow">
+
+        <div class="flow-node src">
+          <div class="flow-label">SOURCE · 源层</div>
+          <div class="flow-tables">
+            <code>dwd_app_page_view_d</code> &nbsp;
+            <code>dwd_user_watch_video</code> &nbsp;
+            <code>dwd_order_paid_d</code> &nbsp;
+            <code>dwd_ad_click_h</code> &nbsp;
+            <code>dwd_user_register_d</code> &nbsp;
+            <code>dwd_user_login_d</code>
+          </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-node dwm">
+          <div class="flow-label">JOB① · DWM 日增量 · 4 张 · 按 dt 日分区 · INSERT OVERWRITE</div>
+          <div class="flow-tables">
+            <code>dwm_device_active_d_d</code> &nbsp;
+            <code>dwm_device_video_d_d</code> &nbsp;
+            <code>dwm_device_order_d_d</code> &nbsp;
+            <code>dwm_device_ad_d_d</code>
+          </div>
+        </div>
+
+        <div class="flow-arrow">↓ &nbsp; 同步写入</div>
+
+        <div class="flow-node snap">
+          <div class="flow-label">JOB①c · 全量快照表 · 2 张 · 无分区 · UPSERT（设备有就更新，没有就插入）</div>
+          <div class="flow-tables">
+            <code>dwm_device_register_d</code>&nbsp;（设备首见 PK，只写一次 first_seen / register 后 UPSERT channel、uid）&nbsp;
+            <code>dwm_device_pay_sum_d</code>&nbsp;（累计付费 PK，每日追加）
+          </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-node uid">
+          <div class="flow-label">JOB①b · uid 桥接 · 2 张（慎用）</div>
+          <div class="flow-tables">
+            <code>dwm_device_uid_map_d</code>&nbsp;（PK 全态）&nbsp;+&nbsp;
+            <code>dwm_device_uid_map_delta_d_d</code>&nbsp;（日增量）
+          </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-node keys">
+          <div class="flow-label">JOB② · 键池物化 · 1 张</div>
+          <div class="flow-tables">
+            <code>device_tag_merge_keys_di</code>&nbsp; — 当日要刷新的 device 清单（delta / expiry / boundary 三类键）
+          </div>
+        </div>
+
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-node wide">
+          <div class="flow-label">JOB③ · 宽表 merge · 读 merge_keys × DWM × prev</div>
+          <div class="flow-tables">
+            <code>dws_device_tag_d_d</code>&nbsp;（主宽表 PK，过 enroll_gate 才写入）<br>
+            <code>dwm_device_staging_d_d</code>&nbsp;（未过闸门候选，7d TTL）
+          </div>
+        </div>
+
+      </div>
+
+      <div class="note-box">
+        <ul>
+          <li>所有 DWM 按 <code>device_id</code> 聚合，充值 / 播放 / 广告均为<strong>设备维合计</strong>（不拆 uid）</li>
+          <li><strong>日增量表</strong>（active/video/order/ad）按 dt 分区，每日 INSERT OVERWRITE 当天分区，历史分区保留</li>
+          <li><strong>全量快照表</strong>（register_d / pay_sum_d）无 dt 分区，全周期 UPSERT，存的是每台设备的当前状态和累计值，永远只有一行</li>
+          <li><code>dim_user_all</code> 不在主数据流里；uid 关联只走 <code>uid_map</code>，且为可选桥接</li>
+          <li><code>merge_keys</code> 对应用户标签的 <code>update_pool</code>，因设备量大物化成表（CTE 撑不住）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: 表字典 -->
+  <div class="section" id="s2">
+    <div class="section-header">二、完整表数据字典</div>
+
+    <!-- category: 日增量 -->
+    <div style="background:#e8f8e8;border-left:4px solid #27ae60;margin:16px 18px 0;border-radius:8px;padding:10px 14px;font-size:0.83rem;font-weight:700;color:#1a5c2a;">
+      A 类 · DWM 日增量表（4 张）&nbsp;— 按 <code>dt</code> 日分区 · INSERT OVERWRITE · 每日只产当天数据
+    </div>
+
+    <!-- 1 active -->
+    <div class="table-title">1. dwm_device_active_d_d <span class="table-sub">当日活跃 · 按 dt 日分区</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>dt</code></td><td>date</td><td>分区键</td><td>业务日</td></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>active_cnt</code></td><td>int</td><td>COUNT(page_view 事件)</td><td>当日 PV 次数</td></tr>
+        <tr><td><code>session_cnt</code></td><td>int</td><td>COUNT(DISTINCT sid)</td><td>当日会话数</td></tr>
+        <tr><td><code>platform</code></td><td>varchar(16)</td><td>dwd</td><td>当日登录端别</td></tr>
+      </table>
+    </div>
+    <div style="padding:0 18px 10px;font-size:0.8rem;color:#666;">来源：<code>dwd_app_page_view_d</code> 按 <code>device_id</code> GROUP BY，无需 uid</div>
+
+    <!-- 2 video -->
+    <div class="table-title">2. dwm_device_video_d_d <span class="table-sub">当日播放 · 按 dt 日分区</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>dt</code></td><td>date</td><td>分区键</td><td>业务日</td></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>play_cnt</code></td><td>int</td><td>COUNT(video_event)</td><td>当日总播放次数（多 uid 合计）</td></tr>
+        <tr><td><code>valid_play_cnt</code></td><td>int</td><td>四条件过滤后 COUNT</td><td>有效播放次数</td></tr>
+        <tr><td><code>is_valid_play_day</code></td><td>tinyint</td><td>valid_play_cnt &gt; 0</td><td>是否有效播放日</td></tr>
+        <tr><td><code>total_play_duration</code></td><td>bigint</td><td>SUM(play_duration_ms)</td><td>当日总播放时长（毫秒）</td></tr>
+      </table>
+    </div>
+    <div style="padding:0 18px 10px;font-size:0.8rem;color:#666;">来源：<code>dwd_user_watch_video</code> 按 <code>device_id</code> GROUP BY；多 uid 观看全合计</div>
+
+    <!-- 3 order -->
+    <div class="table-title">3. dwm_device_order_d_d <span class="table-sub">当日充值 · 按 dt 日分区</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>dt</code></td><td>date</td><td>分区键</td><td>业务日</td></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>order_cnt</code></td><td>int</td><td>COUNT(order_paid 事件)</td><td>当日充值笔数（多 uid 合计）</td></tr>
+        <tr><td><code>order_amt</code></td><td>bigint</td><td>SUM(amount) 单位：分</td><td>当日充值金额合计</td></tr>
+        <tr><td><code>first_order_time</code></td><td>datetime</td><td>MIN(pay_time)</td><td>当日首笔时间</td></tr>
+        <tr><td><code>last_order_time</code></td><td>datetime</td><td>MAX(pay_time)</td><td>当日末笔时间</td></tr>
+        <tr><td><code>is_paid_day</code></td><td>tinyint</td><td>order_cnt &gt; 0</td><td>是否付费日</td></tr>
+      </table>
+    </div>
+    <div style="padding:0 18px 10px;font-size:0.8rem;color:#666;">来源：<code>dwd_order_paid_d</code> 按 <code>device_id</code> GROUP BY；<strong>一台设备所有 uid 充值全合计</strong></div>
+
+    <!-- 4 ad -->
+    <div class="table-title">4. dwm_device_ad_d_d <span class="table-sub">当日广告 · 按 dt 日分区</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>dt</code></td><td>date</td><td>分区键</td><td>业务日</td></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>ad_click_cnt</code></td><td>int</td><td>COUNT(ad_click 事件)</td><td>当日广告点击次数</td></tr>
+        <tr><td><code>ad_impression_cnt</code></td><td>int</td><td>COUNT(ad_impression 事件)</td><td>当日广告曝光次数</td></tr>
+      </table>
+    </div>
+    <div style="padding:0 18px 10px;font-size:0.8rem;color:#666;">来源：<code>dwd_ad_click_h</code> 按 <code>device_id</code> GROUP BY</div>
+
+    <!-- category: 全量快照 -->
+    <div style="background:#fff3e0;border-left:4px solid #e67e22;margin:16px 18px 0;border-radius:8px;padding:10px 14px;font-size:0.83rem;font-weight:700;color:#7d3c00;">
+      B 类 · 全量快照表（2 张）&nbsp;— 无 dt 分区 · PK 全态 · UPSERT · 每台设备永远只有一行
+    </div>
+
+    <!-- 5 register -->
+    <div class="table-title">5. dwm_device_register_d <span class="table-sub">设备首见 · 全量快照 · 无分区 · UPSERT</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td>应用 ID</td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td>设备唯一标识</td></tr>
+        <tr><td><code>first_seen_dt</code></td><td>date</td><td>dwd 首条事件 dt</td><td>设备在系统首次出现日</td></tr>
+        <tr><td><code>register_dt</code></td><td>date</td><td>dwd_user_register_d</td><td>有注册事件才填，否则 NULL</td></tr>
+        <tr><td><code>platform</code></td><td>varchar(16)</td><td>dwd 事件字段</td><td>android / ios / web</td></tr>
+        <tr><td><code>channel_code</code></td><td>varchar(64)</td><td>dwd register/page_view 事件</td><td>首见来源渠道，<strong>不从 dim_user 取</strong></td></tr>
+        <tr><td><code>raw_uid</code></td><td>varchar(32)</td><td>dwd 注册事件 uid</td><td>可空；只用于写 uid_map，宽表不依赖</td></tr>
+        <tr><td><code>updated_dt</code></td><td>date</td><td>ETL 写入日</td><td>最后更新日</td></tr>
+      </table>
+    </div>
+
+    <!-- 6 pay_sum -->
+    <div class="table-title">6. dwm_device_pay_sum_d <span class="table-sub">累计付费 · 全量快照 · 无分区 · UPSERT</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>total_pay_amt</code></td><td>bigint</td><td>SUM 累计（分）</td><td>设备历史总充值金额</td></tr>
+        <tr><td><code>total_pay_cnt</code></td><td>int</td><td>COUNT 累计</td><td>历史总充值笔数</td></tr>
+        <tr><td><code>first_pay_dt</code></td><td>date</td><td>MIN(pay_time)</td><td>首次付费日</td></tr>
+        <tr><td><code>last_pay_dt</code></td><td>date</td><td>MAX(pay_time)</td><td>最近付费日</td></tr>
+        <tr><td><code>last_pay_amount</code></td><td>bigint</td><td>末次 order_paid.amount（分）</td><td>末次付费金额</td></tr>
+        <tr><td><code>is_paid</code></td><td>tinyint</td><td>total_pay_cnt &gt; 0</td><td>是否付费设备</td></tr>
+        <tr><td><code>updated_dt</code></td><td>date</td><td>ETL 写入日</td><td>最后更新日</td></tr>
+      </table>
+    </div>
+
+    <!-- category: uid 桥接 -->
+    <div style="background:#fef9e7;border-left:4px solid #f39c12;margin:16px 18px 0;border-radius:8px;padding:10px 14px;font-size:0.83rem;font-weight:700;color:#7d6608;">
+      C 类 · uid 桥接层（2 张）&nbsp;— 慎用，主链不依赖；经此层才能关联 dim_user_all
+    </div>
+
+    <!-- 7 uid_map -->
+    <div class="table-title">7. dwm_device_uid_map_d <span class="table-sub">uid 桥接 · PK 表 · 无分区 · 慎用</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>latest_uid</code></td><td>varchar(32)</td><td>最近 register/login 事件</td><td>当前绑定 uid，可空</td></tr>
+        <tr><td><code>uid_cnt</code></td><td>int</td><td>COUNT(DISTINCT uid) 历史</td><td>历史绑过几个不同 uid</td></tr>
+        <tr><td><code>last_uid_dt</code></td><td>date</td><td>MAX(event_dt)</td><td>最后一次 uid 变更日</td></tr>
+      </table>
+    </div>
+    <div style="padding:0 18px 10px;font-size:0.8rem;color:#666;">下游需关联用户侧时，通过此表取 uid → 查 dim_user_all；<strong>宽表主链不依赖</strong></div>
+
+    <!-- 8 uid_map_delta -->
+    <div class="table-title">8. dwm_device_uid_map_delta_d_d <span class="table-sub">uid 变更增量 · 按 dt 日分区</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>dt</code></td><td>date</td><td>分区键</td><td>业务日</td></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>uid</code></td><td>varchar(32)</td><td>dwd 事件</td><td>当日产生 uid 关联的值</td></tr>
+        <tr><td><code>event_type</code></td><td>varchar(16)</td><td>事件名</td><td>register / login</td></tr>
+      </table>
+    </div>
+    <div style="padding:0 18px 10px;font-size:0.8rem;color:#666;">只记今天有 uid 动作的 device，供 merge_keys 增量取键，<strong>避免全量扫 uid_map</strong></div>
+
+    <!-- category: 键池+宽表 -->
+    <div style="background:#f5e8ff;border-left:4px solid #8e44ad;margin:16px 18px 0;border-radius:8px;padding:10px 14px;font-size:0.83rem;font-weight:700;color:#4a235a;">
+      D 类 · 键池 + 宽表（2 张主力 + 1 张候选）
+    </div>
+
+    <!-- 9 merge_keys -->
+    <div class="table-title">9. device_tag_merge_keys_di <span class="table-sub">当日刷新键池 · 按 calc_dt 日分区</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>说明</th></tr>
+        <tr><td><code>calc_dt</code></td><td>date</td><td>计算日（分区键）</td></tr>
+        <tr><td><code>app_id</code></td><td>varchar(32)</td><td>要刷新的 app</td></tr>
+        <tr><td><code>device_id</code></td><td>varchar(64)</td><td>要刷新的设备</td></tr>
+        <tr><td><code>key_type</code></td><td>varchar(16)</td><td>键类型：delta / expiry_7d / expiry_15d / expiry_30d / boundary</td></tr>
+      </table>
+    </div>
+    <div style="padding:0 18px 14px;">
+      <table style="min-width:280px;">
+        <tr><th>key_type</th><th>含义</th></tr>
+        <tr><td><code>delta</code></td><td>当日有活跃/播放/充值/广告信号，需更新指标</td></tr>
+        <tr><td><code>expiry_7d</code></td><td>7d 窗口即将滑出，需重算 active_days_7d</td></tr>
+        <tr><td><code>expiry_15d</code></td><td>15d 窗口滑出</td></tr>
+        <tr><td><code>expiry_30d</code></td><td>30d 窗口滑出</td></tr>
+        <tr><td><code>boundary</code></td><td>lifecycle 状态翻转（0↔1），需刷新宽表</td></tr>
+      </table>
+    </div>
+
+    <!-- 10 staging -->
+    <div class="table-title">10. dwm_device_staging_d_d <span class="table-sub">未入册候选 · 7d TTL · 按 dt 日分区</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><code>dt</code></td><td>date</td><td>分区键</td><td>业务日</td></tr>
+        <tr><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>dwd</td><td></td></tr>
+        <tr><td><code>raw_first_seen_dt</code></td><td>date</td><td>dwd 首条事件</td><td>首次见到该设备的日期</td></tr>
+        <tr><td><code>active_cnt_7d</code></td><td>int</td><td>近 7 日 PV 次数</td><td>积累活跃信号</td></tr>
+        <tr><td><code>gate_miss_reason</code></td><td>varchar(32)</td><td>规则判定</td><td>未过 enroll_gate 的原因</td></tr>
+      </table>
+    </div>
+
+    <!-- 11 wide -->
+    <div class="table-title">11. dws_device_tag_d_d <span class="table-sub">设备标签宽表 · 最终产出 · PK 表 · 无分区 · HASH 128~256 桶</span></div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>分类</th><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td rowspan="2"><strong>主键</strong></td><td><code>app_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(32)</td><td>—</td><td></td></tr>
+        <tr><td><code>device_id</code> <span class="tag tag-pk">PK</span></td><td>varchar(64)</td><td>—</td><td></td></tr>
+        <tr><td rowspan="2"><strong>入册</strong></td><td><code>enroll_dt</code></td><td>date</td><td>首次过 enroll_gate 当日</td><td>运营认可新增日（非 first_seen）</td></tr>
+        <tr><td><code>is_new_enrolled</code></td><td>tinyint</td><td>enroll_dt = 当日</td><td>当日是否新增设备</td></tr>
+        <tr><td rowspan="3"><strong>生命周期</strong></td><td><code>first_seen_dt</code></td><td>date</td><td>dwm_device_register_d</td><td>系统首见日</td></tr>
+        <tr><td><code>lifecycle_flag</code></td><td>varchar(16)</td><td>规则计算</td><td>new / active / returning / dormant / lost</td></tr>
+        <tr><td><code>last_active_dt</code></td><td>date</td><td>dwm_device_active_d_d MAX</td><td>最近活跃日</td></tr>
+        <tr><td rowspan="4"><strong>活跃窗口</strong></td><td><code>active_days_7d</code></td><td>int</td><td>近 7d active 表聚合</td><td>7 日内活跃天数</td></tr>
+        <tr><td><code>active_days_15d</code></td><td>int</td><td>近 15d 聚合</td><td>15 日内活跃天数</td></tr>
+        <tr><td><code>active_days_30d</code></td><td>int</td><td>近 30d 聚合</td><td>30 日内活跃天数</td></tr>
+        <tr><td><code>rolling_active_days</code></td><td>int</td><td>累计</td><td>累计活跃天数</td></tr>
+        <tr><td rowspan="3"><strong>播放</strong></td><td><code>valid_play_days_7d</code></td><td>int</td><td>近 7d video 表</td><td>7 日内有效播放天数</td></tr>
+        <tr><td><code>total_valid_play_cnt</code></td><td>int</td><td>累计</td><td>累计有效播放次数</td></tr>
+        <tr><td><code>avg_play_duration_7d</code></td><td>bigint</td><td>近 7d SUM / 天数</td><td>7 日均播放时长（毫秒）</td></tr>
+        <tr><td rowspan="6"><strong>付费</strong></td><td><code>is_paid</code></td><td>tinyint</td><td>dwm_device_pay_sum_d</td><td>是否付费设备</td></tr>
+        <tr><td><code>first_pay_dt</code></td><td>date</td><td>dwm_device_pay_sum_d</td><td>首次付费日</td></tr>
+        <tr><td><code>last_pay_dt</code></td><td>date</td><td>dwm_device_pay_sum_d</td><td>最近付费日</td></tr>
+        <tr><td><code>last_pay_amount</code></td><td>bigint</td><td>dwm_device_pay_sum_d</td><td>末次付费金额（分）</td></tr>
+        <tr><td><code>total_pay_amt</code></td><td>bigint</td><td>dwm_device_pay_sum_d</td><td>设备维历史总充值（分）</td></tr>
+        <tr><td><code>total_pay_cnt</code></td><td>int</td><td>dwm_device_pay_sum_d</td><td>历史总充值笔数</td></tr>
+        <tr><td><strong>广告</strong></td><td><code>ad_click_cnt_7d</code></td><td>int</td><td>近 7d ad 表聚合</td><td>7 日广告点击次数</td></tr>
+        <tr><td rowspan="2"><strong>来源</strong></td><td><code>platform</code></td><td>varchar(16)</td><td>dwm_device_register_d</td><td>主要端别</td></tr>
+        <tr><td><code>channel_code</code></td><td>varchar(64)</td><td>dwm_device_register_d</td><td>首见渠道</td></tr>
+        <tr><td><strong>桥接（慎用）</strong></td><td><code>latest_uid</code></td><td>varchar(32)</td><td>uid_map_d 可选列</td><td>最近绑定 uid，不做 JOIN 条件</td></tr>
+        <tr><td><strong>系统</strong></td><td><code>updated_dt</code></td><td>date</td><td>ETL 写入日</td><td>最后更新日</td></tr>
+      </table>
+    </div>
+
+    <!-- enroll gate -->
+    <div style="padding:12px 18px 18px;">
+      <div style="font-size:0.88rem;font-weight:700;color:#0f3460;margin-bottom:10px;">enroll_gate 规则（三选一即入册）</div>
+      <div class="gate-grid">
+        <div class="gate-item">
+          <div class="gate-badge">G1</div>
+          <div>当日有<strong>注册事件</strong>且 uid 非空</div>
+        </div>
+        <div class="gate-item">
+          <div class="gate-badge">G2</div>
+          <div>近 7 日内<strong>活跃天数 ≥ 2</strong>（排除一次性落地页噪声）</div>
+        </div>
+        <div class="gate-item">
+          <div class="gate-badge">G3</div>
+          <div>当日有<strong>付费 / 有效播放 / 广告点击</strong>信号</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Summary -->
+  <div class="section" id="s3">
+    <div class="section-header">三、表关系汇总</div>
+    <div class="section-body" style="padding:0;">
+      <div class="table-wrap" style="padding:16px 18px;">
+        <table class="summary-table">
+          <tr><th>分类</th><th>表名</th><th>分区</th><th>桶</th><th>更新方式</th><th>说明</th></tr>
+          <tr style="background:#e8f8e8;">
+            <td rowspan="4"><strong>A 类<br>日增量</strong></td>
+            <td><code>dwm_device_active_d_d</code></td><td>按 dt 日</td><td>HASH 64</td><td>INSERT OVERWRITE</td><td>当日活跃</td>
+          </tr>
+          <tr style="background:#e8f8e8;">
+            <td><code>dwm_device_video_d_d</code></td><td>按 dt 日</td><td>HASH 64</td><td>INSERT OVERWRITE</td><td>当日播放</td>
+          </tr>
+          <tr style="background:#e8f8e8;">
+            <td><code>dwm_device_order_d_d</code></td><td>按 dt 日</td><td>HASH 64</td><td>INSERT OVERWRITE</td><td>当日充值</td>
+          </tr>
+          <tr style="background:#e8f8e8;">
+            <td><code>dwm_device_ad_d_d</code></td><td>按 dt 日</td><td>HASH 64</td><td>INSERT OVERWRITE</td><td>当日广告</td>
+          </tr>
+          <tr style="background:#fff3e0;">
+            <td rowspan="2"><strong>B 类<br>全量快照</strong></td>
+            <td><code>dwm_device_register_d</code></td><td>无（全态）</td><td>HASH 64</td><td>UPSERT</td><td>设备首见 PK，每台设备一行</td>
+          </tr>
+          <tr style="background:#fff3e0;">
+            <td><code>dwm_device_pay_sum_d</code></td><td>无（全态）</td><td>HASH 64</td><td>UPSERT</td><td>累计付费 PK，每台设备一行</td>
+          </tr>
+          <tr style="background:#fef9e7;">
+            <td rowspan="2"><strong>C 类<br>uid 桥接</strong></td>
+            <td><code>dwm_device_uid_map_d</code></td><td>无（全态）</td><td>HASH 64</td><td>UPSERT</td><td>device→uid 当前映射（慎用）</td>
+          </tr>
+          <tr style="background:#fef9e7;">
+            <td><code>dwm_device_uid_map_delta_d_d</code></td><td>按 dt 日</td><td>HASH 64</td><td>INSERT OVERWRITE</td><td>uid 当日变更增量</td>
+          </tr>
+          <tr style="background:#f5e8ff;">
+            <td rowspan="3"><strong>D 类<br>键池/宽表</strong></td>
+            <td><code>device_tag_merge_keys_di</code></td><td>按 calc_dt 日</td><td>HASH 64</td><td>INSERT OVERWRITE</td><td>当日刷新键清单</td>
+          </tr>
+          <tr style="background:#f5e8ff;">
+            <td><code>dwm_device_staging_d_d</code></td><td>按 dt 日（7d TTL）</td><td>HASH 64</td><td>INSERT OVERWRITE</td><td>未过闸门候选</td>
+          </tr>
+          <tr style="background:#ffe8e8;">
+            <td><code>dws_device_tag_d_d</code></td><td>无（全态）</td><td>HASH 128~256</td><td>UPSERT</td><td>最终宽表，过 enroll_gate 才写入</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: 对比 -->
+  <div class="section" id="s4">
+    <div class="section-header">四、与用户标签的对比</div>
+    <div class="section-body">
+      <div class="compare-grid">
+        <div class="compare-card user">
+          <h4>用户标签</h4>
+          <ul>
+            <li>粒度：<strong>uid</strong></li>
+            <li>新增判定：register 事件 register_dt</li>
+            <li>多账号：一 uid 一行</li>
+            <li>update_pool：SQL CTE（不落表）</li>
+            <li>dim 依赖：用 dim_user_all 补渠道</li>
+            <li>uid 关联：天然有 uid</li>
+          </ul>
+        </div>
+        <div class="compare-card device">
+          <h4>设备标签 v2</h4>
+          <ul>
+            <li>粒度：<strong>device_id</strong></li>
+            <li>新增判定：enroll_dt（过 enroll_gate）</li>
+            <li>多账号：一 device 合计所有 uid</li>
+            <li>update_pool：<strong>merge_keys 物化表</strong>（量大）</li>
+            <li>dim 依赖：直接从 dwd 事件取，不走 dim_user</li>
+            <li>uid 关联：经 uid_map 桥接，<strong>慎用</strong></li>
+          </ul>
+        </div>
+      </div>
+      <div class="note-box" style="margin-top:14px;">
+        核心区别：dim_user_all <strong>没有 device_id 列</strong>，必须先经 uid_map 找 uid 再查用户侧指标，且设备上多个 uid 的指标无法合并到用户维——方向是反的。所以设备标签体系<strong>自给自足</strong>，dim_user 能不碰就不碰。
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

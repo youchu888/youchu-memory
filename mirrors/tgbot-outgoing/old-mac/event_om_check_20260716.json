@@ -1,0 +1,54 @@
+{
+  "configured": [
+    [
+      "app_lifecycle",
+      "应用生命周期"
+    ],
+    [
+      "app_session_summary",
+      "会话行为汇总"
+    ],
+    [
+      "network_state_change",
+      "网络状态变更"
+    ],
+    [
+      "sdk_init",
+      "SDK初始化"
+    ]
+  ],
+  "missing_raw": [
+    "ad_click_sdk",
+    "ad_close",
+    "ad_error",
+    "ad_fill",
+    "ad_impression_sdk",
+    "ad_load_fail",
+    "ad_load_success",
+    "ad_no_fill",
+    "ad_request",
+    "ad_sdk_init",
+    "ad_skip",
+    "app_pageitem_click",
+    "app_pageitem_exposure"
+  ],
+  "meta": {
+    "ad_click_sdk": "内部埋点 SDK客户端",
+    "ad_close": "内部埋点 SDK客户端",
+    "ad_error": "内部埋点 SDK客户端",
+    "ad_fill": "内部埋点 SDK客户端",
+    "ad_impression_sdk": "内部埋点 SDK客户端",
+    "ad_load_fail": "内部埋点 SDK客户端",
+    "ad_load_success": "内部埋点 SDK客户端",
+    "ad_no_fill": "内部埋点 SDK客户端",
+    "ad_request": "内部埋点 SDK客户端",
+    "ad_sdk_init": "内部埋点 SDK客户端",
+    "ad_skip": "内部埋点 SDK客户端",
+    "app_lifecycle": "内部埋点 SDK客户端",
+    "app_pageitem_click": "外部埋点 客户端",
+    "app_pageitem_exposure": "外部埋点 客户端",
+    "app_session_summary": "内部埋点 SDK客户端",
+    "network_state_change": "内部埋点 SDK客户端",
+    "sdk_init": "内部埋点 SDK客户端"
+  }
+}

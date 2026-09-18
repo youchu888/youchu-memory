@@ -1,0 +1,23 @@
+# 知秋 51 event · prod OM + 老 dw 07-15（最终稿）
+# 时间: 2026-07-16
+# OM: GET /api/v1/metadata/event/{name} → prod OM（非 test）
+
+## 汇总
+51 个 → prod OM 已登记 35 / 未登记 16
+
+## 未登记 16（prod API 404）
+· recommend_list_view / recommend_list_click
+· im_conversation_view / im_connection_success / im_message_content / im_event
+· ad_request ad_fill ad_no_fill ad_load_success ad_load_fail ad_impression_sdk ad_click_sdk ad_close ad_skip ad_error（仅 test OM 有壳，prod 404）
+
+## 未登记 · 07-15 老 dw（prod）
+· recommend_list_view：total 见 SQL 附件（anti-join 缺口参考 1,925,188）
+· recommend_list_click：total 见 SQL 附件（anti-join 缺口参考 209,889）
+· IM 四类 + SDK ad 十项：0（预期）
+
+## 已登记 35
+业务主事件 31 + sdk_init/app_lifecycle/app_session_summary/network_state_change
+
+## bot SQL 故障（#77）
+根因: launchd 环境 PATH 无 mysql → No such file or directory: 'mysql'
+修复: MYSQL_BIN=/usr/local/opt/mysql-client/bin/mysql 已写入 omdb/tgbot/.env，重启 daemon 后 [SQL] 队列恢复

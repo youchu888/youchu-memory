@@ -1,0 +1,897 @@
+[
+  {
+    "name": "summary_d",
+    "shadow": "dws.dws_app_channel_summary_d_d_paimon_shadow",
+    "live": "dws.dws_app_channel_summary_d",
+    "date_key": "2026-09-02",
+    "verdict": "DIFF",
+    "a_rows": {
+      "shadow": 110163,
+      "live": 117738,
+      "diff": -7575
+    },
+    "b_app_id": {
+      "groups": 710,
+      "mismatch_groups": 365,
+      "top": [
+        {
+          "app_id": "HX-001",
+          "shadow": 3322,
+          "live": 9022,
+          "diff": -5700
+        },
+        {
+          "app_id": "HX-003",
+          "shadow": 1746,
+          "live": 3664,
+          "diff": -1918
+        },
+        {
+          "app_id": "YC-002",
+          "shadow": 2040,
+          "live": 3499,
+          "diff": -1459
+        },
+        {
+          "app_id": "YC-159",
+          "shadow": 771,
+          "live": 1345,
+          "diff": -574
+        },
+        {
+          "app_id": "JHG-049",
+          "shadow": 1195,
+          "live": 679,
+          "diff": 516
+        },
+        {
+          "app_id": "HX-021",
+          "shadow": 932,
+          "live": 1404,
+          "diff": -472
+        },
+        {
+          "app_id": "YC-169",
+          "shadow": 570,
+          "live": 1025,
+          "diff": -455
+        },
+        {
+          "app_id": "YC-001",
+          "shadow": 2450,
+          "live": 2874,
+          "diff": -424
+        },
+        {
+          "app_id": "JHG-001",
+          "shadow": 989,
+          "live": 589,
+          "diff": 400
+        },
+        {
+          "app_id": "JHG-038",
+          "shadow": 620,
+          "live": 249,
+          "diff": 371
+        },
+        {
+          "app_id": "JHG-005",
+          "shadow": 738,
+          "live": 411,
+          "diff": 327
+        },
+        {
+          "app_id": "YC-121",
+          "shadow": 730,
+          "live": 1013,
+          "diff": -283
+        },
+        {
+          "app_id": "JHG-028",
+          "shadow": 627,
+          "live": 354,
+          "diff": 273
+        },
+        {
+          "app_id": "DX-015",
+          "shadow": 896,
+          "live": 1167,
+          "diff": -271
+        },
+        {
+          "app_id": "DX-030",
+          "shadow": 729,
+          "live": 999,
+          "diff": -270
+        }
+      ]
+    },
+    "c_metric_diffs": [
+      {
+        "metric": "download_num",
+        "shadow": 3589291,
+        "live": 3588663,
+        "diff": 628
+      },
+      {
+        "metric": "landing_page_view_num",
+        "shadow": 5614663,
+        "live": 5613436,
+        "diff": 1227
+      },
+      {
+        "metric": "landing_page_click_num",
+        "shadow": 5186192,
+        "live": 5185296,
+        "diff": 896
+      },
+      {
+        "metric": "ip_num",
+        "shadow": 2464732,
+        "live": 2464065,
+        "diff": 667
+      },
+      {
+        "metric": "new_user",
+        "shadow": 4219056,
+        "live": 4300412,
+        "diff": -81356
+      },
+      {
+        "metric": "new_user_ios",
+        "shadow": 1598681,
+        "live": 1611200,
+        "diff": -12519
+      },
+      {
+        "metric": "new_user_android",
+        "shadow": 2157159,
+        "live": 2225996,
+        "diff": -68837
+      },
+      {
+        "metric": "pay_user_num",
+        "shadow": 27324,
+        "live": 27305,
+        "diff": 19
+      },
+      {
+        "metric": "recharge_amount",
+        "shadow": 332068933.0,
+        "live": 331990933.0,
+        "diff": 78000.0
+      },
+      {
+        "metric": "coin_recharge_amount",
+        "shadow": 3005851.0,
+        "live": 3002981.0,
+        "diff": 2870.0
+      },
+      {
+        "metric": "install_num",
+        "shadow": 3282316,
+        "live": 3281653,
+        "diff": 663
+      },
+      {
+        "metric": "ad_click_num",
+        "shadow": 27875605,
+        "live": 27928400,
+        "diff": -52795
+      },
+      {
+        "metric": "video_show_from_channel",
+        "shadow": 168866420,
+        "live": 168841943,
+        "diff": 24477
+      }
+    ],
+    "d_key": {
+      "only_shadow": 16902,
+      "only_live": 24477,
+      "value_mismatch": 43793,
+      "exact_match": 49468,
+      "only_shadow_sample_n": 30,
+      "only_live_sample_n": 30,
+      "mismatch_sample_n": 20
+    }
+  },
+  {
+    "name": "summary_h",
+    "shadow": "dws.dws_app_channel_summary_h_h_paimon_shadow",
+    "live": "dws.dws_app_channel_summary_h",
+    "date_key": "2026-09-02",
+    "verdict": "DIFF",
+    "a_rows": {
+      "shadow": 788775,
+      "live": 858882,
+      "diff": -70107
+    },
+    "b_app_id": {
+      "groups": 710,
+      "mismatch_groups": 442,
+      "top": [
+        {
+          "app_id": "YC-002",
+          "shadow": 17286,
+          "live": 34793,
+          "diff": -17507
+        },
+        {
+          "app_id": "HX-001",
+          "shadow": 25443,
+          "live": 38892,
+          "diff": -13449
+        },
+        {
+          "app_id": "JHG-049",
+          "shadow": 14220,
+          "live": 7917,
+          "diff": 6303
+        },
+        {
+          "app_id": "JHG-001",
+          "shadow": 11975,
+          "live": 7391,
+          "diff": 4584
+        },
+        {
+          "app_id": "HX-003",
+          "shadow": 14129,
+          "live": 18670,
+          "diff": -4541
+        },
+        {
+          "app_id": "YC-159",
+          "shadow": 3441,
+          "live": 7706,
+          "diff": -4265
+        },
+        {
+          "app_id": "DX-030",
+          "shadow": 4636,
+          "live": 8891,
+          "diff": -4255
+        },
+        {
+          "app_id": "YC-001",
+          "shadow": 16343,
+          "live": 19926,
+          "diff": -3583
+        },
+        {
+          "app_id": "YC-169",
+          "shadow": 3603,
+          "live": 6954,
+          "diff": -3351
+        },
+        {
+          "app_id": "JHG-038",
+          "shadow": 4877,
+          "live": 2150,
+          "diff": 2727
+        },
+        {
+          "app_id": "JHA-204",
+          "shadow": 16546,
+          "live": 14004,
+          "diff": 2542
+        },
+        {
+          "app_id": "YC-121",
+          "shadow": 4307,
+          "live": 6778,
+          "diff": -2471
+        },
+        {
+          "app_id": "JHG-028",
+          "shadow": 5845,
+          "live": 3799,
+          "diff": 2046
+        },
+        {
+          "app_id": "JHA-056",
+          "shadow": 5926,
+          "live": 4071,
+          "diff": 1855
+        },
+        {
+          "app_id": "HX-021",
+          "shadow": 6749,
+          "live": 8434,
+          "diff": -1685
+        }
+      ]
+    },
+    "c_metric_diffs": [
+      {
+        "metric": "download_num",
+        "shadow": 3588663,
+        "live": 3589654,
+        "diff": -991
+      },
+      {
+        "metric": "landing_page_view_num",
+        "shadow": 5613436,
+        "live": 5631932,
+        "diff": -18496
+      },
+      {
+        "metric": "landing_page_click_num",
+        "shadow": 5185296,
+        "live": 5187470,
+        "diff": -2174
+      },
+      {
+        "metric": "ip_num",
+        "shadow": 2739242,
+        "live": 2740354,
+        "diff": -1112
+      },
+      {
+        "metric": "new_user",
+        "shadow": 4300437,
+        "live": 4216024,
+        "diff": 84413
+      },
+      {
+        "metric": "new_user_ios",
+        "shadow": 1611204,
+        "live": 1598680,
+        "diff": 12524
+      },
+      {
+        "metric": "new_user_android",
+        "shadow": 2226005,
+        "live": 2154278,
+        "diff": 71727
+      },
+      {
+        "metric": "pay_user_num",
+        "shadow": 27305,
+        "live": 27299,
+        "diff": 6
+      },
+      {
+        "metric": "recharge_amount",
+        "shadow": 331990933.0,
+        "live": 331654833.0,
+        "diff": 336100.0
+      },
+      {
+        "metric": "coin_recharge_amount",
+        "shadow": 3002981.0,
+        "live": 3004191.0,
+        "diff": -1210.0
+      },
+      {
+        "metric": "install_num",
+        "shadow": 3281653,
+        "live": 3282630,
+        "diff": -977
+      },
+      {
+        "metric": "ad_click_num",
+        "shadow": 27928400,
+        "live": 27935077,
+        "diff": -6677
+      },
+      {
+        "metric": "video_show_from_channel",
+        "shadow": 168841943,
+        "live": 168932024,
+        "diff": -90081
+      }
+    ],
+    "d_key": {
+      "only_shadow": 101738,
+      "only_live": 171845,
+      "value_mismatch": 214276,
+      "exact_match": 472761,
+      "only_shadow_sample_n": 30,
+      "only_live_sample_n": 30,
+      "mismatch_sample_n": 20
+    }
+  },
+  {
+    "name": "deduction_d",
+    "shadow": "dws.dws_app_channel_deduction_d_d_paimon_shadow",
+    "live": "dws.dws_app_channel_deduction_d",
+    "date_key": "2026-09-02",
+    "verdict": "DIFF",
+    "a_rows": {
+      "shadow": 65684,
+      "live": 66195,
+      "diff": -511
+    },
+    "b_app_id": {
+      "groups": 548,
+      "mismatch_groups": 253,
+      "top": [
+        {
+          "app_id": "HX-001",
+          "shadow": 2587,
+          "live": 2865,
+          "diff": -278
+        },
+        {
+          "app_id": "JHG-049",
+          "shadow": 746,
+          "live": 469,
+          "diff": 277
+        },
+        {
+          "app_id": "DX-015",
+          "shadow": 640,
+          "live": 895,
+          "diff": -255
+        },
+        {
+          "app_id": "HX-003",
+          "shadow": 1276,
+          "live": 1477,
+          "diff": -201
+        },
+        {
+          "app_id": "JHA-056",
+          "shadow": 373,
+          "live": 213,
+          "diff": 160
+        },
+        {
+          "app_id": "JHG-028",
+          "shadow": 386,
+          "live": 227,
+          "diff": 159
+        },
+        {
+          "app_id": "JHG-038",
+          "shadow": 310,
+          "live": 155,
+          "diff": 155
+        },
+        {
+          "app_id": "YC-159",
+          "shadow": 391,
+          "live": 258,
+          "diff": 133
+        },
+        {
+          "app_id": "JHG-001",
+          "shadow": 639,
+          "live": 515,
+          "diff": 124
+        },
+        {
+          "app_id": "JHG-029",
+          "shadow": 263,
+          "live": 161,
+          "diff": 102
+        },
+        {
+          "app_id": "JHG-021",
+          "shadow": 274,
+          "live": 183,
+          "diff": 91
+        },
+        {
+          "app_id": "JHA-017",
+          "shadow": 1154,
+          "live": 1241,
+          "diff": -87
+        },
+        {
+          "app_id": "JHA-102",
+          "shadow": 693,
+          "live": 777,
+          "diff": -84
+        },
+        {
+          "app_id": "JHA-027",
+          "shadow": 1774,
+          "live": 1851,
+          "diff": -77
+        },
+        {
+          "app_id": "JHG-036",
+          "shadow": 141,
+          "live": 75,
+          "diff": 66
+        }
+      ]
+    },
+    "c_metric_diffs": [
+      {
+        "metric": "deduction_download_num",
+        "shadow": 3127188,
+        "live": 3127248,
+        "diff": -60
+      },
+      {
+        "metric": "deduction_new_user",
+        "shadow": 1538350,
+        "live": 2709215,
+        "diff": -1170865
+      },
+      {
+        "metric": "deduction_recharge_amount",
+        "shadow": 185749452,
+        "live": 176125052,
+        "diff": 9624400
+      },
+      {
+        "metric": "deduction_install_num",
+        "shadow": 2431115,
+        "live": 2431091,
+        "diff": 24
+      },
+      {
+        "metric": "download_num",
+        "shadow": 3128424,
+        "live": 3128487,
+        "diff": -63
+      },
+      {
+        "metric": "new_user",
+        "shadow": 2331098,
+        "live": 3486468,
+        "diff": -1155370
+      },
+      {
+        "metric": "recharge_amount",
+        "shadow": 186706152.0,
+        "live": 177011852.0,
+        "diff": 9694300.0
+      },
+      {
+        "metric": "coin_recharge_amount",
+        "shadow": 34004000.0,
+        "live": 31736000.0,
+        "diff": 2268000.0
+      },
+      {
+        "metric": "install_num",
+        "shadow": 2431165,
+        "live": 2431141,
+        "diff": 24
+      },
+      {
+        "metric": "pay_user_num",
+        "shadow": 12388,
+        "live": 12384,
+        "diff": 4
+      }
+    ],
+    "d_key": {
+      "only_shadow": 2652,
+      "only_live": 2141,
+      "value_mismatch": 11020,
+      "exact_match": 52523,
+      "only_shadow_sample_n": 30,
+      "only_live_sample_n": 30,
+      "mismatch_sample_n": 20
+    }
+  },
+  {
+    "name": "deduction_h",
+    "shadow": "dws.dws_app_channel_deduction_h_h_paimon_shadow",
+    "live": "dws.dws_app_channel_deduction_h",
+    "date_key": "2026-09-02",
+    "verdict": "DIFF",
+    "a_rows": {
+      "shadow": 387519,
+      "live": 390267,
+      "diff": -2748
+    },
+    "b_app_id": {
+      "groups": 548,
+      "mismatch_groups": 267,
+      "top": [
+        {
+          "app_id": "JHA-204",
+          "shadow": 6020,
+          "live": 8623,
+          "diff": -2603
+        },
+        {
+          "app_id": "JHG-049",
+          "shadow": 5094,
+          "live": 3418,
+          "diff": 1676
+        },
+        {
+          "app_id": "JHA-027",
+          "shadow": 6509,
+          "live": 8175,
+          "diff": -1666
+        },
+        {
+          "app_id": "JHA-031",
+          "shadow": 2450,
+          "live": 3738,
+          "diff": -1288
+        },
+        {
+          "app_id": "JHG-028",
+          "shadow": 2952,
+          "live": 1990,
+          "diff": 962
+        },
+        {
+          "app_id": "JHG-001",
+          "shadow": 5323,
+          "live": 4366,
+          "diff": 957
+        },
+        {
+          "app_id": "DX-015",
+          "shadow": 3027,
+          "live": 3888,
+          "diff": -861
+        },
+        {
+          "app_id": "JHG-038",
+          "shadow": 2110,
+          "live": 1272,
+          "diff": 838
+        },
+        {
+          "app_id": "JHA-056",
+          "shadow": 2664,
+          "live": 1838,
+          "diff": 826
+        },
+        {
+          "app_id": "JHG-029",
+          "shadow": 1981,
+          "live": 1255,
+          "diff": 726
+        },
+        {
+          "app_id": "JHA-063",
+          "shadow": 2674,
+          "live": 3306,
+          "diff": -632
+        },
+        {
+          "app_id": "YC-001",
+          "shadow": 6392,
+          "live": 6968,
+          "diff": -576
+        },
+        {
+          "app_id": "JHA-102",
+          "shadow": 3121,
+          "live": 3696,
+          "diff": -575
+        },
+        {
+          "app_id": "JHA-017",
+          "shadow": 3651,
+          "live": 4204,
+          "diff": -553
+        },
+        {
+          "app_id": "-",
+          "shadow": 0,
+          "live": 504,
+          "diff": -504
+        }
+      ]
+    },
+    "c_metric_diffs": [
+      {
+        "metric": "deduction_download_num",
+        "shadow": 3127188,
+        "live": 3127381,
+        "diff": -193
+      },
+      {
+        "metric": "deduction_new_user",
+        "shadow": 1538397,
+        "live": 2708540,
+        "diff": -1170143
+      },
+      {
+        "metric": "deduction_recharge_amount",
+        "shadow": 176205052,
+        "live": 175935352,
+        "diff": 269700
+      },
+      {
+        "metric": "deduction_install_num",
+        "shadow": 2431115,
+        "live": 2431734,
+        "diff": -619
+      },
+      {
+        "metric": "download_num",
+        "shadow": 3128424,
+        "live": 3128620,
+        "diff": -196
+      },
+      {
+        "metric": "new_user",
+        "shadow": 2331155,
+        "live": 3485676,
+        "diff": -1154521
+      },
+      {
+        "metric": "recharge_amount",
+        "shadow": 177091852.0,
+        "live": 176822152.0,
+        "diff": 269700.0
+      },
+      {
+        "metric": "coin_recharge_amount",
+        "shadow": 31649000.0,
+        "live": 31711000.0,
+        "diff": -62000.0
+      },
+      {
+        "metric": "install_num",
+        "shadow": 2431165,
+        "live": 2431785,
+        "diff": -620
+      },
+      {
+        "metric": "pay_user_num",
+        "shadow": 16836,
+        "live": 16821,
+        "diff": 15
+      }
+    ],
+    "d_key": {
+      "only_shadow": 16554,
+      "only_live": 19302,
+      "value_mismatch": 60625,
+      "exact_match": 310340,
+      "only_shadow_sample_n": 30,
+      "only_live_sample_n": 30,
+      "mismatch_sample_n": 20
+    }
+  },
+  {
+    "name": "retention_d",
+    "shadow": "dws.dws_app_channel_retention_d_d_paimon_shadow",
+    "live": "dws.dws_app_channel_retention_d",
+    "date_key": "2026-09-02",
+    "verdict": "DIFF",
+    "a_rows": {
+      "shadow": 55620,
+      "live": 55143,
+      "diff": 477
+    },
+    "b_app_id": {
+      "groups": 577,
+      "mismatch_groups": 96,
+      "top": [
+        {
+          "app_id": "YC-001",
+          "shadow": 1272,
+          "live": 1204,
+          "diff": 68
+        },
+        {
+          "app_id": "YC-003",
+          "shadow": 1077,
+          "live": 1026,
+          "diff": 51
+        },
+        {
+          "app_id": "YC-002",
+          "shadow": 1110,
+          "live": 1075,
+          "diff": 35
+        },
+        {
+          "app_id": "JHG-001",
+          "shadow": 479,
+          "live": 451,
+          "diff": 28
+        },
+        {
+          "app_id": "YC-159",
+          "shadow": 287,
+          "live": 262,
+          "diff": 25
+        },
+        {
+          "app_id": "YC-121",
+          "shadow": 483,
+          "live": 462,
+          "diff": 21
+        },
+        {
+          "app_id": "YC-122",
+          "shadow": 456,
+          "live": 436,
+          "diff": 20
+        },
+        {
+          "app_id": "YC-123",
+          "shadow": 344,
+          "live": 327,
+          "diff": 17
+        },
+        {
+          "app_id": "DX-043",
+          "shadow": 259,
+          "live": 271,
+          "diff": -12
+        },
+        {
+          "app_id": "YC-115",
+          "shadow": 259,
+          "live": 247,
+          "diff": 12
+        },
+        {
+          "app_id": "YC-116",
+          "shadow": 284,
+          "live": 272,
+          "diff": 12
+        },
+        {
+          "app_id": "YC-161",
+          "shadow": 242,
+          "live": 230,
+          "diff": 12
+        },
+        {
+          "app_id": "DX-030",
+          "shadow": 440,
+          "live": 430,
+          "diff": 10
+        },
+        {
+          "app_id": "YC-152",
+          "shadow": 138,
+          "live": 128,
+          "diff": 10
+        },
+        {
+          "app_id": "YC-169",
+          "shadow": 326,
+          "live": 316,
+          "diff": 10
+        }
+      ]
+    },
+    "c_metric_diffs": [
+      {
+        "metric": "last_day_new_user_num",
+        "shadow": 4433815,
+        "live": 4495979,
+        "diff": -62164
+      },
+      {
+        "metric": "last_day_retention_num",
+        "shadow": 549542,
+        "live": 311813,
+        "diff": 237729
+      },
+      {
+        "metric": "last7_day_new_user_num",
+        "shadow": 4700649,
+        "live": 4781696,
+        "diff": -81047
+      },
+      {
+        "metric": "last7_day_retention_num",
+        "shadow": 300570,
+        "live": 112328,
+        "diff": 188242
+      }
+    ],
+    "d_key": {
+      "only_shadow": 651,
+      "only_live": 174,
+      "value_mismatch": 12477,
+      "exact_match": 42492,
+      "only_shadow_sample_n": 30,
+      "only_live_sample_n": 30,
+      "mismatch_sample_n": 20
+    }
+  }
+]

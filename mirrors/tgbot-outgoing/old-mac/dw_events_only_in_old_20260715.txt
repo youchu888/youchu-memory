@@ -1,0 +1,51 @@
+old 有 · new 无 · event 维度（非 event_id）
+日期: 2026-07-15 (prod)
+口径: old 按 event_time；new 按 dt；new 侧该 event 行数=0
+
+old  distinct event: 78
+new  distinct event: 38
+old 有而 new 完全没有: 40 种
+
+event	old_cnt
+page_lifecycle	129609469
+content_impression	13304
+video_share	11142
+realtime_online	9214
+preview_popup_exposure	4841
+preview_popup_close	3719
+ad_fill	1810
+app_pageitem_exposure	1162
+ad_request	990
+core_consume	890
+ad_error	704
+-	696
+ad_load_success	641
+deep_consume	191
+preview_popup_unlock_click	152
+ad_impression'	88
+ad_impression''	88
+ad_no_fill	76
+week_card_upgrade_popup_exposure	71
+app_error	67
+ad_close	45
+page_click''	31
+page_click'	31
+week_card_upgrade_popup_close	29
+new_user_week_card_paid	24
+app_pageitem_click	16
+video_view	14
+preview_popup_view_rights_click	11
+security_risk	7
+app_page_view'	5
+app_page_view''	5
+ad_click_sdk	3
+navigation'	2
+navigation''	2
+week_card_upgrade_click	2
+comic_event''	1
+order_pay_success	1
+content_comment	1
+comic_event'	1
+order_create	1
+
+说明: video_event / advertising / page_click / ad_impression / comic_event 等均在 new 有量，不在上表。

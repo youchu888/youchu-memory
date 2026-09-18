@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>用户时长 · 数据流图 · bus#4912</title>
+<style>
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif;
+  --blue: #2563eb;
+  --green: #059669;
+  --amber: #d97706;
+  --purple: #7c3aed;
+  --gray: #64748b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; background: #f1f5f9; color: #0f172a; line-height: 1.5; }
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: #fff; border-bottom: 1px solid #e2e8f0;
+  padding: 10px 16px; overflow-x: auto; white-space: nowrap;
+}
+nav a {
+  display: inline-block; margin-right: 12px; font-size: 0.85rem;
+  color: var(--blue); text-decoration: none; padding: 4px 0;
+}
+nav a:active { opacity: .7; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.25rem; margin: 0 0 6px; }
+.meta { color: var(--gray); font-size: 0.82rem; margin-bottom: 16px; }
+.card {
+  background: #fff; border-radius: 12px; padding: 16px;
+  margin-bottom: 14px; box-shadow: 0 1px 4px rgba(15,23,42,.06);
+}
+.card h2 {
+  font-size: 1rem; margin: 0 0 12px;
+  border-left: 4px solid var(--blue); padding-left: 8px;
+}
+.flow { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.node {
+  width: 100%; max-width: 420px; padding: 12px 14px;
+  border-radius: 10px; text-align: center; font-size: 0.88rem;
+  border: 2px solid transparent;
+}
+.node .tbl { font-weight: 700; font-size: 0.82rem; word-break: break-all; }
+.node .hint { font-size: 0.75rem; color: #475569; margin-top: 4px; }
+.arrow {
+  width: 2px; height: 22px; background: #94a3b8; position: relative;
+}
+.arrow::after {
+  content: ""; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%);
+  border: 6px solid transparent; border-top-color: #94a3b8;
+}
+.src { background: #eff6ff; border-color: #93c5fd; }
+.dwd { background: #ecfdf5; border-color: #6ee7b7; }
+.dwm { background: #fffbeb; border-color: #fcd34d; }
+.dws-main { background: #f5f3ff; border-color: #c4b5fd; }
+.dws-sub { background: #f8fafc; border-color: #cbd5e1; }
+.dim { background: #fdf2f8; border-color: #f9a8d4; }
+.fork-wrap { width: 100%; max-width: 420px; }
+.fork-label {
+  text-align: center; font-size: 0.78rem; color: var(--gray);
+  margin: 8px 0 6px; font-weight: 600;
+}
+.branch { margin-bottom: 10px; }
+.branch-title {
+  font-size: 0.78rem; font-weight: 700; margin-bottom: 6px;
+  padding: 4px 8px; border-radius: 6px; display: inline-block;
+}
+.branch-a .branch-title { background: #ede9fe; color: var(--purple); }
+.branch-b .branch-title { background: #ecfdf5; color: var(--green); }
+.bucket {
+  display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+  margin-top: 8px;
+}
+.bucket span {
+  font-size: 0.72rem; background: #f1f5f9; border: 1px solid #e2e8f0;
+  border-radius: 999px; padding: 3px 8px;
+}
+.tag {
+  display: inline-block; font-size: 0.72rem; padding: 2px 8px;
+  border-radius: 999px; margin: 2px 4px 2px 0;
+}
+.tag-core { background: #ede9fe; color: #5b21b6; }
+.tag-sup { background: #d1fae5; color: #065f46; }
+.tag-dim { background: #fce7f3; color: #9d174d; }
+ul.compact { margin: 8px 0 0; padding-left: 18px; font-size: 0.85rem; }
+ul.compact li { margin-bottom: 4px; }
+.legend { font-size: 0.8rem; color: #475569; }
+@media (max-width: 480px) {
+  .wrap { padding: 12px; }
+  .node { font-size: 0.82rem; padding: 10px 12px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#overview">总览</a>
+  <a href="#flow">主链路</a>
+  <a href="#fork">分叉</a>
+  <a href="#bucket">五档</a>
+  <a href="#note">口径</a>
+</nav>
+<div class="wrap">
+  <h1>用户时长 · 数据流图</h1>
+  <p class="meta">bus#4912 · 2026-07-21 · 全链验完再 publish · test dt=07-20 已对平</p>
+
+  <div class="card" id="overview">
+    <h2>一句话</h2>
+    <p>共用上游 <strong>dwm_app_session_sid_d</strong>，分叉两条 DWS：<span class="tag tag-core">五档看板（主交付）</span> + <span class="tag tag-sup">账户日汇总（补）</span>。不是一张表。</p>
+  </div>
+
+  <div class="card" id="flow">
+    <h2>主链路（自上而下）</h2>
+    <div class="flow">
+      <div class="node src">
+        <div class="tbl">dwd.dwd_app_page_view_d</div>
+        <div class="hint">PV 明细 · 会话 sid</div>
+      </div>
+      <div class="arrow"></div>
+      <div class="node dwd">
+        <div class="tbl">dwd.dwd_app_page_stay_d</div>
+        <div class="hint">同 sid LEAD 算每页 stay_sec · 超 1800s dropout</div>
+      </div>
+      <div class="arrow"></div>
+      <div class="node dwm">
+        <div class="tbl">dwm.dwm_app_session_sid_d</div>
+        <div class="hint">session 墙钟 · duration_bucket · is_valid · valid_stay_sec_sum</div>
+      </div>
+      <div class="arrow"></div>
+      <div class="fork-wrap" id="fork">
+        <div class="fork-label">▼ 分叉（指标不同，禁止混口径）</div>
+
+        <div class="branch branch-a">
+          <div class="branch-title">A · 五档看板（PRD 使用时长 · 核心）</div>
+          <div class="node dws-main">
+            <div class="tbl">dws_session_duration_user_d / device_d</div>
+            <div class="hint">单次 session · 按 bucket 出 session_cnt</div>
+          </div>
+          <div class="arrow"></div>
+          <div class="node dws-main">
+            <div class="tbl">dws_session_daily_user_d / device_d</div>
+            <div class="hint">日均 · 墙钟累加后分档 · 出 user_cnt</div>
+          </div>
+        </div>
+
+        <div class="branch branch-b">
+          <div class="branch-title">B · 账户日汇总（补 · v1 不存五档）</div>
+          <div class="node dws-sub">
+            <div class="tbl">dws.dws_user_page_stay_d</div>
+            <div class="hint">uid×dt · daily_valid_stay_sec（valid_stay 秒合计）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="bucket">
+    <h2>duration_bucket（候选 B + bounce 第 0 档）</h2>
+    <div class="bucket">
+      <span>0 bounce</span>
+      <span>1 ≤1min</span>
+      <span>2 1–5min</span>
+      <span>3 5–15min</span>
+      <span>4 15–30min</span>
+      <span>5 30min+</span>
+    </div>
+    <ul class="compact">
+      <li>主指标 = <strong>session_duration_sec</strong>（墙钟），不是 valid_stay</li>
+      <li>无效：&lt;5s 或 &gt;12h → is_valid=0</li>
+      <li>看板 Y 轴按 bucket 出 session_cnt / user_cnt</li>
+    </ul>
+  </div>
+
+  <div class="card" id="note">
+    <h2>口径要点</h2>
+    <ul class="compact">
+      <li><span class="tag tag-dim">dim</span> user_type / is_new / country → dim_user_daily_snapshot</li>
+      <li>空 uid 约 43% 探针丢弃，知秋已裁定维持</li>
+      <li>与 content_rank play_duration、前台 foreground 不是同指标</li>
+      <li>三 platform session：dev-20260711-002 / dev-20260716-001 / dev-20260721-002</li>
+    </ul>
+    <p class="legend" style="margin-top:12px">仓库：ops_system/04.dws/dws_session_duration_d/ · job_dws_user_page_stay_d/</p>
+  </div>
+</div>
+</body>
+</html>

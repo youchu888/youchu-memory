@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>设备标签 · 阶段2回执 · 姿态F（又初 2026-07-28）</title>
+<style>
+body { font-family: -apple-system, "PingFang SC", sans-serif; max-width: 1100px; margin: 24px auto; padding: 0 20px; color: #222; line-height: 1.55; }
+h1 { border-bottom: 2px solid #1a73e8; padding-bottom: 8px; }
+h2 { border-left: 4px solid #1a73e8; padding-left: 10px; margin-top: 28px; }
+code, pre { font-family: "SF Mono", Menlo, Consolas, monospace; }
+pre { background: #f6f8fa; padding: 12px 14px; border-radius: 6px; overflow-x: auto; font-size: 13px; }
+code { background: #f0f2f5; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px; }
+th, td { border: 1px solid #d1d5da; padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: #f6f8fa; font-weight: 600; }
+.ok { background: #f4fff4; border: 1px solid #2f9e44; padding: 10px 14px; margin: 12px 0; }
+.note { background: #e7f5ff; border-left: 4px solid #1971c2; padding: 10px 14px; margin: 12px 0; }
+.warn { background: #fff8e6; border-left: 4px solid #f59f00; padding: 10px 14px; margin: 12px 0; }
+.fix { background: #fff5f5; border-left: 4px solid #f03e3e; padding: 10px 14px; margin: 12px 0; }
+</style>
+</head>
+<body>
+
+<h1>设备标签 · 阶段2回执（姿态 F）</h1>
+<p>
+  <b>作者:</b> 又初 ·
+  <b>日期:</b> 2026-07-28 ·
+  <b>状态:</b> 阶段2送审 ·
+  <b>参照:</b> library#46 + user_tag 姿态 F（<code>b4cf1f0a</code>）+ 主人钦定
+</p>
+
+<div class="ok">
+  <b>一句话:</b> 阶段1探针已结；design#46 待钦定 5 项已全部拍板（lifecycle 纠偏为旧表/user_tag 9 档）。
+  请审本回执，放行后进入阶段3开发（按姿态 F 重写，不复用旧 py/phased）。
+</div>
+
+<h2>0. 绑定</h2>
+<table>
+  <tr><th>项</th><th>值</th></tr>
+  <tr><td>派活</td><td>bus#5554（重发 5543/5544）device_tag Paimon 迁移 · 姿态 F</td></tr>
+  <tr><td>设计稿</td><td><code>http://54.255.236.159:8012/library/dws_device_tag_d_d_design</code>（id=46）</td></tr>
+  <tr><td>参照代码</td><td><code>origin/dev</code> <code>b4cf1f0a</code> · user_tag Spark v2 + wrapper</td></tr>
+  <tr><td>废弃</td><td>07-20 phased 老姿态；旧 device_tag v2 py 全废，按 F 重写</td></tr>
+  <tr><td>旧 session</td><td><code>dev-20260714-002</code> 旧宽表；<code>dev-20260719-001</code> merge_pool/phased（不作为 F 开发基线）</td></tr>
+</table>
+
+<h2>1. 阶段1结论（已结案）</h2>
+<table>
+  <tr><th>源</th><th>窗口</th><th>device_id 空率</th></tr>
+  <tr><td><code>paimon.dwd.dwd_order_paid_d_r</code>（amount&gt;0）</td><td>07-20~07-26</td><td><b>0%</b>（fill=100%，7 日合计 185,572 行）</td></tr>
+  <tr><td><code>dwd_user_register_d_v2</code> / register_r 交叉</td><td>dt=07-26 等</td><td><b>0%</b>（批表 6,093,929 行；与牡丹 probe 一致）</td></tr>
+</table>
+<div class="ok">→ <b>直用 device_id 建 dim_device_all</b>，不走 uid 反查兜底。</div>
+
+<h2>2. design#46 §10 待钦定 → 拍板结果</h2>
+<table>
+  <tr><th>#</th><th>议题</th><th>钦定</th><th>依据</th></tr>
+  <tr>
+    <td>1</td><td>DWM 是否有 <code>dt</code> 分区</td>
+    <td><b>按姿态 F</b>：中间 3 张 DWM <b>有 dt</b>（PK=<code>dt,app_id,device_id</code>）；
+      <code>dim_device_all_d_d</code> / <code>dws_device_finance_d_d</code> / <code>dws_device_tag_d_d</code> <b>无 dt</b>，daily INSERT OVERWRITE 快照</td>
+    <td>对齐 user_tag：<code>dwm_user_*_d_d</code> 分区 vs <code>dim_user_all_d_d</code>/<code>dws_user_tag_d_d</code> 快照。<br>
+      <span style="color:#c92a2a">纠偏 design#46「6 张全无 dt」写法。</span></td>
+  </tr>
+  <tr>
+    <td>2</td><td>cron 时点</td>
+    <td><b>选 A · 串行</b>：挂在 user_tag wrapper 尾巴，同 cron（UTC 03:00 / 北京 11:00）拖着跑</td>
+    <td>主人钦定；避免与 user_tag 抢 YARN 并行</td>
+  </tr>
+  <tr>
+    <td>3</td><td><code>network</code> / <code>screen</code> / <code>ua</code></td>
+    <td><b>不加</b></td>
+    <td>见 §3 审核</td>
+  </tr>
+  <tr>
+    <td>4</td><td>旧 py / phased 代码</td>
+    <td><b>按姿态 F 重写</b>，不复用旧 py 骨架</td>
+    <td>主人钦定；可对照口径，不拷实现</td>
+  </tr>
+  <tr>
+    <td>—</td><td>lifecycle 9 档（design#46 与现网冲突）</td>
+    <td><b>复用旧表 / user_tag 9 档</b>（见 §4）</td>
+    <td>平台+现网核对；纠偏 design#46 <code>active_7d/churn_30…</code></td>
+  </tr>
+  <tr>
+    <td>—</td><td>老 SR 基准</td>
+    <td>prod <b>无</b>设备标签表；test <code>dws.dws_device_tag_d_d</code> ≈98 万行、<code>calc_dt=07-12</code> 可对标分布</td>
+    <td>test/prod 实查</td>
+  </tr>
+</table>
+
+<h2>3. 议题3审核：network / screen / ua</h2>
+<table>
+  <tr><th>检查对象</th><th>是否有这三列</th></tr>
+  <tr><td>test 旧宽表 <code>dws.dws_device_tag_d_d</code></td><td>无</td></tr>
+  <tr><td>prod <code>dim.dim_user_all</code> / paimon <code>dim_user_all_d_d</code></td><td>无（仅有 device / device_brand / device_model + geo）</td></tr>
+  <tr><td>旧设备标签 ETL / DDL</td><td>无引用</td></tr>
+  <tr><td>design#46 正文必选字段</td><td>仅作为开放问题提出，非硬需求</td></tr>
+</table>
+<div class="ok"><b>结论: 不加。</b> dim_device_all 属性对齐 user dim：channel / register_time / geo / device·brand·model / 首末登 + COALESCE优先 COALESCE；不扩 network/screen/ua。</div>
+
+<h2>4. lifecycle / tag 口径（纠偏）</h2>
+<div class="fix">
+  design#46 写：<code>new / active_7d / active_30d / churn_30 / … / never_login</code> — <b>与现网不符，不用。</b>
+</div>
+<div class="ok">
+  <b>采用（与旧设备标签 + user_tag 一致）:</b><br>
+  <code>new → reactivated → oneday → growth → churn → silent → dormant → stable → low</code>（命中即止）
+</div>
+<p>现网分布抽样（佐证同套枚举）：</p>
+<ul>
+  <li>test <code>dws_device_tag_d_d</code>：dormant/silent/growth/new/low/reactivated/stable/oneday/churn（+大量 NULL）</li>
+  <li>prod <code>dws_user_tag_d_d</code>：同 9 档</li>
+</ul>
+<p>其余 tag：<b>复用 user_tag</b> — pay 500/5000（工程分 50000/500000）、video 7d、ad 7d；宽表字段对齐旧 <code>dws_device_tag_d_d</code> 列集（uid→device_id）。</p>
+
+<h2>5. 6 表结构（纠偏后 · 对齐姿态 F）</h2>
+<table>
+  <tr><th>#</th><th>层</th><th>表</th><th>主键 / 分区</th><th>参照</th></tr>
+  <tr><td>1</td><td>dwm</td><td><code>paimon.dwm.dwm_device_ad_d_d</code></td><td><b>dt 分区</b> · PK(dt,app_id,device_id)</td><td>dwm_user_ad_d_d</td></tr>
+  <tr><td>2</td><td>dwm</td><td><code>paimon.dwm.dwm_device_video_d_d</code></td><td><b>dt 分区</b> · PK(dt,app_id,device_id)</td><td>dwm_user_video_d_d</td></tr>
+  <tr><td>3</td><td>dwm</td><td><code>paimon.dwm.dwm_device_active_d_d</code></td><td><b>dt 分区</b> · PK(dt,app_id,device_id)</td><td>dwm_user_active_d_d</td></tr>
+  <tr><td>4</td><td>dws</td><td><code>paimon.dws.dws_device_finance_d_d</code></td><td>无 dt · PK(app_id,device_id) · daily OVERWRITE</td><td>dws_user_finance_d_d</td></tr>
+  <tr><td>5</td><td>dim</td><td><code>paimon.dim.dim_device_all_d_d</code></td><td>无 dt · PK(app_id,device_id) · daily OVERWRITE</td><td>dim_user_all_d_d · 注册优先 + pv&gt;login&gt;paid COALESCE</td></tr>
+  <tr><td>6</td><td>dws</td><td><code>paimon.dws.dws_device_tag_d_d</code></td><td>无 dt · PK(app_id,device_id) · daily OVERWRITE</td><td>dws_user_tag_d_d · 5 表 JOIN</td></tr>
+</table>
+<p>共同：bucket=64（DWM 日增可按 user_tag 对照用 8，阶段3写 DDL 时与 user_tag 同档对齐再定）· merge-engine=deduplicate · S3 lakehouse。</p>
+
+<h2>6. wrapper / 调度</h2>
+<pre># 选 A · 串行：user_tag wrapper 成功后 append device_tag 6 步 + T2 shadow
+# cron 仍 UTC 03:00 = 北京 11:00（与 user_tag 同一条）
+# device_tag 6 步顺序（对齐 design#46）:
+#   1 ad → 2 finance → 3 video → 4 active → 5 dim_device_all → 6 device_tag 宽表
+#   7 mysql cli INSERT OVERWRITE → SR dws_device_tag_d_d_shadow
+</pre>
+<div class="note">阶段3实现时改 user_tag wrapper 尾巴挂载；不另开并行 cron。</div>
+
+<h2>7. 阶段3开发范围（待本回执放行）</h2>
+<ol>
+  <li>按姿态 F 新建 device 侧 spark-sql / Scala 元数据框架（镜像 user_tag 目录结构），<b>不拷旧 py</b></li>
+  <li>6 表 DDL + daily SQL + <code>device_tag_wrapper.sh</code>；挂到 user_tag wrapper 串行</li>
+  <li>T2 SR shadow 三档（draft / test_om / prod_om）对齐 user_tag</li>
+  <li>验数：行数 / lifecycle 9 档分布 / 抽样 20 device / 对标 test 旧表枚举</li>
+  <li>平台新建或推进 session（显示名：<code>【设备标签】dws_device_tag_d_d · 又初</code>），走阶段发布</li>
+</ol>
+
+<h2>8. 请审 / 放行点</h2>
+<ul>
+  <li>✔ lifecycle 纠偏为 user_tag 9 档</li>
+  <li>✔ DWM 有 dt、快照表无 dt</li>
+  <li>✔ cron A 串行</li>
+  <li>✔ 不加 network/screen/ua</li>
+  <li>✔ 按 F 重写</li>
+</ul>
+<div class="warn">若认可以上纠偏，请回 <b>GO 阶段3</b>；若 lifecycle 仍要坚持 design#46 那套枚举，请明示，开发前改回。</div>
+
+<p style="color:#888;margin-top:32px;font-size:12px;">
+  本地副本：<code>omdb/tgbot/outgoing/dws_device_tag_stage2_ack_2026-07-28.html</code><br>
+  关联：library#46 · bus#5554 · user_tag <code>b4cf1f0a</code>
+</p>
+
+</body>
+</html>

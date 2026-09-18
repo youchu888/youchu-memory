@@ -1,0 +1,16 @@
+{
+  "test": {
+    "dwd_video_event_h": [],
+    "dwm_content_metric_d_d": [],
+    "ads_content_rank_d_d": [],
+    "ads_content_rank_w_d": [],
+    "ads_content_rank_m_d": []
+  },
+  "prod": {
+    "dwd_video_event_h": [],
+    "dwm_content_metric_d_d": [],
+    "ads_content_rank_d_d": [],
+    "ads_content_rank_w_d": [],
+    "ads_content_rank_m_d": []
+  }
+}

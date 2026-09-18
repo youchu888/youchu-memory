@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>产品归因月报 · 2026-06-24 ~ 2026-07-23</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;margin:0;padding:16px;background:#f5f6f8;line-height:1.55}
+.wrap{max-width:1280px;margin:0 auto}
+.card{background:#fff;border-radius:10px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+h1{font-size:1.35rem;margin:0 0 8px}
+h2{font-size:1.05rem;margin:0 0 12px;border-left:4px solid #2563eb;padding-left:8px}
+table{width:100%;border-collapse:collapse;font-size:0.84rem}
+th,td{border:1px solid #e5e7eb;padding:8px;vertical-align:top;word-break:break-word}
+th{background:#f9fafb}
+tr.warn{background:#fff7ed} tr.ok{background:#f0fdf4}
+.tag{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:2px 8px;border-radius:4px;margin:2px;font-size:.8rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>注册归因成功率 · 产品月报</h1>
+<p>统计窗 <b>2026-06-24</b> ~ <b>2026-07-23</b> · prod · 生成 2026-07-24 · 又初</p>
+<div class="card">
+<h2>口径</h2>
+<ul>
+<li>入围：is_run=1 且 iOS + organic + attribution_flag=1</li>
+<li>成功率 = 成功数 / result 候选数；覆盖率 = result 行数 / DWD 入围数</li>
+<li>关注线：成功率 &lt; 70.0% 或覆盖率 &lt; 80%</li>
+</ul>
+<p><span class='tag'>JHG-004</span><span class='tag'>JHG-015</span><span class='tag'>JHG-052</span><span class='tag'>JHG-059</span><span class='tag'>JHG-064</span><span class='tag'>JHG-087</span><span class='tag'>JHG-092</span><span class='tag'>YD-002</span><span class='tag'>YD-036</span><span class='tag'>YD-092</span></p>
+</div>
+<div class="card">
+<h2>汇总表</h2>
+<table>
+<thead><tr>
+<th>产品</th><th>结论</th><th>总注册</th><th>iOS自然</th><th>入围</th><th>is_run</th>
+<th>候选</th><th>成功</th><th>失败</th><th>成功率</th><th>覆盖率</th><th>原因说明</th>
+</tr></thead>
+<tbody><tr class='warn'><td>JHG-004</td><td>覆盖不足</td><td>193368</td><td>9235</td><td>1863</td><td>1</td><td>467</td><td>413</td><td>54</td><td>88.44%</td><td>25.07%</td><td>入围 1863 条，result 仅 467 条（覆盖率 25.07%），未入表 1396 条。<br/>失败 score_below_threshold：54 条<br/>候选内成功率 88.44%（413/467）。</td></tr><tr class='warn'><td>JHG-015</td><td>未跑归因</td><td>53031</td><td>350</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>dim.dim_app_attribution_config 未开启 is_run=1，归因计算未生效。<br/>有 iOS 自然量 350，但 attribution_flag=1 为 0：客户端未标记需归因。</td></tr><tr class='warn'><td>JHG-052</td><td>未跑归因</td><td>1226518</td><td>17570</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>dim.dim_app_attribution_config 未开启 is_run=1，归因计算未生效。<br/>有 iOS 自然量 17570，但 attribution_flag=1 为 0：客户端未标记需归因。</td></tr><tr class='warn'><td>JHG-059</td><td>未跑归因</td><td>883294</td><td>3830</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>dim.dim_app_attribution_config 未开启 is_run=1，归因计算未生效。<br/>有 iOS 自然量 3830，但 attribution_flag=1 为 0：客户端未标记需归因。</td></tr><tr class='warn'><td>JHG-064</td><td>未跑归因</td><td>513511</td><td>3106</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>dim.dim_app_attribution_config 未开启 is_run=1，归因计算未生效。<br/>有 iOS 自然量 3106，但 attribution_flag=1 为 0：客户端未标记需归因。</td></tr><tr class='warn'><td>JHG-087</td><td>未跑归因</td><td>42168</td><td>177</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>dim.dim_app_attribution_config 未开启 is_run=1，归因计算未生效。<br/>有 iOS 自然量 177，但 attribution_flag=1 为 0：客户端未标记需归因。</td></tr><tr class='warn'><td>JHG-092</td><td>未跑归因</td><td>479512</td><td>3302</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>dim.dim_app_attribution_config 未开启 is_run=1，归因计算未生效。<br/>有 iOS 自然量 3302，但 attribution_flag=1 为 0：客户端未标记需归因。</td></tr><tr class='warn'><td>YD-002</td><td>无数据</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>近窗 prod 无 YD-002 注册明细，请核对 app_id 或上报是否开通。</td></tr><tr class='warn'><td>YD-036</td><td>无数据</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>近窗 prod 无 YD-036 注册明细，请核对 app_id 或上报是否开通。</td></tr><tr class='warn'><td>YD-092</td><td>无数据</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td><td>近窗 prod 无 YD-092 注册明细，请核对 app_id 或上报是否开通。</td></tr></tbody>
+</table>
+</div>
+<div class='card'><h2>日趋势 · JHG-004</h2><table><thead><tr><th>dt</th><th>候选</th><th>成功</th><th>成功率%</th></tr></thead><tbody><tr><td>2026-06-29</td><td>4</td><td>2</td><td>50.0</td></tr><tr><td>2026-06-30</td><td>12</td><td>11</td><td>91.7</td></tr><tr><td>2026-07-01</td><td>25</td><td>22</td><td>88.0</td></tr><tr><td>2026-07-02</td><td>23</td><td>22</td><td>95.7</td></tr><tr><td>2026-07-03</td><td>25</td><td>22</td><td>88.0</td></tr><tr><td>2026-07-04</td><td>28</td><td>24</td><td>85.7</td></tr><tr><td>2026-07-05</td><td>29</td><td>25</td><td>86.2</td></tr><tr><td>2026-07-06</td><td>3</td><td>3</td><td>100.0</td></tr><tr><td>2026-07-08</td><td>1</td><td>0</td><td>0.0</td></tr><tr><td>2026-07-09</td><td>10</td><td>9</td><td>90.0</td></tr><tr><td>2026-07-10</td><td>11</td><td>10</td><td>90.9</td></tr><tr><td>2026-07-11</td><td>12</td><td>12</td><td>100.0</td></tr><tr><td>2026-07-12</td><td>21</td><td>19</td><td>90.5</td></tr><tr><td>2026-07-13</td><td>14</td><td>13</td><td>92.9</td></tr><tr><td>2026-07-14</td><td>15</td><td>14</td><td>93.3</td></tr><tr><td>2026-07-15</td><td>23</td><td>22</td><td>95.7</td></tr><tr><td>2026-07-16</td><td>25</td><td>23</td><td>92.0</td></tr><tr><td>2026-07-17</td><td>22</td><td>21</td><td>95.5</td></tr><tr><td>2026-07-18</td><td>28</td><td>26</td><td>92.9</td></tr><tr><td>2026-07-19</td><td>31</td><td>26</td><td>83.9</td></tr><tr><td>2026-07-20</td><td>28</td><td>23</td><td>82.1</td></tr><tr><td>2026-07-21</td><td>18</td><td>15</td><td>83.3</td></tr><tr><td>2026-07-22</td><td>27</td><td>20</td><td>74.1</td></tr><tr><td>2026-07-23</td><td>32</td><td>29</td><td>90.6</td></tr></tbody></table></div>
+<div class="card">
+<h2>结论摘要</h2>
+<ul>
+<li>YD-002 / YD-036 / YD-092：prod 无注册，先核对 app_id。</li>
+<li>JHG-015/052/059/064/087/092：未配归因白名单且 attribution_flag 全 0，链路未开。</li>
+<li>JHG-004：候选内成功率约 89%，失败均为打分低于阈值；覆盖率约 25%，需补 result 覆盖。</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

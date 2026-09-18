@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>dws_device_tag_d_d · Spark → paimon 设计稿 · daily 快照姿态 F</title>
+<style>
+body { font-family: -apple-system, "PingFang SC", sans-serif; max-width: 1100px; margin: 24px auto; padding: 0 20px; color: #222; line-height: 1.55; }
+h1 { border-bottom: 2px solid #1a73e8; padding-bottom: 8px; }
+h2 { border-left: 4px solid #1a73e8; padding-left: 10px; margin-top: 32px; }
+h3 { color: #333; margin-top: 22px; }
+code, pre { font-family: "SF Mono", Menlo, Consolas, monospace; }
+pre { background: #f6f8fa; padding: 12px 14px; border-radius: 6px; overflow-x: auto; font-size: 13px; }
+code { background: #f0f2f5; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px; }
+th, td { border: 1px solid #d1d5da; padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: #f6f8fa; font-weight: 600; }
+.note { background: #e7f5ff; border-left: 4px solid #1971c2; padding: 10px 14px; margin: 12px 0; }
+.decision { background: #f8f9fa; border: 1px solid #dee2e6; padding: 12px 16px; border-radius: 6px; margin: 12px 0; }
+.warn { background: #fff5f5; border-left: 4px solid #f03e3e; padding: 10px 14px; margin: 12px 0; }
+.ok { background: #f4fff4; border: 1px solid #2f9e44; padding: 10px 14px; margin: 12px 0; }
+</style>
+</head>
+<body>
+
+<h1>dws_device_tag_d_d · Spark → paimon 设计稿</h1>
+<p><b>建档:</b> 2026-07-27 22:35 东京 · <b>作者:</b> 狂人 · <b>状态:</b> 阶段 2 · 送审 · <b>参照:</b> user_tag 姿态 F</p>
+
+<h2>1. 基点</h2>
+
+<div class="note">
+<b>本项目 = device_tag 迁移到 Spark + paimon 全链路。</b><br>
+框架 = Scala 元数据驱动 SQL 生成 (读元数据规则 → 动态生成 SQL → 执行) · daily 全量 INSERT OVERWRITE 快照姿态 · 完全对齐 user_tag 姿态 F。<br>
+规则 (lifecycle 分档 / pay 阈值 / video 7d / ad 7d) 配在元数据里，改元数据不改代码。
+</div>
+
+<ul>
+<li><b>粒度</b>：<code>(app_id, device_id)</code> · 无 <code>dt</code> 分区 · daily INSERT OVERWRITE 全表覆写 (快照口径, 与 <code>dim_user_all_d_d</code> 姿态一致)</li>
+<li><b>兜底逻辑</b>：daily 覆写做修正 — 每日一版快照，历史 device 属性有更新一次覆写掉</li>
+<li><b>调度</b>：hadoop-1 独立 wrapper.sh 6 步 · cron 北京 11:00 = UTC 03:00</li>
+<li><b>下游</b>：paimon → SR shadow (mysql cli INSERT OVERWRITE) 三档发布 (draft / test_om / prod_om)</li>
+</ul>
+
+<h2>2. 6 张 paimon 表清单</h2>
+
+<table>
+<tr><th>#</th><th>层</th><th>表</th><th>主键</th><th>参照</th><th>作用</th></tr>
+<tr><td>1</td><td>dwm</td><td><code>paimon.dwm.dwm_device_ad_d_d</code></td><td>(app_id, device_id)</td><td>dwm_user_ad_d_d</td><td>广告事件 7d / ever 汇总 (impression / click / reward)</td></tr>
+<tr><td>2</td><td>dwm</td><td><code>paimon.dwm.dwm_device_video_d_d</code></td><td>(app_id, device_id)</td><td>dwm_user_video_d_d</td><td>视频行为 7d / ever (次数 / 时长 / 完播)</td></tr>
+<tr><td>3</td><td>dwm</td><td><code>paimon.dwm.dwm_device_active_d_d</code></td><td>(app_id, device_id)</td><td>dwm_user_active_d_d</td><td>停留 60/300 分档 · 活跃天数 · 最末登</td></tr>
+<tr><td>4</td><td>dws</td><td><code>paimon.dws.dws_device_finance_d_d</code></td><td>(app_id, device_id)</td><td>dws_user_finance_d_d</td><td>累计付费 (total_amount / times / vip_flag / first_pay / last_pay)</td></tr>
+<tr><td>5</td><td>dim</td><td><code>paimon.dim.dim_device_all_d_d</code></td><td>(app_id, device_id)</td><td>dim_user_all_d_d</td><td>device 属性宽表 (device_model / os / geo / channel / register_time / 首末登) · COALESCE 注册优先 pv&gt;login&gt;paid 兜底</td></tr>
+<tr><td>6</td><td>dws</td><td><code>paimon.dws.dws_device_tag_d_d</code></td><td>(app_id, device_id)</td><td>dws_user_tag_d_d</td><td>最终标签宽表 · 5 张 JOIN + tag 分档</td></tr>
+</table>
+
+<div class="note">
+<b>共同 DDL 特性</b>：<code>bucket = 64</code> · <code>merge-engine = deduplicate</code> · <b>无 <code>dt</code> 分区列</b> · S3 lakehouse 路径 <code>s3://backup/lakehouse/&lt;db&gt;.db/&lt;table&gt;/</code>
+</div>
+
+<h2>3. dwd 上游数据源 (与 user_tag 同源)</h2>
+
+<table>
+<tr><th>上游 dwd</th><th>喂给</th><th>device_id 覆盖度</th></tr>
+<tr><td><code>paimon.dwd.dwd_ad_event_r</code> (or 等价)</td><td>dwm_device_ad_d_d</td><td>有 device_id</td></tr>
+<tr><td><code>paimon.dwd.dwd_video_play_r</code></td><td>dwm_device_video_d_d</td><td>有 device_id</td></tr>
+<tr><td><code>paimon.dwd.dwd_page_view_r</code></td><td>dwm_device_active_d_d · dim_device_all_d_d</td><td>有 device_id (主 pv 源)</td></tr>
+<tr><td><code>paimon.dwd.dwd_login_v2_r</code></td><td>dim_device_all_d_d</td><td>有 device_id</td></tr>
+<tr><td><code>paimon.dwd.dwd_order_paid_r</code></td><td>dws_device_finance_d_d · dim_device_all_d_d</td><td>大概率有 device_id (下单机型), <b>需 GO 前验证覆盖率</b></td></tr>
+<tr><td><code>paimon.dwd.dwd_register_v2_r</code></td><td>dim_device_all_d_d (register_time)</td><td>大概率有 device_id (注册机), <b>需 GO 前验证覆盖率</b></td></tr>
+</table>
+
+<div class="warn">
+<b>GO 前验数点 A</b>：<code>dwd_order_paid_r</code> / <code>dwd_register_v2_r</code> 里 device_id 空率若 &gt;10%, dim_device_all_d_d 的 register_time / first_pay 列要用 uid 反向 lookup 该 uid 最近 pv/login 事件的 device_id 兜底 — 阶段 3 开发前先跑 SQL 出这两个源的 device_id null_rate。
+</div>
+
+<h2>4. dim_device_all_d_d · COALESCE 姿态 (承 user_tag 姿态 F)</h2>
+
+<p>每个属性列都套注册优先 + pv&gt;login&gt;paid 优先级兜底 pattern:</p>
+
+<pre>COALESCE(
+  MIN_BY(CASE WHEN src='register' THEN &lt;col&gt; END, event_time),
+  MIN_BY(CASE WHEN src IN ('pv','login','paid') THEN &lt;col&gt; END,
+         named_struct('p', priority, 't', event_time))
+) AS &lt;col&gt;
+-- priority: pv=1, login=2, paid=3</pre>
+
+<p>register_time 特例: 无 register 兜底常量 <code>2025-12-20 00:00:00</code> (与 user_tag 同)</p>
+
+<h2>5. dws_device_tag_d_d · tag 口径 (复用 user_tag 分档)</h2>
+
+<table>
+<tr><th>字段</th><th>分档口径</th><th>来源</th></tr>
+<tr><td><code>lifecycle_flag</code></td><td>9 档 (new / active_7d / active_30d / churn_30 / churn_60 / churn_90 / churn_180 / churn_ever / never_login)</td><td>dwm_device_active_d_d · dim_device_all_d_d</td></tr>
+<tr><td><code>pay_level</code></td><td>500 / 5000 阈值分档 (free / small / mid / high)</td><td>dws_device_finance_d_d.total_amount</td></tr>
+<tr><td><code>video_level</code></td><td>7d 播放次数分档</td><td>dwm_device_video_d_d</td></tr>
+<tr><td><code>ad_level</code></td><td>7d imp / click / reward 分档</td><td>dwm_device_ad_d_d</td></tr>
+<tr><td><code>device_model</code> / <code>os</code> / <code>geo</code> / <code>channel</code> / <code>register_time</code> / <code>first_login</code> / <code>last_login</code></td><td>透传</td><td>dim_device_all_d_d</td></tr>
+</table>
+
+<h2>6. wrapper 6 步流程</h2>
+
+<pre>#!/bin/bash
+# device_tag_wrapper.sh &lt;dt&gt; &lt;profile: S|M|L&gt;
+# hadoop-1 · UTC 03:00 = 北京 11:00
+
+dt=$1; profile=${2:-L}
+log_dir=/home/ec2-user/spark/device_tag/logs
+ts=$(date +%Y%m%d-%H%M%S)
+
+set -e
+spark-sql -f /home/ec2-user/spark/device_tag/sql/dwm_device_ad_d_d.sql       --hivevar dt=$dt   # step1
+spark-sql -f /home/ec2-user/spark/device_tag/sql/dws_device_finance_d_d.sql  --hivevar dt=$dt   # step2
+spark-sql -f /home/ec2-user/spark/device_tag/sql/dwm_device_video_d_d.sql    --hivevar dt=$dt   # step3
+spark-sql -f /home/ec2-user/spark/device_tag/sql/dwm_device_active_d_d.sql   --hivevar dt=$dt   # step4
+spark-sql -f /home/ec2-user/spark/device_tag/sql/dim_device_all_d_d.sql      --hivevar dt=$dt   # step5
+spark-sql -f /home/ec2-user/spark/device_tag/sql/dws_device_tag_d_d.sql      --hivevar dt=$dt   # step6
+
+# step7 · T2 SR shadow sync
+mysql -h &lt;SR_FE&gt; -P 9030 -u admin -p"$SR_ADMIN_PWD" \
+  -e "INSERT OVERWRITE dws.dws_device_tag_d_d_shadow SELECT * FROM paimon.dws.dws_device_tag_d_d;"
+
+echo "=== wrapper ALL DONE dt=$dt ==="</pre>
+
+<div class="note">
+资源模板锁 (对齐 user_tag)：<code>--driver-memory 8g --executor-memory 12g --num-executors 30 --executor-cores 4 --conf spark.sql.shuffle.partitions=1600 --conf spark.sql.adaptive.*=true --conf spark.sql.defaultCatalog=paimon</code>
+</div>
+
+<h2>7. T2 · SR shadow 三档发布</h2>
+
+<table>
+<tr><th>档</th><th>表</th><th>写方</th><th>触发</th></tr>
+<tr><td>draft</td><td><code>SR.dws.dws_device_tag_d_d_shadow</code></td><td>wrapper step7 (mysql cli INSERT OVERWRITE from paimon)</td><td>cron 每日 UTC 03:00</td></tr>
+<tr><td>test_om</td><td>dc-platform D2T 手工同步</td><td>知秋 UI 手动</td><td>验数后</td></tr>
+<tr><td>prod_om</td><td>dc-platform T2P 手工同步</td><td>知秋 UI 手动</td><td>test_om 观察后</td></tr>
+</table>
+
+<h2>8. cron 时点</h2>
+
+<pre>0 3 * * * bash /home/ec2-user/spark/device_tag/wrapper.sh \
+  $(TZ=Asia/Shanghai date -d yesterday '+\%Y-\%m-\%d') L \
+  &gt;&gt; /home/ec2-user/spark/device_tag/logs/cron_$(date +\%Y\%m\%d).log 2&gt;&amp;1</pre>
+
+<div class="warn">
+<b>cron 时点与 user_tag 冲突</b>：user_tag 已占 UTC 03:00 (北京 11:00), yarn 资源同时段可能挤。<br>
+选项: (A) 串联 — user_tag wrapper 尾巴 append device_tag 6 步, 一个 cron 拖着跑 (~ 60-80 min) · (B) 错开 — device_tag 挪 UTC 05:00 (北京 13:00)。<b>等钦定</b>。
+</div>
+
+<h2>9. 验数 5 步 (对齐 user_tag)</h2>
+
+<ol>
+<li>行数总量: <code>SELECT COUNT(*) FROM paimon.dws.dws_device_tag_d_d</code> · 与 SR shadow 一致</li>
+<li>dt 范围: dim_device_all_d_d 无 dt 列, 用 <code>MAX(last_login), MIN(register_time)</code> 检查合理边界</li>
+<li>采样 20 device 对比字段一致 (device_model / geo / channel / register_time / lifecycle_flag)</li>
+<li><code>SELECT lifecycle_flag, COUNT(*) FROM dws_device_tag_d_d GROUP BY 1</code> 9 档分布合理 (不能全在一档)</li>
+<li>前 10 大 app 行数 · 与 dim_user_all_d_d 各 app device/user 比 ~1.2-2.0 (每人 1-2 device 合理)</li>
+</ol>
+
+<h2>10. 阶段 2 待钦定 (进阶段 3 开发前)</h2>
+
+<table>
+<tr><th>#</th><th>议题</th><th>选项</th></tr>
+<tr><td>1</td><td>dwd 源 device_id 空率验证</td><td>阶段 3 开发前先跑 null_rate SQL (order_paid + register_v2)</td></tr>
+<tr><td>2</td><td>cron 时点</td><td>A 串联 user_tag 尾巴 · B 错开 UTC 05:00</td></tr>
+<tr><td>3</td><td>老 SR 表基准</td><td>SR 有 <code>dws.dws_device_tag_d_d</code> 老 ETL 吗? 有=行数/分布对标, 无=首次落地无老基准</td></tr>
+<tr><td>4</td><td>属性列清单</td><td>dim_device_all_d_d 除上表列外, 还要 <code>network</code>/<code>screen</code>/<code>ua</code>?</td></tr>
+<tr><td>5</td><td>是否复用又初已交付的 6 dwm .py</td><td>又初的 device_tag_v2_job.py + paimon_dwm_materialize.py 存 <code>/tmp/spark_conflict_20260727/</code> · 全废重来 · 还是抽里面的 SQL 片段?</td></tr>
+</table>
+
+<h2>关联记忆</h2>
+<ul>
+<li>[[project_user_tag_spark_migration_v2_active_20260723]] — user_tag 姿态 F 源头</li>
+<li>[[project_dws_user_tag_shadow_sync_verify_20260727]] — T2 mysql cli 姿态</li>
+<li>[[feedback_spark_jobs_use_scala_paimon_pipeline]] — Scala 元数据驱动框架基点</li>
+<li>[[feedback_three_phase_discuss_design_develop_iron_rule]] — 3 阶段铁律</li>
+<li>[[project_paimon_full_lake_sr_hot_architecture_vision]] — paimon = 全量湖, SR = 热库</li>
+</ul>
+
+</body>
+</html>

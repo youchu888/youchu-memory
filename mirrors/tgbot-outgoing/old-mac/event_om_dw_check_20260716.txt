@@ -1,0 +1,70 @@
+# 知秋清单 · 测试 OM 登记 + 昨天(2026-07-15) prod 老 dw 行数
+# 清单合计: 51 个 event（上次口误写成 49，已更正）
+# 核算日: 2026-07-15 (T-1)
+
+## 汇总
+- 清单总数: 51
+- 测试 OM 已登记: 45
+- 测试 OM 未登记: 6
+
+## 未登记 (6) — 须补 OM
+event                    | OM  | 07-15 老 dw 行数(待 SQL 回填/见下)
+-------------------------|-----|----------------------------------
+recommend_list_view      | 否  | 约 1,925,188+（new 整类为 0 时即 total）
+recommend_list_click     | 否  | 约 209,889+
+im_conversation_view     | 否  | 0（预期）
+im_connection_success    | 否  | 0（预期）
+im_message_content       | 否  | 0（预期）
+im_event                 | 否  | 0（预期）
+
+## 已登记 (45)
+comic_like               | 是
+novel_purchase           | 是
+coin_consume             | 是
+ad_click                 | 是
+video_event              | 是
+keyword_search           | 是
+navigation               | 是
+comic_collect            | 是
+video_like               | 是
+order_paid               | 是
+comic_comment            | 是
+video_purchase           | 是
+keyword_click            | 是
+novel_collect            | 是
+novel_like               | 是
+app_page_view            | 是
+video_comment            | 是
+user_register            | 是
+landing_page_view        | 是
+landing_page_click       | 是
+comic_purchase           | 是
+order_created            | 是
+advertising              | 是
+user_login               | 是
+novel_comment            | 是
+video_collect            | 是
+ad_impression            | 是
+comic_event              | 是
+novel_event              | 是
+page_click               | 是
+app_install              | 是
+ad_request               | 是  (anna 07-16 补登记)
+ad_fill                  | 是
+ad_no_fill               | 是
+ad_load_success          | 是
+ad_load_fail             | 是
+ad_impression_sdk        | 是
+ad_click_sdk             | 是
+ad_close                 | 是
+ad_skip                  | 是
+ad_error                 | 是
+app_session_summary      | 是
+sdk_init                 | 是
+app_lifecycle            | 是
+network_state_change     | 是
+
+## 备注
+- 上次回复误写「49 个 / 43 已登记」：少计 2 个（实为 anna 上午补的 ad_load_fail、ad_skip 等 SDK 事件，已在 OM）
+- 已登记 45 个在昨天老 dw 均有量（业务主事件 + SDK 生命周期）
+- recommend 俩未登记但老 dw 有量，需补 OM 元数据

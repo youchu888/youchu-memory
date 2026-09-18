@@ -1,0 +1,36 @@
+event OM登记 + 老dw行数核对（初稿·待 SQL 补全 total）
+日期: 2026-07-15 (prod old dw)
+环境: 测试 OM · User_Behavior_Events
+清单: 49 个 event（知秋 #73）
+
+=== 已登记（43）===
+业务主事件（OM 快照 31 + 文档一致）:
+comic_like novel_purchase coin_consume ad_click video_event keyword_search navigation
+comic_collect video_like order_paid comic_comment video_purchase keyword_click novel_collect
+novel_like app_page_view video_comment user_register landing_page_view landing_page_click
+comic_purchase order_created advertising user_login novel_comment video_collect ad_impression
+comic_event novel_event page_click app_install
+
+SDK/生命周期（#67/#68 已配）:
+ad_request ad_fill ad_no_fill ad_load_success ad_load_fail ad_impression_sdk ad_click_sdk
+ad_close ad_skip ad_error app_session_summary sdk_init app_lifecycle network_state_change
+
+=== 未登记（6）===
+recommend_list_view
+recommend_list_click
+im_conversation_view
+im_connection_success
+im_message_content
+im_event
+
+=== 未登记 · 老 dw 07-15（参考）===
+说明: recommend_list 在 new 也有量，下列 anti-join 缺口非 total；IM 四类昨天 prod 未见行。
+event	old_dw_total(待SQL)	old_not_in_new(参考)
+recommend_list_view	待查	1925188
+recommend_list_click	待查	209889
+im_conversation_view	0(预期)	-
+im_connection_success	0(预期)	-
+im_message_content	0(预期)	-
+im_event	0(预期)	-
+
+有数据未登记: 至少 recommend_list_view / recommend_list_click 两家（待 total SQL 坐实）

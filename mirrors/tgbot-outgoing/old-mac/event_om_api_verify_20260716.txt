@@ -1,0 +1,62 @@
+# 知秋 51 event · OM 元数据 + 老 dw 07-15 核查
+# 核查时间: 2026-07-16
+# API: GET http://54.255.236.159:8012/api/v1/metadata/event/{name}
+# 重要: 该 API 固定读 **prod OM**（event_metadata_service.py 钦定 live prod），不是 test OM
+
+## 汇总（prod OM API 口径）
+- 清单: 51 个
+- prod OM 已登记(HTTP 200): 35
+- prod OM 未登记(HTTP 404): 16
+
+## 未登记 16 个 · prod API 实测应为 404
+### A. 从未进 prod OM（6）
+recommend_list_view          HTTP 404
+recommend_list_click         HTTP 404
+im_conversation_view         HTTP 404
+im_connection_success        HTTP 404
+im_message_content           HTTP 404
+im_event                     HTTP 404
+
+### B. 仅 test OM 有壳子，prod 仍 404（10）— #68 anna 让配的那批
+ad_request                   HTTP 404  (test OM 有，prod 无)
+ad_fill                      HTTP 404
+ad_no_fill                   HTTP 404
+ad_load_success              HTTP 404
+ad_load_fail                 HTTP 404
+ad_impression_sdk            HTTP 404
+ad_click_sdk                 HTTP 404
+ad_close                     HTTP 404
+ad_skip                      HTTP 404
+ad_error                     HTTP 404
+
+## 已登记 35 个 · prod API 应为 HTTP 200
+comic_like novel_purchase coin_consume ad_click video_event keyword_search navigation
+comic_collect video_like order_paid comic_comment video_purchase keyword_click novel_collect
+novel_like app_page_view video_comment user_register landing_page_view landing_page_click
+comic_purchase order_created advertising user_login novel_comment video_collect ad_impression
+comic_event novel_event page_click app_install
+sdk_init app_lifecycle app_session_summary network_state_change
+
+## 未登记 · 07-15 prod 老 dw 行数（见 SQL 附件回填）
+event                        old_dw_cnt
+recommend_list_view          (SQL)
+recommend_list_click         (SQL)
+im_conversation_view         0
+im_connection_success        0
+im_message_content           0
+im_event                     0
+ad_request                   0 (SDK 事件，老 dw 预期无独立 event 行)
+ad_fill                      0
+ad_no_fill                   0
+ad_load_success              0
+ad_load_fail                 0
+ad_impression_sdk            0
+ad_click_sdk                 0
+ad_close                     0
+ad_skip                      0
+ad_error                     0
+
+## 根因说明（#75/#76）
+- #73 说「45 已登记」是错的：把 test OM #68 新建的 10 个 SDK ad 事件算进去了
+- dc-platform 元数据 API 只查 prod OM；anna #68 只写了 test，prod UI/API 看不到 ad_request 等
+- 业务主事件 + sdk_init/app_lifecycle/app_session_summary/network_state_change 在 prod 早就有

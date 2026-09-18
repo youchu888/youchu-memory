@@ -1,0 +1,86 @@
+{
+  "dwd_video_event_h": {
+    "len": 3053,
+    "has_media_id": true,
+    "media_id_count": 4,
+    "has_nullif": false,
+    "has_unknown": false,
+    "has_enable_insert_strict": true,
+    "has_explicit_col_list": true,
+    "version": null,
+    "snippets": [
+      "-- LIVE 海豚 task dwd_video_event_h（三小时窗宏版 · bus#5668 media_id） SET enable_insert_strict = false; ALTER TABLE dwd.dwd_video_event_h ADD PARTIT",
+      "ion, play_duration, play_progress, video_behavior_key, video_behavior_name, media_id ) SELECT date_trunc('day', event_time) as dt, date_trunc ( 'hour', even",
+      "ehavior_name'), 20) as video_behavior_name, LEFT(get_json_string(payload,'$.media_id'), 256) AS media_id FROM dw.dw_user_event_detail_new WHERE dt IN (DATE_"
+    ]
+  },
+  "dwm_content_metric_d_d": {
+    "len": 16874,
+    "has_media_id": true,
+    "media_id_count": 12,
+    "has_nullif": true,
+    "has_unknown": true,
+    "has_enable_insert_strict": false,
+    "has_explicit_col_list": true,
+    "version": null,
+    "snippets": [
+      "P0#2 session 级 bitmap（一 session 一 uid，uv≤cnt） -- bus#5668: 显式 col_list（ALTER 后 media_id 在表末；禁靠位置对齐） INSERT OVERWRITE dwm.dwm_content_metric_d_d PARTITION (p$[yyyyMMdd-",
+      "1]) ( dt, app_id, content_type, content_id, title, category_name, media_id, view_cnt, like_cnt, collect_cnt, comment_cnt, purchase_cnt, sum_play_m",
+      "RIM(e.video_type_name), '')) AS category_name, MAX(NULLIF(NULLIF(TRIM(e.media_id), ''), 'unknown')) AS media_id FROM dwd.dwd_video_event_h e WHERE e.dt ",
+      " MAX(e.comic_type_name) AS category_name, MAX(NULLIF(NULLIF(TRIM(e.media_id), ''), 'unknown')) AS media_id FROM dwd.dwd_comic_event_d e WHERE e.dt ",
+      " MAX(e.novel_type_name) AS category_name, MAX(NULLIF(NULLIF(TRIM(e.media_id), ''), 'unknown')) AS media_id FROM dwd.dwd_novel_event_d e WHERE e.dt ",
+      " END AS category_name, CASE WHEN m.content_type = 'comic' THEN cm.media_id WHEN m.content_type = 'novel' THEN nm.media_id ELSE vm.media_id",
+      " END AS media_id, m.view_cnt, m.like_cnt, m.collect_cnt, m.comment_cnt, m.pu"
+    ]
+  },
+  "ads_content_rank_d_d": {
+    "len": 19074,
+    "has_media_id": true,
+    "media_id_count": 7,
+    "has_nullif": false,
+    "has_unknown": true,
+    "has_enable_insert_strict": false,
+    "has_explicit_col_list": true,
+    "version": null,
+    "snippets": [
+      " dt, app_id, content_type, user_type, content_id, title, category_name, media_id, view_cnt, view_uv, like_cnt, collect_cnt, comment_cnt, purchase_cnt, s",
+      " MAX(title) AS title, MAX(category_name) AS category_name, MAX(media_id) AS media_id, SUM(view_cnt) AS view_cnt, SUM(like_cnt) AS like_",
+      " d.app_id, d.content_type, d.content_id, d.title, d.category_name, d.media_id, 'all' AS user_type, c.view_cnt_all AS view_cnt, c.like",
+      " d.app_id, d.content_type, d.content_id, d.title, d.category_name, d.media_id, 'vip' AS user_type, c.view_cnt_vip AS view_cnt, c.like",
+      " d.app_id, d.content_type, d.content_id, d.title, d.category_name, d.media_id, 'non_vip' AS user_type, c.view_cnt_non_vip AS view_cnt, ",
+      "ype, m.user_type, m.content_id, m.title, m.category_name, m.media_id, m.view_cnt, m.view_uv, m.like_cnt, m.collect_cnt, m.commen"
+    ]
+  },
+  "ads_content_rank_w_d": {
+    "len": 5873,
+    "has_media_id": true,
+    "media_id_count": 5,
+    "has_nullif": false,
+    "has_unknown": false,
+    "has_enable_insert_strict": false,
+    "has_explicit_col_list": true,
+    "version": null,
+    "snippets": [
+      "type, content_id, dt, week_start_dt, week_end_dt, title, category_name, media_id, view_cnt, view_uv, like_cnt, collect_cnt, comment_cnt, purchas",
+      " MAX(title) AS title, MAX(category_name) AS category_name, MAX(media_id) AS media_id, SUM(view_cnt) AS view_cnt, SUM(like_cnt) AS like_",
+      " COALESCE(c.category_name, u.category_name) AS category_name, c.media_id, c.view_cnt, c.like_cnt, c.collect_cnt, c.comment_cnt, c.purchase_cnt, ",
+      "dt AS dt, pd.week_start_dt, pd.week_end_dt, m.title, m.category_name, m.media_id, m.view_cnt, m.view_uv, m.like_cnt, m.collect_cnt, m.comment_cn"
+    ]
+  },
+  "ads_content_rank_m_d": {
+    "len": 5720,
+    "has_media_id": true,
+    "media_id_count": 5,
+    "has_nullif": false,
+    "has_unknown": false,
+    "has_enable_insert_strict": false,
+    "has_explicit_col_list": true,
+    "version": null,
+    "snippets": [
+      "ntent_id, month_no, month_start_dt, month_end_dt, title, category_name, media_id, view_cnt, view_uv, like_cnt, collect_cnt, comment_cnt, purchas",
+      " MAX(title) AS title, MAX(category_name) AS category_name, MAX(media_id) AS media_id, SUM(view_cnt) AS view_cnt, SUM(like_cnt) AS like_",
+      " COALESCE(c.category_name, u.category_name) AS category_name, c.media_id, c.view_cnt, c.like_cnt, c.collect_cnt, c.comment_cnt, c.purchase_cnt, ",
+      "d.month_no, pd.month_start_dt, pd.month_end_dt, m.title, m.category_name, m.media_id, m.view_cnt, m.view_uv, m.like_cnt, m.collect_cnt, m.comment_cn"
+    ]
+  }
+}

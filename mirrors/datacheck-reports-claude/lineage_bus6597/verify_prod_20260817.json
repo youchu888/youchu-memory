@@ -1,0 +1,529 @@
+[
+  {
+    "fqn": "dws.dws_ad_request_metric_d",
+    "column_count": 5,
+    "sr_column_count": 5,
+    "lineage_sources": [
+      "dwd.dwd_ad_request_d"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 180032172673152,
+        "task_name": "dws_ad_request_metric_d",
+        "wf_code": 174729604091712,
+        "wf_name": "wf_dws_汇总_日",
+        "insert_target": "dws.dws_ad_request_metric_d",
+        "physical_tables": [
+          "dwd.dwd_ad_request_d"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "dws.dws_app_channel_retention_d",
+    "column_count": 7,
+    "sr_column_count": 7,
+    "lineage_sources": [
+      "dwd.dwd_user_login_d",
+      "dwd.dwd_user_register_d"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729603403602,
+        "task_name": "dws_app_channel_retention_d",
+        "wf_code": 174729604091712,
+        "wf_name": "wf_dws_汇总_日",
+        "insert_target": "dws.dws_app_channel_retention_d",
+        "physical_tables": [
+          "dwd.dwd_user_login_d",
+          "dwd.dwd_user_register_d"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "dws.dws_app_coin_consume_d_h",
+    "column_count": 16,
+    "sr_column_count": 16,
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_coin_consume_h"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 180989598224512,
+        "task_name": "dws_app_coin_consume_d_h",
+        "wf_code": 174729604091712,
+        "wf_name": "wf_dws_汇总_日",
+        "insert_target": "dws.dws_app_coin_consume_d_h",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_coin_consume_h"
+        ]
+      },
+      {
+        "task_code": 180989601539200,
+        "task_name": "dws_app_coin_consume_d_h",
+        "wf_code": 174729505598272,
+        "wf_name": "wf_用户活跃留存_小时",
+        "insert_target": "dws.dws_app_coin_consume_d_h",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_coin_consume_h"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "dws.dws_app_retention_d",
+    "column_count": 37,
+    "sr_column_count": 37,
+    "lineage_sources": [
+      "dws.dws_app_retention_d_h"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729603403587,
+        "task_name": "dws_app_retention_d_h",
+        "wf_code": 174729604091712,
+        "wf_name": "wf_dws_汇总_日",
+        "insert_target": "dws.dws_app_retention_d_h",
+        "physical_tables": [
+          "dws.dws_app_user_d_h"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "rule": "无同名现网 task",
+        "detail": "仅找到 dws_app_retention_d_h task_code=174729603403587，INSERT→dws.dws_app_retention_d_h"
+      },
+      {
+        "rule": "源表缺边",
+        "detail": "现网 SQL 有血缘未挂: dws.dws_app_user_d_h",
+        "task_code": 174729603403587
+      }
+    ]
+  },
+  {
+    "fqn": "dws.dws_app_user_m",
+    "column_count": 13,
+    "sr_column_count": 13,
+    "lineage_sources": [
+      "dws.dws_app_user_m_d_new"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729603403585,
+        "task_name": "dws_app_user_m_d_new",
+        "wf_code": 174729604091712,
+        "wf_name": "wf_dws_汇总_日",
+        "insert_target": "dws.dws_app_user_m_d_new",
+        "physical_tables": [
+          "dim.dim_date_info_all",
+          "dws.dws_app_user_d_h"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "rule": "无同名现网 task",
+        "detail": "仅找到 dws_app_user_m_d_new task_code=174729603403585，INSERT→dws.dws_app_user_m_d_new"
+      },
+      {
+        "rule": "源表缺边",
+        "detail": "现网 SQL 有血缘未挂: dim.dim_date_info_all, dws.dws_app_user_d_h",
+        "task_code": 174729603403585
+      }
+    ]
+  },
+  {
+    "fqn": "dws.dws_channel_daily_funnel_d",
+    "column_count": 29,
+    "sr_column_count": 29,
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_coin_consume_h",
+      "dwd.dwd_comic_event_d",
+      "dwd.dwd_novel_event_d",
+      "dwd.dwd_order_created_h",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_register_d_v2",
+      "dwd.dwd_video_event_h"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729603403589,
+        "task_name": "dws_channel_daily_funnel_d",
+        "wf_code": 174729604091712,
+        "wf_name": "wf_dws_汇总_日",
+        "insert_target": "dws.dws_channel_daily_funnel_d",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_app_page_view_d",
+          "dwd.dwd_coin_consume_h",
+          "dwd.dwd_comic_event_d",
+          "dwd.dwd_novel_event_d",
+          "dwd.dwd_order_created_h",
+          "dwd.dwd_order_paid_d",
+          "dwd.dwd_user_register_d_v2",
+          "dwd.dwd_video_event_h"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "dws.dws_session_duration_user_d",
+    "column_count": 16,
+    "sr_column_count": 16,
+    "lineage_sources": [
+      "dwm.dwm_app_session_sid_d"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 180283360953472,
+        "task_name": "dws_session_duration_user_d",
+        "wf_code": 174729604091712,
+        "wf_name": "wf_dws_汇总_日",
+        "insert_target": "dws.dws_session_duration_user_d",
+        "physical_tables": [
+          "dwm.dwm_app_session_sid_d"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "dws.dws_user_first_recharge_retention_d_h",
+    "column_count": 37,
+    "sr_column_count": 37,
+    "lineage_sources": [
+      "dim.dim_region_info_all",
+      "dim.dim_user_all",
+      "dws.dws_app_user_d_h"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729603403594,
+        "task_name": "dws_user_first_recharge_retention_d_h",
+        "wf_code": 174729604091712,
+        "wf_name": "wf_dws_汇总_日",
+        "insert_target": "dws.dws_user_first_recharge_retention_d_h",
+        "physical_tables": [
+          "dim.dim_region_info_all",
+          "dim.dim_user_all",
+          "dws.dws_app_user_d_h"
+        ]
+      },
+      {
+        "task_code": 174729505012547,
+        "task_name": "dws_user_first_recharge_retention_d_h",
+        "wf_code": 174729505598272,
+        "wf_name": "wf_用户活跃留存_小时",
+        "insert_target": "dws.dws_user_first_recharge_retention_d_h",
+        "physical_tables": [
+          "dim.dim_region_info_all",
+          "dim.dim_user_all",
+          "dws.dws_app_user_d_h"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "dws.dws_user_promotion_behavior_h",
+    "column_count": 23,
+    "sr_column_count": 23,
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_ad_click_h",
+      "dwd.dwd_coin_consume_h",
+      "dwd.dwd_keyword_search_h",
+      "dwd.dwd_order_created_h",
+      "dwm.dwm_video_event_h",
+      "dws.dws_settlement_detail"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174798587812674,
+        "task_name": "dws_user_promotion_behavior_h",
+        "wf_code": 174798588110656,
+        "wf_name": "wf_行为评分_日",
+        "insert_target": "dws.dws_user_promotion_behavior_h",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_ad_click_h",
+          "dwd.dwd_coin_consume_h",
+          "dwd.dwd_keyword_search_h",
+          "dwd.dwd_order_created_h",
+          "dwm.dwm_video_event_h",
+          "dws.dws_settlement_detail"
+        ]
+      },
+      {
+        "task_code": 174729366771522,
+        "task_name": "dws_user_promotion_behavior_h",
+        "wf_code": 174729367100224,
+        "wf_name": "wf_视频汇总_小时",
+        "insert_target": "dws.dws_user_promotion_behavior_h",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_ad_click_h",
+          "dwd.dwd_coin_consume_h",
+          "dwd.dwd_keyword_search_h",
+          "dwd.dwd_order_created_h",
+          "dwm.dwm_video_event_h",
+          "dws.dws_settlement_detail"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "dws.dws_user_tag_d",
+    "column_count": 53,
+    "sr_column_count": 53,
+    "lineage_sources": [
+      "dwd.dwd_ad_click_h",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_login_d_v2",
+      "dwd.dwd_user_register_d_v2",
+      "dwd.dwd_video_event_h"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 21949259453184,
+        "task_name": "dws_user_tag_d_d",
+        "wf_code": 174729508462400,
+        "wf_name": "wf_ads_日报表_日",
+        "insert_target": "dws.dws_user_tag_d_d",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_user_register_d_v2",
+          "dwm.dwm_app_active_user_d",
+          "dwm.dwm_user_ad_d",
+          "dwm.dwm_user_video_d",
+          "dws.dws_user_finance_d"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "rule": "无同名现网 task",
+        "detail": "仅找到 dws_user_tag_d_d task_code=21949259453184，INSERT→dws.dws_user_tag_d_d"
+      },
+      {
+        "rule": "源表缺边",
+        "detail": "现网 SQL 有血缘未挂: dim.dim_user_all, dwm.dwm_app_active_user_d, dwm.dwm_user_ad_d, dwm.dwm_user_video_d, dws.dws_user_finance_d",
+        "task_code": 21949259453184
+      }
+    ]
+  },
+  {
+    "fqn": "ads.ads_app_metrics_daily_d",
+    "column_count": 50,
+    "sr_column_count": 50,
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_ad_click_h",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_coin_consume_h",
+      "dwd.dwd_order_created_h",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_login_d_v2",
+      "dwd.dwd_user_register_d_v2",
+      "dwd.dwd_video_collect_d",
+      "dwd.dwd_video_comment_d",
+      "dwd.dwd_video_event_h",
+      "dwd.dwd_video_like_d",
+      "dwd.dwd_video_purchase_d"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729507871558,
+        "task_name": "ads_app_metrics_daily_d",
+        "wf_code": 174729508462400,
+        "wf_name": "wf_ads_日报表_日",
+        "insert_target": "ads.ads_app_metrics_daily_d",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_ad_click_h",
+          "dwd.dwd_app_page_view_d",
+          "dwd.dwd_coin_consume_h",
+          "dwd.dwd_order_created_h",
+          "dwd.dwd_order_paid_d",
+          "dwd.dwd_user_login_d_v2",
+          "dwd.dwd_user_register_d_v2",
+          "dwd.dwd_video_collect_d",
+          "dwd.dwd_video_comment_d",
+          "dwd.dwd_video_event_h",
+          "dwd.dwd_video_like_d",
+          "dwd.dwd_video_purchase_d"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "ads.ads_channel_metrics_daily_d",
+    "column_count": 44,
+    "sr_column_count": 44,
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_coin_consume_h",
+      "dwd.dwd_landing_page_click",
+      "dwd.dwd_landing_page_view_d",
+      "dwd.dwd_order_created_h",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_login_d_v2",
+      "dwd.dwd_user_register_d_v2",
+      "dwd.dwd_video_event_h"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729507871561,
+        "task_name": "ads_channel_metrics_daily_d",
+        "wf_code": 174729508462400,
+        "wf_name": "wf_ads_日报表_日",
+        "insert_target": "ads.ads_channel_metrics_daily_d",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_app_page_view_d",
+          "dwd.dwd_coin_consume_h",
+          "dwd.dwd_landing_page_click",
+          "dwd.dwd_landing_page_view_d",
+          "dwd.dwd_order_created_h",
+          "dwd.dwd_order_paid_d",
+          "dwd.dwd_user_login_d_v2",
+          "dwd.dwd_user_register_d_v2",
+          "dwd.dwd_video_event_h"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "ads.ads_channel_summary_d",
+    "column_count": 13,
+    "sr_column_count": 13,
+    "lineage_sources": [
+      "dws.dws_app_channel_retention_d",
+      "dws.dws_app_channel_summary_d",
+      "dws.dws_register_by_landing_page_d"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729507871556,
+        "task_name": "ads_channel_summary_d",
+        "wf_code": 174729508462400,
+        "wf_name": "wf_ads_日报表_日",
+        "insert_target": "ads.ads_channel_summary_d",
+        "physical_tables": [
+          "dws.dws_app_channel_retention_d",
+          "dws.dws_app_channel_summary_d",
+          "dws.dws_register_by_landing_page_d"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "ads.ads_keyword_analysis_d_h",
+    "column_count": 16,
+    "sr_column_count": 16,
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_keyword_click_d",
+      "dwd.dwd_keyword_search_h"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 21897365954048,
+        "task_name": "ads_keyword_analysis_d_h_daily",
+        "wf_code": 174729508462400,
+        "wf_name": "wf_ads_日报表_日",
+        "insert_target": "ads.ads_keyword_analysis_d_h",
+        "physical_tables": [
+          "dim.dim_user_all",
+          "dwd.dwd_keyword_click_d",
+          "dwd.dwd_keyword_search_h"
+        ]
+      }
+    ],
+    "issues": [
+      {
+        "rule": "无同名现网 task",
+        "detail": "仅找到 ads_keyword_analysis_d_h_daily task_code=21897365954048，INSERT→ads.ads_keyword_analysis_d_h"
+      }
+    ]
+  },
+  {
+    "fqn": "ads.ads_product_day_stat_d",
+    "column_count": 53,
+    "sr_column_count": 53,
+    "lineage_sources": [
+      "ads.ads_ad_space_summary_d",
+      "ads.ads_app_metrics_daily_d",
+      "ads.ads_channel_promotion_summary_d",
+      "ads.ads_user_retention_d",
+      "dim.dim_user_all",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_order_created_h",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_register_d_v2",
+      "dwm.dwm_user_video_d",
+      "dws.dws_app_user_d_h"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729507871563,
+        "task_name": "ads_product_day_stat_d",
+        "wf_code": 174729508462400,
+        "wf_name": "wf_ads_日报表_日",
+        "insert_target": "ads.ads_product_day_stat_d",
+        "physical_tables": [
+          "ads.ads_ad_space_summary_d",
+          "ads.ads_app_metrics_daily_d",
+          "ads.ads_channel_promotion_summary_d",
+          "ads.ads_user_retention_d",
+          "dim.dim_user_all",
+          "dwd.dwd_app_page_view_d",
+          "dwd.dwd_order_created_h",
+          "dwd.dwd_order_paid_d",
+          "dwd.dwd_user_register_d_v2",
+          "dwm.dwm_user_video_d",
+          "dws.dws_app_user_d_h"
+        ]
+      }
+    ],
+    "issues": []
+  },
+  {
+    "fqn": "ads.ads_user_page_path_d",
+    "column_count": 7,
+    "sr_column_count": 7,
+    "lineage_sources": [
+      "dwd.dwd_app_page_view_d"
+    ],
+    "live_tasks": [
+      {
+        "task_code": 174729507871565,
+        "task_name": "ads_user_page_path_d",
+        "wf_code": 174729508462400,
+        "wf_name": "wf_ads_日报表_日",
+        "insert_target": "ads.ads_user_page_path_d",
+        "physical_tables": [
+          "dwd.dwd_app_page_view_d"
+        ]
+      }
+    ],
+    "issues": []
+  }
+]

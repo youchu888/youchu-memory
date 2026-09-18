@@ -1,0 +1,316 @@
+[
+  {
+    "db": "dws",
+    "table": "dws_ad_request_metric_d",
+    "edge_count": 5,
+    "column_count": 5,
+    "sr_column_count": 5,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_ad_request_metric_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dwd.dwd_ad_request_d"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_app_channel_retention_d",
+    "edge_count": 9,
+    "column_count": 7,
+    "sr_column_count": 7,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_app_channel_retention_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dwd.dwd_user_login_d",
+      "dwd.dwd_user_register_d"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_app_coin_consume_d_h",
+    "edge_count": 22,
+    "column_count": 16,
+    "sr_column_count": 16,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_app_coin_consume_d_h%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_coin_consume_h"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_app_retention_d",
+    "edge_count": 37,
+    "column_count": 37,
+    "sr_column_count": 37,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_app_retention_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dws.dws_app_retention_d_h"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_app_user_m",
+    "edge_count": 13,
+    "column_count": 13,
+    "sr_column_count": 13,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_app_user_m%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dws.dws_app_user_m_d_new"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_channel_daily_funnel_d",
+    "edge_count": 53,
+    "column_count": 29,
+    "sr_column_count": 29,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_channel_daily_funnel_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_coin_consume_h",
+      "dwd.dwd_comic_event_d",
+      "dwd.dwd_novel_event_d",
+      "dwd.dwd_order_created_h",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_register_d_v2",
+      "dwd.dwd_video_event_h"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_session_duration_user_d",
+    "edge_count": 17,
+    "column_count": 16,
+    "sr_column_count": 16,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_session_duration_user_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dwm.dwm_app_session_sid_d"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_user_first_recharge_retention_d_h",
+    "edge_count": 67,
+    "column_count": 37,
+    "sr_column_count": 37,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_user_first_recharge_retention_d_h%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dim.dim_region_info_all",
+      "dim.dim_user_all",
+      "dws.dws_app_user_d_h"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_user_promotion_behavior_h",
+    "edge_count": 53,
+    "column_count": 23,
+    "sr_column_count": 23,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_user_promotion_behavior_h%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_ad_click_h",
+      "dwd.dwd_coin_consume_h",
+      "dwd.dwd_keyword_search_h",
+      "dwd.dwd_order_created_h",
+      "dwm.dwm_video_event_h",
+      "dws.dws_settlement_detail"
+    ]
+  },
+  {
+    "db": "dws",
+    "table": "dws_user_tag_d",
+    "edge_count": 70,
+    "column_count": 53,
+    "sr_column_count": 53,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%dws_user_tag_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dwd.dwd_ad_click_h",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_login_d_v2",
+      "dwd.dwd_user_register_d_v2",
+      "dwd.dwd_video_event_h"
+    ]
+  },
+  {
+    "db": "ads",
+    "table": "ads_app_metrics_daily_d",
+    "edge_count": 90,
+    "column_count": 50,
+    "sr_column_count": 50,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%ads_app_metrics_daily_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_ad_click_h",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_coin_consume_h",
+      "dwd.dwd_order_created_h",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_login_d_v2",
+      "dwd.dwd_user_register_d_v2",
+      "dwd.dwd_video_collect_d",
+      "dwd.dwd_video_comment_d",
+      "dwd.dwd_video_event_h",
+      "dwd.dwd_video_like_d",
+      "dwd.dwd_video_purchase_d"
+    ]
+  },
+  {
+    "db": "ads",
+    "table": "ads_channel_metrics_daily_d",
+    "edge_count": 82,
+    "column_count": 44,
+    "sr_column_count": 44,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%ads_channel_metrics_daily_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_coin_consume_h",
+      "dwd.dwd_landing_page_click",
+      "dwd.dwd_landing_page_view_d",
+      "dwd.dwd_order_created_h",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_login_d_v2",
+      "dwd.dwd_user_register_d_v2",
+      "dwd.dwd_video_event_h"
+    ]
+  },
+  {
+    "db": "ads",
+    "table": "ads_channel_summary_d",
+    "edge_count": 17,
+    "column_count": 13,
+    "sr_column_count": 13,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%ads_channel_summary_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dws.dws_app_channel_retention_d",
+      "dws.dws_app_channel_summary_d",
+      "dws.dws_register_by_landing_page_d"
+    ]
+  },
+  {
+    "db": "ads",
+    "table": "ads_keyword_analysis_d_h",
+    "edge_count": 17,
+    "column_count": 16,
+    "sr_column_count": 16,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%ads_keyword_analysis_d_h%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dim.dim_user_all",
+      "dwd.dwd_keyword_click_d",
+      "dwd.dwd_keyword_search_h"
+    ]
+  },
+  {
+    "db": "ads",
+    "table": "ads_product_day_stat_d",
+    "edge_count": 92,
+    "column_count": 53,
+    "sr_column_count": 53,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%ads_product_day_stat_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "ads.ads_ad_space_summary_d",
+      "ads.ads_app_metrics_daily_d",
+      "ads.ads_channel_promotion_summary_d",
+      "ads.ads_user_retention_d",
+      "dim.dim_user_all",
+      "dwd.dwd_app_page_view_d",
+      "dwd.dwd_order_created_h",
+      "dwd.dwd_order_paid_d",
+      "dwd.dwd_user_register_d_v2",
+      "dwm.dwm_user_video_d",
+      "dws.dws_app_user_d_h"
+    ]
+  },
+  {
+    "db": "ads",
+    "table": "ads_user_page_path_d",
+    "edge_count": 8,
+    "column_count": 7,
+    "sr_column_count": 7,
+    "issues": [],
+    "live_tasks": [
+      {
+        "error": "Command '['mysql', '--defaults-file=/Users/mac/Desktop/CHcode/.claude/database/ds_my_new_prod.cnf', '-N', '-B', '-e', \"\\nSELECT td.code, td.name, td.version,\\n       (SELECT MAX(ti.submit_time) FROM t_ds_task_instance ti WHERE ti.task_code = td.code) AS last_submit\\nFROM t_ds_task_definition td\\nWHERE td.flag = 1\\n  AND td.task_params LIKE '%ads_user_page_path_d%'\\n  AND EXISTS (\\n    SELECT 1 FROM t_ds_workflow_task_relation r\\n    JOIN t_ds_workflow_definition w\\n      ON w.code = r.workflow_definition_code AND w.release_state = 1\\n    WHERE r.post_task_code = td.code\\n  )\\n  AND EXISTS (SELECT 1 FROM t_ds_task_instance ti WHERE ti.task_code = td.code)\\nORDER BY last_submit DESC\\nLIMIT 5\\n\"]' returned non-zero exit status 1."
+      }
+    ],
+    "lineage_sources": [
+      "dwd.dwd_app_page_view_d"
+    ]
+  }
+]

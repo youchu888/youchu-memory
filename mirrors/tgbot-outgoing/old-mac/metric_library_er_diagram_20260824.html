@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>指标库 ER 图 · v0.3 完整设计</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;max-width:1120px;margin:0 auto;padding:28px 34px;color:#1f2328;background:#fff}
+  h1{font-size:24px;border-bottom:3px solid #0969da;padding-bottom:10px;margin-bottom:6px}
+  h2{font-size:18px;margin-top:32px;background:#0969da;color:#fff;padding:8px 14px;border-radius:4px}
+  .sub{color:#57606a;font-size:13px;margin:6px 0 16px}
+  .ok{border-left:4px solid #1a7f37;background:#dafbe1;padding:10px 14px;margin:12px 0;border-radius:0 4px 4px 0}
+  .info{border-left:4px solid #0969da;background:#ddf4ff;padding:10px 14px;margin:12px 0;border-radius:0 4px 4px 0}
+  .warn{border-left:4px solid #bf8700;background:#fff8c5;padding:10px 14px;margin:12px 0;border-radius:0 4px 4px 0}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px}
+  th{background:#eaeef2;border:1px solid #d0d7de;padding:7px 9px;text-align:left}
+  td{border:1px solid #d0d7de;padding:6px 9px;vertical-align:top}
+  code{background:#f6f8fa;padding:1px 5px;border-radius:3px;font-family:ui-monospace,Menlo,monospace;font-size:12px}
+  .diagram{background:#f6f8fa;border:1px solid #d0d7de;border-radius:8px;padding:16px;margin:16px 0;overflow-x:auto}
+  .legend span{display:inline-block;padding:2px 8px;border-radius:3px;margin-right:8px;font-size:12px;font-weight:600}
+  .l-core{background:#ddf4ff;color:#0550ae}
+  .l-v3{background:#fff8c5;color:#7a5900}
+  .l-meta{background:#f6f8fa;color:#57606a}
+  .l-flow{background:#dafbe1;color:#1a7f37}
+  ul.compact{margin:8px 0;padding-left:20px;font-size:14px}
+  ul.compact li{margin:4px 0}
+</style>
+</head>
+<body>
+
+<h1>指标库 ER 图 · v0.3 完整设计</h1>
+<p class="sub">
+  2026-08-24 · 又初 · 按你发来的文档绘制<br>
+  源稿：<code>spec_v0.3_20260824.md</code>（指标库概念模型 v0.3 · 完整设计）<br>
+  底座：又初 v0.2 metric-first 三层 · 扩层：entity / event_ext / role / report 绑定
+</p>
+
+<div class="ok">
+  <b>读图一句</b>：蓝色四表是 v0.2 指标核；黄色三表 + 字段增量是 v0.3 元数据扩层；
+  绿色是报表流程闭环；灰色是已有 glossary / 表列，只挂 FK 不侵入。
+</div>
+
+<div class="legend" style="margin:14px 0">
+  <span class="l-core">蓝 = v0.2 指标核</span>
+  <span class="l-v3">黄 = v0.3 新建/加字段</span>
+  <span class="l-flow">绿 = 报表绑定</span>
+  <span class="l-meta">灰 = 已有元数据</span>
+</div>
+
+<h2>1 · ER 全图</h2>
+<div class="diagram">
+<pre class="mermaid">
+erDiagram
+    glossaryterm ||--o| event_ext : "1:1 extend"
+    tabledefinition ||--o{ columndefinition : "contains"
+    tabledefinition ||--o{ metric_implementation : "table_fqn"
+    columndefinition ||--o{ metric_implementation : "column_name"
+
+    entity_dict ||--o{ event_ext : "owns"
+    entity_dict ||--o{ dimension_standard : "owns"
+    entity_dict ||--o{ metric_concept : "measures"
+    glossaryterm ||--o{ metric_concept : "main_event"
+    glossaryterm ||--o{ role_dict : "source_event"
+    dimension_standard ||--o{ metric_implementation : "dim_uses"
+    role_dict ||--o{ metric_implementation : "dim_uses"
+
+    metric_concept ||--o{ metric_label : "1:N names"
+    metric_concept ||--o{ metric_implementation : "1:N impls"
+    metric_concept ||--o| metric_concept : "derived num or den"
+    metric_impl_candidate }o--o| metric_implementation : "promote"
+    metric_concept ||--o{ report_metric_binding : "cited_by"
+
+    entity_dict {
+        string entity_code PK
+        string chinese
+        string pk_col
+        string entry_action_event FK
+        string snapshot_table_fqn
+        bool usable_as_dim
+        enum status
+    }
+
+    event_ext {
+        string event_code PK_FK
+        string entity_code FK
+        bool is_entry_action
+        string raw_table_fqn
+        json built_in_attrs
+    }
+
+    role_dict {
+        string role_code PK
+        string chinese
+        string source_event_code FK
+        text value_expr_template
+        enum temporal_kind
+        enum status
+    }
+
+    dimension_standard {
+        string name PK
+        string chinese
+        string data_type
+        string entity_code FK
+        enum status
+    }
+
+    metric_concept {
+        string concept_code PK
+        text definition
+        enum metric_kind
+        string numerator_concept_code FK
+        string denominator_concept_code FK
+        string granularity
+        string default_aggregation
+        string req_ref
+        enum lifecycle_status
+        enum origin
+        int version
+        string entity_code FK
+        string main_event_code FK
+        json related_event_codes
+    }
+
+    metric_label {
+        bigint id PK
+        string concept_code FK
+        enum label_kind
+        string label_text
+        bool is_primary
+    }
+
+    metric_implementation {
+        bigint id PK
+        string concept_code FK
+        string table_fqn FK
+        string column_name FK
+        text formula
+        string aggregation
+        bool is_primary
+        enum impl_status
+        string session_code
+        string lineage_ref
+        json dim_uses
+    }
+
+    metric_impl_candidate {
+        bigint id PK
+        string table_fqn
+        string column_name
+        enum column_role
+        text scan_formula
+        string legacy_name
+        enum candidate_status
+        string lineage_ref
+    }
+
+    report_metric_binding {
+        bigint id PK
+        string report_id
+        string concept_code FK
+        text usage_note
+        bool is_active
+    }
+
+    glossaryterm {
+        string name PK
+        string displayName
+    }
+
+    tabledefinition {
+        bigint id PK
+        string database
+        string name
+    }
+
+    columndefinition {
+        bigint id PK
+        bigint table_id FK
+        string name
+    }
+</pre>
+</div>
+
+<h2>2 · 表分区对照</h2>
+<table>
+  <tr><th>区</th><th>表</th><th>说明</th></tr>
+  <tr>
+    <td>指标核 (v0.2)</td>
+    <td><code>metric_concept</code> / <code>metric_label</code> / <code>metric_implementation</code> / <code>metric_impl_candidate</code></td>
+    <td>concept 加 entity_code / main_event_code / related_event_codes；impl 加 dim_uses</td>
+  </tr>
+  <tr>
+    <td>元数据扩层 (v0.3 新)</td>
+    <td><code>entity_dict</code> / <code>event_ext</code> / <code>role_dict</code></td>
+    <td>实体 · 事件扩字段 · 归属方式（注册时/当次事件…）</td>
+  </tr>
+  <tr>
+    <td>维度</td>
+    <td><code>dimension_standard</code></td>
+    <td>已有；v0.3 加 entity_code FK</td>
+  </tr>
+  <tr>
+    <td>流程闭环 (v0.3 新)</td>
+    <td><code>report_metric_binding</code></td>
+    <td>报表↔concept；引用归零可 orphaned</td>
+  </tr>
+  <tr>
+    <td>已有元数据</td>
+    <td><code>glossaryterm</code> / <code>tabledefinition</code> / <code>columndefinition</code></td>
+    <td>event_ext 不侵入 glossary；impl 挂物理表.列</td>
+  </tr>
+</table>
+
+<h2>3 · 关键关系（对照 spec）</h2>
+<ul class="compact">
+  <li><b>G7-a</b>：published 必填 concept.entity_code + main_event_code</li>
+  <li><b>G7-b</b>：event_ext[main_event].entity_code == concept.entity_code（derived 可跨实体）</li>
+  <li><b>dim_uses</b>：impl 上 JSON <code>[{dim, role_code}]</code>；role 写死在 impl，不是查询参数</li>
+  <li><b>晋升</b>：扫表只写 metric_impl_candidate，禁直建 concept</li>
+  <li><b>派生</b>：concept 自关联分子/分母；禁比率进 atomic</li>
+  <li><b>报表闭环</b>：report_metric_binding 引用计数；0 引用 + proposed 超 30 天 → orphaned</li>
+</ul>
+
+<div class="info">
+  <b>Phase 0 建表清单（spec §14）</b>：新建 entity_dict / role_dict / event_ext / report_metric_binding；
+  改 metric_concept(+3) / metric_implementation(+dim_uses) / dimension_standard(+entity_code)。
+  拍板前仍禁 test metadata 抢跑建表。
+</div>
+
+<div class="warn">
+  <b>与旧草图差异</b>：此前讨论稿用过 domain_entity / metric_role_usage 等临时名；
+  本稿已按你发的 v0.3 正式表名重画（entity_dict / event_ext / role_dict / report_metric_binding）。
+</div>
+
+<p class="sub" style="margin-top:28px">
+  仓库：<code>docs/metric_library_er_diagram.md</code> ·
+  HTML：<code>docs/metric_library_er_diagram_20260824.html</code> ·
+  维护：又初
+</p>
+
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: 'neutral', er: { layoutDirection: 'TB' } });
+</script>
+</body>
+</html>

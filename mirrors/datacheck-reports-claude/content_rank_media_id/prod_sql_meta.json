@@ -1,0 +1,37 @@
+{
+  "dwd_video_event_h": {
+    "len": 2879,
+    "has_media_id": false,
+    "media_count": 0,
+    "has_strict": true,
+    "has_explicit_insert": true
+  },
+  "dwm_content_metric_d_d": {
+    "len": 17393,
+    "has_media_id": false,
+    "media_count": 0,
+    "has_strict": false,
+    "has_explicit_insert": true
+  },
+  "ads_content_rank_d_d": {
+    "len": 18782,
+    "has_media_id": false,
+    "media_count": 0,
+    "has_strict": false,
+    "has_explicit_insert": true
+  },
+  "ads_content_rank_w_d": {
+    "len": 5796,
+    "has_media_id": false,
+    "media_count": 0,
+    "has_strict": false,
+    "has_explicit_insert": true
+  },
+  "ads_content_rank_m_d": {
+    "len": 5643,
+    "has_media_id": false,
+    "media_count": 0,
+    "has_strict": false,
+    "has_explicit_insert": true
+  }
+}

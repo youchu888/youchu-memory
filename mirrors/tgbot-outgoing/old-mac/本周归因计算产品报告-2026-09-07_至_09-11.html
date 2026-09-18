@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<title>本周归因计算产品报告 · 2026-09-07 ~ 2026-09-11</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;margin:0;padding:16px;background:#f5f6f8;line-height:1.55;color:#111}
+.wrap{max-width:1280px;margin:0 auto}
+.card{background:#fff;border-radius:10px;padding:16px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+h1{font-size:1.35rem;margin:0 0 8px}
+h2{font-size:1.05rem;margin:0 0 12px;border-left:4px solid #2563eb;padding-left:8px}
+table{width:100%;border-collapse:collapse;font-size:.84rem}
+th,td{border:1px solid #e5e7eb;padding:8px;vertical-align:top}
+th{background:#f9fafb;text-align:left}
+tr.warn{background:#fff7ed} tr.ok{background:#f0fdf4} tr.mid{background:#eff6ff}
+ul{margin:8px 0 0 18px} .muted{color:#6b7280;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>本周归因计算产品报告</h1>
+<p class="muted">统计窗 <b>2026-09-07</b> ~ <b>2026-09-11</b>（周一至周五）· prod 只读 · 生成 2026-09-12 · 又初</p>
+<div class="card">
+<h2>本周结论</h2>
+<ul>
+<li>已开通计算产品 <b>44</b> 个；本周结果表有产出 <b>10</b> 个。</li>
+<li>候选合计 <b>1300</b>，成功 <b>1174</b>，候选内综合成功率 <b>90.3%</b>。</li>
+<li>打开渠道回写：<b>SF-81</b>；其余影子期（只算结果、不改渠道）。</li>
+<li>失败原因与覆盖拆解见 Markdown 全文。</li>
+</ul>
+</div>
+<div class="card">
+<h2>口径</h2>
+<ul>
+<li>入围 = iOS + organic + attribution_flag=1</li>
+<li>覆盖率 = 候选 ÷ 入围；成功率 = 成功 ÷ 候选</li>
+<li>无候选 ≠ 归因失败（多数找不到可对齐落地页）</li>
+</ul>
+</div>
+<div class="card">
+<h2>日趋势</h2>
+<table><thead><tr><th>日期</th><th>候选</th><th>成功</th><th>有产出产品数</th></tr></thead>
+<tbody><tr><td>2026-09-07</td><td>333</td><td>260</td><td>9</td></tr><tr><td>2026-09-08</td><td>257</td><td>249</td><td>6</td></tr><tr><td>2026-09-09</td><td>247</td><td>235</td><td>7</td></tr><tr><td>2026-09-10</td><td>233</td><td>216</td><td>6</td></tr><tr><td>2026-09-11</td><td>230</td><td>214</td><td>7</td></tr></tbody></table>
+</div>
+<div class="card">
+<h2>已开通产品汇总</h2>
+<table><thead><tr>
+<th>产品</th><th>结论</th><th>回写</th><th>总注册</th><th>iOS自然</th><th>入围</th>
+<th>候选</th><th>成功</th><th>失败</th><th>成功率</th><th>覆盖率</th>
+</tr></thead>
+<tbody><tr class='ok'><td>DX-037</td><td>正常</td><td>关</td><td>41843</td><td>6395</td><td>831</td><td>463</td><td>458</td><td>5</td><td>98.92%</td><td>55.72%</td></tr><tr class='ok'><td>DX-092</td><td>正常</td><td>关</td><td>42651</td><td>6203</td><td>1045</td><td>375</td><td>367</td><td>8</td><td>97.87%</td><td>35.89%</td></tr><tr class='ok'><td>YC-169</td><td>正常</td><td>关</td><td>74079</td><td>4445</td><td>1502</td><td>197</td><td>192</td><td>5</td><td>97.46%</td><td>13.12%</td></tr><tr class='mid'><td>JHG-001</td><td>覆盖偏低但有产出</td><td>关</td><td>482194</td><td>80976</td><td>5637</td><td>101</td><td>79</td><td>22</td><td>78.22%</td><td>1.79%</td></tr><tr class='ok'><td>JHG-004</td><td>正常</td><td>关</td><td>28323</td><td>1076</td><td>281</td><td>66</td><td>57</td><td>9</td><td>86.36%</td><td>23.49%</td></tr><tr class='warn'><td>JHA-128</td><td>成功率偏低</td><td>关</td><td>127256</td><td>14530</td><td>10156</td><td>56</td><td>11</td><td>45</td><td>19.64%</td><td>0.55%</td></tr><tr class='warn'><td>DX-118</td><td>成功率偏低</td><td>关</td><td>62355</td><td>1575</td><td>1575</td><td>32</td><td>2</td><td>30</td><td>6.25%</td><td>2.03%</td></tr><tr class='mid'><td>JHA-102</td><td>覆盖偏低但有产出</td><td>关</td><td>89538</td><td>6304</td><td>6304</td><td>7</td><td>5</td><td>2</td><td>71.43%</td><td>0.11%</td></tr><tr class='mid'><td>SF-42</td><td>覆盖偏低但有产出</td><td>关</td><td>145946</td><td>8379</td><td>5073</td><td>2</td><td>2</td><td>0</td><td>100.0%</td><td>0.04%</td></tr><tr class='mid'><td>SF-81</td><td>覆盖偏低但有产出</td><td>开</td><td>100228</td><td>1287</td><td>173</td><td>1</td><td>1</td><td>0</td><td>100.0%</td><td>0.58%</td></tr><tr class='warn'><td>TJ-002</td><td>有入围无候选</td><td>关</td><td>17058</td><td>6343</td><td>220</td><td>0</td><td>0</td><td>0</td><td>—</td><td>0.0%</td></tr><tr class='warn'><td>TJ-006</td><td>有入围无候选</td><td>关</td><td>1365</td><td>539</td><td>125</td><td>0</td><td>0</td><td>0</td><td>—</td><td>0.0%</td></tr><tr class='warn'><td>TJ-043</td><td>有入围无候选</td><td>关</td><td>1617</td><td>205</td><td>78</td><td>0</td><td>0</td><td>0</td><td>—</td><td>0.0%</td></tr><tr class='warn'><td>HX-056</td><td>有入围无候选</td><td>关</td><td>6385</td><td>46</td><td>20</td><td>0</td><td>0</td><td>0</td><td>—</td><td>0.0%</td></tr><tr class='warn'><td>DFA-03</td><td>有入围无候选</td><td>关</td><td>367804</td><td>18</td><td>18</td><td>0</td><td>0</td><td>0</td><td>—</td><td>0.0%</td></tr><tr class='warn'><td>SF-74</td><td>有入围无候选</td><td>关</td><td>65956</td><td>771</td><td>7</td><td>0</td><td>0</td><td>0</td><td>—</td><td>0.0%</td></tr><tr class='warn'><td>DX-147</td><td>有入围无候选</td><td>关</td><td>71696</td><td>1112</td><td>5</td><td>0</td><td>0</td><td>0</td><td>—</td><td>0.0%</td></tr><tr class='warn'><td>DX-002</td><td>未打需归因标记</td><td>关</td><td>41258</td><td>9114</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>DX-036</td><td>未打需归因标记</td><td>关</td><td>330018</td><td>261643</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>DX-055</td><td>未打需归因标记</td><td>关</td><td>53771</td><td>6117</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>DX-094</td><td>未打需归因标记</td><td>关</td><td>36223</td><td>2521</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>DX-100</td><td>无注册</td><td>关</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>DX-125</td><td>未打需归因标记</td><td>关</td><td>56733</td><td>1135</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHA-126</td><td>未打需归因标记</td><td>关</td><td>94883</td><td>1065</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHA-204</td><td>未打需归因标记</td><td>关</td><td>200191</td><td>12655</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHG-005</td><td>未打需归因标记</td><td>关</td><td>89902</td><td>7070</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHG-015</td><td>未打需归因标记</td><td>关</td><td>1906</td><td>108</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHG-052</td><td>未打需归因标记</td><td>关</td><td>135372</td><td>4723</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHG-059</td><td>未打需归因标记</td><td>关</td><td>75026</td><td>764</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHG-064</td><td>未打需归因标记</td><td>关</td><td>84625</td><td>661</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHG-087</td><td>未打需归因标记</td><td>关</td><td>1208</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>JHG-092</td><td>未打需归因标记</td><td>关</td><td>154617</td><td>1885</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>SF-50</td><td>未打需归因标记</td><td>关</td><td>45769</td><td>403</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>SF-53</td><td>未打需归因标记</td><td>关</td><td>57565</td><td>274</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>SF-57</td><td>未打需归因标记</td><td>关</td><td>47934</td><td>607</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>SF-98</td><td>未打需归因标记</td><td>关</td><td>38080</td><td>251</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>TJ-003</td><td>未打需归因标记</td><td>关</td><td>11370</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>TJ-008</td><td>未打需归因标记</td><td>关</td><td>3849</td><td>964</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>TSPX-014</td><td>未打需归因标记</td><td>关</td><td>6974</td><td>130</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>YC-001</td><td>未打需归因标记</td><td>关</td><td>226625</td><td>43858</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>YC-002</td><td>未打需归因标记</td><td>关</td><td>474430</td><td>35347</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>YC-109</td><td>未打需归因标记</td><td>关</td><td>89122</td><td>3752</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>YC-114</td><td>未打需归因标记</td><td>关</td><td>56163</td><td>3136</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='warn'><td>YC-116</td><td>未打需归因标记</td><td>关</td><td>184229</td><td>8349</td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td>—</td></tr></tbody></table>
+</div>
+</div>
+</body>
+</html>
