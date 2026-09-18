@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [macOS 安装器自动化须预开辅助功能；按钮文案中英都要覆盖，仅中文选择](lessons/2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆盖-仅中文选择器会误点失败.md) — 会话轮换蒸馏
+- [判 old-mac 是否存活先看 sync 身份 + bot/polle](lessons/2026-09-18-判-old-mac-是否存活先看-sync-身份-bot-poller-youchu-memor.md) — 会话轮换蒸馏
+- [ToDesk GUI 升级缺辅助功能权限时自动化点不了安装按钮；pkg ](lessons/2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装按钮-pkg-直链有反爬-应走-rus.md) — 会话轮换蒸馏
 - [play > 详情页 UV 时先比 T-2 同口径；若仅 play 跳涨](lessons/2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-play-跳涨而-detail-不动-查交.md) — 会话轮换蒸馏
 - [大漏斗 prod 核查跳过海豚，改查 SR 分区行数、`update_t](lessons/2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-update_time-与-playboo.md) — 会话轮换蒸馏
 - [三消费方需求并集定稿、粒度与对账判据写清后再走开发平台建表，禁止设计未定](lessons/2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表-禁止设计未定先本地建表.md) — 会话轮换蒸馏

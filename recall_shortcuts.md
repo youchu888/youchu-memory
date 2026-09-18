@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 18 2026 agent_session_rotate autom | `~/.dc-platform/memory/lessons/2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆盖-仅中文选择器会误点失败.md` | 2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆 |
+| ## 09 18 2026 agent_session_rotate bot | `~/.dc-platform/memory/lessons/2026-09-18-判-old-mac-是否存活先看-sync-身份-bot-poller-youchu-memor.md` | 2026-09-18-判-old-mac-是否存活先看-sync-身份-bot- |
+| ## 09 18 2026 agent_session_rotate appli | `~/.dc-platform/memory/lessons/2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装按钮-pkg-直链有反爬-应走-rus.md` | 2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装 |
+| anydesk rustdesk 也可 了也 使装 别当 | `sessions/tg-rotate-2026-09-18-1211.md` | 探测备援远控时要**真查进程/服务**：RustDesk 在线可用；AnyDes |
+| bot ma mac rustdesk tg 上再 | `sessions/tg-rotate-2026-09-18-1211.md` | **没人在场**时的可行路径：① 用已在线的 **RustDesk** 连上再点 |
+| 192.168.1.12 mac ssh 不能 不能默认 可用 | `sessions/tg-rotate-2026-09-18-1211.md` | 旧 Mac 常见 **SSH 未开**（如 `192.168.1.12`），不能 |
+| applications pkg todesk.app watcher 人点 动 | `sessions/tg-rotate-2026-09-18-1211.md` | 安装器已拉起时，可挂 **后台 watcher**：等人点完安装、pkg 落盘后 |
+| cdn curl gui pkg todesk 下不 | `sessions/tg-rotate-2026-09-18-1211.md` | ToDesk 官网 pkg **CDN 有反爬**，本机 `curl` 直链往往 |
+| now” “install 「立 「立即安装」和 」和 不能 | `sessions/tg-rotate-2026-09-18-1211.md` | 安装器按钮文案可能中英混用；点按逻辑需同时覆盖 **「立即安装」和 “Insta |
+| cliclick downloads install macos now」 to | `sessions/tg-rotate-2026-09-18-1211.md` | ToDesk 升级脚本走 `~/Downloads/ToDesk_Install |
+| oneshot oneshot_upgrade oneshot_upgrade_ | `sessions/tg-rotate-2026-09-18-1211.md` | `sync` 流程可顺带触发 **ToDesk oneshot 升级**；是否完 |
+| bot poller todesk 主机 则说 同步 | `sessions/tg-rotate-2026-09-18-1211.md` | ToDesk 断连常见是**客户端版本/远控问题**；bot、记忆同步、poll |
+| ho hosts latest mac memory mirror | `sessions/tg-rotate-2026-09-18-1211.md` | 旧 Mac 仍是主控时，`youchu-memory` 同步成功、`ops-mi |
+| agent bot bus git host ma | `sessions/tg-rotate-2026-09-18-1211.md` | 用户说「旧 Mac 挂了」时，先跑 `sync-memory-git` / 看  |
+| todesk 「机 主机 主机存活 了」 分层 | `sessions/tg-rotate-2026-09-18-1211.md` | 报障结论宜分层：**主机存活 / 记忆同步 / 远控通道** 分开说，避免把 T |
 | ## 09 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-play-跳涨而-detail-不动-查交.md` | 2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-pl |
 | ## 09 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-update_time-与-playboo.md` | 2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-up |
 | .claude .md database dt dws.dws_app_even | `sessions/tg-rotate-2026-09-18-1052.md` | 核查报告落盘：`.claude/database/reports/dws.dws |
@@ -30,18 +45,3 @@
 | et tl 一致 上服 与线 仓库 | `sessions/tg-rotate-2026-09-17-2212.md` | 大漏斗阶段指标：加工逻辑须**仓库与线上服务端一致**；变更顺序铁律为**先入库 |
 | ## 09 16 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘再调-upload_work_repo.md` | 2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘 |
 | top1 「已 」态 与「 业务 作写 | `sessions/tg-rotate-2026-09-16-2226.md` | 日报正文写业务结果与「已完成」态；死锁/复盘无内容则留空，明日动作写可执行的 T |
-| high less lessons memory memory_open pin | `sessions/tg-rotate-2026-09-16-2226.md` | 记忆冷启动仍须 PINNED + MEMORY_OPEN + 最近改动 + hi |
-| 09 16 2026 98421 inserted record | `sessions/tg-rotate-2026-09-16-2226.md` | 2026-09-16 本次上传结果：record **98421**，状态 ** |
-| .cursor dd.md id inserted log mm | `sessions/tg-rotate-2026-09-16-2226.md` | 定稿本地路径：`.cursor/work-log/reports/日报-YYYY |
-| tg upload_work_report.py 「上 」时 上传 上传链路独立 | `sessions/tg-rotate-2026-09-16-2226.md` | 上传链路独立于 TG 推送；仅「上传云端」时只跑 `upload_work_re |
-| 「按 」且 一真 上传 不得 与云 | `sessions/tg-rotate-2026-09-16-2226.md` | 用户说「按这个上传云端」且贴完整定稿时，以粘贴正文为唯一真源，本地落盘与云端上传 |
-| 一优 下一 仓（ 优先 决定 升维 | `sessions/tg-rotate-2026-09-16-2226.md` | 大漏斗升维下一优先：跟进沙箱测试结果，按结果决定是否改仓（截止次日）。 |
-| 「补 」而 全量 再认 同步 复配 | `sessions/tg-rotate-2026-09-16-2226.md` | 恢复配置类同步默认「补缺失行」而非全量覆盖；改完须走测试补验再认完成。 |
-| 份口 保留 免多 口径 只保 因对 | `sessions/tg-rotate-2026-09-16-2226.md` | 归因对接稿只保留最新版，避免多份口径稿并行造成验收歧义。 |
-| 09 16 2026 上发 与产 与启 | `sessions/tg-rotate-2026-09-16-2226.md` | 2026-09-16 日报四块交付：大漏斗口径（事件按对象去重、页面拆开人数与启 |
-| daily lesson log report upload upload_wo | `sessions/tg-rotate-2026-09-16-2226.md` | [LESSON: daily-report/用户私聊贴完整定稿并说「按这个上传云 |
-| ## 09 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标已完成.md` | 2026-09-15-他人线未验收-自测未闭环只写明日动作-禁止为凑条数硬拆或标 |
-| ## .cursor .m 09 15 2026 | `~/.dc-platform/memory/lessons/2026-09-15-新机实活交付后须写入该机-cursor-work-log-当日-md-并-sync-memory.md` | 2026-09-15-新机实活交付后须写入该机-cursor-work-log- |
-| ## 09 15 2026 agent_session_rotate bulle | `~/.dc-platform/memory/lessons/2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿定稿-必须扫-transcript-派.md` | 2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿 |
-| dev log session test work 「新 | `sessions/tg-rotate-2026-09-15-2225.md` | 归因升级类「新机发布并推进同步」若 work-log 未记，仍可从 dev se |
-| flush —— —避 「今 「若 「若还有已交办且已闭环的活 | `sessions/tg-rotate-2026-09-15-2225.md` | 初稿偏少时主动向主人确认：「若还有已交办且已闭环的活，请点名」——避免把 flu |

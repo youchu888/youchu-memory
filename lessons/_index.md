@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-18 | [macOS 安装器自动化须预开辅助功能；按钮文案中英都要覆盖，仅中文选择器会误点](./2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆盖-仅中文选择器会误点失败.md) | automation,macos,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-18 | [判 old-mac 是否存活先看 sync 身份 + bot/poller + ](./2026-09-18-判-old-mac-是否存活先看-sync-身份-bot-poller-youchu-memor.md) | old-mac,ops,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-18 | [ToDesk GUI 升级缺辅助功能权限时自动化点不了安装按钮；pkg 直链有反](./2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装按钮-pkg-直链有反爬-应走-rus.md) | todesk,macos,remote,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-18 | [play > 详情页 UV 时先比 T-2 同口径；若仅 play 跳涨而 de](./2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-play-跳涨而-detail-不动-查交.md) | datacheck,funnel,video_play,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-18 | [大漏斗 prod 核查跳过海豚，改查 SR 分区行数、`update_time`](./2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-update_time-与-playboo.md) | datacheck,funnel,spark,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-17 | [三消费方需求并集定稿、粒度与对账判据写清后再走开发平台建表，禁止设计未定先本地建](./2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表-禁止设计未定先本地建表.md) | 页面访问轻聚合,session-rotate | 会话轮换前自动蒸馏 |
