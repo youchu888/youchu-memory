@@ -7,7 +7,11 @@ IP 会变时，**不要用局域网 rsync**，改用私有 Git 仓库。
 目录：`~/.dc-platform/memory/`  
 命令：`bash ~/.dc-platform/scripts/sync-memory-git.sh`
 
-不同步：agent-bus state、tgbot `.env`、VPN、Cursor transcript。
+**会同步**：lesson / feedback / MEMORY / work-log / ops-mirror，以及 **`mirrors/` 非代码镜像**（核查报告与 playbook 副本、近 21 天 agent-transcripts 按机、tgbot outgoing 文稿）。
+
+**不同步（有意）**：业务代码仓正文、agent-bus 全量 state、tgbot `.env` / session / `tgbot.db`、VPN、私钥。
+
+每轮 sync 自动：`worklog_dual_mac_sync` → `ops_mirror_to_memory` → `export_noncode_mirrors` → push。默认间隔 **2 分钟**。
 
 ## 一次性：建私有空仓
 
