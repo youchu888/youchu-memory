@@ -332,8 +332,57 @@ def main() -> int:
         pub = publish_canonical_report(mem_wl, local, day, host)
         print(f"canonical_report: {pub or '(none)'}")
 
+    # 旧机可能仍跑「旧版 sync 脚本」；pull 后本文件已是新版，在此自动对齐 launchd 间隔
+    _ensure_memory_sync_launchd(mem)
+
     print("next: bash ~/.dc-platform/scripts/sync-memory-git.sh")
     return 0
+
+
+def _ensure_memory_sync_launchd(mem: Path) -> None:
+    """读 config/memory_sync.env，LaunchAgent 间隔落后则重装（免 SSH）。"""
+    import re
+    import subprocess
+
+    cfg = mem / "config" / "memory_sync.env"
+    want = 120
+    if cfg.is_file():
+        m = re.search(r"(?m)^\s*INTERVAL_SEC\s*=\s*(\d+)", cfg.read_text(encoding="utf-8", errors="ignore"))
+        if m:
+            want = max(60, int(m.group(1)))
+    env_override = os.environ.get("MEMORY_SYNC_INTERVAL_SEC", "").strip()
+    if env_override.isdigit():
+        want = max(60, int(env_override))
+
+    label = "com.youchu.memory-git-sync"
+    plist = Path.home() / "Library" / "LaunchAgents" / f"{label}.plist"
+    have = 0
+    if plist.is_file():
+        try:
+            out = subprocess.check_output(
+                ["/usr/libexec/PlistBuddy", "-c", "Print :StartInterval", str(plist)],
+                text=True,
+                stderr=subprocess.DEVNULL,
+            ).strip()
+            have = int(out) if out.isdigit() else 0
+        except (subprocess.CalledProcessError, ValueError):
+            have = 0
+    if have == want and plist.is_file():
+        return
+
+    installer = mem / "scripts" / "install-memory-git-sync-launchd.sh"
+    if not installer.is_file():
+        installer = Path.home() / ".dc-platform" / "scripts" / "install-memory-git-sync-launchd.sh"
+    if not installer.is_file():
+        print(f"warn: launchd 需 {want}s 但找不到 install 脚本")
+        return
+    print(f"info: launchd {label} 间隔 {have or '无'} → {want}s，自动重装")
+    env = os.environ.copy()
+    env["INTERVAL_SEC"] = str(want)
+    try:
+        subprocess.run(["bash", str(installer)], env=env, check=False, timeout=60)
+    except Exception as e:  # noqa: BLE001
+        print(f"warn: 自动重装 launchd 失败: {e}")
 
 
 if __name__ == "__main__":

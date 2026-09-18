@@ -19,8 +19,9 @@ domain: ops
 
 ## 旧机
 
-pull 到新脚本后执行一次：
+**无需 SSH。** 旧机只要还能跑定时 `sync-memory-git`（即使仍是 10 分钟旧脚本）：
 
-```bash
-INTERVAL_SEC=120 bash ~/.dc-platform/memory/scripts/install-memory-git-sync-launchd.sh
-```
+1. 某轮 `pull` 拉到本 lesson / `config/memory_sync.env` / 新脚本  
+2. 同轮或下一轮 `worklog_dual_mac_sync` **自动重装** launchd 为 120 秒，并带上 mirrors 导出  
+
+前提：旧机能访问 GitHub。完全断网时需等恢复后自行跑一轮。

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # 用 git 全自动同步 ~/.dc-platform/memory（双 Mac，不依赖局域网）
-# - launchd 每 10 分钟
-# - work-log 双机合并
-# - rebase 冲突尽量自愈（work-log 时间戳类）；失败则安全回退到 origin 再推本机 hosts
+# - launchd 间隔读 config/memory_sync.env（默认 120s），落后则自动重装（旧机免 SSH）
+# - work-log 双机合并 + 非代码 mirrors
+# - rebase 冲突尽量自愈；失败则安全回退到 origin 再推本机 hosts
 set -euo pipefail
 
 MEM="${MEMORY_GIT_DIR:-$HOME/.dc-platform/memory}"
@@ -31,7 +31,11 @@ for s in load-memory-context.sh memory_weekly_hygiene.sh \
   onehr_checkin_auto.py onehr_checkin_scheduler.py onehr_checkin_run.sh \
   onehr_telegram_devices_screenshot.sh onehr_tg_window_info.swift \
   install-onehr-checkin-launchd.sh \
-  uninstall-onehr-checkin-launchd.sh; do
+  uninstall-onehr-checkin-launchd.sh \
+  export_noncode_mirrors.py \
+  install-memory-git-sync-launchd.sh \
+  uninstall-memory-git-sync-launchd.sh \
+  worklog_dual_mac_sync.py; do
   src="$MEM/scripts/$s"
   dst="$RUNTIME_SCRIPTS/$s"
   if [[ -f "$src" ]]; then
@@ -41,7 +45,7 @@ for s in load-memory-context.sh memory_weekly_hygiene.sh \
     fi
   fi
 done
-for doc in onehr_checkin_auto.md onehr_checkin_old_mac_setup.md; do
+for doc in onehr_checkin_auto.md onehr_checkin_old_mac_setup.md memory_git_sync.md; do
   src="$MEM/scripts/docs/$doc"
   dst="$RUNTIME_SCRIPTS/docs/$doc"
   if [[ -f "$src" ]]; then
@@ -60,6 +64,43 @@ if [[ -f "$src_cfg" ]]; then
   fi
 fi
 # 不覆盖已有 onehr.env（含密码）
+
+# —— launchd 间隔：读仓内 config，落后则自动重装（旧机无需人工 SSH）——
+_desired_interval() {
+  local v=120 cfg="$MEM/config/memory_sync.env"
+  if [[ -f "$cfg" ]]; then
+    v="$(grep -E '^[[:space:]]*INTERVAL_SEC=' "$cfg" | tail -1 | cut -d= -f2- | tr -d '[:space:]' || true)"
+  fi
+  if [[ -n "${MEMORY_SYNC_INTERVAL_SEC:-}" ]]; then
+    v="$MEMORY_SYNC_INTERVAL_SEC"
+  fi
+  [[ "$v" =~ ^[0-9]+$ ]] && (( v >= 60 )) || v=120
+  echo "$v"
+}
+
+_ensure_launchd_interval() {
+  local label=com.youchu.memory-git-sync
+  local plist="$HOME/Library/LaunchAgents/${label}.plist"
+  local want have=0
+  want="$(_desired_interval)"
+  if [[ -f "$plist" ]]; then
+    have="$(/usr/libexec/PlistBuddy -c 'Print :StartInterval' "$plist" 2>/dev/null || echo 0)"
+  fi
+  if [[ "$have" == "$want" ]] && [[ -f "$plist" ]]; then
+    return 0
+  fi
+  echo "info: launchd ${label} 间隔 ${have:-无} → ${want}s，自动重装"
+  if [[ -f "$MEM/scripts/install-memory-git-sync-launchd.sh" ]]; then
+    INTERVAL_SEC="$want" bash "$MEM/scripts/install-memory-git-sync-launchd.sh" \
+      || echo "warn: 自动重装 launchd 失败（下次 sync 再试）"
+  elif [[ -f "$RUNTIME_SCRIPTS/install-memory-git-sync-launchd.sh" ]]; then
+    INTERVAL_SEC="$want" bash "$RUNTIME_SCRIPTS/install-memory-git-sync-launchd.sh" \
+      || echo "warn: 自动重装 launchd 失败（下次 sync 再试）"
+  fi
+}
+
+
+_ensure_launchd_interval
 
 cd "$MEM"
 

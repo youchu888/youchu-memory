@@ -21,8 +21,23 @@ HOME = Path.home()
 MEM = Path(os.environ.get("MEMORY_GIT_DIR", HOME / ".dc-platform" / "memory"))
 HOST = (os.environ.get("WORKLOG_HOST_ID") or "unknown-host").strip() or "unknown-host"
 
-# 默认工作仓
-CHCODE = Path(os.environ.get("CHCODE_ROOT", HOME / "Desktop" / "CHcode"))
+def _detect_chcode() -> Path:
+    env = os.environ.get("CHCODE_ROOT", "").strip()
+    if env:
+        return Path(env)
+    for cand in (
+        HOME / "Desktop" / "CHcode",
+        HOME / "Program" / "datacenter" / "dc-parent",
+        Path("/Users/arthur/Program/datacenter/dc-parent"),
+        Path("/Users/mac/Desktop/CHcode"),
+    ):
+        if (cand / ".claude" / "database").is_dir() or (cand / "ops_system").is_dir():
+            return cand
+    return HOME / "Desktop" / "CHcode"
+
+
+# 默认工作仓（双机路径可能不同）
+CHCODE = _detect_chcode()
 TRANSCRIPTS = Path(
     os.environ.get(
         "CURSOR_TRANSCRIPTS_DIR",
