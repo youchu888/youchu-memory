@@ -16,6 +16,12 @@ mkdir -p "$STATE_DIR"
 exec >>"$LOG" 2>&1
 echo "==== $(date '+%Y-%m-%d %H:%M:%S') host=$(hostname -s) ===="
 
+LOCKDIR="$STATE_DIR/oneshot_upgrade_todesk.lockd"
+if ! mkdir "$LOCKDIR" 2>/dev/null; then
+  echo "[todesk-upgrade] another run in progress — skip"
+  exit 0
+fi
+
 _log() { echo "[todesk-upgrade] $*"; }
 
 _host_id() {
@@ -82,6 +88,7 @@ _cleanup() {
     hdiutil detach "$MNT" >/dev/null 2>&1 || true
   fi
   rm -rf "$WORK" 2>/dev/null || true
+  rmdir "$LOCKDIR" 2>/dev/null || true
 }
 trap _cleanup EXIT
 
