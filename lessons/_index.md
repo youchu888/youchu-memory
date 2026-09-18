@@ -316,3 +316,4 @@
 | 2026-09-10 | funnel-升维验收须runner-test禁SR手工灌数冒充 | funnel,sandbox,criticism | 升维须 runner test 落库；禁把 SR 手工灌数当已验 |
 | 2026-09-10 | [pipeline-runner test四步与test_sandbox铁律](./2026-09-10-pipeline-runner-test四步与test_sandbox铁律.md) | pipeline-runner,sandbox,test_sandbox | 四步+禁动full_chain；已定 runner 禁框外串步 |
 | 2026-09-11 | [funnel升维须四方同步且page_view全局过闸](./2026-09-11-funnel-升维须四方同步且page_view全局过闸.md) | funnel,pushback,SR,sandbox | 缺SR/pushback不上线；HAVING禁细粒度 |
+| 2026-09-18 | memory-git远程升级旧机ToDesk | todesk dual-mac oneshot |
