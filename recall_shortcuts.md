@@ -5,6 +5,16 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-play-跳涨而-detail-不动-查交.md` | 2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-pl |
+| ## 09 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-update_time-与-playboo.md` | 2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-up |
+| .claude .md database dt dws.dws_app_even | `sessions/tg-rotate-2026-09-18-1052.md` | 核查报告落盘：`.claude/database/reports/dws.dws |
+| 20% 242 368） 435 51 54 | `sessions/tg-rotate-2026-09-18-1052.md` | SF-81 异常模式：`video_play` **61,646 > 详情页 U |
+| app playbook uv video_play 不过 分开 | `sessions/tg-rotate-2026-09-18-1052.md` | playbook 硬规则：**`video_play` 加总 ≤ 详情页 UV* |
+| +1.2% +2.3% +2.4% 06 09 16 | `sessions/tg-rotate-2026-09-18-1052.md` | 2026-09-17 样例：**5,597 行 / 737 app**，`upd |
+| 06 57） app dt update_time 一日 | `sessions/tg-rotate-2026-09-18-1052.md` | 跑通粗判：`dt` 分区有数、`update_time` 落在今早例行窗口（如  |
+| datache datacheck dt dws.dws_app_event_f | `sessions/tg-rotate-2026-09-18-1052.md` | 主表：`dws.dws_app_event_funnel_d_d`；口语「大漏斗 |
+| 81 sf video_play 与详 与详情页 交集 | `sessions/tg-rotate-2026-09-18-1052.md` | 后续深挖方向：把 SF-81 的 `video_play` 与详情页 **交集逻 |
+| prod spark sr task update_time workflow | `sessions/tg-rotate-2026-09-18-1052.md` | 大漏斗 prod **不在海豚挂 task**，是 **Spark 链路**；核 |
 | ## 09 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表-禁止设计未定先本地建表.md` | 2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表 |
 | ## 09 17 2026 agent_session_rotate conte | `~/.dc-platform/memory/lessons/2026-09-17-内容类启动次数按-session_id-与-content-组合去重后入库-口径变更须附两版对比.md` | 2026-09-17-内容类启动次数按-session_id-与-content |
 | ## 09 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端.md` | 2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端 |
@@ -35,13 +45,3 @@
 | ## 09 15 2026 agent_session_rotate bulle | `~/.dc-platform/memory/lessons/2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿定稿-必须扫-transcript-派.md` | 2026-09-15-hosts-同步齐但-bullet-0-时-不得仅凭合并稿 |
 | dev log session test work 「新 | `sessions/tg-rotate-2026-09-15-2225.md` | 归因升级类「新机发布并推进同步」若 work-log 未记，仍可从 dev se |
 | flush —— —避 「今 「若 「若还有已交办且已闭环的活 | `sessions/tg-rotate-2026-09-15-2225.md` | 初稿偏少时主动向主人确认：「若还有已交办且已闭环的活，请点名」——避免把 flu |
-| 不写 不写进今日结果 今日 写进 动作 在测 | `sessions/tg-rotate-2026-09-15-2225.md` | 进行中/未验收项（如大漏斗新逻辑还在测）应放 **【明日动作】**，不写进今日结 |
-| cursor git log memory transcript work | `sessions/tg-rotate-2026-09-15-2225.md` | Cursor transcript **不跨机**；新机干的活若未落该机 wor |
-| bullet hosts mac new old 「今 | `sessions/tg-rotate-2026-09-15-2225.md` | 日报「今日结果偏少」≠ 双机没同步：先核对 `new-mac`/`old-mac |
-| daily lesson report 不硬凑 为凑 人线 | `sessions/tg-rotate-2026-09-15-2225.md` | [LESSON: daily-report,不硬凑/他人线未验收/自测未闭环只写 |
-| bullet≈0 daily hosts lesson log mac | `sessions/tg-rotate-2026-09-15-2225.md` | [LESSON: daily-report,new-mac,work-log/h |
-| bus tg 主人 主人点名漏记时 人点 以实 | `sessions/tg-rotate-2026-09-15-2225.md` | 主人点名漏记时：以实据还原（平台发布记录、测试进展、bus 回执）→ 改定稿 → |
-| 1.0.11） 「不 「不硬凑」铁律 「今 「已 」的 | `sessions/tg-rotate-2026-09-15-2225.md` | 「不硬凑」铁律：只写当日已闭环、可标「已完成」的交付；他人线在推、验收未过、覆盖 |
-| agent bus hosts inbox） session task_prov | `sessions/tg-rotate-2026-09-15-2225.md` | 写稿不能只看合并 hosts：hosts 空或偏少时，必须再扫本机 **全部 a |
-| .cursor .m 0） 18 20 20）没把实活写进 | `sessions/tg-rotate-2026-09-15-2225.md` | 21:30 写稿前跑过 `prepare_daily_report_sync.s |
-| ## 09 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自写条件不能当需求依据-口径争议以-gi.md` | 2026-09-12-改-etl-前须摘-prd-原句入-spec-spec-自 |

@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-18 | [play > 详情页 UV 时先比 T-2 同口径；若仅 play 跳涨而 de](./2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-play-跳涨而-detail-不动-查交.md) | datacheck,funnel,video_play,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-09-18 | [大漏斗 prod 核查跳过海豚，改查 SR 分区行数、`update_time`](./2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-update_time-与-playboo.md) | datacheck,funnel,spark,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-17 | [三消费方需求并集定稿、粒度与对账判据写清后再走开发平台建表，禁止设计未定先本地建](./2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表-禁止设计未定先本地建表.md) | 页面访问轻聚合,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-18 | [非代码镜像进 memory mirrors](./2026-09-18-非代码镜像进-memory-mirrors.md) | memory-git, dual-mac, mirrors | 报告/transcript/outgoing 进 mirrors；间隔 2 分钟 |
 | 2026-09-17 | [内容类启动次数按 session_id 与 content 组合去重后入库，口径](./2026-09-17-内容类启动次数按-session_id-与-content-组合去重后入库-口径变更须附两版对比.md) | 大漏斗,session-rotate | 会话轮换前自动蒸馏 |

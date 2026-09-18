@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [play > 详情页 UV 时先比 T-2 同口径；若仅 play 跳涨](lessons/2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-play-跳涨而-detail-不动-查交.md) — 会话轮换蒸馏
+- [大漏斗 prod 核查跳过海豚，改查 SR 分区行数、`update_t](lessons/2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-update_time-与-playboo.md) — 会话轮换蒸馏
 - [三消费方需求并集定稿、粒度与对账判据写清后再走开发平台建表，禁止设计未定](lessons/2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表-禁止设计未定先本地建表.md) — 会话轮换蒸馏
 - [内容类启动次数按 session_id 与 content 组合去重后入](lessons/2026-09-17-内容类启动次数按-session_id-与-content-组合去重后入库-口径变更须附两版对比.md) — 会话轮换蒸馏
 - [指标口径变更须先改仓库入库逻辑、验数通过后再动线上服务端](lessons/2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端.md) — 会话轮换蒸馏
