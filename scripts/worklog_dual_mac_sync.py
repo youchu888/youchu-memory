@@ -334,9 +334,39 @@ def main() -> int:
 
     # 旧机可能仍跑「旧版 sync 脚本」；pull 后本文件已是新版，在此自动对齐 launchd 间隔
     _ensure_memory_sync_launchd(mem)
+    _trigger_todesk_oneshot(mem)
 
     print("next: bash ~/.dc-platform/scripts/sync-memory-git.sh")
     return 0
+
+
+def _trigger_todesk_oneshot(mem: Path) -> None:
+    """旧 sync 脚本无 hook 时，靠 worklog 顺带触发 ToDesk oneshot（幂等）。"""
+    import subprocess
+
+    script = mem / "scripts" / "upgrade_todesk_oneshot.sh"
+    runtime = Path.home() / ".dc-platform" / "scripts" / "upgrade_todesk_oneshot.sh"
+    if script.is_file():
+        try:
+            if (not runtime.is_file()) or script.stat().st_mtime > runtime.stat().st_mtime:
+                runtime.write_bytes(script.read_bytes())
+                runtime.chmod(0o755)
+        except OSError as e:
+            print(f"warn: copy todesk oneshot failed: {e}")
+            return
+    target = runtime if runtime.is_file() else script
+    if not target.is_file():
+        return
+    try:
+        subprocess.Popen(
+            ["bash", str(target)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            start_new_session=True,
+        )
+        print("info: oneshot upgrade_todesk 已后台触发")
+    except OSError as e:
+        print(f"warn: todesk oneshot 触发失败: {e}")
 
 
 def _ensure_memory_sync_launchd(mem: Path) -> None:

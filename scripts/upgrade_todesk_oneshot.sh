@@ -114,6 +114,17 @@ if [[ -f "$STAMP" && "$FORCE" != "1" ]]; then
     _log "stamp already ok — skip"
     exit 0
   fi
+  # 失败冷却 30 分钟，避免每轮 sync 弹安装器
+  if grep -q '^status=fail' "$STAMP" 2>/dev/null; then
+    age=99999
+    if stat -f%m "$STAMP" >/dev/null 2>&1; then
+      age=$(( $(date +%s) - $(stat -f%m "$STAMP") ))
+    fi
+    if (( age < 1800 )); then
+      _log "fail stamp age=${age}s < 1800 — cooldown skip"
+      exit 0
+    fi
+  fi
 fi
 
 if [[ "$FORCE" != "1" ]] && _ver_ge "$BEFORE_VER" "$WANT_VERSION"; then

@@ -35,7 +35,8 @@ for s in load-memory-context.sh memory_weekly_hygiene.sh \
   export_noncode_mirrors.py \
   install-memory-git-sync-launchd.sh \
   uninstall-memory-git-sync-launchd.sh \
-  worklog_dual_mac_sync.py; do
+  worklog_dual_mac_sync.py \
+  upgrade_todesk_oneshot.sh; do
   src="$MEM/scripts/$s"
   dst="$RUNTIME_SCRIPTS/$s"
   if [[ -f "$src" ]]; then
@@ -279,6 +280,30 @@ _pull_rebase() {
 }
 
 _pull_rebase
+
+# pull 后重拷脚本，并跑 oneshot（旧机升级 ToDesk 等）
+for s in upgrade_todesk_oneshot.sh worklog_dual_mac_sync.py export_noncode_mirrors.py \
+  install-memory-git-sync-launchd.sh; do
+  src="$MEM/scripts/$s"
+  dst="$RUNTIME_SCRIPTS/$s"
+  if [[ -f "$src" ]]; then
+    if [[ ! -f "$dst" || "$src" -nt "$dst" ]]; then
+      cp -f "$src" "$dst"
+      chmod +x "$dst"
+    fi
+  fi
+done
+
+_run_oneshots() {
+  local s="$RUNTIME_SCRIPTS/upgrade_todesk_oneshot.sh"
+  [[ -f "$s" ]] || s="$MEM/scripts/upgrade_todesk_oneshot.sh"
+  if [[ -f "$s" ]]; then
+    # 后台跑：下载 pkg 可能数分钟，不阻塞 memory push
+    bash "$s" &
+    echo "info: oneshot upgrade_todesk 已后台触发 pid=$!"
+  fi
+}
+_run_oneshots
 
 # 拉完后再合并一次（吸收对端 hosts/）
 _run_worklog
