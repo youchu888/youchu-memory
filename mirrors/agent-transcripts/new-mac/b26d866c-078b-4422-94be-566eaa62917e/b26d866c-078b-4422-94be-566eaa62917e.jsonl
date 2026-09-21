@@ -176,3 +176,4 @@
 {"type":"turn_ended","status":"error","error":"[unavailable] PING timed out"}
 {"type":"turn_ended","status":"error","error":"[unavailable] PING timed out"}
 {"type":"turn_ended","status":"error","error":"User aborted request"}
+{"type":"turn_ended","status":"error","error":"[unavailable] PING timed out"}
