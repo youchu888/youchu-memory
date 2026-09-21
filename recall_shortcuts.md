@@ -5,6 +5,16 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑-upload_work_report.md` | 2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑 |
+| 09 19 2026 与索 与角 主键 | `sessions/tg-rotate-2026-09-20-0605.md` | 2026-09-19 日报实交付摘要：指标库同步包实体与角色种子改为**遇主键跳 |
+| d」 id id」即可 「上 「已 」即 | `sessions/tg-rotate-2026-09-20-0605.md` | 日报「上传云端」场景：对话里确认「已上传 + 路径 + 记录 ID」即可，**不 |
+| tg 上传 上传日报 与是 与是否上传云端分开 为云 | `sessions/tg-rotate-2026-09-20-0605.md` | 周六也可写/上传日报；是否推 TG 与是否上传云端分开，本次仅为云端上传 |
+| .cursor date dd mm scripts upload_work_r | `sessions/tg-rotate-2026-09-20-0605.md` | 上传脚本：`.cursor/scripts/upload_work_report |
+| 09 1009 100939） 19 2026 id | `sessions/tg-rotate-2026-09-20-0605.md` | 同日同类型报告再次上传会走覆盖；首次新建常见状态为 `inserted`（本次  |
+| id inserted 上传 上传成功回执应带齐四件事 云端 云端记录 | `sessions/tg-rotate-2026-09-20-0605.md` | 上传成功回执应带齐四件事：**日期**、**云端记录 ID**、**状态**（如 |
+| tg 「上 」才 一步 上传 上传云端是 | `sessions/tg-rotate-2026-09-20-0605.md` | 上传云端是**独立触发**：只有主人明确说「上传云端」才执行；与写日报、推 TG |
+| daily lesson report reports upload uploa | `sessions/tg-rotate-2026-09-20-0605.md` | [LESSON: daily-report,upload/主人贴定稿要求上传云端 |
+| .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-20-0605.md` | 主人贴**已定稿**日报并说「上传云端」时：以粘贴正文为准，先落本地 `.cur |
 | ## 09 18 2026 agent_session_rotate autom | `~/.dc-platform/memory/lessons/2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆盖-仅中文选择器会误点失败.md` | 2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆 |
 | ## 09 18 2026 agent_session_rotate bot | `~/.dc-platform/memory/lessons/2026-09-18-判-old-mac-是否存活先看-sync-身份-bot-poller-youchu-memor.md` | 2026-09-18-判-old-mac-是否存活先看-sync-身份-bot- |
 | ## 09 18 2026 agent_session_rotate appli | `~/.dc-platform/memory/lessons/2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装按钮-pkg-直链有反爬-应走-rus.md` | 2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装 |
@@ -35,13 +45,3 @@
 | ## 09 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端.md` | 2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端 |
 | transcript 「按 一源 上传 不另扫 个上 | `sessions/tg-rotate-2026-09-17-2212.md` | 用户说「按照这个上传云端」= 以**当条消息正文**为唯一源，不另扫 trans |
 | 002 dm dmp系统 mp p系 tq | `sessions/tg-rotate-2026-09-17-2212.md` | 日报正文：任务编号用 `[TQ-002 / DMP系统]`，对外写业务任务名；状 |
-| session sql） 与加 仅本 加工 发平 | `sessions/tg-rotate-2026-09-17-2212.md` | 新表/新加工链路：设计定稿后走**数据开发平台**建 session → 建表与 |
-| 「已 」（ 三个 三个消费方需求并集 个消 也可 | `sessions/tg-rotate-2026-09-17-2212.md` | 页面访问轻聚合：按**三个消费方需求并集**出设计稿；统计粒度、对账判据在设计阶 |
-| 「内 两版 两版对比说明 产品 会话 供产 | `sessions/tg-rotate-2026-09-17-2212.md` | 大漏斗「内容类启动次数」：口径改为**会话 × 内容**组合去重后入库；口径变更 |
-| .cursor dd.md id insert log mm | `sessions/tg-rotate-2026-09-17-2212.md` | 本地定稿路径：`.cursor/work-log/reports/日报-YYYY |
-| 上传 上传前不改字 不动 不改 不重排 为准 | `sessions/tg-rotate-2026-09-17-2212.md` | 日报上传云端：以用户贴的定稿正文为准，**原封不动**落本地后再传，上传前不改字 |
-| lesson 三消 三消费方需求并集定稿 与对 先本 再走 | `sessions/tg-rotate-2026-09-17-2212.md` | [LESSON: 页面访问轻聚合/三消费方需求并集定稿、粒度与对账判据写清后再走 |
-| 「明 一优 一律 下一 下周） 优先 | `sessions/tg-rotate-2026-09-17-2212.md` | 日报「明日动作」：写真实下一优先项并带截止（明日 / 下周），勿一律默认「明日」 |
-| et tl 一致 上服 与线 仓库 | `sessions/tg-rotate-2026-09-17-2212.md` | 大漏斗阶段指标：加工逻辑须**仓库与线上服务端一致**；变更顺序铁律为**先入库 |
-| ## 09 16 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘再调-upload_work_repo.md` | 2026-09-16-用户私聊贴完整定稿并说-按这个上传云端-时-以粘贴正文落盘 |
-| top1 「已 」态 与「 业务 作写 | `sessions/tg-rotate-2026-09-16-2226.md` | 日报正文写业务结果与「已完成」态；死锁/复盘无内容则留空，明日动作写可执行的 T |

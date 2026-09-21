@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [主人贴定稿要求上传云端时，先原样落盘 reports/ 再跑 uploa](lessons/2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑-upload_work_report.md) — 会话轮换蒸馏
 - [macOS 安装器自动化须预开辅助功能；按钮文案中英都要覆盖，仅中文选择](lessons/2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆盖-仅中文选择器会误点失败.md) — 会话轮换蒸馏
 - [判 old-mac 是否存活先看 sync 身份 + bot/polle](lessons/2026-09-18-判-old-mac-是否存活先看-sync-身份-bot-poller-youchu-memor.md) — 会话轮换蒸馏
 - [ToDesk GUI 升级缺辅助功能权限时自动化点不了安装按钮；pkg ](lessons/2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装按钮-pkg-直链有反爬-应走-rus.md) — 会话轮换蒸馏

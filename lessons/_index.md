@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-20 | [主人贴定稿要求上传云端时，先原样落盘 reports/ 再跑 upload_wo](./2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑-upload_work_report.md) | daily-report,upload,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-18 | [macOS 安装器自动化须预开辅助功能；按钮文案中英都要覆盖，仅中文选择器会误点](./2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆盖-仅中文选择器会误点失败.md) | automation,macos,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-18 | [判 old-mac 是否存活先看 sync 身份 + bot/poller + ](./2026-09-18-判-old-mac-是否存活先看-sync-身份-bot-poller-youchu-memor.md) | old-mac,ops,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-18 | [ToDesk GUI 升级缺辅助功能权限时自动化点不了安装按钮；pkg 直链有反](./2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装按钮-pkg-直链有反爬-应走-rus.md) | todesk,macos,remote,session-rotate | 会话轮换前自动蒸馏 |
