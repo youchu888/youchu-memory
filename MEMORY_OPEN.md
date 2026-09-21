@@ -2,13 +2,15 @@
 
 > **体积目标 ≤3KB** · 每次冷启动全文注入 · **结了当场删行**  
 > 全量索引仍见 [`MEMORY.md`](MEMORY.md) / [`lessons/_index.md`](lessons/_index.md)  
-> 更新：2026-09-12
+> 更新：2026-09-21
 
 ## 进行中
 
+- [ ] **大漏斗本月补数**：`pipeline-runner/steps/funnel_backfill.json` 已备；等 VPN 连上 hadoop-1 后：`scp` 上机 → `bash run_daemon.sh --steps=.../funnel_backfill.json --from=2026-09-02T06 --until=2026-09-21T06`（业务日 09-01～09-20）。**禁** full_chain 整链 catchUp。
+- [x] **归因升级本月补数**：prod `wf_dws_汇总_日` 已串跑 result→apply→is_run_sync→board→no_candidate（biz 09-01～09-20）；海豚均 SUCCESS。SR 抽查需 VPN；runbook PC/WF 已改为运营系统真 code。
 - [ ] **大漏斗优化停**。缓存 85 分钟、先按人聚合 75 分钟，都比基线 66 分钟慢。单扫试验 A 已取消（INSERT 未完成提交）。集群 SQL 已收回最初版。test SR 基线未覆盖。沙箱 Paimon 仍是试验 B 的数，要回到最初版需重跑，未开。
 - [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 ✅；prod 同步包已出；**#8181 已转知秋，GO 前灌产/切读 HOLD**。**#8066 撞车点 diff 已回**（`COLLISION_DIFF.md`；entity/role=`INSERT IGNORE`）。界面跟单一入口，勿在旧三菜单上加东西。
-- [ ] **设备标签 uid_map 指纹**：#8179 PASS；**沙箱 explain PASS**（hadoop-1 `/tmp/uid_map_explain_20260907.log`）；sqlFile 须绝对路径；下一步真跑三规模数；不动 full_chain。
+- [ ] **设备标签 uid_map 指纹**：#8179 PASS；沙箱真跑 DONE（约 1.43 亿）；dim/宽表链仍 HOLD，勿并 full_chain。
 - [ ] **prod 海豚告警处置（old-mac 专责）**：按狂人安排告警驱动；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
 - [ ] **记忆系统 P1 养成**：每周 hygiene；沉前查重；纠正≥2 次写 PINNED。
 - [x] **页面访问 / 归因**：主人 2026-09-02 — **不盯卡点**；分区巡检、日常扫链继续。
