@@ -141,3 +141,4 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Monday, Sep 21, 2026, 9:03 PM (UTC+8)</timestamp>\n\n<user_query>Briefly inform the user about the task result and perform any follow-up actions (if needed). If there's no follow-ups needed, don't explicitly say that.</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"刚才有一条后台诊断（查海豚配置/网络路径）被中断了，不影响进度——归因补数早已用 platform API 跑完。\n\n事件漏斗仍等本机连上疾云 VPN 后才能 SSH 开补；连上后说一声即可。"}]}}
 {"type":"turn_ended","status":"success"}
+{"type":"turn_ended","status":"error","error":"[unavailable] PING timed out"}
