@@ -173,3 +173,4 @@
 {"role":"assistant","message":{"content":[{"type":"text","text":"竖版已单独出在新目录，**横版原文件没动**。\n\n### 路径\n`相册排版/竖版-v16/`  \n（上级 `18x12/`、`12x12/` 仍是横版 v15）\n\n### 本版要点\n\n| | A 竖版 18×12 | B 方册 12×12 |\n|---|---|---|\n| 对开 | 24×18（竖页对开） | 24×12 |\n| 跨页 | **23** | **22**（加厚） |\n| 张数 | 35 | 37 |\n| 主力 | 竖图整跨 / 两竖 | 横图定场 / 对页 |\n| 横图 | 中腰横带+上下留白 | 主场 |\n\n仍保留：大图↔拼图交替、同场景配对、页码/照片编号标注、72 全入。\n\n清单见：`竖版-v16/排版说明.md`"}]}}
 {"type":"turn_ended","status":"success"}
 {"type":"turn_ended","status":"error","error":"User aborted request"}
+{"type":"turn_ended","status":"error","error":"[unavailable] PING timed out"}
