@@ -137,3 +137,4 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Tuesday, Sep 22, 2026, 9:15 PM (UTC+8)</timestamp>\n<user_query>\n下一步还要做什么吗\n</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"test 侧填数主体已经做完。按定稿 B′，接下来主要是这些：\n\n## 建议优先\n\n1. **抽查一轮**  \n   重点看自动新建的 concept（definition / entity / 主实现是否合理），尤其是宽表、`num` 这类泛名。\n\n2. **消化 99 条 pending**  \n   多数是比率/avg：补 derived（分子分母）或标 reject，别长期挂着。\n\n3. **prod 仍 HOLD**  \n   同步包早就有了，但 **灌产 / Phase4 切读** 还等知秋书面 GO；在这之前不要动 prod。\n\n## 可选\n\n- 界面只跟单一入口（别在旧三菜单加东西）  \n- 日常增量：新表/新列走平台 propose，别再手工扫库\n\n**一句话**：数据侧 test 基本齐了；下一步是**质检 + 比率收口**，然后等知秋点头再上 prod。  \n你要的话又初可以先开一轮抽查清单，或先把比率 pending 清掉。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Tuesday, Sep 22, 2026, 9:17 PM (UTC+8)</timestamp>\n<user_query>\n完成这个吧 质检 + 比率收口\n</user_query>"}]}}
