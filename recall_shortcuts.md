@@ -5,6 +5,7 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-09-21-2241.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | ## 09 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑-upload_work_report.md` | 2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑 |
 | 09 19 2026 与索 与角 主键 | `sessions/tg-rotate-2026-09-20-0605.md` | 2026-09-19 日报实交付摘要：指标库同步包实体与角色种子改为**遇主键跳 |
 | d」 id id」即可 「上 「已 」即 | `sessions/tg-rotate-2026-09-20-0605.md` | 日报「上传云端」场景：对话里确认「已上传 + 路径 + 记录 ID」即可，**不 |
@@ -44,4 +45,3 @@
 | ## 09 17 2026 agent_session_rotate conte | `~/.dc-platform/memory/lessons/2026-09-17-内容类启动次数按-session_id-与-content-组合去重后入库-口径变更须附两版对比.md` | 2026-09-17-内容类启动次数按-session_id-与-content |
 | ## 09 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端.md` | 2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端 |
 | transcript 「按 一源 上传 不另扫 个上 | `sessions/tg-rotate-2026-09-17-2212.md` | 用户说「按照这个上传云端」= 以**当条消息正文**为唯一源，不另扫 trans |
-| 002 dm dmp系统 mp p系 tq | `sessions/tg-rotate-2026-09-17-2212.md` | 日报正文：任务编号用 `[TQ-002 / DMP系统]`，对外写业务任务名；状 |
