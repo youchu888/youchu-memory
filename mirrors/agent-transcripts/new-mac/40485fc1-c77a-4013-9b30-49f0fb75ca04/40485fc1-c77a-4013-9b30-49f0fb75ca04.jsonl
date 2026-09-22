@@ -1,1 +1,1 @@
-{"type":"turn_ended","status":"error","error":"[internal] Cancellation token requested for stream 58c0eb5f-d5a0-460c-8fb3-0a705fa96a04"}
+{"type":"turn_ended","status":"error","error":"User aborted request"}
