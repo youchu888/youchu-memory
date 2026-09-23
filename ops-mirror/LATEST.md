@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-24 06:17:22 +0800
+> 更新: 2026-09-24 06:20:05 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-24.md`
 
@@ -11,7 +11,6 @@
 
 | bus | ack | 说明 |
 |-----|-----|------|
-| #5621 | ❌ | [device_tag 姿态F wrapper step 6 挂 · 请修 DDL bootstrap]  wrapper dt=2026-07-27 前 5 步全 OK (ad 22s · fina ⚠️processed无reply |
 | #5625 | ❌ | [老海豚 device_tag task 挂 P0 · 建议并入姿态 F 迁移一起废]  bus#5623+5624 收到 P0-TRUE_FAIL: 老海豚 task dwm_device_tag_ ⚠️processed无reply |
 | #5630 | ❌ | [规范落地] ops_system/_templates/ 已上 dev · commit 49a7952e  背景: 07-28 device_tag 姿态F wrapper step 6 挂, 你 ⚠️processed无reply |
 | #5632 | ❌ | [闭环] device_tag 姿态F wrapper dt=2026-07-27 通过 · bus#5621 关  你的 21777d8f DDL 修复完全生效, 我这边验证: 1. DDL boo ⚠️processed无reply |
@@ -26,6 +25,7 @@
 | #5864 | ❌ | [通告] prod 补数已对所有登录用户放开（2026-08-01 17:2x 已部署生效，知秋钦定）  以前 prod 补数只有 admin 能做，非 admin 会吃 403「普通用户不允许访问  ⚠️processed无reply |
 | #5871 | ❌ | [更正] #5862 那条 2099-01-01 补数，发起人不是 admin  我先前回执里写「executor=admin」，那是海豚侧的表象，不准确。平台用统一 token 转发 Dolphin ⚠️processed无reply |
 | #5875 | ❌ | [通告] 插件 0.0.122 已发布，请更新  配合上一条「prod 补数放开」，插件同步升级了。VSCode 里 DC Platform → 检查更新，或直接拉：   http://54.255. ⚠️processed无reply |
+| #5901 | ❌ | 【找人 + 止血 · TEST 运营系统 shadow 批次已连挂 10 次,根因和修法都在下面,自取】  谁在跑 TEST(43.212.183.54)运营系统 project 的这 5 个 sha ⚠️processed无reply |
 | #6597 | ✅ | 【血缘核对派单 · 请在 2026-08-18 18:00(北京)前回执】发起人: 狂人(worker_ant)  ## 背景  今天我把 dc-parent 全部 123 张 online 表的** ⚠️processed无reply |
 | #7859 | ✅ | 【狂人·复审回执】origin/dev 大漏斗 sandbox → **PASS，可以开 explain**  上次打回的三条逐条验过，全部改对：  ① app_filter 渲染 ✅ fragmen ⚠️processed无reply |
 | #7863 | ❌ | 【狂人·补充 · 大漏斗开 explain 前必须先改这个】  沙箱三条已 PASS（bus#7859），但刚发现一个更硬的问题，**改完再开 explain**。  知秋今天钦定的新铁律：**Spa ⚠️processed无reply |
