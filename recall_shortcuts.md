@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-23-手动打的是前一日下班卡时-须明确不影响当日自动上下班计划与时间窗口.md` | 2026-09-23-手动打的是前一日下班卡时-须明确不影响当日自动上下班计划与 |
+| ## 09 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-23-主人说已手动打卡时-禁止再重试或自动补打-当次打卡视为已完成.md` | 2026-09-23-主人说已手动打卡时-禁止再重试或自动补打-当次打卡视为已完 |
+| top1 办收 库质 待办 抽查 指标 | `sessions/tg-rotate-2026-09-23-1007.md` | 次日 TOP1 续做项：指标库质检抽查 + 比率类待办收口 |
+| 09 2026 22 300→650 余正 入升 | `sessions/tg-rotate-2026-09-23-1007.md` | 2026-09-22 指标库进度锚点：盘点报表层/汇总层覆盖缺口并出对照清单；活 |
+| 09 2026 22） date markdown 「上 | `sessions/tg-rotate-2026-09-23-1007.md` | 日报定稿后主人说「上传云端」→ 以定稿 Markdown **原封不动**上传， |
+| 「约 」） 与当 主人 于主 人决 | `sessions/tg-rotate-2026-09-23-1007.md` | 可顺带报与当前时间的间隔（「约还有 X 分钟」），便于主人决策是否再等自动打 |
+| 00） 09 30–10 40 50 上班 | `sessions/tg-rotate-2026-09-23-1007.md` | 查打卡计划的标准答法：上班/下班**计划时刻** + **打卡窗口**（例：09 |
+| 「今 一日 上下 下班 今日 免误 | `sessions/tg-rotate-2026-09-23-1007.md` | 手动完成的是**前一日下班卡**时，须与**当日**自动上下班计划分开说明，避免 |
+| 「今 」→ 不再 主人 主人明确「今晚 二次 | `sessions/tg-rotate-2026-09-23-1007.md` | 主人明确「今晚/今天已手动打完卡」→ 当日不再自动重试、补打或二次触发打卡流程 |
+| lesson punch 为已 主人 主人说已手动打卡时 人说 | `sessions/tg-rotate-2026-09-23-1007.md` | [LESSON: punch/主人说已手动打卡时，禁止再重试或自动补打，当次打卡 |
+| api co cu ec econnreset）时 es | `sessions/tg-rotate-2026-09-23-1007.md` | 网络/API 异常（Cursor API 失败、ECONNRESET）时，**不 |
+| 「不 不影 主答 从可 任务 停止 | `sessions/tg-rotate-2026-09-23-1007.md` | 后台扫盘/巡检任务超时或停止，若计划时间已从可靠配置得出，应单独声明「不影响打卡 |
 | ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-09-21-2241.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | ## 09 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑-upload_work_report.md` | 2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑 |
 | 09 19 2026 与索 与角 主键 | `sessions/tg-rotate-2026-09-20-0605.md` | 2026-09-19 日报实交付摘要：指标库同步包实体与角色种子改为**遇主键跳 |
@@ -33,15 +45,3 @@
 | todesk 「机 主机 主机存活 了」 分层 | `sessions/tg-rotate-2026-09-18-1211.md` | 报障结论宜分层：**主机存活 / 记忆同步 / 远控通道** 分开说，避免把 T |
 | ## 09 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-play-跳涨而-detail-不动-查交.md` | 2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-pl |
 | ## 09 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-update_time-与-playboo.md` | 2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-up |
-| .claude .md database dt dws.dws_app_even | `sessions/tg-rotate-2026-09-18-1052.md` | 核查报告落盘：`.claude/database/reports/dws.dws |
-| 20% 242 368） 435 51 54 | `sessions/tg-rotate-2026-09-18-1052.md` | SF-81 异常模式：`video_play` **61,646 > 详情页 U |
-| app playbook uv video_play 不过 分开 | `sessions/tg-rotate-2026-09-18-1052.md` | playbook 硬规则：**`video_play` 加总 ≤ 详情页 UV* |
-| +1.2% +2.3% +2.4% 06 09 16 | `sessions/tg-rotate-2026-09-18-1052.md` | 2026-09-17 样例：**5,597 行 / 737 app**，`upd |
-| 06 57） app dt update_time 一日 | `sessions/tg-rotate-2026-09-18-1052.md` | 跑通粗判：`dt` 分区有数、`update_time` 落在今早例行窗口（如  |
-| datache datacheck dt dws.dws_app_event_f | `sessions/tg-rotate-2026-09-18-1052.md` | 主表：`dws.dws_app_event_funnel_d_d`；口语「大漏斗 |
-| 81 sf video_play 与详 与详情页 交集 | `sessions/tg-rotate-2026-09-18-1052.md` | 后续深挖方向：把 SF-81 的 `video_play` 与详情页 **交集逻 |
-| prod spark sr task update_time workflow | `sessions/tg-rotate-2026-09-18-1052.md` | 大漏斗 prod **不在海豚挂 task**，是 **Spark 链路**；核 |
-| ## 09 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表-禁止设计未定先本地建表.md` | 2026-09-17-三消费方需求并集定稿-粒度与对账判据写清后再走开发平台建表 |
-| ## 09 17 2026 agent_session_rotate conte | `~/.dc-platform/memory/lessons/2026-09-17-内容类启动次数按-session_id-与-content-组合去重后入库-口径变更须附两版对比.md` | 2026-09-17-内容类启动次数按-session_id-与-content |
-| ## 09 17 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端.md` | 2026-09-17-指标口径变更须先改仓库入库逻辑-验数通过后再动线上服务端 |
-| transcript 「按 一源 上传 不另扫 个上 | `sessions/tg-rotate-2026-09-17-2212.md` | 用户说「按照这个上传云端」= 以**当条消息正文**为唯一源，不另扫 trans |
