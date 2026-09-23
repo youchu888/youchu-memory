@@ -369,3 +369,4 @@
 - [群收不到工作簿就不要闹钟发群：等bus入站再实查reply](lessons/2026-09-05-workbook-no-group-alarm-reply-on-bus.md) — 2026-09-05
 - [工作簿 09:01 兜底仍像秒回：写死1/2条+禁印口号](lessons/2026-09-05-workbook-daily-fallback-still-looks-instant.md) — 2026-09-05
 - [狂人 bus 清单问进度：清单主责+自开实责·截至汇报前·禁秒回](lessons/2026-09-03-workbook-progress-list-plus-owned-no-instant-ack.md) — 2026-09-03
+- feedback_vpn_renew_deadlock_use_cham.md — VPN死结破局：Cham点击连接→续期→关变色龙

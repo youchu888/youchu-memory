@@ -326,3 +326,4 @@
 | 2026-09-11 | [funnel升维须四方同步且page_view全局过闸](./2026-09-11-funnel-升维须四方同步且page_view全局过闸.md) | funnel,pushback,SR,sandbox | 缺SR/pushback不上线；HAVING禁细粒度 |
 | 2026-09-18 | memory-git远程升级旧机ToDesk | todesk dual-mac oneshot |
 - [2026-09-23] vpn /request 失败占冷却致假成功 → `2026-09-23-vpn-request-fail-poison-cooldown.md`
+- 2026-09-23-vpn-renew-deadlock-cham-connect.md — VPN续期死结用变色龙点「点击连接」通外网再续期（非向日葵）
