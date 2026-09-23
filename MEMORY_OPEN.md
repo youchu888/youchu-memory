@@ -6,7 +6,7 @@
 
 ## 进行中
 
-- [ ] **大漏斗本月补数**：hadoop-1 上 `funnel_backfill` catchUp **已在跑**（`from=2026-09-02T06`→`until=2026-09-21T06`，业务日 09-01～09-20）；日志 `/tmp/funnel_backfill_20260901_0920.log`。截至 22:32：biz **09-01 三步完成并回写 SR**；正在跑 **09-02 metric_stg**（约 22min/日量级）。**禁**另起 full_chain catchUp。
+- [x] **大漏斗本月补数**：hadoop-1 `funnel_backfill` catchUp **已完成**（`2026-09-02T06`→`2026-09-21T06` = 业务日 09-01～09-20）；日志末行 `23:32:16 catchup 全部跑完`。**禁**另起 full_chain catchUp。新口径发产/历史再补仍等审核。
 - [x] **归因升级本月补数**：prod `wf_dws_汇总_日` 已串跑 result→apply→is_run_sync→board→no_candidate（biz 09-01～09-20）；海豚均 SUCCESS。SR `result_d` 20 日均有数且 `created_at≈2026-09-21 20:52`；runbook PC/WF 已改为运营系统真 code。
 - [ ] **大漏斗优化停**。缓存 85 分钟、先按人聚合 75 分钟，都比基线 66 分钟慢。单扫试验 A 已取消（INSERT 未完成提交）。集群 SQL 已收回最初版。test SR 基线未覆盖。沙箱 Paimon 仍是试验 B 的数，要回到最初版需重跑，未开。
 - [ ] **指标库上线（主人定稿 B′）**：Phase2 ✅；D5 ✅；prod 同步包已出；**#8181 已转知秋，GO 前灌产/切读 HOLD**。**#8066 撞车点 diff 已回**（`COLLISION_DIFF.md`；entity/role=`INSERT IGNORE`）。界面跟单一入口，勿在旧三菜单上加东西。
