@@ -270,6 +270,7 @@
 - [bot 自查告警：连续失败才私聊](lessons/2026-07-27-bot-selfcheck-notify-after-sustained.md) — NOTIFY_AFTER=3；getMe 后跳过二次探活；冷却 30min。
 - [VPN 续期不因请假/节假日停止](feedback_vpn_renew_every_day.md) — 主人 07-27：每天必续；请假/放假也不停 launchd。
 - [VPN 续期按导入时刻滚动](lessons/2026-07-09-vpn-renew-by-import-time.md) — imported_at 记上次导入；满 23h 提前续；本机上次 2026-07-09 09:23，计划 07-10 08:23。
+- [跟用户说话说人话](feedback_speak_plain_to_user.md) — 对话/需求梳理通俗易懂；少术语少清单腔。
 - [周报写法以 W28 为样板](feedback_weekly_report_style_w28.md) — 主人认可；按工作簿主责分节；禁 bus#；只写数据工作。
 - [OneHR 打卡禁止上传过期截图](lessons/2026-08-31-OneHR打卡禁止上传过期截图.md) — launchd 超时后误传旧 PNG；只收 180 秒内新截
 - [工作簿也要镜像到私聊](lessons/2026-08-31-工作簿也要镜像到私聊.md) — 原文+发群进展进主人私聊；不要求 @又初；inbound_dm 同日一次
