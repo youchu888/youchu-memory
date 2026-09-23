@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 2026 24 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-24-连接失败丢弃-resume-时勿假设上下文还在-须冷启动记忆后重跑或让用户重发-新开-agent.md` | 2026-09-24-连接失败丢弃-resume-时勿假设上下文还在-须冷启动记 |
+| ## 09 2026 24 agent_session_rotate colla | `~/.dc-platform/memory/lessons/2026-09-24-git-https-token-说明可发机器人群-正文零真实凭证-验收用-ls-remote.md` | 2026-09-24-git-https-token-说明可发机器人群-正文零真 |
+| ## 09 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-24-仅当-ovpn-成功导入且-imported_at-更新后再写冷却-失败清冷却或勿写-过期旧证禁.md` | 2026-09-24-仅当-ovpn-成功导入且-imported_at-更新后 |
+| bus howto 一致 不含 不含密钥 主人 | `sessions/tg-rotate-2026-09-24-0608.md` | 同一 howto 可多渠道：先前 bus 已发过，仍可按主人要求再发群，内容保持 |
+| @mudan99_bo @mudan99_bot agent」 bus cu c | `sessions/tg-rotate-2026-09-24-0608.md` | 私聊/bus 发失败或 Cursor「会话连接失败、丢弃旧 resume」时，改 |
+| pat token 不带 不带任何真实 任何 何真 | `sessions/tg-rotate-2026-09-24-0608.md` | 对外说明**只写步骤**，不带任何真实 token；对方用自己账号生成 PAT。 |
+| git gitlab https ls pat remote | `sessions/tg-rotate-2026-09-24-0608.md` | GitLab 命令行用 Token：网页建 PAT → 域名级代理（如需）→ ` |
+| ovpn request 一次 先强 先强制续一次 再改 | `sessions/tg-rotate-2026-09-24-0608.md` | 卡死时：查完整 `/request` 日志 + 本地 ovpn 日期，先强制续一 |
+| eq es imported_at qu re request」的时间戳 | `sessions/tg-rotate-2026-09-24-0608.md` | 判因要看「上次**真正导入**时间」（如 `imported_at`），不能只看 |
+| 20h 20h」→ ov ovpn request 「距 | `sessions/tg-rotate-2026-09-24-0608.md` | **假成功模式**：失败仍写入 20h 冷却 → 后续轮询「距上次 /reque |
+| openvpn ovpn request 「已 一步 不应 | `sessions/tg-rotate-2026-09-24-0608.md` | 续期链路：`/request` → 生成 ovpn → 导入 → 拉起 Open |
+| launchd n「 pn vp vpn「没自动续」先查 「没 | `sessions/tg-rotate-2026-09-24-0608.md` | VPN「没自动续」先查 launchd 是否在跑；常见是脚本假成功，不是定时任务 |
+| agent cursor lesson resume 上下 下文 | `sessions/tg-rotate-2026-09-24-0608.md` | [LESSON: cursor-agent/连接失败丢弃 resume 时勿假设 |
+| imported_at launchd lesson ovpn sync vpn | `sessions/tg-rotate-2026-09-24-0608.md` | [LESSON: vpn-sync,ovpn,launchd/仅当 ovpn 成 |
+| 20h 上应 不上 不占 不能 修复 | `sessions/tg-rotate-2026-09-24-0608.md` | 修复要点：失败不占 20h 冷却；旧证复用不能当续期成功；续不上应报错/红灯，禁 |
 | ## 09 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-23-手动打的是前一日下班卡时-须明确不影响当日自动上下班计划与时间窗口.md` | 2026-09-23-手动打的是前一日下班卡时-须明确不影响当日自动上下班计划与 |
 | ## 09 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-23-主人说已手动打卡时-禁止再重试或自动补打-当次打卡视为已完成.md` | 2026-09-23-主人说已手动打卡时-禁止再重试或自动补打-当次打卡视为已完 |
 | top1 办收 库质 待办 抽查 指标 | `sessions/tg-rotate-2026-09-23-1007.md` | 次日 TOP1 续做项：指标库质检抽查 + 比率类待办收口 |
@@ -30,18 +45,3 @@
 | .cursor dd.md log mm reports work | `sessions/tg-rotate-2026-09-20-0605.md` | 主人贴**已定稿**日报并说「上传云端」时：以粘贴正文为准，先落本地 `.cur |
 | ## 09 18 2026 agent_session_rotate autom | `~/.dc-platform/memory/lessons/2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆盖-仅中文选择器会误点失败.md` | 2026-09-18-macos-安装器自动化须预开辅助功能-按钮文案中英都要覆 |
 | ## 09 18 2026 agent_session_rotate bot | `~/.dc-platform/memory/lessons/2026-09-18-判-old-mac-是否存活先看-sync-身份-bot-poller-youchu-memor.md` | 2026-09-18-判-old-mac-是否存活先看-sync-身份-bot- |
-| ## 09 18 2026 agent_session_rotate appli | `~/.dc-platform/memory/lessons/2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装按钮-pkg-直链有反爬-应走-rus.md` | 2026-09-18-todesk-gui-升级缺辅助功能权限时自动化点不了安装 |
-| anydesk rustdesk 也可 了也 使装 别当 | `sessions/tg-rotate-2026-09-18-1211.md` | 探测备援远控时要**真查进程/服务**：RustDesk 在线可用；AnyDes |
-| bot ma mac rustdesk tg 上再 | `sessions/tg-rotate-2026-09-18-1211.md` | **没人在场**时的可行路径：① 用已在线的 **RustDesk** 连上再点 |
-| 192.168.1.12 mac ssh 不能 不能默认 可用 | `sessions/tg-rotate-2026-09-18-1211.md` | 旧 Mac 常见 **SSH 未开**（如 `192.168.1.12`），不能 |
-| applications pkg todesk.app watcher 人点 动 | `sessions/tg-rotate-2026-09-18-1211.md` | 安装器已拉起时，可挂 **后台 watcher**：等人点完安装、pkg 落盘后 |
-| cdn curl gui pkg todesk 下不 | `sessions/tg-rotate-2026-09-18-1211.md` | ToDesk 官网 pkg **CDN 有反爬**，本机 `curl` 直链往往 |
-| now” “install 「立 「立即安装」和 」和 不能 | `sessions/tg-rotate-2026-09-18-1211.md` | 安装器按钮文案可能中英混用；点按逻辑需同时覆盖 **「立即安装」和 “Insta |
-| cliclick downloads install macos now」 to | `sessions/tg-rotate-2026-09-18-1211.md` | ToDesk 升级脚本走 `~/Downloads/ToDesk_Install |
-| oneshot oneshot_upgrade oneshot_upgrade_ | `sessions/tg-rotate-2026-09-18-1211.md` | `sync` 流程可顺带触发 **ToDesk oneshot 升级**；是否完 |
-| bot poller todesk 主机 则说 同步 | `sessions/tg-rotate-2026-09-18-1211.md` | ToDesk 断连常见是**客户端版本/远控问题**；bot、记忆同步、poll |
-| ho hosts latest mac memory mirror | `sessions/tg-rotate-2026-09-18-1211.md` | 旧 Mac 仍是主控时，`youchu-memory` 同步成功、`ops-mi |
-| agent bot bus git host ma | `sessions/tg-rotate-2026-09-18-1211.md` | 用户说「旧 Mac 挂了」时，先跑 `sync-memory-git` / 看  |
-| todesk 「机 主机 主机存活 了」 分层 | `sessions/tg-rotate-2026-09-18-1211.md` | 报障结论宜分层：**主机存活 / 记忆同步 / 远控通道** 分开说，避免把 T |
-| ## 09 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-play-跳涨而-detail-不动-查交.md` | 2026-09-18-play-详情页-uv-时先比-t-2-同口径-若仅-pl |
-| ## 09 18 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-update_time-与-playboo.md` | 2026-09-18-大漏斗-prod-核查跳过海豚-改查-sr-分区行数-up |

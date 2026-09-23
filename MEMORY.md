@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [连接失败丢弃 resume 时勿假设上下文还在，须冷启动记忆后重跑或让用](lessons/2026-09-24-连接失败丢弃-resume-时勿假设上下文还在-须冷启动记忆后重跑或让用户重发-新开-agent.md) — 会话轮换蒸馏
+- [Git HTTPS+Token 说明可发机器人群；正文零真实凭证，验收用](lessons/2026-09-24-git-https-token-说明可发机器人群-正文零真实凭证-验收用-ls-remote.md) — 会话轮换蒸馏
+- [仅当 ovpn 成功导入且 `imported_at` 更新后再写冷却；](lessons/2026-09-24-仅当-ovpn-成功导入且-imported_at-更新后再写冷却-失败清冷却或勿写-过期旧证禁.md) — 会话轮换蒸馏
 - [手动打的是前一日下班卡时，须明确不影响当日自动上下班计划与时间窗口](lessons/2026-09-23-手动打的是前一日下班卡时-须明确不影响当日自动上下班计划与时间窗口.md) — 会话轮换蒸馏
 - [主人说已手动打卡时，禁止再重试或自动补打，当次打卡视为已完成](lessons/2026-09-23-主人说已手动打卡时-禁止再重试或自动补打-当次打卡视为已完成.md) — 会话轮换蒸馏
 - [主人贴定稿要求上传云端时，先原样落盘 reports/ 再跑 uploa](lessons/2026-09-20-主人贴定稿要求上传云端时-先原样落盘-reports-再跑-upload_work_report.md) — 会话轮换蒸馏
