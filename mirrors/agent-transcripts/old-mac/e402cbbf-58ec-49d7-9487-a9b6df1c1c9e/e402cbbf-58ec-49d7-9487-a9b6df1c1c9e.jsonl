@@ -141,3 +141,4 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"Shell","input":{"command":"pgrep -fl 'omdb/tgbot/bot.py' | head -2\nrg -n \"getUpdates|Application started\" /tmp/tgbot-dc.log | tail -5\nbash /Users/mac/Desktop/CHcode/omdb/tgbot/daemon_check.sh >/dev/null 2>&1; echo \"daemon_check=$?\"\n","description":"Quick confirm bot still healthy"}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"机器人已起来：`bot.py` 在跑，`getUpdates` 正常，`daemon_check` 通过。变色龙仍连着，确认没问题后可以说一声再断。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Thursday, Sep 24, 2026, 7:30 PM (UTC+8)</timestamp>\n<user_query>\n之前的消息怎么不处理\n</user_query>"}]}}
