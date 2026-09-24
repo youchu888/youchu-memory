@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-09-24 17:21:55 +0800
+> 更新: 2026-09-24 17:24:44 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-09-24.md`
 
@@ -52,3 +52,4 @@
 | 2026-09-23 20:29 | 私聊#511 | telegram_dm | completed | 把git配置的token的方式bus给花儿 |
 | 2026-09-23 20:48 | 私聊#512 | telegram_dm | completed | vpn怎么没有自动续 |
 | 2026-09-23 20:51 | 私聊#513 | telegram_dm | completed | 发机器人群 里吧，把配置token的方式 |
+| 2026-09-24 17:22 | 群派单#220 | worker_ant_group | completed | sheet 02「完全缺失」查清了，不是晚到口径差，是真丢钱。根因坐实，逐笔闭合。 【结论】 充值影子小时链里有一道「订单去重闸」，撞上了 WYYL-001 这 |
