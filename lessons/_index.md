@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-24 | [Spark 写目标只许 `${OUT_DB}.<层>.<表>`（OUT_DB 只装 catalog）](./2026-09-24-spark-OUT_DB只装catalog-写目标须三层名.md) | spark, OUT_DB, pipeline-runner, ops_system, paimon | high · bus#9225 |
 | 2026-09-24 | [连接失败丢弃 resume 时勿假设上下文还在，须冷启动记忆后重跑或让用户重发/](./2026-09-24-连接失败丢弃-resume-时勿假设上下文还在-须冷启动记忆后重跑或让用户重发-新开-agent.md) | cursor-agent,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-24 | [Git HTTPS+Token 说明可发机器人群；正文零真实凭证，验收用 `ls](./2026-09-24-git-https-token-说明可发机器人群-正文零真实凭证-验收用-ls-remote.md) | git,collab,tg,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-24 | [仅当 ovpn 成功导入且 `imported_at` 更新后再写冷却；失败清冷](./2026-09-24-仅当-ovpn-成功导入且-imported_at-更新后再写冷却-失败清冷却或勿写-过期旧证禁.md) | vpn-sync,ovpn,launchd,session-rotate | 会话轮换前自动蒸馏 |
