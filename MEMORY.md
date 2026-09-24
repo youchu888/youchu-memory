@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [用户短时间重复同一调研类私聊，复用已有结论短答，避免重复全网检索与长文复](lessons/2026-09-24-用户短时间重复同一调研类私聊-复用已有结论短答-避免重复全网检索与长文复述.md) — 会话轮换蒸馏
+- [指标库前端对齐 B′：发现页大搜索+认证/lifecycle 徽章；详情](lessons/2026-09-24-指标库前端对齐-b-发现页大搜索-认证-lifecycle-徽章-详情左口径右实现-血缘-统一-.md) — 会话轮换蒸馏
+- [Telegram Bot 重启若 API 超时，先确认网络/VPN 与 ](lessons/2026-09-24-telegram-bot-重启若-api-超时-先确认网络-vpn-与-api-可达-再用-da.md) — 会话轮换蒸馏
 - [Spark OUT_DB 只装 catalog · 写目标须三层名](lessons/2026-09-24-spark-OUT_DB只装catalog-写目标须三层名.md) — bus#9225 · feedback_spark_OUT_DB_catalog_only
 - [连接失败丢弃 resume 时勿假设上下文还在，须冷启动记忆后重跑或让用](lessons/2026-09-24-连接失败丢弃-resume-时勿假设上下文还在-须冷启动记忆后重跑或让用户重发-新开-agent.md) — 会话轮换蒸馏
 - [Git HTTPS+Token 说明可发机器人群；正文零真实凭证，验收用](lessons/2026-09-24-git-https-token-说明可发机器人群-正文零真实凭证-验收用-ls-remote.md) — 会话轮换蒸馏
