@@ -36,6 +36,12 @@ ts() { date '+%F %T'; }
   git fetch origin "$BRANCH"
   if git pull --rebase --autostash origin "$BRANCH"; then
     AFTER="$(git rev-parse --short HEAD)"
+    # autostash 回存失败时仍可能 exit 0，需检查未合并路径
+    if git status --porcelain 2>/dev/null | awk '{print $1}' | rg -q '^(UU|AA|DD|AU|UA|DU|UD)$'; then
+      echo "[$(ts)] ERROR: pull 后仍有未合并文件（多为 autostash 冲突）。请本机打开仓库处理。"
+      git status --porcelain | head -30 || true
+      exit 1
+    fi
     if [[ "$BEFORE" == "$AFTER" ]]; then
       echo "[$(ts)] OK 已是最新 branch=$BRANCH @$AFTER"
     else
