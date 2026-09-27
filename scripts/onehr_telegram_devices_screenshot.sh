@@ -9,7 +9,8 @@
 #
 # 刷新：又初 → Ethan → 又初（Window 菜单 AX 点击），再进设置→设备管理。
 # 必须截到「设置侧栏 + 登录设备管理」且账号为又初；禁止左聊天 overlay / Ethan 页。
-# 输出：~/Desktop/CH/telegram/telegram_devices_YYYYMMDD_HHMMSS.png
+# 输出：~/Desktop/CH/onehr/YYYYMMDD/telegram_devices_YYYYMMDD_HHMMSS.png
+# ONEHR_SCREENSHOT_DIR 为根目录（默认 ~/Desktop/CH/onehr）；脚本按当天日期建子目录。
 
 set -euo pipefail
 
@@ -25,7 +26,15 @@ for arg in "$@"; do
 done
 
 TG_APP="${TELEGRAM_APP:-Telegram}"
-OUT_DIR="${ONEHR_SCREENSHOT_DIR:-$HOME/Desktop/CH/telegram}"
+SCREENSHOT_ROOT="${ONEHR_SCREENSHOT_DIR:-$HOME/Desktop/CH/onehr}"
+# 已是 yyyymmdd 则直接用；否则在根下建当天目录
+_day="$(date +%Y%m%d)"
+_base_name="$(basename "$SCREENSHOT_ROOT")"
+if [[ "$_base_name" =~ ^[0-9]{8}$ ]]; then
+  OUT_DIR="$SCREENSHOT_ROOT"
+else
+  OUT_DIR="${SCREENSHOT_ROOT}/${_day}"
+fi
 PRIMARY_ACCOUNT="${ONEHR_TG_PRIMARY_ACCOUNT:-又初}"
 BOUNCE_ACCOUNT="${ONEHR_TG_BOUNCE_ACCOUNT:-Ethan}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

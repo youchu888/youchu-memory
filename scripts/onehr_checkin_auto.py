@@ -333,14 +333,23 @@ def validate_devices_screenshot(path: Path) -> str:
     return detail or "OK"
 
 
+def resolve_screenshot_day_dir(screenshot_root: Path) -> Path:
+    """ONEHR_SCREENSHOT_DIR 为根目录时，落到当天 yyyymmdd 子目录。"""
+    name = screenshot_root.name
+    if re.fullmatch(r"\d{8}", name):
+        return screenshot_root
+    return screenshot_root / datetime.now().strftime("%Y%m%d")
+
+
 def latest_screenshot(
     screenshot_dir: Path,
     max_age_sec: int = MAX_FRESH_SCREENSHOT_SEC,
 ) -> Optional[Path]:
     """只接受刚截出来的、且内容校验通过的图。禁止拿目录里几天前的旧 PNG 顶上去。"""
-    if not screenshot_dir.is_dir():
+    day_dir = resolve_screenshot_day_dir(screenshot_dir)
+    if not day_dir.is_dir():
         return None
-    files = sorted(screenshot_dir.glob("telegram_devices_*.png"), key=lambda p: p.stat().st_mtime)
+    files = sorted(day_dir.glob("telegram_devices_*.png"), key=lambda p: p.stat().st_mtime)
     if not files:
         return None
     newest = files[-1]
@@ -547,8 +556,10 @@ def main() -> int:
     base_url = cfg.get("ONEHR_BASE_URL", "https://m-reportsys.cc")
     employee_code = cfg.get("ONEHR_EMPLOYEE_CODE", "")
     password = cfg.get("ONEHR_PASSWORD", "")
-    screenshot_dir = Path(cfg.get("ONEHR_SCREENSHOT_DIR", str(Path.home() / "Desktop/CH/telegram")))
+    screenshot_dir = Path(cfg.get("ONEHR_SCREENSHOT_DIR", str(Path.home() / "Desktop/CH/onehr")))
     screenshot_script = Path(cfg.get("ONEHR_SCREENSHOT_SCRIPT", str(DEFAULT_SCREENSHOT_SCRIPT)))
+    # 截图脚本读环境变量建当天 yyyymmdd 子目录
+    os.environ["ONEHR_SCREENSHOT_DIR"] = str(screenshot_dir)
     log_dir = Path(cfg.get("ONEHR_LOG_DIR", str(DEFAULT_LOG_DIR)))
     log_file = log_dir / f"checkin_{datetime.now():%Y%m%d}.log"
 
