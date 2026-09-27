@@ -14,17 +14,16 @@ HOUR="${CHCODE_SYNC_HOUR:-8}"
 MINUTE="${CHCODE_SYNC_MINUTE:-30}"
 
 mkdir -p "$HOME/Library/LaunchAgents" "$LOG_DIR" "$STD_DIR"
-cp -f "$HERE/sync-chcode-git.sh" "$SCRIPT" 2>/dev/null || true
-# 若从 STD_DIR 自身安装，保证可执行
-[[ -f "$HERE/sync-chcode-git.sh" ]] && cp -f "$HERE/sync-chcode-git.sh" "$SCRIPT"
-chmod +x "$SCRIPT" "$HERE/install-chcode-git-sync-launchd.sh" 2>/dev/null || true
-chmod +x "$STD_DIR/install-chcode-git-sync-launchd.sh" 2>/dev/null || true
 
-# 卸载脚本一并落下
-if [[ -f "$HERE/uninstall-chcode-git-sync-launchd.sh" ]]; then
-  cp -f "$HERE/uninstall-chcode-git-sync-launchd.sh" "$STD_DIR/"
-  chmod +x "$STD_DIR/uninstall-chcode-git-sync-launchd.sh"
+# 安装源可能就是 STD_DIR，避免 cp 自身报错
+if [[ "$(cd "$HERE" && pwd)" != "$(cd "$STD_DIR" && pwd)" ]]; then
+  cp -f "$HERE/sync-chcode-git.sh" "$SCRIPT"
+  cp -f "$HERE/install-chcode-git-sync-launchd.sh" "$STD_DIR/" 2>/dev/null || true
+  [[ -f "$HERE/uninstall-chcode-git-sync-launchd.sh" ]] && cp -f "$HERE/uninstall-chcode-git-sync-launchd.sh" "$STD_DIR/"
 fi
+chmod +x "$SCRIPT" \
+  "$STD_DIR/install-chcode-git-sync-launchd.sh" \
+  "$STD_DIR/uninstall-chcode-git-sync-launchd.sh" 2>/dev/null || true
 
 cat >"$PLIST" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
