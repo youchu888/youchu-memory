@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-27 | [自动化迁 new-mac：tgbot 须 App Support runtime，禁 launchd 直读 Desktop](./2026-09-27-automation-migrate-new-mac-tgbot-app-support-runtime.md) | automation, launchd, tgbot, new-mac, TCC | deploy_app_support_runtime；AUTHORITY=new-mac |
 | 2026-09-24 | [用户短时间重复同一调研类私聊，复用已有结论短答，避免重复全网检索与长文复述。](./2026-09-24-用户短时间重复同一调研类私聊-复用已有结论短答-避免重复全网检索与长文复述.md) | agent-bus,tg,dedupe,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-24 | [指标库前端对齐 B′：发现页大搜索+认证/lifecycle 徽章；详情左口径右](./2026-09-24-指标库前端对齐-b-发现页大搜索-认证-lifecycle-徽章-详情左口径右实现-血缘-统一-.md) | metric-library,ui,product,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-09-24 | [Telegram Bot 重启若 API 超时，先确认网络/VPN 与 API ](./2026-09-24-telegram-bot-重启若-api-超时-先确认网络-vpn-与-api-可达-再用-da.md) | tg-bot,restart,vpn,session-rotate | 会话轮换前自动蒸馏 |
