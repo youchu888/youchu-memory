@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-28 | [new-mac 自动化：开机/唤醒自启 + ensure 巡检](./2026-09-28-new-mac-automation-ensure-on-wake.md) | launchd, automation, new-mac, wake | automation-ensure 120s；常驻 KeepAlive |
+| 2026-09-28 | [bot 自查：持续 ≥10 分钟才私聊；自愈静默](./2026-09-28-bot-selfcheck-notify-after-10min.md) | tgbot, watchdog, alert | NOTIFY_AFTER_SEC=600；不发恢复刷屏 |
 | 2026-09-28 | [TG 绿点跟 OneHR 打卡：上班后间歇绿，下班后灭，离线≤15分钟](./2026-09-28-tg-visible-online-follows-onehr-punch.md) | tg, telethon, visible-online, onehr, punch | 打卡后绿、下班灰；MAX_OFFLINE=900 |
 | 2026-09-28 | [单机 memory sync 改下班一次；双机恢复改 MODE=interval](./2026-09-28-memory-sync-solo-daily-after-work.md) | memory-git, launchd, dual-mac, solo, daily | MODE=daily 22:30；恢复 MODE=interval |
 | 2026-09-28 | [VPN 放 auto_vpn；onehr 只放截图；打卡 AX 须 launchd 复测](./2026-09-28-vpn放auto_vpn-onehr只放截图-打卡AX权限.md) | vpn, onehr, punch, accessibility, launchd | VPN 错放 onehr；截图失败真因 AX |
