@@ -2,7 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
-| 2026-09-28 | [单机 memory sync 改下班一次；双机恢复改 MODE=interval](./2026-09-28-memory-sync-solo-daily-after-work.md) | memory-git, launchd, dual-mac, solo, daily | MODE=daily 19:00；恢复 MODE=interval |
+| 2026-09-28 | [TG 绿点跟 OneHR 打卡：上班后间歇绿，下班后灭，离线≤15分钟](./2026-09-28-tg-visible-online-follows-onehr-punch.md) | tg, telethon, visible-online, onehr, punch | 打卡后绿、下班灰；MAX_OFFLINE=900 |
+| 2026-09-28 | [单机 memory sync 改下班一次；双机恢复改 MODE=interval](./2026-09-28-memory-sync-solo-daily-after-work.md) | memory-git, launchd, dual-mac, solo, daily | MODE=daily 22:30；恢复 MODE=interval |
 | 2026-09-28 | [VPN 放 auto_vpn；onehr 只放截图；打卡 AX 须 launchd 复测](./2026-09-28-vpn放auto_vpn-onehr只放截图-打卡AX权限.md) | vpn, onehr, punch, accessibility, launchd | VPN 错放 onehr；截图失败真因 AX |
 | 2026-09-27 | [自动化迁 new-mac：tgbot 须 App Support runtime，禁 launchd 直读 Desktop](./2026-09-27-automation-migrate-new-mac-tgbot-app-support-runtime.md) | automation, launchd, tgbot, new-mac, TCC | deploy_app_support_runtime；AUTHORITY=new-mac |
 | 2026-09-24 | [用户短时间重复同一调研类私聊，复用已有结论短答，避免重复全网检索与长文复述。](./2026-09-24-用户短时间重复同一调研类私聊-复用已有结论短答-避免重复全网检索与长文复述.md) | agent-bus,tg,dedupe,session-rotate | 会话轮换前自动蒸馏 |

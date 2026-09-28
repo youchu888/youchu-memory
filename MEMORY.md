@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [TG 绿点跟 OneHR 打卡：上班后间歇绿，下班后灭，离线≤15分钟](lessons/2026-09-28-tg-visible-online-follows-onehr-punch.md) — gate=onehr-punch；MAX_OFFLINE=900
+- [单机 memory sync 改下班一次；双机恢复改 MODE=interval](lessons/2026-09-28-memory-sync-solo-daily-after-work.md) — MODE=daily 22:30；覆盖远程以 new-mac 为准
 - [用户短时间重复同一调研类私聊，复用已有结论短答，避免重复全网检索与长文复](lessons/2026-09-24-用户短时间重复同一调研类私聊-复用已有结论短答-避免重复全网检索与长文复述.md) — 会话轮换蒸馏
 - [指标库前端对齐 B′：发现页大搜索+认证/lifecycle 徽章；详情](lessons/2026-09-24-指标库前端对齐-b-发现页大搜索-认证-lifecycle-徽章-详情左口径右实现-血缘-统一-.md) — 会话轮换蒸馏
 - [Telegram Bot 重启若 API 超时，先确认网络/VPN 与 ](lessons/2026-09-24-telegram-bot-重启若-api-超时-先确认网络-vpn-与-api-可达-再用-da.md) — 会话轮换蒸馏
