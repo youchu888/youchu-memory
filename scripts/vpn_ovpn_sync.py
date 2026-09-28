@@ -712,15 +712,20 @@ def main(argv: list[str] | None = None) -> int:
 
             state = load_state()
             cached = local_ovpn_path(cfg)
+            # 滚动导入窗 与 证书 notAfter 取更早：有 imported_at 时也曾只看导入钟，
+            # 导致证书已过期仍「跳过续期」（2026-09-28：notAfter 22:03 已过，脚本仍等到次日 09:34）
             needs_renew = import_needs_renewal(
                 state,
                 renew_after_hours=cfg["renew_after_hours"],
                 ovpn_path=cached,
             )
-            if not needs_renew and get_imported_at(state, cached) is None and cached.is_file():
-                needs_renew = cert_needs_renewal(
+            if cached.is_file():
+                cert_due = cert_needs_renewal(
                     cached, within_minutes=cfg["cert_renew_before_minutes"]
                 )
+                if cert_due and not needs_renew:
+                    log.info("证书到期窗口已到，覆盖「导入未满滚动小时」跳过逻辑")
+                needs_renew = needs_renew or cert_due
             if (
                 not args.dry_run
                 and not args.force
@@ -735,10 +740,13 @@ def main(argv: list[str] | None = None) -> int:
                     renew_after_hours=cfg["renew_after_hours"],
                     ovpn_path=cached,
                 )
+                expiry = parse_ovpn_cert_expiry(cached)
                 log.info(
-                    "当前配置有效，跳过（上次导入 %s UTC，计划 %s UTC 前续期；--force-request 强制换新）",
+                    "当前配置有效，跳过（上次导入 %s UTC，导入滚动续期 %s UTC，"
+                    "证书 notAfter %s UTC；--force-request 强制换新）",
                     imported.strftime("%Y-%m-%d %H:%M:%S") if imported else "?",
                     nxt.strftime("%Y-%m-%d %H:%M:%S") if nxt else "?",
+                    expiry.strftime("%Y-%m-%d %H:%M:%S") if expiry else "?",
                 )
                 return 0
 
