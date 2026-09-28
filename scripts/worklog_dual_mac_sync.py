@@ -332,7 +332,7 @@ def main() -> int:
         pub = publish_canonical_report(mem_wl, local, day, host)
         print(f"canonical_report: {pub or '(none)'}")
 
-    # 旧机可能仍跑「旧版 sync 脚本」；pull 后本文件已是新版，在此自动对齐 launchd 间隔
+    # 调度见 config/memory_sync.env（MODE=daily 单机下班一次 / MODE=interval 双机高频）
     _ensure_memory_sync_launchd(mem)
     _trigger_todesk_oneshot(mem)
 
@@ -370,45 +370,80 @@ def _trigger_todesk_oneshot(mem: Path) -> None:
 
 
 def _ensure_memory_sync_launchd(mem: Path) -> None:
-    """读 config/memory_sync.env，LaunchAgent 间隔落后则重装（免 SSH）。"""
+    """读 config/memory_sync.env，LaunchAgent 调度落后则重装（免 SSH）。
+
+    MODE=daily：每天 MEMORY_SYNC_HOUR:MINUTE（单机下班一次）
+    MODE=interval：StartInterval=INTERVAL_SEC（双机高频）
+    """
     import re
     import subprocess
 
     cfg = mem / "config" / "memory_sync.env"
-    want = 120
-    if cfg.is_file():
-        m = re.search(r"(?m)^\s*INTERVAL_SEC\s*=\s*(\d+)", cfg.read_text(encoding="utf-8", errors="ignore"))
-        if m:
-            want = max(60, int(m.group(1)))
+    text = cfg.read_text(encoding="utf-8", errors="ignore") if cfg.is_file() else ""
+
+    def _cfg(key: str, default: str) -> str:
+        m = re.search(rf"(?m)^\s*{re.escape(key)}\s*=\s*(\S+)", text)
+        return m.group(1).strip() if m else default
+
+    mode = os.environ.get("MEMORY_SYNC_MODE", "").strip() or _cfg("MODE", "daily")
+    if mode not in ("daily", "interval"):
+        mode = "daily"
+    want_i = 120
+    m = re.search(r"(?m)^\s*INTERVAL_SEC\s*=\s*(\d+)", text)
+    if m:
+        want_i = max(60, int(m.group(1)))
     env_override = os.environ.get("MEMORY_SYNC_INTERVAL_SEC", "").strip()
     if env_override.isdigit():
-        want = max(60, int(env_override))
+        want_i = max(60, int(env_override))
+    want_h = int(os.environ.get("MEMORY_SYNC_HOUR", "").strip() or _cfg("MEMORY_SYNC_HOUR", "19") or "19")
+    want_m = int(os.environ.get("MEMORY_SYNC_MINUTE", "").strip() or _cfg("MEMORY_SYNC_MINUTE", "0") or "0")
 
     label = "com.youchu.memory-git-sync"
     plist = Path.home() / "Library" / "LaunchAgents" / f"{label}.plist"
-    have = 0
-    if plist.is_file():
+
+    def _pb(key: str) -> str:
+        if not plist.is_file():
+            return ""
         try:
-            out = subprocess.check_output(
-                ["/usr/libexec/PlistBuddy", "-c", "Print :StartInterval", str(plist)],
+            return subprocess.check_output(
+                ["/usr/libexec/PlistBuddy", "-c", f"Print :{key}", str(plist)],
                 text=True,
                 stderr=subprocess.DEVNULL,
             ).strip()
-            have = int(out) if out.isdigit() else 0
         except (subprocess.CalledProcessError, ValueError):
-            have = 0
-    if have == want and plist.is_file():
+            return ""
+
+    have_i = _pb("StartInterval")
+    have_h = _pb("StartCalendarInterval:Hour")
+    have_m = _pb("StartCalendarInterval:Minute")
+    ok = False
+    if mode == "interval":
+        ok = plist.is_file() and have_i == str(want_i) and not have_h
+    else:
+        ok = (
+            plist.is_file()
+            and have_h == str(want_h)
+            and have_m == str(want_m)
+            and not have_i
+        )
+    if ok:
         return
 
     installer = mem / "scripts" / "install-memory-git-sync-launchd.sh"
     if not installer.is_file():
         installer = Path.home() / ".dc-platform" / "scripts" / "install-memory-git-sync-launchd.sh"
     if not installer.is_file():
-        print(f"warn: launchd 需 {want}s 但找不到 install 脚本")
+        print(f"warn: launchd 需 MODE={mode} 但找不到 install 脚本")
         return
-    print(f"info: launchd {label} 间隔 {have or '无'} → {want}s，自动重装")
+    print(
+        f"info: launchd {label} 对齐 MODE={mode} "
+        f"(interval={want_i}s / daily={want_h:02d}:{want_m:02d})，自动重装"
+    )
     env = os.environ.copy()
-    env["INTERVAL_SEC"] = str(want)
+    env["MEMORY_SYNC_MODE"] = mode
+    env["INTERVAL_SEC"] = str(want_i)
+    env["MEMORY_SYNC_HOUR"] = str(want_h)
+    env["MEMORY_SYNC_MINUTE"] = str(want_m)
     try:
         subprocess.run(["bash", str(installer)], env=env, check=False, timeout=60)
     except Exception as e:  # noqa: BLE001

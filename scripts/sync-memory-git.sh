@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # 用 git 全自动同步 ~/.dc-platform/memory（双 Mac，不依赖局域网）
-# - launchd 间隔读 config/memory_sync.env（默认 120s），落后则自动重装（旧机免 SSH）
+# - launchd 调度读 config/memory_sync.env（daily=下班一次 / interval=高频），落后则自动重装
 # - work-log 双机合并 + 非代码 mirrors
 # - rebase 冲突尽量自愈；失败则安全回退到 origin 再推本机 hosts
 set -euo pipefail
