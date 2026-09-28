@@ -46,3 +46,14 @@ rg "Accessibility|截图失败|将上传截图" ~/.dc-platform/onehr/logs/checki
 - `~/.dc-platform/scripts/onehr_telegram_devices_screenshot.sh`
 - `~/.dc-platform/scripts/onehr_tg_click_account.swift`
 - lesson：`2026-07-09-vpn-renew-by-import-time.md`、`2026-08-31-OneHR打卡禁止上传过期截图.md`、`2026-09-23-主人说已手动打卡时-禁止再重试或自动补打-当次打卡视为已完成.md`
+
+
+## 增补（同日 · 权限收口）
+
+迁机后缺 `/Applications/又初打卡截图.app`；重建后须同时开：
+
+1. 辅助功能：`onehr_tg_click_account` + `python3.14` + **又初打卡截图**（`com.youchu.onehr-capture`）
+2. 屏幕录制：`python3.14` + **又初打卡截图**
+
+冒烟须 **launchd → python → 截图**（与打卡同路径）。仅 Cursor 交互成功不算。
+2026-09-28 10:19 该路径 PASS：账号往返 + 设备页校验 OK。
