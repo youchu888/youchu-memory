@@ -11,7 +11,14 @@ IP 会变时，**不要用局域网 rsync**，改用私有 Git 仓库。
 
 **不同步（有意）**：业务代码仓正文、agent-bus 全量 state、tgbot `.env` / session / `tgbot.db`、VPN、私钥。
 
-每轮 sync 自动：`worklog_dual_mac_sync` → `ops_mirror_to_memory` → `export_noncode_mirrors` → push。默认间隔 **2 分钟**。
+每轮 sync 自动：`worklog_dual_mac_sync` → `ops_mirror_to_memory` → `export_noncode_mirrors` → push。
+
+调度见 `config/memory_sync.env`：
+
+- **单机（old-mac 停）**：`MODE=daily`，默认每天 **19:00** 一次
+- **双机**：`MODE=interval`，默认每 **120 秒**；改配置后任一台 sync 自动对齐 plist
+
+手动立刻同步：`bash ~/.dc-platform/scripts/sync-memory-git.sh`
 
 ## 一次性：建私有空仓
 

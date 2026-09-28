@@ -66,42 +66,71 @@ if [[ -f "$src_cfg" ]]; then
 fi
 # 不覆盖已有 onehr.env（含密码）
 
-# —— launchd 间隔：读仓内 config，落后则自动重装（旧机无需人工 SSH）——
-_desired_interval() {
-  local v=120 cfg="$MEM/config/memory_sync.env"
+# —— launchd 调度：读仓内 config，落后则自动重装 ——
+# MODE=daily（单机下班一次）| interval（双机高频）
+_cfg_val() {
+  local key="$1" def="$2" v="" cfg="$MEM/config/memory_sync.env"
   if [[ -f "$cfg" ]]; then
-    v="$(grep -E '^[[:space:]]*INTERVAL_SEC=' "$cfg" | tail -1 | cut -d= -f2- | tr -d '[:space:]' || true)"
+    v="$(grep -E "^[[:space:]]*${key}=" "$cfg" | tail -1 | cut -d= -f2- | tr -d '[:space:]' || true)"
   fi
-  if [[ -n "${MEMORY_SYNC_INTERVAL_SEC:-}" ]]; then
-    v="$MEMORY_SYNC_INTERVAL_SEC"
-  fi
+  [[ -n "$v" ]] && echo "$v" || echo "$def"
+}
+
+_desired_mode() {
+  local m
+  m="${MEMORY_SYNC_MODE:-$(_cfg_val MODE daily)}"
+  case "$m" in
+    interval|daily) echo "$m" ;;
+    *) echo daily ;;
+  esac
+}
+
+_desired_interval() {
+  local v
+  v="${MEMORY_SYNC_INTERVAL_SEC:-$(_cfg_val INTERVAL_SEC 120)}"
   [[ "$v" =~ ^[0-9]+$ ]] && (( v >= 60 )) || v=120
   echo "$v"
 }
 
-_ensure_launchd_interval() {
+_desired_hour() { echo "${MEMORY_SYNC_HOUR:-$(_cfg_val MEMORY_SYNC_HOUR 19)}"; }
+_desired_minute() { echo "${MEMORY_SYNC_MINUTE:-$(_cfg_val MEMORY_SYNC_MINUTE 0)}"; }
+
+_ensure_launchd_schedule() {
   local label=com.youchu.memory-git-sync
   local plist="$HOME/Library/LaunchAgents/${label}.plist"
-  local want have=0
-  want="$(_desired_interval)"
-  if [[ -f "$plist" ]]; then
-    have="$(/usr/libexec/PlistBuddy -c 'Print :StartInterval' "$plist" 2>/dev/null || echo 0)"
+  local mode want_i want_h want_m have_i have_h have_m ok=0
+  mode="$(_desired_mode)"
+  want_i="$(_desired_interval)"
+  want_h="$(_desired_hour)"
+  want_m="$(_desired_minute)"
+  have_i="$(/usr/libexec/PlistBuddy -c 'Print :StartInterval' "$plist" 2>/dev/null || echo "")"
+  have_h="$(/usr/libexec/PlistBuddy -c 'Print :StartCalendarInterval:Hour' "$plist" 2>/dev/null || echo "")"
+  have_m="$(/usr/libexec/PlistBuddy -c 'Print :StartCalendarInterval:Minute' "$plist" 2>/dev/null || echo "")"
+
+  if [[ "$mode" == "interval" ]]; then
+    [[ -f "$plist" && "$have_i" == "$want_i" && -z "$have_h" ]] && ok=1
+  else
+    [[ -f "$plist" && "$have_h" == "$want_h" && "$have_m" == "$want_m" && -z "$have_i" ]] && ok=1
   fi
-  if [[ "$have" == "$want" ]] && [[ -f "$plist" ]]; then
+  if [[ "$ok" == 1 ]]; then
     return 0
   fi
-  echo "info: launchd ${label} 间隔 ${have:-无} → ${want}s，自动重装"
+  echo "info: launchd ${label} 对齐 MODE=${mode}（interval=${want_i}s / daily=${want_h}:$(printf '%02d' "$want_m")），自动重装"
   if [[ -f "$MEM/scripts/install-memory-git-sync-launchd.sh" ]]; then
-    INTERVAL_SEC="$want" bash "$MEM/scripts/install-memory-git-sync-launchd.sh" \
+    MEMORY_SYNC_MODE="$mode" INTERVAL_SEC="$want_i" \
+      MEMORY_SYNC_HOUR="$want_h" MEMORY_SYNC_MINUTE="$want_m" \
+      bash "$MEM/scripts/install-memory-git-sync-launchd.sh" \
       || echo "warn: 自动重装 launchd 失败（下次 sync 再试）"
   elif [[ -f "$RUNTIME_SCRIPTS/install-memory-git-sync-launchd.sh" ]]; then
-    INTERVAL_SEC="$want" bash "$RUNTIME_SCRIPTS/install-memory-git-sync-launchd.sh" \
+    MEMORY_SYNC_MODE="$mode" INTERVAL_SEC="$want_i" \
+      MEMORY_SYNC_HOUR="$want_h" MEMORY_SYNC_MINUTE="$want_m" \
+      bash "$RUNTIME_SCRIPTS/install-memory-git-sync-launchd.sh" \
       || echo "warn: 自动重装 launchd 失败（下次 sync 再试）"
   fi
 }
 
 
-_ensure_launchd_interval
+_ensure_launchd_schedule
 
 cd "$MEM"
 
