@@ -15,8 +15,10 @@ guard !want.isEmpty else {
     exit(1)
 }
 
-guard AXIsProcessTrusted() else {
-    fputs("ERROR: Accessibility not trusted for this process (System Settings → Privacy → Accessibility)\n", stderr)
+// launchd 无 Cursor/Terminal 父进程时不会继承辅助功能；主动弹系统授权框。
+let axPromptOpts = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary
+guard AXIsProcessTrustedWithOptions(axPromptOpts) else {
+    fputs("ERROR: Accessibility not trusted for this process (System Settings → Privacy → Accessibility → 打开 onehr_tg_click_account 或 Homebrew python3)\n", stderr)
     exit(2)
 }
 
