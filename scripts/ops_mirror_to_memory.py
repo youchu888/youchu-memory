@@ -54,7 +54,7 @@ def _authority_host(mem: Path) -> str:
             if not s or s.startswith("#"):
                 continue
             return s
-    return "old-mac"
+    return "new-mac"
 
 
 def _load_provenance(days: int) -> list[dict]:

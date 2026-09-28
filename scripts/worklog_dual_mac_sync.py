@@ -203,7 +203,7 @@ def merge_day(mem_wl: Path, day: str) -> Path:
 
 
 def _authority_host(mem_wl: Path) -> str:
-    """正式日报权威主机：默认 old-mac（主人 2026-07-22 钦定）。"""
+    """正式日报权威主机：读 AUTHORITY_HOST；缺省 new-mac（2026-09-27 起权威机）。"""
     env = (os.environ.get("WORKLOG_AUTHORITY_HOST") or "").strip()
     if env:
         return re.sub(r"[^\w.\-]+", "-", env)[:64]
@@ -213,11 +213,11 @@ def _authority_host(mem_wl: Path) -> str:
             line = line.strip()
             if line and not line.startswith("#"):
                 return re.sub(r"[^\w.\-]+", "-", line)[:64]
-    return "old-mac"
+    return "new-mac"
 
 
 def publish_canonical_report(mem_wl: Path, local_wl: Path, day: str, host: str) -> Path | None:
-    """正式日报权威：以 AUTHORITY_HOST（默认 old-mac）为准。
+    """正式日报权威：以 AUTHORITY_HOST（缺省 new-mac）为准。
 
     - 权威机：可用本机日报覆盖 `work-log/reports/`
     - 非权威机：只写到 `hosts/<自己>/reports/`，不覆盖权威稿；若权威稿已存在则镜像回本机

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""日报定稿后推送到 TG 机器人私聊（canonical · 经 youchu-memory 同步到双机）。
+"""日报定稿后推送到 TG 机器人私聊（canonical · 经 youchu-memory 同步）。
 
-默认仅权威主机 old-mac 可实发；new-mac 会跳过。
+默认仅权威主机可实发（读 AUTHORITY_HOST，缺省 new-mac）；非权威机跳过。
 
-用法（旧 Mac 定稿后：周一至周五 21:30 / 周六 18:30）:
+用法（权威机定稿后：周一至周五 21:30 / 周六 18:30）:
   python3 ~/.dc-platform/memory/scripts/post_daily_report_to_dm.py
   python3 ~/.dc-platform/memory/scripts/post_daily_report_to_dm.py --date YYYY-MM-DD
   python3 ~/.dc-platform/memory/scripts/post_daily_report_to_dm.py --dry-run
@@ -199,7 +199,7 @@ def _authority_host() -> str:
             line = line.strip()
             if line and not line.startswith("#"):
                 return line
-    return "old-mac"
+    return "new-mac"
 
 
 def assert_authority_or_exit(*, allow_non_authority: bool) -> None:
@@ -210,7 +210,7 @@ def assert_authority_or_exit(*, allow_non_authority: bool) -> None:
     if host != authority:
         print(
             f"skipped: host={host} is not authority={authority} "
-            f"(daily DM push is old-mac only; use --allow-non-authority to override)",
+            f"(daily DM push is authority-only; use --allow-non-authority to override)",
             file=sys.stderr,
         )
         raise SystemExit(0)

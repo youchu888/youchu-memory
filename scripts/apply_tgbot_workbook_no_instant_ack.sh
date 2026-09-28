@@ -91,27 +91,33 @@ assert 'post_workbook_pipeline' not in inspect.getsource(maybe_daily_fallback), 
 print('[ok] workbook no-instant-ack smoke')
 PY
 
-if [[ "${FORCE_RESTART:-}" == "1" ]] || [[ "${WORKLOG_HOST_ID:-}" == "old-mac" ]]; then
-  if [[ -x "$TGBOT_DIR/restart.sh" ]]; then
-    bash "$TGBOT_DIR/restart.sh"
-    echo "[ok] restart done (old-mac / FORCE_RESTART)"
-  else
-    echo "[warn] restart.sh missing — 请手动重启 bot"
-  fi
-else
-  # new-mac 默认只装文件，不启 bot（旧机权威；误启会抢 Telegram session）
+if [[ "${FORCE_RESTART:-}" == "1" ]] || [[ "${WORKLOG_HOST_ID:-}" == "new-mac" ]] || [[ "${WORKLOG_HOST_ID:-}" == "old-mac" ]]; then
+  # 权威机（现 new-mac）或显式 FORCE 才 restart；避免非权威机抢 TG session
   host_id="${WORKLOG_HOST_ID:-}"
   if [[ -z "$host_id" && -f "$HOME/.dc-platform/memory/.env.host" ]]; then
     # shellcheck disable=SC1090
     source "$HOME/.dc-platform/memory/.env.host" || true
     host_id="${WORKLOG_HOST_ID:-}"
   fi
-  if [[ "$host_id" == "old-mac" ]]; then
-    bash "$TGBOT_DIR/restart.sh"
-    echo "[ok] restart done"
-  else
-    echo "[skip] restart（本机=$host_id；请在旧机执行本脚本以 restart）"
+  auth="new-mac"
+  if [[ -f "$HOME/.dc-platform/memory/work-log/AUTHORITY_HOST" ]]; then
+    while IFS= read -r line; do
+      line="${line%%#*}"; line="$(echo "$line" | tr -d '[:space:]')"
+      [[ -n "$line" ]] && { auth="$line"; break; }
+    done <"$HOME/.dc-platform/memory/work-log/AUTHORITY_HOST"
   fi
+  if [[ "${FORCE_RESTART:-}" == "1" || "$host_id" == "$auth" ]]; then
+    if [[ -x "$TGBOT_DIR/restart.sh" ]]; then
+      bash "$TGBOT_DIR/restart.sh"
+      echo "[ok] restart done (host=$host_id auth=$auth)"
+    else
+      echo "[warn] restart.sh missing — 请手动重启 bot"
+    fi
+  else
+    echo "[skip] restart（本机=$host_id 非权威=$auth）"
+  fi
+else
+  echo "[skip] restart（未设 WORKLOG_HOST_ID 且未 FORCE_RESTART）"
 fi
 
 echo "[done] tgbot workbook no-instant-ack patch applied."

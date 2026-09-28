@@ -52,20 +52,23 @@ bash ~/.dc-platform/scripts/sync-memory-git.sh
 bash ~/.dc-platform/scripts/sync-memory-git.sh "docs: 停留分档交接"
 ```
 
-## 定时自动同步（两台各装一份）
+## 定时自动同步
 
-launchd 每 2 分钟跑一次 `sync-memory-git.sh`（先 pull --rebase 再 push，双机互相协调）：
+调度以 `config/memory_sync.env` 为准（改完跑一次 sync 即对齐 plist）：
 
 ```bash
+# 单机（当前默认）：每天 19:00
 bash ~/.dc-platform/scripts/install-memory-git-sync-launchd.sh
-# 自定义间隔（秒）：
-INTERVAL_SEC=600 bash ~/.dc-platform/scripts/install-memory-git-sync-launchd.sh  # 改回 10 分钟
+
+# 双机恢复高频：先把 memory_sync.env 的 MODE=interval，再：
+MEMORY_SYNC_MODE=interval bash ~/.dc-platform/scripts/install-memory-git-sync-launchd.sh
+
 # 卸载：
 bash ~/.dc-platform/scripts/uninstall-memory-git-sync-launchd.sh
 ```
 
 日志：`~/.dc-platform/logs/memory-git-sync.log`。  
-脚本带并发锁，手动与定时同时触发不会打架；冲突时会 abort 本次 rebase 并在日志提示手动解决。
+脚本带并发锁；冲突时尽量自愈，否则 abort rebase 并在日志提示。
 
 ## 旧 Mac（第一次）
 
