@@ -8,12 +8,23 @@
 
 ## 每日流程（19:30 Asia/Shanghai）
 
+**定时**：权威机 LaunchAgent `com.youchu.worker-ant-daily-learn`（周一至周五 19:30）写入  
+`wake_feed` → `AGENT_LOOP_WAKE_WORKER_ANT_LEARN`，IDE 主会话接住后执行。
+
+安装 / 重装：
+
+```bash
+bash .cursor/scripts/install-worker-ant-daily-learn-launchd.sh
+```
+
 1. **提问**（agent-bus `send_message` → `worker_ant`）  
    模板见 `DAILY_PROMPT.md`
 2. **收回复** → 写入 `sessions/YYYY-MM-DD.md`
 3. **提炼** → 新规则写 `lessons/YYYY-MM-DD-worker-ant-*.md`（单条一事）
 4. **更新索引** → `INDEX.md` 表格 + `MEMORY.md` hook 行
 5. **可选** → 拉 dc-platform 文档增量（`platform/docs` API）
+
+当日已有 `sessions/YYYY-MM-DD.md` 则跳过（`WORKER_ANT_LEARN_FORCE=1` 可强制）。
 
 ## 目录
 
