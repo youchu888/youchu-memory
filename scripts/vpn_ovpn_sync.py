@@ -33,7 +33,7 @@ DC_HOME = Path(os.environ.get("DC_PLATFORM_HOME", Path.home() / ".dc-platform"))
 VPN_DIR = DC_HOME / "vpn"
 STATE_FILE = VPN_DIR / "last_sync.json"
 LOG_FILE = VPN_DIR / "sync.log"
-DEFAULT_OVPN_DIR = Path.home() / "Desktop/CH/onehr"
+DEFAULT_OVPN_DIR = Path.home() / "Desktop/CH/auto_vpn"
 
 DEFAULT_ENV = SCRIPT_DIR / "vpn_ovpn_sync.env"
 TGBOT_ENV = Path.home() / "Desktop/CHcode/omdb/tgbot/.env"
