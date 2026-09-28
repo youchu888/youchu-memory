@@ -92,8 +92,8 @@ _desired_interval() {
   echo "$v"
 }
 
-_desired_hour() { echo "${MEMORY_SYNC_HOUR:-$(_cfg_val MEMORY_SYNC_HOUR 19)}"; }
-_desired_minute() { echo "${MEMORY_SYNC_MINUTE:-$(_cfg_val MEMORY_SYNC_MINUTE 0)}"; }
+_desired_hour() { echo "${MEMORY_SYNC_HOUR:-$(_cfg_val MEMORY_SYNC_HOUR 22)}"; }
+_desired_minute() { echo "${MEMORY_SYNC_MINUTE:-$(_cfg_val MEMORY_SYNC_MINUTE 30)}"; }
 
 _ensure_launchd_schedule() {
   local label=com.youchu.memory-git-sync

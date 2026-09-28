@@ -4,7 +4,7 @@
 # 优先读仓内 config/memory_sync.env（MODE / INTERVAL_SEC / HOUR / MINUTE）
 # 环境变量可覆盖：MEMORY_SYNC_MODE / INTERVAL_SEC / MEMORY_SYNC_HOUR / MEMORY_SYNC_MINUTE
 #
-# 单机（old-mac 停）：MODE=daily，默认 19:00
+# 单机（old-mac 停）：MODE=daily，默认 22:30
 # 双机恢复：MODE=interval（或 MEMORY_SYNC_MODE=interval）
 set -euo pipefail
 LABEL=com.youchu.memory-git-sync
@@ -25,8 +25,8 @@ _cfg_get() {
 
 MODE="${MEMORY_SYNC_MODE:-$(_cfg_get MODE daily)}"
 INTERVAL_SEC="${INTERVAL_SEC:-$(_cfg_get INTERVAL_SEC 120)}"
-HOUR="${MEMORY_SYNC_HOUR:-$(_cfg_get MEMORY_SYNC_HOUR 19)}"
-MINUTE="${MEMORY_SYNC_MINUTE:-$(_cfg_get MEMORY_SYNC_MINUTE 0)}"
+HOUR="${MEMORY_SYNC_HOUR:-$(_cfg_get MEMORY_SYNC_HOUR 22)}"
+MINUTE="${MEMORY_SYNC_MINUTE:-$(_cfg_get MEMORY_SYNC_MINUTE 30)}"
 
 mkdir -p "$HOME/Library/LaunchAgents" "$LOG_DIR" "$STD_DIR"
 chmod +x "$HERE"/sync-memory-git.sh "$HERE"/install-memory-git-sync-launchd.sh "$HERE"/uninstall-memory-git-sync-launchd.sh 2>/dev/null || true

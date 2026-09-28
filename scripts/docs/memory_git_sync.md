@@ -15,7 +15,7 @@ IP 会变时，**不要用局域网 rsync**，改用私有 Git 仓库。
 
 调度见 `config/memory_sync.env`：
 
-- **单机（old-mac 停）**：`MODE=daily`，默认每天 **19:00** 一次
+- **单机（old-mac 停）**：`MODE=daily`，默认每天 **22:30** 一次
 - **双机**：`MODE=interval`，默认每 **120 秒**；改配置后任一台 sync 自动对齐 plist
 
 手动立刻同步：`bash ~/.dc-platform/scripts/sync-memory-git.sh`
@@ -57,7 +57,7 @@ bash ~/.dc-platform/scripts/sync-memory-git.sh "docs: 停留分档交接"
 调度以 `config/memory_sync.env` 为准（改完跑一次 sync 即对齐 plist）：
 
 ```bash
-# 单机（当前默认）：每天 19:00
+# 单机（当前默认）：每天 22:30
 bash ~/.dc-platform/scripts/install-memory-git-sync-launchd.sh
 
 # 双机恢复高频：先把 memory_sync.env 的 MODE=interval，再：

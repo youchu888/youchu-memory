@@ -395,8 +395,8 @@ def _ensure_memory_sync_launchd(mem: Path) -> None:
     env_override = os.environ.get("MEMORY_SYNC_INTERVAL_SEC", "").strip()
     if env_override.isdigit():
         want_i = max(60, int(env_override))
-    want_h = int(os.environ.get("MEMORY_SYNC_HOUR", "").strip() or _cfg("MEMORY_SYNC_HOUR", "19") or "19")
-    want_m = int(os.environ.get("MEMORY_SYNC_MINUTE", "").strip() or _cfg("MEMORY_SYNC_MINUTE", "0") or "0")
+    want_h = int(os.environ.get("MEMORY_SYNC_HOUR", "").strip() or _cfg("MEMORY_SYNC_HOUR", "22") or "22")
+    want_m = int(os.environ.get("MEMORY_SYNC_MINUTE", "").strip() or _cfg("MEMORY_SYNC_MINUTE", "30") or "30")
 
     label = "com.youchu.memory-git-sync"
     plist = Path.home() / "Library" / "LaunchAgents" / f"{label}.plist"
