@@ -21,18 +21,21 @@ MERGED = MEMORY / "work-log"
 LOCAL_WL = Path.home() / "Desktop" / "CHcode" / ".cursor" / "work-log"
 POST_PY = MEMORY / "scripts" / "post_daily_report_to_dm.py"
 
-# 不进日报正文的运维词（仍可留在 work-log）
+# 不进日报：本机运维 / Bot / 记忆 / 非业务（仍可留在 work-log）
 _SKIP_RE = re.compile(
     r"(绿点|LaunchAgent|tgbot|自查|wake_feed|agent-bus|poller|KeepAlive|"
-    r"memory sync|youchu-memory|合盖|休眠|ToDesk|VPN|可见在线|"
+    r"memory sync|youchu-memory|合盖|休眠|ToDesk|VPN|可见在线|续期|"
     r"GROUP_WORKBOOK|automation-ensure|工作簿进展|权威主机|WORKLOG_HOST|"
     r"AUTHORITY_HOST|狂人学习|lesson：|RunAtLoad|挂起：|oneshot|"
     r"App Support|deploy|kickstart|plist|fallback：|硬兜底|不依赖 Cursor|"
-    r"自动化迁|自启保活|监控自启)",
+    r"自动化迁|自启保活|监控自启|日报链路|定稿|流水并核对|同步记忆|"
+    r"Ethan|招聘|岗位监控|Telethon|OpenVPN|证书)",
     re.I,
 )
+# 只有命中业务词才进【今日结果】；未命中一律丢弃（禁止用运维句凑条）
 _PREFER_RE = re.compile(
-    r"(渠道|归因|漏斗|报表|建表|ETL|核查|指标|表|分区|补数|发布|试跑|抽检|口径|汇总)",
+    r"(渠道|归因|漏斗|报表|建表|ETL|核查|指标|表|分区|补数|发布|试跑|抽检|口径|汇总|"
+    r"标签|设备|数仓|维表|对账|看板|留存|充值|广告|推广)",
     re.I,
 )
 _PREFIX_RE = re.compile(
@@ -100,12 +103,9 @@ def collect_bullets(day: str) -> list[str]:
         seen.add(k)
         out.append(b)
     preferred = [b for b in out if _PREFER_RE.search(b) and "截止" not in b]
-    rest = [b for b in out if b not in preferred and "截止" not in b]
-    tomorrow_src = [b for b in out if "截止" in b]
-    ordered = preferred + rest
-    # stash tomorrow candidates on function attr for render optional use
+    tomorrow_src = [b for b in out if "截止" in b and _PREFER_RE.search(b)]
     collect_bullets._tomorrow = tomorrow_src  # type: ignore[attr-defined]
-    return ordered[:6]
+    return preferred[:6]
 
 
 def _shorten(text: str, lo: int = 22, hi: int = 42) -> str:
@@ -113,19 +113,19 @@ def _shorten(text: str, lo: int = 22, hi: int = 42) -> str:
     text = text.rstrip("。；;，,")
     if len(text) > hi:
         text = text[: hi - 1] + "…"
-    if len(text) < lo:
-        text = text + "，推进落地"
-    return text
+    if len(text) < lo and not text.endswith("已完成"):
+        # 不硬凑「推进落地」运维腔
+        pass
+    return text if text else "数据任务"
 
 
 def render(day: str, bullets: list[str]) -> str:
-    if not bullets:
-        bullets = ["整理当日流水并核对权威机日报链路", "同步记忆与当日任务进度"]
     results = []
     for b in bullets[:3]:
         results.append(f"- [TQ-002 | DMP系统] {_shorten(b)}，已完成；")
-    while len(results) < 1:
-        results.append("- [TQ-002 | DMP系统] 当日数据任务收口，已完成；")
+    if not results:
+        # 无业务交付时留空一行，禁止用 Bot/日报链路等非工作句凑条
+        results = ["- "]
 
     tomorrow_src = list(getattr(collect_bullets, "_tomorrow", []) or [])
     tomorrow_src.extend(bullets[3:5])
@@ -144,7 +144,7 @@ def render(day: str, bullets: list[str]) -> str:
             break
     if not tomorrow:
         tomorrow = [
-            "- TOP1: [TQ-002 | DMP系统] 按当日未完项继续推进（截止：明日）",
+            "- TOP1: [TQ-002 | DMP系统] 按簿内未完数据项继续推进（截止：明日）",
         ]
 
     return f"""# 日报 · 又初·{day}

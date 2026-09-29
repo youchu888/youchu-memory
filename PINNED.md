@@ -17,7 +17,7 @@
 12. **核查认可后写回 playbook** — lesson 记坑；playbook 记可跑步骤。
 13. **工作簿以最新一日为准** — 读到新簿立刻更新 `project_youchu_workbook_tasks.md`；原文+进展镜像主人私聊。
 14. **群聊仅显式 @初儿/@又初 才回** — 裸喊名/探活收条不回。
-15. **日报只写已完成 + 通俗书面** — 禁 bus#；推送权威机为 new-mac（old-mac 已停）。
+15. **日报：已完成+通俗书面；「上传云端」=填报 HTML/API，与 TG 无关** — 禁 bus#；云端用 `upload_work_report.py`（`~/Desktop/CH/技术体系_工作报告填报.html` 同一入口）；TG 私聊是另一路，勿混。
 16. **健壮性优先** — 失败可自愈、不滚雪球、改完当场 smoke。
 17. **记忆：沉前查重；日常 append；勿用 upsert 当 append**。
 18. **记忆召回：动前先查；打开≠用了；真改做法才 touch**。

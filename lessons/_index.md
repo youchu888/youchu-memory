@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-29 | [晚间闭环：狂人学习 → 记忆日清 → 次日轻启动](./2026-09-29-evening-learn-then-memory-light-tidy.md) | memory, learn, hygiene | 22:40 学；22:50 日清；越学越轻 |
 | 2026-09-29 | [工作簿进展：不回群，读 bus 后按前一日实查 reply](./2026-09-29-workbook-progress-via-bus-not-group.md) | workbook, agent-bus, tg | 群关；bus 实查 reply；禁模版 |
 | 2026-09-29 | [每日学习必须自动发 bus，不能只写 wake_feed](./2026-09-29-worker-ant-learn-must-autosend-bus.md) | worker-ant, learn, bus | wake 脚本先发 bus；不依赖 Cursor |
 | 2026-09-28 | [VPN 续期须同时看证书 notAfter，不能只看导入滚动钟](./2026-09-28-vpn-renew-must-respect-cert-notafter.md) | vpn, renew, notAfter | 过期仍跳过→or cert_needs_renewal |
