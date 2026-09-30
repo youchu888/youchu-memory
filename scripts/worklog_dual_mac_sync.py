@@ -378,6 +378,12 @@ def _ensure_memory_sync_launchd(mem: Path) -> None:
     import re
     import subprocess
 
+    # new-mac 交回 old-mac：手动 sync 可以，禁止重装本机定时任务
+    disable_marker = Path.home() / ".dc-platform" / "config" / "DISABLE_LOCAL_AUTOMATION"
+    if disable_marker.is_file():
+        print("info: 跳过 launchd 对齐（本机 DISABLE_LOCAL_AUTOMATION）")
+        return
+
     cfg = mem / "config" / "memory_sync.env"
     text = cfg.read_text(encoding="utf-8", errors="ignore") if cfg.is_file() else ""
 
