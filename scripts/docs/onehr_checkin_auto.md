@@ -11,6 +11,8 @@
 
 **调度方式**：`onehr_checkin_scheduler.py` 每天在窗口内**随机**选一个时刻（同 `jike_checkin_watcher.py`），到点再截图上传。不是固定 cron 多点重试。
 
+**跳过日**：周日、法定节假日（含国庆连休）、主人请假日不打卡（`onehr_punch_calendar.py`，与 `cn_punch_calendar` 同口径）。VPN 续期不受影响。
+
 截图失败**禁止**回退目录里几天前的 PNG。只上传 3 分钟内新截的图。窗口定位用 CoreGraphics，不走 System Events。
 
 截图前会 **又初 → Ethan → 又初** 账号往返一次，再 **settings → devices**（必须左侧是设置侧栏、账号为又初；禁止聊天 overlay / Ethan 页）。
