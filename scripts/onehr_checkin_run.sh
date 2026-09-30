@@ -21,7 +21,7 @@ fi
 # shellcheck disable=SC1090
 source "$ENV_FILE"
 
-export ONEHR_SCREENSHOT_DIR="${ONEHR_SCREENSHOT_DIR:-$HOME/Desktop/CH/telegram}"
+export ONEHR_SCREENSHOT_DIR="${ONEHR_SCREENSHOT_DIR:-$HOME/Desktop/CH/onehr}"
 export ONEHR_SCREENSHOT_SCRIPT="${ONEHR_SCREENSHOT_SCRIPT:-$SCRIPT_DIR/onehr_telegram_devices_screenshot.sh}"
 
 exec "$PYTHON" -u "$AUTO_PY" --env "$ENV_FILE" "$@"
