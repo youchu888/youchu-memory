@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-09-30 | [agent-bus 与 TG 私聊同路：另起 headless 执行](./2026-09-30-agent-bus-executor-like-tg-dm.md) | agent-bus, cursor-executor, tgbot | AUTO_EXECUTE=true；PATH 含 ~/.local/bin |
+| 2026-09-30 | [问题处置 SOP：按触发词对号入座，勿从零查](./2026-09-30-problem-sop-index-trigger-words.md) | sop, pipeline-runner, settlement, spark | bus#9470；五份 SOP+五铁律 |
 | 2026-09-29 | [晚间闭环：狂人学习 → 记忆日清 → 次日轻启动](./2026-09-29-evening-learn-then-memory-light-tidy.md) | memory, learn, hygiene | 22:40 学；22:50 日清；越学越轻 |
 | 2026-09-29 | [工作簿进展：不回群，读 bus 后按前一日实查 reply](./2026-09-29-workbook-progress-via-bus-not-group.md) | workbook, agent-bus, tg | 群关；bus 实查 reply；禁模版 |
 | 2026-09-29 | [每日学习必须自动发 bus，不能只写 wake_feed](./2026-09-29-worker-ant-learn-must-autosend-bus.md) | worker-ant, learn, bus | wake 脚本先发 bus；不依赖 Cursor |
@@ -345,3 +347,4 @@
 | 2026-09-18 | memory-git远程升级旧机ToDesk | todesk dual-mac oneshot |
 - [2026-09-23] vpn /request 失败占冷却致假成功 → `2026-09-23-vpn-request-fail-poison-cooldown.md`
 - 2026-09-23-vpn-renew-deadlock-cham-connect.md — VPN续期死结用变色龙点「点击连接」通外网再续期（非向日葵）
+| 2026-09-30 | SR LEAST DATE/DATETIME 次留全0 | `2026-09-30-sr-least-date-datetime-retention-zero.md` | starrocks,retention |
