@@ -519,6 +519,18 @@ def is_sunday_beijing() -> bool:
     return datetime.now(ZoneInfo("Asia/Shanghai")).weekday() == 6
 
 
+def should_skip_non_workday() -> tuple[bool, str]:
+    """周日 / 法定节假日 / 主人请假 → 跳过（与 cn_punch_calendar 同口径）。"""
+    try:
+        from onehr_punch_calendar import should_skip_punch
+
+        return should_skip_punch()
+    except Exception:
+        if is_sunday_beijing():
+            return True, "sunday"
+        return False, ""
+
+
 def sync_schedule_state(today: dict) -> None:
     """将服务端已打卡状态同步到调度 state（避免误报遗漏）。"""
     today_d = datetime.now(ZoneInfo("Asia/Shanghai")).date().isoformat()
@@ -568,9 +580,11 @@ def main() -> int:
 
     log(f"开始 OneHR 自动打卡 dry_run={args.dry_run}", log_file)
 
-    if is_sunday_beijing() and args.force_slot is None:
-        log("周日无打卡安排，退出", log_file)
-        return 0
+    if args.force_slot is None:
+        skip, reason = should_skip_non_workday()
+        if skip:
+            log(f"非工作日跳过打卡 reason={reason}", log_file)
+            return 0
 
     token = login(base_url, employee_code, password)
     today = fetch_today(base_url, token)

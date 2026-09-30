@@ -4,7 +4,7 @@
 与 omdb/tgbot/jike_checkin_watcher.py 同思路：
   - 上班 Mon-Sat 在 ONEHR_CHECKIN_WINDOW 内随机
   - 下班 Mon-Fri ONEHR_CHECKOUT_WINDOW；周六 ONEHR_CHECKOUT_SAT_WINDOW
-  - 周日不调度
+  - 周日 / 法定节假日 / 主人请假日不调度
   - 到计划时刻后调用 onehr_checkin_auto.py 实际上传（仍以 API status=due 为准）
 """
 
@@ -138,7 +138,20 @@ def mark_punched(kind: str, day: date) -> None:
     save_state(state)
 
 
+def _skip_day(day: date) -> tuple[bool, str]:
+    try:
+        from onehr_punch_calendar import should_skip_punch
+
+        return should_skip_punch(day)
+    except Exception:
+        if day.weekday() == 6:
+            return True, "sunday"
+        return False, ""
+
+
 def checkout_window(cfg: dict, day: date) -> Optional[Tuple[str, str]]:
+    if _skip_day(day)[0]:
+        return None
     wd = day.weekday()  # Mon=0 … Sun=6
     if wd == 6:
         return None
@@ -154,6 +167,8 @@ def checkout_window(cfg: dict, day: date) -> Optional[Tuple[str, str]]:
 
 
 def checkin_window(cfg: dict, day: date) -> Optional[Tuple[str, str]]:
+    if _skip_day(day)[0]:
+        return None
     if day.weekday() == 6:
         return None
     return (
@@ -359,12 +374,17 @@ def scheduler_loop(env_path: Path, cfg: dict) -> None:
             today = now.date()
 
             if last_plan_day != today:
-                plans = ensure_daily_plans(cfg, today)
-                if plans:
-                    parts = [f"{k}={v.strftime('%H:%M:%S')}" for k, v in sorted(plans.items())]
-                    log(f"today plan {', '.join(parts)}")
+                skip, reason = _skip_day(today)
+                if skip:
+                    log(f"today skip punch reason={reason}")
+                    plans = {}
+                else:
+                    plans = ensure_daily_plans(cfg, today)
+                    if plans:
+                        parts = [f"{k}={v.strftime('%H:%M:%S')}" for k, v in sorted(plans.items())]
+                        log(f"today plan {', '.join(parts)}")
                 tomorrow = today + timedelta(days=1)
-                if tomorrow.weekday() != 6:
+                if not _skip_day(tomorrow)[0]:
                     ensure_daily_plans(cfg, tomorrow)
                 last_plan_day = today
 
@@ -406,12 +426,13 @@ def main() -> int:
     if args.show_plan:
         today = datetime.now(BJ).date()
         for d in (today, today + timedelta(days=1)):
-            plans = ensure_daily_plans(cfg, d)
             wd_names = "一二三四五六日"
             label = wd_names[d.weekday()]
-            if d.weekday() == 6:
-                print(f"{d} 周日：无计划")
+            skip, reason = _skip_day(d)
+            if skip:
+                print(f"{d} 周{label}: 跳过（{reason}）")
                 continue
+            plans = ensure_daily_plans(cfg, d)
             parts = [f"{k}={v.strftime('%H:%M:%S')}" for k, v in sorted(plans.items())]
             print(f"{d} 周{label}: {', '.join(parts) if parts else '无'}")
         return 0
