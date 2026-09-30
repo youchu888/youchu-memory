@@ -26,3 +26,8 @@ task_time_log.jsonl
 
 # mirrors 临时
 mirrors/**/*.tmp
+
+# 例外：双机 git SSH 钥包（加密私钥；明文私钥勿提交）
+!bootstrap/git-ssh/
+!bootstrap/git-ssh/**
+bootstrap/git-ssh/id_ed25519
