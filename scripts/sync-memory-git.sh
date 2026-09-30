@@ -99,6 +99,11 @@ _ensure_launchd_schedule() {
   local label=com.youchu.memory-git-sync
   local plist="$HOME/Library/LaunchAgents/${label}.plist"
   local mode want_i want_h want_m have_i have_h have_m ok=0
+  # new-mac 交回 old-mac 后：允许手动 sync，禁止自动重装定时任务
+  if [[ -f "$HOME/.dc-platform/config/DISABLE_LOCAL_AUTOMATION" ]]; then
+    echo "info: 跳过 launchd 对齐（本机 DISABLE_LOCAL_AUTOMATION）"
+    return 0
+  fi
   mode="$(_desired_mode)"
   want_i="$(_desired_interval)"
   want_h="$(_desired_hour)"
