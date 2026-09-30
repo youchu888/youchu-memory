@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>归因问题说明 · 产品跟进 · 2026-07-24</title>
+<style>
+:root {
+  --bg: #f4f6f9;
+  --card: #fff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --blue: #2563eb;
+  --green: #059669;
+  --amber: #d97706;
+  --red: #dc2626;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 24px 16px 48px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.65;
+}
+.wrap { max-width: 920px; margin: 0 auto; }
+h1 { font-size: 1.5rem; margin: 0 0 6px; font-weight: 700; }
+.meta { color: var(--muted); font-size: 0.92rem; margin-bottom: 20px; }
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  border: 1px solid var(--line);
+}
+h2 {
+  font-size: 1.08rem;
+  margin: 0 0 12px;
+  padding-left: 10px;
+  border-left: 4px solid var(--blue);
+}
+h3 { font-size: 0.98rem; margin: 16px 0 8px; color: #111827; }
+p { margin: 0 0 10px; }
+ul, ol { margin: 0 0 10px; padding-left: 1.25rem; }
+li { margin: 4px 0; }
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+.badge-ok { background: #d1fae5; color: #065f46; }
+.badge-warn { background: #fef3c7; color: #92400e; }
+.badge-bad { background: #fee2e2; color: #991b1b; }
+.badge-info { background: #dbeafe; color: #1e40af; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 10px 0 4px;
+}
+th, td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #f9fafb; font-weight: 600; }
+tr.ok td { background: #f0fdf4; }
+tr.warn td { background: #fffbeb; }
+tr.bad td { background: #fef2f2; }
+.callout {
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 12px 0;
+  font-size: 0.92rem;
+}
+.callout-red { background: #fef2f2; border: 1px solid #fecaca; color: #7f1d1d; }
+.callout-amber { background: #fffbeb; border: 1px solid #fde68a; color: #78350f; }
+.callout-blue { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a; }
+.callout-green { background: #ecfdf5; border: 1px solid #a7f3d0; color: #064e3b; }
+.kpi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 12px 0;
+}
+.kpi .item {
+  background: #f9fafb;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+.kpi .num { font-size: 1.35rem; font-weight: 700; color: #111827; }
+.kpi .label { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+.footer {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+code {
+  background: #f3f4f6;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+@media (max-width: 640px) {
+  .kpi { grid-template-columns: 1fr; }
+  th, td { padding: 8px; font-size: 0.82rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>注册归因跟进说明（给产品）</h1>
+<p class="meta">
+  数据范围：<strong>2026-07-21 ~ 2026-07-23</strong>（生产只读）·
+  涉及产品：JHG-004 / JHG-015 / JHG-052 / JHG-059 / JHG-064 / JHG-087 / JHG-092 / YD-002 / YD-036 / YD-092 ·
+  整理：又初 · 2026-07-24
+</p>
+
+<!-- 总览 -->
+<div class="card">
+  <h2>一、结论总览</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>产品</th>
+        <th>状态</th>
+        <th>一句话说明</th>
+        <th>需要谁做</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="warn">
+        <td><strong>JHG-004</strong></td>
+        <td><span class="badge badge-warn">已开通，但质量不足</span></td>
+        <td>归因已跑，但注册上报<strong>缺设备信息</strong>，只能靠「10 分钟内同 IP」才成功</td>
+        <td>客户端 / 接入</td>
+      </tr>
+      <tr class="bad">
+        <td><strong>JHG-015、052、059、064、087、092</strong></td>
+        <td><span class="badge badge-bad">未开通</span></td>
+        <td>有 iOS 自然量注册，但<strong>未打开归因计算</strong>，客户端也未打「需归因」标记</td>
+        <td>数据配置 + 客户端</td>
+      </tr>
+      <tr class="bad">
+        <td><strong>YD-002、036、092</strong></td>
+        <td><span class="badge badge-bad">无数据</span></td>
+        <td>生产侧查不到这三个产品码的注册/归因记录，需先核对产品码是否正确</td>
+        <td>产品确认 app_id</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- JHG-004 -->
+<div class="card">
+  <h2>二、JHG-004：得分偏低的具体原因</h2>
+  <p><span class="badge badge-info">已开归因计算</span>　阈值 40 分　近 3 日有归因结果</p>
+
+  <div class="kpi">
+    <div class="item">
+      <div class="num">308</div>
+      <div class="label">需归因的入围注册</div>
+    </div>
+    <div class="item">
+      <div class="num">77</div>
+      <div class="label">实际进入归因结果（约 25%）</div>
+    </div>
+    <div class="item">
+      <div class="num">64 / 13</div>
+      <div class="label">有候选时：成功 / 失败</div>
+    </div>
+  </div>
+
+  <div class="callout callout-red">
+    <strong>核心结论：是上报数据问题，不是规则算错。</strong><br/>
+    近 3 日标记「需归因」的 339 条 iOS 注册里，<strong>品牌、型号、系统名、系统版本全部为空</strong>。
+    对比同系列 JHG-001 / JHG-005，设备信息基本齐全。
+  </div>
+
+  <h3>打分怎么受影响？</h3>
+  <p>归因得分 = 设备匹配分 + 时间接近分。当前设备字段全空 → <strong>设备分永远为 0</strong>，只剩时间分：</p>
+  <table>
+    <thead>
+      <tr><th>注册与落地页时间差</th><th>时间得分</th><th>能否过线（阈值 40）</th></tr>
+    </thead>
+    <tbody>
+      <tr class="ok"><td>≤ 10 分钟</td><td>40</td><td>刚好成功</td></tr>
+      <tr class="warn"><td>10 分钟 ~ 1 小时</td><td>30</td><td>失败</td></tr>
+      <tr class="bad"><td>1 ~ 6 小时</td><td>20</td><td>失败</td></tr>
+      <tr class="bad"><td>6 ~ 24 小时</td><td>10</td><td>失败</td></tr>
+    </tbody>
+  </table>
+
+  <h3>近 3 日结果拆解</h3>
+  <table>
+    <thead>
+      <tr><th>日期</th><th>有候选条数</th><th>成功</th><th>失败（分不够）</th><th>候选内成功率</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2026-07-21</td><td>18</td><td>15</td><td>3</td><td>83.3%</td></tr>
+      <tr><td>2026-07-22</td><td>27</td><td>20</td><td>7</td><td>74.1%</td></tr>
+      <tr><td>2026-07-23</td><td>32</td><td>29</td><td>3</td><td>90.6%</td></tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><strong>失败 13 条</strong>：全部是「得分低于阈值」——时间差超过 10 分钟，又没有设备分可补。</li>
+    <li><strong>约 75% 入围注册进不了结果表</strong>：同应用、同 IP、24 小时内找不到带渠道的落地页访问/点击（无候选，不算打分失败）。</li>
+  </ul>
+
+  <div class="callout callout-amber">
+    <strong>产品侧动作（JHG-004）</strong>
+    <ol>
+      <li>推动客户端 / 接入：注册事件补齐并上报 <strong>设备品牌、型号、系统名、系统版本</strong>。</li>
+      <li>修完后，超过 10 分钟的用户也有机会靠设备匹配过线，整体成功率会明显提升。</li>
+      <li>「无落地页候选」部分需业务侧确认投放落地页与 App 注册链路是否打通（同 IP、同应用）。</li>
+    </ol>
+  </div>
+</div>
+
+<!-- 其他 JHG -->
+<div class="card">
+  <h2>三、其余 6 个 JHG：需要打开归因计算</h2>
+  <p>产品：<code>JHG-015</code>、<code>JHG-052</code>、<code>JHG-059</code>、<code>JHG-064</code>、<code>JHG-087</code>、<code>JHG-092</code></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>产品</th>
+        <th>近 3 日 iOS 自然量（约）</th>
+        <th>「需归因」标记</th>
+        <th>配置是否打开</th>
+        <th>归因结果</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bad"><td>JHG-015</td><td>22</td><td>全为未标记</td><td>未配置</td><td>无</td></tr>
+      <tr class="bad"><td>JHG-052</td><td>1,681</td><td>全为未标记</td><td>未配置</td><td>无</td></tr>
+      <tr class="bad"><td>JHG-059</td><td>424</td><td>全为未标记</td><td>未配置</td><td>无</td></tr>
+      <tr class="bad"><td>JHG-064</td><td>329</td><td>全为未标记</td><td>未配置</td><td>无</td></tr>
+      <tr class="bad"><td>JHG-087</td><td>13</td><td>全为未标记</td><td>未配置</td><td>无</td></tr>
+      <tr class="bad"><td>JHG-092</td><td>487</td><td>全为未标记</td><td>未配置</td><td>无</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-blue">
+    <strong>开通要两步同时做（缺一不可）</strong>
+    <ol>
+      <li><strong>数据侧</strong>：把产品加入归因白名单，并打开「参与计算」开关。</li>
+      <li><strong>客户端</strong>：iOS 自然量注册时上报「需归因」标记（否则数仓不会纳入计算）。</li>
+    </ol>
+    当前两步都未完成，所以没有成功率可看——不是算失败，而是<strong>链路尚未开通</strong>。
+  </div>
+</div>
+
+<!-- YD -->
+<div class="card">
+  <h2>四、YD-002 / YD-036 / YD-092：7/21 至今归因情况</h2>
+
+  <table>
+    <thead>
+      <tr><th>检查项</th><th>YD-002</th><th>YD-036</th><th>YD-092</th></tr>
+    </thead>
+    <tbody>
+      <tr class="bad"><td>是否打开归因计算</td><td>否（无配置）</td><td>否（无配置）</td><td>否（无配置）</td></tr>
+      <tr class="bad"><td>7/21～7/23 注册明细</td><td>0 条</td><td>0 条</td><td>0 条</td></tr>
+      <tr class="bad"><td>归因结果</td><td>0 条</td><td>0 条</td><td>0 条</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-amber">
+    <strong>说明</strong><br/>
+    生产库中近 3 日带「YD」字样的产品码仅见 <code>YDWD-001</code>，未见 <code>YD-002 / YD-036 / YD-092</code>。<br/>
+    更可能是 <strong>产品码不一致，或尚未接入上报</strong>，而不是「开了归因但没有成功」。
+  </div>
+
+  <p><strong>请产品确认：</strong></p>
+  <ol>
+    <li>这三个产品在埋点 / 后台的真实产品码是什么？是否另有别名？</li>
+    <li>是否已正式上线并产生 iOS 注册？</li>
+    <li>确认后，再安排「打开归因计算 + 客户端打标」。</li>
+  </ol>
+</div>
+
+<!-- 行动清单 -->
+<div class="card">
+  <h2>五、建议行动清单</h2>
+  <table>
+    <thead>
+      <tr><th>优先级</th><th>事项</th><th>负责方</th><th>预期效果</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="badge badge-bad">P0</span></td>
+        <td>JHG-004 补齐注册设备字段上报</td>
+        <td>客户端 / 接入</td>
+        <td>超过 10 分钟的匹配也能靠设备分过线，成功率上升</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-warn">P1</span></td>
+        <td>6 个 JHG 打开归因白名单 + 客户端打「需归因」标记</td>
+        <td>数据 + 客户端</td>
+        <td>开始产出归因结果与成功率</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-info">P1</span></td>
+        <td>核对 YD-002 / 036 / 092 真实产品码与是否已上报</td>
+        <td>产品</td>
+        <td>避免对空产品码做开通</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>六、口径说明（便于对齐）</h2>
+  <ul>
+    <li><strong>入围</strong>：已开白名单 + iOS + 自然量渠道 + 客户端标记「需归因」。</li>
+    <li><strong>有候选</strong>：能找到同应用、同 IP、注册前 24 小时内、带投放渠道的落地页访问/点击。</li>
+    <li><strong>归因成功</strong>：有候选且综合得分 ≥ 阈值（JHG-004 为 40 分）。</li>
+    <li><strong>覆盖率</strong>：有候选条数 ÷ 入围条数（JHG-004 近 3 日约 25%，主要卡在「找不到落地页」）。</li>
+  </ul>
+  <p class="footer">
+    环境：生产只读　·　整理人：又初（DN6517）　·　如需复核对账或开通配置，请回复确认产品清单与优先级。
+  </p>
+</div>
+
+</div>
+</body>
+</html>

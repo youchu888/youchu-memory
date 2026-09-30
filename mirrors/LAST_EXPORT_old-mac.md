@@ -1,17 +1,17 @@
 # mirrors · 非代码双机镜像
 
 - host: `old-mac`
-- updated: 2026-09-24 22:30:17 +0800
+- updated: 2026-09-30 23:30:59 +0800
 - transcript_days: 21
 
 ## 本轮复制文件数
 
-- `agent-transcripts`: 0
+- `agent-transcripts`: 59
 - `datacheck-playbooks-claude`: 0
 - `datacheck-playbooks-codex`: 0
 - `datacheck-reports-claude`: 0
 - `datacheck-reports-codex`: 0
-- `tgbot-outgoing`: 0
+- `tgbot-outgoing`: 51
 
 ## 范围
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>候选覆盖率偏低 · 原因拆解 · 08-03～08-07</title>
+<style>
+:root{--bg:#f4f6f9;--card:#fff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--blue:#2563eb;--red:#dc2626;--green:#059669;--amber:#d97706}
+*{box-sizing:border-box}
+body{margin:0;padding:16px 12px 40px;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.55;font-size:15px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:1.25rem;margin:0 0 6px}
+.meta{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 14px 12px;margin:0 0 12px}
+h2{font-size:1.05rem;margin:0 0 8px}
+h3{font-size:.98rem;margin:12px 0 6px}
+p,li{margin:0 0 8px}
+ul{padding-left:1.2em;margin:0 0 8px}
+.tag{display:inline-block;font-size:.75rem;padding:2px 8px;border-radius:999px;background:#eef2ff;color:#3730a3;margin-right:6px}
+.bad{color:var(--red);font-weight:600}
+.ok{color:var(--green);font-weight:600}
+.warn{color:var(--amber);font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 5px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;white-space:nowrap}
+.note{font-size:.85rem;color:var(--muted)}
+.hl{background:#fff7ed;border-left:3px solid var(--amber);padding:8px 10px;margin:8px 0;border-radius:0 8px 8px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>候选覆盖率偏低 · 原因拆解</h1>
+<p class="meta">窗口 2026-08-03～08-07 · 生产只读 · 又初</p>
+
+<div class="card">
+<h2>一句话结论</h2>
+<p>透率低<strong>不是打分太严</strong>，而是大部分已打标注册<strong>进不了候选池</strong>。</p>
+<p>进池要同时有：同产品同 IP 落地页 + 渠道非自然量 + 注册前 24 小时内。</p>
+<div class="hl">本周主因只有两类：<br/>A. 注册 IP 对不上落地页　B. 对上了 IP，但落地页渠道是自然量/空</div>
+</div>
+
+<div class="card">
+<h2>漏斗总表（打标注册）</h2>
+<div style="overflow-x:auto">
+<table>
+<thead><tr><th>产品</th><th>打标</th><th>合格候选</th><th>同IP仅自然量</th><th>同IP无落地页</th><th>周报透率</th></tr></thead>
+<tbody>
+<tr><td>JHG-001</td><td>9635</td><td>353</td><td>3950（41%）</td><td>5116（53%）</td><td>3.66%</td></tr>
+<tr><td>SF-42</td><td>1748</td><td>107</td><td>0</td><td>1640（94%）</td><td>6.12%</td></tr>
+<tr><td>DX-092</td><td>1421</td><td>—</td><td>259</td><td>548</td><td class="warn">12.88%※</td></tr>
+<tr><td>DX-118</td><td>718</td><td>—</td><td>286</td><td>354</td><td class="warn">2.23%※</td></tr>
+<tr><td>YC-169</td><td>633</td><td>—</td><td>153</td><td>381</td><td class="warn">13.11%※</td></tr>
+<tr><td>JHG-004</td><td>389</td><td>35</td><td>26</td><td>320（82%）</td><td>9.00%</td></tr>
+<tr><td>SF-81</td><td>376</td><td>14</td><td>0</td><td>361（96%）</td><td>3.72%</td></tr>
+<tr><td>TJ-002</td><td>125</td><td class="bad">0</td><td>0</td><td>125（100%）</td><td class="bad">0%</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">※ 08-06 晚才挂配置，周报分母含开通前空窗。时序不满足各产品约 0～2%；注册 IP 为空为 0。</p>
+</div>
+
+<div class="card">
+<h2>分产品说人话</h2>
+<h3>JHG-001（约 3.7%）——双因</h3>
+<ul>
+<li>约一半：注册 IP 对不上任何落地页</li>
+<li>约四成：对上了，但落地页是自然量（落地页里自然量远多于推广）</li>
+<li>打标 IP 与推广落地页 IP 重合约 <strong>7.3%</strong></li>
+</ul>
+
+<h3>SF-81 / SF-42（约 3.7% / 6.1%）——几乎全是对不上 IP</h3>
+<ul>
+<li>落地页基本都是推广渠道（不是「记成自然量」）</li>
+<li>但注册 IP 与推广落地页 IP 重合仅约 <strong>4.6% / 6.5%</strong></li>
+<li>落地页有量，IP 集合与注册侧错开（蜂窝切换 / 出口不一致等）</li>
+</ul>
+
+<h3>JHG-004（约 9%）</h3>
+<p>约八成无同 IP 落地页；重合约 12.5%，略好于 SF 系。</p>
+
+<h3>DX-092 / YC-169 / DX-118 —— 请用开通后日看</h3>
+<table>
+<thead><tr><th>产品</th><th>08-06～07 打标</th><th>合格候选</th><th>候选占比</th></tr></thead>
+<tbody>
+<tr><td>DX-092</td><td>511</td><td>183</td><td class="ok">35.8%</td></tr>
+<tr><td>YC-169</td><td>561</td><td>83</td><td>14.8%</td></tr>
+<tr><td>DX-118</td><td>197</td><td>16</td><td class="warn">8.1%</td></tr>
+</tbody>
+</table>
+<p class="note">DX-118 透率与成功率是两件事；本周成功率低另因分数低于阈值。</p>
+
+<h3>TJ-002（0%）——无落地页数据</h3>
+<p>自 7 月起落地页点击/浏览 <strong>0 条</strong> → 必然无候选。</p>
+</div>
+
+<div class="card">
+<h2>建议跟进（优先级）</h2>
+<ol>
+<li><strong>TJ-002</strong>：先查落地页埋点/挂接是否进仓</li>
+<li><strong>SF-81 / SF-42</strong>：查落地页 IP 与 App 注册 IP 为何错开，先别调打分阈值</li>
+<li><strong>JHG-001</strong>：提高推广落地页覆盖 + 排查渠道落成自然量</li>
+<li><strong>新挂产品</strong>：透率用开通日及之后，勿用含空窗整周</li>
+<li><strong>DX-118</strong>：透率与成功率分开盯</li>
+</ol>
+</div>
+</div>
+</body>
+</html>
