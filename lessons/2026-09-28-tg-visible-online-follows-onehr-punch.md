@@ -28,6 +28,14 @@ rg 'visible-online' /tmp/tgbot-dc.log | tail
 python3 -c "import json;print(json.load(open('$HOME/.dc-platform/onehr/schedule_state.json')))"
 ```
 
+## old-mac 落地（2026-10-01）
+
+- 接线：`worker_ant_dispatch_watcher` 在 `TG_VISIBLE_ONLINE_ENABLED` 时起 `visible_online_loop`，不再走 `_status_ping_loop` / 独立 `tg_work_online`
+- `.env`：`TG_VISIBLE_ONLINE_ENABLED=true`，`TG_WORK_ONLINE_ENABLED=false`，`TELETHON_WORK_HOURS_ONLY=false`
+- **必须 unload** `com.youchu.tg-work-online`（第二 session 会抢更新，绿点乱跳）
+- 法定假/请假：`cn_punch_calendar.should_skip_punch` → `punch_window_active=False` → 强制灭绿
+- smoke（国庆当日）：日志应有 `gate=onehr-punch` + `online=False (... holiday)`
+
 ## 关联
 
 - 取代固定钟点 / 20 分钟离线草案
