@@ -358,5 +358,13 @@
     ],
     "path": "/Users/mac/.dc-platform/memory/work-log/reports/2026-09-30-日报.md",
     "host": "new-mac"
+  },
+  "2026-10-01": {
+    "posted_at": "2026-10-01T21:38:07+08:00",
+    "chat_ids": [
+      8740305767
+    ],
+    "path": "/Users/mac/.dc-platform/memory/work-log/reports/日报-2026-10-01.md",
+    "host": "old-mac"
   }
 }
