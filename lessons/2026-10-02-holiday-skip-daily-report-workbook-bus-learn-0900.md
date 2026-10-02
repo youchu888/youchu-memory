@@ -18,7 +18,7 @@ domain: ops
 | 项 | 做法 |
 |----|------|
 | 日报 | `.cursor/scripts/_skip_non_workday.py` + 注入 `daily-report-wake/fallback/pre_flush` |
-| 工作簿 | Telethon 见簿 → 实查 → **只** `agent_bus_send` 给狂人；**不回群、不推「又初→群」私聊** |
+| 工作簿 | Telethon 见簿 → 实查 → **只** `agent_bus_send` 给狂人；正文【簿内主责】+【自开实责】（任务板自开+supplemental）；**不回群、不推「又初→群」私聊** |
 | 学习 | `com.youchu.worker-ant-daily-learn` Mon–Fri 09:00；假日 skip；先发 bus 再 wake |
 
 ## 验证
