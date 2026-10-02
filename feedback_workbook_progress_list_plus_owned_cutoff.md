@@ -25,7 +25,7 @@
 ## 落地
 
 - 自动**回群**：**已关**（Bot API 收不到狂人 bot；主人 2026-09-05 取消群回复）
-- **群簿仍要回**：Telethon 看见「今日工作簿」→ 同一套三步实查 → **bus 新消息**给狂人（私聊续发）；无 inbound bus_id 也要发（主人 2026-10-02 重申；修 `try_workbook_progress_reply` 只存不发）
+- **群簿仍要回**：Telethon 看见「今日工作簿」→ 同一套三步实查 → **只 bus 给狂人**；无 inbound bus_id 也要发。**禁止**再推「又初→群」私聊续发（主人 2026-10-02）
 - bus 入站清单：实查后 `reply`
 - 权威板：`project_youchu_workbook_tasks.md` + `workbook_supplemental.json`
 
