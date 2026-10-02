@@ -1,6 +1,6 @@
 # 每日向工作狂人学习 · 提问模板
 
-## 标准版（每日 22:40 用）
+## 标准版（每日 09:00 用 · 主人 2026-10-02 改）
 
 ```
 又初·每日学习（YYYY-MM-DD）：
@@ -16,10 +16,10 @@
 
 见 `sessions/2026-06-26.md`。
 
-## 沉淀 checklist（又初执行 · 与 22:50 日清衔接）
+## 沉淀 checklist（又初执行 · 可与晚间日清衔接）
 
 - [ ] 写入 `sessions/YYYY-MM-DD.md`（原文 + 整理）
 - [ ] **优先 update 旧** `feedback_*` / lesson；同主题不新建堆文件
 - [ ] 新硬规则才加 PINNED（仍 ≤30）；可复现步骤写 lesson + `_index` 一行
 - [ ] 更新 `worker_ant/INDEX.md` 一行
-- [ ] 22:50 日清会重生 bootstrap；若你提前沉淀完可手动 `memory-daily-light-tidy.sh`
+- [ ] 晚间日清会重生 bootstrap；若你提前沉淀完可手动 `memory-daily-light-tidy.sh`

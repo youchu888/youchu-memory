@@ -4,12 +4,12 @@
 
 ## 目的
 
-每天下班后用 agent-bus 向工作狂人请教，把回复 + 平台文档 + 当日派单经验**结构化沉淀**，供下次开工注入上下文。
+每天上午用 agent-bus 向工作狂人请教（狂人此时较闲），把回复 + 平台文档 + 当日派单经验**结构化沉淀**，供开工注入上下文。
 
-## 每日流程（22:40 Asia/Shanghai）
+## 每日流程（09:00 Asia/Shanghai · 主人 2026-10-02 改）
 
-**定时**：权威机 LaunchAgent `com.youchu.worker-ant-daily-learn`（周一至周五 **22:40**，紧随 22:30 memory sync）写入  
-`wake_feed` → `AGENT_LOOP_WAKE_WORKER_ANT_LEARN`，IDE 主会话接住后执行。
+**定时**：LaunchAgent `com.youchu.worker-ant-daily-learn`（周一至周五 **09:00**；法定假/请假跳过）  
+先 `agent_bus_send → worker_ant`，再写 `wake_feed` → `AGENT_LOOP_WAKE_WORKER_ANT_LEARN` 供 IDE 沉淀。
 
 安装 / 重装：
 

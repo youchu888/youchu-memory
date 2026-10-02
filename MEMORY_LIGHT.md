@@ -44,7 +44,7 @@
 |------|------|------|
 | 21:30 / 21:45 | 日报 | 业务交付，不写运维 |
 | 22:30 | memory git sync | 双机记忆对齐 |
-| 22:40 | 向狂人学习（bus） | 新知识进 `worker_ant/sessions/` → lesson |
+| 09:00 | 向狂人学习（bus） | 工作日；假日/请假跳过；新知识进 `worker_ant/sessions/` → lesson |
 | **22:50** | **记忆日清** `memory-daily-light-tidy.sh` | 重生 bootstrap、压 OPEN/PINNED 报警、保持次日轻启动 |
 
 原则：**越学越快**——狂人纠正 → update 旧 feedback/lesson（少新建）→ PINNED 只留红线 → 次日只啃 bootstrap + 1～2 原文。
