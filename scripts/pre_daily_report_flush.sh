@@ -19,6 +19,16 @@ if [[ "$DOW" == "7" ]]; then
   exit 0
 fi
 
+# 主人 2026-10-02：法定假 / 请假日不冲刺日报流水
+SKIP_PY="${CHCODE_ROOT:-$HOME/Desktop/CHcode}/.cursor/scripts/_skip_non_workday.py"
+if [[ -f "$SKIP_PY" ]]; then
+  _skip_reason="$(python3 "$SKIP_PY" --date "$DAY" 2>/dev/null || true)"
+  if [[ -n "${_skip_reason// }" ]]; then
+    log "skip non-workday $DAY ($_skip_reason) — 不冲刺日报"
+    exit 0
+  fi
+fi
+
 if [[ -f "$MEM/.env.host" ]]; then
   # shellcheck disable=SC1091
   source "$MEM/.env.host"
