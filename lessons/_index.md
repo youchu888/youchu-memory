@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-02 | [值班日即使法定假也要正常打卡](./2026-10-02-duty-days-normal-punch.md) | onehr, punch, duty | 10-03/10-05 值班；日报仍假日 skip |
 | 2026-10-02 | [假日不写日报 · 群工作簿须 bus 回进展 · 狂人学习改 09:00](./2026-10-02-holiday-skip-daily-report-workbook-bus-learn-0900.md) | daily-report, workbook, learn, holiday | Telethon→bus；learn 09:00 |
 | 2026-09-30 | [agent-bus 与 TG 私聊同路：另起 headless 执行](./2026-09-30-agent-bus-executor-like-tg-dm.md) | agent-bus, cursor-executor, tgbot | AUTO_EXECUTE=true；PATH 含 ~/.local/bin |
 | 2026-09-30 | [问题处置 SOP：按触发词对号入座，勿从零查](./2026-09-30-problem-sop-index-trigger-words.md) | sop, pipeline-runner, settlement, spark | bus#9470；五份 SOP+五铁律 |

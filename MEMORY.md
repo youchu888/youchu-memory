@@ -6,6 +6,7 @@
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
 - [记忆轻量读法（开工卡）](MEMORY_LIGHT.md) — 索引制：bootstrap → tag → 1～2 原文；禁整库灌
+- [值班日即使法定假也要正常打卡](lessons/2026-10-02-duty-days-normal-punch.md) — 10-03/10-05 值班；日报仍假日 skip
 - [假日不写日报 · 群工作簿须 bus 回进展 · 狂人学习改 09:00](lessons/2026-10-02-holiday-skip-daily-report-workbook-bus-learn-0900.md) — Telethon→bus；learn 09:00
 - [TG 绿点跟 OneHR 打卡：上班后间歇绿，下班后灭，离线≤15分钟](lessons/2026-09-28-tg-visible-online-follows-onehr-punch.md) — gate=onehr-punch；MAX_OFFLINE=900
 - [单机 memory sync 改下班一次；双机恢复改 MODE=interval](lessons/2026-09-28-memory-sync-solo-daily-after-work.md) — MODE=daily 22:30；覆盖远程以 new-mac 为准
