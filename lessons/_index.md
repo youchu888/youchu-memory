@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-03 | [岗位监控安装后核对 TG 账号是否为目标岗号，短信码与 2FA 仅经等码进程使用](./2026-10-03-岗位监控安装后核对-tg-账号是否为目标岗号-短信码与-2fa-仅经等码进程使用且用后清本地明文.md) | ethan-jobs-watch,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-03 | [又初打卡截图的辅助功能/屏幕录制须用户本机手动授权，Agent 仅可打开设置页并](./2026-10-03-又初打卡截图的辅助功能-屏幕录制须用户本机手动授权-agent-仅可打开设置页并复测-不可代点信.md) | punch-screenshot,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-03 | [远控能看不能输入时，在被控机同时勾选辅助功能与输入监控里的 ToDesk 与 T](./2026-10-03-远控能看不能输入时-在被控机同时勾选辅助功能与输入监控里的-todesk-与-todesk_se.md) | macos-todesk,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-03 | [upload|上传云端以 reports/日报-YYYY-MM-DD.md 定稿](./2026-10-03-upload-上传云端以-reports-日报-yyyy-mm-dd-md-定稿为准-指定日期原.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-03 | [screenshot|macos-privacy|新鲜截图失败先查 Access](./2026-10-03-screenshot-macos-privacy-新鲜截图失败先查-accessibility-.md) | onehr,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-03 | [duty-day|launchd|值班日登记或改 duty 配置后，重启 One](./2026-10-03-duty-day-launchd-值班日登记或改-duty-配置后-重启-onehr-打卡调度进.md) | onehr,session-rotate | 会话轮换前自动蒸馏 |

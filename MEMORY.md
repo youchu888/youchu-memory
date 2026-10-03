@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [岗位监控安装后核对 TG 账号是否为目标岗号，短信码与 2FA 仅经等码](lessons/2026-10-03-岗位监控安装后核对-tg-账号是否为目标岗号-短信码与-2fa-仅经等码进程使用且用后清本地明文.md) — 会话轮换蒸馏
+- [又初打卡截图的辅助功能/屏幕录制须用户本机手动授权，Agent 仅可打开](lessons/2026-10-03-又初打卡截图的辅助功能-屏幕录制须用户本机手动授权-agent-仅可打开设置页并复测-不可代点信.md) — 会话轮换蒸馏
+- [远控能看不能输入时，在被控机同时勾选辅助功能与输入监控里的 ToDesk](lessons/2026-10-03-远控能看不能输入时-在被控机同时勾选辅助功能与输入监控里的-todesk-与-todesk_se.md) — 会话轮换蒸馏
 - [upload|上传云端以 reports/日报-YYYY-MM-DD.m](lessons/2026-10-03-upload-上传云端以-reports-日报-yyyy-mm-dd-md-定稿为准-指定日期原.md) — 会话轮换蒸馏
 - [screenshot|macos-privacy|新鲜截图失败先查 Ac](lessons/2026-10-03-screenshot-macos-privacy-新鲜截图失败先查-accessibility-.md) — 会话轮换蒸馏
 - [duty-day|launchd|值班日登记或改 duty 配置后，重启](lessons/2026-10-03-duty-day-launchd-值班日登记或改-duty-配置后-重启-onehr-打卡调度进.md) — 会话轮换蒸馏
