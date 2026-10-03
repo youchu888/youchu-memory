@@ -382,3 +382,5 @@
 - [工作簿 09:01 兜底仍像秒回：写死1/2条+禁印口号](lessons/2026-09-05-workbook-daily-fallback-still-looks-instant.md) — 2026-09-05
 - [狂人 bus 清单问进度：清单主责+自开实责·截至汇报前·禁秒回](lessons/2026-09-03-workbook-progress-list-plus-owned-no-instant-ack.md) — 2026-09-03
 - feedback_vpn_renew_deadlock_use_cham.md — VPN死结破局：Cham点击连接→续期→关变色龙
+- [测试 Flink 不归又初·SR 磁盘满](lessons/2026-10-03-test-flink-not-youchu-sr-disk-before-restart.md) — Flink问知秋；磁盘满先腾SR再重启
+
