@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 04 10 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md` | 2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动- |
+| ## 04 10 2026 ag agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md` | 2026-10-04-tg-cursor-连续-econnreset-或-api |
+| agent api excerpt vpn 不在 不在复述错误栈原文 | `sessions/tg-rotate-2026-10-04-0648.md` | 此类 excerpt 蒸馏价值在**运维排障顺序**（关 VPN → 验 API |
+| ag agent agent·并行」 en ge nt | `sessions/tg-rotate-2026-10-04-0648.md` | **并行 agent**：长任务占另一路时，新私聊走「新开 agent·并行」， |
+| agent」 cursor resume 「重启 上下 下文 | `sessions/tg-rotate-2026-10-04-0648.md` | 「重启 agent」= 强制**新开** Cursor 会话；连接失败路径会** |
+| api cursor failed https_proxy openvpn re | `sessions/tg-rotate-2026-10-04-0648.md` | 提示 `Failed to reach the Cursor API` 时，除代 |
+| ap cursor econnreset pi read sql | `sessions/tg-rotate-2026-10-04-0648.md` | `read ECONNRESET` 表示与 Cursor 的会话连接被对端或中间 |
+| cursor onehr tg 「已 「打 」属 | `sessions/tg-rotate-2026-10-04-0648.md` | TG 私聊「打卡了吗」属于考勤确认，正常应走 OneHR/打卡日历逻辑；本会话因 |
+| agent lane lesson parallel resume tg | `sessions/tg-rotate-2026-10-04-0648.md` | [LESSON: tg-parallel-agent/并行 lane 被长任务占 |
+| ag agent」仍报连接失败 en ge nt resume | `sessions/tg-rotate-2026-10-04-0648.md` | 用户连发两次「重启 agent」仍报连接失败 → 根因在**环境网络未恢复**（ |
+| agent」 tg 「重 仍连 会话 假装 | `sessions/tg-rotate-2026-10-04-0648.md` | 连接失败后标准话术：请用户**重发刚才那句**，或再发「重启 agent」；勿在 |
+| agent cursor en nv n」 op | `sessions/tg-rotate-2026-10-04-0648.md` | 主人明确说「先关闭 OpenVPN」时，应理解为：**先恢复 Cursor 可达 |
 | ## +屏 +输 .app 03 10 | `~/.dc-platform/memory/lessons/2026-10-03-todesk-勿对备份-app-授权-辅助功能-输入监控-屏幕录制三项齐开-todesk-与-t.md` | 2026-10-03-todesk-勿对备份-app-授权-辅助功能-输入监控- |
 | ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-远程-todesk-键盘失效-先判-有鼠无键-输入监控-session-路径-helpers-手.md` | 2026-10-03-远程-todesk-键盘失效-先判-有鼠无键-输入监控-s |
 | escalation mac 仍只 仍只有鼠标没键盘时 只有 启才 | `sessions/tg-rotate-2026-10-03-2035.md` | 仍只有鼠标没键盘时， escalation：**重启被控 Mac**（TCC 有 |
@@ -33,15 +45,3 @@
 | 上班 上班卡已在 不要 修截 卡已 因修 | `sessions/tg-rotate-2026-10-03-1335.md` | 上班卡已在** 时不要因修截图权限重复打上班卡。 |
 | 不要 不要只看有没有图文件 与复 为准 以权 以权限列表与复测为准 | `sessions/tg-rotate-2026-10-03-1335.md` | 复测结论模式：**能截到图 ≠ 辅助功能已信任**；以权限列表与复测为准，不要只 |
 | ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-upload-上传云端以-reports-日报-yyyy-mm-dd-md-定稿为准-指定日期原.md` | 2026-10-03-upload-上传云端以-reports-日报-yyyy- |
-| ## 03 10 2026 accessibility agent_sessio | `~/.dc-platform/memory/lessons/2026-10-03-screenshot-macos-privacy-新鲜截图失败先查-accessibility-.md` | 2026-10-03-screenshot-macos-privacy-新鲜截图 |
-| ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-duty-day-launchd-值班日登记或改-duty-配置后-重启-onehr-打卡调度进.md` | 2026-10-03-duty-day-launchd-值班日登记或改-duty |
-| python3.13 「又 「又初打卡截图」 修复 再跑 初打 | `sessions/tg-rotate-2026-10-03-1044.md` | 权限修复验收：在系统设置勾选 **「又初打卡截图」**（及实际执行的 **pyt |
-| 180s 「无 上传 为「 会表 动化 | `sessions/tg-rotate-2026-10-03-1044.md` | 自动化拒绝上传 **超过 180s 的旧图**；权限未过时会表现为「无新鲜截图路 |
-| accessibility an et ha not n→ | `sessions/tg-rotate-2026-10-03-1044.md` | 截图失败常见日志：`Accessibility not trusted`；账号切 |
-| checkin 「打 「没 「没法获取新鲜截图」与「打不上卡」要分开 」与 」要 | `sessions/tg-rotate-2026-10-03-1044.md` | 「没法获取新鲜截图」与「打不上卡」要分开：**服务端已 checkin 时，卡可 |
-| checkin evening morning skip 仍用 值班 | `sessions/tg-rotate-2026-10-03-1044.md` | 值班 morning 漏打排查顺序：**值班配置是否生效 → 调度是否仍用旧日历 |
-| 05） 19 checkin onehr 「今 下班 | `sessions/tg-rotate-2026-10-03-1044.md` | 用户问「今天打卡了吗」：以 **OneHR 服务端 `checkin` 日期** |
-| morning onehr set_duty_day.py 「假 」跳 仍会 | `sessions/tg-rotate-2026-10-03-1044.md` | 登记 **值班日**（如 `set_duty_day.py`）后，若 OneHR |
-| daily dd.md lesson mm report reports | `sessions/tg-rotate-2026-10-03-1044.md` | [LESSON: daily-report/upload/上传云端以 repor |
-| #522） agent 与长 任务 会话 先冷 | `sessions/tg-rotate-2026-10-03-1044.md` | 并行新开 agent 处理私聊（如 #522）：**先冷启动记忆**，再查打卡/ |
-| agent」 cursor resume」 「会 「重启 一条 | `sessions/tg-rotate-2026-10-03-1044.md` | Cursor 报「会话连接失败、丢弃旧 resume」：让用户 **重发上一条* |

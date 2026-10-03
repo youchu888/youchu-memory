@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [并行 lane 被长任务占用时，新私聊独立会话且须冷启动；连接失败勿依赖](lessons/2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md) — 会话轮换蒸馏
+- [TG/Cursor 连续 ECONNRESET 或 API 不可达时，先](lessons/2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md) — 会话轮换蒸馏
 - [ToDesk 勿对备份 .app 授权；辅助功能+输入监控+屏幕录制三项](lessons/2026-10-03-todesk-勿对备份-app-授权-辅助功能-输入监控-屏幕录制三项齐开-todesk-与-t.md) — 会话轮换蒸馏
 - [远程 ToDesk 键盘失效：先判「有鼠无键=输入监控」，Session](lessons/2026-10-03-远程-todesk-键盘失效-先判-有鼠无键-输入监控-session-路径-helpers-手.md) — 会话轮换蒸馏
 - [岗位监控安装后核对 TG 账号是否为目标岗号，短信码与 2FA 仅经等码](lessons/2026-10-03-岗位监控安装后核对-tg-账号是否为目标岗号-短信码与-2fa-仅经等码进程使用且用后清本地明文.md) — 会话轮换蒸馏
