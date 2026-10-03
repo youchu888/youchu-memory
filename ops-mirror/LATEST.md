@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-03 20:22:23 +0800
+> 更新: 2026-10-03 20:25:08 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-03.md`
 
@@ -23,3 +23,4 @@
 | 2026-10-03 12:39 | 私聊#527 | telegram_dm | completed | 为什么我的远程控制的时候键盘不能输入呢 |
 | 2026-10-03 20:12 | 私聊#528 | telegram_dm | completed | 没找到ToDesk_Session 压 |
 | 2026-10-03 20:19 | 私聊#529 | telegram_dm | completed | 好了，但是好像还不行 |
+| 2026-10-03 20:23 | 私聊#530 | telegram_dm | completed | 鼠标可以，键盘完全不能 |
