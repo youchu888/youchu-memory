@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-03 22:54:33 +0800
+> 更新: 2026-10-03 22:57:29 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-03.md`
 
@@ -27,3 +27,5 @@
 | 2026-10-03 20:26 | 私聊#531 | telegram_dm | completed | 还是不行，我断掉了 |
 | 2026-10-03 22:39 | 私聊#532 | telegram_dm | failed | 打卡了吗 |
 | 2026-10-03 22:43 | 私聊#533 | telegram_dm | failed | 重启agent |
+| 2026-10-03 22:56 | 私聊#534 | telegram_dm | in_progress | 先关闭Ope |
+| 2026-10-03 22:56 | 私聊#535 | telegram_dm | in_progress | 先关闭OpenVPN |
