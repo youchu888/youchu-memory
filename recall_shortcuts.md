@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-upload-上传云端以-reports-日报-yyyy-mm-dd-md-定稿为准-指定日期原.md` | 2026-10-03-upload-上传云端以-reports-日报-yyyy- |
+| ## 03 10 2026 accessibility agent_sessio | `~/.dc-platform/memory/lessons/2026-10-03-screenshot-macos-privacy-新鲜截图失败先查-accessibility-.md` | 2026-10-03-screenshot-macos-privacy-新鲜截图 |
+| ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-duty-day-launchd-值班日登记或改-duty-配置后-重启-onehr-打卡调度进.md` | 2026-10-03-duty-day-launchd-值班日登记或改-duty |
+| python3.13 「又 「又初打卡截图」 修复 再跑 初打 | `sessions/tg-rotate-2026-10-03-1044.md` | 权限修复验收：在系统设置勾选 **「又初打卡截图」**（及实际执行的 **pyt |
+| 180s 「无 上传 为「 会表 动化 | `sessions/tg-rotate-2026-10-03-1044.md` | 自动化拒绝上传 **超过 180s 的旧图**；权限未过时会表现为「无新鲜截图路 |
+| accessibility an et ha not n→ | `sessions/tg-rotate-2026-10-03-1044.md` | 截图失败常见日志：`Accessibility not trusted`；账号切 |
+| checkin 「打 「没 「没法获取新鲜截图」与「打不上卡」要分开 」与 」要 | `sessions/tg-rotate-2026-10-03-1044.md` | 「没法获取新鲜截图」与「打不上卡」要分开：**服务端已 checkin 时，卡可 |
+| checkin evening morning skip 仍用 值班 | `sessions/tg-rotate-2026-10-03-1044.md` | 值班 morning 漏打排查顺序：**值班配置是否生效 → 调度是否仍用旧日历 |
+| 05） 19 checkin onehr 「今 下班 | `sessions/tg-rotate-2026-10-03-1044.md` | 用户问「今天打卡了吗」：以 **OneHR 服务端 `checkin` 日期** |
+| morning onehr set_duty_day.py 「假 」跳 仍会 | `sessions/tg-rotate-2026-10-03-1044.md` | 登记 **值班日**（如 `set_duty_day.py`）后，若 OneHR |
+| daily dd.md lesson mm report reports | `sessions/tg-rotate-2026-10-03-1044.md` | [LESSON: daily-report/upload/上传云端以 repor |
+| #522） agent 与长 任务 会话 先冷 | `sessions/tg-rotate-2026-10-03-1044.md` | 并行新开 agent 处理私聊（如 #522）：**先冷启动记忆**，再查打卡/ |
+| agent」 cursor resume」 「会 「重启 一条 | `sessions/tg-rotate-2026-10-03-1044.md` | Cursor 报「会话连接失败、丢弃旧 resume」：让用户 **重发上一条* |
+| date dd markdown mm yyyy 「按 | `sessions/tg-rotate-2026-10-03-1044.md` | 「按这个上传云端」：用 **已定稿日报 Markdown 原样**、带 **`- |
+| telegram 仅截 刷新 功能 助功 口可 | `sessions/tg-rotate-2026-10-03-1044.md` | 仅截 Telegram 窗口可能只需 **屏幕录制**；走完整设备页/账号刷新路 |
 | ## 09 2026 24 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-09-24-用户短时间重复同一调研类私聊-复用已有结论短答-避免重复全网检索与长文复述.md` | 2026-09-24-用户短时间重复同一调研类私聊-复用已有结论短答-避免重复全 |
 | ## +血 +认 09 2026 24 | `~/.dc-platform/memory/lessons/2026-09-24-指标库前端对齐-b-发现页大搜索-认证-lifecycle-徽章-详情左口径右实现-血缘-统一-.md` | 2026-09-24-指标库前端对齐-b-发现页大搜索-认证-lifecycle |
 | ## 09 2026 24 agent_session_rotate api | `~/.dc-platform/memory/lessons/2026-09-24-telegram-bot-重启若-api-超时-先确认网络-vpn-与-api-可达-再用-da.md` | 2026-09-24-telegram-bot-重启若-api-超时-先确认网络 |
@@ -30,18 +45,3 @@
 | 20h 20h」→ ov ovpn request 「距 | `sessions/tg-rotate-2026-09-24-0608.md` | **假成功模式**：失败仍写入 20h 冷却 → 后续轮询「距上次 /reque |
 | openvpn ovpn request 「已 一步 不应 | `sessions/tg-rotate-2026-09-24-0608.md` | 续期链路：`/request` → 生成 ovpn → 导入 → 拉起 Open |
 | launchd n「 pn vp vpn「没自动续」先查 「没 | `sessions/tg-rotate-2026-09-24-0608.md` | VPN「没自动续」先查 launchd 是否在跑；常见是脚本假成功，不是定时任务 |
-| agent cursor lesson resume 上下 下文 | `sessions/tg-rotate-2026-09-24-0608.md` | [LESSON: cursor-agent/连接失败丢弃 resume 时勿假设 |
-| imported_at launchd lesson ovpn sync vpn | `sessions/tg-rotate-2026-09-24-0608.md` | [LESSON: vpn-sync,ovpn,launchd/仅当 ovpn 成 |
-| 20h 上应 不上 不占 不能 修复 | `sessions/tg-rotate-2026-09-24-0608.md` | 修复要点：失败不占 20h 冷却；旧证复用不能当续期成功；续不上应报错/红灯，禁 |
-| ## 09 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-23-手动打的是前一日下班卡时-须明确不影响当日自动上下班计划与时间窗口.md` | 2026-09-23-手动打的是前一日下班卡时-须明确不影响当日自动上下班计划与 |
-| ## 09 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-09-23-主人说已手动打卡时-禁止再重试或自动补打-当次打卡视为已完成.md` | 2026-09-23-主人说已手动打卡时-禁止再重试或自动补打-当次打卡视为已完 |
-| top1 办收 库质 待办 抽查 指标 | `sessions/tg-rotate-2026-09-23-1007.md` | 次日 TOP1 续做项：指标库质检抽查 + 比率类待办收口 |
-| 09 2026 22 300→650 余正 入升 | `sessions/tg-rotate-2026-09-23-1007.md` | 2026-09-22 指标库进度锚点：盘点报表层/汇总层覆盖缺口并出对照清单；活 |
-| 09 2026 22） date markdown 「上 | `sessions/tg-rotate-2026-09-23-1007.md` | 日报定稿后主人说「上传云端」→ 以定稿 Markdown **原封不动**上传， |
-| 「约 」） 与当 主人 于主 人决 | `sessions/tg-rotate-2026-09-23-1007.md` | 可顺带报与当前时间的间隔（「约还有 X 分钟」），便于主人决策是否再等自动打 |
-| 00） 09 30–10 40 50 上班 | `sessions/tg-rotate-2026-09-23-1007.md` | 查打卡计划的标准答法：上班/下班**计划时刻** + **打卡窗口**（例：09 |
-| 「今 一日 上下 下班 今日 免误 | `sessions/tg-rotate-2026-09-23-1007.md` | 手动完成的是**前一日下班卡**时，须与**当日**自动上下班计划分开说明，避免 |
-| 「今 」→ 不再 主人 主人明确「今晚 二次 | `sessions/tg-rotate-2026-09-23-1007.md` | 主人明确「今晚/今天已手动打完卡」→ 当日不再自动重试、补打或二次触发打卡流程 |
-| lesson punch 为已 主人 主人说已手动打卡时 人说 | `sessions/tg-rotate-2026-09-23-1007.md` | [LESSON: punch/主人说已手动打卡时，禁止再重试或自动补打，当次打卡 |
-| api co cu ec econnreset）时 es | `sessions/tg-rotate-2026-09-23-1007.md` | 网络/API 异常（Cursor API 失败、ECONNRESET）时，**不 |
-| 「不 不影 主答 从可 任务 停止 | `sessions/tg-rotate-2026-09-23-1007.md` | 后台扫盘/巡检任务超时或停止，若计划时间已从可靠配置得出，应单独声明「不影响打卡 |

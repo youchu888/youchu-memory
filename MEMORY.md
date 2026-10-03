@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [upload|上传云端以 reports/日报-YYYY-MM-DD.m](lessons/2026-10-03-upload-上传云端以-reports-日报-yyyy-mm-dd-md-定稿为准-指定日期原.md) — 会话轮换蒸馏
+- [screenshot|macos-privacy|新鲜截图失败先查 Ac](lessons/2026-10-03-screenshot-macos-privacy-新鲜截图失败先查-accessibility-.md) — 会话轮换蒸馏
+- [duty-day|launchd|值班日登记或改 duty 配置后，重启](lessons/2026-10-03-duty-day-launchd-值班日登记或改-duty-配置后-重启-onehr-打卡调度进.md) — 会话轮换蒸馏
 - [记忆轻量读法（开工卡）](MEMORY_LIGHT.md) — 索引制：bootstrap → tag → 1～2 原文；禁整库灌
 - [值班日即使法定假也要正常打卡](lessons/2026-10-02-duty-days-normal-punch.md) — 10-03/10-05 值班；日报仍假日 skip
 - [假日不写日报 · 群工作簿须 bus 回进展 · 狂人学习改 09:00](lessons/2026-10-02-holiday-skip-daily-report-workbook-bus-learn-0900.md) — Telethon→bus；learn 09:00

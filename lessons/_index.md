@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-03 | [upload|上传云端以 reports/日报-YYYY-MM-DD.md 定稿](./2026-10-03-upload-上传云端以-reports-日报-yyyy-mm-dd-md-定稿为准-指定日期原.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-03 | [screenshot|macos-privacy|新鲜截图失败先查 Access](./2026-10-03-screenshot-macos-privacy-新鲜截图失败先查-accessibility-.md) | onehr,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-03 | [duty-day|launchd|值班日登记或改 duty 配置后，重启 One](./2026-10-03-duty-day-launchd-值班日登记或改-duty-配置后-重启-onehr-打卡调度进.md) | onehr,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-03 | [测试 Flink 不归又初·SR 磁盘满先腾再重启](./2026-10-03-test-flink-not-youchu-sr-disk-before-restart.md) | flink, starrocks, ownership, disk | Flink问知秋找负责人；11004磁盘满先腾SR再重启；SHOW BACKENDS需OPERATE |
 | 2026-10-02 | [值班日即使法定假也要正常打卡](./2026-10-02-duty-days-normal-punch.md) | onehr, punch, duty | 10-03/10-05 值班；日报仍假日 skip |
 | 2026-10-02 | [假日不写日报 · 群工作簿须 bus 回进展 · 狂人学习改 09:00](./2026-10-02-holiday-skip-daily-report-workbook-bus-learn-0900.md) | daily-report, workbook, learn, holiday | Telethon→bus；learn 09:00 |
