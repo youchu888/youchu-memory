@@ -11,3 +11,4 @@
 {"role":"assistant","message":{"content":[{"type":"text","text":"Agent 已新开，接着把你刚才那句「先关闭 OpenVPN」做完了。\n\n**OpenVPN 已关。**  \nOpenVPN Connect 客户端已退出，`10.8.0.11` 那条隧道没了。证书续期 `vpn-sync` 没动。\n\n**今天打卡：** 本地 OneHR 记录是上班、下班都有（`checkin=2026-10-03`，`checkout=2026-10-03`）。下班计划大约 **19:27**。"}]}}
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Sunday, Oct 4, 2026, 11:02 PM (UTC+8)</timestamp>\n\n<user_query>Briefly inform the user about the task result and perform any follow-up actions (if needed). If there's no follow-ups needed, don't explicitly say that.</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"后台那次全盘搜 OneHR 目录被中断了，不影响结果：状态已经在 `~/.dc-platform/onehr/` 里对过，OpenVPN 也关了。"}]}}
+{"type":"turn_ended","status":"success"}
