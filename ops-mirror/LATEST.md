@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-04 23:59:55 +0800
+> 更新: 2026-10-05 00:02:38 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-10-04.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-10-05.md`
 
 ## 未结案 agent-bus
 
@@ -9,23 +9,4 @@
 
 ## 近期任务溯源（摘录）
 
-| 时间 | 标签 | 来源 | 状态 | 摘要 |
-|---|---|---|---|---|
-| 2026-10-03 09:00 | 群派单#223 | worker_ant_group | completed | ℹ️ 📋 今日工作簿 2026-10-03 09:00 北京时间 10-03 待办 7 项(项 + 负责人)： 1. 设备标签 【又初】 2. 归因升级 【又初 |
-| 2026-10-03 09:33 | 私聊#520 | telegram_dm | completed | 把测试的flink重试一下任务，你知不知道怎么搞，不懂的话问下狂人 |
-| 2026-10-03 10:04 | 私聊#521 | telegram_dm | completed | 今天打卡了吗 |
-| 2026-10-03 10:08 | 私聊#522 | telegram_dm | completed | 处理一下，为什么没法获取新鲜截图 |
-| 2026-10-03 12:19 | 私聊#523 | telegram_dm | completed | 打不开阿 |
-| 2026-10-03 12:20 | 私聊#524 | telegram_dm | completed | 装岗位监控 |
-| 2026-10-03 12:25 | 私聊#525 | telegram_dm | completed | 266579 |
-| 2026-10-03 12:30 | 私聊#526 | telegram_dm | completed | yzq930821 |
-| 2026-10-03 12:39 | 私聊#527 | telegram_dm | completed | 为什么我的远程控制的时候键盘不能输入呢 |
-| 2026-10-03 20:12 | 私聊#528 | telegram_dm | completed | 没找到ToDesk_Session 压 |
-| 2026-10-03 20:19 | 私聊#529 | telegram_dm | completed | 好了，但是好像还不行 |
-| 2026-10-03 20:23 | 私聊#530 | telegram_dm | completed | 鼠标可以，键盘完全不能 |
-| 2026-10-03 20:26 | 私聊#531 | telegram_dm | completed | 还是不行，我断掉了 |
-| 2026-10-03 22:39 | 私聊#532 | telegram_dm | failed | 打卡了吗 |
-| 2026-10-03 22:43 | 私聊#533 | telegram_dm | failed | 重启agent |
-| 2026-10-03 22:56 | 私聊#534 | telegram_dm | completed | 先关闭Ope |
-| 2026-10-03 22:56 | 私聊#535 | telegram_dm | completed | 先关闭OpenVPN |
-| 2026-10-03 22:59 | 私聊#536 | telegram_dm | failed | 重启agent |
+_本日近窗无 bus/私聊任务溯源（或本机无 tgbot data）_
