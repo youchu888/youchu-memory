@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [Ethan 岗位筛选：只要远程大数据/数仓开发，禁第三国远程与到岗](feedback_ethan_jobs_filter.md) — 2026-10-07 #537/#538
 - [并行 lane 被长任务占用时，新私聊独立会话且须冷启动；连接失败勿依赖](lessons/2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md) — 会话轮换蒸馏
 - [TG/Cursor 连续 ECONNRESET 或 API 不可达时，先](lessons/2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md) — 会话轮换蒸馏
 - [ToDesk 勿对备份 .app 授权；辅助功能+输入监控+屏幕录制三项](lessons/2026-10-03-todesk-勿对备份-app-授权-辅助功能-输入监控-屏幕录制三项齐开-todesk-与-t.md) — 会话轮换蒸馏
