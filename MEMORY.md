@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [岗位用大数据/数仓白名单筛，勿用 NEGATIVE 误杀分析师等混岗标题](lessons/2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分析师等混岗标题.md) — 会话轮换蒸馏
+- [第三国远程与到岗类一律不推；「无需到岗」不拦；改 `ethan_chan](lessons/2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan_channel_bigdata_jo.md) — 会话轮换蒸馏
 - [Ethan 岗位筛选：只要远程大数据/数仓开发，禁第三国远程与到岗](feedback_ethan_jobs_filter.md) — 2026-10-07 #537/#538
 - [并行 lane 被长任务占用时，新私聊独立会话且须冷启动；连接失败勿依赖](lessons/2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md) — 会话轮换蒸馏
 - [TG/Cursor 连续 ECONNRESET 或 API 不可达时，先](lessons/2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md) — 会话轮换蒸馏

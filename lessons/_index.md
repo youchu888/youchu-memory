@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-07 | [岗位用大数据/数仓白名单筛，勿用 NEGATIVE 误杀分析师等混岗标题](./2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分析师等混岗标题.md) | ethan-jobs-watch,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-07 | [第三国远程与到岗类一律不推；「无需到岗」不拦；改 `ethan_channel_](./2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan_channel_bigdata_jo.md) | ethan-jobs-watch,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-04 | [并行 lane 被长任务占用时，新私聊独立会话且须冷启动；连接失败勿依赖旧 re](./2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md) | tg-parallel-agent,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-04 | [TG/Cursor 连续 ECONNRESET 或 API 不可达时，先排查 O](./2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md) | cursor-network,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-03 | [ToDesk 勿对备份 .app 授权；辅助功能+输入监控+屏幕录制三项齐开 T](./2026-10-03-todesk-勿对备份-app-授权-辅助功能-输入监控-屏幕录制三项齐开-todesk-与-t.md) | todesk,macos,privacy,session-rotate | 会话轮换前自动蒸馏 |

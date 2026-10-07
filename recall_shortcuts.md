@@ -5,6 +5,17 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 07 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分析师等混岗标题.md` | 2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分 |
+| ## 07 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan_channel_bigdata_jo.md` | 2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan |
+| ar dba flink pa rk sp | `sessions/tg-rotate-2026-10-07-2148.md` | 岗位：只要大数据开发 / 数据仓库开发及相关技术栈（Spark、Flink、数仓 |
+| 「无 」不 不应 不应拦截 不算 到岗 | `sessions/tg-rotate-2026-10-07-2148.md` | 正文含「无需到岗」不算到岗，不应拦截 |
+| #到岗 「到 「第 」及 」（ 三国 | `sessions/tg-rotate-2026-10-07-2148.md` | 地点：只推普通远程/居家；永久丢弃「第三国远程」及各类「到岗」（含 #到岗、需到 |
+| .dc ethan ethan_channel_bigdata_jobs. et | `sessions/tg-rotate-2026-10-07-2148.md` | Ethan 岗位监控脚本：`omdb/tgbot/scripts/ethan_c |
+| ethan jobs lesson negative watch 仓白 | `sessions/tg-rotate-2026-10-07-2148.md` | [LESSON: ethan-jobs-watch/岗位用大数据/数仓白名单筛， |
+| 三国 不要 不要到岗 不要第三国远程 与数 仓开 | `sessions/tg-rotate-2026-10-07-2148.md` | 用户偏好已写入规则：不要第三国远程、不要到岗；岗位范围只要大数据开发与数仓开发相 |
+| at dba eg e— ga iv | `sessions/tg-rotate-2026-10-07-2148.md` | 岗位过滤用白名单/正向关键词，不要把分析师、DBA 塞进 NEGATIVE——会 |
+| —— —已 「仅 「到 「第 「远 | `sessions/tg-rotate-2026-10-07-2148.md` | 旧坑：曾把「第三国远程」当远程命中；正文同时有「远程」和「到岗」仍可能误推——已 |
+| com.youchu.ethan jobs reload restart tg  | `sessions/tg-rotate-2026-10-07-2148.md` | 改过滤规则后必须 reload/restart `com.youchu.etha |
 | ## 04 10 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md` | 2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动- |
 | ## 04 10 2026 ag agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md` | 2026-10-04-tg-cursor-连续-econnreset-或-api |
 | agent api excerpt vpn 不在 不在复述错误栈原文 | `sessions/tg-rotate-2026-10-04-0648.md` | 此类 excerpt 蒸馏价值在**运维排障顺序**（关 VPN → 验 API |
@@ -34,14 +45,3 @@
 | ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-远控能看不能输入时-在被控机同时勾选辅助功能与输入监控里的-todesk-与-todesk_se.md` | 2026-10-03-远控能看不能输入时-在被控机同时勾选辅助功能与输入监控里的 |
 | agent 不替 与占 与占线的长任务互不替代 互不 仍须 | `sessions/tg-rotate-2026-10-03-1335.md` | **并行新开 Agent** 处理私聊时仍须 **记忆冷启动**；与占线的长任务 |
 | todesk 主控端 全退 再打开 再验 后再 | `sessions/tg-rotate-2026-10-03-1335.md` | 改完权限：**完全退出 ToDesk 再打开**，主控端 **重连** 后再验键 |
-| todesk_session 会出 会话 先连 再刷 出现 | `sessions/tg-rotate-2026-10-03-1335.md` | **`ToDesk_Session`** 常要在 **远程会话连着** 时才会出 |
-| mac macos todesk todesk_session 上勾 不够 | `sessions/tg-rotate-2026-10-03-1335.md` | **ToDesk 远程能看画面、键盘敲不进去**：典型是 **macOS 未给控 |
-| token 不写 不写具体码 与沉 云密 云密码用完即清本地明文 | `sessions/tg-rotate-2026-10-03-1335.md` | **验证码 / 云密码用完即清本地明文**，对话与沉淀里 **不写具体码、tok |
-| @ethan223344 @ethan_bigdata 别的 号需 号（ 后核 | `sessions/tg-rotate-2026-10-03-1335.md` | 装完后核对登录账号：脚本期望 **`@ethan_bigdata`**，若实际是 |
-| an com.youchu.ethan et ethan ha jobs | `sessions/tg-rotate-2026-10-03-1335.md` | **岗位监控（Ethan 岗消息）**：走 Ethan Telegram 登录  |
-| 上班 上班卡已在 不要 修截 卡已 因修 | `sessions/tg-rotate-2026-10-03-1335.md` | **上班卡已在** 时不要因修截图权限重复打上班卡。 |
-| agent app） finder 「好 「未 「未信任 | `sessions/tg-rotate-2026-10-03-1335.md` | Agent 可以把 **系统设置拉到前台**（辅助功能页 + Finder 高亮 |
-| app finder python3.13 ui 「又 一并 | `sessions/tg-rotate-2026-10-03-1335.md` | **又初打卡截图**：自动化截屏要能控 UI，须在本机 **系统设置 → 隐私与 |
-| 上班 上班卡已在 不要 修截 卡已 因修 | `sessions/tg-rotate-2026-10-03-1335.md` | 上班卡已在** 时不要因修截图权限重复打上班卡。 |
-| 不要 不要只看有没有图文件 与复 为准 以权 以权限列表与复测为准 | `sessions/tg-rotate-2026-10-03-1335.md` | 复测结论模式：**能截到图 ≠ 辅助功能已信任**；以权限列表与复测为准，不要只 |
-| ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-upload-上传云端以-reports-日报-yyyy-mm-dd-md-定稿为准-指定日期原.md` | 2026-10-03-upload-上传云端以-reports-日报-yyyy- |
