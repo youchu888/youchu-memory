@@ -17,4 +17,5 @@ triggers: [岗位监控, ethan-jobs, 招聘筛选, 第三国远程, 到岗]
 2. 岗位白名单：大数据开发、数据仓库/数仓开发及 Spark/Flink/ETL 等技术栈；不要把纯数据分析师、DBA 加回 ROLE。
 3. 地点：默认只留远程/居家；`is_rejected_location` 丢弃第三国远程与到岗（含 `#到岗`）；「无需到岗」否定表述不拦。
 4. 改完后须重启 `com.youchu.ethan-jobs-watch`（launchctl kickstart/unload+load）使 KeepAlive 进程加载新脚本。
-5. 记忆沉淀用本 feedback；勿另起多份冲突规则。
+5. 命中私聊发到 Ethan 号（`ETHAN_JOBS_NOTIFY_USERS`，默认 @ethan223344），不要发到工作号 `ALLOWED_USERS`。
+6. 记忆沉淀用本 feedback；勿另起多份冲突规则。
