@@ -562,9 +562,37 @@ def import_profile(cli: Path, ovpn_path: Path, profile_name: str, *, keep: int =
     cleanup_old_profiles(cli, profile_name, keep=keep)
 
 
+def ensure_connect_on_launch(cli: Path) -> None:
+    proc = _run_cli(cli, "--set-setting=connect-on-launch", "--value=true")
+    out = ((proc.stdout or "") + (proc.stderr or "")).strip()
+    if proc.returncode != 0:
+        log.warning("打开 connect-on-launch 失败: %s", out[:200])
+    else:
+        log.info("已确保 connect-on-launch=true")
+
+
+def latest_profile_id(cli: Path, profile_name: str) -> str | None:
+    matched = [p for p in list_profiles(cli) if profile_name in (p.get("name") or "")]
+    if not matched:
+        return None
+    matched.sort(key=lambda p: int(p.get("id") or 0))
+    pid = matched[-1].get("id")
+    return str(pid) if pid else None
+
+
 def relaunch_openvpn() -> None:
-    subprocess.run(["open", "-a", "OpenVPN Connect"], check=False, timeout=15)
-    log.info("已启动 OpenVPN Connect（connectOnLaunch 将自动连接）")
+    """导入会先拉起客户端；必须退出再开，connect-on-launch 才会生效。"""
+    cli = OPENVPN_CLI
+    ensure_connect_on_launch(cli)
+    pid = latest_profile_id(cli, PROFILE_NAME)
+    quit_openvpn()
+    cmd = ["open", "-a", "OpenVPN Connect"]
+    if pid:
+        cmd.extend(["--args", f"--connect-shortcut={pid}"])
+        log.info("已启动 OpenVPN Connect，并指定连接 profile %s", pid)
+    else:
+        log.info("已启动 OpenVPN Connect（connect-on-launch）")
+    subprocess.run(cmd, check=False, timeout=15)
 
 
 def save_state(

@@ -293,6 +293,7 @@
 - [工作日历 · 中国大陆](reference_work_calendar_cn.md) — 自然周 Mon-Sun 统计；常规工作日 Mon-Sat；国务院法定假/调休。
 - [work-log 跨 Agent 日报周报](feedback_work_log_multi_agent_reports.md) — 任务收尾 append 当日 work-log；子 Agent 同样写；transcript 只读补漏。
 - [bot 自查告警：连续失败才私聊](lessons/2026-07-27-bot-selfcheck-notify-after-sustained.md) — NOTIFY_AFTER=3；getMe 后跳过二次探活；冷却 30min。
+- [VPN 续期后必须退出再连](lessons/2026-10-08-vpn-relaunch-must-force-connect.md) — connect-on-launch 被关时，导入只拉起客户端不会拨号；quit 后用 `--connect-shortcut`。
 - [VPN 续期不因请假/节假日停止](feedback_vpn_renew_every_day.md) — 主人 07-27：每天必续；请假/放假也不停 launchd。
 - [VPN 续期按导入时刻滚动](lessons/2026-07-09-vpn-renew-by-import-time.md) — imported_at 记上次导入；满 23h 提前续；本机上次 2026-07-09 09:23，计划 07-10 08:23。
 - [跟用户说话说人话](feedback_speak_plain_to_user.md) — 对话/需求梳理通俗易懂；少术语少清单腔。

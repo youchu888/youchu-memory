@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-08 | [VPN 续期后必须退出再连，不能只 open 已在跑的客户端](./2026-10-08-vpn-relaunch-must-force-connect.md) | vpn, openvpn, connect-on-launch | connectOnLaunch 被关；导入已拉起进程，open 不再拨号 |
 | 2026-10-07 | [岗位用大数据/数仓白名单筛，勿用 NEGATIVE 误杀分析师等混岗标题](./2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分析师等混岗标题.md) | ethan-jobs-watch,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-07 | [第三国远程与到岗类一律不推；「无需到岗」不拦；改 `ethan_channel_](./2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan_channel_bigdata_jo.md) | ethan-jobs-watch,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-04 | [并行 lane 被长任务占用时，新私聊独立会话且须冷启动；连接失败勿依赖旧 re](./2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md) | tg-parallel-agent,session-rotate | 会话轮换前自动蒸馏 |
