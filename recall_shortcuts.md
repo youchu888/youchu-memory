@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-09-问表-专项负责人时先查工作簿与需求-owner-再答-来源留存表-dws-dws_source_.md` | 2026-10-09-问表-专项负责人时先查工作簿与需求-owner-再答-来源 |
+| memory_open pinned tags 业务 业务分工事实 为准 | `sessions/tg-rotate-2026-10-09-1045.md` | 冷启动仍按 PINNED / MEMORY_OPEN / 按任务 tags 深读 |
+| owner 于口 人类 优于 优于口头记忆 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | 负责人类问题：工作簿条目名 + 表名/需求文档里的 owner 字段，优于口头记 |
+| 「来 」挂 与留 交叉 作簿 分析 | `sessions/tg-rotate-2026-10-09-1045.md` | 当日工作簿里「来源分析验证数据」挂在野花名下，可与留存表归属交叉印证。 |
+| 人同 侧登 同样 在需 存表 样是 | `sessions/tg-rotate-2026-10-09-1045.md` | 该留存表在需求侧登记的负责人同样是**野花**。 |
+| 0留 15留 30 30留） 7留 dws.dws_source_analysi | `sessions/tg-rotate-2026-10-09-1045.md` | 来源分析留存指标落在表 `dws.dws_source_analysis_ret |
+| 业务 业务负责人是 为准 人是 以工 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | **来源留存**业务负责人是**野花**（需求/验证口径以工作簿为准）。 |
+| memory 「来 」时 不凭 不凭印象或 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | 问「来源留存谁负责」时，先对工作簿和近期分工核对，不凭印象或 MEMORY 猜负 |
+| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-10-09-1045.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | ## 07 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分析师等混岗标题.md` | 2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分 |
 | ## 07 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan_channel_bigdata_jo.md` | 2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan |
 | ar dba flink pa rk sp | `sessions/tg-rotate-2026-10-07-2148.md` | 岗位：只要大数据开发 / 数据仓库开发及相关技术栈（Spark、Flink、数仓 |
@@ -36,12 +45,3 @@
 | 一次 一次让键盘吃到新授权 三项 上被 不断 先完 | `sessions/tg-rotate-2026-10-03-2035.md` | 官方顺序：**先连上被控**（Session 进程起来），再在**被控本机**勾 |
 | session tcc todesk todesk_session 主控 主控断 | `sessions/tg-rotate-2026-10-03-2035.md` | 改权限后旧 `ToDesk_Session` 仍可能握旧 TCC：**主控断开  |
 | 「仅 不是 不能 不行 主控 主控端是否「仅观看 | `sessions/tg-rotate-2026-10-03-2035.md` | **有鼠标、键盘全不能** → 优先查 **输入监控**（不是只勾辅助功能）；鼠 |
-| +」 cmd+shift+g contents finder hel helpe | `sessions/tg-rotate-2026-10-03-2035.md` | macOS 上远程键鼠靠 TCC：`ToDesk_Session` 在 `ToD |
-| +屏 +输 .app lesson macos privacy | `sessions/tg-rotate-2026-10-03-2035.md` | [LESSON: todesk,macos,privacy/ToDesk 勿对备 |
-| 「仅 不是 不能 不行 主控 主控端是 | `sessions/tg-rotate-2026-10-03-2035.md` | 有鼠标、键盘全不能** → 优先查 **输入监控**（不是只勾辅助功能）；鼠标键 |
-| bak... session todesk todesk.app.youchu  | `sessions/tg-rotate-2026-10-03-2035.md` | 远程控制至少要开三类：**辅助功能**、**输入监控**、**屏幕录制**；主程 |
-| ## 03 10 2026 2fa agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-03-岗位监控安装后核对-tg-账号是否为目标岗号-短信码与-2fa-仅经等码进程使用且用后清本地明文.md` | 2026-10-03-岗位监控安装后核对-tg-账号是否为目标岗号-短信码与-2 |
-| ## 03 10 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-03-又初打卡截图的辅助功能-屏幕录制须用户本机手动授权-agent-仅可打开设置页并复测-不可代点信.md` | 2026-10-03-又初打卡截图的辅助功能-屏幕录制须用户本机手动授权-age |
-| ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-远控能看不能输入时-在被控机同时勾选辅助功能与输入监控里的-todesk-与-todesk_se.md` | 2026-10-03-远控能看不能输入时-在被控机同时勾选辅助功能与输入监控里的 |
-| agent 不替 与占 与占线的长任务互不替代 互不 仍须 | `sessions/tg-rotate-2026-10-03-1335.md` | **并行新开 Agent** 处理私聊时仍须 **记忆冷启动**；与占线的长任务 |
-| todesk 主控端 全退 再打开 再验 后再 | `sessions/tg-rotate-2026-10-03-1335.md` | 改完权限：**完全退出 ToDesk 再打开**，主控端 **重连** 后再验键 |
