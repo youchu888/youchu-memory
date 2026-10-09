@@ -19,7 +19,7 @@ domain: ops
 
 ## 正确做法
 
-`workbook_progress_service.py`：取 cutoff 日【今日结果】最全的一份；匹配时保留方括号里的任务名，展示时去掉。有「已完成」则状态写已完成。没有完成记录才写「日报没有这项的完成记录」。改完重启 `omdb/tgbot/restart.sh`，进程里的旧模块不会自己换。
+`workbook_progress_service.py`：取 cutoff 日【今日结果】最全的一份；匹配时保留方括号里的任务名，展示时去掉。原句写了已完成才标已完成。日报没有的项，引用 `MEMORY_OPEN.md` 里带更新日期的原句。禁止「无当日记录 / 等审核 / 维护中 / 任务板仅挂账」。改完重启 `omdb/tgbot/restart.sh`。
 
 ## 验证
 
