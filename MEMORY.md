@@ -202,6 +202,7 @@
 - [归因 flag≠config≠result；metrics 断流单盯](lessons/2026-08-10-attribution-flag-config-result-metrics-layers.md) — metrics 自 06-29 空
 - [用户说「推送云端」时只传已定稿 reports 文件，禁止改写；成功回执](lessons/2026-08-11-用户说-推送云端-时只传已定稿-reports-文件-禁止改写-成功回执须含云端-record-.md) — 会话轮换蒸馏
 - [标签连续分区 + 漏斗未上线勿混名](lessons/2026-08-10-user-tag-partition-break-and-funnel-not-on-prod.md) — tag 08-07 起 0
+- [工作簿进展照抄 cutoff 日日报](lessons/2026-10-09-workbook-progress-quote-daily-report.md) — 禁止「任务板仅挂账」；匹配保留方括号任务名；改完重启 tgbot。
 - [群工作簿进展须当日实查，新大活次日登簿](lessons/2026-08-07-群工作簿进展须当日实查-新大活次日登簿.md) — 禁止复读硬编码；大漏斗 supplemental#11；探针+work-log
 - [Dev Session 1–6 必须逐步做完](lessons/2026-07-31-dev-session-stages-complete-or-others-cant-open.md) — 禁空标 done/半截收工；缺产物别人打不开详情；规则见 `.cursor/rules/dev-session-stage-complete.mdc`
 - [提交后立刻推远程](lessons/2026-07-31-commit-then-push-no-two-steps.md) — 入库/commit 成功即 push，勿分两步再问；规则见 `.cursor/rules/git-commit-then-push.mdc`
