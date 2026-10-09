@@ -111,3 +111,4 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Friday, Oct 9, 2026, 10:47 AM (UTC+8)</timestamp>\n\n<user_query>Briefly inform the user about the task result and perform any follow-up actions (if needed). If there's no follow-ups needed, don't explicitly say that.</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"工作机器人已重新拉起，进程号 96447，新的工作簿进展口径已经生效。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Friday, Oct 9, 2026, 10:50 AM (UTC+8)</timestamp>\n<user_query>\n所有的任务都要按照实际进度来写，禁止套用模版\n</user_query>"}]}}
