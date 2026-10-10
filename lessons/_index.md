@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-11 | [用户要求重新打卡时先查计划窗口再补打，接口短暂断开时在窗口内依赖调度重试，成功回](./2026-10-11-用户要求重新打卡时先查计划窗口再补打-接口短暂断开时在窗口内依赖调度重试-成功回执须含北京时间-.md) | punch,onehr,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-10 | [agent-bus 手工迁主](./2026-10-10-agent-bus-手工迁主runbook.md) | agent-bus, failover, old-mac, new-mac | 先停旧 poller 再拷游标，最后才在 new-mac 启 |
 | 2026-10-10 | [问「几点打卡」须先查当日 cn_punch_calendar，用北京时间报上下班](./2026-10-10-问-几点打卡-须先查当日-cn_punch_calendar-用北京时间报上下班计划-并分开说明.md) | punch,calendar,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-09 | [工作簿进展照抄 cutoff 日日报，禁止「任务板仅挂账」套话](./2026-10-09-workbook-progress-quote-daily-report.md) | workbook, progress, daily-report | 空 work-log 占位挡住了日报；渠道被套成进行中 |

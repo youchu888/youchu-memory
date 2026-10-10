@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [用户要求重新打卡时先查计划窗口再补打，接口短暂断开时在窗口内依赖调度重试](lessons/2026-10-11-用户要求重新打卡时先查计划窗口再补打-接口短暂断开时在窗口内依赖调度重试-成功回执须含北京时间-.md) — 会话轮换蒸馏
 - [agent-bus 手工迁主](lessons/2026-10-10-agent-bus-手工迁主runbook.md) — 先停旧 poller 再拷游标；runbook `runbooks/agent-bus-manual-failover.md`
 - [问「几点打卡」须先查当日 cn_punch_calendar，用北京时间](lessons/2026-10-10-问-几点打卡-须先查当日-cn_punch_calendar-用北京时间报上下班计划-并分开说明.md) — 会话轮换蒸馏
 - [问表/专项负责人时先查工作簿与需求 owner，再答；来源留存表 `dw](lessons/2026-10-09-问表-专项负责人时先查工作簿与需求-owner-再答-来源留存表-dws-dws_source_.md) — 会话轮换蒸馏

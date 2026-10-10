@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 11 200 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-11-用户要求重新打卡时先查计划窗口再补打-接口短暂断开时在窗口内依赖调度重试-成功回执须含北京时间-.md` | 2026-10-11-用户要求重新打卡时先查计划窗口再补打-接口短暂断开时在窗口 |
+| set_leave_day skip 「重 上班 不应 不应混 | `sessions/tg-rotate-2026-10-11-0655.md` | 周六若仍有上班计划（值班/未 skip 日历），补打逻辑与工作日相同；请假日应走 |
+| jst onehr 一用 一致 京时 动包 | `sessions/tg-rotate-2026-10-11-0655.md` | 启动包里的时区若写 JST，对外汇报打卡时间统一用**北京时间**，与 OneH |
+| retry 下一 主人 人介 介入 入的 | `sessions/tg-rotate-2026-10-11-0655.md` | 回执用结果向短句：成/未成、时间点、若失败则下一 retry 或需主人介入的条件 |
+| launchd onehr 「查 一套 人工 人工触发时同样走「查窗口 | `sessions/tg-rotate-2026-10-11-0655.md` | 私聊补打卡与 launchd 自动打卡是同一套 OneHR 链路；人工触发时同样 |
+| 16） 19 schedule 下班 为全 仍按 | `sessions/tg-rotate-2026-10-11-0655.md` | 补打成功后顺带说明下班卡仍按原计划（如 19:16），避免用户误以为全天 sch |
+| 09 50 52 56 「接 」多 | `sessions/tg-rotate-2026-10-11-0655.md` | 09:50、09:52 等「接口断开」多为瞬时故障；只要在计划窗口内，调度重试仍 |
+| 200 http onehr 上传 上班 上班卡成功以 | `sessions/tg-rotate-2026-10-11-0655.md` | OneHR 上班卡成功以 HTTP 200 为准；回执里应写清北京时间、是否通过 |
+| 「现 」时 上班 不要 不要只复述失败原因 与计 | `sessions/tg-rotate-2026-10-11-0655.md` | 用户说「现在重新打卡 / 补打上班卡」时，先查当日打卡入口与计划窗口，再立刻执行 |
 | ## 10 2026 agent_session_rotate calendar | `~/.dc-platform/memory/lessons/2026-10-10-问-几点打卡-须先查当日-cn_punch_calendar-用北京时间报上下班计划-并分开说明.md` | 2026-10-10-问-几点打卡-须先查当日-cn_punch_calenda |
 | jst 上下 下文 东京 东京时间 为准 | `sessions/tg-rotate-2026-10-10-0955.md` | 用户侧上下文若写 JST/东京时间，对外报打卡仍以**北京时间**为准，避免时区 |
 | 09 50 52 不必 不必让用户立刻重复手打 会在 | `sessions/tg-rotate-2026-10-10-0955.md` | 若刚试过打卡但接口断开（如 09:50、09:52 连续失败），应说明失败原因  |
@@ -36,12 +45,3 @@
 | com.youchu.ethan jobs reload restart tg  | `sessions/tg-rotate-2026-10-07-2148.md` | 改过滤规则后必须 reload/restart `com.youchu.etha |
 | ## 04 10 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md` | 2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动- |
 | ## 04 10 2026 ag agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md` | 2026-10-04-tg-cursor-连续-econnreset-或-api |
-| agent api excerpt vpn 不在 不在复述错误栈原文 | `sessions/tg-rotate-2026-10-04-0648.md` | 此类 excerpt 蒸馏价值在**运维排障顺序**（关 VPN → 验 API |
-| ag agent agent·并行」 en ge nt | `sessions/tg-rotate-2026-10-04-0648.md` | **并行 agent**：长任务占另一路时，新私聊走「新开 agent·并行」， |
-| agent」 cursor resume 「重启 上下 下文 | `sessions/tg-rotate-2026-10-04-0648.md` | 「重启 agent」= 强制**新开** Cursor 会话；连接失败路径会** |
-| api cursor failed https_proxy openvpn re | `sessions/tg-rotate-2026-10-04-0648.md` | 提示 `Failed to reach the Cursor API` 时，除代 |
-| ap cursor econnreset pi read sql | `sessions/tg-rotate-2026-10-04-0648.md` | `read ECONNRESET` 表示与 Cursor 的会话连接被对端或中间 |
-| cursor onehr tg 「已 「打 」属 | `sessions/tg-rotate-2026-10-04-0648.md` | TG 私聊「打卡了吗」属于考勤确认，正常应走 OneHR/打卡日历逻辑；本会话因 |
-| agent lane lesson parallel resume tg | `sessions/tg-rotate-2026-10-04-0648.md` | [LESSON: tg-parallel-agent/并行 lane 被长任务占 |
-| ag agent」仍报连接失败 en ge nt resume | `sessions/tg-rotate-2026-10-04-0648.md` | 用户连发两次「重启 agent」仍报连接失败 → 根因在**环境网络未恢复**（ |
-| agent」 tg 「重 仍连 会话 假装 | `sessions/tg-rotate-2026-10-04-0648.md` | 连接失败后标准话术：请用户**重发刚才那句**，或再发「重启 agent」；勿在 |
