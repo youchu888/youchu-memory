@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 agent_session_rotate calendar | `~/.dc-platform/memory/lessons/2026-10-10-问-几点打卡-须先查当日-cn_punch_calendar-用北京时间报上下班计划-并分开说明.md` | 2026-10-10-问-几点打卡-须先查当日-cn_punch_calenda |
+| jst 上下 下文 东京 东京时间 为准 | `sessions/tg-rotate-2026-10-10-0955.md` | 用户侧上下文若写 JST/东京时间，对外报打卡仍以**北京时间**为准，避免时区 |
+| 09 50 52 不必 不必让用户立刻重复手打 会在 | `sessions/tg-rotate-2026-10-10-0955.md` | 若刚试过打卡但接口断开（如 09:50、09:52 连续失败），应说明失败原因  |
+| 「卡 「计 」和 上」 上要 为已 | `sessions/tg-rotate-2026-10-10-0955.md` | 同时区分「计划打几点」和「卡是否已打上」；未打上要单独说明，避免用户以为已经打卡 |
+| eh hr ne on 上班 下班 | `sessions/tg-rotate-2026-10-10-0955.md` | 标准答复：用**北京时间**给出**上班**、**下班**两个计划时刻（OneH |
+| 「查 」流 一套 一定 上班 不打 | `sessions/tg-rotate-2026-10-10-0955.md` | 周六若有上班安排，仍走同一套「查日历 → 报计划 → 报实际/重试状态」流程，不 |
+| should_skip_punch 「今 一致 上下 下班 不要 | `sessions/tg-rotate-2026-10-10-0955.md` | 与请假规则一致：若 `should_skip_punch` 为真，应明确「今日跳 |
+| 「当 」日 不同 今日 值班 值班各自规则不同 | `sessions/tg-rotate-2026-10-10-0955.md` | 周六、法定假、请假、值班各自规则不同；回答前必须用「当天」日历判定是报时刻还是说 |
+| 「几 」时 不要 不要按平日默认时间猜 与调 先查 | `sessions/tg-rotate-2026-10-10-0955.md` | 私聊问「几点打卡」时，先查当日打卡日历与调度计划，再回答，不要按平日默认时间猜。 |
 | ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-09-问表-专项负责人时先查工作簿与需求-owner-再答-来源留存表-dws-dws_source_.md` | 2026-10-09-问表-专项负责人时先查工作簿与需求-owner-再答-来源 |
 | memory_open pinned tags 业务 业务分工事实 为准 | `sessions/tg-rotate-2026-10-09-1045.md` | 冷启动仍按 PINNED / MEMORY_OPEN / 按任务 tags 深读 |
 | owner 于口 人类 优于 优于口头记忆 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | 负责人类问题：工作簿条目名 + 表名/需求文档里的 owner 字段，优于口头记 |
@@ -36,12 +45,3 @@
 | agent lane lesson parallel resume tg | `sessions/tg-rotate-2026-10-04-0648.md` | [LESSON: tg-parallel-agent/并行 lane 被长任务占 |
 | ag agent」仍报连接失败 en ge nt resume | `sessions/tg-rotate-2026-10-04-0648.md` | 用户连发两次「重启 agent」仍报连接失败 → 根因在**环境网络未恢复**（ |
 | agent」 tg 「重 仍连 会话 假装 | `sessions/tg-rotate-2026-10-04-0648.md` | 连接失败后标准话术：请用户**重发刚才那句**，或再发「重启 agent」；勿在 |
-| agent cursor en nv n」 op | `sessions/tg-rotate-2026-10-04-0648.md` | 主人明确说「先关闭 OpenVPN」时，应理解为：**先恢复 Cursor 可达 |
-| ## +屏 +输 .app 03 10 | `~/.dc-platform/memory/lessons/2026-10-03-todesk-勿对备份-app-授权-辅助功能-输入监控-屏幕录制三项齐开-todesk-与-t.md` | 2026-10-03-todesk-勿对备份-app-授权-辅助功能-输入监控- |
-| ## 03 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-03-远程-todesk-键盘失效-先判-有鼠无键-输入监控-session-路径-helpers-手.md` | 2026-10-03-远程-todesk-键盘失效-先判-有鼠无键-输入监控-s |
-| escalation mac 仍只 仍只有鼠标没键盘时 只有 启才 | `sessions/tg-rotate-2026-10-03-2035.md` | 仍只有鼠标没键盘时， escalation：**重启被控 Mac**（TCC 有 |
-| 「连 」重 上再 份安 会干 先挪 | `sessions/tg-rotate-2026-10-03-2035.md` | 权限重置后设置里开关可能全关，需用户重新打开；并存备份安装包会干扰授权，应先挪走 |
-| vs 不能 两句 于分 仅密 便于 | `sessions/tg-rotate-2026-10-03-2035.md` | 排查时让用户回报两句：鼠标能否动、键盘是完全不能还是仅密码框（便于分输入监控 v |
-| 一次 一次让键盘吃到新授权 三项 上被 不断 先完 | `sessions/tg-rotate-2026-10-03-2035.md` | 官方顺序：**先连上被控**（Session 进程起来），再在**被控本机**勾 |
-| session tcc todesk todesk_session 主控 主控断 | `sessions/tg-rotate-2026-10-03-2035.md` | 改权限后旧 `ToDesk_Session` 仍可能握旧 TCC：**主控断开  |
-| 「仅 不是 不能 不行 主控 主控端是否「仅观看 | `sessions/tg-rotate-2026-10-03-2035.md` | **有鼠标、键盘全不能** → 优先查 **输入监控**（不是只勾辅助功能）；鼠 |
