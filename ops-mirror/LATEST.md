@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-11 23:57:09 +0800
+> 更新: 2026-10-12 00:00:06 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-10-11.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-10-12.md`
 
 ## 未结案 agent-bus
 
@@ -9,7 +9,4 @@
 
 ## 近期任务溯源（摘录）
 
-| 时间 | 标签 | 来源 | 状态 | 摘要 |
-|---|---|---|---|---|
-| 2026-10-10 09:50 | 私聊#540 | telegram_dm | completed | 几点打卡 |
-| 2026-10-10 09:56 | 私聊#541 | telegram_dm | completed | 现在重新打卡 |
+_本日近窗无 bus/私聊任务溯源（或本机无 tgbot data）_
