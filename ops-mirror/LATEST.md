@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-12 21:44:12 +0800
+> 更新: 2026-10-12 21:47:11 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-12.md`
 
@@ -19,3 +19,4 @@
 | 2026-10-12 17:46 | 私聊#545 | telegram_dm | completed | 要新增充值字段 |
 | 2026-10-12 17:52 | 私聊#546 | telegram_dm | completed | 留存要统计所有的用户，不是单渠道哦 |
 | 2026-10-12 21:39 | 私聊#547 | telegram_dm | completed | 周月表今天修改的口径，梳理一下发我 |
+| 2026-10-12 21:45 | 群派单#228 | worker_ant_group | completed | @hull1889 设备映射表字典 v2.0 下午 16:55 已经审过，有条件通过（bus#9981），猫猫可以继续做：改字典、写 SQL、sandbox 跑 |
