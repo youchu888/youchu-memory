@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 12 2026 ads_channel_promotion_summ | `~/.dc-platform/memory/lessons/2026-10-12-ads_channel_promotion_summary_m-次留-口径.md` | 2026-10-12-ads_channel_promotion_summary |
+| sql test 三列 仍跑旧 仓库 值三 | `sessions/tg-rotate-2026-10-12-2156.md` | 本地仓库 SQL 已对齐新口径时，**test 海豚若未重发**，仍跑旧 SQL |
+| 不进 不进主键 主键 仍从 仍从渠道维表带出 从渠 | `sessions/tg-rotate-2026-10-12-2156.md` | **部门**仍从渠道维表带出，**不进主键**。 |
+| 人数 先取 再对 再对周期取 周期 均活 | `sessions/tg-rotate-2026-10-12-2156.md` | **日均活跃**：先取**每日**渠道活跃人数，再对周期取**平均**。 |
+| 人去 内渠 加总 单加 去重 周期 | `sessions/tg-rotate-2026-10-12-2156.md` | **新增**：周期内渠道新增**按人去重**，禁止把日新增简单加总。 |
+| 「新 」不 三列 不同 不按 不按天加总」不同 | `sessions/tg-rotate-2026-10-12-2156.md` | 充值三列为**金额**，周期内**按天相加**即可；与「新增按人去重、不按天加总 |
+| ads.ads_c ads.ads_channel_promotion_summ | `sessions/tg-rotate-2026-10-12-2156.md` | **结算充值**新增三列（周 / 月字段名成对）：VIP 订阅、扣量后 VIP、 |
+| 「次 一天 不参 不参与次留 与次 业务 | `sessions/tg-rotate-2026-10-12-2156.md` | 周期**最后一天 / 业务日当天**没有「次日」，**不参与次留**（避免无次日 |
+| app 交集 人数 仍挂在 任意 内任 | `sessions/tg-rotate-2026-10-12-2156.md` | **次留**仍挂在**注册渠道**行：注册日 D 的新增用户，与**次日同 Ap |
+| app 「自 」一 一套 一行 仍是 | `sessions/tg-rotate-2026-10-12-2156.md` | 渠道推广**周表 / 月表**同一套口径；粒度仍是「自然周或自然月 × App  |
+| 人去 内渠 加总 单加 去重 周期 | `sessions/tg-rotate-2026-10-12-2156.md` | 新增**：周期内渠道新增**按人去重**，禁止把日新增简单加总。 |
+| app 不要 人数 人数记回注册渠道 仍走 内活 | `sessions/tg-rotate-2026-10-12-2156.md` | 次留不要求次日仍走注册渠道；**换渠道回来只要在 App 内活跃即算**，人数记 |
 | ## 10 12 2026 agent_session_rotate app | `~/.dc-platform/memory/lessons/2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍在注册渠道-人数落在注册渠道行.md` | 2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍 |
 | ## 10 12 2026 ads ads.ads_channel_promot | `~/.dc-platform/memory/lessons/2026-10-12-周月充值三列对-ads-ads_channel_promotion_summary_d-同期-s.md` | 2026-10-12-周月充值三列对-ads-ads_channel_promo |
 | 一样 人去 仍按 仍按人去重 像金 像金额一样按日简单加总 | `sessions/tg-rotate-2026-10-12-1756.md` | **新增、次留、日均活跃**仍按人去重/既有口径，**禁止**像金额一样按日简单 |
@@ -33,15 +45,3 @@
 | 09 50 52 不必 不必让用户立刻重复手打 会在 | `sessions/tg-rotate-2026-10-10-0955.md` | 若刚试过打卡但接口断开（如 09:50、09:52 连续失败），应说明失败原因  |
 | 「卡 「计 」和 上」 上要 为已 | `sessions/tg-rotate-2026-10-10-0955.md` | 同时区分「计划打几点」和「卡是否已打上」；未打上要单独说明，避免用户以为已经打卡 |
 | eh hr ne on 上班 下班 | `sessions/tg-rotate-2026-10-10-0955.md` | 标准答复：用**北京时间**给出**上班**、**下班**两个计划时刻（OneH |
-| 「查 」流 一套 一定 上班 不打 | `sessions/tg-rotate-2026-10-10-0955.md` | 周六若有上班安排，仍走同一套「查日历 → 报计划 → 报实际/重试状态」流程，不 |
-| should_skip_punch 「今 一致 上下 下班 不要 | `sessions/tg-rotate-2026-10-10-0955.md` | 与请假规则一致：若 `should_skip_punch` 为真，应明确「今日跳 |
-| 「当 」日 不同 今日 值班 值班各自规则不同 | `sessions/tg-rotate-2026-10-10-0955.md` | 周六、法定假、请假、值班各自规则不同；回答前必须用「当天」日历判定是报时刻还是说 |
-| 「几 」时 不要 不要按平日默认时间猜 与调 先查 | `sessions/tg-rotate-2026-10-10-0955.md` | 私聊问「几点打卡」时，先查当日打卡日历与调度计划，再回答，不要按平日默认时间猜。 |
-| ## 09 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-09-问表-专项负责人时先查工作簿与需求-owner-再答-来源留存表-dws-dws_source_.md` | 2026-10-09-问表-专项负责人时先查工作簿与需求-owner-再答-来源 |
-| memory_open pinned tags 业务 业务分工事实 为准 | `sessions/tg-rotate-2026-10-09-1045.md` | 冷启动仍按 PINNED / MEMORY_OPEN / 按任务 tags 深读 |
-| owner 于口 人类 优于 优于口头记忆 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | 负责人类问题：工作簿条目名 + 表名/需求文档里的 owner 字段，优于口头记 |
-| 「来 」挂 与留 交叉 作簿 分析 | `sessions/tg-rotate-2026-10-09-1045.md` | 当日工作簿里「来源分析验证数据」挂在野花名下，可与留存表归属交叉印证。 |
-| 人同 侧登 同样 在需 存表 样是 | `sessions/tg-rotate-2026-10-09-1045.md` | 该留存表在需求侧登记的负责人同样是**野花**。 |
-| 0留 15留 30 30留） 7留 dws.dws_source_analysi | `sessions/tg-rotate-2026-10-09-1045.md` | 来源分析留存指标落在表 `dws.dws_source_analysis_ret |
-| 业务 业务负责人是 为准 人是 以工 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | **来源留存**业务负责人是**野花**（需求/验证口径以工作簿为准）。 |
-| memory 「来 」时 不凭 不凭印象或 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | 问「来源留存谁负责」时，先对工作簿和近期分工核对，不凭印象或 MEMORY 猜负 |
