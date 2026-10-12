@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-12 | [次留 = 该渠道新增与次日全 App 活跃的交集，不要求回访仍在注册渠道；人数落](./2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍在注册渠道-人数落在注册渠道行.md) | 渠道周月表,次留口径,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-12 | [周月充值三列对 ads.ads_channel_promotion_summar](./2026-10-12-周月充值三列对-ads-ads_channel_promotion_summary_d-同期-s.md) | 渠道周月表,ads_channel_promotion,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-11 | [用户要求重新打卡时先查计划窗口再补打，接口短暂断开时在窗口内依赖调度重试，成功回](./2026-10-11-用户要求重新打卡时先查计划窗口再补打-接口短暂断开时在窗口内依赖调度重试-成功回执须含北京时间-.md) | punch,onehr,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-10 | [agent-bus 手工迁主](./2026-10-10-agent-bus-手工迁主runbook.md) | agent-bus, failover, old-mac, new-mac | 先停旧 poller 再拷游标，最后才在 new-mac 启 |
 | 2026-10-10 | [问「几点打卡」须先查当日 cn_punch_calendar，用北京时间报上下班](./2026-10-10-问-几点打卡-须先查当日-cn_punch_calendar-用北京时间报上下班计划-并分开说明.md) | punch,calendar,session-rotate | 会话轮换前自动蒸馏 |

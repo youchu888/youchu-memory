@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 12 2026 agent_session_rotate app | `~/.dc-platform/memory/lessons/2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍在注册渠道-人数落在注册渠道行.md` | 2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍 |
+| ## 10 12 2026 ads ads.ads_channel_promot | `~/.dc-platform/memory/lessons/2026-10-12-周月充值三列对-ads-ads_channel_promotion_summary_d-同期-s.md` | 2026-10-12-周月充值三列对-ads-ads_channel_promo |
+| 一样 人去 仍按 仍按人去重 像金 像金额一样按日简单加总 | `sessions/tg-rotate-2026-10-12-1756.md` | **新增、次留、日均活跃**仍按人去重/既有口径，**禁止**像金额一样按日简单 |
+| ads.ads_channel_promotion_summary_d mont | `sessions/tg-rotate-2026-10-12-1756.md` | 周月新增充值字段：`week_*` / `month_*` 与上三列一一对应；主 |
+| coin_recharge_amount deduction_recharge  | `sessions/tg-rotate-2026-10-12-1756.md` | 日表三列金额（可跨天相加）：`recharge_amount`（VIP 订阅）、 |
+| app dws.dws_settlement_detail order_paid | `sessions/tg-rotate-2026-10-12-1756.md` | 充值明细在 `dws.dws_settlement_detail`（`order |
+| ads.ads_channel_promotion_settlement_sum | `sessions/tg-rotate-2026-10-12-1756.md` | 结算日汇总 `ads.ads_channel_promotion_settlem |
+| 「部 」之 上筛 不会 之外 再拆 | `sessions/tg-rotate-2026-10-12-1756.md` | 按部门看数：在渠道行上筛选或汇总，**不会**再拆出「部门 × 渠道」之外的更细 |
+| app_id dept_id dept_name dim.dim_channe  | `sessions/tg-rotate-2026-10-12-1756.md` | `dept_id` / `dept_name` 仅为渠道属性，**不进主键**； |
+| app_id channel month_start_dt week_start | `sessions/tg-rotate-2026-10-12-1756.md` | 周表主键：`week_start_dt, app_id, channel`（分区 |
+| ads.ads_cha ads.ads_channel_promotion_su | `sessions/tg-rotate-2026-10-12-1756.md` | 渠道推广周表 `ads.ads_channel_promotion_summar |
+| app lesson 不要 不要求回访仍在注册渠道 与次 交集 | `sessions/tg-rotate-2026-10-12-1756.md` | [LESSON: 渠道周月表,次留口径/次留 = 该渠道新增与次日全 App 活 |
+| ads.ads_channel ads.ads_channel_promotio | `sessions/tg-rotate-2026-10-12-1756.md` | [LESSON: 渠道周月表,ads_channel_promotion/周月充 |
+| 一样 人去 仍按 仍按人去重 像金 像金额一样按日简单加总 | `sessions/tg-rotate-2026-10-12-1756.md` | 新增、次留、日均活跃**仍按人去重/既有口径，**禁止**像金额一样按日简单加总 |
 | ## 10 11 200 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-11-用户要求重新打卡时先查计划窗口再补打-接口短暂断开时在窗口内依赖调度重试-成功回执须含北京时间-.md` | 2026-10-11-用户要求重新打卡时先查计划窗口再补打-接口短暂断开时在窗口 |
 | set_leave_day skip 「重 上班 不应 不应混 | `sessions/tg-rotate-2026-10-11-0655.md` | 周六若仍有上班计划（值班/未 skip 日历），补打逻辑与工作日相同；请假日应走 |
 | jst onehr 一用 一致 京时 动包 | `sessions/tg-rotate-2026-10-11-0655.md` | 启动包里的时区若写 JST，对外汇报打卡时间统一用**北京时间**，与 OneH |
@@ -31,17 +45,3 @@
 | 0留 15留 30 30留） 7留 dws.dws_source_analysi | `sessions/tg-rotate-2026-10-09-1045.md` | 来源分析留存指标落在表 `dws.dws_source_analysis_ret |
 | 业务 业务负责人是 为准 人是 以工 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | **来源留存**业务负责人是**野花**（需求/验证口径以工作簿为准）。 |
 | memory 「来 」时 不凭 不凭印象或 作簿 | `sessions/tg-rotate-2026-10-09-1045.md` | 问「来源留存谁负责」时，先对工作簿和近期分工核对，不凭印象或 MEMORY 猜负 |
-| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-10-09-1045.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
-| ## 07 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分析师等混岗标题.md` | 2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分 |
-| ## 07 10 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan_channel_bigdata_jo.md` | 2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan |
-| ar dba flink pa rk sp | `sessions/tg-rotate-2026-10-07-2148.md` | 岗位：只要大数据开发 / 数据仓库开发及相关技术栈（Spark、Flink、数仓 |
-| 「无 」不 不应 不应拦截 不算 到岗 | `sessions/tg-rotate-2026-10-07-2148.md` | 正文含「无需到岗」不算到岗，不应拦截 |
-| #到岗 「到 「第 」及 」（ 三国 | `sessions/tg-rotate-2026-10-07-2148.md` | 地点：只推普通远程/居家；永久丢弃「第三国远程」及各类「到岗」（含 #到岗、需到 |
-| .dc ethan ethan_channel_bigdata_jobs. et | `sessions/tg-rotate-2026-10-07-2148.md` | Ethan 岗位监控脚本：`omdb/tgbot/scripts/ethan_c |
-| ethan jobs lesson negative watch 仓白 | `sessions/tg-rotate-2026-10-07-2148.md` | [LESSON: ethan-jobs-watch/岗位用大数据/数仓白名单筛， |
-| 三国 不要 不要到岗 不要第三国远程 与数 仓开 | `sessions/tg-rotate-2026-10-07-2148.md` | 用户偏好已写入规则：不要第三国远程、不要到岗；岗位范围只要大数据开发与数仓开发相 |
-| at dba eg e— ga iv | `sessions/tg-rotate-2026-10-07-2148.md` | 岗位过滤用白名单/正向关键词，不要把分析师、DBA 塞进 NEGATIVE——会 |
-| —— —已 「仅 「到 「第 「远 | `sessions/tg-rotate-2026-10-07-2148.md` | 旧坑：曾把「第三国远程」当远程命中；正文同时有「远程」和「到岗」仍可能误推——已 |
-| com.youchu.ethan jobs reload restart tg  | `sessions/tg-rotate-2026-10-07-2148.md` | 改过滤规则后必须 reload/restart `com.youchu.etha |
-| ## 04 10 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md` | 2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动- |
-| ## 04 10 2026 ag agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md` | 2026-10-04-tg-cursor-连续-econnreset-或-api |

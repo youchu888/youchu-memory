@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-12 17:54:19 +0800
+> 更新: 2026-10-12 17:57:28 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-12.md`
 
@@ -17,4 +17,4 @@
 | 2026-10-12 17:40 | 私聊#543 | telegram_dm | completed | 表结构给我一下 |
 | 2026-10-12 17:43 | 私聊#544 | telegram_dm | completed | 结算数据的充值我们能拿到吗 |
 | 2026-10-12 17:46 | 私聊#545 | telegram_dm | completed | 要新增充值字段 |
-| 2026-10-12 17:52 | 私聊#546 | telegram_dm | in_progress | 留存要统计所有的用户，不是单渠道哦 |
+| 2026-10-12 17:52 | 私聊#546 | telegram_dm | completed | 留存要统计所有的用户，不是单渠道哦 |
