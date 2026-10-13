@@ -5,6 +5,7 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-10-13-2256.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
 | ## 10 12 2026 ads_channel_promotion_summ | `~/.dc-platform/memory/lessons/2026-10-12-ads_channel_promotion_summary_m-次留-口径.md` | 2026-10-12-ads_channel_promotion_summary |
 | sql test 三列 仍跑旧 仓库 值三 | `sessions/tg-rotate-2026-10-12-2156.md` | 本地仓库 SQL 已对齐新口径时，**test 海豚若未重发**，仍跑旧 SQL |
 | 不进 不进主键 主键 仍从 仍从渠道维表带出 从渠 | `sessions/tg-rotate-2026-10-12-2156.md` | **部门**仍从渠道维表带出，**不进主键**。 |
@@ -44,4 +45,3 @@
 | jst 上下 下文 东京 东京时间 为准 | `sessions/tg-rotate-2026-10-10-0955.md` | 用户侧上下文若写 JST/东京时间，对外报打卡仍以**北京时间**为准，避免时区 |
 | 09 50 52 不必 不必让用户立刻重复手打 会在 | `sessions/tg-rotate-2026-10-10-0955.md` | 若刚试过打卡但接口断开（如 09:50、09:52 连续失败），应说明失败原因  |
 | 「卡 「计 」和 上」 上要 为已 | `sessions/tg-rotate-2026-10-10-0955.md` | 同时区分「计划打几点」和「卡是否已打上」；未打上要单独说明，避免用户以为已经打卡 |
-| eh hr ne on 上班 下班 | `sessions/tg-rotate-2026-10-10-0955.md` | 标准答复：用**北京时间**给出**上班**、**下班**两个计划时刻（OneH |

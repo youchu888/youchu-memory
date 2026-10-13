@@ -1,10 +1,11 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-10-12 · 最新归档：`sessions/tg-rotate-2026-10-12-2156.md`
+> 更新：2026-10-13 · 最新归档：`sessions/tg-rotate-2026-10-13-2256.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」）。
 - 次留不要求次日仍走注册渠道；**换渠道回来只要在 App 内活跃即算**，人数记回注册渠道。
 - 新增**：周期内渠道新增**按人去重**，禁止把日新增简单加总。
 - 渠道推广**周表 / 月表**同一套口径；粒度仍是「自然周或自然月 × App × 渠道」一行。
@@ -22,5 +23,4 @@
 - 渠道推广周表 `ads.ads_channel_promotion_summary_w`、月表 `ads.ads_channel_promotion_summary_m` 最小粒度是**渠道**，不是部门；一行 = 自然周/月 × App × `channel`。
 - 周表主键：`week_start_dt, app_id, channel`（分区键为周一 `week_start_dt`）；月表主键：`month_start_dt, app_id, channel`（分区键为月初 `month_start_dt`）。
 - `dept_id` / `dept_name` 仅为渠道属性，**不进主键**；部门取自 `dim.dim_channel_info_all`（`app_id` + 渠道码），**不用**产品维表上的部门。
-- 按部门看数：在渠道行上筛选或汇总，**不会**再拆出「部门 × 渠道」之外的更细行。
 
