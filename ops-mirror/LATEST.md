@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-13 21:54:07 +0800
+> 更新: 2026-10-13 21:57:12 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-13.md`
 
@@ -30,3 +30,4 @@
 | 2026-10-13 18:39 | 群派单#236 | worker_ant_group | completed | @hull1889 设备域② 进度： 1. 生产 paimon 两张表已建好，逐列核过和设计一致：dwm.dwm_device_uid_rel_d_d、dim. |
 | 2026-10-13 18:58 | 群派单#237 | worker_ant_group | completed | 收到。猫猫的修改（878cea69）已核：4 份 SQL 的库名都写死成 dwm / dim，跟生产表对得上，首跑顺序也写清楚了。现在挂调度，先跑 01-01  |
 | 2026-10-13 19:08 | 群派单#238 | worker_ant_group | completed | #10157（小智 PRD v0.7）审核通过，已经回给小智了。18:30 回的 #10158 只剩 R2 一处，刚才查了生产数据：视频总播放时长只算 vide |
+| 2026-10-13 21:55 | 私聊#548 | telegram_dm | in_progress | 新增一个每日读取TG所有群聊消息的进程，然后对消息进行分类梳理，学习，沉底升级 |
