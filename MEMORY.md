@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [岗位监控必须命中岗位本身，技术栈顺带出现不算](lessons/2026-10-13-job-alert-role-not-stack-keyword.md) — 「大数据量」/ 单独 Kafka 不推
 - [ads_channel_promotion_summary_m|次留|口](lessons/2026-10-12-ads_channel_promotion_summary_m-次留-口径.md) — 会话轮换蒸馏
 - [次留 = 该渠道新增与次日全 App 活跃的交集，不要求回访仍在注册渠道](lessons/2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍在注册渠道-人数落在注册渠道行.md) — 会话轮换蒸馏
 - [周月充值三列对 ads.ads_channel_promotion_su](lessons/2026-10-12-周月充值三列对-ads-ads_channel_promotion_summary_d-同期-s.md) — 会话轮换蒸馏
@@ -14,7 +15,7 @@
 - [问表/专项负责人时先查工作簿与需求 owner，再答；来源留存表 `dw](lessons/2026-10-09-问表-专项负责人时先查工作簿与需求-owner-再答-来源留存表-dws-dws_source_.md) — 会话轮换蒸馏
 - [岗位用大数据/数仓白名单筛，勿用 NEGATIVE 误杀分析师等混岗标题](lessons/2026-10-07-岗位用大数据-数仓白名单筛-勿用-negative-误杀分析师等混岗标题.md) — 会话轮换蒸馏
 - [第三国远程与到岗类一律不推；「无需到岗」不拦；改 `ethan_chan](lessons/2026-10-07-第三国远程与到岗类一律不推-无需到岗-不拦-改-ethan_channel_bigdata_jo.md) — 会话轮换蒸馏
-- [Ethan 岗位筛选：只要远程大数据/数仓开发，禁第三国远程与到岗](feedback_ethan_jobs_filter.md) — 2026-10-07 #537/#538
+- [Ethan 岗位筛选：只要远程大数据/数仓开发，禁第三国远程与到岗](feedback_ethan_jobs_filter.md) — 2026-10-13 起岗位本身才算，技术栈顺带出现不推
 - [并行 lane 被长任务占用时，新私聊独立会话且须冷启动；连接失败勿依赖](lessons/2026-10-04-并行-lane-被长任务占用时-新私聊独立会话且须冷启动-连接失败勿依赖旧-resume-等网络.md) — 会话轮换蒸馏
 - [TG/Cursor 连续 ECONNRESET 或 API 不可达时，先](lessons/2026-10-04-tg-cursor-连续-econnreset-或-api-不可达时-先排查-openvpn-代.md) — 会话轮换蒸馏
 - [ToDesk 勿对备份 .app 授权；辅助功能+输入监控+屏幕录制三项](lessons/2026-10-03-todesk-勿对备份-app-授权-辅助功能-输入监控-屏幕录制三项齐开-todesk-与-t.md) — 会话轮换蒸馏
