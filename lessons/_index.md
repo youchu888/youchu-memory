@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-14 | [改汇报生成逻辑后，确认 daemon 已重载，否则定时汇报仍跑旧进程行为。](./2026-10-14-改汇报生成逻辑后-确认-daemon-已重载-否则定时汇报仍跑旧进程行为.md) | tgbot-deploy,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-14 | [清单内查库、清单外实活在办也要报；进展仅来自当次探针或文件实证，禁过期备注；同探](./2026-10-14-清单内查库-清单外实活在办也要报-进展仅来自当次探针或文件实证-禁过期备注-同探针无额外实证的不.md) | 工作簿进展,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-14 | [工作簿进展必须对上当天清单](./2026-10-14-workbook-progress-must-match-todays-list.md) | workbook, progress | 过期交接和明日计划不能当进展；括号里的初儿也要计入 |
 | 2026-10-13 | [岗位监控必须命中岗位本身，技术栈顺带出现不算](./2026-10-13-job-alert-role-not-stack-keyword.md) | ethan-jobs-watch, 岗位监控 | 「大数据量」和单独的 Kafka 不再当成大数据岗 |
 | 2026-10-12 | [ads_channel_promotion_summary_m|次留|口径](./2026-10-12-ads_channel_promotion_summary_m-次留-口径.md) | ads_channel_promotion_summary_w,session-rotate | 会话轮换前自动蒸馏 |

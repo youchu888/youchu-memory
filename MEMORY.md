@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [改汇报生成逻辑后，确认 daemon 已重载，否则定时汇报仍跑旧进程行为](lessons/2026-10-14-改汇报生成逻辑后-确认-daemon-已重载-否则定时汇报仍跑旧进程行为.md) — 会话轮换蒸馏
+- [清单内查库、清单外实活在办也要报；进展仅来自当次探针或文件实证，禁过期备](lessons/2026-10-14-清单内查库-清单外实活在办也要报-进展仅来自当次探针或文件实证-禁过期备注-同探针无额外实证的不.md) — 会话轮换蒸馏
 - [岗位监控必须命中岗位本身，技术栈顺带出现不算](lessons/2026-10-13-job-alert-role-not-stack-keyword.md) — 「大数据量」/ 单独 Kafka 不推
 - [ads_channel_promotion_summary_m|次留|口](lessons/2026-10-12-ads_channel_promotion_summary_m-次留-口径.md) — 会话轮换蒸馏
 - [次留 = 该渠道新增与次日全 App 活跃的交集，不要求回访仍在注册渠道](lessons/2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍在注册渠道-人数落在注册渠道行.md) — 会话轮换蒸馏
