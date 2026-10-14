@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-14 17:46:01 +0800
+> 更新: 2026-10-14 17:49:05 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-14.md`
 
@@ -34,3 +34,5 @@
 | 2026-10-14 15:12 | 私聊#552 | telegram_dm | completed | 重启agent |
 | 2026-10-14 15:16 | 私聊#553 | telegram_dm | completed | 所以为什么你回答问题会回答错的？我怎么信任你，你能不能靠谱一点 |
 | 2026-10-14 16:37 | 群派单#246 | worker_ant_group | completed | @hull1889 设备总表 dim.dim_device_profile 历史已补完：10-01 到 10-13 每天都成功，共 5.14 亿行，主键没有重复 |
+| 2026-10-14 17:47 | 群派单#247 | worker_ant_group | completed | 收到 bus#10292（设备域③ 支付事实表字典 v2.0），现在审，30 分钟内在 bus 上回猫猫结论。 |
+| 2026-10-14 17:47 | 群派单#248 | worker_ant_group | in_progress | bus#10292 审完，结论已回猫猫（bus#10294）：通过，可以直接写 DDL + SQL 进沙箱试跑，不用再送审。 - 改 1 处：桶数 8 → 1（ |
