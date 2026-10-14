@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-14 | [工作簿进展必须对上当天清单](./2026-10-14-workbook-progress-must-match-todays-list.md) | workbook, progress | 过期交接和明日计划不能当进展；括号里的初儿也要计入 |
 | 2026-10-13 | [岗位监控必须命中岗位本身，技术栈顺带出现不算](./2026-10-13-job-alert-role-not-stack-keyword.md) | ethan-jobs-watch, 岗位监控 | 「大数据量」和单独的 Kafka 不再当成大数据岗 |
 | 2026-10-12 | [ads_channel_promotion_summary_m|次留|口径](./2026-10-12-ads_channel_promotion_summary_m-次留-口径.md) | ads_channel_promotion_summary_w,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-12 | [次留 = 该渠道新增与次日全 App 活跃的交集，不要求回访仍在注册渠道；人数落](./2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍在注册渠道-人数落在注册渠道行.md) | 渠道周月表,次留口径,session-rotate | 会话轮换前自动蒸馏 |
