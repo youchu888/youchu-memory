@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-14 16:37:05 +0800
+> 更新: 2026-10-14 16:40:07 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-14.md`
 
@@ -33,3 +33,4 @@
 | 2026-10-14 15:08 | 群派单#245 | worker_ant_group | completed | @hull1889 设备总表 dim.dim_device_profile 已在生产 paimon 建好，表结构按猫猫的 DDL 逐列核过。日批已挂进调度器 0 |
 | 2026-10-14 15:12 | 私聊#552 | telegram_dm | completed | 重启agent |
 | 2026-10-14 15:16 | 私聊#553 | telegram_dm | completed | 所以为什么你回答问题会回答错的？我怎么信任你，你能不能靠谱一点 |
+| 2026-10-14 16:37 | 群派单#246 | worker_ant_group | completed | @hull1889 设备总表 dim.dim_device_profile 历史已补完：10-01 到 10-13 每天都成功，共 5.14 亿行，主键没有重复 |
