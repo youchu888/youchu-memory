@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-14 15:12:59 +0800
+> 更新: 2026-10-14 15:15:54 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-14.md`
 
@@ -31,4 +31,4 @@
 | 2026-10-14 14:53 | 群派单#243 | worker_ant_group | completed | #10277 点击率 PRD v0.11 已核完，在 bus#10278 回给了小智。 结论：R1 补的那几句已经闭环，没有需要再改的地方。 - 我之前说 pa |
 | 2026-10-14 14:54 | 群派单#244 | worker_ant_group | completed | 通过了。#10277（点击率 PRD v0.11）已经闭环，不需要再改，审核意见在 bus#10278 发给了小智。业务口径以 v0.10 通过的版本为准，这次 |
 | 2026-10-14 15:08 | 群派单#245 | worker_ant_group | completed | @hull1889 设备总表 dim.dim_device_profile 已在生产 paimon 建好，表结构按猫猫的 DDL 逐列核过。日批已挂进调度器 0 |
-| 2026-10-14 15:12 | 私聊#552 | telegram_dm | in_progress | 重启agent |
+| 2026-10-14 15:12 | 私聊#552 | telegram_dm | completed | 重启agent |
