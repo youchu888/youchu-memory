@@ -5,6 +5,17 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 00 02 10 14 2026 | `~/.dc-platform/memory/lessons/2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私聊-不进工作汇报与工作簿进展.md` | 2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私 |
+| ## 10 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-14-对外报钟点必须先读-launchctl-的-hour-minute-禁止用-lesson-旧钟点.md` | 2026-10-14-对外报钟点必须先读-launchctl-的-hour-mi |
+| 「不 」时 不靠 么避 以后 以后怎么避免 | `sessions/tg-rotate-2026-10-14-1557.md` | 被质疑「不靠谱」时，应答法：**对照依据 + 现网配置 + 错因 + 以后怎么避 |
+| 「今 」） 一次 为已 今晚 以为 | `sessions/tg-rotate-2026-10-14-1557.md` | 报定时任务状态时，可顺带说明**本机是否已跑过**（如「今晚 2 点第一次自动跑 |
+| agent」 cursor resume 「重 一轮 上一 | `sessions/tg-rotate-2026-10-14-1557.md` | Cursor **resume 失败/连接丢弃**时，应提示重发或「重启 age |
+| 00 02 10 10） 11 14 | `sessions/tg-rotate-2026-10-14-1557.md` | 2026-10-14 约 **11:36** 才把群聊学习改到 02:00；改定 |
+| tg 一件 不写 不写工作汇报 不写工作簿进展 主人 | `sessions/tg-rotate-2026-10-14-1557.md` | 学完后只做一件事：把**短汇总推到主人 TG 私聊**；**不写工作汇报**，也 |
+| 00 00（北京时间） 02 0（ 一自 上一 | `sessions/tg-rotate-2026-10-14-1557.md` | **群聊学习**定时为每天 **02:00（北京时间）**，处理对象为**上一自 |
+| hour launchctl lesson minute 一致 不一 | `sessions/tg-rotate-2026-10-14-1557.md` | [LESSON: 定时回复/对外报钟点必须先读 launchctl 的 Hour |
+| 10 21 与主 主人 人已 令（ | `sessions/tg-rotate-2026-10-14-1557.md` | 错误 21:10 的根因：把**已过期经验**当现状，且**未与主人已定指令（凌 |
+| hour launchctl lesson minute） 「几 」时 | `sessions/tg-rotate-2026-10-14-1557.md` | 对外回答「几点跑」时，**必须先查现网定时**（如 `launchctl` 的  |
 | ## 10 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-14-改汇报生成逻辑后-确认-daemon-已重载-否则定时汇报仍跑旧进程行为.md` | 2026-10-14-改汇报生成逻辑后-确认-daemon-已重载-否则定时汇报 |
 | ## 10 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-14-清单内查库-清单外实活在办也要报-进展仅来自当次探针或文件实证-禁过期备注-同探针无额外实证的不.md` | 2026-10-14-清单内查库-清单外实活在办也要报-进展仅来自当次探针或文件 |
 | ch h」 ou to touch」与进展汇报的「先查再报」同一条红线 uc | `sessions/tg-rotate-2026-10-14-1057.md` | 记忆蒸馏/启动包再大也不能替代当次探针；「打开≠用了，真改做法才 touch」与 |
@@ -34,14 +45,3 @@
 | ## 10 12 2026 agent_session_rotate app | `~/.dc-platform/memory/lessons/2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍在注册渠道-人数落在注册渠道行.md` | 2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍 |
 | ## 10 12 2026 ads ads.ads_channel_promot | `~/.dc-platform/memory/lessons/2026-10-12-周月充值三列对-ads-ads_channel_promotion_summary_d-同期-s.md` | 2026-10-12-周月充值三列对-ads-ads_channel_promo |
 | 一样 人去 仍按 仍按人去重 像金 像金额一样按日简单加总 | `sessions/tg-rotate-2026-10-12-1756.md` | **新增、次留、日均活跃**仍按人去重/既有口径，**禁止**像金额一样按日简单 |
-| ads.ads_channel_promotion_summary_d mont | `sessions/tg-rotate-2026-10-12-1756.md` | 周月新增充值字段：`week_*` / `month_*` 与上三列一一对应；主 |
-| coin_recharge_amount deduction_recharge  | `sessions/tg-rotate-2026-10-12-1756.md` | 日表三列金额（可跨天相加）：`recharge_amount`（VIP 订阅）、 |
-| app dws.dws_settlement_detail order_paid | `sessions/tg-rotate-2026-10-12-1756.md` | 充值明细在 `dws.dws_settlement_detail`（`order |
-| ads.ads_channel_promotion_settlement_sum | `sessions/tg-rotate-2026-10-12-1756.md` | 结算日汇总 `ads.ads_channel_promotion_settlem |
-| 「部 」之 上筛 不会 之外 再拆 | `sessions/tg-rotate-2026-10-12-1756.md` | 按部门看数：在渠道行上筛选或汇总，**不会**再拆出「部门 × 渠道」之外的更细 |
-| app_id dept_id dept_name dim.dim_channe  | `sessions/tg-rotate-2026-10-12-1756.md` | `dept_id` / `dept_name` 仅为渠道属性，**不进主键**； |
-| app_id channel month_start_dt week_start | `sessions/tg-rotate-2026-10-12-1756.md` | 周表主键：`week_start_dt, app_id, channel`（分区 |
-| ads.ads_cha ads.ads_channel_promotion_su | `sessions/tg-rotate-2026-10-12-1756.md` | 渠道推广周表 `ads.ads_channel_promotion_summar |
-| app lesson 不要 不要求回访仍在注册渠道 与次 交集 | `sessions/tg-rotate-2026-10-12-1756.md` | [LESSON: 渠道周月表,次留口径/次留 = 该渠道新增与次日全 App 活 |
-| ads.ads_channel ads.ads_channel_promotio | `sessions/tg-rotate-2026-10-12-1756.md` | [LESSON: 渠道周月表,ads_channel_promotion/周月充 |
-| 一样 人去 仍按 仍按人去重 像金 像金额一样按日简单加总 | `sessions/tg-rotate-2026-10-12-1756.md` | 新增、次留、日均活跃**仍按人去重/既有口径，**禁止**像金额一样按日简单加总 |
