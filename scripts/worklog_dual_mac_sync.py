@@ -73,6 +73,15 @@ def _read_text(p: Path) -> str:
     return p.read_text(encoding="utf-8", errors="replace").strip()
 
 
+def _local_report(local_wl: Path, day: str) -> Path:
+    """日报稿两种文件名都认：同步脚本用日期在前，云端稿用「日报-」在前。"""
+    preferred = local_wl / "reports" / f"{day}-日报.md"
+    if preferred.is_file():
+        return preferred
+    alt = local_wl / "reports" / f"日报-{day}.md"
+    return alt if alt.is_file() else preferred
+
+
 def export_host_day(mem_wl: Path, local_wl: Path, day: str, host: str) -> Path | None:
     """把本机当日流水/日报副本写到 hosts/<host>/。
 
@@ -84,7 +93,7 @@ def export_host_day(mem_wl: Path, local_wl: Path, day: str, host: str) -> Path |
     (host_dir / "reports").mkdir(parents=True, exist_ok=True)
 
     day_src = local_wl / f"{day}.md"
-    report_src = local_wl / "reports" / f"{day}-日报.md"
+    report_src = _local_report(local_wl, day)
     ops_src = mem_wl.parent / "ops-mirror" / "hosts" / host / f"{day}.md"
     wrote = False
     source = "local"
@@ -223,7 +232,7 @@ def publish_canonical_report(mem_wl: Path, local_wl: Path, day: str, host: str) 
     - 非权威机：只写到 `hosts/<自己>/reports/`，不覆盖权威稿；若权威稿已存在则镜像回本机
     """
     authority = _authority_host(mem_wl)
-    local_report = local_wl / "reports" / f"{day}-日报.md"
+    local_report = _local_report(local_wl, day)
     host_report = mem_wl / "hosts" / host / "reports" / f"{day}-日报.md"
     auth_report = mem_wl / "hosts" / authority / "reports" / f"{day}-日报.md"
     canon = mem_wl / "reports" / f"{day}-日报.md"
