@@ -58,3 +58,6 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"Grep","input":{"path":"/Users/mac/Desktop/CHcode/pipeline-runner/lineage/runner_lineage.json","pattern":"dws_app_event_funnel","-A":25}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"大漏斗现网不关联 `dim.dim_user_all`，也不读 `paimon.dim.dim_user_all_d`。\n\n新老用户、设备和来源都从 **`paimon.dwd.dwd_user_register_d_v2_r`** 取：当天注册优先，否则用该用户历史第一次注册。SQL 里写明了禁 dim。事件明细同样走 `paimon.dwd.*_r`，宽表再回写 StarRocks 的 `dws.dws_app_event_funnel_d_d`。\n\n最早试跑曾经 JOIN 过 `dim_user_all_d_d`，全表太大，后来拿掉了。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Thursday, Oct 15, 2026, 12:46 PM (UTC+8)</timestamp>\n<user_query>\nai 是走 mcp， 通过 SR 查 paimon 外表的吗\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"这次查 Paimon 表名，走的是 StarRocks 上的 Paimon 外表，不是直连湖。\n\n平台 MCP 的 `db_run_query` 也是这条路：连 `sr_test` / `sr_prod`，再 `SHOW TABLES FROM paimon.dwd`。刚才那次 MCP 连接被掐断了，改用本机直连同一套 StarRocks FE，执行的还是同样的 `SHOW DATABASES FROM paimon` 和 `SHOW TABLES`。"}]}}
+{"type":"turn_ended","status":"success"}
