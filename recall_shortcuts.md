@@ -5,6 +5,17 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 15 2026 agent_session_rotate ant | `~/.dc-platform/memory/lessons/2026-10-15-群聊学习任务消息量异常偏少时-默认改为读取所有群的全量消息-不要沿用-抽样-单群-习惯.md` | 2026-10-15-群聊学习任务消息量异常偏少时-默认改为读取所有群的全量消息 |
+| ## 10 15 2026 agent_session_rotate bot | `~/.dc-platform/memory/lessons/2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口内有无回执-无回执-脚本超时-有-ti.md` | 2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口 |
+| pn vp 「v 「为 为什 主人 | `sessions/tg-rotate-2026-10-15-0935.md` | 主人问「为什么会失败」：用**时间线 + 机器人原文 + 脚本超时阈值**回答， |
+| 24 三要 与导 书到 书有 京时 | `sessions/tg-rotate-2026-10-15-0935.md` | 续期结果应对外报三要素：**配置名、导入时间（北京时间）、新证书到期时间**；证 |
+| conn connect openvpn 「正 」→ 下到 | `sessions/tg-rotate-2026-10-15-0935.md` | 强制重试成功时典型路径：机器人回「正在生成」→ 数秒内下到新配置 → 导入成功  |
+| 08 50 connect openvpn out timed | `sessions/tg-rotate-2026-10-15-0935.md` | 08:50 类失败：机器人数秒内回 **`生成失败: Timed out`**  |
+| 08 120s 18 pn request tg | `sessions/tg-rotate-2026-10-15-0935.md` | 08:18 类失败：`/request` 后 **120s 内机器人零回复**  |
+| openvpn tg vs 下载 书生 人） | `sessions/tg-rotate-2026-10-15-0935.md` | 自动续期失败要先拆段：**证书生成（TG 机器人）** vs **本机下载/导入 |
+| vpn vpn_ovpn_sync 上次 上次导入状态 价） 先看 | `sessions/tg-rotate-2026-10-15-0935.md` | VPN 续期/重导标准顺序：先看 `vpn_ovpn_sync`（或等价）脚本与 |
+| ant daily learn lesson tg worker | `sessions/tg-rotate-2026-10-15-0935.md` | [LESSON: worker-ant-daily-learn,tg/群聊学习任 |
+| 「每 」若 不要 不要只读部分群或截断窗口 习」 偏少 | `sessions/tg-rotate-2026-10-15-0935.md` | 群聊「每日学习」若消息量明显偏少，应扫**全部群、全部消息**，不要只读部分群或 |
 | ## 00 02 10 14 2026 | `~/.dc-platform/memory/lessons/2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私聊-不进工作汇报与工作簿进展.md` | 2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私 |
 | ## 10 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-14-对外报钟点必须先读-launchctl-的-hour-minute-禁止用-lesson-旧钟点.md` | 2026-10-14-对外报钟点必须先读-launchctl-的-hour-mi |
 | 「不 」时 不靠 么避 以后 以后怎么避免 | `sessions/tg-rotate-2026-10-14-1557.md` | 被质疑「不靠谱」时，应答法：**对照依据 + 现网配置 + 错因 + 以后怎么避 |
@@ -34,14 +45,3 @@
 | sql test 三列 仍跑旧 仓库 值三 | `sessions/tg-rotate-2026-10-12-2156.md` | 本地仓库 SQL 已对齐新口径时，**test 海豚若未重发**，仍跑旧 SQL |
 | 不进 不进主键 主键 仍从 仍从渠道维表带出 从渠 | `sessions/tg-rotate-2026-10-12-2156.md` | **部门**仍从渠道维表带出，**不进主键**。 |
 | 人数 先取 再对 再对周期取 周期 均活 | `sessions/tg-rotate-2026-10-12-2156.md` | **日均活跃**：先取**每日**渠道活跃人数，再对周期取**平均**。 |
-| 人去 内渠 加总 单加 去重 周期 | `sessions/tg-rotate-2026-10-12-2156.md` | **新增**：周期内渠道新增**按人去重**，禁止把日新增简单加总。 |
-| 「新 」不 三列 不同 不按 不按天加总」不同 | `sessions/tg-rotate-2026-10-12-2156.md` | 充值三列为**金额**，周期内**按天相加**即可；与「新增按人去重、不按天加总 |
-| ads.ads_c ads.ads_channel_promotion_summ | `sessions/tg-rotate-2026-10-12-2156.md` | **结算充值**新增三列（周 / 月字段名成对）：VIP 订阅、扣量后 VIP、 |
-| 「次 一天 不参 不参与次留 与次 业务 | `sessions/tg-rotate-2026-10-12-2156.md` | 周期**最后一天 / 业务日当天**没有「次日」，**不参与次留**（避免无次日 |
-| app 交集 人数 仍挂在 任意 内任 | `sessions/tg-rotate-2026-10-12-2156.md` | **次留**仍挂在**注册渠道**行：注册日 D 的新增用户，与**次日同 Ap |
-| app 「自 」一 一套 一行 仍是 | `sessions/tg-rotate-2026-10-12-2156.md` | 渠道推广**周表 / 月表**同一套口径；粒度仍是「自然周或自然月 × App  |
-| 人去 内渠 加总 单加 去重 周期 | `sessions/tg-rotate-2026-10-12-2156.md` | 新增**：周期内渠道新增**按人去重**，禁止把日新增简单加总。 |
-| app 不要 人数 人数记回注册渠道 仍走 内活 | `sessions/tg-rotate-2026-10-12-2156.md` | 次留不要求次日仍走注册渠道；**换渠道回来只要在 App 内活跃即算**，人数记 |
-| ## 10 12 2026 agent_session_rotate app | `~/.dc-platform/memory/lessons/2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍在注册渠道-人数落在注册渠道行.md` | 2026-10-12-次留-该渠道新增与次日全-app-活跃的交集-不要求回访仍 |
-| ## 10 12 2026 ads ads.ads_channel_promot | `~/.dc-platform/memory/lessons/2026-10-12-周月充值三列对-ads-ads_channel_promotion_summary_d-同期-s.md` | 2026-10-12-周月充值三列对-ads-ads_channel_promo |
-| 一样 人去 仍按 仍按人去重 像金 像金额一样按日简单加总 | `sessions/tg-rotate-2026-10-12-1756.md` | **新增、次留、日均活跃**仍按人去重/既有口径，**禁止**像金额一样按日简单 |

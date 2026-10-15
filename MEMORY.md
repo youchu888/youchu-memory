@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [群聊学习任务消息量异常偏少时，默认改为读取所有群的全量消息，不要沿用「抽](lessons/2026-10-15-群聊学习任务消息量异常偏少时-默认改为读取所有群的全量消息-不要沿用-抽样-单群-习惯.md) — 会话轮换蒸馏
+- [VPN 同步失败先查 TG 机器人在 `/request` 窗口内有无回](lessons/2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口内有无回执-无回执-脚本超时-有-ti.md) — 会话轮换蒸馏
 - [02:00 北京时间、上一自然日群消息；汇总仅推 TG 私聊，不进工作汇](lessons/2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私聊-不进工作汇报与工作簿进展.md) — 会话轮换蒸馏
 - [对外报钟点必须先读 launchctl 的 Hour/Minute，禁止](lessons/2026-10-14-对外报钟点必须先读-launchctl-的-hour-minute-禁止用-lesson-旧钟点.md) — 会话轮换蒸馏
 - [改汇报生成逻辑后，确认 daemon 已重载，否则定时汇报仍跑旧进程行为](lessons/2026-10-14-改汇报生成逻辑后-确认-daemon-已重载-否则定时汇报仍跑旧进程行为.md) — 会话轮换蒸馏
