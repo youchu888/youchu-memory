@@ -239,21 +239,13 @@ def publish_canonical_report(mem_wl: Path, local_wl: Path, day: str, host: str) 
     local_wl.joinpath("reports").mkdir(parents=True, exist_ok=True)
 
     def _stamp(body: str, src_host: str) -> str:
-        if "双机汇总" in body[:500] and "权威" in body[:500]:
-            return body if body.endswith("\n") else body + "\n"
-        lines = body.splitlines()
-        insert_at = 0
-        for i, line in enumerate(lines[:25]):
-            if line.startswith("> 日期:") or line.startswith("> 日期："):
-                insert_at = i + 1
-                break
-        notes = [
-            f"> 双机汇总: 见 `~/.dc-platform/memory/work-log/{day}.md`（hosts 合并）",
-            f"> 日报权威主机: `{src_host}`（非权威机不得覆盖正式稿）",
+        # 权威机只决定哪份稿能覆盖 reports/，备注不得写进正式日报（会进 TG / 云端）。
+        del src_host
+        lines = [
+            line
+            for line in body.splitlines()
+            if not line.startswith("> 双机汇总:") and not line.startswith("> 日报权威主机:")
         ]
-        for n in reversed(notes):
-            if n not in lines[:30]:
-                lines.insert(insert_at, n)
         return "\n".join(lines).rstrip() + "\n"
 
     # 1) 权威机：本机稿 → hosts/authority + reports 权威
