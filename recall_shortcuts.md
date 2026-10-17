@@ -5,6 +5,14 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| upload 「按 上传 不是 不是重新生成或改写日报正文 个上 | `sessions/tg-rotate-2026-10-17-2007.md` | 私聊「按你这个上传云端」= 走既有 upload 流程，不是重新生成或改写日报正 |
+| id record 「正 写明 对用 尾对 | `sessions/tg-rotate-2026-10-17-2007.md` | 收尾对用户：报日期、record id、状态、稿路径，并写明「正文未改」。 |
+| api code id inserted record 一般 | `sessions/tg-rotate-2026-10-17-2007.md` | 成功标准：API `code=0`，响应里可见 record id 与 `ins |
+| .cursor config.js date dd downloads git） | `sessions/tg-rotate-2026-10-17-2007.md` | 推荐命令：`.cursor/scripts/upload_work_report |
+| as date dd ia mm shanghai） | `sessions/tg-rotate-2026-10-17-2007.md` | 未指定日期时用当日业务日（Asia/Shanghai）；需要时用 `--date |
+| 一致 上传 上传前只做一致性核对（路径 上传过程禁止改字 传前 传过 | `sessions/tg-rotate-2026-10-17-2007.md` | 上传前只做一致性核对（路径、日期、正文是否已定稿），上传过程禁止改字、润色或补写 |
+| .cursor dd.md log markdown memory mm | `sessions/tg-rotate-2026-10-17-2007.md` | 上传对象必须是已定稿 Markdown：本地 `.cursor/work-log |
+| tg 「上 「上传云端」与写日报 」与 」才 上传 | `sessions/tg-rotate-2026-10-17-2007.md` | 「上传云端」与写日报、推 TG 分开；只有用户明确说「上传云端」才跑上传脚本，不 |
 | ## 013 013～018 10 17 2026 | `~/.dc-platform/memory/lessons/2026-10-17-周月新增次留不能日人数相加-日表-bitmap-口径-spark-不能照搬-mysql-013-.md` | 2026-10-17-周月新增次留不能日人数相加-日表-bitmap-口径-sp |
 | ## 019 10 17 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-17-019-停留四列写-0-在实时表未就绪前仅可到-s4-禁止发布替换现网.md` | 2026-10-17-019-停留四列写-0-在实时表未就绪前仅可到-s4-禁止 |
 | ## 10 17 2026 agent_session_rotate ar | `~/.dc-platform/memory/lessons/2026-10-17-迁-spark-批-s4-只验跑通回写-生产对数放-s5-未点测试五步禁止标验数通过.md` | 2026-10-17-迁-spark-批-s4-只验跑通回写-生产对数放-s5- |
@@ -37,11 +45,3 @@
 | ## 10 15 2026 agent_session_rotate bot | `~/.dc-platform/memory/lessons/2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口内有无回执-无回执-脚本超时-有-ti.md` | 2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口 |
 | pn vp 「v 「为 为什 主人 | `sessions/tg-rotate-2026-10-15-0935.md` | 主人问「为什么会失败」：用**时间线 + 机器人原文 + 脚本超时阈值**回答， |
 | 24 三要 与导 书到 书有 京时 | `sessions/tg-rotate-2026-10-15-0935.md` | 续期结果应对外报三要素：**配置名、导入时间（北京时间）、新证书到期时间**；证 |
-| conn connect openvpn 「正 」→ 下到 | `sessions/tg-rotate-2026-10-15-0935.md` | 强制重试成功时典型路径：机器人回「正在生成」→ 数秒内下到新配置 → 导入成功  |
-| 08 50 connect openvpn out timed | `sessions/tg-rotate-2026-10-15-0935.md` | 08:50 类失败：机器人数秒内回 **`生成失败: Timed out`**  |
-| 08 120s 18 pn request tg | `sessions/tg-rotate-2026-10-15-0935.md` | 08:18 类失败：`/request` 后 **120s 内机器人零回复**  |
-| openvpn tg vs 下载 书生 人） | `sessions/tg-rotate-2026-10-15-0935.md` | 自动续期失败要先拆段：**证书生成（TG 机器人）** vs **本机下载/导入 |
-| vpn vpn_ovpn_sync 上次 上次导入状态 价） 先看 | `sessions/tg-rotate-2026-10-15-0935.md` | VPN 续期/重导标准顺序：先看 `vpn_ovpn_sync`（或等价）脚本与 |
-| ant daily learn lesson tg worker | `sessions/tg-rotate-2026-10-15-0935.md` | [LESSON: worker-ant-daily-learn,tg/群聊学习任 |
-| 「每 」若 不要 不要只读部分群或截断窗口 习」 偏少 | `sessions/tg-rotate-2026-10-15-0935.md` | 群聊「每日学习」若消息量明显偏少，应扫**全部群、全部消息**，不要只读部分群或 |
-| ## 00 02 10 14 2026 | `~/.dc-platform/memory/lessons/2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私聊-不进工作汇报与工作簿进展.md` | 2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私 |
