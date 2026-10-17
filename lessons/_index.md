@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-17 | [周月新增次留不能日人数相加，日表 bitmap 口径 Spark 不能照搬 My](./2026-10-17-周月新增次留不能日人数相加-日表-bitmap-口径-spark-不能照搬-mysql-013-.md) | spark迁移,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-17 | [019 停留四列写 0 在实时表未就绪前仅可到 S4，禁止发布替换现网](./2026-10-17-019-停留四列写-0-在实时表未就绪前仅可到-s4-禁止发布替换现网.md) | spark迁移,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-17 | [迁 Spark 批：S4 只验跑通回写，生产对数放 S5；未点测试五步禁止标验数](./2026-10-17-迁-spark-批-s4-只验跑通回写-生产对数放-s5-未点测试五步禁止标验数通过.md) | spark迁移,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-17 | [spark-blocker](./2026-10-17-spark-blocker.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-17 | [dev-platform|attribution|stage4](./2026-10-17-dev-platform-attribution-stage4.md) | spark-migrate,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-16 | [日报只留已闭环的短句，未收口和步骤说明整条删](./2026-10-16-daily-report-owner-cut-unclosed.md) | daily-report, owner-edit | 对照差异、先不上、发布步骤不进结果条 |

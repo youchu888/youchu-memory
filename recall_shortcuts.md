@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 013 013～018 10 17 2026 | `~/.dc-platform/memory/lessons/2026-10-17-周月新增次留不能日人数相加-日表-bitmap-口径-spark-不能照搬-mysql-013-.md` | 2026-10-17-周月新增次留不能日人数相加-日表-bitmap-口径-sp |
+| ## 019 10 17 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-17-019-停留四列写-0-在实时表未就绪前仅可到-s4-禁止发布替换现网.md` | 2026-10-17-019-停留四列写-0-在实时表未就绪前仅可到-s4-禁止 |
+| ## 10 17 2026 agent_session_rotate ar | `~/.dc-platform/memory/lessons/2026-10-17-迁-spark-批-s4-只验跑通回写-生产对数放-s5-未点测试五步禁止标验数通过.md` | 2026-10-17-迁-spark-批-s4-只验跑通回写-生产对数放-s5- |
+| 00 01 013～018 019 06 07 | `sessions/tg-rotate-2026-10-17-1136.md` | agent-bus：知秋令（10620）回 10616 卡点——007～012、 |
+| 00 008）要补进 08 8） dev session | `sessions/tg-rotate-2026-10-17-1136.md` | 远端已有代码（如渠道日活 008）要补进 dev session，避免会话仍停在 |
+| _a _日 ad ads.ads_channel_summary_d ads_c | `sessions/tg-rotate-2026-10-17-1136.md` | 渠道汇总仓内无现网 SQL；新 prod 海豚：`wf_ads_日报表_日` → |
+| 01 013～018（渠道日指标 13 18 3～ 8（ | `sessions/tg-rotate-2026-10-17-1136.md` | 013～018（渠道日指标、渠道汇总、渠道/部门推广周月等）本轮不推：周月新增/ |
+| s4 s5 —— —只 「测 」— | `sessions/tg-rotate-2026-10-17-1136.md` | **S4**：插件里建表、挂调度、跑一天、点「测试五步」——只验能跑通、能回写； |
+| 00 007 008 009 010 011 | `sessions/tg-rotate-2026-10-17-1136.md` | 14 张迁 Spark 单里，归因看板（006）已在验数；007/008/009 |
+| 4） s4 spark 上的 不上 不挡 | `sessions/tg-rotate-2026-10-17-1136.md` | Spark 迁表批推进顺序：需求建好、代码改好、推到验数前（S4）；验数对不上的 |
+| 019 ar k迁 lesson pa rk | `sessions/tg-rotate-2026-10-17-1136.md` | [LESSON: spark迁移/019 停留四列写 0 在实时表未就绪前仅可到 |
+| ar k迁 lesson pa rk s4 | `sessions/tg-rotate-2026-10-17-1136.md` | [LESSON: spark迁移/迁 Spark 批：S4 只验跑通回写，生产对 |
+| path_folder_udf s5 一类 代替 余行 全等 | `sessions/tg-rotate-2026-10-17-1136.md` | 用户路径：用相邻折叠代替 `path_folder_udf`；末节点多横线差额留 |
+| 019 s4 team 从明 停留 停留四列先写 | `sessions/tg-rotate-2026-10-17-1136.md` | 页面停留无实时表：019 停留四列先写 0，**禁止从明细现拼**；实时表属他  |
 | ## 10 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-17-spark-blocker.md` | 2026-10-17-spark-blocker |
 | ## 10 17 2026 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-10-17-dev-platform-attribution-stage4.md` | 2026-10-17-dev-platform-attribution-stag |
 | #1 05 1%～3%） 10 181 24 | `sessions/tg-rotate-2026-10-17-0936.md` | **知秋口径（bus#10595）**：测试湖归因结果表**不必**为看板去补数 |
@@ -31,17 +45,3 @@
 | ant daily learn lesson tg worker | `sessions/tg-rotate-2026-10-15-0935.md` | [LESSON: worker-ant-daily-learn,tg/群聊学习任 |
 | 「每 」若 不要 不要只读部分群或截断窗口 习」 偏少 | `sessions/tg-rotate-2026-10-15-0935.md` | 群聊「每日学习」若消息量明显偏少，应扫**全部群、全部消息**，不要只读部分群或 |
 | ## 00 02 10 14 2026 | `~/.dc-platform/memory/lessons/2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私聊-不进工作汇报与工作簿进展.md` | 2026-10-14-02-00-北京时间-上一自然日群消息-汇总仅推-tg-私 |
-| ## 10 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-14-对外报钟点必须先读-launchctl-的-hour-minute-禁止用-lesson-旧钟点.md` | 2026-10-14-对外报钟点必须先读-launchctl-的-hour-mi |
-| 「不 」时 不靠 么避 以后 以后怎么避免 | `sessions/tg-rotate-2026-10-14-1557.md` | 被质疑「不靠谱」时，应答法：**对照依据 + 现网配置 + 错因 + 以后怎么避 |
-| 「今 」） 一次 为已 今晚 以为 | `sessions/tg-rotate-2026-10-14-1557.md` | 报定时任务状态时，可顺带说明**本机是否已跑过**（如「今晚 2 点第一次自动跑 |
-| agent」 cursor resume 「重 一轮 上一 | `sessions/tg-rotate-2026-10-14-1557.md` | Cursor **resume 失败/连接丢弃**时，应提示重发或「重启 age |
-| 00 02 10 10） 11 14 | `sessions/tg-rotate-2026-10-14-1557.md` | 2026-10-14 约 **11:36** 才把群聊学习改到 02:00；改定 |
-| tg 一件 不写 不写工作汇报 不写工作簿进展 主人 | `sessions/tg-rotate-2026-10-14-1557.md` | 学完后只做一件事：把**短汇总推到主人 TG 私聊**；**不写工作汇报**，也 |
-| 00 00（北京时间） 02 0（ 一自 上一 | `sessions/tg-rotate-2026-10-14-1557.md` | **群聊学习**定时为每天 **02:00（北京时间）**，处理对象为**上一自 |
-| hour launchctl lesson minute 一致 不一 | `sessions/tg-rotate-2026-10-14-1557.md` | [LESSON: 定时回复/对外报钟点必须先读 launchctl 的 Hour |
-| 10 21 与主 主人 人已 令（ | `sessions/tg-rotate-2026-10-14-1557.md` | 错误 21:10 的根因：把**已过期经验**当现状，且**未与主人已定指令（凌 |
-| hour launchctl lesson minute） 「几 」时 | `sessions/tg-rotate-2026-10-14-1557.md` | 对外回答「几点跑」时，**必须先查现网定时**（如 `launchctl` 的  |
-| ## 10 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-14-改汇报生成逻辑后-确认-daemon-已重载-否则定时汇报仍跑旧进程行为.md` | 2026-10-14-改汇报生成逻辑后-确认-daemon-已重载-否则定时汇报 |
-| ## 10 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-14-清单内查库-清单外实活在办也要报-进展仅来自当次探针或文件实证-禁过期备注-同探针无额外实证的不.md` | 2026-10-14-清单内查库-清单外实活在办也要报-进展仅来自当次探针或文件 |
-| ch h」 ou to touch」与进展汇报的「先查再报」同一条红线 uc | `sessions/tg-rotate-2026-10-14-1057.md` | 记忆蒸馏/启动包再大也不能替代当次探针；「打开≠用了，真改做法才 touch」与 |
-| agent」 cu cursor「会话连接失败 es e」 me | `sessions/tg-rotate-2026-10-14-1057.md` | Cursor「会话连接失败、丢弃旧 resume」时不能假装已查；应请用户重发或 |
