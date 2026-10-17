@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-17-spark-blocker.md` | 2026-10-17-spark-blocker |
+| ## 10 17 2026 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-10-17-dev-platform-attribution-stage4.md` | 2026-10-17-dev-platform-attribution-stag |
+| #1 05 1%～3%） 10 181 24 | `sessions/tg-rotate-2026-10-17-0936.md` | **知秋口径（bus#10595）**：测试湖归因结果表**不必**为看板去补数 |
+| 0」 paimon.dws.dws_register_attrib paimon | `sessions/tg-rotate-2026-10-17-0936.md` | 测试里看板影子表「渠道/入围有数、候选/成功为 0」，且 `paimon.dws |
+| 006 04 20261016 attr_board dev ff065da7 | `sessions/tg-rotate-2026-10-17-0936.md` | 归因看板 `dev-20261016-006`：新建线 `attr_board` |
+| 14 ar k（ pa rk sp | `sessions/tg-rotate-2026-10-17-0936.md` | 批量迁 Spark（如 14 张）若平台仍停在 stage 1、测试五步未点过， |
+| dc dmp parent 产发 前置 发布 | `sessions/tg-rotate-2026-10-17-0936.md` | 生产发布前置：平台账号 + 对 `dmp/dc-parent` 的推送权限。 |
+| 不能 五步 产五 人放 会话 发不 | `sessions/tg-rotate-2026-10-17-0936.md` | **生产五步**：确认编排 → 建表 → 部署 → 补数 → 登记完成；须管理员 |
+| paimon 一天 一般 一般要求写出 五步 任务 | `sessions/tg-rotate-2026-10-17-0936.md` | **测试五步**：推代码 → 建表 → 挂调度 → 跑一天验出数 → 定起点补数 |
+| .0 .1 0. 0.0.135）按会话走完 13 35 | `sessions/tg-rotate-2026-10-17-0936.md` | Spark 发布卡点已解：测试、生产均可在开发平台插件（约 0.0.135）按会 |
+| 60 ack agent blocker bus lesson | `sessions/tg-rotate-2026-10-17-0936.md` | [LESSON: agent-bus/spark-blocker] 测试与生产量 |
+| attribution dev dwd lesson migrate paimo | `sessions/tg-rotate-2026-10-17-0936.md` | [LESSON: spark-migrate/dev-platform/attr |
+| stage 「无 」等 一空 下游 依赖 | `sessions/tg-rotate-2026-10-17-0936.md` | 依赖同一空归因结果表的「无候选原因」等下游，应等口径/阻塞项明确后再推，勿并行空 |
+| #1 05 1%～3%） 10 181 24 | `sessions/tg-rotate-2026-10-17-0936.md` | 知秋口径（bus#10595）**：测试湖归因结果表**不必**为看板去补数；测 |
 | ## 10 15 2026 agent_session_rotate ant | `~/.dc-platform/memory/lessons/2026-10-15-群聊学习任务消息量异常偏少时-默认改为读取所有群的全量消息-不要沿用-抽样-单群-习惯.md` | 2026-10-15-群聊学习任务消息量异常偏少时-默认改为读取所有群的全量消息 |
 | ## 10 15 2026 agent_session_rotate bot | `~/.dc-platform/memory/lessons/2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口内有无回执-无回执-脚本超时-有-ti.md` | 2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口 |
 | pn vp 「v 「为 为什 主人 | `sessions/tg-rotate-2026-10-15-0935.md` | 主人问「为什么会失败」：用**时间线 + 机器人原文 + 脚本超时阈值**回答， |
@@ -31,17 +45,3 @@
 | ## 10 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-14-清单内查库-清单外实活在办也要报-进展仅来自当次探针或文件实证-禁过期备注-同探针无额外实证的不.md` | 2026-10-14-清单内查库-清单外实活在办也要报-进展仅来自当次探针或文件 |
 | ch h」 ou to touch」与进展汇报的「先查再报」同一条红线 uc | `sessions/tg-rotate-2026-10-14-1057.md` | 记忆蒸馏/启动包再大也不能替代当次探针；「打开≠用了，真改做法才 touch」与 |
 | agent」 cu cursor「会话连接失败 es e」 me | `sessions/tg-rotate-2026-10-14-1057.md` | Cursor「会话连接失败、丢弃旧 resume」时不能假装已查；应请用户重发或 |
-| 丁的 两段 侧编 先模 免先 再发 | `sessions/tg-rotate-2026-10-14-1057.md` | 对外补发进展（如知秋侧编号回执）应在实查完成后再发，避免先模板后补丁的两段式失信 |
-| tg 上新 不会 人仍 仍是 代码 | `sessions/tg-rotate-2026-10-14-1057.md` | 更正逻辑改在代码里后，若 TG/机器人仍是晨间启动的旧进程，定时任务（如次日 9 |
-| 三件 与是 事实 会话 像会 写法 | `sessions/tg-rotate-2026-10-14-1057.md` | 清单外进展的写法应像会话里三件：定时是否挂起/跑过次数、目录最近改动与是否本月有 |
-| 一探 不单 与清 为第 假充 充实 | `sessions/tg-rotate-2026-10-14-1057.md` | 同一探针覆盖多项清单时（如设备指纹与清单第 1 项同表组、渠道周月为第 4 项） |
-| 16 不能 不能只报 也要 事项 仍在 | `sessions/tg-rotate-2026-10-14-1057.md` | 清单外但仍在推进的事项也要单独报进度，不能只报 16 项清单而忽略并行实活。 |
-| 「印 」的 一项 不能 不能用过期备注 中」 | `sessions/tg-rotate-2026-10-14-1057.md` | 清单内每一项都要对应探针结果；不能用过期备注、缓存话术或「印象中」的进度充数。 |
-| lesson 不重 也要 仅来 件实 作簿 | `sessions/tg-rotate-2026-10-14-1057.md` | [LESSON: 工作簿进展/清单内查库、清单外实活在办也要报；进展仅来自当次探 |
-| 与定 件与 任务 关文 再写 再写结论 | `sessions/tg-rotate-2026-10-14-1057.md` | 进展回复前必须当次实查：工作簿/流水、库表状态、相关文件与定时任务计数等，再写结 |
-| 上任 与昨 主人 主人已多次强调禁止 于套 人已 | `sessions/tg-rotate-2026-10-14-1057.md` | 早上任务进度若与昨日雷同、清单已变仍照抄，属于套模板秒回，主人已多次强调禁止。 |
-| ho hot（须同时看「按时间最近动过」） ot t（ 「按 」） | `sessions/tg-rotate-2026-10-13-2256.md` | > **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」 |
-| ## 10 12 2026 ads_channel_promotion_summ | `~/.dc-platform/memory/lessons/2026-10-12-ads_channel_promotion_summary_m-次留-口径.md` | 2026-10-12-ads_channel_promotion_summary |
-| sql test 三列 仍跑旧 仓库 值三 | `sessions/tg-rotate-2026-10-12-2156.md` | 本地仓库 SQL 已对齐新口径时，**test 海豚若未重发**，仍跑旧 SQL |
-| 不进 不进主键 主键 仍从 仍从渠道维表带出 从渠 | `sessions/tg-rotate-2026-10-12-2156.md` | **部门**仍从渠道维表带出，**不进主键**。 |
-| 人数 先取 再对 再对周期取 周期 均活 | `sessions/tg-rotate-2026-10-12-2156.md` | **日均活跃**：先取**每日**渠道活跃人数，再对周期取**平均**。 |

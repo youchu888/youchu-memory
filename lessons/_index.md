@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-17 | [spark-blocker](./2026-10-17-spark-blocker.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-17 | [dev-platform|attribution|stage4](./2026-10-17-dev-platform-attribution-stage4.md) | spark-migrate,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-16 | [日报只留已闭环的短句，未收口和步骤说明整条删](./2026-10-16-daily-report-owner-cut-unclosed.md) | daily-report, owner-edit | 对照差异、先不上、发布步骤不进结果条 |
 | 2026-10-16 | [正式日报不得写入双机汇总和权威主机](./2026-10-16-daily-report-no-dual-host-stamp.md) | daily-report, worklog | 同步脚本不再把内部备注写进日报抬头 |
 | 2026-10-16 | [Spark 测试五步与生产五步走插件 0.0.135](./2026-10-16-spark-s4-s7-plugin-135.md) | spark, pipeline-runner, publish | 测试提交建表挂调度单跑补数；生产对照后只建不删再部署补数登记
