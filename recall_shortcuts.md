@@ -5,6 +5,16 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| bootstrap daily memory_open repor report | `sessions/tg-rotate-2026-10-19-2208.md` | 冷启动仍先读 bootstrap / MEMORY_OPEN，按任务再查规则；上 |
+| g） pr prepare_daily_report_sync sync tg  | `sessions/tg-rotate-2026-10-19-2208.md` | 日报生成链路（双机 sync → 写稿 → 推 TG）与上传云端是**两阶段** |
+| id inserted） 不必 不必写入长期记忆索引 主人 于主 | `sessions/tg-rotate-2026-10-19-2208.md` | 成功回执应包含：**日期**、**记录 ID**、**接口状态**（如 inse |
+| api config） token upload_work_report.py  | `sessions/tg-rotate-2026-10-19-2208.md` | 凭证与 API 走既有脚本（如 `upload_work_report.py`  |
+| asia dd mm shanghai yyyy 定日 | `sessions/tg-rotate-2026-10-19-2208.md` | 未指定日期时默认用 **Asia/Shanghai 当日** `YYYY-MM- |
+| tg 一版 上传 上传前宜对照私聊推送记录 不一致 与定 | `sessions/tg-rotate-2026-10-19-2208.md` | 若当日已推 TG，上传前宜对照私聊推送记录，确认与定稿同一版，避免双机/手改导致 |
+| dd.md memory mm reports yyyy 一正 | `sessions/tg-rotate-2026-10-19-2208.md` | 上传前以本地定稿 `reports/日报-YYYY-MM-DD.md`（或 me |
+| 「上 「生 」分 」时 上传 不重 | `sessions/tg-rotate-2026-10-19-2208.md` | 用户说「上传云端」时，与「生成日报」分离：只跑上传脚本，不重写、不重新汇总正文。 |
+| id」 tg 「已 上传 不要 保持 | `sessions/tg-rotate-2026-10-19-2208.md` | 对话收尾保持简短：确认「已上传 + 日期 + 记录 ID」，**不要**再贴完整 |
+| markdown 「顺 」后 上传 上传必须 不动 | `sessions/tg-rotate-2026-10-19-2208.md` | 上传必须**原封不动**提交 Markdown；禁止「顺手润色、补条、改格式」后 |
 | ## 10 19 2026 agent_session_rotate commi | `~/.dc-platform/memory/lessons/2026-10-19-commit-后默认立即-push-已-push-内容与说明不-retroactive-修改-除.md` | 2026-10-19-commit-后默认立即-push-已-push-内容与说 |
 | ## 10 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等用户明确-改.md` | 2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等 |
 | 00 02 一指 一日 不删 与私 | `sessions/tg-rotate-2026-10-19-1607.md` | 每日 02:00 扫前一日群聊与私聊；未完成需求记入未做清单，完成只改状态不删行 |
@@ -35,13 +45,3 @@
 | 01 013～018（渠道日指标 13 18 3～ 8（ | `sessions/tg-rotate-2026-10-17-1136.md` | 013～018（渠道日指标、渠道汇总、渠道/部门推广周月等）本轮不推：周月新增/ |
 | s4 s5 —— —只 「测 」— | `sessions/tg-rotate-2026-10-17-1136.md` | **S4**：插件里建表、挂调度、跑一天、点「测试五步」——只验能跑通、能回写； |
 | 00 007 008 009 010 011 | `sessions/tg-rotate-2026-10-17-1136.md` | 14 张迁 Spark 单里，归因看板（006）已在验数；007/008/009 |
-| 4） s4 spark 上的 不上 不挡 | `sessions/tg-rotate-2026-10-17-1136.md` | Spark 迁表批推进顺序：需求建好、代码改好、推到验数前（S4）；验数对不上的 |
-| 019 ar k迁 lesson pa rk | `sessions/tg-rotate-2026-10-17-1136.md` | [LESSON: spark迁移/019 停留四列写 0 在实时表未就绪前仅可到 |
-| ar k迁 lesson pa rk s4 | `sessions/tg-rotate-2026-10-17-1136.md` | [LESSON: spark迁移/迁 Spark 批：S4 只验跑通回写，生产对 |
-| path_folder_udf s5 一类 代替 余行 全等 | `sessions/tg-rotate-2026-10-17-1136.md` | 用户路径：用相邻折叠代替 `path_folder_udf`；末节点多横线差额留 |
-| 019 s4 team 从明 停留 停留四列先写 | `sessions/tg-rotate-2026-10-17-1136.md` | 页面停留无实时表：019 停留四列先写 0，**禁止从明细现拼**；实时表属他  |
-| ## 10 17 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-17-spark-blocker.md` | 2026-10-17-spark-blocker |
-| ## 10 17 2026 agent_session_rotate attri | `~/.dc-platform/memory/lessons/2026-10-17-dev-platform-attribution-stage4.md` | 2026-10-17-dev-platform-attribution-stag |
-| #1 05 1%～3%） 10 181 24 | `sessions/tg-rotate-2026-10-17-0936.md` | **知秋口径（bus#10595）**：测试湖归因结果表**不必**为看板去补数 |
-| 0」 paimon.dws.dws_register_attrib paimon | `sessions/tg-rotate-2026-10-17-0936.md` | 测试里看板影子表「渠道/入围有数、候选/成功为 0」，且 `paimon.dws |
-| 006 04 20261016 attr_board dev ff065da7 | `sessions/tg-rotate-2026-10-17-0936.md` | 归因看板 `dev-20261016-006`：新建线 `attr_board` |
