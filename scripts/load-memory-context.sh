@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# 根据 PINNED / MEMORY_OPEN / lessons / 活跃 session 生成 Agent 启动记忆包（瘦身版）
-# 对齐狂人记忆 v2：硬注入 pinned + hot + 按时间最近动过 + 未结便条；全量索引不灌进启动包
+# 根据 MEMORY_OPEN / 最近动过 / 活跃 session 生成 Agent 启动记忆包（瘦身版）
+# 规则不在启动时全文注入。做到某件事时用 lookup-rules.sh 按关键词查 PINNED 和 lessons。
 # 输出：$WORKSPACE/.cursor/.agent-memory-bootstrap.md
 set -euo pipefail
 
@@ -44,9 +44,9 @@ _hook_for() {
   echo "# 又初 · 会话记忆启动包"
   echo ""
   echo "> **生成时间**：${NOW}"
-  echo "> **维护人**：又初 · **来源**：\`PINNED.md\` + \`MEMORY_OPEN.md\` + recent-by-mtime + high 标题"
-  echo "> **指令**：先读本文件 → 再按任务 tags \`memory.read\` / 读完整 lesson。全量索引见 \`MEMORY.md\`（不整包注入）。"
-  echo "> **体积策略**：硬注入小而准；禁止只看 hot（须同时看「按时间最近动过」）。"
+  echo "> **维护人**：又初 · **来源**：\`MEMORY_OPEN.md\` + recent-by-mtime"
+  echo "> **指令**：先读本文件里的未结事项。做到某件事时再 \`lookup-rules.sh\` 查对应规则，不要在启动时通读红线和经验。"
+  echo "> **体积策略**：启动包只留未结和最近动过；规则按任务查。"
   echo ""
 
   # ── 0. 检索捷径（短）──
@@ -55,7 +55,7 @@ _hook_for() {
   DIR_INDEX="${MEMORY_ROOT}/project_chcode_directory_index.md"
   if [[ -f "${DIR_INDEX}" ]]; then
     sed -n '/^## 7\. 检索捷径/,/^## 变更记录/p' "${DIR_INDEX}" 2>/dev/null \
-      | sed '/^## 变更记录/d' | head -12
+      | sed '/^## 变更记录/d' | head -12 || true
     echo ""
     echo "📄 \`~/.dc-platform/memory/project_chcode_directory_index.md\`"
   else
@@ -68,14 +68,15 @@ _hook_for() {
   if [[ -f "${OPEN_PY}" ]]; then
     export AGENT_BUS_STATE_DIR="${AGENT_BUS_STATE_DIR:-$HOME/Library/Application Support/youchu-agent-bus/state}"
     export DC_PLATFORM_JSON="${DC_PLATFORM_JSON:-${WORKSPACE}/.claude/database/dc-platform.json}"
-    # 限制体积：保留标题说明 + 最多 8 条未结（旧积压不占满冷启动）
+    # 已处理且无回复的旧单不进启动包。未结最多 3 条。
     python3 "${OPEN_PY}" --markdown 2>/dev/null | awk '
       BEGIN { rows=0 }
+      /processed无reply/ { next }
       /^\| bus \|/ { print; next }
       /^\|[-| ]+\|$/ { print; next }
       /^\|/ {
-        if (rows < 8) { print; rows++ }
-        else if (rows == 8) { print "| … | … | _更多未结见 agent-bus-open.sh；此处已截断_ |"; rows++ }
+        if (rows < 3) { print; rows++ }
+        else if (rows == 3) { print "| … | … | _更早的未结用 agent-bus-open.sh_ |"; rows++ }
         next
       }
       { print }
@@ -83,20 +84,16 @@ _hook_for() {
     echo ""
   fi
 
-  # ── A. PINNED 红线（全量硬注入）──
-  echo "## A. 红线 pinned（必读）"
+  # ── A. 规则不在启动时注入，做到再查 ──
+  echo "## A. 规则（启动不读全文）"
   echo ""
-  if [[ -f "${PINNED_FILE}" ]]; then
-    # 跳过标题/引用说明，保留编号条目
-    awk '
-      /^# / { next }
-      /^>/ { next }
-      /^$/ { next }
-      /^[0-9]+\./ { print; c++; if (c>=30) exit }
-    ' "${PINNED_FILE}"
-  else
-    echo "_缺少 PINNED.md_"
-  fi
+  echo "做到哪件事，再查对应规则。启动包不放红线和经验正文。"
+  echo ""
+  echo "\`\`\`bash"
+  echo "bash ~/.dc-platform/scripts/lookup-rules.sh 关键词"
+  echo "\`\`\`"
+  echo ""
+  echo "红线在 \`PINNED.md\` 和 \`pinned/*.md\`。经验在 \`lessons/_index.md\`。聊天需求和讨论在 \`group_chat/reference.md\`。同一条命令一起查，每次每类最多 8 条。"
   echo ""
 
   # ── B. 未结交接 MEMORY_OPEN（全文，目标 ≤3KB）──
@@ -108,8 +105,8 @@ _hook_for() {
       echo "> ⚠️ OPEN 当前 ${open_bytes}B > 3KB，请删已结项后再依赖全文注入。"
       echo ""
     fi
-    # 去掉一级标题避免重复
-    awk 'NR==1 && /^# /{next} {print}' "${OPEN_FILE}"
+    # 已结段落不进启动包
+    awk 'NR==1 && /^# /{next} /^## 已结/{skip=1; next} /^## /{skip=0} skip{next} {print}' "${OPEN_FILE}"
   else
     echo "_缺少 MEMORY_OPEN.md（请建未结便条）_"
   fi
@@ -137,63 +134,20 @@ _hook_for() {
         base=$(basename "${f}")
         hook=$(_hook_for "${f}")
         echo "| ${when} | \`${base}\` | ${hook} |"
-      done
+      done || true
   echo ""
   echo "_打开≠用了；真改做法后再强化热度。深读用 tags / MCP。_"
   echo ""
 
-  # ── D. hot / high：仅标题+一行，上限 12（不再灌「正确做法」全文）──
-  echo "## D. 高优先级标题（severity: high · 最多 12 条摘要）"
+  # ── D. 高优先级与经验索引：启动不展开，按任务查 ──
+  echo "## D. 规则入口"
   echo ""
-  high_count=0
-  if [[ -d "${LESSONS_DIR}" ]]; then
-    while IFS= read -r f; do
-      [[ -f "${f}" ]] || continue
-      if grep -q 'severity: high' "${f}" 2>/dev/null; then
-        title=$(grep -m1 '^# ' "${f}" 2>/dev/null | sed 's/^# //' || basename "${f}")
-        hook=$(_hook_for "${f}")
-        echo "- **${title}** — ${hook}"
-        echo "  📄 \`${f#${HOME}/}\`"
-        high_count=$((high_count + 1))
-        [[ "${high_count}" -ge 12 ]] && break
-      fi
-    done < <(find "${LESSONS_DIR}" -maxdepth 1 -name '*.md' ! -name '_*.md' -print 2>/dev/null | sort -r)
-  fi
-  [[ "${high_count}" -eq 0 ]] && echo "_（暂无 severity: high 的 lesson）_"
+  echo "高优先级经验和历史索引不在启动时展开。做事时用上一节的 \`lookup-rules.sh\`。"
   echo ""
 
-  # ── E. lessons 索引速览（只取最近表头 15 行）──
-  echo "## E. lessons 索引速览（最近 15 行）"
+  echo "## F. 会话记录"
   echo ""
-  if [[ -f "${LESSONS_DIR}/_index.md" ]]; then
-    echo "| 日期 | 标题 | tags | 一句话 |"
-    echo "|------|------|------|--------|"
-    awk 'NR>3 && /^\|/' "${LESSONS_DIR}/_index.md" 2>/dev/null | head -15 || true
-    echo ""
-    echo "📄 完整：\`~/.dc-platform/memory/lessons/_index.md\`"
-  else
-    echo "_lessons/_index.md 不存在_"
-  fi
-  echo ""
-
-  # ── F. 活跃 Dev Session（摘要）──
-  echo "## F. 活跃 Dev Session"
-  echo ""
-  session_count=0
-  if [[ -f "${REGISTRY}" ]]; then
-    while IFS= read -r rel; do
-      [[ -n "${rel}" ]] || continue
-      mem="${WORKSPACE}/${rel}/memory.md"
-      if [[ -f "${mem}" ]]; then
-        echo "### ${rel}"
-        grep -E '^## |^- [0-9]{4}-' "${mem}" 2>/dev/null | head -8 || head -8 "${mem}"
-        echo ""
-        session_count=$((session_count + 1))
-        [[ "${session_count}" -ge 5 ]] && break
-      fi
-    done < <(grep 'path:' "${REGISTRY}" 2>/dev/null | sed 's/.*path: *//' | tr -d ' "')
-  fi
-  [[ "${session_count}" -eq 0 ]] && echo "_无活跃 session memory.md_"
+  echo "做到哪个 session，再读那个目录的 \`memory.md\`。启动不展开。"
   echo ""
 
   # ── G. 深读入口（不灌全量 MEMORY 行）──

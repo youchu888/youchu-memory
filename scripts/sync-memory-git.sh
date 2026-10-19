@@ -27,7 +27,7 @@ fi
 # 记忆冷启动/周清理/OneHR 打卡：仓内 canonical → 运行时 ~/.dc-platform/scripts
 RUNTIME_SCRIPTS="${HOME}/.dc-platform/scripts"
 mkdir -p "$RUNTIME_SCRIPTS" "$RUNTIME_SCRIPTS/docs"
-for s in load-memory-context.sh memory_weekly_hygiene.sh \
+for s in load-memory-context.sh lookup-rules.sh memory_weekly_hygiene.sh \
   onehr_punch_calendar.py \
   onehr_checkin_auto.py onehr_checkin_scheduler.py onehr_checkin_run.sh \
   onehr_telegram_devices_screenshot.sh onehr_tg_window_info.swift \
@@ -47,6 +47,30 @@ for s in load-memory-context.sh memory_weekly_hygiene.sh \
     fi
   fi
 done
+
+# 旧机拉下记忆仓后，把聊天学习和启动规则铺到本机对应位置。源文件较新才覆盖。
+CHCODE_ROOT="${CHCODE_ROOT:-$HOME/Desktop/CHcode}"
+_install_newer() {
+  local src="$1" dst="$2"
+  [[ -f "$src" ]] || return 0
+  mkdir -p "$(dirname "$dst")"
+  if [[ ! -f "$dst" || "$src" -nt "$dst" ]]; then
+    cp -f "$src" "$dst"
+  fi
+}
+_install_newer "$MEM/scripts/host-sync/daily_group_chat_learn.py" \
+  "$CHCODE_ROOT/omdb/tgbot/scripts/daily_group_chat_learn.py"
+_install_newer "$MEM/scripts/host-sync/group_message_capture.py" \
+  "$CHCODE_ROOT/omdb/tgbot/group_message_capture.py"
+_install_newer "$MEM/scripts/host-sync/worker_ant_dispatch_watcher.py" \
+  "$CHCODE_ROOT/omdb/tgbot/worker_ant_dispatch_watcher.py"
+_install_newer "$MEM/scripts/host-sync/you-chu-agent.mdc" \
+  "$CHCODE_ROOT/.cursor/rules/you-chu-agent.mdc"
+_install_newer "$MEM/scripts/host-sync/append-only-confirm-before-edit.mdc" \
+  "$CHCODE_ROOT/.cursor/rules/append-only-confirm-before-edit.mdc"
+_install_newer "$MEM/scripts/host-sync/bootstrap-memory-SKILL.md" \
+  "$CHCODE_ROOT/.cursor/skills/bootstrap-memory/SKILL.md"
+
 for doc in onehr_checkin_auto.md onehr_checkin_old_mac_setup.md memory_git_sync.md; do
   src="$MEM/scripts/docs/$doc"
   dst="$RUNTIME_SCRIPTS/docs/$doc"

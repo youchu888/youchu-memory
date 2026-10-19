@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [聊天参考按关键词查，启动不读全文](lessons/2026-10-19-聊天参考按关键词查-启动不读全文.md) — 私聊需求和讨论写一行
 - [红线原文可以多份，按关键词一起查](lessons/2026-10-19-红线原文可以多份-按关键词一起查.md) — 新红线写入 pinned/
 - [新增不改旧内容，要改先确认](lessons/2026-10-19-新增不改旧内容-要改先确认.md) — 新增只追加
 - [私聊和群一起扫，未做需求与已统一指标都入库](lessons/2026-10-19-私聊和群一起扫-未做需求与已统一指标入库.md) — 02:00 回拉群和私聊
