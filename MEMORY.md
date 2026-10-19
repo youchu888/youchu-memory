@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [新增不改旧内容，要改先确认](lessons/2026-10-19-新增不改旧内容-要改先确认.md) — 新增只追加
 - [私聊和群一起扫，未做需求与已统一指标都入库](lessons/2026-10-19-私聊和群一起扫-未做需求与已统一指标入库.md) — 02:00 回拉群和私聊
 - [周月新增次留不能日人数相加，日表 bitmap 口径 Spark 不能照](lessons/2026-10-17-周月新增次留不能日人数相加-日表-bitmap-口径-spark-不能照搬-mysql-013-.md) — 会话轮换蒸馏
 - [019 停留四列写 0 在实时表未就绪前仅可到 S4，禁止发布替换现网](lessons/2026-10-17-019-停留四列写-0-在实时表未就绪前仅可到-s4-禁止发布替换现网.md) — 会话轮换蒸馏
