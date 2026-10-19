@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 19 2026 agent_session_rotate commi | `~/.dc-platform/memory/lessons/2026-10-19-commit-后默认立即-push-已-push-内容与说明不-retroactive-修改-除.md` | 2026-10-19-commit-后默认立即-push-已-push-内容与说 |
+| ## 10 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等用户明确-改.md` | 2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等 |
+| 00 02 一指 一日 不删 与私 | `sessions/tg-rotate-2026-10-19-1607.md` | 每日 02:00 扫前一日群聊与私聊；未完成需求记入未做清单，完成只改状态不删行 |
+| 1–30 31 pinned pinned.md 写到 新红 | `sessions/tg-rotate-2026-10-19-1607.md` | `PINNED.md` 第 1–30 条不动；新红线写到 `pinned/`，编 |
+| 「改 」再 不删 不改 先说 内容 | `sessions/tg-rotate-2026-10-19-1607.md` | 记忆/规则写入：新内容直接追加；已有句子、规则、清单不改不删；要改先说明段落，用 |
+| lookup rules.sh 不灌 中后 事时 体事 | `sessions/tg-rotate-2026-10-19-1607.md` | 冷启动不灌规则全文；做到具体事时用 `lookup-rules.sh` 按关键词 |
+| api_v1 commit 不夹 不夹带进 不顺 不顺手改 | `sessions/tg-rotate-2026-10-19-1607.md` | 默认只提交业务目录；平台插件与 `api_v1` 不顺手改、不夹带进 commi |
+| push 「改 」再 一段 不回 与文 | `sessions/tg-rotate-2026-10-19-1607.md` | 已 push 的说明与文件不回头改；若要改已有内容，先说明改哪一段，等用户明确说 |
+| lesson 一轮 不要 不要用旧的提交说明规 不要用旧的提交说明规矩顶上 交及 | `sessions/tg-rotate-2026-10-19-1607.md` | [LESSON: 记忆同步/用户说新规并给出记忆仓提交号时，先看该提交及同一轮同 |
+| 23a56c3a48 38e0dc870a 「提 」顶 一轮 交及 | `sessions/tg-rotate-2026-10-19-1607.md` | 用户给出记忆仓提交号（如 `38e0dc870a`）时，先读该提交及同一轮同步的 |
+| author co commit cursor pre 上的 | `sessions/tg-rotate-2026-10-19-1607.md` | pre-commit 等钩子会去掉自动加上的 Cursor 署名，提交说明里也不 |
+| commit push 「要 不再 不再询问「要不要推」 不要 | `sessions/tg-rotate-2026-10-19-1607.md` | 本地 commit 成功后默认立刻 push 远程，不再询问「要不要推」。 |
+| bu bus diff feat git scope | `sessions/tg-rotate-2026-10-19-1607.md` | 提交说明以当前 `git diff` 为准：可保留 `feat(scope):` |
 | upload 「按 上传 不是 不是重新生成或改写日报正文 个上 | `sessions/tg-rotate-2026-10-17-2007.md` | 私聊「按你这个上传云端」= 走既有 upload 流程，不是重新生成或改写日报正 |
 | id record 「正 写明 对用 尾对 | `sessions/tg-rotate-2026-10-17-2007.md` | 收尾对用户：报日期、record id、状态、稿路径，并写明「正文未改」。 |
 | api code id inserted record 一般 | `sessions/tg-rotate-2026-10-17-2007.md` | 成功标准：API `code=0`，响应里可见 record id 与 `ins |
@@ -32,16 +45,3 @@
 | #1 05 1%～3%） 10 181 24 | `sessions/tg-rotate-2026-10-17-0936.md` | **知秋口径（bus#10595）**：测试湖归因结果表**不必**为看板去补数 |
 | 0」 paimon.dws.dws_register_attrib paimon | `sessions/tg-rotate-2026-10-17-0936.md` | 测试里看板影子表「渠道/入围有数、候选/成功为 0」，且 `paimon.dws |
 | 006 04 20261016 attr_board dev ff065da7 | `sessions/tg-rotate-2026-10-17-0936.md` | 归因看板 `dev-20261016-006`：新建线 `attr_board` |
-| 14 ar k（ pa rk sp | `sessions/tg-rotate-2026-10-17-0936.md` | 批量迁 Spark（如 14 张）若平台仍停在 stage 1、测试五步未点过， |
-| dc dmp parent 产发 前置 发布 | `sessions/tg-rotate-2026-10-17-0936.md` | 生产发布前置：平台账号 + 对 `dmp/dc-parent` 的推送权限。 |
-| 不能 五步 产五 人放 会话 发不 | `sessions/tg-rotate-2026-10-17-0936.md` | **生产五步**：确认编排 → 建表 → 部署 → 补数 → 登记完成；须管理员 |
-| paimon 一天 一般 一般要求写出 五步 任务 | `sessions/tg-rotate-2026-10-17-0936.md` | **测试五步**：推代码 → 建表 → 挂调度 → 跑一天验出数 → 定起点补数 |
-| .0 .1 0. 0.0.135）按会话走完 13 35 | `sessions/tg-rotate-2026-10-17-0936.md` | Spark 发布卡点已解：测试、生产均可在开发平台插件（约 0.0.135）按会 |
-| 60 ack agent blocker bus lesson | `sessions/tg-rotate-2026-10-17-0936.md` | [LESSON: agent-bus/spark-blocker] 测试与生产量 |
-| attribution dev dwd lesson migrate paimo | `sessions/tg-rotate-2026-10-17-0936.md` | [LESSON: spark-migrate/dev-platform/attr |
-| stage 「无 」等 一空 下游 依赖 | `sessions/tg-rotate-2026-10-17-0936.md` | 依赖同一空归因结果表的「无候选原因」等下游，应等口径/阻塞项明确后再推，勿并行空 |
-| #1 05 1%～3%） 10 181 24 | `sessions/tg-rotate-2026-10-17-0936.md` | 知秋口径（bus#10595）**：测试湖归因结果表**不必**为看板去补数；测 |
-| ## 10 15 2026 agent_session_rotate ant | `~/.dc-platform/memory/lessons/2026-10-15-群聊学习任务消息量异常偏少时-默认改为读取所有群的全量消息-不要沿用-抽样-单群-习惯.md` | 2026-10-15-群聊学习任务消息量异常偏少时-默认改为读取所有群的全量消息 |
-| ## 10 15 2026 agent_session_rotate bot | `~/.dc-platform/memory/lessons/2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口内有无回执-无回执-脚本超时-有-ti.md` | 2026-10-15-vpn-同步失败先查-tg-机器人在-request-窗口 |
-| pn vp 「v 「为 为什 主人 | `sessions/tg-rotate-2026-10-15-0935.md` | 主人问「为什么会失败」：用**时间线 + 机器人原文 + 脚本超时阈值**回答， |
-| 24 三要 与导 书到 书有 京时 | `sessions/tg-rotate-2026-10-15-0935.md` | 续期结果应对外报三要素：**配置名、导入时间（北京时间）、新证书到期时间**；证 |

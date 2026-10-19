@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [commit 后默认立即 push；已 push 内容与说明不 retr](lessons/2026-10-19-commit-后默认立即-push-已-push-内容与说明不-retroactive-修改-除.md) — 会话轮换蒸馏
+- [已有 PINNED/规则清单默认只追加；改删须先指段落并等用户明确「改」](lessons/2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等用户明确-改.md) — 会话轮换蒸馏
 - [聊天参考按关键词查，启动不读全文](lessons/2026-10-19-聊天参考按关键词查-启动不读全文.md) — 私聊需求和讨论写一行
 - [红线原文可以多份，按关键词一起查](lessons/2026-10-19-红线原文可以多份-按关键词一起查.md) — 新红线写入 pinned/
 - [新增不改旧内容，要改先确认](lessons/2026-10-19-新增不改旧内容-要改先确认.md) — 新增只追加
