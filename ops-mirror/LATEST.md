@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-20 20:41:01 +0800
+> 更新: 2026-10-20 20:43:54 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-20.md`
 
@@ -20,3 +20,4 @@
 | 2026-10-20 12:15 | 私聊#567 | telegram_dm | completed | ok 开始吧 |
 | 2026-10-20 16:09 | 私聊#568 | telegram_dm | completed | dim.dim_channel_info_all 要同步这个表 |
 | 2026-10-20 17:00 | 私聊#569 | telegram_dm | completed | 同步渠道维表什么进度现在？完成的话，代码提交 |
+| 2026-10-20 20:42 | 群派单#256 | worker_ant_group | completed | 已回 bus#10805：S5 验证送 SQL 到生产调度器被今天的生产写闸(5405320b)一起封了，开发者开 S5 面板也会 403。不是操作问题，也别绕 |
