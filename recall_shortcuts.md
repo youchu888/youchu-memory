@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 20 2026 agent_session_rotate co | `~/.dc-platform/memory/lessons/2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-wip-再提交-避免-dim-同步-co.md` | 2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-w |
+| ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-dim-prod-sr-维表-0-行时-paimon-空-snap_dt-分区先判源表是否真无数.md` | 2026-10-20-dim-prod-sr-维表-0-行时-paimon-空- |
+| ## 10 20 2026 844c4baf agent_session_rot | `~/.dc-platform/memory/lessons/2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-dim_app_info_all-的-dt.md` | 2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-di |
+| commit dd5738d4 dim push sr→paimon 交付 | `sessions/tg-rotate-2026-10-20-1708.md` | 用户明确要求再 **commit/push**；交付 commit 例 **`d |
+| 20 etl prod sr test 例行 | `sessions/tg-rotate-2026-10-20-1708.md` | test SR 有样例行（如约 20 行）可验逻辑；**prod SR 当前 0 |
+| paimon session test 人） 切分 又初 | `sessions/tg-rotate-2026-10-20-1708.md` | **职责切分**：又初 = session + 同步稿 + test 可对账材料 |
+| 001 20261020 dbprogramming dev session s | `sessions/tg-rotate-2026-10-20-1708.md` | 新链路 **`dbprogramming` 须建 dev session**（例 |
+| ar dt in jo k（ oi | `sessions/tg-rotate-2026-10-20-1708.md` | 下游 Spark（渠道周/月/部门等）JOIN 维表时统一 **`WHERE s |
+| creat created_at paimon sql sr sr_dim_ch | `sessions/tg-rotate-2026-10-20-1708.md` | 同步 SQL 结构：**`timer` + `srViews`**（如 `sr_ |
+| 00 create ddl etl full_chain insert | `sessions/tg-rotate-2026-10-20-1708.md` | **ETL 只做 `INSERT OVERWRITE` 当天分区**，不在 ET |
+| 844c4baf bus#10789 commit dim_channel_in | `sessions/tg-rotate-2026-10-20-1708.md` | 样板链：bus#10789 / commit **`844c4baf`**（测试 |
+| dim.dim_channel_info_all dim_chann dim_c | `sessions/tg-rotate-2026-10-20-1708.md` | `dim.dim_channel_info_all` 无 `dt`，Paimon |
+| by dim_app_info_all dt paimon partitione | `sessions/tg-rotate-2026-10-20-1708.md` | SR 维表同步 Paimon 先分两类：源表**自带按日 `dt` 全量**→照 |
+| datacheck dim lesson paimon prod snap_dt | `sessions/tg-rotate-2026-10-20-1708.md` | [LESSON: datacheck/dim/prod SR 维表 0 行时 P |
+| 844c4baf dim dim_app_in dim_app_info_all | `sessions/tg-rotate-2026-10-20-1708.md` | [LESSON: spark_migrate/dim/paimon/SR 维表无 |
 | ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖或已有-spark-续作的-sessi.md` | 2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖 |
 | ## 10 20 2026 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先商量-未迁完-dwd-读明细任务前禁止.md` | 2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先 |
 | ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清单为准判是否发版-并对照同批-task.md` | 2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清 |
@@ -30,18 +45,3 @@
 | 「上 「生 」分 」时 上传 不重 | `sessions/tg-rotate-2026-10-19-2208.md` | 用户说「上传云端」时，与「生成日报」分离：只跑上传脚本，不重写、不重新汇总正文。 |
 | id」 tg 「已 上传 不要 保持 | `sessions/tg-rotate-2026-10-19-2208.md` | 对话收尾保持简短：确认「已上传 + 日期 + 记录 ID」，**不要**再贴完整 |
 | markdown 「顺 」后 上传 上传必须 不动 | `sessions/tg-rotate-2026-10-19-2208.md` | 上传必须**原封不动**提交 Markdown；禁止「顺手润色、补条、改格式」后 |
-| ## 10 19 2026 agent_session_rotate commi | `~/.dc-platform/memory/lessons/2026-10-19-commit-后默认立即-push-已-push-内容与说明不-retroactive-修改-除.md` | 2026-10-19-commit-后默认立即-push-已-push-内容与说 |
-| ## 10 19 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等用户明确-改.md` | 2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等 |
-| 00 02 一指 一日 不删 与私 | `sessions/tg-rotate-2026-10-19-1607.md` | 每日 02:00 扫前一日群聊与私聊；未完成需求记入未做清单，完成只改状态不删行 |
-| 1–30 31 pinned pinned.md 写到 新红 | `sessions/tg-rotate-2026-10-19-1607.md` | `PINNED.md` 第 1–30 条不动；新红线写到 `pinned/`，编 |
-| 「改 」再 不删 不改 先说 内容 | `sessions/tg-rotate-2026-10-19-1607.md` | 记忆/规则写入：新内容直接追加；已有句子、规则、清单不改不删；要改先说明段落，用 |
-| lookup rules.sh 不灌 中后 事时 体事 | `sessions/tg-rotate-2026-10-19-1607.md` | 冷启动不灌规则全文；做到具体事时用 `lookup-rules.sh` 按关键词 |
-| api_v1 commit 不夹 不夹带进 不顺 不顺手改 | `sessions/tg-rotate-2026-10-19-1607.md` | 默认只提交业务目录；平台插件与 `api_v1` 不顺手改、不夹带进 commi |
-| push 「改 」再 一段 不回 与文 | `sessions/tg-rotate-2026-10-19-1607.md` | 已 push 的说明与文件不回头改；若要改已有内容，先说明改哪一段，等用户明确说 |
-| lesson 一轮 不要 不要用旧的提交说明规 不要用旧的提交说明规矩顶上 交及 | `sessions/tg-rotate-2026-10-19-1607.md` | [LESSON: 记忆同步/用户说新规并给出记忆仓提交号时，先看该提交及同一轮同 |
-| 23a56c3a48 38e0dc870a 「提 」顶 一轮 交及 | `sessions/tg-rotate-2026-10-19-1607.md` | 用户给出记忆仓提交号（如 `38e0dc870a`）时，先读该提交及同一轮同步的 |
-| author co commit cursor pre 上的 | `sessions/tg-rotate-2026-10-19-1607.md` | pre-commit 等钩子会去掉自动加上的 Cursor 署名，提交说明里也不 |
-| commit push 「要 不再 不再询问「要不要推」 不要 | `sessions/tg-rotate-2026-10-19-1607.md` | 本地 commit 成功后默认立刻 push 远程，不再询问「要不要推」。 |
-| bu bus diff feat git scope | `sessions/tg-rotate-2026-10-19-1607.md` | 提交说明以当前 `git diff` 为准：可保留 `feat(scope):` |
-| upload 「按 上传 不是 不是重新生成或改写日报正文 个上 | `sessions/tg-rotate-2026-10-17-2007.md` | 私聊「按你这个上传云端」= 走既有 upload 流程，不是重新生成或改写日报正 |
-| id record 「正 写明 对用 尾对 | `sessions/tg-rotate-2026-10-17-2007.md` | 收尾对用户：报日期、record id、状态、稿路径，并写明「正文未改」。 |

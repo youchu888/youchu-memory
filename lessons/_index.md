@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-20 | [commit|多任务并行 stash 冲突时先剥离无关 WIP 再提交，避免 d](./2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-wip-再提交-避免-dim-同步-co.md) | git,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-20 | [dim|prod SR 维表 0 行时 Paimon 空 snap_dt 分区先](./2026-10-20-dim-prod-sr-维表-0-行时-paimon-空-snap_dt-分区先判源表是否真无数.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-20 | [dim|paimon|SR 维表无 dt 列时禁止抄 dim_app_info_](./2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-dim_app_info_all-的-dt.md) | spark_migrate,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [海豚待发布撤回后统一 Spark 化重走七步；被新版本覆盖或已有 Spark 续](./2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖或已有-spark-续作的-sessi.md) | dev-session,dolphin-withdraw,spark,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [视频 ADS/日报改源优先 dwm 用户视频中间表，缺列先商量；未迁完 dwd ](./2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先商量-未迁完-dwd-读明细任务前禁止.md) | video-migration,paimon,dwd,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [表上新列但任务不写时，以海豚 live INSERT 列清单为准判是否发版，并对](./2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清单为准判是否发版-并对照同批-task.md) | datacheck,dolphin,ddl-etl-gap,session-rotate | 会话轮换前自动蒸馏 |
