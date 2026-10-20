@@ -404,3 +404,4 @@
 - [2026-09-23] vpn /request 失败占冷却致假成功 → `2026-09-23-vpn-request-fail-poison-cooldown.md`
 - 2026-09-23-vpn-renew-deadlock-cham-connect.md — VPN续期死结用变色龙点「点击连接」通外网再续期（非向日葵）
 | 2026-09-30 | SR LEAST DATE/DATETIME 次留全0 | `2026-09-30-sr-least-date-datetime-retention-zero.md` | starrocks,retention |
+| 2026-10-21 | [渠道推广周/月禁测试同步生产单推未发版SQL](./2026-10-21-channel-promotion-禁止测试同步生产单推未发版SQL.md) | ads_channel_promotion_summary, publish, dept_code | bus#10874 回滚到10-09 |

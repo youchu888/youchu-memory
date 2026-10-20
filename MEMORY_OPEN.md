@@ -8,7 +8,7 @@
 
 - [ ] **dim_channel_info_all_snap**（#10789 更正）：目标表 `paimon.dim.dim_channel_info_all_snap`；DDL 交狂人；ETL 无 CREATE。旧「无 _snap 表名」稿作废。
 - [ ] **dim_channel_info_all 日快照同步**：session `dev-20261020-001`；SQL/DDL/step 已齐（#10786 snap_dt）；**待**：狂人建 paimon 表+挂 00 槽 timer、沙箱对账；prod SR 现 0 行。
-- [ ] **渠道报表周/月表**：session `dev-20260929-001`(周) / `dev-20260929-002`(月)；test 已加 dept 列并重跑 2026-09-28（渠道维表暂空故 dept 空）；**待**：stage4 挂海豚+playbook 勾完、补 4～9 月、prod。
+- [ ] **渠道报表周/月表**：prod 海豚已回滚到 **10-09 版**（bus#10874：10-20「测试同步生产」误推未发版含 dept_code SQL→日报表挂 20 task）。新版须 **S6/S7+生产改表同批**，禁再测同生产单推。海豚会话 `dev-20260929-001/002`；Spark `dev-20261016-016` 仍 S5/HOLD。**待**：走完发布再上产。
 - [ ] **大漏斗优化停**。缓存 85 分钟、先按人聚合 75 分钟，都比基线 66 分钟慢。单扫试验 A 已取消（INSERT 未完成提交）。集群 SQL 已收回最初版。test SR 基线未覆盖。沙箱 Paimon 仍是试验 B 的数，要回到最初版需重跑，未开。（**注**：事件漏斗最新口径已发产、验收、补数完成；此项仅指性能试验，勿写成「漏斗未上线」。）
 - [ ] **指标库（先 test 后 prod）**：隧道已通。`ubuntu@43.213.80.248` → MySQL `13306`、平台 `18012`。test 真库 published **658**；API `metric-library/concepts` 200。入口 `http://127.0.0.1:18012`；凭证 `~/.dc-platform/config/test-platform.env`；`ensure-test-platform-tunnels.sh`。**待**：MCP/`metric__search` 改指 test + 切读 concept（现仍打 standards）。prod HOLD。
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；沙箱真跑 DONE（约 1.43 亿）；dim/宽表链仍 HOLD，勿并 full_chain。
