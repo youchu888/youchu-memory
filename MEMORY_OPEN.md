@@ -6,7 +6,6 @@
 
 ## 进行中
 
-- [ ] **S5 写闸 HOLD（5405320b）**：`dev-20261016-008`～`012`、`019` 停 S5；禁另路 verify；S4/写 SQL 照常；等知秋定「开发者放开 vs 管理员代送」（bus#10808）。
 - [ ] **dim_channel_info_all_snap**（#10789 更正）：目标表 `paimon.dim.dim_channel_info_all_snap`；DDL 交狂人；ETL 无 CREATE。旧「无 _snap 表名」稿作废。
 - [ ] **dim_channel_info_all 日快照同步**：session `dev-20261020-001`；SQL/DDL/step 已齐（#10786 snap_dt）；**待**：狂人建 paimon 表+挂 00 槽 timer、沙箱对账；prod SR 现 0 行。
 - [ ] **渠道报表周/月表**：session `dev-20260929-001`(周) / `dev-20260929-002`(月)；test 已加 dept 列并重跑 2026-09-28（渠道维表暂空故 dept 空）；**待**：stage4 挂海豚+playbook 勾完、补 4～9 月、prod。
