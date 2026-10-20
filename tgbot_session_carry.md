@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-10-20 · 最新归档：`sessions/tg-rotate-2026-10-20-1708.md`
+> 更新：2026-10-20 · 最新归档：`sessions/tg-rotate-2026-10-20-2308.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 主人说「上传云端」时：以当日已定稿 `reports/日报-YYYY-MM-DD.md` 为准，**改字后再传**；未指定日期用当天。
+- agent-bus `mode=work`：同一 Cursor 主会话处理，**60 秒内先 ACK**，干完再 **reply** 才结案；reply 成功前不要 `mark_processed`。
+- S5 开放后的执行姿态：在平台内对指定 session **自己做 S5**，不要另找绕路（test 假跑、手改 prod 等）。
+- [LESSON: dev-platform|S5|stage5|prod-dryrun|知秋定案|2026-10-20|008-012|019|开发者可在生产调度器自送 SQL 跑 S5；禁止覆盖生产在跑步正在用的 SQL 文件；申请发布须 S1～S6 全部完成]
+- [LESSON: agent-bus|ack|silent|no-dedup|ACK 可能被 silent 丢弃时用 --no-dedup 重发；结案与对账以 reply 为准，勿因 ACK 未镜像而重复整单]
+- 上传前先确认本地定稿文件存在，再跑 `python3 .cursor/scripts/upload_work_report.py --date YYYY-MM-DD`。
+- 上传成功以 API 回执为准（如 `status=inserted`、记录 ID）；对话里报结果即可，不必再贴全文（防与 TG 双份）。
+- ACK 可能被服务端 **silent 吞掉**（去重/静默策略）；若需确保对方看到，可用 `agent_bus_send.py --no-dedup` 重发 ACK，**以 reply 为结案依据**。
+- 平台政策类派单：除 reply 外应同步 **MEMORY_OPEN**（删过时 HOLD/闸）并 **增补 lesson**，避免下次仍按旧闸执行。
+- **S5 生产验证已对开发者开放**（知秋定案，约 2026-10-20 22:3x 北京）：相关 session（摘录中为 008～012、019）可自行把 SQL 送到**生产调度器**跑 S5。
+- S5 唯一硬限制：**生产正在跑的那一步所引用的 SQL 文件不可覆盖**；平台会提示走正式发布，不能硬改在用文件。
+- 申请发布新规矩：**S1～S6 全部完成**后才能申请发布（与 S5 开放并行，提审前仍要齐 stage 产物）。
 - [LESSON: spark_migrate|dim|paimon|SR 维表无 dt 列时禁止抄 dim_app_info_all 的 dt 分区，改用 *_snap + snap_dt=${DT}，并对齐 844c4baf/_snap 样板]
 - [LESSON: datacheck|dim|prod SR 维表 0 行时 Paimon 空 snap_dt 分区先判源表是否真无数据，勿当同步逻辑故障]
 - SR 维表同步 Paimon 先分两类：源表**自带按日 `dt` 全量**→照 `dim_app_info_all`（`PARTITIONED BY (dt)`，只搬 `dt=${DT}`）；源表**无 `dt`、会变配置**→照 `*_snap`（`snap_dt=${DT}` 日快照留历史）。
 - `dim.dim_channel_info_all` 无 `dt`，Paimon 表名/口径用 **`dim_channel_info_all_snap`**，分区 **`snap_dt`**，主键 **`(snap_dt, id)`**。
 - 样板链：bus#10789 / commit **`844c4baf`**（测试集群已跑通）；渠道维对齐后落 **`ops_system/spark_migrate/dim_channel_info_all/`**（DDL / ETL / step / 文档）。
 - **ETL 只做 `INSERT OVERWRITE` 当天分区**，不在 ETL 里 `CREATE`；建表 DDL 单独文件，交集群侧建表、挂 **`full_chain` 00 槽 timer**。
-- 同步 SQL 结构：**`timer` + `srViews`**（如 `sr_dim_channel`）；`created_at` / `updated_at` 从 SR 读出后 **减 8 小时** 再写入 Paimon。
-- 下游 Spark（渠道周/月/部门等）JOIN 维表时统一 **`WHERE snap_dt = '${DT}'`**，与快照分区一致。
-- 新链路 **`dbprogramming` 须建 dev session**（例 `dev-20261020-001`），本地产物与平台 session 同步推进，不单机搓 SQL。
-- **职责切分**：又初 = session + 同步稿 + test 可对账材料；**建 Paimon 表 / 挂编排 / 灌种 / 沙箱对账** 归知秋（狂人）侧。
-- test SR 有样例行（如约 20 行）可验逻辑；**prod SR 当前 0 行** → 同步写出**空分区属源空**，部门等列空≠ ETL 写错。
-- 用户明确要求再 **commit/push**；交付 commit 例 **`dd5738d4`**（feat(dim): 渠道维表 SR→Paimon 日快照同步稿）。
-- 提交前若 **stash 与无关 WIP（如广告层）冲突**，先还原无关改动，只推本任务目录，避免混进别的 diff。
-- agent-bus：**60s 内 ACK**，干完 **reply 结案**；ACK 偶发 silent 丢包时，以带实质内容的 **reply**（如 #10790）为准。
-- 列有、任务不写**：先四路对照——表结构（test/prod）、仓库 SQL/DDL、海豚 live SQL、同批相邻 task；常见根因是 **DDL 已落、含新列 ETL 未发 live**，不是「仓库没写」。
-- session MCP 写 stage 失败**：用开发平台 **`PUT …/full` 合并 state** 再提审，勿空标 stage。
-- 渠道日指标 P0**：`ads_channel_metrics_daily_d`（`wf_ads_日报表_日` / `dev-20261016-013`）提前；视频段从 dwd 改为读 behavior 宽表，影子验证 PASS 再切。
-- [LESSON: video-migration,paimon,dwd|视频 ADS/日报改源优先 dwm 用户视频中间表，缺列先商量；未迁完 dwd 读明细任务前禁止停拆事件慢 task。]
 

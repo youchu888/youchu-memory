@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-20 | [ack|silent|no-dedup|ACK 可能被 silent 丢弃时用 ](./2026-10-20-ack-silent-no-dedup-ack-可能被-silent-丢弃时用-no-dedup.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-20 | [S5|stage5|prod-dryrun|知秋定案|2026-10-20|00](./2026-10-20-s5-stage5-prod-dryrun-知秋定案-2026-10-20-008-012-01.md) | dev-platform,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [S5 验证送 SQL 被生产写闸连带封禁（5405320b）](./2026-10-20-s5-prod-write-gate-5405320b.md) | stage5,prod-write-gate | 知秋已放开 S5 验证（#10816）；在跑 SQL 不可覆盖；须 S1~S6 齐才能申请发布 |
 | 2026-10-20 | [commit|多任务并行 stash 冲突时先剥离无关 WIP 再提交，避免 d](./2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-wip-再提交-避免-dim-同步-co.md) | git,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [dim|prod SR 维表 0 行时 Paimon 空 snap_dt 分区先](./2026-10-20-dim-prod-sr-维表-0-行时-paimon-空-snap_dt-分区先判源表是否真无数.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |

@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 20 2026 ack agent | `~/.dc-platform/memory/lessons/2026-10-20-ack-silent-no-dedup-ack-可能被-silent-丢弃时用-no-dedup.md` | 2026-10-20-ack-silent-no-dedup-ack-可能被-s |
+| ## 008 01 012 019 10 | `~/.dc-platform/memory/lessons/2026-10-20-s5-stage5-prod-dryrun-知秋定案-2026-10-20-008-012-01.md` | 2026-10-20-s5-stage5-prod-dryrun-知秋定案-20 |
+| s1～s6 s5 stage 产物） 仍要 全部 | `sessions/tg-rotate-2026-10-20-2308.md` | 申请发布新规矩：**S1～S6 全部完成**后才能申请发布（与 S5 开放并行， |
+| s5 sql 一步 一硬 不可 不能 | `sessions/tg-rotate-2026-10-20-2308.md` | S5 唯一硬限制：**生产正在跑的那一步所引用的 SQL 文件不可覆盖**；平台 |
+| 008～012 01 019）可自行把 10 19 20 | `sessions/tg-rotate-2026-10-20-2308.md` | **S5 生产验证已对开发者开放**（知秋定案，约 2026-10-20 22: |
+| hold lesso lesson memory_open reply 下次 | `sessions/tg-rotate-2026-10-20-2308.md` | 平台政策类派单：除 reply 外应同步 **MEMORY_OPEN**（删过时 |
+| ack agent_bus_sen agent_bus_send.py dedu | `sessions/tg-rotate-2026-10-20-2308.md` | ACK 可能被服务端 **silent 吞掉**（去重/静默策略）；若需确保对方 |
+| api id） inserted status tg 上传 | `sessions/tg-rotate-2026-10-20-2308.md` | 上传成功以 API 回执为准（如 `status=inserted`、记录 ID |
+| .cursor date dd mm python3 scripts | `sessions/tg-rotate-2026-10-20-2308.md` | 上传前先确认本地定稿文件存在，再跑 `python3 .cursor/scrip |
+| ack agent bus dedup lesson no | `sessions/tg-rotate-2026-10-20-2308.md` | [LESSON: agent-bus/ack/silent/no-dedup/A |
+| 008 012 019 10 20 2026 | `sessions/tg-rotate-2026-10-20-2308.md` | [LESSON: dev-platform/S5/stage5/prod-dry |
+| es pro prod s5 session st | `sessions/tg-rotate-2026-10-20-2308.md` | S5 开放后的执行姿态：在平台内对指定 session **自己做 S5**，不 |
+| 60 ack agent bus cursor mark_processed | `sessions/tg-rotate-2026-10-20-2308.md` | agent-bus `mode=work`：同一 Cursor 主会话处理，** |
+| dd.md mm reports yyyy 「上 」时 | `sessions/tg-rotate-2026-10-20-2308.md` | 主人说「上传云端」时：以当日已定稿 `reports/日报-YYYY-MM-DD |
 | ## 10 20 2026 agent_session_rotate co | `~/.dc-platform/memory/lessons/2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-wip-再提交-避免-dim-同步-co.md` | 2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-w |
 | ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-dim-prod-sr-维表-0-行时-paimon-空-snap_dt-分区先判源表是否真无数.md` | 2026-10-20-dim-prod-sr-维表-0-行时-paimon-空- |
 | ## 10 20 2026 844c4baf agent_session_rot | `~/.dc-platform/memory/lessons/2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-dim_app_info_all-的-dt.md` | 2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-di |
@@ -31,17 +45,3 @@
 | dept_code dim_app_info_all insert join p | `sessions/tg-rotate-2026-10-20-1308.md` | **产品周 `paid_type`**：INSERT 需 `dept_code` |
 | l（ paid_type ql sq sql（例 task | `sessions/tg-rotate-2026-10-20-1308.md` | **半发漏发**：同需求批次里可能只有部分 task 上新 SQL（例：部门周已 |
 | ddl es etl live prod） sql | `sessions/tg-rotate-2026-10-20-1308.md` | **列有、任务不写**：先四路对照——表结构（test/prod）、仓库 SQL |
-| ads dwd dwm lesson migration paimon | `sessions/tg-rotate-2026-10-20-1308.md` | [LESSON: video-migration,paimon,dwd/视频 A |
-| 013 20261016 _a _日 ad ads_channel_metric | `sessions/tg-rotate-2026-10-20-1308.md` | 渠道日指标 P0**：`ads_channel_metrics_daily_d` |
-| full mcp put session stage state | `sessions/tg-rotate-2026-10-20-1308.md` | session MCP 写 stage 失败**：用开发平台 **`PUT …/ |
-| ddl es etl live prod） sql | `sessions/tg-rotate-2026-10-20-1308.md` | 列有、任务不写**：先四路对照——表结构（test/prod）、仓库 SQL/D |
-| bootstrap daily memory_open repor report | `sessions/tg-rotate-2026-10-19-2208.md` | 冷启动仍先读 bootstrap / MEMORY_OPEN，按任务再查规则；上 |
-| g） pr prepare_daily_report_sync sync tg  | `sessions/tg-rotate-2026-10-19-2208.md` | 日报生成链路（双机 sync → 写稿 → 推 TG）与上传云端是**两阶段** |
-| id inserted） 不必 不必写入长期记忆索引 主人 于主 | `sessions/tg-rotate-2026-10-19-2208.md` | 成功回执应包含：**日期**、**记录 ID**、**接口状态**（如 inse |
-| api config） token upload_work_report.py  | `sessions/tg-rotate-2026-10-19-2208.md` | 凭证与 API 走既有脚本（如 `upload_work_report.py`  |
-| asia dd mm shanghai yyyy 定日 | `sessions/tg-rotate-2026-10-19-2208.md` | 未指定日期时默认用 **Asia/Shanghai 当日** `YYYY-MM- |
-| tg 一版 上传 上传前宜对照私聊推送记录 不一致 与定 | `sessions/tg-rotate-2026-10-19-2208.md` | 若当日已推 TG，上传前宜对照私聊推送记录，确认与定稿同一版，避免双机/手改导致 |
-| dd.md memory mm reports yyyy 一正 | `sessions/tg-rotate-2026-10-19-2208.md` | 上传前以本地定稿 `reports/日报-YYYY-MM-DD.md`（或 me |
-| 「上 「生 」分 」时 上传 不重 | `sessions/tg-rotate-2026-10-19-2208.md` | 用户说「上传云端」时，与「生成日报」分离：只跑上传脚本，不重写、不重新汇总正文。 |
-| id」 tg 「已 上传 不要 保持 | `sessions/tg-rotate-2026-10-19-2208.md` | 对话收尾保持简短：确认「已上传 + 日期 + 记录 ID」，**不要**再贴完整 |
-| markdown 「顺 」后 上传 上传必须 不动 | `sessions/tg-rotate-2026-10-19-2208.md` | 上传必须**原封不动**提交 Markdown；禁止「顺手润色、补条、改格式」后 |
