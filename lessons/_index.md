@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-20 | [海豚待发布撤回后统一 Spark 化重走七步；被新版本覆盖或已有 Spark 续](./2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖或已有-spark-续作的-sessi.md) | dev-session,dolphin-withdraw,spark,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-20 | [视频 ADS/日报改源优先 dwm 用户视频中间表，缺列先商量；未迁完 dwd ](./2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先商量-未迁完-dwd-读明细任务前禁止.md) | video-migration,paimon,dwd,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-20 | [表上新列但任务不写时，以海豚 live INSERT 列清单为准判是否发版，并对](./2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清单为准判是否发版-并对照同批-task.md) | datacheck,dolphin,ddl-etl-gap,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-19 | [测试编排合成组要改测试机文件，控制面不能挪组](./2026-10-19-测试编排合成组要改测试机文件-控制面不能挪组.md) | pipeline-runner, test, 编排 | 合并/删组只能改测试机 full_chain.json；控制面不能挪已有步 |
 | 2026-10-19 | [commit 后默认立即 push；已 push 内容与说明不 retroact](./2026-10-19-commit-后默认立即-push-已-push-内容与说明不-retroactive-修改-除.md) | git,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-19 | [已有 PINNED/规则清单默认只追加；改删须先指段落并等用户明确「改」](./2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等用户明确-改.md) | 记忆维护,session-rotate | 会话轮换前自动蒸馏 |

@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [海豚待发布撤回后统一 Spark 化重走七步；被新版本覆盖或已有 Spa](lessons/2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖或已有-spark-续作的-sessi.md) — 会话轮换蒸馏
+- [视频 ADS/日报改源优先 dwm 用户视频中间表，缺列先商量；未迁完 ](lessons/2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先商量-未迁完-dwd-读明细任务前禁止.md) — 会话轮换蒸馏
+- [表上新列但任务不写时，以海豚 live INSERT 列清单为准判是否发](lessons/2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清单为准判是否发版-并对照同批-task.md) — 会话轮换蒸馏
 - [commit 后默认立即 push；已 push 内容与说明不 retr](lessons/2026-10-19-commit-后默认立即-push-已-push-内容与说明不-retroactive-修改-除.md) — 会话轮换蒸馏
 - [已有 PINNED/规则清单默认只追加；改删须先指段落并等用户明确「改」](lessons/2026-10-19-已有-pinned-规则清单默认只追加-改删须先指段落并等用户明确-改.md) — 会话轮换蒸馏
 - [聊天参考按关键词查，启动不读全文](lessons/2026-10-19-聊天参考按关键词查-启动不读全文.md) — 私聊需求和讨论写一行

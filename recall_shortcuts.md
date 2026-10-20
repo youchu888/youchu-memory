@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖或已有-spark-续作的-sessi.md` | 2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖 |
+| ## 10 20 2026 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先商量-未迁完-dwd-读明细任务前禁止.md` | 2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先 |
+| ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清单为准判是否发版-并对照同批-task.md` | 2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清 |
+| 013 20261016 _a _日 ad ads_channel_metric | `sessions/tg-rotate-2026-10-20-1308.md` | **渠道日指标 P0**：`ads_channel_metrics_daily_ |
+| 10 20 dwd dwd.dwd_video_event_h paimon.d | `sessions/tg-rotate-2026-10-20-1308.md` | **视频迁源（10-20 定）**：读 SR `dwd.dwd_video_ev |
+| full mcp put session stage state | `sessions/tg-rotate-2026-10-20-1308.md` | **session MCP 写 stage 失败**：用开发平台 **`PUT  |
+| origin prod publish request session stag | `sessions/tg-rotate-2026-10-20-1308.md` | **修复顺序**：origin 对齐本地 → **先发 test** → TAS |
+| dept_id live month_start_dt paid_type 与数 | `sessions/tg-rotate-2026-10-20-1308.md` | **部门月 `paid_type`**：进主键 `(month_start_dt |
+| dept_code dim_app_info_all insert join p | `sessions/tg-rotate-2026-10-20-1308.md` | **产品周 `paid_type`**：INSERT 需 `dept_code` |
+| l（ paid_type ql sq sql（例 task | `sessions/tg-rotate-2026-10-20-1308.md` | **半发漏发**：同需求批次里可能只有部分 task 上新 SQL（例：部门周已 |
+| ddl es etl live prod） sql | `sessions/tg-rotate-2026-10-20-1308.md` | **列有、任务不写**：先四路对照——表结构（test/prod）、仓库 SQL |
+| ads dwd dwm lesson migration paimon | `sessions/tg-rotate-2026-10-20-1308.md` | [LESSON: video-migration,paimon,dwd/视频 A |
+| 013 20261016 _a _日 ad ads_channel_metric | `sessions/tg-rotate-2026-10-20-1308.md` | 渠道日指标 P0**：`ads_channel_metrics_daily_d` |
+| full mcp put session stage state | `sessions/tg-rotate-2026-10-20-1308.md` | session MCP 写 stage 失败**：用开发平台 **`PUT …/ |
+| ddl es etl live prod） sql | `sessions/tg-rotate-2026-10-20-1308.md` | 列有、任务不写**：先四路对照——表结构（test/prod）、仓库 SQL/D |
 | bootstrap daily memory_open repor report | `sessions/tg-rotate-2026-10-19-2208.md` | 冷启动仍先读 bootstrap / MEMORY_OPEN，按任务再查规则；上 |
 | g） pr prepare_daily_report_sync sync tg  | `sessions/tg-rotate-2026-10-19-2208.md` | 日报生成链路（双机 sync → 写稿 → 推 TG）与上传云端是**两阶段** |
 | id inserted） 不必 不必写入长期记忆索引 主人 于主 | `sessions/tg-rotate-2026-10-19-2208.md` | 成功回执应包含：**日期**、**记录 ID**、**接口状态**（如 inse |
@@ -30,18 +45,3 @@
 | bu bus diff feat git scope | `sessions/tg-rotate-2026-10-19-1607.md` | 提交说明以当前 `git diff` 为准：可保留 `feat(scope):` |
 | upload 「按 上传 不是 不是重新生成或改写日报正文 个上 | `sessions/tg-rotate-2026-10-17-2007.md` | 私聊「按你这个上传云端」= 走既有 upload 流程，不是重新生成或改写日报正 |
 | id record 「正 写明 对用 尾对 | `sessions/tg-rotate-2026-10-17-2007.md` | 收尾对用户：报日期、record id、状态、稿路径，并写明「正文未改」。 |
-| api code id inserted record 一般 | `sessions/tg-rotate-2026-10-17-2007.md` | 成功标准：API `code=0`，响应里可见 record id 与 `ins |
-| .cursor config.js date dd downloads git） | `sessions/tg-rotate-2026-10-17-2007.md` | 推荐命令：`.cursor/scripts/upload_work_report |
-| as date dd ia mm shanghai） | `sessions/tg-rotate-2026-10-17-2007.md` | 未指定日期时用当日业务日（Asia/Shanghai）；需要时用 `--date |
-| 一致 上传 上传前只做一致性核对（路径 上传过程禁止改字 传前 传过 | `sessions/tg-rotate-2026-10-17-2007.md` | 上传前只做一致性核对（路径、日期、正文是否已定稿），上传过程禁止改字、润色或补写 |
-| .cursor dd.md log markdown memory mm | `sessions/tg-rotate-2026-10-17-2007.md` | 上传对象必须是已定稿 Markdown：本地 `.cursor/work-log |
-| tg 「上 「上传云端」与写日报 」与 」才 上传 | `sessions/tg-rotate-2026-10-17-2007.md` | 「上传云端」与写日报、推 TG 分开；只有用户明确说「上传云端」才跑上传脚本，不 |
-| ## 013 013～018 10 17 2026 | `~/.dc-platform/memory/lessons/2026-10-17-周月新增次留不能日人数相加-日表-bitmap-口径-spark-不能照搬-mysql-013-.md` | 2026-10-17-周月新增次留不能日人数相加-日表-bitmap-口径-sp |
-| ## 019 10 17 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-17-019-停留四列写-0-在实时表未就绪前仅可到-s4-禁止发布替换现网.md` | 2026-10-17-019-停留四列写-0-在实时表未就绪前仅可到-s4-禁止 |
-| ## 10 17 2026 agent_session_rotate ar | `~/.dc-platform/memory/lessons/2026-10-17-迁-spark-批-s4-只验跑通回写-生产对数放-s5-未点测试五步禁止标验数通过.md` | 2026-10-17-迁-spark-批-s4-只验跑通回写-生产对数放-s5- |
-| 00 01 013～018 019 06 07 | `sessions/tg-rotate-2026-10-17-1136.md` | agent-bus：知秋令（10620）回 10616 卡点——007～012、 |
-| 00 008）要补进 08 8） dev session | `sessions/tg-rotate-2026-10-17-1136.md` | 远端已有代码（如渠道日活 008）要补进 dev session，避免会话仍停在 |
-| _a _日 ad ads.ads_channel_summary_d ads_c | `sessions/tg-rotate-2026-10-17-1136.md` | 渠道汇总仓内无现网 SQL；新 prod 海豚：`wf_ads_日报表_日` → |
-| 01 013～018（渠道日指标 13 18 3～ 8（ | `sessions/tg-rotate-2026-10-17-1136.md` | 013～018（渠道日指标、渠道汇总、渠道/部门推广周月等）本轮不推：周月新增/ |
-| s4 s5 —— —只 「测 」— | `sessions/tg-rotate-2026-10-17-1136.md` | **S4**：插件里建表、挂调度、跑一天、点「测试五步」——只验能跑通、能回写； |
-| 00 007 008 009 010 011 | `sessions/tg-rotate-2026-10-17-1136.md` | 14 张迁 Spark 单里，归因看板（006）已在验数；007/008/009 |
