@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-21 21:58:58 +0800
+> 更新: 2026-10-21 22:01:55 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-21.md`
 
@@ -24,3 +24,4 @@
 | 2026-10-21 11:25 | 群派单#260 | worker_ant_group | completed | 蓝猫, 已经在 bus 上把设备模型的做法发给猫猫了(bus#10926): - 数据源: 读现成的设备总表 dim_device_profile 和页面浏览实 |
 | 2026-10-21 17:39 | 群派单#261 | worker_ant_group | completed | bus#10952 已审，通过，已在 bus 回复猫猫可以开始开发。只改一条：活跃只算当天页面浏览 >= 2 次，注册不计入。其余按她的设计来，先在测试集群跑两 |
 | 2026-10-21 17:51 | 群派单#262 | worker_ant_group | completed | bus#10954 已回猫猫： 1. 她说的 DDL 和 SQL 还没提交到 git，我这边拿不到，已经让她 push 到 dev。拿到后我在测试建表。 2.  |
+| 2026-10-21 22:00 | 私聊#571 | telegram_dm | completed | 好 上传云端吧 |
