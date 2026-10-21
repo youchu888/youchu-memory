@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| #5 1） 57 71 lesson 不写 | `sessions/tg-rotate-2026-10-21-2208.md` | 私聊编号（如私聊#571）仅作会话溯源，蒸馏记忆时不写入 lesson 正文。 |
+| mac old tg 「上 「上传云端」是后续可选一步 」是 | `sessions/tg-rotate-2026-10-21-2208.md` | 本段流程前提：日报通常已在 old-mac 定稿并推 TG；「上传云端」是后续可 |
+| id inserted 三要 主人 于主 云端 | `sessions/tg-rotate-2026-10-21-2208.md` | 成功回执应带三要素：文件名、云端记录 ID、操作类型（如 `inserted`  |
+| .cursor config.js date dd downloads git | `sessions/tg-rotate-2026-10-21-2208.md` | 标准命令：`python3 .cursor/scripts/upload_wor |
+| asia date dd mm shanghai yyyy | `sessions/tg-rotate-2026-10-21-2208.md` | 未指定日期时，默认用当日 Asia/Shanghai 的 `YYYY-MM-DD |
+| lesson 新坑 无新 未追加 本段 段无 | `sessions/tg-rotate-2026-10-21-2208.md` | （本段无新坑；未追加 `[LESSON: …]`。） |
+| markdown 上传 上传内容必须与定稿 不动 与定 二次 | `sessions/tg-rotate-2026-10-21-2208.md` | 上传内容必须与定稿 Markdown **原封不动**，禁止在上传前改字或二次润 |
+| .cursor dd.md log memory mm reports | `sessions/tg-rotate-2026-10-21-2208.md` | 上传前必须先确认定稿文件存在（如 `.cursor/work-log/repor |
+| tg 「上 「上传云端」是独立触发词 」是 上传 不要 | `sessions/tg-rotate-2026-10-21-2208.md` | 「上传云端」是独立触发词：与写日报、推 TG 分开，主人明确说后才跑上传，不要定 |
 | ## 10 20 2026 ack agent | `~/.dc-platform/memory/lessons/2026-10-20-ack-silent-no-dedup-ack-可能被-silent-丢弃时用-no-dedup.md` | 2026-10-20-ack-silent-no-dedup-ack-可能被-s |
 | ## 008 01 012 019 10 | `~/.dc-platform/memory/lessons/2026-10-20-s5-stage5-prod-dryrun-知秋定案-2026-10-20-008-012-01.md` | 2026-10-20-s5-stage5-prod-dryrun-知秋定案-20 |
 | s1～s6 s5 stage 产物） 仍要 全部 | `sessions/tg-rotate-2026-10-20-2308.md` | 申请发布新规矩：**S1～S6 全部完成**后才能申请发布（与 S5 开放并行， |
@@ -36,12 +45,3 @@
 | 844c4baf dim dim_app_in dim_app_info_all | `sessions/tg-rotate-2026-10-20-1708.md` | [LESSON: spark_migrate/dim/paimon/SR 维表无 |
 | ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖或已有-spark-续作的-sessi.md` | 2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖 |
 | ## 10 20 2026 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先商量-未迁完-dwd-读明细任务前禁止.md` | 2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先 |
-| ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清单为准判是否发版-并对照同批-task.md` | 2026-10-20-表上新列但任务不写时-以海豚-live-insert-列清 |
-| 013 20261016 _a _日 ad ads_channel_metric | `sessions/tg-rotate-2026-10-20-1308.md` | **渠道日指标 P0**：`ads_channel_metrics_daily_ |
-| 10 20 dwd dwd.dwd_video_event_h paimon.d | `sessions/tg-rotate-2026-10-20-1308.md` | **视频迁源（10-20 定）**：读 SR `dwd.dwd_video_ev |
-| full mcp put session stage state | `sessions/tg-rotate-2026-10-20-1308.md` | **session MCP 写 stage 失败**：用开发平台 **`PUT  |
-| origin prod publish request session stag | `sessions/tg-rotate-2026-10-20-1308.md` | **修复顺序**：origin 对齐本地 → **先发 test** → TAS |
-| dept_id live month_start_dt paid_type 与数 | `sessions/tg-rotate-2026-10-20-1308.md` | **部门月 `paid_type`**：进主键 `(month_start_dt |
-| dept_code dim_app_info_all insert join p | `sessions/tg-rotate-2026-10-20-1308.md` | **产品周 `paid_type`**：INSERT 需 `dept_code` |
-| l（ paid_type ql sq sql（例 task | `sessions/tg-rotate-2026-10-20-1308.md` | **半发漏发**：同需求批次里可能只有部分 task 上新 SQL（例：部门周已 |
-| ddl es etl live prod） sql | `sessions/tg-rotate-2026-10-20-1308.md` | **列有、任务不写**：先四路对照——表结构（test/prod）、仓库 SQL |
