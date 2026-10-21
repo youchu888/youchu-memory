@@ -5,6 +5,7 @@
 > 更新：2026-09-23
 
 ## 进行中
+- [ ] **归因 result 影子切正式（bus#10921）**：`dws_register_attribution_result_d` 影子 vs 正式全键对账；剧本 `ops_system/00.pipeline/recon/`；数据日 10-21 起连核 7 天对平后报切停海豚 `174729603403591`；配置类差先报。
 
 - [ ] **dim_channel_info_all（bus#10911）**：prod SR 自 10-08 建表后审计无 INSERT（写入只打 test `172.31.9.165`@01:30）；待业务后台配 prod。snap 稿已去减8h 并推 `4b08bd1c`；DDL/挂槽仍交狂人。
 - [ ] **dim_channel_info_all_snap** `dev-20261020-001`：日全量分区 `snap_dt` 稿齐（无减8h，`4b08bd1c`）；**待**：prod SR 有数后挂槽对账；DDL 交狂人。
