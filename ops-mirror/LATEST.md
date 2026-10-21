@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-21 23:16:27 +0800
+> 更新: 2026-10-21 23:19:36 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-21.md`
 
@@ -26,3 +26,5 @@
 | 2026-10-21 17:51 | 群派单#262 | worker_ant_group | completed | bus#10954 已回猫猫： 1. 她说的 DDL 和 SQL 还没提交到 git，我这边拿不到，已经让她 push 到 dev。拿到后我在测试建表。 2.  |
 | 2026-10-21 22:00 | 私聊#571 | telegram_dm | completed | 好 上传云端吧 |
 | 2026-10-21 23:15 | 群派单#263 | worker_ant_group | completed | @anna_cute9 安娜你好，你在开发平台已经有账号（enanan774），不用另开。开发 Spark 任务的步骤： 1. 装插件：VSCode 里装开发平 |
+| 2026-10-21 23:18 | 群派单#264 | worker_ant_group | in_progress | 插件安装包 dc-platform-1.0.3（生产平台当前版本）。VSCode 扩展 → … → 从 VSIX 安装 → 选这个文件。 |
+| 2026-10-21 23:18 | 群派单#265 | worker_ant_group | in_progress | @anna_cute9 开发平台 Spark 任务上手手册：准备（账号/仓库/装插件/Token）→ 新建 Spark 任务 → 七步流程每步怎么做、过关标准  |
