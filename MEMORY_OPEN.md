@@ -5,10 +5,9 @@
 > 更新：2026-09-23
 
 ## 进行中
-- [ ] **归因 result 影子切正式（bus#10921）**：`dws_register_attribution_result_d` 影子 vs 正式全键对账；剧本 `ops_system/00.pipeline/recon/`；数据日 10-21 起连核 7 天对平后报切停海豚 `174729603403591`；配置类差先报。
+- [ ] **归因 result 影子切正式（bus#10921/#10922/#10936）**：计划认可；**D1=10-21 起每天日结**经 bus 发狂人；剧本 `ops_system/00.pipeline/recon/recon_register_attribution_result_shadow_vs_formal.sql`；7 天对平后报切停海豚 `174729603403591`；配置类差先报。
 
-- [ ] **dim_channel_info_all（bus#10911）**：prod SR 自 10-08 建表后审计无 INSERT（写入只打 test `172.31.9.165`@01:30）；待业务后台配 prod。snap 稿已去减8h 并推 `4b08bd1c`；DDL/挂槽仍交狂人。
-- [ ] **dim_channel_info_all_snap** `dev-20261020-001`：日全量分区 `snap_dt` 稿齐（无减8h，`4b08bd1c`）；**待**：prod SR 有数后挂槽对账；DDL 交狂人。
+- [ ] **dim_channel_info_all_snap（bus#10936）**：ETL 已改业务库 `system_channel_info` 全量 JDBC 抽，已推 origin/dev **`b0e82f35`**；**待**运维开只读 JDBC + 狂人建 prod Paimon/挂槽；部门周/月 10-15 补跑等有数后狂人来。协作群已发开户请求（bot 不在运维群）。
 - [ ] **渠道报表周/月表**：prod 海豚已回滚到 **10-09 版**（bus#10874：10-20「测试同步生产」误推未发版含 dept_code SQL→日报表挂 20 task）。新版须 **S6/S7+生产改表同批**，禁再测同生产单推。海豚会话 `dev-20260929-001/002`；Spark `dev-20261016-016` 仍 S5/HOLD。**待**：走完发布再上产。
 - [ ] **大漏斗优化停**。缓存 85 分钟、先按人聚合 75 分钟，都比基线 66 分钟慢。单扫试验 A 已取消（INSERT 未完成提交）。集群 SQL 已收回最初版。test SR 基线未覆盖。沙箱 Paimon 仍是试验 B 的数，要回到最初版需重跑，未开。（**注**：事件漏斗最新口径已发产、验收、补数完成；此项仅指性能试验，勿写成「漏斗未上线」。）
 - [ ] **指标库（先 test 后 prod）**：隧道已通。`ubuntu@43.213.80.248` → MySQL `13306`、平台 `18012`。test 真库 published **658**；API `metric-library/concepts` 200。入口 `http://127.0.0.1:18012`；凭证 `~/.dc-platform/config/test-platform.env`；`ensure-test-platform-tunnels.sh`。**待**：MCP/`metric__search` 改指 test + 切读 concept（现仍打 standards）。prod HOLD。
