@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-21 23:22:38 +0800
+> 更新: 2026-10-21 23:25:48 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-21.md`
 
@@ -27,5 +27,5 @@
 | 2026-10-21 22:00 | 私聊#571 | telegram_dm | completed | 好 上传云端吧 |
 | 2026-10-21 23:15 | 群派单#263 | worker_ant_group | completed | @anna_cute9 安娜你好，你在开发平台已经有账号（enanan774），不用另开。开发 Spark 任务的步骤： 1. 装插件：VSCode 里装开发平 |
 | 2026-10-21 23:18 | 群派单#264 | worker_ant_group | completed | 插件安装包 dc-platform-1.0.3（生产平台当前版本）。VSCode 扩展 → … → 从 VSIX 安装 → 选这个文件。 |
-| 2026-10-21 23:18 | 群派单#265 | worker_ant_group | in_progress | @anna_cute9 开发平台 Spark 任务上手手册：准备（账号/仓库/装插件/Token）→ 新建 Spark 任务 → 七步流程每步怎么做、过关标准  |
+| 2026-10-21 23:18 | 群派单#265 | worker_ant_group | completed | @anna_cute9 开发平台 Spark 任务上手手册：准备（账号/仓库/装插件/Token）→ 新建 Spark 任务 → 七步流程每步怎么做、过关标准  |
 | 2026-10-21 23:20 | 群派单#266 | worker_ant_group | in_progress | @anna_cute9 千行仔收不到群消息，你这条指示和手册全文我已经经 bus 转给它了（bus#10973）。它要做的「对应工具」具体需求以你给它的为准，流 |
