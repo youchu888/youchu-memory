@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-22 23:58:06 +0800
+> 更新: 2026-10-23 00:01:00 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-10-22.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-10-23.md`
 
 ## 未结案 agent-bus
 
@@ -11,17 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-10-21 00:12 | 群派单#257 | worker_ant_group | completed | @hull1889 bus10823 定了，选 A：以 Paimon dwd_coin_consume_h_r 为准，已经 bus#10824 发给猫猫。验收条 |
-| 2026-10-21 08:46 | 群派单#258 | worker_ant_group | completed | ℹ️ 📋 今日工作簿 2026-10-21 08:46 北京时间 10-21 待办 17 项(项 + 负责人)： 1. 设备标签 【又初（初儿）】 2. 归因升 |
-| 2026-10-21 10:09 | 群派单#259 | worker_ant_group | completed | ℹ️ 📋 今日工作簿 2026-10-21 10:09 北京时间 10-21 待办 19 项(项 + 负责人)： 1. 设备标签 【又初（初儿）】 2. 归因升 |
-| 2026-10-21 11:25 | 群派单#260 | worker_ant_group | completed | 蓝猫, 已经在 bus 上把设备模型的做法发给猫猫了(bus#10926): - 数据源: 读现成的设备总表 dim_device_profile 和页面浏览实 |
-| 2026-10-21 17:39 | 群派单#261 | worker_ant_group | completed | bus#10952 已审，通过，已在 bus 回复猫猫可以开始开发。只改一条：活跃只算当天页面浏览 >= 2 次，注册不计入。其余按她的设计来，先在测试集群跑两 |
-| 2026-10-21 17:51 | 群派单#262 | worker_ant_group | completed | bus#10954 已回猫猫： 1. 她说的 DDL 和 SQL 还没提交到 git，我这边拿不到，已经让她 push 到 dev。拿到后我在测试建表。 2.  |
-| 2026-10-21 22:00 | 私聊#571 | telegram_dm | completed | 好 上传云端吧 |
-| 2026-10-21 23:15 | 群派单#263 | worker_ant_group | completed | @anna_cute9 安娜你好，你在开发平台已经有账号（enanan774），不用另开。开发 Spark 任务的步骤： 1. 装插件：VSCode 里装开发平 |
-| 2026-10-21 23:18 | 群派单#264 | worker_ant_group | completed | 插件安装包 dc-platform-1.0.3（生产平台当前版本）。VSCode 扩展 → … → 从 VSIX 安装 → 选这个文件。 |
-| 2026-10-21 23:18 | 群派单#265 | worker_ant_group | completed | @anna_cute9 开发平台 Spark 任务上手手册：准备（账号/仓库/装插件/Token）→ 新建 Spark 任务 → 七步流程每步怎么做、过关标准  |
-| 2026-10-21 23:20 | 群派单#266 | worker_ant_group | completed | @anna_cute9 千行仔收不到群消息，你这条指示和手册全文我已经经 bus 转给它了（bus#10973）。它要做的「对应工具」具体需求以你给它的为准，流 |
 | 2026-10-22 08:46 | 群派单#267 | worker_ant_group | completed | ℹ️ 📋 今日工作簿 2026-10-22 08:46 北京时间 10-22 待办 20 项(项 + 负责人)： 1. 设备标签 【又初（初儿）】 2. 归因升 |
 | 2026-10-22 15:47 | 私聊#572 | telegram_dm | completed | 渠道维表日快照需要生产业务库只读 JDBC： 这个我们不是读sr就可以吗？没有sr生产只读账号？ |
 | 2026-10-22 15:56 | 私聊#573 | telegram_dm | completed | prod只是现在没数，后面会有的。你和狂人讨论下方案，加一个定时拉维表的任务。定时从sr里面拉就行 |
