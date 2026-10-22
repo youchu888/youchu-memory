@@ -410,4 +410,9 @@
 | 2026-10-21 | [渠道推广周/月禁测试同步生产单推未发版SQL](./2026-10-21-channel-promotion-禁止测试同步生产单推未发版SQL.md) | ads_channel_promotion_summary, publish, dept_code | bus#10874 回滚到10-09 |
 | 2026-10-21 | [部门推广周/月空跑因 dim_channel_info_all 为 0](./2026-10-21-ads-dept-promotion-空跑因dim-channel-info-all为零.md) | ads_dept_promotion, dim_channel_info_all | bus#10880 INNER JOIN |
 | 2026-10-21 | [prod dim_channel_info_all 空因业务只写 test](./2026-10-21-dim-channel-info-all-prod空因业务只写test.md) | dim_channel_info_all, bmp, prod | bus#10911 |
+<<<<<<< Updated upstream
 | 2026-10-22 | mgmt-report-keep-three-tables | 管理报表三表；渠道周月下线；海豚+Spark | ads,dolphin,spark |
+=======
+| 2026-10-22 | [pipeline-runner：禁止生产机单文件就地编译覆盖 jar](./2026-10-22-pipeline-runner禁止生产机单文件就地编译覆盖jar.md) | pipeline-runner,spark,deploy,prod | 改核心须仓库全量同步整包编译，先测后随版本上产；禁 prod 单文件就地编 |
+| 2026-10-22 | [bitmap BINARY 上产前须在测试集群大分区对照 Kryo](./2026-10-22-bitmap-BINARY上产前须测试集群大分区对照Kryo.md) | bitmap,spark,pipeline-runner | 大分区对照耗时+逐字节一致后才能上产 |
+>>>>>>> Stashed changes
