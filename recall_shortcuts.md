@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 22 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已推-commit-与是否需回滚-勿继续.md` | 2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已 |
+| ## 10 10793 2026 22 8h | `~/.dc-platform/memory/lessons/2026-10-22-srviews-时间列永不-8h-推前对照-bus-10793-自核-源切-sr-时文档-etl.md` | 2026-10-22-srviews-时间列永不-8h-推前对照-bus-107 |
+| 60s ack agent bus mode oral | `sessions/tg-rotate-2026-10-22-1608.md` | agent-bus：`mode=work` 须 **60s 内 ACK**，干完 |
+| 230fa1fb bus jdbc） pipeline reply runner | `sessions/tg-rotate-2026-10-22-1608.md` | 方案摇摆时：先 **bus 对齐 A/B/C**，再改 SQL/文档/pipel |
+| #11164 commit jdbc sr sr→paimon 不归 | `sessions/tg-rotate-2026-10-22-1608.md` | #11164 更正：**快照链路狂人直接做**（对齐归因配置的 **SR→Pai |
+| 8h bus#10793 cast srviews 再减 列禁 | `sessions/tg-rotate-2026-10-22-1608.md` | **时间列禁止对 srViews 再减 8h**（`bus#10793` 曾因此 |
+| 01 05 30 dim_app_info_all paimon sr | `sessions/tg-rotate-2026-10-22-1608.md` | 调度：**05 槽**（与 `dim_app_info_all` 同槽），业务后 |
+| #11161 jdbc paimon.dim.dim_channel_info_ | `sessions/tg-rotate-2026-10-22-1608.md` | 狂人 #11161 选 **A**：去掉 JDBC 依赖、不再催运维开业务库只读 |
+| insert prod sr sr） test update | `sessions/tg-rotate-2026-10-22-1608.md` | 当时反对「只读 SR 当源」的两点仍作风险备忘：prod SR 该表曾 **长期 |
+| bus etl prod sr 「快 「有 | `sessions/tg-rotate-2026-10-22-1608.md` | prod 有 **SR 只读账号**（查数/对账），与「快照 ETL 用哪条链路 |
+| bmp dim.dim_channel_info_all dim_channel | `sessions/tg-rotate-2026-10-22-1608.md` | 渠道维表日快照（`dim_channel_info_all_snap`）取数源会 |
+| agent bus commit jdbc lesson reply | `sessions/tg-rotate-2026-10-22-1608.md` | [LESSON: agent-bus/狂人声明「我直接做、不要再推」→ 停改停推 |
+| 8h bus#10793 cast srviews 再减 列禁 | `sessions/tg-rotate-2026-10-22-1608.md` | 时间列禁止对 srViews 再减 8h**（`bus#10793` 曾因此退回 |
 | #5 1） 57 71 lesson 不写 | `sessions/tg-rotate-2026-10-21-2208.md` | 私聊编号（如私聊#571）仅作会话溯源，蒸馏记忆时不写入 lesson 正文。 |
 | mac old tg 「上 「上传云端」是后续可选一步 」是 | `sessions/tg-rotate-2026-10-21-2208.md` | 本段流程前提：日报通常已在 old-mac 定稿并推 TG；「上传云端」是后续可 |
 | id inserted 三要 主人 于主 云端 | `sessions/tg-rotate-2026-10-21-2208.md` | 成功回执应带三要素：文件名、云端记录 ID、操作类型（如 `inserted`  |
@@ -32,16 +45,3 @@
 | ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-dim-prod-sr-维表-0-行时-paimon-空-snap_dt-分区先判源表是否真无数.md` | 2026-10-20-dim-prod-sr-维表-0-行时-paimon-空- |
 | ## 10 20 2026 844c4baf agent_session_rot | `~/.dc-platform/memory/lessons/2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-dim_app_info_all-的-dt.md` | 2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-di |
 | commit dd5738d4 dim push sr→paimon 交付 | `sessions/tg-rotate-2026-10-20-1708.md` | 用户明确要求再 **commit/push**；交付 commit 例 **`d |
-| 20 etl prod sr test 例行 | `sessions/tg-rotate-2026-10-20-1708.md` | test SR 有样例行（如约 20 行）可验逻辑；**prod SR 当前 0 |
-| paimon session test 人） 切分 又初 | `sessions/tg-rotate-2026-10-20-1708.md` | **职责切分**：又初 = session + 同步稿 + test 可对账材料 |
-| 001 20261020 dbprogramming dev session s | `sessions/tg-rotate-2026-10-20-1708.md` | 新链路 **`dbprogramming` 须建 dev session**（例 |
-| ar dt in jo k（ oi | `sessions/tg-rotate-2026-10-20-1708.md` | 下游 Spark（渠道周/月/部门等）JOIN 维表时统一 **`WHERE s |
-| creat created_at paimon sql sr sr_dim_ch | `sessions/tg-rotate-2026-10-20-1708.md` | 同步 SQL 结构：**`timer` + `srViews`**（如 `sr_ |
-| 00 create ddl etl full_chain insert | `sessions/tg-rotate-2026-10-20-1708.md` | **ETL 只做 `INSERT OVERWRITE` 当天分区**，不在 ET |
-| 844c4baf bus#10789 commit dim_channel_in | `sessions/tg-rotate-2026-10-20-1708.md` | 样板链：bus#10789 / commit **`844c4baf`**（测试 |
-| dim.dim_channel_info_all dim_chann dim_c | `sessions/tg-rotate-2026-10-20-1708.md` | `dim.dim_channel_info_all` 无 `dt`，Paimon |
-| by dim_app_info_all dt paimon partitione | `sessions/tg-rotate-2026-10-20-1708.md` | SR 维表同步 Paimon 先分两类：源表**自带按日 `dt` 全量**→照 |
-| datacheck dim lesson paimon prod snap_dt | `sessions/tg-rotate-2026-10-20-1708.md` | [LESSON: datacheck/dim/prod SR 维表 0 行时 P |
-| 844c4baf dim dim_app_in dim_app_info_all | `sessions/tg-rotate-2026-10-20-1708.md` | [LESSON: spark_migrate/dim/paimon/SR 维表无 |
-| ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖或已有-spark-续作的-sessi.md` | 2026-10-20-海豚待发布撤回后统一-spark-化重走七步-被新版本覆盖 |
-| ## 10 20 2026 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先商量-未迁完-dwd-读明细任务前禁止.md` | 2026-10-20-视频-ads-日报改源优先-dwm-用户视频中间表-缺列先 |

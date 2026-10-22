@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-22 | [狂人声明「我直接做、不要再推」→ 停改停推、reply 说明已推 commit ](./2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已推-commit-与是否需回滚-勿继续.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-22 | [srViews 时间列永不 -8h，推前对照 bus#10793 自核；源切 S](./2026-10-22-srviews-时间列永不-8h-推前对照-bus-10793-自核-源切-sr-时文档-etl.md) | dim_channel_info_all_snap,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [ack|silent|no-dedup|ACK 可能被 silent 丢弃时用 ](./2026-10-20-ack-silent-no-dedup-ack-可能被-silent-丢弃时用-no-dedup.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [S5|stage5|prod-dryrun|知秋定案|2026-10-20|00](./2026-10-20-s5-stage5-prod-dryrun-知秋定案-2026-10-20-008-012-01.md) | dev-platform,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [S5 验证送 SQL 被生产写闸连带封禁（5405320b）](./2026-10-20-s5-prod-write-gate-5405320b.md) | stage5,prod-write-gate | 知秋已放开 S5 验证（#10816）；在跑 SQL 不可覆盖；须 S1~S6 齐才能申请发布 |

@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [狂人声明「我直接做、不要再推」→ 停改停推、reply 说明已推 com](lessons/2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已推-commit-与是否需回滚-勿继续.md) — 会话轮换蒸馏
+- [srViews 时间列永不 -8h，推前对照 bus#10793 自核；](lessons/2026-10-22-srviews-时间列永不-8h-推前对照-bus-10793-自核-源切-sr-时文档-etl.md) — 会话轮换蒸馏
 - [ack|silent|no-dedup|ACK 可能被 silent 丢](lessons/2026-10-20-ack-silent-no-dedup-ack-可能被-silent-丢弃时用-no-dedup.md) — 会话轮换蒸馏
 - [S5|stage5|prod-dryrun|知秋定案|2026-10-2](lessons/2026-10-20-s5-stage5-prod-dryrun-知秋定案-2026-10-20-008-012-01.md) — 会话轮换蒸馏
 - [commit|多任务并行 stash 冲突时先剥离无关 WIP 再提交，](lessons/2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-wip-再提交-避免-dim-同步-co.md) — 会话轮换蒸馏
