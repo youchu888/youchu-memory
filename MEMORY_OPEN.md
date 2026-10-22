@@ -8,7 +8,7 @@
 - [ ] **归因 result 影子切正式（bus#10921/#10922/#10936）**：计划认可；**D1=10-21 起每天日结**经 bus 发狂人；剧本 `ops_system/00.pipeline/recon/recon_register_attribution_result_shadow_vs_formal.sql`；7 天对平后报切停海豚 `174729603403591`；配置类差先报。
 
 - [ ] **dim_channel_info_all_snap（bus#10936）**：ETL 已改业务库 `system_channel_info` 全量 JDBC 抽，已推 origin/dev **`b0e82f35`**；**待**运维开只读 JDBC + 狂人建 prod Paimon/挂槽；部门周/月 10-15 补跑等有数后狂人来。协作群已发开户请求（bot 不在运维群）。
-- [ ] **管理报表三表产发（部门周/月+产品周）**：test 已发海豚 v395–397、渠道周月 task 已停；session `dev-20261013-001/002/003` 已 request-publish；git `7fa4c505`。**待**：prod 按 `drop_obsolete_promotion_tables.sql` 删渠道周月 + 按新 DDL 重建三表后审核产发。
+- [ ] **管理报表三表产发（部门周/月+产品周）**：只留海豚 `dev-20261013-001/002/003`，已改审**野花**；Spark 迁移 session 已删。**待**：prod 跑 `prod_drop_and_create_20261022.sql` 后野花产发。
 - [ ] **大漏斗优化停**。缓存 85 分钟、先按人聚合 75 分钟，都比基线 66 分钟慢。单扫试验 A 已取消（INSERT 未完成提交）。集群 SQL 已收回最初版。test SR 基线未覆盖。沙箱 Paimon 仍是试验 B 的数，要回到最初版需重跑，未开。（**注**：事件漏斗最新口径已发产、验收、补数完成；此项仅指性能试验，勿写成「漏斗未上线」。）
 - [ ] **指标库（先 test 后 prod）**：隧道已通。`ubuntu@43.213.80.248` → MySQL `13306`、平台 `18012`。test 真库 published **658**；API `metric-library/concepts` 200。入口 `http://127.0.0.1:18012`；凭证 `~/.dc-platform/config/test-platform.env`；`ensure-test-platform-tunnels.sh`。**待**：MCP/`metric__search` 改指 test + 切读 concept（现仍打 standards）。prod HOLD。
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；沙箱真跑 DONE（约 1.43 亿）；dim/宽表链仍 HOLD，勿并 full_chain。
