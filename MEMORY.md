@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [重生成须先双机同步+金样实活核对；定稿后推 TG，云端仅在你明确要求时用](lessons/2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在你明确要求时用定稿原样上传.md) — 会话轮换蒸馏
+- [对外回复禁用「主人」，一律用「你」；内部可留出处词，输出必须剥离](lessons/2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥离.md) — 会话轮换蒸馏
 - [狂人声明「我直接做、不要再推」→ 停改停推、reply 说明已推 com](lessons/2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已推-commit-与是否需回滚-勿继续.md) — 会话轮换蒸馏
 - [srViews 时间列永不 -8h，推前对照 bus#10793 自核；](lessons/2026-10-22-srviews-时间列永不-8h-推前对照-bus-10793-自核-源切-sr-时文档-etl.md) — 会话轮换蒸馏
 - [ack|silent|no-dedup|ACK 可能被 silent 丢](lessons/2026-10-20-ack-silent-no-dedup-ack-可能被-silent-丢弃时用-no-dedup.md) — 会话轮换蒸馏

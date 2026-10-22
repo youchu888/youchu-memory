@@ -5,6 +5,17 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## +金 10 2026 22 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在你明确要求时用定稿原样上传.md` | 2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在 |
+| ## 10 2026 22 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥离.md` | 2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥 |
+| .cursor dd.md log memory mm reports | `sessions/tg-rotate-2026-10-22-2209.md` | 定稿路径：`.cursor/work-log/reports/日报-YYYY-M |
+| tg 不符 不能 不能仅替换一个词 与当 个词 | `sessions/tg-rotate-2026-10-22-2209.md` | 旧草稿若含违规称呼或与当日实活不符，重生成时要**全文重写并核对实活**，再推  |
+| log prepare_daily_report_sync transcript | `sessions/tg-rotate-2026-10-22-2209.md` | 「重新生成日报」= 完整日报链路重做，不是局部改稿：先双机 `prepare_d |
+| lesson 「主 「你 一律 一律用「你」 主人 | `sessions/tg-rotate-2026-10-22-2209.md` | [LESSON: 称呼/对外回复禁用「主人」，一律用「你」；内部可留出处词，输出 |
+| api apitoken id inserted） record 一句 | `sessions/tg-rotate-2026-10-22-2209.md` | 上传成功可在回复中说明日期与记录状态（如 inserted）；**不要**在蒸馏 |
+| 「按 「按这个上传云端」 上传 上传前禁止改字 不动 个上 | `sessions/tg-rotate-2026-10-22-2209.md` | 「按这个上传云端」= 以**当前定稿原封不动**跑上传脚本；上传前禁止改字、禁止 |
+| post_daily_report_to_dm.py tg 「已 不要 不要贴全 | `sessions/tg-rotate-2026-10-22-2209.md` | 定稿后**立刻** `post_daily_report_to_dm.py` 推 |
+| 「主 」等 主人 人」 保留 内部 | `sessions/tg-rotate-2026-10-22-2209.md` | 内部记忆、规则出处可保留「主人」等词；**写给用户的输出必须剥离**，口误后要按 |
+| cursor tg 「主 「你 」直 一律 | `sessions/tg-rotate-2026-10-22-2209.md` | 对外回复（TG 私聊、Cursor 对话、推给你的正文）禁用「主人」，一律用「你 |
 | ## 10 2026 22 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已推-commit-与是否需回滚-勿继续.md` | 2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已 |
 | ## 10 10793 2026 22 8h | `~/.dc-platform/memory/lessons/2026-10-22-srviews-时间列永不-8h-推前对照-bus-10793-自核-源切-sr-时文档-etl.md` | 2026-10-22-srviews-时间列永不-8h-推前对照-bus-107 |
 | 60s ack agent bus mode oral | `sessions/tg-rotate-2026-10-22-1608.md` | agent-bus：`mode=work` 须 **60s 内 ACK**，干完 |
@@ -34,14 +45,3 @@
 | 008～012 01 019）可自行把 10 19 20 | `sessions/tg-rotate-2026-10-20-2308.md` | **S5 生产验证已对开发者开放**（知秋定案，约 2026-10-20 22: |
 | hold lesso lesson memory_open reply 下次 | `sessions/tg-rotate-2026-10-20-2308.md` | 平台政策类派单：除 reply 外应同步 **MEMORY_OPEN**（删过时 |
 | ack agent_bus_sen agent_bus_send.py dedu | `sessions/tg-rotate-2026-10-20-2308.md` | ACK 可能被服务端 **silent 吞掉**（去重/静默策略）；若需确保对方 |
-| api id） inserted status tg 上传 | `sessions/tg-rotate-2026-10-20-2308.md` | 上传成功以 API 回执为准（如 `status=inserted`、记录 ID |
-| .cursor date dd mm python3 scripts | `sessions/tg-rotate-2026-10-20-2308.md` | 上传前先确认本地定稿文件存在，再跑 `python3 .cursor/scrip |
-| ack agent bus dedup lesson no | `sessions/tg-rotate-2026-10-20-2308.md` | [LESSON: agent-bus/ack/silent/no-dedup/A |
-| 008 012 019 10 20 2026 | `sessions/tg-rotate-2026-10-20-2308.md` | [LESSON: dev-platform/S5/stage5/prod-dry |
-| es pro prod s5 session st | `sessions/tg-rotate-2026-10-20-2308.md` | S5 开放后的执行姿态：在平台内对指定 session **自己做 S5**，不 |
-| 60 ack agent bus cursor mark_processed | `sessions/tg-rotate-2026-10-20-2308.md` | agent-bus `mode=work`：同一 Cursor 主会话处理，** |
-| dd.md mm reports yyyy 「上 」时 | `sessions/tg-rotate-2026-10-20-2308.md` | 主人说「上传云端」时：以当日已定稿 `reports/日报-YYYY-MM-DD |
-| ## 10 20 2026 agent_session_rotate co | `~/.dc-platform/memory/lessons/2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-wip-再提交-避免-dim-同步-co.md` | 2026-10-20-commit-多任务并行-stash-冲突时先剥离无关-w |
-| ## 10 20 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-20-dim-prod-sr-维表-0-行时-paimon-空-snap_dt-分区先判源表是否真无数.md` | 2026-10-20-dim-prod-sr-维表-0-行时-paimon-空- |
-| ## 10 20 2026 844c4baf agent_session_rot | `~/.dc-platform/memory/lessons/2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-dim_app_info_all-的-dt.md` | 2026-10-20-dim-paimon-sr-维表无-dt-列时禁止抄-di |
-| commit dd5738d4 dim push sr→paimon 交付 | `sessions/tg-rotate-2026-10-20-1708.md` | 用户明确要求再 **commit/push**；交付 commit 例 **`d |
