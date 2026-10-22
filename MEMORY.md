@@ -437,3 +437,5 @@
 - feedback_vpn_renew_deadlock_use_cham.md — VPN死结破局：Cham点击连接→续期→关变色龙
 - [测试 Flink 不归又初·SR 磁盘满](lessons/2026-10-03-test-flink-not-youchu-sr-disk-before-restart.md) — Flink问知秋；磁盘满先腾SR再重启
 
+
+- 2026-10-22 共享组件禁止私自绕过须反馈狂人 → lessons/... · feedback_no_workaround_report_worker_ant.md · pinned/03.md

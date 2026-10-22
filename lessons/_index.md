@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-22 | [共享组件禁止私自绕过须反馈狂人](./2026-10-22-共享组件禁止私自绕过须反馈狂人.md) | bitmap, runner, worker-ant | Kryo/公共 UDF 只报狂人，禁改绕过 |
 | 2026-10-22 | [狂人声明「我直接做、不要再推」→ 停改停推、reply 说明已推 commit ](./2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已推-commit-与是否需回滚-勿继续.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-22 | [srViews 时间列永不 -8h，推前对照 bus#10793 自核；源切 S](./2026-10-22-srviews-时间列永不-8h-推前对照-bus-10793-自核-源切-sr-时文档-etl.md) | dim_channel_info_all_snap,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-20 | [ack|silent|no-dedup|ACK 可能被 silent 丢弃时用 ](./2026-10-20-ack-silent-no-dedup-ack-可能被-silent-丢弃时用-no-dedup.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
