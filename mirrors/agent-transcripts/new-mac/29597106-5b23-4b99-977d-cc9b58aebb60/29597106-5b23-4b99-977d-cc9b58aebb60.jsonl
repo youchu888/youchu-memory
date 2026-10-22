@@ -323,3 +323,4 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"CallDynamicTool","input":{"namespace":"user-dc-platform","toolName":"db_run_query","mcpDetails":{"description":"Confirm test product week 岁安 YC-001"},"arguments":{"connection":"sr_test","sql":"SELECT week_start_dt, dept_id, dept_name, app_id, week_new_user_num AS 新增, ROUND(week_recharge_amt/100,2) AS 充值元 FROM ads.ads_product_promotion_summary_w WHERE dept_id=41 AND app_id='YC-001' AND week_start_dt IN ('2026-10-05','2026-10-12') ORDER BY week_start_dt","limit":10}}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"test 里有数，岁安 × YC-001：\n\n| 周 | 新增 | 充值 |\n|---|---|---|\n| 10/05～11 | 13,446 | 63,900 |\n| 10/12～18 | 8,346 | 65,800 |\n\n截图全是 0 的话，页面连的不是 test。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Thursday, Oct 22, 2026, 9:17 PM (UTC+8)</timestamp>\n<user_query>\n那就没问题了，可以封板发生产了。\n</user_query>"}]}}
