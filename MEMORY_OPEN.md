@@ -5,7 +5,7 @@
 > 更新：2026-09-23
 
 ## 进行中
-- [ ] **归因 result 影子切正式（bus#10921/#10922/#10936）**：计划认可；**D1=10-21 起每天日结**经 bus 发狂人；剧本 `ops_system/00.pipeline/recon/recon_register_attribution_result_shadow_vs_formal.sql`；7 天对平后报切停海豚 `174729603403591`；配置类差先报。
+- [ ] **归因 result 影子切正式（bus#10921/#10922/#10936）**：计划认可；**D1=10-21 起每天日结**经 bus 发狂人；剧本 `ops_system/00.pipeline/recon/recon_register_attribution_result_shadow_vs_formal.sql`；7 天对平后报切停海豚 `174729603403591`；配置类差先报。另：压测 wf `wf_dws_归因_paimon_shadow_日` 的 `result_d_r` 已按知秋定停（bus#11232，`flag=NO`）；同 wf apply/metrics 仍开，是否同停等知秋。
 
 - [ ] **dim_channel_info_all_snap**：JDBC/SR 换源已停手（#11164）。**现网 SQL 以 `3ce1c124` 的 `dim_channel_info_all_sync.sql` md5 `68ebf206`（00 槽日快照）为准**（#11175）；勿再推 `230fa1fb` 那版，要换先测后产并先跟狂人说。BitmapUdf 中间态以 Kryo 为准（盖掉 BINARY）。
 - [ ] **管理报表三表产发（部门周/月+产品周）**：只留海豚 `dev-20261013-001/002/003`，已改审**野花**；Spark 迁移 session 已删。**待**：prod 跑 `prod_drop_and_create_20261022.sql` 后野花产发。
