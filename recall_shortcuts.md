@@ -5,6 +5,16 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道说法不一致.md` | 2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道 |
+| ## 10 2026 23 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当日补数-snap-有数后再重跑任务-b.md` | 2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当 |
+| 「先发 不是 不是跳过验数 代码 侧已 前提 | `sessions/tg-rotate-2026-10-23-1209.md` | 此类放行属于 **「先发 + 补跑」** 策略，不是跳过验数；前提是代码侧已核对 |
+| #1 11 12 25 3） 53 | `sessions/tg-rotate-2026-10-23-1209.md` | 回 bus 时带上 **bus#**（如 bus#11253）和 **reply |
+| agent_bus_send.py dedup no 再次 出站 出站若被 | `sessions/tg-rotate-2026-10-23-1209.md` | 出站若被 **去重拦截**，在确属需再次送达（非误触重复）时，用 `agent_ |
+| dolphin_prod 一句 一句说清 三表 于对 产放 | `sessions/tg-rotate-2026-10-23-1209.md` | 向狂人转达生产放行时，用 **`dolphin_prod` + 范围（三表）+  |
+| #5 57 77 7） agent bus | `sessions/tg-rotate-2026-10-23-1209.md` | 私聊放行（如私聊#577）与 agent-bus 回狂人应**语义一致**：先发 |
+| snap 于并 任务 依赖 先发 先发任务 | `sessions/tg-rotate-2026-10-23-1209.md` | 维表当日补数属于并行安排：**先发任务 / 发版，补数完成后 snap 有数，再 |
+| 「代 」时 三表 不必 不必等当日维表补数完成 业务 | `sessions/tg-rotate-2026-10-23-1209.md` | 管理报表三表：业务已确认「代码没问题」时，**不必等当日维表补数完成**即可按现 |
+| lookup rules.sh 不要 不要在启动时通 不要在启动时通读红线和经验 | `sessions/tg-rotate-2026-10-23-1209.md` | > **指令**：先读本文件里的未结事项。做到某件事时再 `lookup-rul |
 | ## +金 10 2026 22 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在你明确要求时用定稿原样上传.md` | 2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在 |
 | ## 10 2026 22 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥离.md` | 2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥 |
 | .cursor dd.md log memory mm reports | `sessions/tg-rotate-2026-10-22-2209.md` | 定稿路径：`.cursor/work-log/reports/日报-YYYY-M |
@@ -35,13 +45,3 @@
 | .cursor config.js date dd downloads git | `sessions/tg-rotate-2026-10-21-2208.md` | 标准命令：`python3 .cursor/scripts/upload_wor |
 | asia date dd mm shanghai yyyy | `sessions/tg-rotate-2026-10-21-2208.md` | 未指定日期时，默认用当日 Asia/Shanghai 的 `YYYY-MM-DD |
 | lesson 新坑 无新 未追加 本段 段无 | `sessions/tg-rotate-2026-10-21-2208.md` | （本段无新坑；未追加 `[LESSON: …]`。） |
-| markdown 上传 上传内容必须与定稿 不动 与定 二次 | `sessions/tg-rotate-2026-10-21-2208.md` | 上传内容必须与定稿 Markdown **原封不动**，禁止在上传前改字或二次润 |
-| .cursor dd.md log memory mm reports | `sessions/tg-rotate-2026-10-21-2208.md` | 上传前必须先确认定稿文件存在（如 `.cursor/work-log/repor |
-| tg 「上 「上传云端」是独立触发词 」是 上传 不要 | `sessions/tg-rotate-2026-10-21-2208.md` | 「上传云端」是独立触发词：与写日报、推 TG 分开，主人明确说后才跑上传，不要定 |
-| ## 10 20 2026 ack agent | `~/.dc-platform/memory/lessons/2026-10-20-ack-silent-no-dedup-ack-可能被-silent-丢弃时用-no-dedup.md` | 2026-10-20-ack-silent-no-dedup-ack-可能被-s |
-| ## 008 01 012 019 10 | `~/.dc-platform/memory/lessons/2026-10-20-s5-stage5-prod-dryrun-知秋定案-2026-10-20-008-012-01.md` | 2026-10-20-s5-stage5-prod-dryrun-知秋定案-20 |
-| s1～s6 s5 stage 产物） 仍要 全部 | `sessions/tg-rotate-2026-10-20-2308.md` | 申请发布新规矩：**S1～S6 全部完成**后才能申请发布（与 S5 开放并行， |
-| s5 sql 一步 一硬 不可 不能 | `sessions/tg-rotate-2026-10-20-2308.md` | S5 唯一硬限制：**生产正在跑的那一步所引用的 SQL 文件不可覆盖**；平台 |
-| 008～012 01 019）可自行把 10 19 20 | `sessions/tg-rotate-2026-10-20-2308.md` | **S5 生产验证已对开发者开放**（知秋定案，约 2026-10-20 22: |
-| hold lesso lesson memory_open reply 下次 | `sessions/tg-rotate-2026-10-20-2308.md` | 平台政策类派单：除 reply 外应同步 **MEMORY_OPEN**（删过时 |
-| ack agent_bus_sen agent_bus_send.py dedu | `sessions/tg-rotate-2026-10-20-2308.md` | ACK 可能被服务端 **silent 吞掉**（去重/静默策略）；若需确保对方 |
