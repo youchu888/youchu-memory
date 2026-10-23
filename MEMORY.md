@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [Spark 三表 SR 主键与 ad004aed 不一致必须 DROP ](lessons/2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必须-drop-重建-有历史数据的表须先.md) — 会话轮换蒸馏
+- [ACK 无可见回执时用 `agent_bus_send.py --no-](lessons/2026-10-23-ack-无可见回执时用-agent_bus_send-py-no-dedup-重发.md) — 会话轮换蒸馏
+- [三表挂 prod 前先查 prod Paimon 是否存在 `ads_c](lessons/2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在-ads_channel_metric.md) — 会话轮换蒸馏
 - [私聊拍板与回狂人正文须同口径（先发/补数后重跑），避免双通道说法不一致](lessons/2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道说法不一致.md) — 会话轮换蒸馏
 - [代码已确认且业务口头放行时三表可先 prod 发布；维表当日补数、sna](lessons/2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当日补数-snap-有数后再重跑任务-b.md) — 会话轮换蒸馏
 - [重生成须先双机同步+金样实活核对；定稿后推 TG，云端仅在你明确要求时用](lessons/2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在你明确要求时用定稿原样上传.md) — 会话轮换蒸馏

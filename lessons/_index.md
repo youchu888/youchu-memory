@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-23 | [Spark 三表 SR 主键与 ad004aed 不一致必须 DROP 重建；有](./2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必须-drop-重建-有历史数据的表须先.md) | sr-ddl,mgmt-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-23 | [ACK 无可见回执时用 `agent_bus_send.py --no-dedu](./2026-10-23-ack-无可见回执时用-agent_bus_send-py-no-dedup-重发.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-23 | [三表挂 prod 前先查 prod Paimon 是否存在 `ads_chann](./2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在-ads_channel_metric.md) | mgmt-report,prod-gate,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-23 | [海豚新任务挂到 task 列表最后面](./2026-10-23-海豚新任务挂到task列表最后.md) | dolphin, workflow, task-order | 新 task 追加到 taskDefinitionList 末尾 |
 | 2026-10-23 | [私聊拍板与回狂人正文须同口径（先发/补数后重跑），避免双通道说法不一致](./2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道说法不一致.md) | task-intake,放行沟通,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-23 | [代码已确认且业务口头放行时三表可先 prod 发布；维表当日补数、snap 有数](./2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当日补数-snap-有数后再重跑任务-b.md) | dolphin_prod,agent-bus,维表补数,session-rotate | 会话轮换前自动蒸馏 |

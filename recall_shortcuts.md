@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 23 ad004aed agent_session_rot | `~/.dc-platform/memory/lessons/2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必须-drop-重建-有历史数据的表须先.md` | 2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必 |
+| ## 10 2026 23 ack agent | `~/.dc-platform/memory/lessons/2026-10-23-ack-无可见回执时用-agent_bus_send-py-no-dedup-重发.md` | 2026-10-23-ack-无可见回执时用-agent_bus_send-py |
+| ## 013 10 2026 23 ads_channel_metric | `~/.dc-platform/memory/lessons/2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在-ads_channel_metric.md` | 2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在 |
+| 001 002 003 10 20 2026 | `sessions/tg-rotate-2026-10-23-1610.md` | **知秋 2026-10-20 定调**：管理报表三表**不再上海豚、走 Spa |
+| .sql 7（ create ddl ops_pac ops_pack | `sessions/tg-rotate-2026-10-23-1610.md` | 无 prod SR 写权限：DDL 打成运维包（如 `ops_system/sp |
+| 013 20261016 ddl dev prod publish | `sessions/tg-rotate-2026-10-23-1610.md` | **`dev-20261016-013`【渠道日指标】** 未审发前，三表即使  |
+| 09 ads.ads_channel_metrics_daily_d es g_ | `sessions/tg-rotate-2026-10-23-1610.md` | 三表挂生产的**真正上游**往往是 **`ads.ads_channel_met |
+| ad004aed dt l（ paimon.dim.dim_channel_in | `sessions/tg-rotate-2026-10-23-1610.md` | 管理报表三表 Spark 版（`ad004aed`）改读 **`paimon.d |
+| agent bus prod snap 「代 一步 | `sessions/tg-rotate-2026-10-23-1610.md` | 通知发版进度前：**prod 只读核水位**（SR 行数 + snap 状态）， |
+| 00 dim.dim_channel_info_all dim_channel_ | `sessions/tg-rotate-2026-10-23-1610.md` | 汇报「渠道维已有数」须拆两层：**SR `dim.dim_channel_inf |
+| ad004aed ddl drop lesson mgmt report | `sessions/tg-rotate-2026-10-23-1610.md` | [LESSON: sr-ddl,mgmt-report/Spark 三表 SR  |
+| 013 ads_channel_metrics_daily_d gate les | `sessions/tg-rotate-2026-10-23-1610.md` | [LESSON: mgmt-report,prod-gate/三表挂 prod  |
+| 60s ack agent agent_bus agent_bus_send.p | `sessions/tg-rotate-2026-10-23-1610.md` | agent-bus：**60s 内 ACK**；若 ACK 被 silent/d |
+| 799 ad004aed alter create drop sr | `sessions/tg-rotate-2026-10-23-1610.md` | 三表 SR 正式表 **主键与 `ad004aed` 不一致时禁止 ALTER* |
+| ddl paimon prod snap spark sql | `sessions/tg-rotate-2026-10-23-1610.md` | 上游缺表时**不要只修 snap 或 SR DDL**；应 **spark-sq |
 | ## 10 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道说法不一致.md` | 2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道 |
 | ## 10 2026 23 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当日补数-snap-有数后再重跑任务-b.md` | 2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当 |
 | 「先发 不是 不是跳过验数 代码 侧已 前提 | `sessions/tg-rotate-2026-10-23-1209.md` | 此类放行属于 **「先发 + 补跑」** 策略，不是跳过验数；前提是代码侧已核对 |
@@ -30,18 +45,3 @@
 | ## 10 10793 2026 22 8h | `~/.dc-platform/memory/lessons/2026-10-22-srviews-时间列永不-8h-推前对照-bus-10793-自核-源切-sr-时文档-etl.md` | 2026-10-22-srviews-时间列永不-8h-推前对照-bus-107 |
 | 60s ack agent bus mode oral | `sessions/tg-rotate-2026-10-22-1608.md` | agent-bus：`mode=work` 须 **60s 内 ACK**，干完 |
 | 230fa1fb bus jdbc） pipeline reply runner | `sessions/tg-rotate-2026-10-22-1608.md` | 方案摇摆时：先 **bus 对齐 A/B/C**，再改 SQL/文档/pipel |
-| #11164 commit jdbc sr sr→paimon 不归 | `sessions/tg-rotate-2026-10-22-1608.md` | #11164 更正：**快照链路狂人直接做**（对齐归因配置的 **SR→Pai |
-| 8h bus#10793 cast srviews 再减 列禁 | `sessions/tg-rotate-2026-10-22-1608.md` | **时间列禁止对 srViews 再减 8h**（`bus#10793` 曾因此 |
-| 01 05 30 dim_app_info_all paimon sr | `sessions/tg-rotate-2026-10-22-1608.md` | 调度：**05 槽**（与 `dim_app_info_all` 同槽），业务后 |
-| #11161 jdbc paimon.dim.dim_channel_info_ | `sessions/tg-rotate-2026-10-22-1608.md` | 狂人 #11161 选 **A**：去掉 JDBC 依赖、不再催运维开业务库只读 |
-| insert prod sr sr） test update | `sessions/tg-rotate-2026-10-22-1608.md` | 当时反对「只读 SR 当源」的两点仍作风险备忘：prod SR 该表曾 **长期 |
-| bus etl prod sr 「快 「有 | `sessions/tg-rotate-2026-10-22-1608.md` | prod 有 **SR 只读账号**（查数/对账），与「快照 ETL 用哪条链路 |
-| bmp dim.dim_channel_info_all dim_channel | `sessions/tg-rotate-2026-10-22-1608.md` | 渠道维表日快照（`dim_channel_info_all_snap`）取数源会 |
-| agent bus commit jdbc lesson reply | `sessions/tg-rotate-2026-10-22-1608.md` | [LESSON: agent-bus/狂人声明「我直接做、不要再推」→ 停改停推 |
-| 8h bus#10793 cast srviews 再减 列禁 | `sessions/tg-rotate-2026-10-22-1608.md` | 时间列禁止对 srViews 再减 8h**（`bus#10793` 曾因此退回 |
-| #5 1） 57 71 lesson 不写 | `sessions/tg-rotate-2026-10-21-2208.md` | 私聊编号（如私聊#571）仅作会话溯源，蒸馏记忆时不写入 lesson 正文。 |
-| mac old tg 「上 「上传云端」是后续可选一步 」是 | `sessions/tg-rotate-2026-10-21-2208.md` | 本段流程前提：日报通常已在 old-mac 定稿并推 TG；「上传云端」是后续可 |
-| id inserted 三要 主人 于主 云端 | `sessions/tg-rotate-2026-10-21-2208.md` | 成功回执应带三要素：文件名、云端记录 ID、操作类型（如 `inserted`  |
-| .cursor config.js date dd downloads git | `sessions/tg-rotate-2026-10-21-2208.md` | 标准命令：`python3 .cursor/scripts/upload_wor |
-| asia date dd mm shanghai yyyy | `sessions/tg-rotate-2026-10-21-2208.md` | 未指定日期时，默认用当日 Asia/Shanghai 的 `YYYY-MM-DD |
-| lesson 新坑 无新 未追加 本段 段无 | `sessions/tg-rotate-2026-10-21-2208.md` | （本段无新坑；未追加 `[LESSON: …]`。） |
