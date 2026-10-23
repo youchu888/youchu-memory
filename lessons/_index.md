@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-23 | [海豚新任务挂到 task 列表最后面](./2026-10-23-海豚新任务挂到task列表最后.md) | dolphin, workflow, task-order | 新 task 追加到 taskDefinitionList 末尾 |
 | 2026-10-23 | [私聊拍板与回狂人正文须同口径（先发/补数后重跑），避免双通道说法不一致](./2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道说法不一致.md) | task-intake,放行沟通,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-23 | [代码已确认且业务口头放行时三表可先 prod 发布；维表当日补数、snap 有数](./2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当日补数-snap-有数后再重跑任务-b.md) | dolphin_prod,agent-bus,维表补数,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-23 | [编排挂载步缺 srViews 时 ETL 改读 Paimon snap，勿只靠 step_def](./2026-10-23-编排挂载步缺srViews改读snap.md) | spark, srViews, dim_channel_info_all_snap | 挂载步无视图→改 snap；按步名冒烟 |
