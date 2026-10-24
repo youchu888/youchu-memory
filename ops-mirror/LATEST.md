@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-24 09:55:21 +0800
+> 更新: 2026-10-24 09:58:21 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-24.md`
 
@@ -20,4 +20,4 @@
 | 2026-10-23 12:49 | 群派单#274 | worker_ant_group | completed | @蓝猫 dev-20261021-003（设备首访）进度：测试集群 10-22 这一格的设备日批和首访两步都跑成功了。日批没有冲掉首访四列（跑前跑后都是 4,7 |
 | 2026-10-23 15:09 | 私聊#578 | telegram_dm | completed | 通知狂人，渠道维表的数据已经有了，询问发版到哪一步了 |
 | 2026-10-23 20:27 | 私聊#579 | telegram_dm | completed | 问狂人生产发好了没有，补数了没有 |
-| 2026-10-24 09:50 | 私聊#580 | telegram_dm | in_progress | ads_dept_promotion_summary_m 知秋说 改了表结构不升级代码？ 检查一下哪里不对 |
+| 2026-10-24 09:50 | 私聊#580 | telegram_dm | completed | ads_dept_promotion_summary_m 知秋说 改了表结构不升级代码？ 检查一下哪里不对 |
