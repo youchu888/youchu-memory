@@ -5,6 +5,7 @@
 > 更新：2026-09-23
 
 ## 进行中
+- [ ] **pipeline-runner 值班（知秋·bus#11439）**：又初看调度器；`runner_` 告警抄送；SOP=`lessons/2026-10-24-pipeline-runner调度器值班与补数红线-bus11429.md`；次日 08:30 前 bus 汇总狂人；红线先报。
 - [ ] **归因 result 影子切正式（bus#10921/#10922/#10936）**：计划认可；**D1=10-21 起每天日结**经 bus 发狂人；剧本 `ops_system/00.pipeline/recon/recon_register_attribution_result_shadow_vs_formal.sql`；7 天对平后报切停海豚 `174729603403591`；配置类差先报。另：压测 wf `wf_dws_归因_paimon_shadow_日` 的 `result_d_r` 已按知秋定停（bus#11232，`flag=NO`）；同 wf apply/metrics 仍开，是否同停等知秋。
 
 - [ ] **dim_channel_info_all_snap**：JDBC/SR 换源已停手（#11164）。**现网 SQL 以 `3ce1c124` 的 `dim_channel_info_all_sync.sql` md5 `68ebf206`（00 槽日快照）为准**（#11175）；勿再推 `230fa1fb`。**prod SR `dim.dim_channel_info_all`=0、prod snap 无分区**（#11251 复核）；卡业务后台写产。BitmapUdf 中间态以 Kryo 为准。
