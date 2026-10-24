@@ -5,6 +5,17 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-24-stage7-且-publish_runs_count-0-即未产发-产表-0-行属正常-需先审.md` | 2026-10-24-stage7-且-publish_runs_count-0 |
+| ## 10 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-24-判产上-spark-三表是否出数-prod-sr-与-paimon-双查-生产-full_cha.md` | 2026-10-24-判产上-spark-三表是否出数-prod-sr-与-pa |
+| ad004aed ads snap spark 不能 不能假设 | `sessions/tg-rotate-2026-10-24-1111.md` | 要出数的路径：**审核通过（如 `ad004aed`）→ 挂生产 Spark 编 |
+| publish_runs_count session stage7 下是 不是  | `sessions/tg-rotate-2026-10-24-1111.md` | session 停在 **stage7** 且 **`publish_runs_ |
+| ads ads_dept_promotion_summary_m ads_pro | `sessions/tg-rotate-2026-10-24-1111.md` | 管理报表三表常一起核对：**`ads_dept_promotion_summar |
+| 10 2026 23 ads snap snap_dt | `sessions/tg-rotate-2026-10-24-1111.md` | 表按日期重建完成、上游 **snap 已有数**（如 `snap_dt=2026 |
+| od pr ro spark sr test | `sessions/tg-rotate-2026-10-24-1111.md` | **test SR 有数**（如部门月/周、产品周）可能是**旧海豚口径**；* |
+| full_chain.jso full_chain.json full_chai | `sessions/tg-rotate-2026-10-24-1111.md` | 任务只在 **`full_chain_testcluster` 测试编排**里、 |
+| paimon prod spark sr sr」） 「只 | `sessions/tg-rotate-2026-10-24-1111.md` | **prod SR 与 prod Paimon 同为 0 行**，可判定 Spa |
+| paimon snap spark sr vs 「没 | `sessions/tg-rotate-2026-10-24-1111.md` | 对外结论宜拆两层：**基础设施/上游就绪**（表建好、snap 有数） vs * |
+| ar dev full_chain.json pa paimon prod | `sessions/tg-rotate-2026-10-24-1111.md` | 问「Spark 跑完没 / 三表有数没」时，不要只看 prod SR 行数；应串 |
 | ## 10 2026 24 ads_dept_promotion_summary | `~/.dc-platform/memory/lessons/2026-10-24-ddl-dolphin-半上线-主键变更.md` | 2026-10-24-ddl-dolphin-半上线-主键变更 |
 | live l— prod ql sq sql——环境间不能假设「一起升了」 | `sessions/tg-rotate-2026-10-24-1011.md` | **prod 海豚 vs test 海豚可能不同步**：摘录中 prod liv |
 | ... 05.ads live max ops_system paid_type | `sessions/tg-rotate-2026-10-24-1011.md` | **test 典型错配**：表半改（加列未换 PK），海豚 live 仍 **渠 |
@@ -34,14 +45,3 @@
 | 799 ad004aed alter create drop sr | `sessions/tg-rotate-2026-10-23-1610.md` | 三表 SR 正式表 **主键与 `ad004aed` 不一致时禁止 ALTER* |
 | ddl paimon prod snap spark sql | `sessions/tg-rotate-2026-10-23-1610.md` | 上游缺表时**不要只修 snap 或 SR DDL**；应 **spark-sq |
 | ## 10 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道说法不一致.md` | 2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道 |
-| ## 10 2026 23 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当日补数-snap-有数后再重跑任务-b.md` | 2026-10-23-代码已确认且业务口头放行时三表可先-prod-发布-维表当 |
-| 「先发 不是 不是跳过验数 代码 侧已 前提 | `sessions/tg-rotate-2026-10-23-1209.md` | 此类放行属于 **「先发 + 补跑」** 策略，不是跳过验数；前提是代码侧已核对 |
-| #1 11 12 25 3） 53 | `sessions/tg-rotate-2026-10-23-1209.md` | 回 bus 时带上 **bus#**（如 bus#11253）和 **reply |
-| agent_bus_send.py dedup no 再次 出站 出站若被 | `sessions/tg-rotate-2026-10-23-1209.md` | 出站若被 **去重拦截**，在确属需再次送达（非误触重复）时，用 `agent_ |
-| dolphin_prod 一句 一句说清 三表 于对 产放 | `sessions/tg-rotate-2026-10-23-1209.md` | 向狂人转达生产放行时，用 **`dolphin_prod` + 范围（三表）+  |
-| #5 57 77 7） agent bus | `sessions/tg-rotate-2026-10-23-1209.md` | 私聊放行（如私聊#577）与 agent-bus 回狂人应**语义一致**：先发 |
-| snap 于并 任务 依赖 先发 先发任务 | `sessions/tg-rotate-2026-10-23-1209.md` | 维表当日补数属于并行安排：**先发任务 / 发版，补数完成后 snap 有数，再 |
-| 「代 」时 三表 不必 不必等当日维表补数完成 业务 | `sessions/tg-rotate-2026-10-23-1209.md` | 管理报表三表：业务已确认「代码没问题」时，**不必等当日维表补数完成**即可按现 |
-| lookup rules.sh 不要 不要在启动时通 不要在启动时通读红线和经验 | `sessions/tg-rotate-2026-10-23-1209.md` | > **指令**：先读本文件里的未结事项。做到某件事时再 `lookup-rul |
-| ## +金 10 2026 22 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在你明确要求时用定稿原样上传.md` | 2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在 |
-| ## 10 2026 22 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥离.md` | 2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥 |

@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-24 | [stage7 且 publish_runs_count=0 即未产发，产表 0 ](./2026-10-24-stage7-且-publish_runs_count-0-即未产发-产表-0-行属正常-需先审.md) | dev-session,dolphin_prod,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-24 | [判产上 Spark 三表是否出数：prod SR 与 Paimon 双查 + 生](./2026-10-24-判产上-spark-三表是否出数-prod-sr-与-paimon-双查-生产-full_cha.md) | datacheck,spark,promotion-summary,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-24 | [ddl|dolphin|半上线|主键变更](./2026-10-24-ddl-dolphin-半上线-主键变更.md) | ads_dept_promotion_summary_m,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-23 | [Spark 三表 SR 主键与 ad004aed 不一致必须 DROP 重建；有](./2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必须-drop-重建-有历史数据的表须先.md) | sr-ddl,mgmt-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-23 | [ACK 无可见回执时用 `agent_bus_send.py --no-dedu](./2026-10-23-ack-无可见回执时用-agent_bus_send-py-no-dedup-重发.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |

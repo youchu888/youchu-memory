@@ -1,10 +1,19 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-10-24 · 最新归档：`sessions/tg-rotate-2026-10-24-1011.md`
+> 更新：2026-10-24 · 最新归档：`sessions/tg-rotate-2026-10-24-1111.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 问「Spark 跑完没 / 三表有数没」时，不要只看 prod SR 行数；应串联 **prod SR → prod Paimon → 生产 `full_chain.json` 是否挂任务 → dev session 是否已产发 → 上游 snap**。
+- 对外结论宜拆两层：**基础设施/上游就绪**（表建好、snap 有数） vs **Spark 三表未挂产/未跑**（产 SR/Paimon 全空）；避免只说「没跑完」造成歧义。
+- **prod SR 与 prod Paimon 同为 0 行**，可判定 Spark 链路**从未在产写出过数**（不是「跑慢」或「只没落 SR」）。
+- 任务只在 **`full_chain_testcluster` 测试编排**里、**生产 `full_chain.json` 无对应节点** → 产上**根本没挂 Spark 跑**，与「任务失败」要区分开。
+- **test SR 有数**（如部门月/周、产品周）可能是**旧海豚口径**；**不能**当作「prod Spark 已跑通」的证据。
+- 表按日期重建完成、上游 **snap 已有数**（如 `snap_dt=2026-10-23`），**不自动**代表下游 ADS 三表会有数；中间还缺 **挂产 + 跑批 + 产发**。
+- 管理报表三表常一起核对：**`ads_dept_promotion_summary_m` / `_w`**、**`ads_product_promotion_summary_w`**。
+- session 停在 **stage7** 且 **`publish_runs_count=0`** → **尚未产发**；产表为空在此状态下是**预期**，不是偶发缺数。
+- 要出数的路径：**审核通过（如 `ad004aed`）→ 挂生产 Spark 编排 → 跑批**；或经审批的**手工补跑**，不能假设 snap 好了会自动出 ADS。
 - 主键/粒度变更必须 DROP 重建（或等价换表）**：不能指望 `ALTER ADD COLUMN` 完成从「渠道×部门」到「部门×是否免费」的迁移。
 - 运维建表脚本要回读原文**：群里的 **`1023.sql` 若按「渠道×部门」主键建表**，等于用旧 PK 覆盖了新 DDL 意图，是「给了新 DDL 但线上仍旧结构」的常见根因之一。
 - 交付物要对齐三件套**：交给运维的 DDL、海豚发布 SQL、仓库 canonical DDL/ETL 必须同一批、同一 PK 定义；交付后应用 `SHOW CREATE`/元数据 + live SQL 验收，不能只听「昨天建过了」。
@@ -14,13 +23,4 @@
 - **`ads_dept_promotion_summary_m` 目标粒度**：`month × dept × paid_type`，主键含 `paid_type`，**不含 `channel`**；旧口径是 `month × channel × dept`。
 - **只 ALTER 加列 ≠ 换主键落地**：现网 PK 仍是 `(month_start_dt, channel, dept_id)`、`paid_type` 可空且不在 PK 时，业务上仍是渠道×部门，不算新 DDL 生效。
 - **主键/粒度变更必须 DROP 重建（或等价换表）**：不能指望 `ALTER ADD COLUMN` 完成从「渠道×部门」到「部门×是否免费」的迁移。
-- **prod 典型错配**：海豚 task 已按新列写（无 `channel`、有 `paid_type`），SR 表 PK 仍要 `channel` → 写表对不上；叠加 **`dim_channel_info_all` 空** 等依赖，可出现 **prod 0 行**。
-- **test 典型错配**：表半改（加列未换 PK），海豚 live 仍 **渠道拆行 + `paid_type` 用 MAX 当属性**，与仓库 `ops_system/05.ads/...` 新稿不一致；有行数也不代表新口径。
-- **prod 海豚 vs test 海豚可能不同步**：摘录中 prod live 已接近仓库新稿，test live 仍旧 SQL——环境间不能假设「一起升了」。
-- **Spark 影子/回写链也要对**：除海豚外，Spark 写 SR 的 SQL 是否含 `paid_type`、粒度是否与 DDL 一致，要单独查，避免「海豚对了、回写漏维」。
-- **运维建表脚本要回读原文**：群里的 **`1023.sql` 若按「渠道×部门」主键建表**，等于用旧 PK 覆盖了新 DDL 意图，是「给了新 DDL 但线上仍旧结构」的常见根因之一。
-- **交付物要对齐三件套**：交给运维的 DDL、海豚发布 SQL、仓库 canonical DDL/ETL 必须同一批、同一 PK 定义；交付后应用 `SHOW CREATE`/元数据 + live SQL 验收，不能只听「昨天建过了」。
-- 上游缺表时**不要只修 snap 或 SR DDL**；应 **spark-sql 实查 prod Paimon 表是否存在**，并对照 prod/test 编排是否含该任务。
-- 三表 SR 正式表 **主键与 `ad004aed` 不一致时禁止 ALTER**，须 **DROP + CREATE**；部门周/月现网 0 行可直重建；**产品周等有历史行**（如约 799 行）须先确认**新粒度会清空**，再交运维执行。
-- agent-bus：**60s 内 ACK**；若 ACK 被 silent/dedup 丢掉，用 `agent_bus_send.py` **`--no-dedup` 重发**，勿当已 ack；干完再 **reply 结案**。
 
