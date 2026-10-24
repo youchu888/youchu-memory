@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-24 | [日报须先双机同步再读old-mac实活](./2026-10-24-日报须先双机同步再读old-mac实活.md) | 日报,dual-mac,work-log | 写日报前必须 prepare_daily_report_sync，再按 old-mac 下午实活与产上现网定稿 |
 | 2026-10-24 | [stage7 且 publish_runs_count=0 即未产发，产表 0 ](./2026-10-24-stage7-且-publish_runs_count-0-即未产发-产表-0-行属正常-需先审.md) | dev-session,dolphin_prod,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-24 | [判产上 Spark 三表是否出数：prod SR 与 Paimon 双查 + 生](./2026-10-24-判产上-spark-三表是否出数-prod-sr-与-paimon-双查-生产-full_cha.md) | datacheck,spark,promotion-summary,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-24 | [ddl|dolphin|半上线|主键变更](./2026-10-24-ddl-dolphin-半上线-主键变更.md) | ads_dept_promotion_summary_m,session-rotate | 会话轮换前自动蒸馏 |
