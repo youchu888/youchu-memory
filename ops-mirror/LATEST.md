@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-24 10:19:34 +0800
+> 更新: 2026-10-24 10:22:33 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-24.md`
 
@@ -22,3 +22,4 @@
 | 2026-10-23 20:27 | 私聊#579 | telegram_dm | completed | 问狂人生产发好了没有，补数了没有 |
 | 2026-10-24 09:50 | 私聊#580 | telegram_dm | completed | ads_dept_promotion_summary_m 知秋说 改了表结构不升级代码？ 检查一下哪里不对 |
 | 2026-10-24 10:06 | 私聊#581 | telegram_dm | completed | 昨天不是给新的ddl给运维建表了吗？你查下聊天记录问题出在哪了？大数据运维群里 有个1023.sql |
+| 2026-10-24 10:20 | 私聊#582 | telegram_dm | in_progress | 查一下spark任务跑完了吗？3张表里有数了吗 |
