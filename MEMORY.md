@@ -5,6 +5,7 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [ddl|dolphin|半上线|主键变更](lessons/2026-10-24-ddl-dolphin-半上线-主键变更.md) — 会话轮换蒸馏
 - [Spark 三表 SR 主键与 ad004aed 不一致必须 DROP ](lessons/2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必须-drop-重建-有历史数据的表须先.md) — 会话轮换蒸馏
 - [ACK 无可见回执时用 `agent_bus_send.py --no-](lessons/2026-10-23-ack-无可见回执时用-agent_bus_send-py-no-dedup-重发.md) — 会话轮换蒸馏
 - [三表挂 prod 前先查 prod Paimon 是否存在 `ads_c](lessons/2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在-ads_channel_metric.md) — 会话轮换蒸馏

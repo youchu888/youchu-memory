@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 24 ads_dept_promotion_summary | `~/.dc-platform/memory/lessons/2026-10-24-ddl-dolphin-半上线-主键变更.md` | 2026-10-24-ddl-dolphin-半上线-主键变更 |
+| live l— prod ql sq sql——环境间不能假设「一起升了」 | `sessions/tg-rotate-2026-10-24-1011.md` | **prod 海豚 vs test 海豚可能不同步**：摘录中 prod liv |
+| ... 05.ads live max ops_system paid_type | `sessions/tg-rotate-2026-10-24-1011.md` | **test 典型错配**：表半改（加列未换 PK），海豚 live 仍 **渠 |
+| channel dim_channel_info_all paid_type p | `sessions/tg-rotate-2026-10-24-1011.md` | **prod 典型错配**：海豚 task 已按新列写（无 `channel`、 |
+| add alter column drop ×是 ×部 | `sessions/tg-rotate-2026-10-24-1011.md` | **主键/粒度变更必须 DROP 重建（或等价换表）**：不能指望 `ALTER |
+| alter channel ddl dept_id month_start_dt | `sessions/tg-rotate-2026-10-24-1011.md` | **只 ALTER 加列 ≠ 换主键落地**：现网 PK 仍是 `(month_ |
+| ads_dept_promotion_summary_m channel dep | `sessions/tg-rotate-2026-10-24-1011.md` | **`ads_dept_promotion_summary_m` 目标粒度**： |
+| ddl live pk prod spark sql | `sessions/tg-rotate-2026-10-24-1011.md` | **半上线判定**：改口径表要同时核对「仓库 DDL/SQL、海豚 live S |
+| ads_dept_promotion_summary_m alter creat | `sessions/tg-rotate-2026-10-24-1011.md` | [LESSON: ads_dept_promotion_summary_m/dd |
+| 10 20 checklist ddl etl insert | `sessions/tg-rotate-2026-10-24-1011.md` | 与 10-20 同类根因**：**DDL/改表与写表 ETL 未同批对齐**；发 |
+| canonical create ddl etl live pk | `sessions/tg-rotate-2026-10-24-1011.md` | 交付物要对齐三件套**：交给运维的 DDL、海豚发布 SQL、仓库 canoni |
+| 1023.sql ddl pk ×部 「渠 「给 | `sessions/tg-rotate-2026-10-24-1011.md` | 运维建表脚本要回读原文**：群里的 **`1023.sql` 若按「渠道×部门」 |
+| add alter column drop ×是 ×部 | `sessions/tg-rotate-2026-10-24-1011.md` | 主键/粒度变更必须 DROP 重建（或等价换表）**：不能指望 `ALTER A |
 | ## 10 2026 23 ad004aed agent_session_rot | `~/.dc-platform/memory/lessons/2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必须-drop-重建-有历史数据的表须先.md` | 2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必 |
 | ## 10 2026 23 ack agent | `~/.dc-platform/memory/lessons/2026-10-23-ack-无可见回执时用-agent_bus_send-py-no-dedup-重发.md` | 2026-10-23-ack-无可见回执时用-agent_bus_send-py |
 | ## 013 10 2026 23 ads_channel_metric | `~/.dc-platform/memory/lessons/2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在-ads_channel_metric.md` | 2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在 |
@@ -32,16 +45,3 @@
 | lookup rules.sh 不要 不要在启动时通 不要在启动时通读红线和经验 | `sessions/tg-rotate-2026-10-23-1209.md` | > **指令**：先读本文件里的未结事项。做到某件事时再 `lookup-rul |
 | ## +金 10 2026 22 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在你明确要求时用定稿原样上传.md` | 2026-10-22-重生成须先双机同步-金样实活核对-定稿后推-tg-云端仅在 |
 | ## 10 2026 22 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥离.md` | 2026-10-22-对外回复禁用-主人-一律用-你-内部可留出处词-输出必须剥 |
-| .cursor dd.md log memory mm reports | `sessions/tg-rotate-2026-10-22-2209.md` | 定稿路径：`.cursor/work-log/reports/日报-YYYY-M |
-| tg 不符 不能 不能仅替换一个词 与当 个词 | `sessions/tg-rotate-2026-10-22-2209.md` | 旧草稿若含违规称呼或与当日实活不符，重生成时要**全文重写并核对实活**，再推  |
-| log prepare_daily_report_sync transcript | `sessions/tg-rotate-2026-10-22-2209.md` | 「重新生成日报」= 完整日报链路重做，不是局部改稿：先双机 `prepare_d |
-| lesson 「主 「你 一律 一律用「你」 主人 | `sessions/tg-rotate-2026-10-22-2209.md` | [LESSON: 称呼/对外回复禁用「主人」，一律用「你」；内部可留出处词，输出 |
-| api apitoken id inserted） record 一句 | `sessions/tg-rotate-2026-10-22-2209.md` | 上传成功可在回复中说明日期与记录状态（如 inserted）；**不要**在蒸馏 |
-| 「按 「按这个上传云端」 上传 上传前禁止改字 不动 个上 | `sessions/tg-rotate-2026-10-22-2209.md` | 「按这个上传云端」= 以**当前定稿原封不动**跑上传脚本；上传前禁止改字、禁止 |
-| post_daily_report_to_dm.py tg 「已 不要 不要贴全 | `sessions/tg-rotate-2026-10-22-2209.md` | 定稿后**立刻** `post_daily_report_to_dm.py` 推 |
-| 「主 」等 主人 人」 保留 内部 | `sessions/tg-rotate-2026-10-22-2209.md` | 内部记忆、规则出处可保留「主人」等词；**写给用户的输出必须剥离**，口误后要按 |
-| cursor tg 「主 「你 」直 一律 | `sessions/tg-rotate-2026-10-22-2209.md` | 对外回复（TG 私聊、Cursor 对话、推给你的正文）禁用「主人」，一律用「你 |
-| ## 10 2026 22 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已推-commit-与是否需回滚-勿继续.md` | 2026-10-22-狂人声明-我直接做-不要再推-停改停推-reply-说明已 |
-| ## 10 10793 2026 22 8h | `~/.dc-platform/memory/lessons/2026-10-22-srviews-时间列永不-8h-推前对照-bus-10793-自核-源切-sr-时文档-etl.md` | 2026-10-22-srviews-时间列永不-8h-推前对照-bus-107 |
-| 60s ack agent bus mode oral | `sessions/tg-rotate-2026-10-22-1608.md` | agent-bus：`mode=work` 须 **60s 内 ACK**，干完 |
-| 230fa1fb bus jdbc） pipeline reply runner | `sessions/tg-rotate-2026-10-22-1608.md` | 方案摇摆时：先 **bus 对齐 A/B/C**，再改 SQL/文档/pipel |

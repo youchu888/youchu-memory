@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-10-23 · 最新归档：`sessions/tg-rotate-2026-10-23-1610.md`
+> 更新：2026-10-24 · 最新归档：`sessions/tg-rotate-2026-10-24-1011.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 主键/粒度变更必须 DROP 重建（或等价换表）**：不能指望 `ALTER ADD COLUMN` 完成从「渠道×部门」到「部门×是否免费」的迁移。
+- 运维建表脚本要回读原文**：群里的 **`1023.sql` 若按「渠道×部门」主键建表**，等于用旧 PK 覆盖了新 DDL 意图，是「给了新 DDL 但线上仍旧结构」的常见根因之一。
+- 交付物要对齐三件套**：交给运维的 DDL、海豚发布 SQL、仓库 canonical DDL/ETL 必须同一批、同一 PK 定义；交付后应用 `SHOW CREATE`/元数据 + live SQL 验收，不能只听「昨天建过了」。
+- 与 10-20 同类根因**：**DDL/改表与写表 ETL 未同批对齐**；发版 checklist 应含「表 PK + 任务 INSERT 列清单 + 下游维表是否就绪」。
+- [LESSON: ads_dept_promotion_summary_m|ddl|dolphin|半上线|主键变更] 粒度或主键变更时禁止仅 ALTER 加列；运维脚本、SR 现网 PK、海豚 live、Spark 回写须同批对齐，交付后用 SHOW CREATE + live SQL 四方交叉验收。
+- **半上线判定**：改口径表要同时核对「仓库 DDL/SQL、海豚 live SQL、test/prod 现网表 PK/粒度、Spark 回写」四层；任一层不一致即半上线，不单看仓库有没有字段。
+- **`ads_dept_promotion_summary_m` 目标粒度**：`month × dept × paid_type`，主键含 `paid_type`，**不含 `channel`**；旧口径是 `month × channel × dept`。
+- **只 ALTER 加列 ≠ 换主键落地**：现网 PK 仍是 `(month_start_dt, channel, dept_id)`、`paid_type` 可空且不在 PK 时，业务上仍是渠道×部门，不算新 DDL 生效。
+- **主键/粒度变更必须 DROP 重建（或等价换表）**：不能指望 `ALTER ADD COLUMN` 完成从「渠道×部门」到「部门×是否免费」的迁移。
+- **prod 典型错配**：海豚 task 已按新列写（无 `channel`、有 `paid_type`），SR 表 PK 仍要 `channel` → 写表对不上；叠加 **`dim_channel_info_all` 空** 等依赖，可出现 **prod 0 行**。
+- **test 典型错配**：表半改（加列未换 PK），海豚 live 仍 **渠道拆行 + `paid_type` 用 MAX 当属性**，与仓库 `ops_system/05.ads/...` 新稿不一致；有行数也不代表新口径。
+- **prod 海豚 vs test 海豚可能不同步**：摘录中 prod live 已接近仓库新稿，test live 仍旧 SQL——环境间不能假设「一起升了」。
+- **Spark 影子/回写链也要对**：除海豚外，Spark 写 SR 的 SQL 是否含 `paid_type`、粒度是否与 DDL 一致，要单独查，避免「海豚对了、回写漏维」。
+- **运维建表脚本要回读原文**：群里的 **`1023.sql` 若按「渠道×部门」主键建表**，等于用旧 PK 覆盖了新 DDL 意图，是「给了新 DDL 但线上仍旧结构」的常见根因之一。
+- **交付物要对齐三件套**：交给运维的 DDL、海豚发布 SQL、仓库 canonical DDL/ETL 必须同一批、同一 PK 定义；交付后应用 `SHOW CREATE`/元数据 + live SQL 验收，不能只听「昨天建过了」。
 - 上游缺表时**不要只修 snap 或 SR DDL**；应 **spark-sql 实查 prod Paimon 表是否存在**，并对照 prod/test 编排是否含该任务。
 - 三表 SR 正式表 **主键与 `ad004aed` 不一致时禁止 ALTER**，须 **DROP + CREATE**；部门周/月现网 0 行可直重建；**产品周等有历史行**（如约 799 行）须先确认**新粒度会清空**，再交运维执行。
 - agent-bus：**60s 内 ACK**；若 ACK 被 silent/dedup 丢掉，用 `agent_bus_send.py` **`--no-dedup` 重发**，勿当已 ack；干完再 **reply 结案**。
-- [LESSON: mgmt-report,prod-gate|三表挂 prod 前先查 prod Paimon 是否存在 `ads_channel_metrics_daily_d` 及编排步，缺则先走完并审发 013，勿只修 snap/SR]
-- [LESSON: sr-ddl,mgmt-report|Spark 三表 SR 主键与 ad004aed 不一致必须 DROP 重建；有历史数据的表须先确认清空后再让运维执行]
-- 汇报「渠道维已有数」须拆两层：**SR `dim.dim_channel_info_all` 本体行数** vs **Paimon `dim_channel_info_all_snap` 分区/行数**；本体有数不代表 00 槽 snap 已出，后者仍可能 0 行/无分区。
-- 通知发版进度前：**prod 只读核水位**（SR 行数 + snap 状态），再经 agent-bus 转告，并明确问「代发到哪一步、是否先跑 snap / 先发后有数再重跑」。
-- 管理报表三表 Spark 版（`ad004aed`）改读 **`paimon.dim.dim_channel_info_all_snap`（`snap_dt=DT`）**，去掉 srViews，加 **snap 水位探针**；提审/挂 prod 前须核 prod 快照 SQL（如历史 **减 8 小时** 时区处理已去掉）。
-- 三表挂生产的**真正上游**往往是 **`ads.ads_channel_metrics_daily_d`**：三表计算第一步探针/SQL 都依赖它；prod Paimon 无表会 `TABLE_OR_VIEW_NOT_FOUND`，且 prod 编排里可能没有对应步（test 常在 **09 槽 `g_ads_channel_metrics_daily_d`**）。
-- **`dev-20261016-013`【渠道日指标】** 未审发前，三表即使 DDL/快照就绪也**不能**完整挂 prod；013 须 **S6 产物齐 → `request-publish`**，审发后再挂三表。
-- 无 prod SR 写权限：DDL 打成运维包（如 `ops_system/spark_migrate/_ops_pack/prod_rebuild_mgmt_report_sr_three_tables_*.sql`），运维执行后请审核人 **`SHOW CREATE TABLE` 复核**，再继续生产 S7（建 Paimon 表 → 送 SQL → 挂编排 → 当天格补跑）。
-- **知秋 2026-10-20 定调**：管理报表三表**不再上海豚、走 Spark**；`dev-20261013-001/002/003` 海豚会话须 **`withdraw-publish`**，新海豚发布申请一律不收；继续 **`dev-20261022-001/002/003` + `ad004aed`**。
-- 推荐顺序：**013 审发 → 三表 SR DROP 重建（运维）→ snap/Paimon + prod 编排 → 补跑**；切 Spark 时在 **`wf_ads_日报表_日`** 停海豚侧三表任务（`ads_dept_promotion_summary_w/m`、`ads_product_promotion_summary_w`）。
-- > **指令**：先读本文件里的未结事项。做到某件事时再 `lookup-rules.sh` 查对应规则，不要在启动时通读红线和经验。
-- 管理报表三表：业务已确认「代码没问题」时，**不必等当日维表补数完成**即可按现行代码走生产发布。
-- 维表当日补数属于并行安排：**先发任务 / 发版，补数完成后 snap 有数，再重跑依赖任务**即可闭环。
-- 私聊放行（如私聊#577）与 agent-bus 回狂人应**语义一致**：先发、补数后重跑，避免狂人侧仍按「等维表」理解。
-- 向狂人转达生产放行时，用 **`dolphin_prod` + 范围（三表）+ 补数后重跑** 一句说清，便于对方按海豚/补数节奏执行。
 
