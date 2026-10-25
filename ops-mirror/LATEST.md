@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-10-25 12:20:34 +0800
+> 更新: 2026-10-25 12:23:30 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-10-25.md`
 
@@ -19,3 +19,4 @@
 | 2026-10-24 18:40 | 群派单#277 | worker_ant_group | completed | #11395 设备首充留存也审完了，结论是「修改后通过」，意见已在 bus 上回给欧阳克（#11408）。 要改的主要一处：设备付款数据只从 10-01 开始， |
 | 2026-10-24 19:39 | 群派单#278 | worker_ant_group | completed | 收到。查法已经在 bus #11423 发给欧阳克，这里说个要点。 一、dwd.dwd_user_register_d_v2.channel 是不是归因渠道，按 |
 | 2026-10-24 19:48 | 私聊#583 | telegram_dm | completed | 你要值班，问下狂人怎么管理spark，值班需要注意什么 |
+| 2026-10-25 12:23 | 私聊#584 | telegram_dm | in_progress | 值班发现什么异常了吗 |
