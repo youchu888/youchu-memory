@@ -5,6 +5,17 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 20min 25 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-25-汇报-pipeline-挂账写清卡点日期格-pending_count-block_reason.md` | 2026-10-25-汇报-pipeline-挂账写清卡点日期格-pending |
+| ## 10 2026 25 agent_session_rotate bl | `~/.dc-platform/memory/lessons/2026-10-25-值班查异常先-heartbeat-筛真实-runner_-告警-wait_probe-探针-bl.md` | 2026-10-25-值班查异常先-heartbeat-筛真实-runner_- |
+| dwd.dwd_video_event_h_r dws_app_coin_con | `sessions/tg-rotate-2026-10-25-1311.md` | 例：`dws_app_coin_consume_d_h` 在 `wait_pro |
+| 1） dt#08 pending pending_count 一格 下一 | `sessions/tg-rotate-2026-10-25-1311.md` | 挂账常 **连带 pending**：前一格（如 `dt#08`）未了结 → 下 |
+| 00 08 runbook wait_probe 上游 不动 | `sessions/tg-rotate-2026-10-25-1311.md` | **`wait_probe` 挂账**：从今天 08:00 起等上游探针放行时， |
+| block_reason etl slot_done 不是 且主 且主链仍是 | `sessions/tg-rotate-2026-10-25-1311.md` | 顶层 **`block_reason: 探针未放行: <表>`** 且主链仍是  |
+| 20 idle slot_done wait_probe 一步 不算 | `sessions/tg-rotate-2026-10-25-1311.md` | 各线状态 **`idle` / `slot_done`** 且 **同一步骤 > |
+| daemon err_count_recent log log_age_sec  | `sessions/tg-rotate-2026-10-25-1311.md` | 调度器健康三件套：**daemon 在跑**（pid）、**log 新鲜度**（ |
+| bus inbox runner runner_link_test vs 不算 | `sessions/tg-rotate-2026-10-25-1311.md` | **真故障** vs **链路测试**：`runner_link_test`（如 |
+| hdfs runbook 入时 再决 再决定是否补数 决定 | `sessions/tg-rotate-2026-10-25-1311.md` | 用户要深入时：可选 **盯该格** 或 **按 runbook 核 HDFS 完 |
+| heart heartbeat inbox pipeline runner so | `sessions/tg-rotate-2026-10-25-1311.md` | 私聊问「值班有没有异常」→ 先对值班日历，再按 **pipeline-runne |
 | ## 10 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-24-stage7-且-publish_runs_count-0-即未产发-产表-0-行属正常-需先审.md` | 2026-10-24-stage7-且-publish_runs_count-0 |
 | ## 10 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-24-判产上-spark-三表是否出数-prod-sr-与-paimon-双查-生产-full_cha.md` | 2026-10-24-判产上-spark-三表是否出数-prod-sr-与-pa |
 | ad004aed ads snap spark 不能 不能假设 | `sessions/tg-rotate-2026-10-24-1111.md` | 要出数的路径：**审核通过（如 `ad004aed`）→ 挂生产 Spark 编 |
@@ -34,14 +45,3 @@
 | ## 013 10 2026 23 ads_channel_metric | `~/.dc-platform/memory/lessons/2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在-ads_channel_metric.md` | 2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在 |
 | 001 002 003 10 20 2026 | `sessions/tg-rotate-2026-10-23-1610.md` | **知秋 2026-10-20 定调**：管理报表三表**不再上海豚、走 Spa |
 | .sql 7（ create ddl ops_pac ops_pack | `sessions/tg-rotate-2026-10-23-1610.md` | 无 prod SR 写权限：DDL 打成运维包（如 `ops_system/sp |
-| 013 20261016 ddl dev prod publish | `sessions/tg-rotate-2026-10-23-1610.md` | **`dev-20261016-013`【渠道日指标】** 未审发前，三表即使  |
-| 09 ads.ads_channel_metrics_daily_d es g_ | `sessions/tg-rotate-2026-10-23-1610.md` | 三表挂生产的**真正上游**往往是 **`ads.ads_channel_met |
-| ad004aed dt l（ paimon.dim.dim_channel_in | `sessions/tg-rotate-2026-10-23-1610.md` | 管理报表三表 Spark 版（`ad004aed`）改读 **`paimon.d |
-| agent bus prod snap 「代 一步 | `sessions/tg-rotate-2026-10-23-1610.md` | 通知发版进度前：**prod 只读核水位**（SR 行数 + snap 状态）， |
-| 00 dim.dim_channel_info_all dim_channel_ | `sessions/tg-rotate-2026-10-23-1610.md` | 汇报「渠道维已有数」须拆两层：**SR `dim.dim_channel_inf |
-| ad004aed ddl drop lesson mgmt report | `sessions/tg-rotate-2026-10-23-1610.md` | [LESSON: sr-ddl,mgmt-report/Spark 三表 SR  |
-| 013 ads_channel_metrics_daily_d gate les | `sessions/tg-rotate-2026-10-23-1610.md` | [LESSON: mgmt-report,prod-gate/三表挂 prod  |
-| 60s ack agent agent_bus agent_bus_send.p | `sessions/tg-rotate-2026-10-23-1610.md` | agent-bus：**60s 内 ACK**；若 ACK 被 silent/d |
-| 799 ad004aed alter create drop sr | `sessions/tg-rotate-2026-10-23-1610.md` | 三表 SR 正式表 **主键与 `ad004aed` 不一致时禁止 ALTER* |
-| ddl paimon prod snap spark sql | `sessions/tg-rotate-2026-10-23-1610.md` | 上游缺表时**不要只修 snap 或 SR DDL**；应 **spark-sq |
-| ## 10 2026 23 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道说法不一致.md` | 2026-10-23-私聊拍板与回狂人正文须同口径-先发-补数后重跑-避免双通道 |

@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [汇报 pipeline 挂账写清卡点日期格、pending_count、](lessons/2026-10-25-汇报-pipeline-挂账写清卡点日期格-pending_count-block_reason.md) — 会话轮换蒸馏
+- [值班查异常先 heartbeat + 筛真实 `runner_` 告警；](lessons/2026-10-25-值班查异常先-heartbeat-筛真实-runner_-告警-wait_probe-探针-bl.md) — 会话轮换蒸馏
 - [stage7 且 publish_runs_count=0 即未产发，产](lessons/2026-10-24-stage7-且-publish_runs_count-0-即未产发-产表-0-行属正常-需先审.md) — 会话轮换蒸馏
 - [判产上 Spark 三表是否出数：prod SR 与 Paimon 双查](lessons/2026-10-24-判产上-spark-三表是否出数-prod-sr-与-paimon-双查-生产-full_cha.md) — 会话轮换蒸馏
 - [ddl|dolphin|半上线|主键变更](lessons/2026-10-24-ddl-dolphin-半上线-主键变更.md) — 会话轮换蒸馏

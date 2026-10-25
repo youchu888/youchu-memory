@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-25 | [汇报 pipeline 挂账写清卡点日期格、pending_count、bloc](./2026-10-25-汇报-pipeline-挂账写清卡点日期格-pending_count-block_reason.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-25 | [值班查异常先 heartbeat + 筛真实 `runner_` 告警；`wai](./2026-10-25-值班查异常先-heartbeat-筛真实-runner_-告警-wait_probe-探针-bl.md) | pipeline-runner,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-24 | [日报须先双机同步再读old-mac实活](./2026-10-24-日报须先双机同步再读old-mac实活.md) | 日报,dual-mac,work-log | 写日报前必须 prepare_daily_report_sync，再按 old-mac 下午实活与产上现网定稿 |
 | 2026-10-24 | [stage7 且 publish_runs_count=0 即未产发，产表 0 ](./2026-10-24-stage7-且-publish_runs_count-0-即未产发-产表-0-行属正常-需先审.md) | dev-session,dolphin_prod,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-24 | [判产上 Spark 三表是否出数：prod SR 与 Paimon 双查 + 生](./2026-10-24-判产上-spark-三表是否出数-prod-sr-与-paimon-双查-生产-full_cha.md) | datacheck,spark,promotion-summary,session-rotate | 会话轮换前自动蒸馏 |
