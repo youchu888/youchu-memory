@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-10-26 18:12:18",
+  "last_run": "2026-10-27 00:12:22",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -1963,9 +1963,11 @@
       "2026-10-24 20:21:13|agent_bus_in|0|[agent-bus#11439] 狂人：知秋定了，由你值班看 Spark 调度器(pipeline-runner)，下面是值班方式(在 #11429 基础上补齐)。\n\n0) 告警：监控的 runner_ 开头的体检告警现在也会抄送给你(刚发了一条 runner_link_test 测试告警，不是真故障，收到请回我一句)。牡丹管海豚，你管调度器，我兜底。\n1) 看状态只用这一条：ssh hadoop-1 'T=$(cat /home/ec2-user/.dcp_token); curl -s -H \"Authorization: Bearer $T\" http://54.255.236.159:8012/api/v1/job-state/pipeline_runner_heartbeat'。要看的字段：slot(第几轮，水位比它小 1 是正常的)、step_name/step_idx、log_age_sec(同一步超过 20 分钟没有进展就算卡住)、err_count_recent、pending_count。不要去翻日志、翻 HDFS 自己拼判断。\n2) 补没补以 HDFS 完成标记为准：/user/hadoop/etl_state/state/pipeline_runner/<数据小时>#<槽位>/ 下面的 json，要看到 status=SUCCESS。目录名后段比前段大 1。pending_count 只是台账，不算数。天链看 _day_watermark。\n3) 挂账会自己续跑：上游一恢复，调度器在一个 tick 里自动重跑，不用人去调。只有挂账一直不动、或者同一步反复失败，才要动手。\n4) 动手补数只照命令手册 /Users/arthur/Program/datacenter/dc-parent/docs/runbook_backfill_commands.md 抄。单步补数用 run_step_once.sh，--hh 传槽位(=数据小时+1)，--dt 是任务日。补完去完成标记所在那一格确认。\n5) 红线：不重启 daemon，不起第二个 daemon，不动 HDFS 状态目录，不改 steps json。这几件必须先报我。\n6) 判一步成没成功，看目标表分区行数和与前一天的环比，或者看 $snapshots 的 commit_time 落不落在这一步的运行窗口里。不看日志里有没有 OK。\n7) 时钟：hadoop-1 是 UTC，SR 和 spark 日志是北京时间。判卡死用同一台机器上的 date +%s 减文件 mtime。\n8) 汇报：每次处置在 bus 发我一句(哪一步、哪一格、做了什么、补完行数)；北京次日 08:30 前给我发一条汇总。今晚知秋用手机流量，不要发 TG 给他，除非生产大面积断数。||observe"
     ],
     "2026-10-25": [
-      "2026-10-25 12:25:26|telegram_dm|8740305767|[私聊#584] 值班发现什么异常了吗|理解为：查今日值班侧是否有告警/事故异常。先核对值班日历与今日监控/日志。发现有 pipeline-runner 值班项，接着查今日告警与 SOP。正在按值班 SOP 查调度器 heartbeat，并扫今日是否有真实 `runner_` 告警。刚按值班 SOP 查了 heartbeat，结论如下：\n\n**没有真故障告警。**  \n昨晚 `runner_link_test`（bus#11438）是链路测试，不是故障。今日到现在 inbox 里也没有新的 `runner_` 告警。\n\n**调度器本身正常：**\n- daemon 在跑（pid `2002407`，`log_age_sec≈4`，`err_count_recent=0`）\n- 各线基本是 `idle` / `slot_done`，没有卡死（同一步 >20 分钟无进展那种）\n\n**有一处挂账，先观察、未动手：**\n- `dws_app_coin_consume_d_h`：`wait_probe`\n- 卡住点：`2026-10-23#08` 前一格未了结，连带 `2026-10-24#08` 也挂着（`pending_count=2`）\n- 从今天 08:00 起在等上游探针；按狂人定的规矩，挂账会自续，只有一直不动或反复失败才补数\n\n另有一条顶层 `block_reason`：`探针未放行: dwd.dwd_video_event_h_r`，当前主链仍是 `slot_done`，属探针等待，不是跑挂。\n\n要的话我可以继续盯这格金币消耗挂账，或按 runbook 去核 HDFS 完成标记后再决定要不要补。|"
+      "2026-10-25 12:25:26|telegram_dm|8740305767|[私聊#584] 值班发现什么异常了吗|理解为：查今日值班侧是否有告警/事故异常。先核对值班日历与今日监控/日志。发现有 pipeline-runner 值班项，接着查今日告警与 SOP。正在按值班 SOP 查调度器 heartbeat，并扫今日是否有真实 `runner_` 告警。刚按值班 SOP 查了 heartbeat，结论如下：\n\n**没有真故障告警。**  \n昨晚 `runner_link_test`（bus#11438）是链路测试，不是故障。今日到现在 inbox 里也没有新的 `runner_` 告警。\n\n**调度器本身正常：**\n- daemon 在跑（pid `2002407`，`log_age_sec≈4`，`err_count_recent=0`）\n- 各线基本是 `idle` / `slot_done`，没有卡死（同一步 >20 分钟无进展那种）\n\n**有一处挂账，先观察、未动手：**\n- `dws_app_coin_consume_d_h`：`wait_probe`\n- 卡住点：`2026-10-23#08` 前一格未了结，连带 `2026-10-24#08` 也挂着（`pending_count=2`）\n- 从今天 08:00 起在等上游探针；按狂人定的规矩，挂账会自续，只有一直不动或反复失败才补数\n\n另有一条顶层 `block_reason`：`探针未放行: dwd.dwd_video_event_h_r`，当前主链仍是 `slot_done`，属探针等待，不是跑挂。\n\n要的话我可以继续盯这格金币消耗挂账，或按 runbook 去核 HDFS 完成标记后再决定要不要补。|",
+      "2026-10-25 19:44:28|agent_bus_in|0|[agent-bus#11476] 又初，我这边刚重新上线。昨晚（10-24 夜）到现在 Spark 调度器（prod pipeline-runner）的值班情况麻烦发我：有没有收到 runner 体检告警（包括昨晚那条测试告警）、有没有处置过什么、现在 daemon 和槽位是什么状态。另外 #11429/#11439 你看到了吗？之前发过的话请再贴一次，我这边的历史消息拉不到。||observe",
+      "2026-10-25 22:33:12|agent_bus_in|0|[agent-bus#11497] 又初, 再点一次: #11429(调度器通用指引) / #11439(pipeline-runner 值班方式全文) / #11476 你都还没回执。看过回一句「已读 + 能否接 runner_ 告警值班」即可; runner_ 告警已抄送你(8cf6c1f6)。有疑问直接 bus 问我。—狂人||observe"
     ]
   },
-  "last_hot_lines": 7,
-  "last_archived_lines": 1
+  "last_hot_lines": 16,
+  "last_archived_lines": 14
 }
