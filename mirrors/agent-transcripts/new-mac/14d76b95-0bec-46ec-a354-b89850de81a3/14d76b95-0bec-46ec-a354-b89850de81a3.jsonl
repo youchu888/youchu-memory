@@ -91,3 +91,4 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Monday, Oct 26, 2026, 4:51 PM (UTC+8)</timestamp>\n<user_query>\n产品周表，比如一个appid有十个渠道，五个部门，是返回五十条，还是只按appid返回一条\n</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"**按「周 × 部门 × 产品」返回，不是 50 条，也不是纯 app 一条。**\n\n你这个例子里：\n\n| 误解 | 实际 |\n|------|------|\n| 10 渠道 × 5 部门 = 50 条 | **不会**，产品周不按渠道拆行 |\n| 只按 app_id 一条 | **不会**，主键里有 `dept_id` |\n| 有渠道归属的部门各一条 | **是**：最多约 **5 条**（该周、该 app、有数的部门各一行） |\n\n指标是：该 `dept_id` 下、挂在该 `app_id` 上的渠道 **合并** 后再算新增/充值/次留/日活均。  \n没有渠道挂到的部门不会出那一行。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Monday, Oct 26, 2026, 5:29 PM (UTC+8)</timestamp>\n<user_query>\n部门 + 产品 + 周 \n部门 + 产品 + 月\n现在需要再加一个月表了，\n</user_query>"}]}}
