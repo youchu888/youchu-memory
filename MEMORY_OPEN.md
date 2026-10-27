@@ -5,6 +5,7 @@
 > 更新：2026-09-23
 
 ## 进行中
+- [ ] **bus#11627 通扫（等狂人补完查数）**：渠道周月已卸（full_chain md5=`61dda42c`）；11组26步齐、表齐；卡点=上游追平+归因挂账缺口。狂人补完后又初查数；期间禁第二份 rerun。lesson=`2026-10-27-test-spark_migrate挂载通扫-等上游非缺步-daemon不回头补.md`。
 
 - [ ] **bus#11621 定案（2026-10-27）**：test spark_migrate 挂载又初 S4 五步自挂；禁手改 full_chain/prod 编排；渠道周月不挂；S4④⑤数据日≤10-22（追平约10-30）；S4⑤遇补数互斥则等；Paimon DDL 建前发狂人核。上游已查：test Paimon `ads_channel_metrics_daily_d` MAX(dt)=10-22，`dim_channel_info_all_snap` MAX(snap_dt)=10-26。lesson=`2026-10-27-S4测试五步自挂-禁手改full_chain-补数日不晚于追平水位.md`。
 - [ ] **pipeline-runner 值班（知秋·bus#11439）**：又初看调度器；`runner_` 告警抄送；SOP=`lessons/2026-10-24-pipeline-runner调度器值班与补数红线-bus11429.md`；次日 08:30 前 bus 汇总狂人；红线先报。

@@ -453,4 +453,6 @@
 - 2026-10-22 共享组件禁止私自绕过须反馈狂人 → lessons/... · feedback_no_workaround_report_worker_ant.md · pinned/03.md
 
 ## 最近经验
+- 2026-10-27 test挂载通扫/等上游非缺步/daemon不回头补 → lessons/2026-10-27-test-spark_migrate挂载通扫-等上游非缺步-daemon不回头补.md
+
 - 2026-10-27 S4测试五步自挂/禁手改full_chain/补数≤追平水位 → lessons/2026-10-27-S4测试五步自挂-禁手改full_chain-补数日不晚于追平水位.md
