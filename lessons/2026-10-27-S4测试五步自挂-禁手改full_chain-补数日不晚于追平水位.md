@@ -39,6 +39,16 @@ bus#11621（狂人回 #11620）：test 挂 `spark_migrate` 批由又初用插件
 - ④/⑤ 数据日 ≤ 当时追平水位；probe 等待不当失败
 - 三表挂前上游 `MAX(dt)` 已核对
 
+## 2026-10-27 test 上游探针（bus#11621）
+
+| 表 | 环境 | 最新分区 |
+|----|------|----------|
+| `paimon.ads.ads_channel_metrics_daily_d` | test | `dt=2026-10-22` |
+| `paimon.dim.dim_channel_info_all_snap` | test | `snap_dt=2026-10-26` |
+| SR `ads.ads_channel_metrics_daily_d` | test | `dt=2026-10-27`（海豚/SR 侧，Spark 读 Paimon 仍以 10-22 为准） |
+
+结论：管理报表三表 S4 数据日卡在 **metrics=10-22**；snap 已到 10-26，不挡 ≤10-22 的跑一步。
+
 ## 关联
 
 - bus#11620 / #11621；旧分工 #10785 作废（test 侧）

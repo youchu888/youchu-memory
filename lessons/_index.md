@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-27 | [S4 测试五步自挂；禁手改 full_chain；补数日不晚于追平水位](./2026-10-27-S4测试五步自挂-禁手改full_chain-补数日不晚于追平水位.md) | S4,spark_migrate,full_chain,mgmt-report | test 挂调度走 S4 自挂；禁 ssh 改 full_chain；④⑤≤追平水位；三表先查 metrics/snap |
 | 2026-10-25 | [汇报 pipeline 挂账写清卡点日期格、pending_count、bloc](./2026-10-25-汇报-pipeline-挂账写清卡点日期格-pending_count-block_reason.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-25 | [值班查异常先 heartbeat + 筛真实 `runner_` 告警；`wai](./2026-10-25-值班查异常先-heartbeat-筛真实-runner_-告警-wait_probe-探针-bl.md) | pipeline-runner,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-24 | [日报须先双机同步再读old-mac实活](./2026-10-24-日报须先双机同步再读old-mac实活.md) | 日报,dual-mac,work-log | 写日报前必须 prepare_daily_report_sync，再按 old-mac 下午实活与产上现网定稿 |
