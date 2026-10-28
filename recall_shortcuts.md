@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 28 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限-同步-查数类问题仍按-runbook.md` | 2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限 |
+| ## 10 2026 28 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法用主人名与业务任务名.md` | 2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法 |
+| ## .cursor .m 10 2026 28 | `~/.dc-platform/memory/lessons/2026-10-28-新机交付先落-cursor-work-log-当日-md-并-sync-memory-git-o.md` | 2026-10-28-新机交付先落-cursor-work-log-当日-md- |
+| sql 下仍 不能 不能替代 与说 仍应 | `sessions/tg-rotate-2026-10-28-2210.md` | 额度告警场景下仍应保证：**心跳/查数/SQL** 等通道可用，但**不能替代* |
+| hosts mac new old 不能 不能假装已双机齐全 | `sessions/tg-rotate-2026-10-28-2210.md` | 若 `hosts/new-mac` / `hosts/old-mac` **缺当 |
+| .cursor .dc .m dd.md git hosts | `sessions/tg-rotate-2026-10-28-2210.md` | 可复用的同步路径：**本机写入** `.cursor/work-log/当日.m |
+| agent cursor transcript 一台 上的 不见 | `sessions/tg-rotate-2026-10-28-2210.md` | Cursor **agent transcript 不跨机**；另一台机器上的交 |
+| curs cursor ld mac memory ol | `sessions/tg-rotate-2026-10-28-2210.md` | 主人问「old mac 干的活儿为什么没同步」，本质是**双机工作记录未进同一套 |
+| fallback lesson model quota runbook task | `sessions/tg-rotate-2026-10-28-2210.md` | [LESSON: model-quota-vs-task/遇全链 fallbac |
+| facing lesson user words 「产 「狂 | `sessions/tg-rotate-2026-10-28-2210.md` | [LESSON: user-facing-words/私聊/日报/回执禁用「狂人 |
+| 「该 不编 不编造已 不编造已修复原因 为额 么同 | `sessions/tg-rotate-2026-10-28-2210.md` | 该摘录**没有给出同步问题的实际排查结论**（全为额度拦截回复），蒸馏时只保留「 |
+| 「产 「狂 」「 」等 一套 与私 | `sessions/tg-rotate-2026-10-28-2210.md` | 私聊再次强调：**对外表述禁止「狂人」「产发」等内部/机器人化用词**；派单归因 |
+| bot cursor en fallback ke ok | `sessions/tg-rotate-2026-10-28-2210.md` | 会话里助手连续返回「模型额度可能已用尽」且走完整 fallback 链，说明** |
+| sync upload 「缺 为「 会表 先双机 | `sessions/tg-rotate-2026-10-28-2210.md` | 写日报前铁律顺序：**先双机 upload + sync，再汇总**；跳过 sy |
 | ## 10 2026 20min 25 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-25-汇报-pipeline-挂账写清卡点日期格-pending_count-block_reason.md` | 2026-10-25-汇报-pipeline-挂账写清卡点日期格-pending |
 | ## 10 2026 25 agent_session_rotate bl | `~/.dc-platform/memory/lessons/2026-10-25-值班查异常先-heartbeat-筛真实-runner_-告警-wait_probe-探针-bl.md` | 2026-10-25-值班查异常先-heartbeat-筛真实-runner_- |
 | dwd.dwd_video_event_h_r dws_app_coin_con | `sessions/tg-rotate-2026-10-25-1311.md` | 例：`dws_app_coin_consume_d_h` 在 `wait_pro |
@@ -31,17 +45,3 @@
 | live l— prod ql sq sql——环境间不能假设「一起升了」 | `sessions/tg-rotate-2026-10-24-1011.md` | **prod 海豚 vs test 海豚可能不同步**：摘录中 prod liv |
 | ... 05.ads live max ops_system paid_type | `sessions/tg-rotate-2026-10-24-1011.md` | **test 典型错配**：表半改（加列未换 PK），海豚 live 仍 **渠 |
 | channel dim_channel_info_all paid_type p | `sessions/tg-rotate-2026-10-24-1011.md` | **prod 典型错配**：海豚 task 已按新列写（无 `channel`、 |
-| add alter column drop ×是 ×部 | `sessions/tg-rotate-2026-10-24-1011.md` | **主键/粒度变更必须 DROP 重建（或等价换表）**：不能指望 `ALTER |
-| alter channel ddl dept_id month_start_dt | `sessions/tg-rotate-2026-10-24-1011.md` | **只 ALTER 加列 ≠ 换主键落地**：现网 PK 仍是 `(month_ |
-| ads_dept_promotion_summary_m channel dep | `sessions/tg-rotate-2026-10-24-1011.md` | **`ads_dept_promotion_summary_m` 目标粒度**： |
-| ddl live pk prod spark sql | `sessions/tg-rotate-2026-10-24-1011.md` | **半上线判定**：改口径表要同时核对「仓库 DDL/SQL、海豚 live S |
-| ads_dept_promotion_summary_m alter creat | `sessions/tg-rotate-2026-10-24-1011.md` | [LESSON: ads_dept_promotion_summary_m/dd |
-| 10 20 checklist ddl etl insert | `sessions/tg-rotate-2026-10-24-1011.md` | 与 10-20 同类根因**：**DDL/改表与写表 ETL 未同批对齐**；发 |
-| canonical create ddl etl live pk | `sessions/tg-rotate-2026-10-24-1011.md` | 交付物要对齐三件套**：交给运维的 DDL、海豚发布 SQL、仓库 canoni |
-| 1023.sql ddl pk ×部 「渠 「给 | `sessions/tg-rotate-2026-10-24-1011.md` | 运维建表脚本要回读原文**：群里的 **`1023.sql` 若按「渠道×部门」 |
-| add alter column drop ×是 ×部 | `sessions/tg-rotate-2026-10-24-1011.md` | 主键/粒度变更必须 DROP 重建（或等价换表）**：不能指望 `ALTER A |
-| ## 10 2026 23 ad004aed agent_session_rot | `~/.dc-platform/memory/lessons/2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必须-drop-重建-有历史数据的表须先.md` | 2026-10-23-spark-三表-sr-主键与-ad004aed-不一致必 |
-| ## 10 2026 23 ack agent | `~/.dc-platform/memory/lessons/2026-10-23-ack-无可见回执时用-agent_bus_send-py-no-dedup-重发.md` | 2026-10-23-ack-无可见回执时用-agent_bus_send-py |
-| ## 013 10 2026 23 ads_channel_metric | `~/.dc-platform/memory/lessons/2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在-ads_channel_metric.md` | 2026-10-23-三表挂-prod-前先查-prod-paimon-是否存在 |
-| 001 002 003 10 20 2026 | `sessions/tg-rotate-2026-10-23-1610.md` | **知秋 2026-10-20 定调**：管理报表三表**不再上海豚、走 Spa |
-| .sql 7（ create ddl ops_pac ops_pack | `sessions/tg-rotate-2026-10-23-1610.md` | 无 prod SR 写权限：DDL 打成运维包（如 `ops_system/sp |

@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-28 | [遇全链 fallback 额度提示时，简短说明对话模型受限，同步/查数类问题仍按](./2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限-同步-查数类问题仍按-runbook.md) | model-quota-vs-task,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-28 | [私聊/日报/回执禁用「狂人」「产发」等内部词，派单与协作说法用主人名与业务任务名](./2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法用主人名与业务任务名.md) | user-facing-words,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-10-28 | [新机交付先落 `.cursor/work-log/当日.md` 并 `sync-](./2026-10-28-新机交付先落-cursor-work-log-当日-md-并-sync-memory-git-o.md) | dual-machine-sync,memory-git,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-28 | [test 不再追补历史：废 #11627 补数清单](./2026-10-28-test不再追补历史-废11627补数清单-bus11677.md) | test,backfill,spark_migrate,知秋 | 知秋定 test 不对就不对；挂账只解当前格；查当天分区 |
 | 2026-10-28 | [完成发布硬闸：不达标一律 409，禁止空 PublishRun / 假完成](./2026-10-28-prod-publish-complete-hard-gates-all-blockers.md) | prod-publish,stage7,hard-gate,dolphin,spark | stage1-6/建表/同步/ONLINE/schedule/缺参/0 run 全拦 |
 | 2026-10-28 | [Stage7 Step1 勾 DDL 必须先查 prod 实表，禁止只靠 checkbox](./2026-10-28-prod-publish-step1-must-verify-table-exists.md) | prod-publish,stage7,ddl,refresh-prod-built | 勾选/complete 缺表拒；真值=prod_table_built；月表假勾已清 |

@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [遇全链 fallback 额度提示时，简短说明对话模型受限，同步/查数类](lessons/2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限-同步-查数类问题仍按-runbook.md) — 会话轮换蒸馏
+- [私聊/日报/回执禁用「狂人」「产发」等内部词，派单与协作说法用主人名与业](lessons/2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法用主人名与业务任务名.md) — 会话轮换蒸馏
+- [新机交付先落 `.cursor/work-log/当日.md` 并 `s](lessons/2026-10-28-新机交付先落-cursor-work-log-当日-md-并-sync-memory-git-o.md) — 会话轮换蒸馏
 - [汇报 pipeline 挂账写清卡点日期格、pending_count、](lessons/2026-10-25-汇报-pipeline-挂账写清卡点日期格-pending_count-block_reason.md) — 会话轮换蒸馏
 - [值班查异常先 heartbeat + 筛真实 `runner_` 告警；](lessons/2026-10-25-值班查异常先-heartbeat-筛真实-runner_-告警-wait_probe-探针-bl.md) — 会话轮换蒸馏
 - [stage7 且 publish_runs_count=0 即未产发，产](lessons/2026-10-24-stage7-且-publish_runs_count-0-即未产发-产表-0-行属正常-需先审.md) — 会话轮换蒸馏
