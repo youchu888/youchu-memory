@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-28 | [完成发布硬闸：不达标一律 409，禁止空 PublishRun / 假完成](./2026-10-28-prod-publish-complete-hard-gates-all-blockers.md) | prod-publish,stage7,hard-gate,dolphin,spark | stage1-6/建表/同步/ONLINE/schedule/缺参/0 run 全拦 |
 | 2026-10-28 | [Stage7 Step1 勾 DDL 必须先查 prod 实表，禁止只靠 checkbox](./2026-10-28-prod-publish-step1-must-verify-table-exists.md) | prod-publish,stage7,ddl,refresh-prod-built | 勾选/complete 缺表拒；真值=prod_table_built；月表假勾已清 |
 | 2026-10-27 | [test spark_migrate 挂载通扫：等上游≠缺步；daemon 不回头补缺口格](./2026-10-27-test-spark_migrate挂载通扫-等上游非缺步-daemon不回头补.md) | spark_migrate,pipeline-runner,daemon,rerun | 11组26步已挂；出数卡上游/挂账；渠道周月已卸；补数等狂人 rerun |
 | 2026-10-27 | [S4 测试五步自挂；禁手改 full_chain；补数日不晚于追平水位](./2026-10-27-S4测试五步自挂-禁手改full_chain-补数日不晚于追平水位.md) | S4,spark_migrate,full_chain,mgmt-report | test 挂调度走 S4 自挂；禁 ssh 改 full_chain；④⑤≤追平水位；三表先查 metrics/snap |
