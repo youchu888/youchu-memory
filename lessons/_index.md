@@ -439,3 +439,5 @@
 | 2026-10-22 | [pipeline-runner：禁止生产机单文件就地编译覆盖 jar](./2026-10-22-pipeline-runner禁止生产机单文件就地编译覆盖jar.md) | pipeline-runner,spark,deploy,prod | 改核心须仓库全量同步整包编译，先测后随版本上产；禁 prod 单文件就地编 |
 | 2026-10-22 | [bitmap BINARY 上产前须在测试集群大分区对照 Kryo](./2026-10-22-bitmap-BINARY上产前须测试集群大分区对照Kryo.md) | bitmap,spark,pipeline-runner | 大分区对照耗时+逐字节一致后才能上产 |
 >>>>>>> Stashed changes
+
+- 2026-10-29 | tgbot,quota,old-mac | TG报额度用尽≠网页Pro+耗尽；修误判+heal脚本 | `lessons/2026-10-29-tgbot-false-quota-not-web-usage.md`
