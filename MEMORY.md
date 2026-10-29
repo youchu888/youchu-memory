@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [执行 `/var/.../prompt_*.md` 时读头尾答「当前问题](lessons/2026-10-29-执行-var-prompt_-md-时读头尾答-当前问题-大文件禁止只复述-禁止用额度文案代替末.md) — 会话轮换蒸馏
+- [用户问「打卡一直出问题」必须查打卡链路与最近失败原因，禁止只回模型额度或](lessons/2026-10-29-用户问-打卡一直出问题-必须查打卡链路与最近失败原因-禁止只回模型额度或-empty-outpu.md) — 会话轮换蒸馏
+- [agent-bus 未结案为 0 时仍须扫私聊：假额度/空输出若已落库，](lessons/2026-10-29-agent-bus-未结案为-0-时仍须扫私聊-假额度-空输出若已落库-按原问补办-不能当无积压.md) — 会话轮换蒸馏
 - [遇全链 fallback 额度提示时，简短说明对话模型受限，同步/查数类](lessons/2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限-同步-查数类问题仍按-runbook.md) — 会话轮换蒸馏
 - [私聊/日报/回执禁用「狂人」「产发」等内部词，派单与协作说法用主人名与业](lessons/2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法用主人名与业务任务名.md) — 会话轮换蒸馏
 - [新机交付先落 `.cursor/work-log/当日.md` 并 `s](lessons/2026-10-28-新机交付先落-cursor-work-log-当日-md-并-sync-memory-git-o.md) — 会话轮换蒸馏

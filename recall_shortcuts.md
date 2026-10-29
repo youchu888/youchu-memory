@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## ... .md 10 2026 29 | `~/.dc-platform/memory/lessons/2026-10-29-执行-var-prompt_-md-时读头尾答-当前问题-大文件禁止只复述-禁止用额度文案代替末.md` | 2026-10-29-执行-var-prompt_-md-时读头尾答-当前问题- |
+| ## 10 2026 29 agent_session_rotate atten | `~/.dc-platform/memory/lessons/2026-10-29-用户问-打卡一直出问题-必须查打卡链路与最近失败原因-禁止只回模型额度或-empty-outpu.md` | 2026-10-29-用户问-打卡一直出问题-必须查打卡链路与最近失败原因-禁止 |
+| ## 10 2026 29 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-29-agent-bus-未结案为-0-时仍须扫私聊-假额度-空输出若已落库-按原问补办-不能当无积压.md` | 2026-10-29-agent-bus-未结案为-0-时仍须扫私聊-假额度-空 |
+| agent busy 一路 不因 与末 仍须 | `sessions/tg-rotate-2026-10-29-1158.md` | **并行 Agent**：长任务占一路时，新开 Agent 仍须完整冷启动；独立 |
+| .md bootstrap prompt tg 「当 「正 | `sessions/tg-rotate-2026-10-29-1158.md` | **TG prompt 文件**：须冷启动读 bootstrap，再读指定 `p |
+| #554 #565 #585–#587 —— —排 不能 | `sessions/tg-rotate-2026-10-29-1158.md` | **失败落库像已结**：#585–#587、#554、#565 等若只落了额度/ |
+| 0」 0」只说明 agent bu bus bus「未结案 | `sessions/tg-rotate-2026-10-29-1158.md` | **积压要分通道**：agent-bus「未结案 = 0」只说明 bus 无挂单 |
+| agent auto empty model output vs | `sessions/tg-rotate-2026-10-29-1158.md` | **空输出 vs 额度**：`model=auto empty output`、 |
+| fallback 「额 不能 于未 交付 代任 | `sessions/tg-rotate-2026-10-29-1158.md` | **假「额度用尽」**：用户问打卡/积压等实活时，若未查库、未跑脚本就回模型 f |
+| ... .md lesson prompt tgbot var | `sessions/tg-rotate-2026-10-29-1158.md` | [LESSON: tgbot-prompt/执行 `/var/.../promp |
+| attendance empty lesson output punch 「打 | `sessions/tg-rotate-2026-10-29-1158.md` | [LESSON: punch-attendance/用户问「打卡一直出问题」必须 |
+| #588 agent bus 「唯 「未 」清 | `sessions/tg-rotate-2026-10-29-1158.md` | 积压问答标准答法**：先核 agent-bus 未结案数 + 私聊「未实质答复」 |
+| launchd onehr set_duty_day set_leave_day | `sessions/tg-rotate-2026-10-29-1158.md` | 用户问打卡异常**：走 OneHR/日历/launchd 与 `set_leav |
+| .md bootstrap prompt tg 「当 「正 | `sessions/tg-rotate-2026-10-29-1158.md` | TG prompt 文件**：须冷启动读 bootstrap，再读指定 `pro |
+| age agent auto empty model output | `sessions/tg-rotate-2026-10-29-1158.md` | 空输出 vs 额度**：`model=auto empty output`、多档 |
 | ## 10 2026 28 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限-同步-查数类问题仍按-runbook.md` | 2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限 |
 | ## 10 2026 28 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法用主人名与业务任务名.md` | 2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法 |
 | ## .cursor .m 10 2026 28 | `~/.dc-platform/memory/lessons/2026-10-28-新机交付先落-cursor-work-log-当日-md-并-sync-memory-git-o.md` | 2026-10-28-新机交付先落-cursor-work-log-当日-md- |
@@ -30,18 +45,3 @@
 | bus inbox runner runner_link_test vs 不算 | `sessions/tg-rotate-2026-10-25-1311.md` | **真故障** vs **链路测试**：`runner_link_test`（如 |
 | hdfs runbook 入时 再决 再决定是否补数 决定 | `sessions/tg-rotate-2026-10-25-1311.md` | 用户要深入时：可选 **盯该格** 或 **按 runbook 核 HDFS 完 |
 | heart heartbeat inbox pipeline runner so | `sessions/tg-rotate-2026-10-25-1311.md` | 私聊问「值班有没有异常」→ 先对值班日历，再按 **pipeline-runne |
-| ## 10 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-24-stage7-且-publish_runs_count-0-即未产发-产表-0-行属正常-需先审.md` | 2026-10-24-stage7-且-publish_runs_count-0 |
-| ## 10 2026 24 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-24-判产上-spark-三表是否出数-prod-sr-与-paimon-双查-生产-full_cha.md` | 2026-10-24-判产上-spark-三表是否出数-prod-sr-与-pa |
-| ad004aed ads snap spark 不能 不能假设 | `sessions/tg-rotate-2026-10-24-1111.md` | 要出数的路径：**审核通过（如 `ad004aed`）→ 挂生产 Spark 编 |
-| publish_runs_count session stage7 下是 不是  | `sessions/tg-rotate-2026-10-24-1111.md` | session 停在 **stage7** 且 **`publish_runs_ |
-| ads ads_dept_promotion_summary_m ads_pro | `sessions/tg-rotate-2026-10-24-1111.md` | 管理报表三表常一起核对：**`ads_dept_promotion_summar |
-| 10 2026 23 ads snap snap_dt | `sessions/tg-rotate-2026-10-24-1111.md` | 表按日期重建完成、上游 **snap 已有数**（如 `snap_dt=2026 |
-| od pr ro spark sr test | `sessions/tg-rotate-2026-10-24-1111.md` | **test SR 有数**（如部门月/周、产品周）可能是**旧海豚口径**；* |
-| full_chain.jso full_chain.json full_chai | `sessions/tg-rotate-2026-10-24-1111.md` | 任务只在 **`full_chain_testcluster` 测试编排**里、 |
-| paimon prod spark sr sr」） 「只 | `sessions/tg-rotate-2026-10-24-1111.md` | **prod SR 与 prod Paimon 同为 0 行**，可判定 Spa |
-| paimon snap spark sr vs 「没 | `sessions/tg-rotate-2026-10-24-1111.md` | 对外结论宜拆两层：**基础设施/上游就绪**（表建好、snap 有数） vs * |
-| ar dev full_chain.json pa paimon prod | `sessions/tg-rotate-2026-10-24-1111.md` | 问「Spark 跑完没 / 三表有数没」时，不要只看 prod SR 行数；应串 |
-| ## 10 2026 24 ads_dept_promotion_summary | `~/.dc-platform/memory/lessons/2026-10-24-ddl-dolphin-半上线-主键变更.md` | 2026-10-24-ddl-dolphin-半上线-主键变更 |
-| live l— prod ql sq sql——环境间不能假设「一起升了」 | `sessions/tg-rotate-2026-10-24-1011.md` | **prod 海豚 vs test 海豚可能不同步**：摘录中 prod liv |
-| ... 05.ads live max ops_system paid_type | `sessions/tg-rotate-2026-10-24-1011.md` | **test 典型错配**：表半改（加列未换 PK），海豚 live 仍 **渠 |
-| channel dim_channel_info_all paid_type p | `sessions/tg-rotate-2026-10-24-1011.md` | **prod 典型错配**：海豚 task 已按新列写（无 `channel`、 |
