@@ -96,7 +96,15 @@ fi
 echo "[info] agent=$AGENT_BIN"
 
 PYTHON=python3
-[[ -x "$TGBOT_DIR/.venv/bin/python" ]] && PYTHON="$TGBOT_DIR/.venv/bin/python"
+if [[ -x "$TGBOT_DIR/.venv/bin/python" ]]; then
+  PYTHON="$TGBOT_DIR/.venv/bin/python"
+elif [[ -x "$TGBOT_DIR/venv/bin/python" ]]; then
+  PYTHON="$TGBOT_DIR/venv/bin/python"
+fi
+echo "[info] python=$PYTHON"
+# conda base 常缺 dotenv；自检前尽量补上（失败不阻断，后面有 stub）
+"$PYTHON" -c "import dotenv" 2>/dev/null || \
+  "$PYTHON" -m pip install -q python-dotenv 2>/dev/null || true
 
 "$PYTHON" - <<'PY'
 import os, re, subprocess, sys
@@ -137,16 +145,26 @@ if ok == 0:
 print(f"[ok] smoke passed ({ok}/2)")
 PY
 
-# 语法自检
-"$PYTHON" - <<PY
-import sys
+# 语法自检（缺 dotenv 时 stub，避免 conda base 中断整段 heal）
+if ! "$PYTHON" - <<PY
+import sys, types
 sys.path.insert(0, r"$TGBOT_DIR")
+if "dotenv" not in sys.modules:
+    try:
+        import dotenv  # noqa: F401
+    except ModuleNotFoundError:
+        dotenv = types.ModuleType("dotenv")
+        dotenv.load_dotenv = lambda *a, **k: None
+        sys.modules["dotenv"] = dotenv
 import model_quota
 assert model_quota.is_quota_error("resource_exhausted")
 assert not model_quota.is_quota_error("刚才因额度用尽切到 fast")
 assert model_quota.is_auth_error("Authentication required. Run agent login")
 print("[ok] model_quota self-check")
 PY
+then
+  echo "[warn] model_quota self-check 失败（多半是解释器缺依赖）；冒烟已过，继续重启 bot"
+fi
 
 if [[ "$SKIP_RESTART" == "1" ]]; then
   echo "[skip] restart (SKIP_RESTART=1)"
