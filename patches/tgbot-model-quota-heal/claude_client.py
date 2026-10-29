@@ -199,6 +199,51 @@ def _cursor_agent_bin() -> str:
     return shutil.which('cursor-agent') or shutil.which('agent') or 'cursor-agent'
 
 
+def _run_cursor_agent(
+    args: list[str],
+    on_chunk: Callable[[str], None],
+    on_heartbeat: HeartbeatFn | None = None,
+) -> tuple[str, str, int]:
+    """跑 cursor-agent；并行读 stderr，避免 PIPE 塞满死锁。返回 (stdout, stderr, rc)。"""
+    import threading
+
+    proc = subprocess.Popen(
+        args,
+        cwd=PROJECT_ROOT,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        bufsize=1,
+        env=_cursor_env(),
+    )
+    stderr_chunks: list[str] = []
+
+    def _drain_stderr() -> None:
+        if proc.stderr is None:
+            return
+        try:
+            while True:
+                line = proc.stderr.readline()
+                if not line:
+                    break
+                stderr_chunks.append(line)
+        except Exception:
+            pass
+
+    t = threading.Thread(target=_drain_stderr, daemon=True)
+    t.start()
+    try:
+        accumulated = _run_subprocess_until_done(
+            proc, on_chunk, on_heartbeat=on_heartbeat,
+        )
+    except subprocess.TimeoutExpired:
+        t.join(timeout=2)
+        raise
+    t.join(timeout=5)
+    rc = proc.returncode if proc.returncode is not None else -1
+    return accumulated, ''.join(stderr_chunks).strip(), rc
+
+
 def chat_stream_cursor(
     system_prompt: str,
     messages: list[dict],
@@ -225,44 +270,74 @@ def chat_stream_cursor(
             _cursor_agent_bin(),
             '--print',
             '--output-format', 'json',
+            # headless：信任工作区 + 关沙箱，否则常空退出
+            '--trust',
+            '--sandbox', 'disabled',
             '--workspace', PROJECT_ROOT,
             '--model', use_model,
         ]
-        if is_superuser:
-            args.append('--force')
-        if cursor_chat_id and use_model == primary:
-            args.extend(['--resume', cursor_chat_id, '-p', latest])
-            log.info(
-                f"[CURSOR] resume session={cursor_chat_id[:8]}… model={use_model} q={latest[:50]}",
-            )
-        else:
-            prompt = _build_full_prompt(system_prompt, messages)
-            args.extend(['-p', prompt])
-            log.info(f"[CURSOR] new session model={use_model} in {PROJECT_ROOT}: {prompt[:60]}...")
-
+        # TG 无人值守：一律 force，避免工具审批卡住后空输出
+        args.append('--force')
+        if CURSOR_API_KEY:
+            args.extend(['--api-key', CURSOR_API_KEY])
+        prompt_file = None
         accumulated = ""
-        proc = None
         stderr = ''
+        rc = -1
         try:
-            proc = subprocess.Popen(
-                args,
-                cwd=PROJECT_ROOT,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True,
-                bufsize=1,
-                env=_cursor_env(),
-            )
-            accumulated = _run_subprocess_until_done(
-                proc, on_chunk, on_heartbeat=on_heartbeat,
-            )
-            stderr = (proc.stderr.read() or '').strip()
-            rc = proc.returncode if proc.returncode is not None else 0
+            if cursor_chat_id and use_model == primary:
+                args.extend(['--resume', cursor_chat_id, '-p', latest])
+                log.info(
+                    f"[CURSOR] resume session={cursor_chat_id[:8]}… model={use_model} q={latest[:50]}",
+                )
+            else:
+                prompt = _build_full_prompt(system_prompt, messages)
+                # 长 prompt 走临时文件，避免 argv 过长 / launchd 下空退出
+                if len(prompt) > 6000:
+                    prompt_file = _write_system_prompt(prompt)
+                    args.extend([
+                        '-p',
+                        f'请先完整阅读并严格执行文件：{prompt_file}\n'
+                        f'然后直接回答该文件末尾「当前问题」。不要只复述文件。',
+                    ])
+                    log.info(
+                        f"[CURSOR] new session model={use_model} via file "
+                        f"chars={len(prompt)} path={prompt_file}",
+                    )
+                else:
+                    args.extend(['-p', prompt])
+                    log.info(
+                        f"[CURSOR] new session model={use_model} in {PROJECT_ROOT}: "
+                        f"{prompt[:60]}...",
+                    )
+
+            accumulated, stderr, rc = _run_cursor_agent(args, on_chunk, on_heartbeat)
             if rc != 0 and stderr:
-                log.warning(f"[CURSOR] model={use_model} stderr: {stderr[:500]}")
+                log.warning(f"[CURSOR] model={use_model} rc={rc} stderr: {stderr[:500]}")
                 last_stderr = stderr
+            elif not (accumulated or '').strip():
+                log.warning(
+                    '[CURSOR] model=%s empty stdout rc=%s stderr_len=%s',
+                    use_model, rc, len(stderr or ''),
+                )
 
             result = _parse_cursor_json(accumulated)
+            # json 空结果时再试一次 text
+            if not (result.text or '').strip() and not (stderr or '').strip():
+                text_args = list(args)
+                for i, a in enumerate(text_args):
+                    if a == '--output-format' and i + 1 < len(text_args):
+                        text_args[i + 1] = 'text'
+                        break
+                acc2, err2, rc2 = _run_cursor_agent(text_args, on_chunk, on_heartbeat)
+                if (acc2 or '').strip():
+                    log.info('[CURSOR] text-format fallback ok model=%s', use_model)
+                    accumulated, stderr, rc = acc2, err2, rc2
+                    result = ChatResult(text=acc2.strip())
+                elif err2:
+                    stderr = err2
+                    last_stderr = err2
+
             parsed_error = ''
             try:
                 raw_json = json.loads((accumulated or '').strip() or '{}')
@@ -314,11 +389,9 @@ def chat_stream_cursor(
             else:
                 last_result = result
                 last_fail_kind = 'empty'
-                last_fail_detail = last_fail_detail or f'model={use_model} empty output'
+                last_fail_detail = last_fail_detail or f'model={use_model} empty output rc={rc}'
 
         except subprocess.TimeoutExpired as exc:
-            if proc and proc.poll() is None:
-                proc.kill()
             partial = _parse_cursor_json(accumulated)
             secs = int(exc.timeout or 0)
             mins = max(1, secs // 60)
@@ -354,6 +427,8 @@ def chat_stream_cursor(
                 last_fail_detail = str(e)
                 continue
             break
+        finally:
+            _cleanup_tmp(prompt_file)
 
     fallback_text = model_quota.ensure_nonempty(
         last_result.text or last_stderr,
