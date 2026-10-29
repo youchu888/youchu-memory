@@ -1,7 +1,7 @@
 # mirrors · 非代码双机镜像
 
-- host: `new-mac`
-- updated: 2026-10-29 18:24:41 +0800
+- host: `old-mac`
+- updated: 2026-10-29 18:27:11 +0800
 - transcript_days: 21
 
 ## 本轮复制文件数
