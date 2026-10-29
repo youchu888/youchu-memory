@@ -14,7 +14,7 @@ domain: ops
 ## 坑 / 错误做法
 
 - 又初/蓝猫等继续改本批 SQL、发海豚或改 runner 步，与知秋并行 → 口径漂移、重复发版。
-- 把 `ads_product_day_stat_d` 或 `dws_app_order_d_h` 误纳入本批改 bitmap / 迁 runner。
+- 把 `ads_product_day_stat_d` 误纳入知秋**字典号 bitmap** 改造，或误以为「不迁 runner、永久留海豚」；把 `dws_app_order_d_h` 误纳入知秋收回批次。
 - test 未对平就抢 prod，或不等生产 HBase 就绪零星发布。
 
 ## 正确做法
@@ -32,7 +32,7 @@ domain: ops
 
 **不在本批**
 
-- `ads_product_day_stat_d`：只出人数、不存 bitmap，换字典号无影响 → **继续留海豚，不改**。
+- `ads_product_day_stat_d`（产品日报）：只出人数、**不存 bitmap**，**不在知秋字典号改造批**；海豚→Spark **迁移仍归原负责人野花**，按原计划推进，≠「留海豚不改」。
 - `dws_app_order_d_h`：**仍归蓝猫**，不属于知秋收回批次。
 
 **节奏**：先在 **test** 做完并与现网口径对平；**生产 HBase 服务器到位后**再统一发 prod。
@@ -44,7 +44,7 @@ domain: ops
 - `[LESSON: runner迁移·活跃留存LTV批次 | 知秋定案下列表迁 runner 并切字典号 bitmap 由知秋一人做；他人勿改，半完成须停并交接进度与文件]`
 - `[LESSON: dws_app_user_d_h / 留存 / 周月活跃 / 首充留存 / 注册LTV | 同属知秋独占 runner 批次，又初侧渠道推广周月等下游读这些表时勿动上游实现]`
 - `[LESSON: ads_product_report_metric_d_d | 与上游 dwm_app_session_sid_d、dws_user_base_daily_d 打包在同一批次，非本批负责人勿动]`
-- `[LESSON: ads_product_day_stat_d | 仅人数、无 bitmap，不在 runner 字典号批次，继续海豚调度]`
+- `[LESSON: ads_product_day_stat_d | 仅人数、无 bitmap，不在知秋字典号改造批；Spark 迁移仍归野花按原计划，勿与知秋活跃链批次混淆]`
 - `[LESSON: dws_app_order_d_h | 订单日终仍归蓝猫，不属于知秋 2026-10-29 runner 收回范围]`
 - `[LESSON: runner迁移·发布节奏 | test 对平现口径后再等 prod HBase 就绪统一发产，禁止本批表零星抢发]`
 
