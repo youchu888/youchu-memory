@@ -447,3 +447,5 @@
 >>>>>>> Stashed changes
 
 - 2026-10-29 | tgbot,quota,old-mac | TG报额度用尽≠网页Pro+耗尽；修误判+heal脚本 | `lessons/2026-10-29-tgbot-false-quota-not-web-usage.md`
+
+| 2026-10-30 | [干完就提交并 push](./2026-10-30-干完就提交并push-不必等主人再说提交.md) | git,commit,push | 验收完立刻 commit+push，不必等「提交」 |
