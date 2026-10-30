@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 2026 31 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条-改-mirror-后重推-tg-未明说.md` | 2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条- |
+| tg 「无 」类 一句 一句结果向（例 一条 | `sessions/tg-rotate-2026-10-31-0659.md` | 收尾对用户：一句结果向（例：双机同步与 TG 重推成功、多补了哪一条业务说法）， |
+| tg 「上 」时 上传 不自 不自动跑云端上传脚本 | `sessions/tg-rotate-2026-10-31-0659.md` | 主人未说「上传云端」时：**只改本地 + TG**，不自动跑云端上传脚本。 |
+| .cursor dd.md log memor memory mm | `sessions/tg-rotate-2026-10-31-0659.md` | 定稿路径：`.cursor/work-log/reports/日报-YYYY-M |
+| sq sql 上午 与原 与观 交付 | `sessions/tg-rotate-2026-10-31-0659.md` | 补条与原有结果**并存**：保留已写实的交付（如渠道观影产发），只加漏记项（如上 |
+| .md prompt tgbot 「当 不必 不必通读全文 | `sessions/tg-rotate-2026-10-31-0659.md` | 大型 `tgbot/prompt_*.md`：先读启动包，再**读头尾**定位「 |
+| mac post_daily_report_to_dm.py tg 「已 不要  | `sessions/tg-rotate-2026-10-31-0659.md` | 改定稿后**立刻重推 TG 私聊**（old-mac `post_daily_r |
+| log prepare_daily_report_sync transcript | `sessions/tg-rotate-2026-10-31-0659.md` | 增补前仍要**双机 work-log 同步**（或等价 `prepare_dai |
+| 「日 上增补 不是 不是从零写日报 交付 今日 | `sessions/tg-rotate-2026-10-31-0659.md` | 私聊「日报今日结果再加点内容」= 在**已定稿**上增补【今日结果】，不是从零写 |
 | ## 10 2026 30 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作答-禁止空答与全文复读.md` | 2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作 |
 | ## 10 2026 30 agent_session_rotate away | `~/.dc-platform/memory/lessons/2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away-health-并区分产线数据告警与本.md` | 2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away |
 | #5 #591）可在对内归档时用 1） 59 91 业务 | `sessions/tg-rotate-2026-10-30-1659.md` | 私聊编号（如 #591）可在对内归档时用；对外答复以实查结果和业务语义为主。 |
@@ -36,12 +45,3 @@
 | ## 10 2026 28 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限-同步-查数类问题仍按-runbook.md` | 2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限 |
 | ## 10 2026 28 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法用主人名与业务任务名.md` | 2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法 |
 | ## .cursor .m 10 2026 28 | `~/.dc-platform/memory/lessons/2026-10-28-新机交付先落-cursor-work-log-当日-md-并-sync-memory-git-o.md` | 2026-10-28-新机交付先落-cursor-work-log-当日-md- |
-| sql 下仍 不能 不能替代 与说 仍应 | `sessions/tg-rotate-2026-10-28-2210.md` | 额度告警场景下仍应保证：**心跳/查数/SQL** 等通道可用，但**不能替代* |
-| hosts mac new old 不能 不能假装已双机齐全 | `sessions/tg-rotate-2026-10-28-2210.md` | 若 `hosts/new-mac` / `hosts/old-mac` **缺当 |
-| .cursor .dc .m dd.md git hosts | `sessions/tg-rotate-2026-10-28-2210.md` | 可复用的同步路径：**本机写入** `.cursor/work-log/当日.m |
-| agent cursor transcript 一台 上的 不见 | `sessions/tg-rotate-2026-10-28-2210.md` | Cursor **agent transcript 不跨机**；另一台机器上的交 |
-| curs cursor ld mac memory ol | `sessions/tg-rotate-2026-10-28-2210.md` | 主人问「old mac 干的活儿为什么没同步」，本质是**双机工作记录未进同一套 |
-| fallback lesson model quota runbook task | `sessions/tg-rotate-2026-10-28-2210.md` | [LESSON: model-quota-vs-task/遇全链 fallbac |
-| facing lesson user words 「产 「狂 | `sessions/tg-rotate-2026-10-28-2210.md` | [LESSON: user-facing-words/私聊/日报/回执禁用「狂人 |
-| 「该 不编 不编造已 不编造已修复原因 为额 么同 | `sessions/tg-rotate-2026-10-28-2210.md` | 该摘录**没有给出同步问题的实际排查结论**（全为额度拦截回复），蒸馏时只保留「 |
-| 「产 「狂 」「 」等 一套 与私 | `sessions/tg-rotate-2026-10-28-2210.md` | 私聊再次强调：**对外表述禁止「狂人」「产发」等内部/机器人化用词**；派单归因 |

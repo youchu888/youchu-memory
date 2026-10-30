@@ -2,6 +2,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-10-31 | [补写【今日结果】须先双机 sync 对齐实活，只增真实条、改 mirror 后重](./2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条-改-mirror-后重推-tg-未明说.md) | daily-report,supplement,tg,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-30 | [超大 TG prompt 先读头尾定位「当前问题」，再实查作答，禁止空答与全文复](./2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作答-禁止空答与全文复读.md) | tg-prompt,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-30 | [进程问询必实查 tgbot/bus/VPN/打卡/away-health，并区分](./2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away-health-并区分产线数据告警与本.md) | tgbot-health,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-29 | [活跃/留存/LTV/产品报表指标迁 runner · 知秋独占](./2026-10-29-活跃链-runner收回-知秋独占-字典号bitmap.md) | runner,ownership,bitmap,知秋 | 本批 6 组表知秋独占；产品日报不在字典批但野花仍迁 Spark；订单归蓝猫；test 对平后等 HBase 统一发 prod |
