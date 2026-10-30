@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [超大 TG prompt 先读头尾定位「当前问题」，再实查作答，禁止空答](lessons/2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作答-禁止空答与全文复读.md) — 会话轮换蒸馏
+- [进程问询必实查 tgbot/bus/VPN/打卡/away-health](lessons/2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away-health-并区分产线数据告警与本.md) — 会话轮换蒸馏
 - [执行 `/var/.../prompt_*.md` 时读头尾答「当前问题](lessons/2026-10-29-执行-var-prompt_-md-时读头尾答-当前问题-大文件禁止只复述-禁止用额度文案代替末.md) — 会话轮换蒸馏
 - [用户问「打卡一直出问题」必须查打卡链路与最近失败原因，禁止只回模型额度或](lessons/2026-10-29-用户问-打卡一直出问题-必须查打卡链路与最近失败原因-禁止只回模型额度或-empty-outpu.md) — 会话轮换蒸馏
 - [agent-bus 未结案为 0 时仍须扫私聊：假额度/空输出若已落库，](lessons/2026-10-29-agent-bus-未结案为-0-时仍须扫私聊-假额度-空输出若已落库-按原问补办-不能当无积压.md) — 会话轮换蒸馏
