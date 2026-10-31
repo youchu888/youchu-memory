@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [自愈|日切挂账|日切瞬时挂账先查心跳 pending 与正式表分区，已自](lessons/2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正式表分区-已自愈且日结在跑则勿手跑-r.md) — 会话轮换蒸馏
+- [complement|台账槽位|回写补数/结案必须 --dt+--hh ](lessons/2026-11-01-complement-台账槽位-回写补数-结案必须-dt-hh-对齐挂账格-禁止只用墙钟-hou.md) — 会话轮换蒸馏
+- [pushback|paimon-shadow|生产缺数告警先看 full](lessons/2026-11-01-pushback-paimon-shadow-生产缺数告警先看-fullchain-countt.md) — 会话轮换蒸馏
 - [补写【今日结果】须先双机 sync 对齐实活，只增真实条、改 mirro](lessons/2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条-改-mirror-后重推-tg-未明说.md) — 会话轮换蒸馏
 - [超大 TG prompt 先读头尾定位「当前问题」，再实查作答，禁止空答](lessons/2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作答-禁止空答与全文复读.md) — 会话轮换蒸馏
 - [进程问询必实查 tgbot/bus/VPN/打卡/away-health](lessons/2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away-health-并区分产线数据告警与本.md) — 会话轮换蒸馏

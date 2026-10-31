@@ -2,6 +2,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-01 | [自愈|日切挂账|日切瞬时挂账先查心跳 pending 与正式表分区，已自愈且日结](./2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正式表分区-已自愈且日结在跑则勿手跑-r.md) | day-close,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-01 | [complement|台账槽位|回写补数/结案必须 --dt+--hh 对齐挂账](./2026-11-01-complement-台账槽位-回写补数-结案必须-dt-hh-对齐挂账格-禁止只用墙钟-hou.md) | pushback,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-01 | [pushback|paimon-shadow|生产缺数告警先看 fullchai](./2026-11-01-pushback-paimon-shadow-生产缺数告警先看-fullchain-countt.md) | fullchain,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-31 | [补写【今日结果】须先双机 sync 对齐实活，只增真实条、改 mirror 后重](./2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条-改-mirror-后重推-tg-未明说.md) | daily-report,supplement,tg,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-30 | [超大 TG prompt 先读头尾定位「当前问题」，再实查作答，禁止空答与全文复](./2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作答-禁止空答与全文复读.md) | tg-prompt,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-10-30 | [进程问询必实查 tgbot/bus/VPN/打卡/away-health，并区分](./2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away-health-并区分产线数据告警与本.md) | tgbot-health,session-rotate | 会话轮换前自动蒸馏 |

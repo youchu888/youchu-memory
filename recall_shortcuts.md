@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 01 11 2026 agent_session_rotate close | `~/.dc-platform/memory/lessons/2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正式表分区-已自愈且日结在跑则勿手跑-r.md` | 2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正 |
+| ## 01 11 2026 agent_session_rotate compl | `~/.dc-platform/memory/lessons/2026-11-01-complement-台账槽位-回写补数-结案必须-dt-hh-对齐挂账格-禁止只用墙钟-hou.md` | 2026-11-01-complement-台账槽位-回写补数-结案必须-dt- |
+| ## 01 11 2026 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-11-01-pushback-paimon-shadow-生产缺数告警先看-fullchain-countt.md` | 2026-11-01-pushback-paimon-shadow-生产缺数告警 |
+| 10 2026 23 31 dt hh | `sessions/tg-rotate-2026-11-01-0600.md` | 若确需补同类挂账：参数用 `--dt=任务日 --hh=台账槽`（示例 `--d |
+| 00–23 dws.dws_app_user_d_h 任务 分区 务日 区行 | `sessions/tg-rotate-2026-11-01-0600.md` | 验数：影子表按任务日查 00–23 是否齐；正式表查对应日分区行数（如 `dws |
+| pending_count pending_pushback_steps 且水  | `sessions/tg-rotate-2026-11-01-0600.md` | 心跳关键字段：`pending_pushback_steps`、`pending |
+| 10 2026 23 31 31t22#23 不是 | `sessions/tg-rotate-2026-11-01-0600.md` | 挂账格格式记任务日 + 槽位，例如 `2026-10-31T22#23` 表示任 |
+| 先筛 先筛出写正式表的那几步再决定是否抢修 再决 写影 写正 决定 | `sessions/tg-rotate-2026-11-01-0600.md` | 同批告警里往往多步写影子、少数写正式表；先筛出写正式表的那几步再决定是否抢修。 |
+| countta counttable fullchain.json paimon | `sessions/tg-rotate-2026-11-01-0600.md` | 生产「回写步挂账 / 缺数据」告警：定级前必读 `steps/fullchain |
+| close day lesson pending run_step_once 与 | `sessions/tg-rotate-2026-11-01-0600.md` | [LESSON: day-close/自愈/日切挂账/日切瞬时挂账先查心跳 pe |
+| complement dt+ hh hour lesson pushback | `sessions/tg-rotate-2026-11-01-0600.md` | [LESSON: pushback/complement/台账槽位/回写补数/结 |
+| dwd_order_paid_d_r g_base 上游 上游未就绪（如 不单  | `sessions/tg-rotate-2026-11-01-0600.md` | 上游未就绪（如 `g_base` 等 `dwd_order_paid_d_r`） |
+| g_day_close_all 不要 不要对挂账那几步重复手工单步跑 与调 仍在 | `sessions/tg-rotate-2026-11-01-0600.md` | 日结线仍在跑（如 `g_day_close_all` 进度未满）时，不要对挂账那 |
+| g_day_close_all run_step_once 「前 」挡 一格 上 | `sessions/tg-rotate-2026-11-01-0600.md` | 日切附近常见瞬时挂账：告警瞬间水位卡在上一格、`g_day_close_all` |
+| hh 「前 一格 一致 与挂 了结 | `sessions/tg-rotate-2026-11-01-0600.md` | 回写补数 / 完成标记必须带 `--hh=<台账槽位>`（与挂账格一致）；缺 ` |
 | ## 10 2026 31 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条-改-mirror-后重推-tg-未明说.md` | 2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条- |
 | tg 「无 」类 一句 一句结果向（例 一条 | `sessions/tg-rotate-2026-10-31-0659.md` | 收尾对用户：一句结果向（例：双机同步与 TG 重推成功、多补了哪一条业务说法）， |
 | tg 「上 」时 上传 不自 不自动跑云端上传脚本 | `sessions/tg-rotate-2026-10-31-0659.md` | 主人未说「上传云端」时：**只改本地 + TG**，不自动跑云端上传脚本。 |
@@ -30,18 +45,3 @@
 | ## ... .md 10 2026 29 | `~/.dc-platform/memory/lessons/2026-10-29-执行-var-prompt_-md-时读头尾答-当前问题-大文件禁止只复述-禁止用额度文案代替末.md` | 2026-10-29-执行-var-prompt_-md-时读头尾答-当前问题- |
 | ## 10 2026 29 agent_session_rotate atten | `~/.dc-platform/memory/lessons/2026-10-29-用户问-打卡一直出问题-必须查打卡链路与最近失败原因-禁止只回模型额度或-empty-outpu.md` | 2026-10-29-用户问-打卡一直出问题-必须查打卡链路与最近失败原因-禁止 |
 | ## 10 2026 29 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-29-agent-bus-未结案为-0-时仍须扫私聊-假额度-空输出若已落库-按原问补办-不能当无积压.md` | 2026-10-29-agent-bus-未结案为-0-时仍须扫私聊-假额度-空 |
-| agent busy 一路 不因 与末 仍须 | `sessions/tg-rotate-2026-10-29-1158.md` | **并行 Agent**：长任务占一路时，新开 Agent 仍须完整冷启动；独立 |
-| .md bootstrap prompt tg 「当 「正 | `sessions/tg-rotate-2026-10-29-1158.md` | **TG prompt 文件**：须冷启动读 bootstrap，再读指定 `p |
-| #554 #565 #585–#587 —— —排 不能 | `sessions/tg-rotate-2026-10-29-1158.md` | **失败落库像已结**：#585–#587、#554、#565 等若只落了额度/ |
-| 0」 0」只说明 agent bu bus bus「未结案 | `sessions/tg-rotate-2026-10-29-1158.md` | **积压要分通道**：agent-bus「未结案 = 0」只说明 bus 无挂单 |
-| agent auto empty model output vs | `sessions/tg-rotate-2026-10-29-1158.md` | **空输出 vs 额度**：`model=auto empty output`、 |
-| fallback 「额 不能 于未 交付 代任 | `sessions/tg-rotate-2026-10-29-1158.md` | **假「额度用尽」**：用户问打卡/积压等实活时，若未查库、未跑脚本就回模型 f |
-| ... .md lesson prompt tgbot var | `sessions/tg-rotate-2026-10-29-1158.md` | [LESSON: tgbot-prompt/执行 `/var/.../promp |
-| attendance empty lesson output punch 「打 | `sessions/tg-rotate-2026-10-29-1158.md` | [LESSON: punch-attendance/用户问「打卡一直出问题」必须 |
-| #588 agent bus 「唯 「未 」清 | `sessions/tg-rotate-2026-10-29-1158.md` | 积压问答标准答法**：先核 agent-bus 未结案数 + 私聊「未实质答复」 |
-| launchd onehr set_duty_day set_leave_day | `sessions/tg-rotate-2026-10-29-1158.md` | 用户问打卡异常**：走 OneHR/日历/launchd 与 `set_leav |
-| .md bootstrap prompt tg 「当 「正 | `sessions/tg-rotate-2026-10-29-1158.md` | TG prompt 文件**：须冷启动读 bootstrap，再读指定 `pro |
-| age agent auto empty model output | `sessions/tg-rotate-2026-10-29-1158.md` | 空输出 vs 额度**：`model=auto empty output`、多档 |
-| ## 10 2026 28 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限-同步-查数类问题仍按-runbook.md` | 2026-10-28-遇全链-fallback-额度提示时-简短说明对话模型受限 |
-| ## 10 2026 28 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法用主人名与业务任务名.md` | 2026-10-28-私聊-日报-回执禁用-狂人-产发-等内部词-派单与协作说法 |
-| ## .cursor .m 10 2026 28 | `~/.dc-platform/memory/lessons/2026-10-28-新机交付先落-cursor-work-log-当日-md-并-sync-memory-git-o.md` | 2026-10-28-新机交付先落-cursor-work-log-当日-md- |
