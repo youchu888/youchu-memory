@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-10-30 22:59:15",
+  "last_run": "2026-10-31 17:00:00",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -2018,8 +2018,12 @@
       "2026-10-29 17:28:12|agent_bus_in|0|[agent-bus#11721] 又初: 你报的 403(审核人写进度时 publish_request_* / publish_reviewer_* 被判成改动)已修, 生产平台北京 17:2x 已部署重启, 插件不用再升级, 1.0.11 就行。根因: 读会话时平台把这几个申请字段从索引并进 state 返回, 插件原样写回, 和库里存的 state 一比就算改动。现在审核人写进度时只收 stage7 进度字段, 其余一律沿用库里原值, 不再报错。请直接重点 dev-20261028-001/002/003 的 S7 发布; 还有报错就把「过程」区原文发我。||observe",
       "2026-10-29 20:53:38|agent_bus_in|0|[agent-bus#11725] 【知秋定 · 表归属收回】下面这批表的迁 runner + 改字典号 bitmap, 知秋 10-29 定由狂人一人做, 其他人别再动(手上有半截的停下, 有进度或文件请 bus 回我一声, 我接着用):\n1. 活跃表 dws_app_user_d_h(切字典号)\n2. 留存 dws_app_retention_d_h\n3. 周活跃 dws_app_user_w_d_new / 月活跃 dws_app_user_m_d_new\n4. 首充留存 dws_user_first_recharge_retention_d_h(原海豚天+小时两个 task)\n5. 注册 LTV dws_user_reg_ltv_d_h\n6. 产品报表指标 ads_product_report_metric_d_d, 连同它的上游 dwm_app_session_sid_d、dws_user_base_daily_d\n不在这批的: 产品日报 ads_product_day_stat_d 只出人数不存 bitmap, 换号不影响, 原样留在海豚, 不用改; 蓝猫的订单日终 dws_app_order_d_h 仍归蓝猫。\n节奏: 先在测试环境做完并跟原口径对平, 生产等 HBase 服务器到了再统一发布。测试上的 _uc 影子表(dws_app_user_d_h_uc 等)是我建的验证表, 别写。||observe",
       "2026-10-29 20:55:16|agent_bus_in|0|[agent-bus#11728] 【知秋定 · 表归属收回(重发, #11725 可能是乱码, 以本条为准)】下面这批表迁 runner + 改字典号 bitmap, 由狂人一人做, 其他人别再动; 手上有半截的停下, 有进度或文件 bus 回我一声, 我接着用:\n1. 活跃表 dws_app_user_d_h(切字典号)\n2. 留存 dws_app_retention_d_h\n3. 周活跃 dws_app_user_w_d_new / 月活跃 dws_app_user_m_d_new\n4. 首充留存 dws_user_first_recharge_retention_d_h(原海豚天+小时两个 task)\n5. 注册 LTV dws_user_reg_ltv_d_h\n6. 产品报表指标 ads_product_report_metric_d_d, 连同它的上游 dwm_app_session_sid_d、dws_user_base_daily_d\n不在这批的: 产品日报 ads_product_day_stat_d 换号不影响它, 不在字典改造里, 但所有海豚任务都要迁 spark, 它的迁移仍归原负责人(野花/牡丹)照原计划做; 订单日终 dws_app_order_d_h 仍归蓝猫/猫猫。\n节奏: 先在测试做完并与原口径对平, 生产等 HBase 服务器到了统一发布。测试上的 _uc 表(dws_app_user_d_h_uc 等)是我的验证表, 别写。||observe"
+    ],
+    "2026-10-30": [
+      "2026-10-30 11:05:11|agent_bus_in|0|[agent-bus#11767] [P0] 生产缺数据: 1 个回写步没回写\npb_dws_drama_episode_d_d 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。||observe",
+      "2026-10-30 16:13:40|telegram_dm|8740305767|[私聊#591] 各项进程是不是都正常在运作|先读启动包和该 prompt 文件，再按文件要求回答末尾问题。文件很大，按经验先读头尾定位「当前问题」。末尾问题是「各项进程是不是都正常在运作」。按规则实查关键进程状态，不空答。再核几项关键健康信号：tgbot、VPN、打卡、away-health、未结 bus。本机关键进程刚才实查过：**整体正常在跑**。\n\n| 项 | 状态 |\n|---|---|\n| tgbot-daemon | 在跑（pid 881） |\n| agent-bus poller / wake-bridge | 正常，心跳约 1s；未结案 bus=0 |\n| OneHR 打卡调度 | 在跑；今天上班卡 09:50 已成功 |\n| VPN | OpenVPN 已连（`10.8.0.11`）；续期还剩约 2.6h |\n| 在线保活 / 岗位监控 | `tg-work-online`、`ethan-jobs-watch` 在跑 |\n| away-health | 16:11 自检：`OK bot+daemon+bus+vpn+caps+executor`（刚自愈过一次 poller，现已稳） |\n\n定时类（日报 flush/wake、vpn-sync、memory-sync 等）已加载；空闲时无常驻 PID 属正常。\n\n说明：上午有过 pipeline-runner 业务告警（剧集日表回写挂账），那是**产线数据侧**，不是本机这些进程挂了。若要查那条挂账现状可以说一声。（以上即私聊#591 的答复。）|"
     ]
   },
-  "last_hot_lines": 3,
-  "last_archived_lines": 17
+  "last_hot_lines": 1,
+  "last_archived_lines": 2
 }
