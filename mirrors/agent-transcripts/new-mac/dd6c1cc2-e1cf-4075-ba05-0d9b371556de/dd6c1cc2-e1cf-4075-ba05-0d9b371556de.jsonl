@@ -35,3 +35,4 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"Read","input":{"path":"/Users/mac/Desktop/CHcode/tmp/pdf2html/from_html_preview2.png"}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"已按你桌面上的 HTML 转好了：\n\n`/Users/mac/Desktop/学历证书电子注册备案表.pdf`\n\nA4 单页，内容跟 HTML 一致（含更新日期 2026年11月02日）。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Monday, Nov 2, 2026, 5:52 PM (UTC+8)</timestamp>\n<user_query>\n格式不一样了\n</user_query>"}]}}
