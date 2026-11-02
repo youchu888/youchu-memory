@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-02 05:00:26",
+  "last_run": "2026-11-02 23:00:41",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -2030,6 +2030,6 @@
       "2026-11-01 00:27:32|telegram_dm|8740305767|[私聊#593] 🚨 生产缺数据: 7 个回写步没回写\n2026-11-01 00:05 北京时间\n\npbadschannelpromotionsummaryhh, pbadssettlementpreaggh, pbdwsappchanneldeductionhh, pbdwsappchannelsummaryhh, pbdwsappuserdhhourly, pbdwsuserpromotionbehaviorchargehh, pbdwsuserpromotionbehaviorhh 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/fullchain.json 查每步的 countTable: 带 paimonshadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。\n\n检查下问题，看看能不能修复，|超大 prompt，先读头尾定位「当前问题」。生产缺数告警：7 个回写步挂账。先按 fullchain 定级，再查能否修。定级：6 个影子、1 个正式表。接着拉心跳与挂账槽位，看正式表能否补。心跳显示挂账已空、日结线在跑。接着核对告警槽位与正式表分区是否真有数。告警根因是 10-31 槽位 23 未了结挡日结。正在确认是否已自愈，并核对影子表有数。**结论：不用手修。** 00:05 那条是日切时槽位滞后的瞬时挂账，现已自愈。\n\n### 定级（`full_chain.json` · countTable）\n\n| 步 | 目标 | 定级 |\n|---|---|---|\n| 6 个 settle/行为回写 | `*_paimon_shadow` | 影子，非「正式表真缺数」 |\n| `pb_dws_app_user_d_h_hourly` | `dws.dws_app_user_d_h` | **唯一正式表** |\n\n### 根因（告警瞬间 bus#11868）\n\n- 挂账格：`2026-10-31T22#23`（任务日 10-31、槽位 **23**）\n- 水位卡在 `2026-10-31T22`；`g_base` 还在等 `dwd_order_paid_d_r`\n- `g_day_close_all` 被挡：`前一格未了结(…槽位 23)`\n\n### 现状（刚刚心跳）\n\n- `pending_pushback_steps=[]`，`pending_count=0`\n- 水位已到 `2026-10-31T23`\n- 日结线在跑：`g_day_close_all` **23/37**（`dwm_video_event_h_h`），结算侧 10 步回写已过\n\n### 验数\n\n- 影子渠道汇总 10-31：**00–23 共 24 小时齐**（含 22/23）\n- 正式活跃 `dws.dws_app_user_d_h` · 10-31：**约 326 万行**\n\n日结还在跑，**不要**再对这 7 步手工 `run_step_once`。若以后同类再挂，补数必须 `--dt=2026-10-31 --hh=23`（台账槽，不是墙钟点）。|"
     ]
   },
-  "last_hot_lines": 0,
+  "last_hot_lines": 9,
   "last_archived_lines": 2
 }
