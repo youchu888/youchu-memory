@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 02 05 05.ads 11 2026 | `~/.dc-platform/memory/lessons/2026-11-02-spark-迁移-session-只挂-05-ads-海豚稿并对齐-test-sql-不覆盖-s.md` | 2026-11-02-spark-迁移-session-只挂-05-ads-海豚 |
+| ## 02 11 2026 agent_session_rotate artif | `~/.dc-platform/memory/lessons/2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚-binding-齐-artifact-.md` | 2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚- |
+| 05.ads ads_product_promotion_summary_w d | `sessions/tg-rotate-2026-11-02-2100.md` | 审核人侧：**工作区 `dmp/dc-parent` + `git pull`* |
+| outputs pending publ publish request sql | `sessions/tg-rotate-2026-11-02-2100.md` | 大改 state / outputs / SQL 后：**撤旧 pending  |
+| session spark 产物 免审 审核 径残 | `sessions/tg-rotate-2026-11-02-2100.md` | 月表从 Spark 迁海豚后，session 目录里 **清掉旧 spark 路 |
+| 05.ads spark spark_migrate sql 分离 勿被 | `sessions/tg-rotate-2026-11-02-2100.md` | **spark_migrate 与 05.ads 海豚稿分离**：周表 Spar |
+| end git promote_start rp sql test | `sessions/tg-rotate-2026-11-02-2100.md` | 提审前 **本地 SQL 须与 test 海豚线上一致**（如推广窗 `prom |
+| artifact playbook project project_code r | `sessions/tg-rotate-2026-11-02-2100.md` | 平台 artifact 里 **playbook/README 空壳**、海豚  |
+| ... ops_system outputs rel_dir 上挂 上目 | `sessions/tg-rotate-2026-11-02-2100.md` | **`rel_dir` 为空或 `outputs=[]`** 时，插件无法在本机 |
+| commit dryrun stage stage6_commit 一项 不到 | `sessions/tg-rotate-2026-11-02-2100.md` | 五件缺任一项，审核插件读不到真查库 / dryrun / commit 证据，* |
+| 1～ 1～6 dev done owner_boundary pending | `sessions/tg-rotate-2026-11-02-2100.md` | dev session 列表能 **pending**，但 stage7 审发布 |
+| artifact binding dev done lesson outp | `sessions/tg-rotate-2026-11-02-2100.md` | [LESSON: dev-session,stage7,rel_dir/提审前自 |
+| 05.ads spark spark_migrate sql 分离 勿被 | `sessions/tg-rotate-2026-11-02-2100.md` | spark_migrate 与 05.ads 海豚稿分离**：周表 Spark  |
+| 4） 5） ag e4 e5 es | `sessions/tg-rotate-2026-11-02-2100.md` | 补齐流程：**对照健康 session → 真查 test（stage4）与 p |
 | ## 01 11 2026 agent_session_rotate close | `~/.dc-platform/memory/lessons/2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正式表分区-已自愈且日结在跑则勿手跑-r.md` | 2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正 |
 | ## 01 11 2026 agent_session_rotate compl | `~/.dc-platform/memory/lessons/2026-11-01-complement-台账槽位-回写补数-结案必须-dt-hh-对齐挂账格-禁止只用墙钟-hou.md` | 2026-11-01-complement-台账槽位-回写补数-结案必须-dt- |
 | ## 01 11 2026 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-11-01-pushback-paimon-shadow-生产缺数告警先看-fullchain-countt.md` | 2026-11-01-pushback-paimon-shadow-生产缺数告警 |
@@ -31,17 +45,3 @@
 | 「日 上增补 不是 不是从零写日报 交付 今日 | `sessions/tg-rotate-2026-10-31-0659.md` | 私聊「日报今日结果再加点内容」= 在**已定稿**上增补【今日结果】，不是从零写 |
 | ## 10 2026 30 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作答-禁止空答与全文复读.md` | 2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作 |
 | ## 10 2026 30 agent_session_rotate away | `~/.dc-platform/memory/lessons/2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away-health-并区分产线数据告警与本.md` | 2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away |
-| #5 #591）可在对内归档时用 1） 59 91 业务 | `sessions/tg-rotate-2026-10-30-1659.md` | 私聊编号（如 #591）可在对内归档时用；对外答复以实查结果和业务语义为主。 |
-| bot daemon pipeline runner vpn 主人 | `sessions/tg-rotate-2026-10-30-1659.md` | **产线数据告警**（如 pipeline-runner、剧集日表回写挂账）与  |
-| away bot+daemon+bus+vpn+caps+executor he | `sessions/tg-rotate-2026-10-30-1659.md` | `away-health` 自检串（如 `OK bot+daemon+bus+v |
-| pid vpn 余时 关键 出关 列出 | `sessions/tg-rotate-2026-10-30-1659.md` | 回复宜用表格列出关键项：进程名、是否在跑、pid/心跳、当日打卡是否成功、VPN |
-| prompt 「当 中间 件加 位「 先读 | `sessions/tg-rotate-2026-10-30-1659.md` | 超大 prompt 可先读头尾定位「当前问题」，再按需补读中间段，避免整文件加载 |
-| lesson prompt tg 「当 与全 位「 | `sessions/tg-rotate-2026-10-30-1659.md` | [LESSON: tg-prompt/超大 TG prompt 先读头尾定位「当 |
-| 「本 」后 一句 业务 侧有 侧问 | `sessions/tg-rotate-2026-10-30-1659.md` | 若数据侧有挂账，结论写「本机进程正常」后，可一句带过业务侧问题并问是否要追那条挂 |
-| flush launchd memory pid sync vpn | `sessions/tg-rotate-2026-10-30-1659.md` | launchd 类任务（日报 flush/wake、`vpn-sync`、mem |
-| 1s agent away bus health po | `sessions/tg-rotate-2026-10-30-1659.md` | agent-bus 正常信号：poller 心跳约 1s、未结案 bus=0；若 |
-| agent away bridge bus（poller bus） daemon | `sessions/tg-rotate-2026-10-30-1659.md` | 健康检查应实查：`tgbot-daemon`、agent-bus（poller  |
-| prompt tg 「各 「当 」时 主人 | `sessions/tg-rotate-2026-10-30-1659.md` | 主人问「各项进程是否正常」时，必须先读启动包与 TG prompt 文件，直接回 |
-| ## ... .md 10 2026 29 | `~/.dc-platform/memory/lessons/2026-10-29-执行-var-prompt_-md-时读头尾答-当前问题-大文件禁止只复述-禁止用额度文案代替末.md` | 2026-10-29-执行-var-prompt_-md-时读头尾答-当前问题- |
-| ## 10 2026 29 agent_session_rotate atten | `~/.dc-platform/memory/lessons/2026-10-29-用户问-打卡一直出问题-必须查打卡链路与最近失败原因-禁止只回模型额度或-empty-outpu.md` | 2026-10-29-用户问-打卡一直出问题-必须查打卡链路与最近失败原因-禁止 |
-| ## 10 2026 29 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-10-29-agent-bus-未结案为-0-时仍须扫私聊-假额度-空输出若已落库-按原问补办-不能当无积压.md` | 2026-10-29-agent-bus-未结案为-0-时仍须扫私聊-假额度-空 |

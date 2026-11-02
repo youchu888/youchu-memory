@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-11-01 · 最新归档：`sessions/tg-rotate-2026-11-01-0600.md`
+> 更新：2026-11-02 · 最新归档：`sessions/tg-rotate-2026-11-02-2100.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 补齐流程：**对照健康 session → 真查 test（stage4）与 prod 缺口（stage5）→ 写回五件 → 挂 outputs / 海豚 target → 补全 playbook**；禁止只改 stage 状态。
+- spark_migrate 与 05.ads 海豚稿分离**：周表 Spark 稿勿被海豚 SQL 覆盖；只对齐 **05.ads 海豚发布路径**。
+- [LESSON: dev-session,stage7,rel_dir|提审前自检：五件齐、`rel_dir`/outputs/海豚 binding 齐、artifact 非空、本地 SQL 与 test 海豚一致；缺任一项先补再 RP，勿空标 done。]
+- dev session 列表能 **pending**，但 stage7 审发布打不开，常见原因是 **stage 1～6 标了 done 却缺 `state_json` 五件**（`strict_mode`、`owner_boundary`、`stage4_db_check`、`stage5_prod_dryrun`、`stage6_commit`），不是单纯「没提审」。
+- 五件缺任一项，审核插件读不到真查库 / dryrun / commit 证据，**审发布界面会挂**；仅有 `stage6_commit` 仍不够。
+- **`rel_dir` 为空或 `outputs=[]`** 时，插件无法在本机对上目录，**连打开都困难**；本地已有 `ops_system/...` 也要在平台上挂好路径与 outputs。
+- 平台 artifact 里 **playbook/README 空壳**、海豚 **`wf_code`/`project_code` 空**，和 state 缺件叠加时，即使有 `rel_dir` 也 **审不了**。
+- 提审前 **本地 SQL 须与 test 海豚线上一致**（如推广窗 `promote_start/end`）；发现 test 已改、git 未跟时，**先对齐再 RP**。
+- **spark_migrate 与 05.ads 海豚稿分离**：周表 Spark 稿勿被海豚 SQL 覆盖；只对齐 **05.ads 海豚发布路径**。
+- 月表从 Spark 迁海豚后，session 目录里 **清掉旧 spark 路径残留**，避免审核误读错误产物。
+- 大改 state / outputs / SQL 后：**撤旧 pending 申请 → 重新 request-publish**，避免野花仍看旧快照。
+- 审核人侧：**工作区 `dmp/dc-parent` + `git pull`**，再按 session 的 `rel_dir`（如 `ops_system/05.ads/ads_product_promotion_summary_w|_m`）打开。
 - 回写补数 / 完成标记必须带 `--hh=<台账槽位>`（与挂账格一致）；缺 `--hh` 会落到墙钟槽位，次日仍判「前一格未了结」、继续挡写。
 - 日切附近常见瞬时挂账：告警瞬间水位卡在上一格、`g_day_close_all` 被「前一格未了结」挡住；先拉心跳看是否已自愈，勿立刻手工 `run_step_once`。
 - 日结线仍在跑（如 `g_day_close_all` 进度未满）时，不要对挂账那几步重复手工单步跑，避免与调度抢写。
 - 上游未就绪（如 `g_base` 等 `dwd_order_paid_d_r`）会连带卡水位与回写；根因要链到挡住的格与依赖，不单看回写步名。
 - [LESSON: pushback|complement|台账槽位|回写补数/结案必须 --dt+--hh 对齐挂账格，禁止只用墙钟 hour 否则次日仍判前一格未了结]
 - [LESSON: day-close|自愈|日切挂账|日切瞬时挂账先查心跳 pending 与正式表分区，已自愈且日结在跑则勿手跑 run_step_once]
-- 生产「回写步挂账 / 缺数据」告警：定级前必读 `steps/fullchain.json` 里每步的 `countTable`；带 `paimonshadow` 的是影子表、无下游读者，不算正式表真缺数。
-- 同批告警里往往多步写影子、少数写正式表；先筛出写正式表的那几步再决定是否抢修。
-- 挂账格格式记任务日 + 槽位，例如 `2026-10-31T22#23` 表示任务日 10-31、槽位 **23**（不是当前北京时间小时）。
-- 心跳关键字段：`pending_pushback_steps`、`pending_count`、当前水位；挂账空且水位前进 → 倾向观察而非手修。
-- 验数：影子表按任务日查 00–23 是否齐；正式表查对应日分区行数（如 `dws.dws_app_user_d_h`）确认真有/无数。
-- 若确需补同类挂账：参数用 `--dt=任务日 --hh=台账槽`（示例 `--dt=2026-10-31 --hh=23`），与告警格一致。
-- 私聊「日报今日结果再加点内容」= 在**已定稿**上增补【今日结果】，不是从零写日报；先对齐当日真实交付再动笔。
-- 增补前仍要**双机 work-log 同步**（或等价 `prepare_daily_report_sync`），用合并稿 + transcript/派单挖**当天实活**，禁止为凑条数硬拆或编造。
-- 改定稿后**立刻重推 TG 私聊**（old-mac `post_daily_report_to_dm.py`）；对话里只确认「已推 + 稿路径」，**不要再贴全文**（防双推）。
-- 大型 `tgbot/prompt_*.md`：先读启动包，再**读头尾**定位「当前问题」，不必通读全文。
-- 补条与原有结果**并存**：保留已写实的交付（如渠道观影产发），只加漏记项（如上午渠道漏斗列数告警排查及与观影四表 SQL 同步收口）。
-- 定稿路径：`.cursor/work-log/reports/日报-YYYY-MM-DD.md`，并**对齐 memory 镜像稿**（`work-log/reports/`）。
 

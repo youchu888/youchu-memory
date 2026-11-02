@@ -2,6 +2,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-02 | [Spark 迁移 session 只挂 05.ads 海豚稿并对齐 test S](./2026-11-02-spark-迁移-session-只挂-05-ads-海豚稿并对齐-test-sql-不覆盖-s.md) | dev-session,spark_migrate,dolphin,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-02 | [提审前自检：五件齐、`rel_dir`/outputs/海豚 binding 齐](./2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚-binding-齐-artifact-.md) | dev-session,stage7,rel_dir,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-01 | [自愈|日切挂账|日切瞬时挂账先查心跳 pending 与正式表分区，已自愈且日结](./2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正式表分区-已自愈且日结在跑则勿手跑-r.md) | day-close,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-01 | [complement|台账槽位|回写补数/结案必须 --dt+--hh 对齐挂账](./2026-11-01-complement-台账槽位-回写补数-结案必须-dt-hh-对齐挂账格-禁止只用墙钟-hou.md) | pushback,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-01 | [pushback|paimon-shadow|生产缺数告警先看 fullchai](./2026-11-01-pushback-paimon-shadow-生产缺数告警先看-fullchain-countt.md) | fullchain,session-rotate | 会话轮换前自动蒸馏 |
