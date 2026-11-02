@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-02 20:10:15 +0800
+> 更新: 2026-11-02 20:13:41 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-02.md`
 
@@ -12,3 +12,4 @@
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
 | 2026-11-01 00:22 | 私聊#593 | telegram_dm | completed | 🚨 生产缺数据: 7 个回写步没回写 2026-11-01 00:05 北京时间 pbadschannelpromotionsummaryhh, pbadsse |
+| 2026-11-02 20:12 | 私聊#594 | telegram_dm | in_progress | dev-20261013-002 dev-20261027-001 这两个任务缺东西吧？发布的时候打不开 |
