@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-02 23:57:36 +0800
+> 更新: 2026-11-03 00:00:40 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-02.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-03.md`
 
 ## 未结案 agent-bus
 
@@ -11,7 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-01 00:22 | 私聊#593 | telegram_dm | completed | 🚨 生产缺数据: 7 个回写步没回写 2026-11-01 00:05 北京时间 pbadschannelpromotionsummaryhh, pbadsse |
 | 2026-11-02 20:12 | 私聊#594 | telegram_dm | completed | dev-20261013-002 dev-20261027-001 这两个任务缺东西吧？发布的时候打不开 |
 | 2026-11-02 20:21 | 私聊#595 | telegram_dm | completed | 补齐，然后挂上再重新提审 |
 | 2026-11-02 20:54 | 群派单#290 | worker_ant_group | completed | #12115（54556 SDK广告点击需求 v2.5.0）已审完，结论：有条件通过，详细意见已经通过 bus#12117 回给欧阳克。 只有 1 条必改：文档 |
