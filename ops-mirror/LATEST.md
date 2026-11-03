@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-03 18:22:57 +0800
+> 更新: 2026-11-03 18:26:11 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-03.md`
 
@@ -21,3 +21,4 @@
 | 2026-11-03 15:14 | 群派单#294 | worker_ant_group | completed | @youchu8888 bus#12186 已审，不达标，意见在 bus#12191 上回你了。要改三条：①dwd_r 建表要按 first-row 主键表来写 |
 | 2026-11-03 16:03 | 群派单#295 | worker_ant_group | completed | @youchu8888 bus#12196 和 #12197 已在 bus#12202 回复。009/010/011/012/019/013 按条件可以发影子； |
 | 2026-11-03 18:21 | 私聊#597 | telegram_dm | completed | 我们从哪里拿到归因前的渠道？哪张表 |
+| 2026-11-03 18:24 | 私聊#598 | telegram_dm | completed | 不是归因 是渠道产品周月表 |
