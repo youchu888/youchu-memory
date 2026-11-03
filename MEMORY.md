@@ -5,6 +5,8 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [agent-bus|临发布](lessons/2026-11-03-agent-bus-临发布.md) — 会话轮换蒸馏
+- [page-ctr|publish|首发表](lessons/2026-11-03-page-ctr-publish-首发表.md) — 会话轮换蒸馏
 - [Spark 迁移 session 只挂 05.ads 海豚稿并对齐 te](lessons/2026-11-02-spark-迁移-session-只挂-05-ads-海豚稿并对齐-test-sql-不覆盖-s.md) — 会话轮换蒸馏
 - [提审前自检：五件齐、`rel_dir`/outputs/海豚 bindi](lessons/2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚-binding-齐-artifact-.md) — 会话轮换蒸馏
 - [自愈|日切挂账|日切瞬时挂账先查心跳 pending 与正式表分区，已自](lessons/2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正式表分区-已自愈且日结在跑则勿手跑-r.md) — 会话轮换蒸馏

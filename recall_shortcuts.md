@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 03 11 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-03-agent-bus-临发布.md` | 2026-11-03-agent-bus-临发布 |
+| ## 03 11 2026 agent_session_rotate ctr | `~/.dc-platform/memory/lessons/2026-11-03-page-ctr-publish-首发表.md` | 2026-11-03-page-ctr-publish-首发表 |
+| bus 一条 事件名 产出表 则符 即可 | `sessions/tg-rotate-2026-11-03-1201.md` | **对外沟通模板**：取数表 + 事件名 + 产出表 + 影子/7 日闸差距 + |
+| pb st stage7 人定 先挂 再改 | `sessions/tg-rotate-2026-11-03-1201.md` | **须狂人定的四项**：是否必须先挂影子、影子/正式表名、当日能否发、是否立刻改 |
+| bus es io on pb se | `sessions/tg-rotate-2026-11-03-1201.md` | **临发布被拦**：先写清现状（session 阶段、源表/事件、目标表、是否影 |
+| #1 12 15 1） 21 51 | `sessions/tg-rotate-2026-11-03-1201.md` | **不合规高发点**：现稿**直写正式表**，无**影子表**、无**7 日对平 |
+| ads.ads_page_item_ctr_d dim.dim_app_page | `sessions/tg-rotate-2026-11-03-1201.md` | **产出**：`ads.ads_page_item_ctr_d` + `dim. |
+| app_pageitem_click app_pageitem_exp app_ | `sessions/tg-rotate-2026-11-03-1201.md` | **取数**：直读 `dw.dw_user_event_detail_new`； |
+| 002 20261020 dev stage1–6 stage7 产表 | `sessions/tg-rotate-2026-11-03-1201.md` | **页面点击率**链路：`dev-20261020-002`，Stage1–6  |
+| agent bus dev lesson pb publish | `sessions/tg-rotate-2026-11-03-1201.md` | [LESSON: dev-session/agent-bus/临发布] 野花指「 |
+| pb stag stage7 人定 先挂 再改 | `sessions/tg-rotate-2026-11-03-1201.md` | 须狂人定的四项**：是否必须先挂影子、影子/正式表名、当日能否发、是否立刻改 ` |
+| bus es io on pb se | `sessions/tg-rotate-2026-11-03-1201.md` | 临发布被拦**：先写清现状（session 阶段、源表/事件、目标表、是否影子/ |
 | ## 02 05 05.ads 11 2026 | `~/.dc-platform/memory/lessons/2026-11-02-spark-迁移-session-只挂-05-ads-海豚稿并对齐-test-sql-不覆盖-s.md` | 2026-11-02-spark-迁移-session-只挂-05-ads-海豚 |
 | ## 02 11 2026 agent_session_rotate artif | `~/.dc-platform/memory/lessons/2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚-binding-齐-artifact-.md` | 2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚- |
 | 05.ads ads_product_promotion_summary_w d | `sessions/tg-rotate-2026-11-02-2100.md` | 审核人侧：**工作区 `dmp/dc-parent` + `git pull`* |
@@ -33,15 +45,3 @@
 | dwd_order_paid_d_r g_base 上游 上游未就绪（如 不单  | `sessions/tg-rotate-2026-11-01-0600.md` | 上游未就绪（如 `g_base` 等 `dwd_order_paid_d_r`） |
 | g_day_close_all 不要 不要对挂账那几步重复手工单步跑 与调 仍在 | `sessions/tg-rotate-2026-11-01-0600.md` | 日结线仍在跑（如 `g_day_close_all` 进度未满）时，不要对挂账那 |
 | g_day_close_all run_step_once 「前 」挡 一格 上 | `sessions/tg-rotate-2026-11-01-0600.md` | 日切附近常见瞬时挂账：告警瞬间水位卡在上一格、`g_day_close_all` |
-| hh 「前 一格 一致 与挂 了结 | `sessions/tg-rotate-2026-11-01-0600.md` | 回写补数 / 完成标记必须带 `--hh=<台账槽位>`（与挂账格一致）；缺 ` |
-| ## 10 2026 31 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条-改-mirror-后重推-tg-未明说.md` | 2026-10-31-补写-今日结果-须先双机-sync-对齐实活-只增真实条- |
-| tg 「无 」类 一句 一句结果向（例 一条 | `sessions/tg-rotate-2026-10-31-0659.md` | 收尾对用户：一句结果向（例：双机同步与 TG 重推成功、多补了哪一条业务说法）， |
-| tg 「上 」时 上传 不自 不自动跑云端上传脚本 | `sessions/tg-rotate-2026-10-31-0659.md` | 主人未说「上传云端」时：**只改本地 + TG**，不自动跑云端上传脚本。 |
-| .cursor dd.md log memor memory mm | `sessions/tg-rotate-2026-10-31-0659.md` | 定稿路径：`.cursor/work-log/reports/日报-YYYY-M |
-| sq sql 上午 与原 与观 交付 | `sessions/tg-rotate-2026-10-31-0659.md` | 补条与原有结果**并存**：保留已写实的交付（如渠道观影产发），只加漏记项（如上 |
-| .md prompt tgbot 「当 不必 不必通读全文 | `sessions/tg-rotate-2026-10-31-0659.md` | 大型 `tgbot/prompt_*.md`：先读启动包，再**读头尾**定位「 |
-| mac post_daily_report_to_dm.py tg 「已 不要  | `sessions/tg-rotate-2026-10-31-0659.md` | 改定稿后**立刻重推 TG 私聊**（old-mac `post_daily_r |
-| log prepare_daily_report_sync transcript | `sessions/tg-rotate-2026-10-31-0659.md` | 增补前仍要**双机 work-log 同步**（或等价 `prepare_dai |
-| 「日 上增补 不是 不是从零写日报 交付 今日 | `sessions/tg-rotate-2026-10-31-0659.md` | 私聊「日报今日结果再加点内容」= 在**已定稿**上增补【今日结果】，不是从零写 |
-| ## 10 2026 30 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作答-禁止空答与全文复读.md` | 2026-10-30-超大-tg-prompt-先读头尾定位-当前问题-再实查作 |
-| ## 10 2026 30 agent_session_rotate away | `~/.dc-platform/memory/lessons/2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away-health-并区分产线数据告警与本.md` | 2026-10-30-进程问询必实查-tgbot-bus-vpn-打卡-away |
