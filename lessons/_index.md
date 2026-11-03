@@ -3,6 +3,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-04 | [013 等依赖用户快照分区时，生产分区字面量须实测（如 `[YYYY-MM-DD](./2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-04 | [prod 影子物理表未建/未挂载前，禁止把首跑标记与 prod 行数当闭环验收，](./2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md) | paimon_shadow,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-04 | [问「渠道从哪来」先分清：归因前→DWD.channel；产品周/月→渠道日指标→](./2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产品周-月-渠道日指标-dim_chan.md) | 口径,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-03 | [agent-bus|临发布](./2026-11-03-agent-bus-临发布.md) | dev-session,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-03 | [page-ctr|publish|首发表](./2026-11-03-page-ctr-publish-首发表.md) | shadow-gate,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-02 | [Spark 迁移 session 只挂 05.ads 海豚稿并对齐 test S](./2026-11-02-spark-迁移-session-只挂-05-ads-海豚稿并对齐-test-sql-不覆盖-s.md) | dev-session,spark_migrate,dolphin,session-rotate | 会话轮换前自动蒸馏 |

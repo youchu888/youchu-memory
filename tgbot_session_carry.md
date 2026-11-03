@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-11-03 · 最新归档：`sessions/tg-rotate-2026-11-03-1201.md`
+> 更新：2026-11-04 · 最新归档：`sessions/tg-rotate-2026-11-04-0601.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- prod 影子表未建时**：首跑 HDFS 标记、行数**现在不能当验收报**；test 影子 T-1 可有数、prod 影子可为 0，结论写进 reply 并等野花审发建表挂载后再补报。
+- [LESSON: paimon_shadow|prod 影子物理表未建/未挂载前，禁止把首跑标记与 prod 行数当闭环验收，reply 里写清阻塞项]
+- **归因前渠道**：取事件/注册 DWD 自带 `channel`（上报清洗码），**不是** `dim.dim_user_all.channel`（用户级、可归因后回写）。
+- **常用归因前来源**：注册 `dwd.dwd_user_register_d_v2.channel`；浏览拆渠道 `dwd.dwd_app_page_view_d.channel`；更底层 `dw.dw_user_event_detail` / `_new.channel`。
+- **按 app+渠道看日活**：无现成汇总表；`dwm.dwm_app_active_user_d` **无 channel 列**，需从注册 DWD ∪ 浏览 DWD 自行汇总。
+- **渠道产品周/月**（`ads.ads_product_promotion_summary_w` / `_m`）：表内**无 channel**，粒度是 **部门 × 产品**，与「归因前事件 channel」是不同问题，先对齐业务对象再答。
+- **产品周/月渠道链路**：上游 `ads.ads_channel_metrics_daily_d`（app_id + channel）→ JOIN `dim.dim_channel_info_all.channel_code` 得 `dept_id/dept_name`；维表对不上的渠道**不进**产品周/月。
+- **渠道日表 channel 口径**：有 uid 的指标（注册/活跃/充值等）用 **`dim.dim_user_all.channel`**；无 uid（如落地页）才用事件自带 channel。
+- **生产 Paimon 影子发布（bus#12214 类）**：A+B 七张可跟野花发生产影子，**只回写 `*_paimon_shadow`，正式表不动**；002 不发。
+- **009/010/011/012/019 核查约定**：只读 `dt=DT`；010/011 的 `event_time` 仅路径排序，**不按 event_time 截天**；`time_basis=到达`、槽 **02**。
+- **013 渠道日指标**：`snap_dt=DT` 写死；分区闸 `partition = '[${DT}]'`（生产实测格式如 `[2026-11-02]`，需在 `dim_user_snap$partitions` 能命中）。
+- **提审前**：七 session 须齐 **stage 五件产物**（strict_mode / owner_boundary / stage4~6 等），再 `request-publish` 给野花；`rel_dir`、`project_id` 与 `origin/dev` 指定 commit 对齐。
+- **prod 影子表未建时**：首跑 HDFS 标记、行数**现在不能当验收报**；test 影子 T-1 可有数、prod 影子可为 0，结论写进 reply 并等野花审发建表挂载后再补报。
+- **agent-bus**：60s 内 ack、干完再 reply 才结案；ack 若返回 `dropped: silent` 仍要核对发送/落盘状态，避免误以为未发出。
 - 临发布被拦**：先写清现状（session 阶段、源表/事件、目标表、是否影子/对平），**bus 狂人拍板**，勿自行改 `pb_*` 或硬提审。
 - 须狂人定的四项**：是否必须先挂影子、影子/正式表名、当日能否发、是否立刻改 `pb_*`；回执后再改稿或继续 Stage7。
 - [LESSON: dev-session|agent-bus|临发布] 野花指「不符合狂人规则」且当日要发：汇总口径与表结构 → bus 狂人 → 收到表名/影子/能否发后再动 SQL 或提审，禁止未拍板就改 pb 或 request-publish。]
 - **页面点击率**链路：`dev-20261020-002`，Stage1–6 已完、Stage7 待审；产表**尚未建、未发过**，当日仍有机会改口径再首发。
-- **取数**：直读 `dw.dw_user_event_detail_new`；事件 `app_pageitem_exposure` / `app_pageitem_click`，按**次数**汇总。
-- **产出**：`ads.ads_page_item_ctr_d` + `dim.dim_app_page_item_d`（Paimon → SR）。
-- **不合规高发点**：现稿**直写正式表**，无**影子表**、无**7 日对平**；对照当日「页面点击率也进影子闸」（如 bus#12151）即野花所指。
-- **临发布被拦**：先写清现状（session 阶段、源表/事件、目标表、是否影子/对平），**bus 狂人拍板**，勿自行改 `pb_*` 或硬提审。
-- **须狂人定的四项**：是否必须先挂影子、影子/正式表名、当日能否发、是否立刻改 `pb_*`；回执后再改稿或继续 Stage7。
-- **对外沟通模板**：取数表 + 事件名 + 产出表 + 影子/7 日闸差距 + 发布急迫性，一条 bus 问规则符合性即可。
-- 补齐流程：**对照健康 session → 真查 test（stage4）与 prod 缺口（stage5）→ 写回五件 → 挂 outputs / 海豚 target → 补全 playbook**；禁止只改 stage 状态。
-- spark_migrate 与 05.ads 海豚稿分离**：周表 Spark 稿勿被海豚 SQL 覆盖；只对齐 **05.ads 海豚发布路径**。
-- [LESSON: dev-session,stage7,rel_dir|提审前自检：五件齐、`rel_dir`/outputs/海豚 binding 齐、artifact 非空、本地 SQL 与 test 海豚一致；缺任一项先补再 RP，勿空标 done。]
-- dev session 列表能 **pending**，但 stage7 审发布打不开，常见原因是 **stage 1～6 标了 done 却缺 `state_json` 五件**（`strict_mode`、`owner_boundary`、`stage4_db_check`、`stage5_prod_dryrun`、`stage6_commit`），不是单纯「没提审」。
-- 五件缺任一项，审核插件读不到真查库 / dryrun / commit 证据，**审发布界面会挂**；仅有 `stage6_commit` 仍不够。
-- **`rel_dir` 为空或 `outputs=[]`** 时，插件无法在本机对上目录，**连打开都困难**；本地已有 `ops_system/...` 也要在平台上挂好路径与 outputs。
-- 平台 artifact 里 **playbook/README 空壳**、海豚 **`wf_code`/`project_code` 空**，和 state 缺件叠加时，即使有 `rel_dir` 也 **审不了**。
-- 提审前 **本地 SQL 须与 test 海豚线上一致**（如推广窗 `promote_start/end`）；发现 test 已改、git 未跟时，**先对齐再 RP**。
 

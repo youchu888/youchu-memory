@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 013 04 11 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md` | 2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-y |
+| ## 04 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md` | 2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-pr |
+| ## .c 04 11 2026 _c | `~/.dc-platform/memory/lessons/2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产品周-月-渠道日指标-dim_chan.md` | 2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产 |
+| commit dev origin owner_boun owner_bound | `sessions/tg-rotate-2026-11-04-0601.md` | **提审前**：七 session 须齐 **stage 五件产物**（stri |
+| 013 02 11 2026 dim_user_snap$partitions  | `sessions/tg-rotate-2026-11-04-0601.md` | **013 渠道日指标**：`snap_dt=DT` 写死；分区闸 `parti |
+| 009 010 011 012 019 02 | `sessions/tg-rotate-2026-11-04-0601.md` | **009/010/011/012/019 核查约定**：只读 `dt=DT`； |
+| #1 002 12 14 21 22 | `sessions/tg-rotate-2026-11-04-0601.md` | **生产 Paimon 影子发布（bus#12214 类）**：A+B 七张可跟 |
+| channel dim.dim_user_al dim.dim_user_all | `sessions/tg-rotate-2026-11-04-0601.md` | **渠道日表 channel 口径**：有 uid 的指标（注册/活跃/充值等） |
+| ads.ads_channel_metrics_daily_d channel） | `sessions/tg-rotate-2026-11-04-0601.md` | **产品周/月渠道链路**：上游 `ads.ads_channel_metric |
+| ads.ads_product_promotion_summary_w an c | `sessions/tg-rotate-2026-11-04-0601.md` | **渠道产品周/月**（`ads.ads_product_promotion_s |
+| +渠 ap app+渠道看日活 chann channel dwd | `sessions/tg-rotate-2026-11-04-0601.md` | **按 app+渠道看日活**：无现成汇总表；`dwm.dwm_app_acti |
+| dw.dw_user_event_detail dwd.dwd_app_page | `sessions/tg-rotate-2026-11-04-0601.md` | **常用归因前来源**：注册 `dwd.dwd_user_register_d_ |
+| channel dim.dim_use dim.dim_user_all.cha | `sessions/tg-rotate-2026-11-04-0601.md` | **归因前渠道**：取事件/注册 DWD 自带 `channel`（上报清洗码） |
+| lesson paimon_shadow prod reply 写清 塞项 | `sessions/tg-rotate-2026-11-04-0601.md` | [LESSON: paimon_shadow/prod 影子物理表未建/未挂载前 |
+| hdfs prod reply test 不能 再补 | `sessions/tg-rotate-2026-11-04-0601.md` | prod 影子表未建时**：首跑 HDFS 标记、行数**现在不能当验收报**； |
 | ## 03 11 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-03-agent-bus-临发布.md` | 2026-11-03-agent-bus-临发布 |
 | ## 03 11 2026 agent_session_rotate ctr | `~/.dc-platform/memory/lessons/2026-11-03-page-ctr-publish-首发表.md` | 2026-11-03-page-ctr-publish-首发表 |
 | bus 一条 事件名 产出表 则符 即可 | `sessions/tg-rotate-2026-11-03-1201.md` | **对外沟通模板**：取数表 + 事件名 + 产出表 + 影子/7 日闸差距 + |
@@ -30,18 +45,3 @@
 | 1～ 1～6 dev done owner_boundary pending | `sessions/tg-rotate-2026-11-02-2100.md` | dev session 列表能 **pending**，但 stage7 审发布 |
 | artifact binding dev done lesson outp | `sessions/tg-rotate-2026-11-02-2100.md` | [LESSON: dev-session,stage7,rel_dir/提审前自 |
 | 05.ads spark spark_migrate sql 分离 勿被 | `sessions/tg-rotate-2026-11-02-2100.md` | spark_migrate 与 05.ads 海豚稿分离**：周表 Spark  |
-| 4） 5） ag e4 e5 es | `sessions/tg-rotate-2026-11-02-2100.md` | 补齐流程：**对照健康 session → 真查 test（stage4）与 p |
-| ## 01 11 2026 agent_session_rotate close | `~/.dc-platform/memory/lessons/2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正式表分区-已自愈且日结在跑则勿手跑-r.md` | 2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正 |
-| ## 01 11 2026 agent_session_rotate compl | `~/.dc-platform/memory/lessons/2026-11-01-complement-台账槽位-回写补数-结案必须-dt-hh-对齐挂账格-禁止只用墙钟-hou.md` | 2026-11-01-complement-台账槽位-回写补数-结案必须-dt- |
-| ## 01 11 2026 agent_session_rotate count | `~/.dc-platform/memory/lessons/2026-11-01-pushback-paimon-shadow-生产缺数告警先看-fullchain-countt.md` | 2026-11-01-pushback-paimon-shadow-生产缺数告警 |
-| 10 2026 23 31 dt hh | `sessions/tg-rotate-2026-11-01-0600.md` | 若确需补同类挂账：参数用 `--dt=任务日 --hh=台账槽`（示例 `--d |
-| 00–23 dws.dws_app_user_d_h 任务 分区 务日 区行 | `sessions/tg-rotate-2026-11-01-0600.md` | 验数：影子表按任务日查 00–23 是否齐；正式表查对应日分区行数（如 `dws |
-| pending_count pending_pushback_steps 且水  | `sessions/tg-rotate-2026-11-01-0600.md` | 心跳关键字段：`pending_pushback_steps`、`pending |
-| 10 2026 23 31 31t22#23 不是 | `sessions/tg-rotate-2026-11-01-0600.md` | 挂账格格式记任务日 + 槽位，例如 `2026-10-31T22#23` 表示任 |
-| 先筛 先筛出写正式表的那几步再决定是否抢修 再决 写影 写正 决定 | `sessions/tg-rotate-2026-11-01-0600.md` | 同批告警里往往多步写影子、少数写正式表；先筛出写正式表的那几步再决定是否抢修。 |
-| countta counttable fullchain.json paimon | `sessions/tg-rotate-2026-11-01-0600.md` | 生产「回写步挂账 / 缺数据」告警：定级前必读 `steps/fullchain |
-| close day lesson pending run_step_once 与 | `sessions/tg-rotate-2026-11-01-0600.md` | [LESSON: day-close/自愈/日切挂账/日切瞬时挂账先查心跳 pe |
-| complement dt+ hh hour lesson pushback | `sessions/tg-rotate-2026-11-01-0600.md` | [LESSON: pushback/complement/台账槽位/回写补数/结 |
-| dwd_order_paid_d_r g_base 上游 上游未就绪（如 不单  | `sessions/tg-rotate-2026-11-01-0600.md` | 上游未就绪（如 `g_base` 等 `dwd_order_paid_d_r`） |
-| g_day_close_all 不要 不要对挂账那几步重复手工单步跑 与调 仍在 | `sessions/tg-rotate-2026-11-01-0600.md` | 日结线仍在跑（如 `g_day_close_all` 进度未满）时，不要对挂账那 |
-| g_day_close_all run_step_once 「前 」挡 一格 上 | `sessions/tg-rotate-2026-11-01-0600.md` | 日切附近常见瞬时挂账：告警瞬间水位卡在上一格、`g_day_close_all` |

@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [013 等依赖用户快照分区时，生产分区字面量须实测（如 `[YYYY-M](lessons/2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md) — 会话轮换蒸馏
+- [prod 影子物理表未建/未挂载前，禁止把首跑标记与 prod 行数当闭](lessons/2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md) — 会话轮换蒸馏
+- [问「渠道从哪来」先分清：归因前→DWD.channel；产品周/月→渠道](lessons/2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产品周-月-渠道日指标-dim_chan.md) — 会话轮换蒸馏
 - [agent-bus|临发布](lessons/2026-11-03-agent-bus-临发布.md) — 会话轮换蒸馏
 - [page-ctr|publish|首发表](lessons/2026-11-03-page-ctr-publish-首发表.md) — 会话轮换蒸馏
 - [Spark 迁移 session 只挂 05.ads 海豚稿并对齐 te](lessons/2026-11-02-spark-迁移-session-只挂-05-ads-海豚稿并对齐-test-sql-不覆盖-s.md) — 会话轮换蒸馏
