@@ -1,3 +1,4 @@
+| 2026-11-03 | [2026-11-03-bus12214-七张生产影子重提审野花-prod影子表未建禁报首跑标记](./2026-11-03-bus12214-七张生产影子重提审野花-prod影子表未建禁报首跑标记.md) | spark-migrate,paimon_shadow,request-publish | bus#12214 七张重 RP 野花；prod 无影子禁报首跑 |
 # Lessons 索引
 
 | 日期 | 标题 | tags | 一句话 |
