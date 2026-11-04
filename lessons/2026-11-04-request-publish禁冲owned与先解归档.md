@@ -14,7 +14,7 @@ domain: ops
 ## 坑 / 错误做法
 
 1. **已产发 session 仍是 `is_archived=true`** 时直接 `request-publish`：index 上 status=pending，但列表 `include_archived=false` / `scope=review_pending` 默认滤掉 → 审核人侧空白。
-2. **`PUT /full` 用精简 `state_json` 整份覆盖**：冲掉 `dolphin_owned_tasks`，`target` 只剩残缺 prod（缺 `project_code`/`wf_code`，或 `env!=test` 无法兜底）→ 产发向导 `resolveOwned(state,"test")` 为空 → Step2「不可同步」。test 海豚上 task 其实还在。
+2. **`PUT /full` 用精简 `state_json` 整份覆盖**：冲掉 `dolphin_owned_tasks`，`target` 只剩残缺 prod（缺 `project_code`/`wf_code`，或 `env!=test` 无法兜底）→ 产发向导 `resolveOwned(state,"test")` 为空 → Step2「不可同步」。test 海豚上 task 其实还在。同一次还会把 `outputs` 冲成 `[]` → Step1「无 outputs — 回 stage 2/3 补」、ddls/etls=0（表与 DDL 文件其实都在）。
 
 ## 正确做法
 
@@ -25,8 +25,9 @@ domain: ops
 3. 海豚任务至少具备：
    - `dolphin_owned_tasks` 含 `env=test`：`project_code` / `wf_code` / `task_code` / 三元 name
    - `target` 完整 prod + 建议带 `test_task_code`
+   - `outputs` 非空：`layer`/`table_name`/`ddl_file`/`etl_files`；prod 已建表则 `prod_table_built=true`
 4. `PUT /full` 后再 `request-publish`（`reviewer_username=kakakh7787@gmail.com`）
-5. 自检：`index?scope=all` 能搜到该 code 且 `publish_request_status=pending`；`owned[env=test]` 非空
+5. 自检：`index?scope=all` 能搜到该 code 且 `publish_request_status=pending`；`owned[env=test]` 非空；`outputs` 非空
 
 ## 验证
 
