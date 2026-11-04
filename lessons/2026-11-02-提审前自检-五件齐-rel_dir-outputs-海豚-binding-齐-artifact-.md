@@ -22,3 +22,7 @@ TG Cursor 共用会话轮换前自动蒸馏（session-rotate）。
 ## 关联
 
 - 来源：agent_session_rotate / session_memory_distill
+
+## 增补 · 2026-11-04
+
+提审自检再加两条（同日踩坑）：① 归档 session 先 `uncomplete`；② `PUT /full` 合并保留 `dolphin_owned_tasks[env=test]`，禁冲空。详见 `2026-11-04-request-publish禁冲owned与先解归档.md`。

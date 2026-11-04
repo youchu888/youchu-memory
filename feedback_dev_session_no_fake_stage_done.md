@@ -36,6 +36,17 @@
 
 参考脚本：`omdb/projects/event-new-fields/scripts/_strict_rewalk_one.py`
 
+## 增补 · 2026-11-04（产品周提审 · 同日两拦）
+
+再犯即违规。提审 / 补 note / 改 SQL 进 session 时：
+
+1. **禁止**用「只有 title/target/sql 的瘦 state」整份 `PUT /full` 覆盖 —— 会冲掉 `dolphin_owned_tasks`；产发向导 Step2 报「既无 owned[env=test] 也无 target.task_code / 不可同步」，即使 test 海豚 task 仍在线。
+2. **必须**合并保留：`dolphin_owned_tasks`（至少一条 `env=test`，含 project/wf/task code+name）、完整 `target`（prod 三元组；建议 `test_task_code`）、既有 stage4～6 / `publish_runs`。
+3. **已产发归档**（`is_archived=true`）的 session：先 `POST /dev-sessions/{code}/uncomplete`，再 `request-publish`。否则 index 上 pending，野花「待我审核」列表仍看不到（默认滤归档）。
+4. 提审后自检：`index?q=code&include_archived=false` 能命中且 `publish_request_status=pending`；`full` 里 `owned[env=test]` 非空。
+
+详见 lesson：`lessons/2026-11-04-request-publish禁冲owned与先解归档.md` · 红线 35：`pinned/06-request-publish-owned-archive.md`。
+
 ## 自检（提审前必跑）
 
 ```bash
