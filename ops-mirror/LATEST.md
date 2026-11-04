@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-04 11:44:51 +0800
+> 更新: 2026-11-04 11:47:59 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-04.md`
 
@@ -18,3 +18,4 @@
 | 2026-11-03 18:21 | 私聊#597 | telegram_dm | completed | 我们从哪里拿到归因前的渠道？哪张表 |
 | 2026-11-03 18:24 | 私聊#598 | telegram_dm | completed | 不是归因 是渠道产品周月表 |
 | 2026-11-04 11:10 | 群派单#296 | worker_ant_group | completed | @youchu8888 #12296 已在 bus#12298 回复又初。点击率 fanout 草稿有一处要先改：草稿按每天约 6.4 万行定的 bucket= |
+| 2026-11-04 11:47 | 群派单#297 | worker_ant_group | in_progress | @youchu8888 #12305 已在 bus 回复：bucket 16、并行度 8 审定通过。合入 fanout 要重新打 jar、重启生产 fanout |
