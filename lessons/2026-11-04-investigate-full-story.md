@@ -33,3 +33,9 @@ domain: datacheck
 
 - feedback：`feedback_investigate_full_story.md`
 - 表：`ads.ads_product_promotion_summary_m`；渠道维 `dim.dim_channel_info_all`
+
+## 深挖补记（同源再查）
+
+- 次留 ETL：`dws_app_retention_d_h` ← `dws_app_user_d_h`（cohort.new ∩ active+1）；08-07～11 相对运营新增 3377→次留 822，公式正常
+- 旧 SR `dws.dws_app_channel_summary_d` 08-07～11 新增与 user 逐日相等；paimon `dws_app_channel_summary_d_d` **全表**最早 2026-08-12
+- 源头定性：**产品月新口径绑 paimon 结算（短历史）+ 次留仍绑运营留存（长历史）**；非单渠道丢数、非 day1 算错
