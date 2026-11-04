@@ -459,3 +459,4 @@
 
 | 2026-10-30 | [干完就提交并 push](./2026-10-30-干完就提交并push-不必等主人再说提交.md) | git,commit,push | 验收完立刻 commit+push，不必等「提交」 |
 | 2026-11-04 | [产发前探prod量级定bucket并行度禁用test](./2026-11-04-产发前探prod量级定bucket并行度禁用test.md) | fanout,bucket,prod,spark | 上产前探产线量级；禁 test 估 bucket |
+| 2026-11-04 | [fanout产重启全dwd_r停写须定窗口](./2026-11-04-fanout产重启全dwd_r停写须定窗口-bus12305.md) | fanout,prod,dwd_r | bucket16/par8审定；合入重启须知秋定窗口 |
