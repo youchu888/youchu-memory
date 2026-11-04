@@ -1,0 +1,17 @@
+﻿日期,uid,注册事件渠道,注册时间,维表register_channel,维表纠正后channel,channel更新时间,归因状态,归因渠道,回写状态,回写原因,归因分,结算明细是否有注册行,结算明细渠道,deduction,是否计入结算yVvLuXos新增,是否解释导出比结算多,备注
+2026-10-28,91564804,organic,2026-10-28 07:49:32,organic,yVvLuXos,2026-10-28 07:49:32,success,yVvLuXos,1,已回写-命中yVvLuXos,90,否,,,否,否（结算无此注册行；导出当日只多1人，归因2人里多半不含此人）,DWD有注册+归因已回写，但dws_settlement_detail无user_register行
+2026-10-28,91570528,organic,2026-10-28 22:21:02,organic,yVvLuXos,2026-10-28 22:21:02,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-29,91571945,organic,2026-10-29 00:00:18,organic,yVvLuXos,2026-10-29 00:00:18,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-29,91573798,organic,2026-10-29 02:27:52,organic,yVvLuXos,2026-10-29 02:27:52,success,yVvLuXos,1,已回写-命中yVvLuXos,110,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-29,91574199,organic,2026-10-29 03:44:46,organic,yVvLuXos,2026-10-29 03:44:46,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-29,91577939,organic,2026-10-29 14:57:44,organic,yVvLuXos,2026-10-29 14:57:44,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-29,91578535,organic,2026-10-29 15:58:51,organic,yVvLuXos,2026-10-29 15:58:51,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-29,91580378,organic,2026-10-29 20:56:35,organic,yVvLuXos,2026-10-29 20:56:35,success,yVvLuXos,1,已回写-命中yVvLuXos,110,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-30,91585424,organic,2026-10-30 08:05:17,organic,yVvLuXos,2026-10-30 08:05:17,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-31,91592224,organic,2026-10-31 00:19:23,organic,yVvLuXos,2026-10-31 00:19:23,success,yVvLuXos,1,已回写-命中yVvLuXos,80,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-31,91594931,organic,2026-10-31 05:49:17,organic,yVvLuXos,2026-10-31 05:49:17,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-31,91595100,organic,2026-10-31 06:40:46,organic,yVvLuXos,2026-10-31 06:40:46,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-31,91597230,organic,2026-10-31 12:59:48,organic,yVvLuXos,2026-10-31 12:59:48,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-31,91597570,organic,2026-10-31 13:35:41,organic,yVvLuXos,2026-10-31 13:35:41,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-31,91599053,organic,2026-10-31 16:07:50,organic,yVvLuXos,2026-10-31 16:07:50,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
+2026-10-31,91602324,organic,2026-10-31 22:44:50,organic,yVvLuXos,2026-10-31 22:44:50,success,yVvLuXos,1,已回写-命中yVvLuXos,90,是,organic,0,否,是,结算落在organic；归因后dim_user进yVvLuXos；导出新增更接近纠正后
