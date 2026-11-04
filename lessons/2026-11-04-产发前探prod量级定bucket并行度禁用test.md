@@ -42,3 +42,4 @@ pageitem 合计 ≈8736 万/天 → 取 **bucket=16 / sinkParallelism=8**（comm
 - 会话：`dev-20261020-002` · `ops_system/spark_migrate/ads_page_item_ctr_d/`
 - bus：#12298 打回 → #12301 回执
 - feedback：`feedback_prod_bucket_from_prod_probe.md`
+- 红线续篇：**#33** `pinned/04-prod-bucket-probe.md`（首页 1–30 不顶换）

@@ -7,7 +7,7 @@
 
 | 层 | 文件 | 何时读 | 体积 |
 |----|------|--------|------|
-| **启动** | `.cursor/.agent-memory-bootstrap.md` | 新对话第一下 | 目标 ≪100KB；只含 PINNED + OPEN + 最近动过 + high 标题 |
+| **启动** | `.cursor/.agent-memory-bootstrap.md` | 新对话第一下 | 目标 ≪100KB；只含 OPEN + 最近动过 + 检索捷径（**不**灌红线全文） |
 | **索引** | `lessons/_index.md` · `MEMORY.md` | **只 rg / 扫标题行**，不整篇 Read | 索引而已 |
 | **原文** | 命中的 1～2 个 `lessons/` 或 `feedback_*` | 任务 tags 对上才读 | 按需 |
 
@@ -16,7 +16,7 @@
 1. **Read bootstrap**（整份即可；别再平行 Read PINNED/OPEN/MEMORY）
 2. 看用户任务 → 定 **1～2 个 tag**（如 `日报` / `vpn` / `渠道` / `dolphin`）
 3. **`rg tag lessons/_index.md`** 或 MCP `memory_list` → 命中后 **只 `memory_read` 那 1～2 个文件**
-4. 干完再写：优先 **update 旧 feedback/lesson**，少新建；红线才动 PINNED（≤30）
+4. 干完再写：优先 **update 旧 feedback/lesson**，少新建；新红线只追加 `pinned/*.md`（31+），**禁止**顶换 `PINNED.md` 1–30
 
 ## 禁止（这就是「梳理好久」的原因）
 
@@ -34,6 +34,7 @@
 | VPN | `vpn` → `vpn_ovpn_sync*` |
 | 群进展/工作簿 | `workbook` → `workbook-tasks.mdc` · `project_youchu_workbook_tasks.md` |
 | 海豚/补数 | `dolphin` `complement` |
+| 上产 / fanout / `_r` bucket | `bucket` `prod` → `lookup-rules.sh bucket`（#33） |
 | 核查 | `datacheck` → playbook 目录 |
 | 归因 | `attribution` |
 | 迁机/LaunchAgent | `new-mac` `launchd` `automation` |
@@ -47,7 +48,7 @@
 | 09:00 | 向狂人学习（bus） | 工作日；假日/请假跳过；新知识进 `worker_ant/sessions/` → lesson |
 | **22:50** | **记忆日清** `memory-daily-light-tidy.sh` | 重生 bootstrap、压 OPEN/PINNED 报警、保持次日轻启动 |
 
-原则：**越学越快**——狂人纠正 → update 旧 feedback/lesson（少新建）→ PINNED 只留红线 → 次日只啃 bootstrap + 1～2 原文。
+原则：**越学越快**——纠正 → update 旧 feedback/lesson（少新建）→ 红线首页冻结、续篇 append → 次日只啃 bootstrap + 按 tag `lookup-rules.sh`。
 
 ```bash
 bash ~/.dc-platform/scripts/memory-daily-light-tidy.sh          # 手动日清
