@@ -5,6 +5,9 @@
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
 > 狂人实操 v2：[`lessons/2026-08-11-worker-ant-memory-v2-practice.md`](lessons/2026-08-11-worker-ant-memory-v2-practice.md)
+- [spark_migrate 分区列过滤用字符串比较，改后必跑周合计与上一](lessons/2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必跑周合计与上一版-new-对齐再-pu.md) — 会话轮换蒸馏
+- [推广/周表类交付：SQL+task.yaml+compare 同批 pu](lessons/2026-11-05-推广-周表类交付-sql-task-yaml-compare-同批-push-origin-de.md) — 会话轮换蒸馏
+- [代发群：短句说清事实、无材料腔/工单腔/「@我」收尾，私聊确认后再发](lessons/2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认后再发.md) — 会话轮换蒸馏
 - [013 等依赖用户快照分区时，生产分区字面量须实测（如 `[YYYY-M](lessons/2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md) — 会话轮换蒸馏
 - [prod 影子物理表未建/未挂载前，禁止把首跑标记与 prod 行数当闭](lessons/2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md) — 会话轮换蒸馏
 - [问「渠道从哪来」先分清：归因前→DWD.channel；产品周/月→渠道](lessons/2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产品周-月-渠道日指标-dim_chan.md) — 会话轮换蒸馏

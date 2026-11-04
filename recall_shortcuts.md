@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 05 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必跑周合计与上一版-new-对齐再-pu.md` | 2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必 |
+| ## 05 11 2026 agent_session_rotate audit | `~/.dc-platform/memory/lessons/2026-11-05-推广-周表类交付-sql-task-yaml-compare-同批-push-origin-de.md` | 2026-11-05-推广-周表类交付-sql-task-yaml-compar |
+| ## 05 11 2026 @我 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认后再发.md` | 2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认 |
+| 3） 83 83）为准 app_id base device | `sessions/tg-rotate-2026-11-05-0602.md` | 用户/设备维 SQL 以平台文档 `/library/guide-user-de |
+| bucket bus commit fanout pageitem 两张 | `sessions/tg-rotate-2026-11-05-0602.md` | pageitem 点击率 fanout：作废单表合入，以曝光/点击两张表 + 指 |
+| prod publish request test 不自 侧不 | `sessions/tg-rotate-2026-11-05-0602.md` | 审核放行后：先发 test 海豚，再 request-publish 给野花；本 |
+| 10 26 26）合计 6） commit new | `sessions/tg-rotate-2026-11-05-0602.md` | 改后须重算对照周（如 10-26）合计/行数，与上一 commit 的 new  |
+| dt er e（ he re retention_day | `sessions/tg-rotate-2026-11-05-0602.md` | 狂人审 spark_migrate：分区列 WHERE（如 `dt`、`rete |
+| .claude compare gitignore push 且被 交前 | `sessions/tg-rotate-2026-11-05-0602.md` | compare 若在 `.claude` 且被 gitignore，提交前先拷到 |
+| commit compare dev origin push spark+sr | `sessions/tg-rotate-2026-11-05-0602.md` | 推广周表改源：须 spark+SR 共 4 份 SQL、两份 task.yaml |
+| @我 tg 「好 「定 」「 」等 | `sessions/tg-rotate-2026-11-05-0602.md` | 事说清即可，忌「定了@我」「好了@我」等收尾；可日常读 TG 学主人群聊口吻。 |
+| @xxx …） 不做 主人 产执 人日 | `sessions/tg-rotate-2026-11-05-0602.md` | 忌工单腔（【背景】【请你做】【不做】）；宜对齐主人日常（如 `@xxx 生产执行 |
+| ai 「上 「已 「正 」「 」等 | `sessions/tg-rotate-2026-11-05-0602.md` | 群消息忌 AI/知识库腔（「正在检索」「上下文整理」「已沉淀」等），宜短句、口语 |
+| tg 主人 人发 代主 代主人发 先私 | `sessions/tg-rotate-2026-11-05-0602.md` | 代主人发 TG 群：先私聊贴改稿等确认，未确认前禁止发群、禁止重复发。 |
 | ## 013 04 11 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md` | 2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-y |
 | ## 04 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md` | 2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-pr |
 | ## .c 04 11 2026 _c | `~/.dc-platform/memory/lessons/2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产品周-月-渠道日指标-dim_chan.md` | 2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产 |
@@ -31,17 +45,3 @@
 | 002 20261020 dev stage1–6 stage7 产表 | `sessions/tg-rotate-2026-11-03-1201.md` | **页面点击率**链路：`dev-20261020-002`，Stage1–6  |
 | agent bus dev lesson pb publish | `sessions/tg-rotate-2026-11-03-1201.md` | [LESSON: dev-session/agent-bus/临发布] 野花指「 |
 | pb stag stage7 人定 先挂 再改 | `sessions/tg-rotate-2026-11-03-1201.md` | 须狂人定的四项**：是否必须先挂影子、影子/正式表名、当日能否发、是否立刻改 ` |
-| bus es io on pb se | `sessions/tg-rotate-2026-11-03-1201.md` | 临发布被拦**：先写清现状（session 阶段、源表/事件、目标表、是否影子/ |
-| ## 02 05 05.ads 11 2026 | `~/.dc-platform/memory/lessons/2026-11-02-spark-迁移-session-只挂-05-ads-海豚稿并对齐-test-sql-不覆盖-s.md` | 2026-11-02-spark-迁移-session-只挂-05-ads-海豚 |
-| ## 02 11 2026 agent_session_rotate artif | `~/.dc-platform/memory/lessons/2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚-binding-齐-artifact-.md` | 2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚- |
-| 05.ads ads_product_promotion_summary_w d | `sessions/tg-rotate-2026-11-02-2100.md` | 审核人侧：**工作区 `dmp/dc-parent` + `git pull`* |
-| outputs pending publ publish request sql | `sessions/tg-rotate-2026-11-02-2100.md` | 大改 state / outputs / SQL 后：**撤旧 pending  |
-| session spark 产物 免审 审核 径残 | `sessions/tg-rotate-2026-11-02-2100.md` | 月表从 Spark 迁海豚后，session 目录里 **清掉旧 spark 路 |
-| 05.ads spark spark_migrate sql 分离 勿被 | `sessions/tg-rotate-2026-11-02-2100.md` | **spark_migrate 与 05.ads 海豚稿分离**：周表 Spar |
-| end git promote_start rp sql test | `sessions/tg-rotate-2026-11-02-2100.md` | 提审前 **本地 SQL 须与 test 海豚线上一致**（如推广窗 `prom |
-| artifact playbook project project_code r | `sessions/tg-rotate-2026-11-02-2100.md` | 平台 artifact 里 **playbook/README 空壳**、海豚  |
-| ... ops_system outputs rel_dir 上挂 上目 | `sessions/tg-rotate-2026-11-02-2100.md` | **`rel_dir` 为空或 `outputs=[]`** 时，插件无法在本机 |
-| commit dryrun stage stage6_commit 一项 不到 | `sessions/tg-rotate-2026-11-02-2100.md` | 五件缺任一项，审核插件读不到真查库 / dryrun / commit 证据，* |
-| 1～ 1～6 dev done owner_boundary pending | `sessions/tg-rotate-2026-11-02-2100.md` | dev session 列表能 **pending**，但 stage7 审发布 |
-| artifact binding dev done lesson outp | `sessions/tg-rotate-2026-11-02-2100.md` | [LESSON: dev-session,stage7,rel_dir/提审前自 |
-| 05.ads spark spark_migrate sql 分离 勿被 | `sessions/tg-rotate-2026-11-02-2100.md` | spark_migrate 与 05.ads 海豚稿分离**：周表 Spark  |
