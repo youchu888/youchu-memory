@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-04 | [查异常要把来龙去脉查清](./2026-11-04-investigate-full-story.md) | datacheck, root-cause, promotion, process | ads→ETL→渠道日明细→上游覆盖；分段加总验差额 |
 | 2026-11-04 | [request-publish 禁冲 owned 与先解归档](./2026-11-04-request-publish禁冲owned与先解归档.md) | request-publish,dolphin_owned_tasks,archive,stage7 | PUT 须合并 owned；归档先 uncomplete 再提审 |
 | 2026-11-04 | [用户/设备基础表只读 dim_user_snap 须带 snap_dt](./2026-11-04-用户设备基础表只读dim_user_snap须带snap_dt-bus12330.md) | dim_user_snap,device,uid_code,sdk_init,bus12330 | 知秋审；禁 dim_user_all_d；渠道不重算 |
 | 2026-11-04 | [013 等依赖用户快照分区时，生产分区字面量须实测（如 `[YYYY-MM-DD](./2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
