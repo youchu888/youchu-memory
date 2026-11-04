@@ -113,3 +113,6 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"Shell","input":{"command":"python3 /Users/mac/Desktop/CHcode/.cursor/scripts/upload_work_report.py --file /Users/mac/.dc-platform/memory/work-log/reports/2026-11-04-日报.md --date 2026-11-04","description":"Upload 2026-11-04 daily report to cloud"}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"已上传云端：`2026-11-04` 日报，`id=130301`，`inserted`。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Wednesday, Nov 4, 2026, 10:29 PM (UTC+8)</timestamp>\n<user_query>\n也就是说是从海豚迁移到spark导致的问题对吧？\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"对，核心就是换源到 Spark/Paimon 结算后，历史覆盖没对齐。\n\n更准确一点：\n\n- **新增**改读 `paimon.dws.dws_app_channel_summary_d_d`（Spark 结算，全库最早 **08-12**）\n- **次留**仍读运营留存 `dws_app_retention_d_h`（更早有数）\n- 旧海豚/SR 结算 `dws_app_channel_summary_d` 在 08-07～11 其实有新增，和新口径没用这条\n\n所以不是次留公式坏了，而是「新增跟了 Spark 短历史、次留还在长历史」叠在同一推广窗里，8 月就会次留 > 新增。"}]}}
+{"type":"turn_ended","status":"success"}
