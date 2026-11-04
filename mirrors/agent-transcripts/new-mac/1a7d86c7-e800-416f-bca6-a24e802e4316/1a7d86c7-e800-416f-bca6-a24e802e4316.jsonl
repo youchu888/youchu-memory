@@ -142,3 +142,4 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Wednesday, Nov 4, 2026, 6:34 PM (UTC+8)</timestamp>\n\n<user_query>Briefly inform the user about the task result and perform any follow-up actions (if needed). If there's no follow-ups needed, don't explicitly say that.</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"本地平台探测那条命令已中断，不影响结果：提交、test 发布/补数、提审野花都已完成，两条 session 仍是 pending 等野花审。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Wednesday, Nov 4, 2026, 7:36 PM (UTC+8)</timestamp>\n<user_query>\n这个发布申请说看不到，\n</user_query>"}]}}
