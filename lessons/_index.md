@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-04 | [用户/设备基础表只读 dim_user_snap 须带 snap_dt](./2026-11-04-用户设备基础表只读dim_user_snap须带snap_dt-bus12330.md) | dim_user_snap,device,uid_code,sdk_init,bus12330 | 知秋审；禁 dim_user_all_d；渠道不重算 |
 | 2026-11-04 | [013 等依赖用户快照分区时，生产分区字面量须实测（如 `[YYYY-MM-DD](./2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-04 | [prod 影子物理表未建/未挂载前，禁止把首跑标记与 prod 行数当闭环验收，](./2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md) | paimon_shadow,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-04 | [问「渠道从哪来」先分清：归因前→DWD.channel；产品周/月→渠道日指标→](./2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产品周-月-渠道日指标-dim_chan.md) | 口径,session-rotate | 会话轮换前自动蒸馏 |
