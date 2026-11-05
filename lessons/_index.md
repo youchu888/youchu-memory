@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-05 | [点击率影子审过·有点击无曝光非阻断 bus#12440](./2026-11-05-点击率影子审过-有点击无曝光非阻断-bus12440.md) | ads_page_item_ctr_d, paimon_shadow, playbook | 审过派野花只发影子；part_05 盯~23% 有点击无曝光；7 日核平再谈正式 |
 | 2026-11-05 | [spark_migrate 分区列过滤用字符串比较，改后必跑周合计与上一版 ne](./2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必跑周合计与上一版-new-对齐再-pu.md) | spark-partition-where,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-05 | [推广/周表类交付：SQL+task.yaml+compare 同批 push o](./2026-11-05-推广-周表类交付-sql-task-yaml-compare-同批-push-origin-de.md) | git-audit-gate,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-05 | [代发群：短句说清事实、无材料腔/工单腔/「@我」收尾，私聊确认后再发](./2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认后再发.md) | tg-group-voice,session-rotate | 会话轮换前自动蒸馏 |
