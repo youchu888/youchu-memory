@@ -468,3 +468,4 @@
 | 2026-11-04 | [fanout产重启全dwd_r停写须定窗口](./2026-11-04-fanout产重启全dwd_r停写须定窗口-bus12305.md) | fanout,prod,dwd_r | bucket16/par8审定；合入重启须知秋定窗口 |
 | 2026-11-05 | [11-03审核链-dwd_r-fanout-影子发产与工作簿分工](./2026-11-05-11-03审核链-dwd_r-fanout-影子发产与工作簿分工.md) | dwd_r,fanout,shadow,54556,workbook | first-row禁日批覆盖；03:00槽位；又初工作簿项 |
 | 2026-11-05 | [11-03审核链-dwd_r-fanout-影子发产与工作簿分工](./2026-11-05-11-03审核链-dwd_r-fanout-影子发产与工作簿分工.md) | dwd_r,fanout,shadow,54556,workbook | first-row禁日批覆盖；03:00槽位；又初工作簿项 |
+| 2026-11-05 | [11-03审核链-dwd_r-fanout-影子发产与工作簿分工](./2026-11-05-11-03审核链-dwd_r-fanout-影子发产与工作簿分工.md) | dwd_r,fanout,shadow,54556,workbook | first-row禁日批覆盖；03:00槽位；又初工作簿项 |
