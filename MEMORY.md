@@ -1,9 +1,5 @@
 - [遇问题必同会话沉淀·禁只认错 私聊#609](lessons/2026-11-05-遇问题必同会话沉淀-禁只认错.md) — 纠正/翻车当场写 lesson+索引；禁只认错
 - [TG dispatch watcher 挂死绿点须重启 tgbot](lessons/2026-11-05-tg-dispatch-watcher挂死绿点须重启tgbot.md) — 现网绿点靠 tgbot watcher；挂了重启
-- [遇问题必同会话沉淀·禁只认错 私聊#609](lessons/2026-11-05-遇问题必同会话沉淀-禁只认错.md) — 纠正/翻车当场写 lesson+索引；禁只认错
-- [TG dispatch watcher 挂死绿点须重启 tgbot](lessons/2026-11-05-tg-dispatch-watcher挂死绿点须重启tgbot.md) — 现网绿点靠 tgbot watcher；挂了重启
-- [遇问题必同会话沉淀·禁只认错 私聊#609](lessons/2026-11-05-遇问题必同会话沉淀-禁只认错.md) — 纠正/翻车当场写 lesson+索引；禁只认错
-- [TG dispatch watcher 挂死绿点须重启 tgbot](lessons/2026-11-05-tg-dispatch-watcher挂死绿点须重启tgbot.md) — 现网绿点靠 tgbot watcher；挂了重启
 - [全新业务禁影子直写正式·改回写须扫全清单 bus#12455](lessons/2026-11-05-全新业务禁影子直写正式-改回写须扫全清单-bus12455.md) — 全新业务禁影子；改 pb 须扫 countTable/DDL/testcluster 全清单
 - [点击率影子审过·有点击无曝光非阻断 bus#12440](lessons/2026-11-05-点击率影子审过-有点击无曝光非阻断-bus12440.md) — **部分废止**：7日影子闸废；保留 part_04/05；见 #12455
 # DC Platform 公共记忆索引
