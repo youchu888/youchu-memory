@@ -14,7 +14,7 @@
 - [prod 影子物理表未建/未挂载前，禁止把首跑标记与 prod 行数当闭](lessons/2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md) — 会话轮换蒸馏
 - [问「渠道从哪来」先分清：归因前→DWD.channel；产品周/月→渠道](lessons/2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产品周-月-渠道日指标-dim_chan.md) — 会话轮换蒸馏
 - [agent-bus|临发布](lessons/2026-11-03-agent-bus-临发布.md) — 会话轮换蒸馏
-- [page-ctr|publish|首发表](lessons/2026-11-03-page-ctr-publish-首发表.md) — 会话轮换蒸馏
+- [page-ctr|publish|首发表](lessons/2026-11-03-page-ctr-publish-首发表.md) — 点击率首发直写正式表（非影子）；细则见 #12455
 - [Spark 迁移 session 只挂 05.ads 海豚稿并对齐 te](lessons/2026-11-02-spark-迁移-session-只挂-05-ads-海豚稿并对齐-test-sql-不覆盖-s.md) — 会话轮换蒸馏
 - [提审前自检：五件齐、`rel_dir`/outputs/海豚 bindi](lessons/2026-11-02-提审前自检-五件齐-rel_dir-outputs-海豚-binding-齐-artifact-.md) — 会话轮换蒸馏
 - [自愈|日切挂账|日切瞬时挂账先查心跳 pending 与正式表分区，已自](lessons/2026-11-01-自愈-日切挂账-日切瞬时挂账先查心跳-pending-与正式表分区-已自愈且日结在跑则勿手跑-r.md) — 会话轮换蒸馏
