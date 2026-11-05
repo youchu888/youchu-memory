@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 06 11 2026 60 ack | `~/.dc-platform/memory/lessons/2026-11-06-ack-若-dropped-silent-须核实发送-bus-进度问句必查-reply-结案与-.md` | 2026-11-06-ack-若-dropped-silent-须核实发送-bu |
+| ## 06 11 2026 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-06-s4-上生产前从组内删除-dwd_app_pageitem_d_r-dim-ads-探针绑两张-.md` | 2026-11-06-s4-上生产前从组内删除-dwd_app_pageitem |
+| ## 06 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-06-现网绿点只看-tgbot-dispatch-的-visible-online-日志-teleth.md` | 2026-11-06-现网绿点只看-tgbot-dispatch-的-visib |
+| git hosts lesson mac main memory | `sessions/tg-rotate-2026-11-06-0652.md` | 双机记忆拉齐：old-mac 跑 `prepare_daily_report_s |
+| 11 ads_page_item_ctr ads_page_item_ctr_d | `sessions/tg-rotate-2026-11-06-0652.md` | 生产建组验收步（挂 11 槽示例）：`dim_app_page_item_d`  |
+| 002 20261020 dev dw_user_event_detail_ne | `sessions/tg-rotate-2026-11-06-0652.md` | 点击率 `dev-20261020-002` 上 S7：生产无 `g_page_ |
+| 60 ack agent bus 为偏 主人 | `sessions/tg-rotate-2026-11-06-0652.md` | agent-bus **60 秒内 ACK** 是硬要求；入站后十余分钟才 AC |
+| #n ack bu commit processed reply | `sessions/tg-rotate-2026-11-06-0652.md` | 问「bus#N 在处理吗」：**查入站 → ACK → reply / proc |
+| ag agent」在此语境下通常指重 agent」在此语境下通常指重启 bot  | `sessions/tg-rotate-2026-11-06-0652.md` | 恢复绿点：**重启 tgbot**（拉起 dispatch watcher）；私 |
+| 7600b9d3 constructor dispatch id online  | `sessions/tg-rotate-2026-11-06-0652.md` | 典型死因：Telethon 解析层报错（如 `Constructor ID 76 |
+| api bot dispatch sh should_appear_online | `sessions/tg-rotate-2026-11-06-0652.md` | Bot API / 私聊能回，**不等于绿点在刷**；绿点断链时 dispatc |
+| dispatch dot green launchd lesson online | `sessions/tg-rotate-2026-11-06-0652.md` | [LESSON: tg-green-dot/现网绿点只看 tgbot dispa |
+| cascade dim dwd_r false full_chain parti | `sessions/tg-rotate-2026-11-06-0652.md` | 同组 **dim 探针**改为两张 dwd_r 的 **`partition`  |
+| ack dropped silent 不能 不能默认已 发出 | `sessions/tg-rotate-2026-11-06-0652.md` | ACK 若返回 `dropped:silent`，**必须核对是否真发出**，不 |
+| .env 10 17 com.youchu.tg dispatch false | `sessions/tg-rotate-2026-11-06-0652.md` | 问「TG 保活挂了？」时先看 **tgbot dispatch 的 Teleth |
 | ## 05 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必跑周合计与上一版-new-对齐再-pu.md` | 2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必 |
 | ## 05 11 2026 agent_session_rotate audit | `~/.dc-platform/memory/lessons/2026-11-05-推广-周表类交付-sql-task-yaml-compare-同批-push-origin-de.md` | 2026-11-05-推广-周表类交付-sql-task-yaml-compar |
 | ## 05 11 2026 @我 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认后再发.md` | 2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认 |
@@ -30,18 +45,3 @@
 | ads.ads_channel_metrics_daily_d channel） | `sessions/tg-rotate-2026-11-04-0601.md` | **产品周/月渠道链路**：上游 `ads.ads_channel_metric |
 | ads.ads_product_promotion_summary_w an c | `sessions/tg-rotate-2026-11-04-0601.md` | **渠道产品周/月**（`ads.ads_product_promotion_s |
 | +渠 ap app+渠道看日活 chann channel dwd | `sessions/tg-rotate-2026-11-04-0601.md` | **按 app+渠道看日活**：无现成汇总表；`dwm.dwm_app_acti |
-| dw.dw_user_event_detail dwd.dwd_app_page | `sessions/tg-rotate-2026-11-04-0601.md` | **常用归因前来源**：注册 `dwd.dwd_user_register_d_ |
-| channel dim.dim_use dim.dim_user_all.cha | `sessions/tg-rotate-2026-11-04-0601.md` | **归因前渠道**：取事件/注册 DWD 自带 `channel`（上报清洗码） |
-| lesson paimon_shadow prod reply 写清 塞项 | `sessions/tg-rotate-2026-11-04-0601.md` | [LESSON: paimon_shadow/prod 影子物理表未建/未挂载前 |
-| hdfs prod reply test 不能 再补 | `sessions/tg-rotate-2026-11-04-0601.md` | prod 影子表未建时**：首跑 HDFS 标记、行数**现在不能当验收报**； |
-| ## 03 11 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-03-agent-bus-临发布.md` | 2026-11-03-agent-bus-临发布 |
-| ## 03 11 2026 agent_session_rotate ctr | `~/.dc-platform/memory/lessons/2026-11-03-page-ctr-publish-首发表.md` | 2026-11-03-page-ctr-publish-首发表 |
-| bus 一条 事件名 产出表 则符 即可 | `sessions/tg-rotate-2026-11-03-1201.md` | **对外沟通模板**：取数表 + 事件名 + 产出表 + 影子/7 日闸差距 + |
-| pb st stage7 人定 先挂 再改 | `sessions/tg-rotate-2026-11-03-1201.md` | **须狂人定的四项**：是否必须先挂影子、影子/正式表名、当日能否发、是否立刻改 |
-| bus es io on pb se | `sessions/tg-rotate-2026-11-03-1201.md` | **临发布被拦**：先写清现状（session 阶段、源表/事件、目标表、是否影 |
-| #1 12 15 1） 21 51 | `sessions/tg-rotate-2026-11-03-1201.md` | **不合规高发点**：现稿**直写正式表**，无**影子表**、无**7 日对平 |
-| ads.ads_page_item_ctr_d dim.dim_app_page | `sessions/tg-rotate-2026-11-03-1201.md` | **产出**：`ads.ads_page_item_ctr_d` + `dim. |
-| app_pageitem_click app_pageitem_exp app_ | `sessions/tg-rotate-2026-11-03-1201.md` | **取数**：直读 `dw.dw_user_event_detail_new`； |
-| 002 20261020 dev stage1–6 stage7 产表 | `sessions/tg-rotate-2026-11-03-1201.md` | **页面点击率**链路：`dev-20261020-002`，Stage1–6  |
-| agent bus dev lesson pb publish | `sessions/tg-rotate-2026-11-03-1201.md` | [LESSON: dev-session/agent-bus/临发布] 野花指「 |
-| pb stag stage7 人定 先挂 再改 | `sessions/tg-rotate-2026-11-03-1201.md` | 须狂人定的四项**：是否必须先挂影子、影子/正式表名、当日能否发、是否立刻改 ` |

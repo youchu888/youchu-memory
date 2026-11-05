@@ -5,6 +5,9 @@
 # DC Platform 公共记忆索引
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
+- [ACK 若 dropped:silent 须核实发送；bus 进度问句必](lessons/2026-11-06-ack-若-dropped-silent-须核实发送-bus-进度问句必查-reply-结案与-.md) — 会话轮换蒸馏
+- [S4 上生产前从组内删除 dwd_app_pageitem_d_r，di](lessons/2026-11-06-s4-上生产前从组内删除-dwd_app_pageitem_d_r-dim-ads-探针绑两张-.md) — 会话轮换蒸馏
+- [现网绿点只看 tgbot dispatch 的 visible-onli](lessons/2026-11-06-现网绿点只看-tgbot-dispatch-的-visible-online-日志-teleth.md) — 会话轮换蒸馏
 > 经验 lesson 索引：[`lessons/_index.md`](lessons/_index.md) · 项目注册：[`~/.dc-platform/projects/INDEX.md`](../../projects/INDEX.md)
 > **冷启动硬注入**：[`MEMORY_OPEN.md`](MEMORY_OPEN.md)（未结≤3KB）· [`PINNED.md`](PINNED.md)（红线≤30）· recent-by-mtime
 > **本文件**：全量索引（保留；**不**整包灌进 bootstrap）· 周清理：[`playbook_memory_hygiene.md`](playbook_memory_hygiene.md)
