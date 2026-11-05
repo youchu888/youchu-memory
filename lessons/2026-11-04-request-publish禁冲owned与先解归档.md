@@ -26,8 +26,9 @@ domain: ops
    - `dolphin_owned_tasks` 含 `env=test`：`project_code` / `wf_code` / `task_code` / 三元 name
    - `target` 完整 prod + 建议带 `test_task_code`
    - `outputs` 非空：`layer`/`table_name`/`ddl_file`/`etl_files`；prod 已建表则 `prod_table_built=true`
+   - **Spark**：必须有 `stage4_spark.mount = {ok:true, group, slot, steps}`（Stage7 只认这个；testcluster 已挂但 state 缺记录 → 向导仍报「S4 还没挂过调度」）
 4. `PUT /full` 后再 `request-publish`（`reviewer_username=kakakh7787@gmail.com`）
-5. 自检：`index?scope=all` 能搜到该 code 且 `publish_request_status=pending`；`owned[env=test]` 非空；`outputs` 非空
+5. 自检：`index?scope=all` 能搜到该 code 且 `publish_request_status=pending`；`owned[env=test]` 非空（海豚）或 `stage4_spark.mount.ok`（Spark）；`outputs` 非空
 
 ## 验证
 
