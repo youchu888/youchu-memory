@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-05 23:57:16 +0800
+> 更新: 2026-11-06 00:00:28 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-05.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-06.md`
 
 ## 未结案 agent-bus
 
@@ -11,12 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-04 11:10 | 群派单#296 | worker_ant_group | completed | @youchu8888 #12296 已在 bus#12298 回复又初。点击率 fanout 草稿有一处要先改：草稿按每天约 6.4 万行定的 bucket= |
-| 2026-11-04 11:47 | 群派单#297 | worker_ant_group | completed | @youchu8888 #12305 已在 bus 回复：bucket 16、并行度 8 审定通过。合入 fanout 要重新打 jar、重启生产 fanout |
-| 2026-11-04 16:06 | 私聊#599 | telegram_dm | completed | 你在群里发消息的时候，也要用我的口吻发才行，不要乱说，你把刚才发的话用我的口吻改好发我确认，没确认之前不要重复发群里 |
-| 2026-11-04 16:16 | 私聊#600 | telegram_dm | completed | 改后（拟发群）： 收到。bucket 16、并行度 8 按这个来。 合入重启你们先跟知秋定窗口，定了我再往下推点击率。 不是这个，这些你还是按照之前的走 我说的 |
-| 2026-11-04 16:29 | 私聊#601 | telegram_dm | completed | 你每天都读tg消息，我一般在群里是怎么说的，你就怎么说就好了，把事情说清楚就行，不需要说什么好了@我 什么的 这种， |
-| 2026-11-04 16:40 | 私聊#602 | telegram_dm | completed | 不用发群，以后如果需要的时候记得这么干就行了 |
 | 2026-11-05 12:34 | 私聊#603 | telegram_dm | completed | tg保活的进程挂了？ |
 | 2026-11-05 12:51 | 私聊#604 | telegram_dm | in_progress | 重启agent |
 | 2026-11-05 15:04 | 私聊#605 | telegram_dm | completed | 重启agent了吗 |
@@ -28,3 +22,5 @@
 | 2026-11-05 21:06 | 私聊#608 | telegram_dm | completed | bus#12455 啥情况了？处理这么慢吗 |
 | 2026-11-05 21:25 | 私聊#609 | telegram_dm | completed | 遇到的问题都要沉淀成记忆，后续不能再犯了阿 |
 | 2026-11-05 21:45 | 私聊#610 | telegram_dm | completed | 新旧mac拉齐一下记忆 |
+| 2026-11-05 23:57 | 群派单#301 | worker_ant_group | completed | 收到 #12464, 在看, 稍后回 |
+| 2026-11-05 23:58 | 群派单#302 | worker_ant_group | completed | @hull1889 #12464 里写的 4 份文档(omdb/projects/user-active/design/ 下的 v3 设计、字典、IP 规则、台 |
