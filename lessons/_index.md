@@ -3,6 +3,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-05 | [遇问题必同会话沉淀·禁只认错 私聊#609](./2026-11-05-遇问题必同会话沉淀-禁只认错.md) | self-evolve,memory,沉淀 | 纠正/翻车当场写 lesson+索引；禁只认错、禁拖闲时 |
+| 2026-11-05 | [TG dispatch watcher 挂死绿点须重启 tgbot](./2026-11-05-tg-dispatch-watcher挂死绿点须重启tgbot.md) | tg,telethon,visible-online,dispatch | 现网绿点=tgbot watcher；独立保活常禁用；挂了重启 tgbot |
 | 2026-11-05 | [全新业务禁影子直写正式·改回写须扫全清单 bus#12455](./2026-11-05-全新业务禁影子直写正式-改回写须扫全清单-bus12455.md) | ads_page_item_ctr_d,paimon_shadow,正式表,全新业务 | 全新业务禁影子；改 pb 须扫 countTable/DDL/testcluster 全清单 |
 | 2026-11-05 | [点击率影子审过·有点击无曝光非阻断 bus#12440](./2026-11-05-点击率影子审过-有点击无曝光非阻断-bus12440.md) | ads_page_item_ctr_d, paimon_shadow, playbook | **部分废止**：7日影子闸废；保留 part_04/05；见 #12455 |
 | 2026-11-05 | [spark_migrate 分区列过滤用字符串比较，改后必跑周合计与上一版 ne](./2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必跑周合计与上一版-new-对齐再-pu.md) | spark-partition-where,session-rotate | 会话轮换前自动蒸馏 |
