@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-06 15:43:48 +0800
+> 更新: 2026-11-06 15:47:01 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-06.md`
 
@@ -29,3 +29,4 @@
 | 2026-11-06 12:34 | 私聊#611 | telegram_dm | completed | SELECT IFNULL(SUM(d.exposure_cnt), 0) AS exposureCnt, IFNULL(SUM(d.click_cnt), 0 |
 | 2026-11-06 12:38 | 私聊#612 | telegram_dm | completed | 查查为什么曝光是0呢？ |
 | 2026-11-06 12:42 | 私聊#613 | telegram_dm | completed | 朔源，源头是谁的问题？ |
+| 2026-11-06 15:44 | 私聊#614 | telegram_dm | completed | 这个表是谁做的 |
