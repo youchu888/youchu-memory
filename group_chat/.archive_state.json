@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-06 00:52:28",
+  "last_run": "2026-11-06 12:52:50",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -2080,8 +2080,11 @@
       "2026-11-04 20:22:15|telegram_group|7649868125|[群聊·@anna_cute9]: @worker_ant_bot 用户基础表和设备基础表 清单给一个||observe",
       "2026-11-04 20:24:11|telegram_group|7649868125|[群聊·@anna_cute9]: @worker_ant_bot 现在在用的paimon表和工作流怎么查询和清单给一个呢||observe",
       "2026-11-04 20:13:54|agent_bus_in|0|[agent-bus#12330] 【基础表使用说明·知秋已审】用户与设备基础表使用说明已发到平台文档库(设计文档分类): /library/guide-user-device-base-tables-usage (doc id 83)。以后写 SQL 用到用户/设备维度一律按这份来, 要点: ①用户维度只读 dim.dim_user_snap 且必须带 snap_dt 分区, 不读 dim_user_all_d(作废待停更)和视图 dim_user_all_d_v; ②用户唯一键 (app_id, uid), 不能只按 uid; ③设备只认 sdk_init; ④渠道直接取日间表/快照/设备全表的 channel, 业务 SQL 不再自己算真实渠道优先; ⑤做 bitmap 用字典号 uid_code / device_code。字段、读法、场景对照、调度时间见文档全文。有疑问回 bus 找我。||observe"
+    ],
+    "2026-11-05": [
+      "2026-11-05 12:38:08|telegram_dm|8740305767|[私聊#603] tg保活的进程挂了？|文件很大，先读开头指令和末尾「当前问题」。当前问题是「tg保活的进程挂了？」——正在查相关进程状态。独立保活进程在跑但已禁用；接着查 tgbot dispatch 侧的在线保活是否在干活。绿点日志停在昨天下午断连后，正在核对今天有没有恢复。**结论：独立保活进程没挂；真正刷绿点的那条链挂了。**\n\n| 组件 | 状态 |\n|------|------|\n| `com.youchu.tg-work-online` (pid 738) | 在跑，但 `.env` 里 `TG_WORK_ONLINE_ENABLED=false`，从 10-17 起就只 idle，**不是现网绿点路径** |\n| tgbot 本体 / Bot API | 正常（你这条私聊就是它在跑） |\n| **dispatch Telethon + visible-online**（现网保活） | **已死** |\n\n昨天下午 **15:44** Telethon 解析层报错（`Constructor ID 7600b9d3`）→ `[dispatch] watcher 异常退出` → 断连 → 之后再无 `[visible-online]` 日志；**今天 0 条**。今天已打上班卡、`should_appear_online=True`，但绿点刷不上去。\n\n要恢复绿点需要重启 tgbot（把 dispatch watcher 拉起来）。说一声「重启」我就跑。后台核对也跑完了，和刚才结论一致：今天已上班打卡，但 dispatch 绿点从昨天下午 15:44 断到现在；要恢复说一声「重启」即可。|"
     ]
   },
-  "last_hot_lines": 27,
-  "last_archived_lines": 17
+  "last_hot_lines": 29,
+  "last_archived_lines": 15
 }
