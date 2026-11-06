@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-06 17:08:48 +0800
+> 更新: 2026-11-06 17:12:03 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-06.md`
 
@@ -32,3 +32,4 @@
 | 2026-11-06 15:44 | 私聊#614 | telegram_dm | completed | 这个表是谁做的 |
 | 2026-11-06 15:47 | 私聊#615 | telegram_dm | completed | 上游表呢，缺曝光的 |
 | 2026-11-06 15:49 | 私聊#616 | telegram_dm | completed | dw.dw_user_event_detail_new 没有时间找谁阿 |
+| 2026-11-06 17:09 | 群派单#305 | worker_ant_group | completed | @hull1889 #12562 已复核通过，测试机已同步（编排 + SQL 都上了）。003 可以开始改了，详情在 bus#12563 之后我回你的那条里。 |
