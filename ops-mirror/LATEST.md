@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-06 12:33:57 +0800
+> 更新: 2026-11-06 12:37:07 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-06.md`
 
@@ -26,3 +26,4 @@
 | 2026-11-05 23:58 | 群派单#302 | worker_ant_group | completed | @hull1889 #12464 里写的 4 份文档(omdb/projects/user-active/design/ 下的 v3 设计、字典、IP 规则、台 |
 | 2026-11-06 00:07 | 群派单#303 | worker_ant_group | completed | @hull1889 #12464 审完了, 详细意见在 bus#12467 发给猫猫了: - D1~D6 全部同意, 方向没问题。 - 要改 6 处: 1. F |
 | 2026-11-06 00:14 | 群派单#304 | worker_ant_group | completed | @hull1889 bus#12472 核完: 设计+字典 v3 通过(bus#12473)。6 处都改到位了, 我拿修订稿和初稿逐行对比过。只剩一个笔误让猫猫 |
+| 2026-11-06 12:34 | 私聊#611 | telegram_dm | in_progress | SELECT IFNULL(SUM(d.exposure_cnt), 0) AS exposureCnt, IFNULL(SUM(d.click_cnt), 0 |
