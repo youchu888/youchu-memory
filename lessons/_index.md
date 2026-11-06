@@ -3,6 +3,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-07 | [upload|主人说「上传云端」时，以 `reports/日报-*.md` 定稿](./2026-11-07-upload-主人说-上传云端-时-以-reports-日报-md-定稿-一字不改-执行上传脚本.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-07 | [ctr-exposure|tracing|当单 App 在 dw 中缺 `app](./2026-11-07-ctr-exposure-tracing-当单-app-在-dw-中缺-app_pageitem.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-06 | [ACK 若 dropped:silent 须核实发送；bus 进度问句必查 re](./2026-11-06-ack-若-dropped-silent-须核实发送-bus-进度问句必查-reply-结案与-.md) | agent-bus-ack,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-06 | [S4 上生产前从组内删除 dwd_app_pageitem_d_r，dim/ad](./2026-11-06-s4-上生产前从组内删除-dwd_app_pageitem_d_r-dim-ads-探针绑两张-.md) | ctr-s7-prod-group,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-06 | [现网绿点只看 tgbot dispatch 的 visible-online 日](./2026-11-06-现网绿点只看-tgbot-dispatch-的-visible-online-日志-teleth.md) | tg-green-dot,session-rotate | 会话轮换前自动蒸馏 |

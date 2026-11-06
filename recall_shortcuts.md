@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## .md 07 11 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-07-upload-主人说-上传云端-时-以-reports-日报-md-定稿-一字不改-执行上传脚本.md` | 2026-11-07-upload-主人说-上传云端-时-以-reports-日 |
+| ## 07 11 2026 agent_session_rotate ap | `~/.dc-platform/memory/lessons/2026-11-07-ctr-exposure-tracing-当单-app-在-dw-中缺-app_pageitem.md` | 2026-11-07-ctr-exposure-tracing-当单-app-在 |
+| 一句 与流 与补 业务 中合 为业 | `sessions/tg-rotate-2026-11-07-0652.md` | 页面点击率相关需求与补数、排查可在日报中合并为业务结果向一句话，避免堆砌内部代号 |
+| dev ops_system owner session task.yaml 不 | `sessions/tg-rotate-2026-11-07-0652.md` | 表开发归属可查 dev session、`ops_system` 目录与 `ta |
+| app flink owner 「全 「单 」与 | `sessions/tg-rotate-2026-11-07-0652.md` | 用**同日、同产品线其他 app** 对比（有的有曝光、有的没有），区分「单 A |
+| app dw fanout sdk 上报 业务 | `sessions/tg-rotate-2026-11-07-0652.md` | 若 `dw` 里**完全没有**对应曝光事件名，而同日同 app 有点击、页面浏 |
+| ads app_pageitem_exposure dw.dw_user dw. | `sessions/tg-rotate-2026-11-07-0652.md` | 缺曝光的核对顺序：ads → `dwd_app_pageitem_exposur |
+| ads ads.ads_page_item_ctr_d ctr 一致 上游 与上 | `sessions/tg-rotate-2026-11-07-0652.md` | 页面元素 CTR 日表 (`ads.ads_page_item_ctr_d`)  |
+| app_id datacheck dt prod 以便 以便复现 | `sessions/tg-rotate-2026-11-07-0652.md` | T-1/指定日 `datacheck` 在 prod 执行时，结论需带**环境、 |
+| api d） id id）可记一句便于核对 inserted token | `sessions/tg-rotate-2026-11-07-0652.md` | 日报定稿路径与 API 回执（如 inserted id）可记一句便于核对，** |
+| markdown 「上 」须 上传 上传前 不得 | `sessions/tg-rotate-2026-11-07-0652.md` | 私聊「上传云端」须以**已定稿 Markdown 原样**跑上传脚本，上传前** |
+| dw 不是 中无 事件 件时 任边 | `sessions/tg-rotate-2026-11-07-0652.md` | 溯源结论要落到**责任边界**：`dw` 是镜像，镜中无该事件时先找源头补事件， |
 | ## 06 11 2026 60 ack | `~/.dc-platform/memory/lessons/2026-11-06-ack-若-dropped-silent-须核实发送-bus-进度问句必查-reply-结案与-.md` | 2026-11-06-ack-若-dropped-silent-须核实发送-bu |
 | ## 06 11 2026 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-06-s4-上生产前从组内删除-dwd_app_pageitem_d_r-dim-ads-探针绑两张-.md` | 2026-11-06-s4-上生产前从组内删除-dwd_app_pageitem |
 | ## 06 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-06-现网绿点只看-tgbot-dispatch-的-visible-online-日志-teleth.md` | 2026-11-06-现网绿点只看-tgbot-dispatch-的-visib |
@@ -33,15 +45,3 @@
 | @我 tg 「好 「定 」「 」等 | `sessions/tg-rotate-2026-11-05-0602.md` | 事说清即可，忌「定了@我」「好了@我」等收尾；可日常读 TG 学主人群聊口吻。 |
 | @xxx …） 不做 主人 产执 人日 | `sessions/tg-rotate-2026-11-05-0602.md` | 忌工单腔（【背景】【请你做】【不做】）；宜对齐主人日常（如 `@xxx 生产执行 |
 | ai 「上 「已 「正 」「 」等 | `sessions/tg-rotate-2026-11-05-0602.md` | 群消息忌 AI/知识库腔（「正在检索」「上下文整理」「已沉淀」等），宜短句、口语 |
-| tg 主人 人发 代主 代主人发 先私 | `sessions/tg-rotate-2026-11-05-0602.md` | 代主人发 TG 群：先私聊贴改稿等确认，未确认前禁止发群、禁止重复发。 |
-| ## 013 04 11 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md` | 2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-y |
-| ## 04 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md` | 2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-pr |
-| ## .c 04 11 2026 _c | `~/.dc-platform/memory/lessons/2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产品周-月-渠道日指标-dim_chan.md` | 2026-11-04-问-渠道从哪来-先分清-归因前-dwd-channel-产 |
-| commit dev origin owner_boun owner_bound | `sessions/tg-rotate-2026-11-04-0601.md` | **提审前**：七 session 须齐 **stage 五件产物**（stri |
-| 013 02 11 2026 dim_user_snap$partitions  | `sessions/tg-rotate-2026-11-04-0601.md` | **013 渠道日指标**：`snap_dt=DT` 写死；分区闸 `parti |
-| 009 010 011 012 019 02 | `sessions/tg-rotate-2026-11-04-0601.md` | **009/010/011/012/019 核查约定**：只读 `dt=DT`； |
-| #1 002 12 14 21 22 | `sessions/tg-rotate-2026-11-04-0601.md` | **生产 Paimon 影子发布（bus#12214 类）**：A+B 七张可跟 |
-| channel dim.dim_user_al dim.dim_user_all | `sessions/tg-rotate-2026-11-04-0601.md` | **渠道日表 channel 口径**：有 uid 的指标（注册/活跃/充值等） |
-| ads.ads_channel_metrics_daily_d channel） | `sessions/tg-rotate-2026-11-04-0601.md` | **产品周/月渠道链路**：上游 `ads.ads_channel_metric |
-| ads.ads_product_promotion_summary_w an c | `sessions/tg-rotate-2026-11-04-0601.md` | **渠道产品周/月**（`ads.ads_product_promotion_s |
-| +渠 ap app+渠道看日活 chann channel dwd | `sessions/tg-rotate-2026-11-04-0601.md` | **按 app+渠道看日活**：无现成汇总表；`dwm.dwm_app_acti |
