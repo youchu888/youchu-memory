@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-06 23:59:08 +0800
+> 更新: 2026-11-07 00:02:23 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-06.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-07.md`
 
 ## 未结案 agent-bus
 
@@ -11,19 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-05 12:34 | 私聊#603 | telegram_dm | completed | tg保活的进程挂了？ |
-| 2026-11-05 12:51 | 私聊#604 | telegram_dm | in_progress | 重启agent |
-| 2026-11-05 15:04 | 私聊#605 | telegram_dm | completed | 重启agent了吗 |
-| 2026-11-05 18:11 | 群派单#298 | worker_ant_group | completed | 收到 #12439, 我先审 opssystem/sparkmigrate/adspageitemctrd, 审完派野花发产影子, 结果回 bus。 |
-| 2026-11-05 18:15 | 群派单#299 | worker_ant_group | completed | #12439 审完: 点击率 ads/dim 可发影子, 11-04 试跑与明细逐位对平。已派野花发产, 结论回又初 bus#12440。 |
-| 2026-11-05 18:26 | 群派单#300 | worker_ant_group | completed | #12438 已审完，审核意见已回给欧阳克（bus#12441，附件 asset 249）。结论：2.5.5 暂不能交开发，有 4 处必须改：①与在途的 v4  |
-| 2026-11-05 20:14 | 私聊#606 | telegram_dm | completed | bus#12448 什么情况？在没在处理 |
-| 2026-11-05 20:46 | 私聊#607 | telegram_dm | completed | 问下狂人，点击率是新需求，不存在旧的表，是不是不需要影子表双跑 |
-| 2026-11-05 21:06 | 私聊#608 | telegram_dm | completed | bus#12455 啥情况了？处理这么慢吗 |
-| 2026-11-05 21:25 | 私聊#609 | telegram_dm | completed | 遇到的问题都要沉淀成记忆，后续不能再犯了阿 |
-| 2026-11-05 21:45 | 私聊#610 | telegram_dm | completed | 新旧mac拉齐一下记忆 |
-| 2026-11-05 23:57 | 群派单#301 | worker_ant_group | completed | 收到 #12464, 在看, 稍后回 |
-| 2026-11-05 23:58 | 群派单#302 | worker_ant_group | completed | @hull1889 #12464 里写的 4 份文档(omdb/projects/user-active/design/ 下的 v3 设计、字典、IP 规则、台 |
 | 2026-11-06 00:07 | 群派单#303 | worker_ant_group | completed | @hull1889 #12464 审完了, 详细意见在 bus#12467 发给猫猫了: - D1~D6 全部同意, 方向没问题。 - 要改 6 处: 1. F |
 | 2026-11-06 00:14 | 群派单#304 | worker_ant_group | completed | @hull1889 bus#12472 核完: 设计+字典 v3 通过(bus#12473)。6 处都改到位了, 我拿修订稿和初稿逐行对比过。只剩一个笔误让猫猫 |
 | 2026-11-06 12:34 | 私聊#611 | telegram_dm | completed | SELECT IFNULL(SUM(d.exposure_cnt), 0) AS exposureCnt, IFNULL(SUM(d.click_cnt), 0 |
