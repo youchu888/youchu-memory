@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-06 18:55:11 +0800
+> 更新: 2026-11-06 18:58:19 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-06.md`
 
@@ -33,3 +33,4 @@
 | 2026-11-06 15:47 | 私聊#615 | telegram_dm | completed | 上游表呢，缺曝光的 |
 | 2026-11-06 15:49 | 私聊#616 | telegram_dm | completed | dw.dw_user_event_detail_new 没有时间找谁阿 |
 | 2026-11-06 17:09 | 群派单#305 | worker_ant_group | completed | @hull1889 #12562 已复核通过，测试机已同步（编排 + SQL 都上了）。003 可以开始改了，详情在 bus#12563 之后我回你的那条里。 |
+| 2026-11-06 18:57 | 群派单#306 | worker_ant_group | in_progress | @hull1889 bus#12577 审完了，意见在 bus#12578，已发给猫猫。结论：还不能 PASS，账号侧和注册 IP 没问题，设备侧要改 3 处： |
