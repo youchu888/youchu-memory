@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 08 11 2026 agent_session_rotate code | `~/.dc-platform/memory/lessons/2026-11-08-upload-上传前锁定定稿文件-禁止改字-仅主人要求-上传云端-时跑脚本-成功回-code-与.md` | 2026-11-08-upload-上传前锁定定稿文件-禁止改字-仅主人要求-上 |
+| ## 08 11 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-08-p0-lake-ack-后只做只读复现-业务小时漏量核对-升级回执-挂账任务按-探针放行自续-处.md` | 2026-11-08-p0-lake-ack-后只做只读复现-业务小时漏量核对- |
+| ## 08 11 2026 @斯 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-08-sr-normal-paimon-stuck-先比-paimon-表最晚-etl_time-与-.md` | 2026-11-08-sr-normal-paimon-stuck-先比-pai |
+| 03 escalation etl p0 「只 一并 | `sessions/tg-rotate-2026-11-08-0600.md` | **P0 复测**：二次停写时记录「只出一批又停」、距最晚 `etl` 的无提交 |
+| 18 88 8） @斯 @斯科特（scott_188） _1 | `sessions/tg-rotate-2026-11-08-0600.md` | **无 Fanout 权限**：不擅自动 Fanout/Flink；**群里 @ |
+| dwd_order_paid_d_r dwd_user_register_d_v | `sessions/tg-rotate-2026-11-08-0600.md` | **入湖停写判责**：对比 **Paimon**（注册 `dwd_user_re |
+| 60 ack agent bus cursor mark | `sessions/tg-rotate-2026-11-08-0600.md` | **agent-bus `mode=work`**：60 秒内 `ack`，干完 |
+| prompt tg 「当 不必 不必通读全文 全文 | `sessions/tg-rotate-2026-11-08-0600.md` | **TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问 |
+| .cursor api code dd.md id log | `sessions/tg-rotate-2026-11-08-0600.md` | **日报上传云端**：先确认当日定稿路径（如 `.cursor/work-log |
+| code daily lesson report upload 「上 | `sessions/tg-rotate-2026-11-08-0600.md` | [LESSON: daily-report/upload/上传前锁定定稿文件，禁 |
+| ack agent bus lake lesson p0 | `sessions/tg-rotate-2026-11-08-0600.md` | [LESSON: agent-bus/P0-lake/ACK 后只做只读复现 + |
+| @斯 etl_tim etl_time fanout fl flink（@斯科特 | `sessions/tg-rotate-2026-11-08-0600.md` | [LESSON: paimon/SR-normal-Paimon-stuck/先 |
+| 03#04） 07 08 11 27 pb_dws_app_user_d_h | `sessions/tg-rotate-2026-11-08-0600.md` | 下游挂账口径（狂人口径）**：入湖未恢复时 **27 条挂账不动、不补不弃**； |
+| 60 ack agent bus cursor mark | `sessions/tg-rotate-2026-11-08-0600.md` | agent-bus `mode=work`**：60 秒内 `ack`，干完再  |
+| prompt tg 「当 不必 不必通读全文 全文 | `sessions/tg-rotate-2026-11-08-0600.md` | TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问题」 |
 | ## .md 07 11 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-07-upload-主人说-上传云端-时-以-reports-日报-md-定稿-一字不改-执行上传脚本.md` | 2026-11-07-upload-主人说-上传云端-时-以-reports-日 |
 | ## 07 11 2026 agent_session_rotate ap | `~/.dc-platform/memory/lessons/2026-11-07-ctr-exposure-tracing-当单-app-在-dw-中缺-app_pageitem.md` | 2026-11-07-ctr-exposure-tracing-当单-app-在 |
 | 一句 与流 与补 业务 中合 为业 | `sessions/tg-rotate-2026-11-07-0652.md` | 页面点击率相关需求与补数、排查可在日报中合并为业务结果向一句话，避免堆砌内部代号 |
@@ -30,18 +45,3 @@
 | api bot dispatch sh should_appear_online | `sessions/tg-rotate-2026-11-06-0652.md` | Bot API / 私聊能回，**不等于绿点在刷**；绿点断链时 dispatc |
 | dispatch dot green launchd lesson online | `sessions/tg-rotate-2026-11-06-0652.md` | [LESSON: tg-green-dot/现网绿点只看 tgbot dispa |
 | cascade dim dwd_r false full_chain parti | `sessions/tg-rotate-2026-11-06-0652.md` | 同组 **dim 探针**改为两张 dwd_r 的 **`partition`  |
-| ack dropped silent 不能 不能默认已 发出 | `sessions/tg-rotate-2026-11-06-0652.md` | ACK 若返回 `dropped:silent`，**必须核对是否真发出**，不 |
-| .env 10 17 com.youchu.tg dispatch false | `sessions/tg-rotate-2026-11-06-0652.md` | 问「TG 保活挂了？」时先看 **tgbot dispatch 的 Teleth |
-| ## 05 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必跑周合计与上一版-new-对齐再-pu.md` | 2026-11-05-spark_migrate-分区列过滤用字符串比较-改后必 |
-| ## 05 11 2026 agent_session_rotate audit | `~/.dc-platform/memory/lessons/2026-11-05-推广-周表类交付-sql-task-yaml-compare-同批-push-origin-de.md` | 2026-11-05-推广-周表类交付-sql-task-yaml-compar |
-| ## 05 11 2026 @我 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认后再发.md` | 2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认 |
-| 3） 83 83）为准 app_id base device | `sessions/tg-rotate-2026-11-05-0602.md` | 用户/设备维 SQL 以平台文档 `/library/guide-user-de |
-| bucket bus commit fanout pageitem 两张 | `sessions/tg-rotate-2026-11-05-0602.md` | pageitem 点击率 fanout：作废单表合入，以曝光/点击两张表 + 指 |
-| prod publish request test 不自 侧不 | `sessions/tg-rotate-2026-11-05-0602.md` | 审核放行后：先发 test 海豚，再 request-publish 给野花；本 |
-| 10 26 26）合计 6） commit new | `sessions/tg-rotate-2026-11-05-0602.md` | 改后须重算对照周（如 10-26）合计/行数，与上一 commit 的 new  |
-| dt er e（ he re retention_day | `sessions/tg-rotate-2026-11-05-0602.md` | 狂人审 spark_migrate：分区列 WHERE（如 `dt`、`rete |
-| .claude compare gitignore push 且被 交前 | `sessions/tg-rotate-2026-11-05-0602.md` | compare 若在 `.claude` 且被 gitignore，提交前先拷到 |
-| commit compare dev origin push spark+sr | `sessions/tg-rotate-2026-11-05-0602.md` | 推广周表改源：须 spark+SR 共 4 份 SQL、两份 task.yaml |
-| @我 tg 「好 「定 」「 」等 | `sessions/tg-rotate-2026-11-05-0602.md` | 事说清即可，忌「定了@我」「好了@我」等收尾；可日常读 TG 学主人群聊口吻。 |
-| @xxx …） 不做 主人 产执 人日 | `sessions/tg-rotate-2026-11-05-0602.md` | 忌工单腔（【背景】【请你做】【不做】）；宜对齐主人日常（如 `@xxx 生产执行 |
-| ai 「上 「已 「正 」「 」等 | `sessions/tg-rotate-2026-11-05-0602.md` | 群消息忌 AI/知识库腔（「正在检索」「上下文整理」「已沉淀」等），宜短句、口语 |

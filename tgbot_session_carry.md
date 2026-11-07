@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-11-07 · 最新归档：`sessions/tg-rotate-2026-11-07-0652.md`
+> 更新：2026-11-08 · 最新归档：`sessions/tg-rotate-2026-11-08-0600.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问题」**，按末尾问题直接执行，勿复述文件。
+- agent-bus `mode=work`**：60 秒内 `ack`，干完再 `reply` 结案；**reply 成功前不要 mark 结案**；同一 Cursor 主会话处理，勿 spawn 新 Agent。
+- 下游挂账口径（狂人口径）**：入湖未恢复时 **27 条挂账不动、不补不弃**；`pb_dws_app_user_d_h_hourly` 等挂的是**当日业务小时格**（如 11-08 的 03#04），不是错绑到 11-07；**等入湖探针放行后任务自续跑**，勿乱补历史格。
+- [LESSON: paimon|SR-normal-Paimon-stuck|先比 Paimon 表最晚 etl_time 与 SR 结算等同窗水位；SR 在写、Paimon 不动则升级 Fanout/Flink（@斯科特），勿在下游盲补]
+- [LESSON: agent-bus|P0-lake|ACK 后只做只读复现 + 业务小时漏量核对 + 升级回执；挂账任务按「探针放行自续」处理，禁止入湖未恢复时批量补弃]
+- [LESSON: daily-report|upload|上传前锁定定稿文件，禁止改字；仅主人要求「上传云端」时跑脚本，成功回 code 与稿路径]
+- **日报上传云端**：先确认当日定稿路径（如 `.cursor/work-log/reports/日报-YYYY-MM-DD.md`），**正文原封不动**再跑 `upload_work_report.py`；成功以 API `code=0` 为准，对话里报 `id` 与稿路径即可。
+- **TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问题」**，按末尾问题直接执行，勿复述文件。
+- **agent-bus `mode=work`**：60 秒内 `ack`，干完再 `reply` 结案；**reply 成功前不要 mark 结案**；同一 Cursor 主会话处理，勿 spawn 新 Agent。
+- **入湖停写判责**：对比 **Paimon**（注册 `dwd_user_register_d_v2_r` / 订单 `dwd_order_paid_d_r` 最晚 `etl_time`）与 **SR**（如 `dws_settlement_detail` 仍持续推进）；事件流/SR 正常而 Paimon 长时间无新批 → 瓶颈在 **Fanout/Flink 入湖**，不是下游 ETL 单点。
+- **无 Fanout 权限**：不擅自动 Fanout/Flink；**群里 @斯科特（scott_188）** P0 升级，回执写清复现水位、SR 对照、msg id。
+- **P0 复测**：二次停写时记录「只出一批又停」、距最晚 `etl` 的无提交时长、按业务小时漏量（如 03 点注册量级异常低），与首次告警一并 escalation。
+- **下游挂账口径（狂人口径）**：入湖未恢复时 **27 条挂账不动、不补不弃**；`pb_dws_app_user_d_h_hourly` 等挂的是**当日业务小时格**（如 11-08 的 03#04），不是错绑到 11-07；**等入湖探针放行后任务自续跑**，勿乱补历史格。
+- **停写前兆**：若停前已长期高延迟（数十分钟～数小时），告警里应同时写「停写时刻 + 停前延迟」，便于排障区分「新故障」与「恶化断流」。
+- **结案回执要素**：Paimon 最晚 `etl_time`、SR 最新写入时刻、是否已 @ 升级、bus reply id；runner/渠道小时表等**追平与补数**按派单人计划，己侧无权限的不承诺自修 Fanout。
 - 溯源结论要落到**责任边界**：`dw` 是镜像，镜中无该事件时先找源头补事件，而不是先找 `dw` 表维护人。
 - 私聊「上传云端」须以**已定稿 Markdown 原样**跑上传脚本，上传前**不得改写**正文。
 - 日报定稿路径与 API 回执（如 inserted id）可记一句便于核对，**勿在记忆蒸馏中保留 token/密钥**。
-- T-1/指定日 `datacheck` 在 prod 执行时，结论需带**环境、app_id、dt** 以便复现。
-- 页面元素 CTR 日表 (`ads.ads_page_item_ctr_d`) 曝光为 0、点击有数时，往往是合并曝光/点击后聚合的**预期表现**，先要对照剧本与上游是否一致，别先判 ads 算错。
-- 缺曝光的核对顺序：ads → `dwd_app_pageitem_exposure_d_r` → `dw.dw_user_event_detail_new`（看是否存在 `app_pageitem_exposure`），逐层确认是否**忠于上游**。
-- 若 `dw` 里**完全没有**对应曝光事件名，而同日同 app 有点击、页面浏览等其它事件，优先归因为**该 App 未按协议上报曝光埋点**（客户端/SDK/业务接入），而非数仓或 fanout 单点丢数。
-- 用**同日、同产品线其他 app** 对比（有的有曝光、有的没有），区分「单 App 漏打点」与「全链路/全 App 断流」两类问题，后一种才轮到接入/Flink/明细链路 owner。
-- 表开发归属可查 dev session、`ops_system` 目录与 `task.yaml`（owner）；产发执行人与开发 owner 可分属不同角色，表述时分开。
-- 页面点击率相关需求与补数、排查可在日报中合并为业务结果向一句话，避免堆砌内部代号与流水操作。
-- 问「TG 保活挂了？」时先看 **tgbot dispatch 的 Telethon + `[visible-online]`**，不要只看 `com.youchu.tg-work-online`：后者进程可在跑，但 `.env` 里 `TG_WORK_ONLINE_ENABLED=false` 时自 10-17 起只是 idle，**不是现网绿点路径**。
-- ACK 若返回 `dropped:silent`，**必须核对是否真发出**，不能默认已 ack。
-- 同组 **dim 探针**改为两张 dwd_r 的 **`partition` 探针**；pb **直写正式表**、`sr_use_shadow=false`；改完 **cascade 回 S4** 再让审核重走 S7；**禁止手改 full_chain**。
-- [LESSON: tg-green-dot|现网绿点只看 tgbot dispatch 的 visible-online 日志；Telethon watcher 异常退出则重启 tgbot，勿误判 tg-work-online launchd 为保活主路径]
-- Bot API / 私聊能回，**不等于绿点在刷**；绿点断链时 dispatch watcher 已死，打卡与 `should_appear_online=True` 也刷不上绿点。
-- 典型死因：Telethon 解析层报错（如 `Constructor ID 7600b9d3`）→ `[dispatch] watcher 异常退出` → 断连 → 之后 **`[visible-online]` 为 0**；用日志最后一条 visible-online 与时间戳定位断点。
-- 恢复绿点：**重启 tgbot**（拉起 dispatch watcher）；私聊「重启 agent」在此语境下通常指重启 bot，不是只重启 Cursor。重启后核对新 PID、`visible-online online=True` 及 `/tmp/tgbot-dc.log`。
-- 问「bus#N 在处理吗」：**查入站 → ACK → reply / processed**，以 reply 为准；已结案应明确报结案时间与 commit，避免让人以为还在跑。
 

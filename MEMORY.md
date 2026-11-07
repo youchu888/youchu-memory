@@ -5,6 +5,9 @@
 # DC Platform 公共记忆索引
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
+- [upload|上传前锁定定稿文件，禁止改字；仅主人要求「上传云端」时跑脚](lessons/2026-11-08-upload-上传前锁定定稿文件-禁止改字-仅主人要求-上传云端-时跑脚本-成功回-code-与.md) — 会话轮换蒸馏
+- [P0-lake|ACK 后只做只读复现 + 业务小时漏量核对 + 升级回](lessons/2026-11-08-p0-lake-ack-后只做只读复现-业务小时漏量核对-升级回执-挂账任务按-探针放行自续-处.md) — 会话轮换蒸馏
+- [SR-normal-Paimon-stuck|先比 Paimon 表最晚](lessons/2026-11-08-sr-normal-paimon-stuck-先比-paimon-表最晚-etl_time-与-.md) — 会话轮换蒸馏
 - [upload|主人说「上传云端」时，以 `reports/日报-*.md](lessons/2026-11-07-upload-主人说-上传云端-时-以-reports-日报-md-定稿-一字不改-执行上传脚本.md) — 会话轮换蒸馏
 - [ctr-exposure|tracing|当单 App 在 dw 中缺 ](lessons/2026-11-07-ctr-exposure-tracing-当单-app-在-dw-中缺-app_pageitem.md) — 会话轮换蒸馏
 - [ACK 若 dropped:silent 须核实发送；bus 进度问句必](lessons/2026-11-06-ack-若-dropped-silent-须核实发送-bus-进度问句必查-reply-结案与-.md) — 会话轮换蒸馏

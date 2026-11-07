@@ -3,6 +3,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-08 | [upload|上传前锁定定稿文件，禁止改字；仅主人要求「上传云端」时跑脚本，成功](./2026-11-08-upload-上传前锁定定稿文件-禁止改字-仅主人要求-上传云端-时跑脚本-成功回-code-与.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-08 | [P0-lake|ACK 后只做只读复现 + 业务小时漏量核对 + 升级回执；挂账](./2026-11-08-p0-lake-ack-后只做只读复现-业务小时漏量核对-升级回执-挂账任务按-探针放行自续-处.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-08 | [SR-normal-Paimon-stuck|先比 Paimon 表最晚 etl](./2026-11-08-sr-normal-paimon-stuck-先比-paimon-表最晚-etl_time-与-.md) | paimon,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-07 | [SR 分区红线说过仍漏：影子 DDL 须空列表或够长历史](./2026-11-07-sr分区红线说过仍漏-影子ddl须空列表或够长历史.md) | sr,partition,shadow,spark-migrate | history=30≠只写两天；提审前扫 PARTITION 个数 |
 | 2026-11-07 | [Spark/产发踩坑总册](../playbook_spark_prod_publish.md) | spark-migrate,stage7,request-publish,playbook | 提审/S7/影子/正式/mount/硬闸归类入口 |
 | 2026-11-07 | [Spark S7 提审前：必核 mount；改 state 只合并](./2026-11-07-spark-s7-提审前mount与state合并检查.md) | spark-migrate,stage7,mount,request-publish | S7 只认 state.mount；PUT 禁冲；提审前断言 |
