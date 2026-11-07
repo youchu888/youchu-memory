@@ -49,3 +49,42 @@ curl -sS -H "Authorization: Bearer $TOKEN" \
 - feedback：`feedback_dev_session_no_fake_stage_done.md`（PUT 合并）
 - pinned：`pinned/06-request-publish-owned-archive.md`（红线 35）
 - 插件：`vscode-extension/src/owned-resolve.ts` · `prod-publish-wizard.ts` Step2
+
+## 增补 · 2026-11-07（Spark S7 / 七张影子提审）
+
+野花打开 Stage7 报「S4 还没挂过调度」：testcluster **已经挂了**，但是 `state_json.stage4_spark` 被 `PUT /full` 精简覆盖冲掉。插件 S7 **只读** `stage4_spark.mount.ok`（`stage7-spark-panel.ts`），不看 testcluster 现网。
+
+同批还确认：
+
+- 又初 `sr_prod` **只读**，`db_run_ddl_etl` 仅 test → **prod `*_paimon_shadow` 不能自己建**，只能野花审发建表
+- 提审/重提审前必须先 `GET /full` 核 mount；缺了从备份或 test 挂载实况 **合并写回**，禁止整份精简 state 覆盖
+- 渠道日指标等 T-1 可能为空，笔记写清近有数日即可，不挡影子建表；但 mount 缺失会挡死向导 ①
+
+### Spark 产发前检查清单（每次 request-publish / 催野花 S7 前必跑）
+
+```bash
+# 对每个 session code：
+curl -sS -H "Authorization: Bearer $TOKEN" \
+  "$BASE/api/v1/dev-sessions/<code>/full" | python3 -c "
+import sys,json
+d=json.load(sys.stdin); s=d.get('state_json') or {}
+m=((s.get('stage4_spark') or {}).get('mount') or {})
+assert m.get('ok') is True and m.get('group') and m.get('steps'), m
+assert s.get('outputs'), 'no outputs'
+assert (s.get('stage6_commit') or {}).get('sha'), 'no stage6'
+print('OK', m.get('group'), '@', m.get('slot'), 'steps=', m.get('steps'))
+"
+```
+
+勾选：
+
+1. [ ] `stage4_spark.mount = {ok:true, group, slot, steps}` 与 testcluster 一致
+2. [ ] `stage4_db_check`：`created` + `etlRan` + `playbookConfirmed`
+3. [ ] `stage5_prod_dryrun` 有记录（影子未建则 `prod_missing` 写明，勿假装已建）
+4. [ ] `stage6_commit.sha` 在 `origin/dev`
+5. [ ] `outputs[]` 含 `layer` / `table_name` / `ddl_file`
+6. [ ] `PUT /full` 只做 **合并**；改前先 GET，保留 mount / owned / publish_runs / s4–s6
+7. [ ] `publish_request_status=pending` 且 reviewer=野花；归档先 uncomplete
+8. [ ] prod 影子/正式建表：又初无写权限 → 交野花；勿自行 `sr_prod` DDL
+
+修复 mount 被冲：从仍含 mount 的旧 full 备份 **合并** 回 `stage4_spark`（及 s4_db / s5 / s6），再让审核人刷新面板。

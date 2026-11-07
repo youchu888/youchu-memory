@@ -26,3 +26,7 @@ TG Cursor 共用会话轮换前自动蒸馏（session-rotate）。
 ## 增补 · 2026-11-04
 
 提审自检再加两条（同日踩坑）：① 归档 session 先 `uncomplete`；② `PUT /full` 合并保留 `dolphin_owned_tasks[env=test]`，禁冲空。详见 `2026-11-04-request-publish禁冲owned与先解归档.md`。
+
+## 增补 · 2026-11-07
+
+Spark 引擎提审/S7 再加硬项：`state_json.stage4_spark.mount.ok==true`（含 group/slot/steps）。缺此项野花向导①直接报「S4 还没挂过调度」，与 test 是否已挂无关。完整清单见 `2026-11-04-request-publish禁冲owned与先解归档.md` 2026-11-07 增补；专题 checklist 见 `2026-11-07-spark-s7-提审前mount与state合并检查.md`。

@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-07 | [Spark S7 提审前：必核 mount；改 state 只合并](./2026-11-07-spark-s7-提审前mount与state合并检查.md) | spark-migrate,stage7,mount,request-publish | S7 只认 state.mount；PUT 禁冲；提审前断言 |
 | 2026-11-07 | [upload|主人说「上传云端」时，以 `reports/日报-*.md` 定稿](./2026-11-07-upload-主人说-上传云端-时-以-reports-日报-md-定稿-一字不改-执行上传脚本.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-07 | [ctr-exposure|tracing|当单 App 在 dw 中缺 `app](./2026-11-07-ctr-exposure-tracing-当单-app-在-dw-中缺-app_pageitem.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-06 | [ACK 若 dropped:silent 须核实发送；bus 进度问句必查 re](./2026-11-06-ack-若-dropped-silent-须核实发送-bus-进度问句必查-reply-结案与-.md) | agent-bus-ack,session-rotate | 会话轮换前自动蒸馏 |
@@ -16,7 +17,7 @@
 | 2026-11-05 | [推广/周表类交付：SQL+task.yaml+compare 同批 push o](./2026-11-05-推广-周表类交付-sql-task-yaml-compare-同批-push-origin-de.md) | git-audit-gate,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-05 | [代发群：短句说清事实、无材料腔/工单腔/「@我」收尾，私聊确认后再发](./2026-11-05-代发群-短句说清事实-无材料腔-工单腔-我-收尾-私聊确认后再发.md) | tg-group-voice,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-04 | [查异常要把来龙去脉查清](./2026-11-04-investigate-full-story.md) | datacheck, root-cause, promotion, process | ads→ETL→渠道日明细→上游覆盖；分段加总验差额 |
-| 2026-11-04 | [request-publish 禁冲 owned 与先解归档](./2026-11-04-request-publish禁冲owned与先解归档.md) | request-publish,dolphin_owned_tasks,archive,stage7 | PUT 须合并 owned；归档先 uncomplete 再提审 |
+| 2026-11-04 | [request-publish 禁冲 owned 与先解归档](./2026-11-04-request-publish禁冲owned与先解归档.md) | request-publish,dolphin_owned_tasks,archive,stage7,mount | PUT 合并 owned/mount；归档先 uncomplete；S7 前断言 mount |
 | 2026-11-04 | [用户/设备基础表只读 dim_user_snap 须带 snap_dt](./2026-11-04-用户设备基础表只读dim_user_snap须带snap_dt-bus12330.md) | dim_user_snap,device,uid_code,sdk_init,bus12330 | 知秋审；禁 dim_user_all_d；渠道不重算 |
 | 2026-11-04 | [013 等依赖用户快照分区时，生产分区字面量须实测（如 `[YYYY-MM-DD](./2026-11-04-013-等依赖用户快照分区时-生产分区字面量须实测-如-yyyy-mm-dd.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-04 | [prod 影子物理表未建/未挂载前，禁止把首跑标记与 prod 行数当闭环验收，](./2026-11-04-prod-影子物理表未建-未挂载前-禁止把首跑标记与-prod-行数当闭环验收-reply-里写.md) | paimon_shadow,session-rotate | 会话轮换前自动蒸馏 |
