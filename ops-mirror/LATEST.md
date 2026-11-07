@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-07 23:59:30 +0800
+> 更新: 2026-11-08 00:03:10 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-07.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-08.md`
 
 ## 未结案 agent-bus
 
@@ -11,22 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-06 00:07 | 群派单#303 | worker_ant_group | completed | @hull1889 #12464 审完了, 详细意见在 bus#12467 发给猫猫了: - D1~D6 全部同意, 方向没问题。 - 要改 6 处: 1. F |
-| 2026-11-06 00:14 | 群派单#304 | worker_ant_group | completed | @hull1889 bus#12472 核完: 设计+字典 v3 通过(bus#12473)。6 处都改到位了, 我拿修订稿和初稿逐行对比过。只剩一个笔误让猫猫 |
-| 2026-11-06 12:34 | 私聊#611 | telegram_dm | completed | SELECT IFNULL(SUM(d.exposure_cnt), 0) AS exposureCnt, IFNULL(SUM(d.click_cnt), 0 |
-| 2026-11-06 12:38 | 私聊#612 | telegram_dm | completed | 查查为什么曝光是0呢？ |
-| 2026-11-06 12:42 | 私聊#613 | telegram_dm | completed | 朔源，源头是谁的问题？ |
-| 2026-11-06 15:44 | 私聊#614 | telegram_dm | completed | 这个表是谁做的 |
-| 2026-11-06 15:47 | 私聊#615 | telegram_dm | completed | 上游表呢，缺曝光的 |
-| 2026-11-06 15:49 | 私聊#616 | telegram_dm | completed | dw.dw_user_event_detail_new 没有时间找谁阿 |
-| 2026-11-06 17:09 | 群派单#305 | worker_ant_group | completed | @hull1889 #12562 已复核通过，测试机已同步（编排 + SQL 都上了）。003 可以开始改了，详情在 bus#12563 之后我回你的那条里。 |
-| 2026-11-06 18:57 | 群派单#306 | worker_ant_group | completed | @hull1889 bus#12577 审完了，意见在 bus#12578，已发给猫猫。结论：还不能 PASS，账号侧和注册 IP 没问题，设备侧要改 3 处： |
-| 2026-11-06 22:21 | 私聊#617 | telegram_dm | completed | # 日报 · 又初·2026-11-06 [REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-11-06] >  |
-| 2026-11-06 22:35 | 群派单#307 | worker_ant_group | completed | 收到，正在审 #12590 这四份文档，审完在 bus 上回蓝猫。 |
-| 2026-11-06 22:36 | 群派单#308 | worker_ant_group | completed | #12590 审完，有条件通过，详细意见已经在 bus#12591 发给蓝猫。 上轮提的三处都改好了。还要改 4 条： 1. 分工：paimon 那张 dws_ |
-| 2026-11-06 23:12 | 群派单#309 | worker_ant_group | completed | #12594 审完，详细意见在 bus#12596。 1. v3.6 设备部分通过，可以建表了。上次提的四条都写进了文档；另有几处写着「读渠道日表」的旧说法，顺 |
-| 2026-11-06 23:15 | 群派单#310 | worker_ant_group | completed | #12593 欧阳克 2.6.4 已审完，结论已在 bus#12595 回给他：还差一处，改完直接交开发，不用再送审。 1. 小说、漫画、注册三张来源还写着 S |
-| 2026-11-06 23:39 | 群派单#311 | worker_ant_group | completed | #12605 运营用户活跃 v3.7 审完：有条件 PASS，结论已在 bus 回给蓝猫。口径主线都通过，6 处改完即可定稿，不用再送审： 1. F15 的 I |
 | 2026-11-07 00:24 | 群派单#312 | worker_ant_group | completed | #12613 审完：同意把 IP 并进 dws_device_dim_d_d，有条件 PASS。下面 4 条改完就能定完整版，不用再送审，细则在 bus 回蓝猫 |
 | 2026-11-07 11:23 | 群派单#313 | worker_ant_group | completed | @anna_cute9 新调度器 spark 任务的开发流程看这份《开发平台 · Spark 任务上手手册》: 准备环境 → 新建会话 → 七步(spec →  |
 | 2026-11-07 12:39 | 群派单#314 | worker_ant_group | completed | @anna_cute9 其他机器人跟我对话走 bothub（AI 收不到 TG 群里别的 bot 的消息，在群里 @我 AI 看不见）。接入方法见附件：在平台  |
