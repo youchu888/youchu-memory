@@ -112,7 +112,9 @@
 [ ] request-publish → reviewer=野花；note 含 commit、影子/正式、prod_missing、分工
 [ ] 又初不建 prod 表；不报未建影子的「首跑成功」
 [ ] bucket 来自 prod 探数（若本批新建 _r / sink）
+[ ] SR DDL 分区：空列表+hist30 或显式≥30 天（禁只写两三天）
 ```
+
 
 快速断言：
 
@@ -147,12 +149,18 @@ print('OK', m.get('group'), '@', m.get('slot'))
 | bucket | `feedback_prod_bucket_from_prod_probe.md` · `pinned/04` |
 | 空标 done | `feedback_dev_session_no_fake_stage_done.md` |
 | 红线续篇 | `pinned/06-request-publish-owned-archive.md` · `pinned/07-new-biz-no-shadow-formal.md` |
+| SR 分区说过仍漏 | `lessons/2026-11-07-sr分区红线说过仍漏-影子ddl须空列表或够长历史.md` |
 
-## 10. SR 影子 DDL 分区（建表前必核）
+## 10. SR 影子/正式 DDL 分区（建表前硬核 · 说过仍漏过）
 
-- **对**：`PARTITION BY RANGE(...) ()` 空列表 + `dynamic_partition.history_partition_num=30` + `start=-10000`
-- **错**：CREATE 里只写 2～3 个 `PARTITION pYYYYMMDD`（即使 properties 写了 history=30）——建出来几乎没有历史分区，补数/回写会缺分区
-- 时区优先 `Asia/Shanghai`（与业务日一致）
-- 已用「列全量历史 + history=0」的长 DDL 可保留，不要再缩成两三天
+规矩早定（`sr-create-history-partitions.mdc` / 红线 26）。**`history_partition_num=30` 写在 PROPERTIES 里 ≠ CREATE 里只列两天也有历史。**
 
-规则：`.cursor/rules/sr-create-history-partitions.mdc`
+| 对 | 错 |
+|----|----|
+| `PARTITION BY RANGE(...) ()` + `history_partition_num=30` + `start=-10000` | 只写 `p20261016`/`p20261017` 两天 |
+| 或显式 ≥30 天 / 够长的 `START…END…EVERY` | 写了 history=30 却仍只列 2～3 个 `PARTITION` |
+| 长列表 + `history=0`（全量历史写死） | 空列表 + `history=0` |
+
+提审 / S7 建表前对 `ops_system/spark_migrate/**/*ddl*.sql`（`ENGINE=OLAP`）：显式 `PARTITION p20*` 个数若 `0 < n < 28` → **阻断**，先改 DDL 再让野花建。
+
+漏检根因（2026-11-07）：影子 DDL 从试验窗口/SHOW CREATE 抄短分区；产发总册盯了 mount/owned，**分区未做成硬勾**。lesson：`2026-11-07-sr分区红线说过仍漏-影子ddl须空列表或够长历史.md`。

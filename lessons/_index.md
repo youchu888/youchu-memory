@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-07 | [SR 分区红线说过仍漏：影子 DDL 须空列表或够长历史](./2026-11-07-sr分区红线说过仍漏-影子ddl须空列表或够长历史.md) | sr,partition,shadow,spark-migrate | history=30≠只写两天；提审前扫 PARTITION 个数 |
 | 2026-11-07 | [Spark/产发踩坑总册](../playbook_spark_prod_publish.md) | spark-migrate,stage7,request-publish,playbook | 提审/S7/影子/正式/mount/硬闸归类入口 |
 | 2026-11-07 | [Spark S7 提审前：必核 mount；改 state 只合并](./2026-11-07-spark-s7-提审前mount与state合并检查.md) | spark-migrate,stage7,mount,request-publish | S7 只认 state.mount；PUT 禁冲；提审前断言 |
 | 2026-11-07 | [upload|主人说「上传云端」时，以 `reports/日报-*.md` 定稿](./2026-11-07-upload-主人说-上传云端-时-以-reports-日报-md-定稿-一字不改-执行上传脚本.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
