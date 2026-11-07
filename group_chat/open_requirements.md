@@ -56,3 +56,6 @@
 - 2026-11-06 群 技术中心-运营系统技术内部沟通群：@alexander_yu_1122 这个人看看能不能找到
 - 2026-11-06 群 技术中心-运营系统技术内部沟通群：这个具体限流策略是怎样的，看下我们这边是否可以对应的调整下
 - 2026-11-06 群 ：#12590 审完，有条件通过，详细意见已经在 bus#12591 发给蓝猫。 上轮提的三处都改好了。还要改 4 条： 1. 分工：paimon 那张 dws_device_dim_d_d 由我建，SR 回写表由蓝猫出建表语句、找运维建。 2. 设备类型的归一对照和国家为空时的存储键，要写成一字不差的规则。 3. 验收要加一条：新表和 003 渠道日表按渠道
+- 2026-11-07 群 机器人群：@anna_cute9 新调度器（pipeline-runner，我们自己的 Spark 调度器）开发和修复用下面 3 份文档，都已经推到 dev 分支了。 仓库：https://tq-git.jsyyds.com/dmp/dc-parent （dev 分支） 一、开发新任务：docs/guide_spark_task_dev_platform_quicks
+- 2026-11-07 群 技术中心-运营系统技术内部沟通群：奥 好的， 能不能找个1-2天的数据 保持能对得上的 这样测试也好测试验证
+- 2026-11-07 群 大数据运维：@wangyi00001 老哥，空了看下这个问题，starRocks写入报错BE进程打的文件太多，我没有BE节点的权限，看下现在节点配置的文件句柄上限是多少，能不能再加大一点： Caused by: com.starrocks.connector.flink.manager.StarRocksStreamLoadFailedException: Failed
