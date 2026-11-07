@@ -147,3 +147,12 @@ print('OK', m.get('group'), '@', m.get('slot'))
 | bucket | `feedback_prod_bucket_from_prod_probe.md` · `pinned/04` |
 | 空标 done | `feedback_dev_session_no_fake_stage_done.md` |
 | 红线续篇 | `pinned/06-request-publish-owned-archive.md` · `pinned/07-new-biz-no-shadow-formal.md` |
+
+## 10. SR 影子 DDL 分区（建表前必核）
+
+- **对**：`PARTITION BY RANGE(...) ()` 空列表 + `dynamic_partition.history_partition_num=30` + `start=-10000`
+- **错**：CREATE 里只写 2～3 个 `PARTITION pYYYYMMDD`（即使 properties 写了 history=30）——建出来几乎没有历史分区，补数/回写会缺分区
+- 时区优先 `Asia/Shanghai`（与业务日一致）
+- 已用「列全量历史 + history=0」的长 DDL 可保留，不要再缩成两三天
+
+规则：`.cursor/rules/sr-create-history-partitions.mdc`
