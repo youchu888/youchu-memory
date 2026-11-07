@@ -30,3 +30,7 @@ TG Cursor 共用会话轮换前自动蒸馏（session-rotate）。
 ## 增补 · 2026-11-07
 
 Spark 引擎提审/S7 再加硬项：`state_json.stage4_spark.mount.ok==true`（含 group/slot/steps）。缺此项野花向导①直接报「S4 还没挂过调度」，与 test 是否已挂无关。完整清单见 `2026-11-04-request-publish禁冲owned与先解归档.md` 2026-11-07 增补；专题 checklist 见 `2026-11-07-spark-s7-提审前mount与state合并检查.md`。
+
+## 归类入口
+
+产发相关坑统一见 [`playbook_spark_prod_publish.md`](../playbook_spark_prod_publish.md)（按权限/影子/state/Stage/硬闸/验收分类）。

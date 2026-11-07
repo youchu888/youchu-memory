@@ -35,6 +35,7 @@
 | 群进展/工作簿 | `workbook` → `workbook-tasks.mdc` · `project_youchu_workbook_tasks.md` |
 | 海豚/补数 | `dolphin` `complement` |
 | 上产 / fanout / `_r` bucket | `bucket` `prod` → `lookup-rules.sh bucket`（#33） |
+| Spark 提审 / S7 / 影子产发 | `spark` `stage7` `request-publish` → **`playbook_spark_prod_publish.md`**（总册） |
 | 核查 | `datacheck` → playbook 目录 |
 | 归因 | `attribution` |
 | 迁机/LaunchAgent | `new-mac` `launchd` `automation` |

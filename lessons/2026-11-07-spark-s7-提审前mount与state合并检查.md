@@ -40,3 +40,7 @@ GET full → stage4_spark.mount.ok == true
 - `2026-11-04-request-publish禁冲owned与先解归档.md`
 - `pinned/06-request-publish-owned-archive.md` §35b
 - 插件：`vscode-extension/src/views/stage7-spark-panel.ts`（只读 `s4().mount`）
+
+## 归类入口
+
+产发相关坑统一见 [`playbook_spark_prod_publish.md`](../playbook_spark_prod_publish.md)（按权限/影子/state/Stage/硬闸/验收分类）。

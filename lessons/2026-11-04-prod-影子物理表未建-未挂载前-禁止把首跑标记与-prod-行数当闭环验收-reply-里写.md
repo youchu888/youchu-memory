@@ -22,3 +22,6 @@ prod 影子物理表未建/未挂载前，禁止把首跑标记与 prod 行数�
 ## 关联
 
 - 来源：agent_session_rotate / session_memory_distill
+
+
+归类入口：[`playbook_spark_prod_publish.md`](playbook_spark_prod_publish.md)

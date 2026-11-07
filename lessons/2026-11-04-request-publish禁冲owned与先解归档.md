@@ -88,3 +88,7 @@ print('OK', m.get('group'), '@', m.get('slot'), 'steps=', m.get('steps'))
 8. [ ] prod 影子/正式建表：又初无写权限 → 交野花；勿自行 `sr_prod` DDL
 
 修复 mount 被冲：从仍含 mount 的旧 full 备份 **合并** 回 `stage4_spark`（及 s4_db / s5 / s6），再让审核人刷新面板。
+
+## 归类入口
+
+产发相关坑统一见 [`playbook_spark_prod_publish.md`](../playbook_spark_prod_publish.md)（按权限/影子/state/Stage/硬闸/验收分类）。

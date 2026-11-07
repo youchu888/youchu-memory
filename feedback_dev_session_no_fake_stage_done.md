@@ -88,3 +88,6 @@ assert s4.get('created') and s4.get('etlRan') and s4.get('playbookConfirmed')
 - Cursor 规则：`.cursor/rules/dev-session-stage-artifacts-required.mdc`
 - 平台文档：`dc-platform-server/docs/task_state_model.md`（Gate1 stage4 三勾）
 - 插件：`vscode-extension/src/dev-session.ts` `advanceToStage`
+
+
+归类入口：[`playbook_spark_prod_publish.md`](playbook_spark_prod_publish.md)

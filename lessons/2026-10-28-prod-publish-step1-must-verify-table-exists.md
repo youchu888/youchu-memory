@@ -41,3 +41,6 @@ prod：`ads.ads_product_promotion_summary_m` 建成后 refresh → `prod_table_b
 - 插件：`vscode-extension/src/views/prod-publish-wizard.ts`
 - 服务端：`dc-platform-server/app/routers/api_v1_prod_publish.py`（`_prod_tables_missing`）
 - session：`dev-20261027-001`（假勾已清空；表仍待 prod CREATE）
+
+
+归类入口：[`playbook_spark_prod_publish.md`](playbook_spark_prod_publish.md)

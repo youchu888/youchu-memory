@@ -33,3 +33,6 @@ type: feedback
 - lesson：`lessons/2026-11-05-全新业务禁影子直写正式-改回写须扫全清单-bus12455.md`
 - 红线：`pinned/07-new-biz-no-shadow-formal.md` §36
 - 点击率会话：`ops_system/spark_migrate/ads_page_item_ctr_d/`
+
+
+归类入口：[`playbook_spark_prod_publish.md`](playbook_spark_prod_publish.md)

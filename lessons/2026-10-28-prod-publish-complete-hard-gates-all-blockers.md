@@ -40,3 +40,7 @@ domain: ops
 
 - `api_v1_prod_publish.py` · `prod-publish-wizard.ts` · `stage7-spark-panel.ts`
 - 前序：`2026-10-28-prod-publish-step1-must-verify-table-exists.md`
+
+## 归类入口
+
+产发相关坑统一见 [`playbook_spark_prod_publish.md`](../playbook_spark_prod_publish.md)（按权限/影子/state/Stage/硬闸/验收分类）。

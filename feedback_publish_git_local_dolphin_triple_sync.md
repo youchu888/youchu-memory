@@ -34,3 +34,6 @@
 > git `abc1234` = 本地 `ops_system/.../xxx.sql` = 海豚 task vNNN 正文一致
 
 不一致则**不算发布完成**，先对齐再验数、再 request-publish。
+
+
+归类入口：[`playbook_spark_prod_publish.md`](playbook_spark_prod_publish.md)
