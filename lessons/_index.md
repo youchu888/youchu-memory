@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-09 | [禁止 @ 不在当前群的人；斯科特不在群，Fanout/Flink 升级改走有权限](./2026-11-09-禁止-不在当前群的人-斯科特不在群-fanout-flink-升级改走有权限的人或-bus-禁止.md) | 群聊@,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-08 | [upload|上传前锁定定稿文件，禁止改字；仅主人要求「上传云端」时跑脚本，成功](./2026-11-08-upload-上传前锁定定稿文件-禁止改字-仅主人要求-上传云端-时跑脚本-成功回-code-与.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-08 | [P0-lake|ACK 后只做只读复现 + 业务小时漏量核对 + 升级回执；挂账](./2026-11-08-p0-lake-ack-后只做只读复现-业务小时漏量核对-升级回执-挂账任务按-探针放行自续-处.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-08 | [SR-normal-Paimon-stuck|先比 Paimon 表最晚 etl](./2026-11-08-sr-normal-paimon-stuck-先比-paimon-表最晚-etl_time-与-.md) | paimon,session-rotate | 会话轮换前自动蒸馏 |
