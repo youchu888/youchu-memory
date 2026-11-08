@@ -1560,3 +1560,50 @@
 - 2026-11-07 | 私聊 | 讨论 |  | ✅ [生产] Flink freshness 恢复 ✅ (BJ 2026-11-07 21:15:37) 2026-11-07 21:15 北京时间 生产 BJ 2026-11-07 21:15:37 — Flink 反向监控全部 5 张表恢复正常： ✅ dw.dwusereventdetailnew: 最新 eventtime=2026-11-07 21:
 - 2026-11-07 | 群 | 需求 | 大数据运维 | @wangyi00001 老哥，空了看下这个问题，starRocks写入报错BE进程打的文件太多，我没有BE节点的权限，看下现在节点配置的文件句柄上限是多少，能不能再加大一点： Caused by: com.starrocks.connector.flink.manager.StarRocksStreamLoadFailedException: Failed
 - 2026-11-07 | 群 | 口径 |  | 现状（数据中心生产 10 台 BE 一样） - BE 进程句柄上限：65535。是 systemd 服务文件 /etc/systemd/system/starrocks-be.service 里写死的 LimitNOFILE=65535 - 系统 limits.d 里其实配的是 1048576，但 BE 由 systemd 启动，不吃 limits.d，所以
+- 2026-11-08 | 私聊 | 分工 |  | ⚠️ DS hourly probe [测试] · 00:30 北京 2026-11-08 00:30 北京时间 🐢 长跑 task（≥ 15min）: 1 个 · wf_渠道分析_日-22-20261108001500308 / 等_归因回写_apply_日 跑了 15min
+- 2026-11-08 | 私聊 | 讨论 |  | 🚨 [生产] 生产表没更新 · dws.dws_app_user_d_h 2026-11-08 01:09 北京时间 任务: dws.dwsappuserdh 现象: Spark 调度器 1 张正式表的回写没完成 影响: 这些表当天分区没更新, 读它们的报表/接口看到的是旧数据
+- 2026-11-08 | 私聊 | 分工 |  | ⚠️ DS hourly probe [测试] · 01:31 北京 2026-11-08 01:31 北京时间 🐢 长跑 task（≥ 15min）: 1 个 · wf_渠道分析_日-22-20261108001500308 / 等_归因回写_apply_日 跑了 76min
+- 2026-11-08 | 私聊 | 口径 |  | 群聊学习 2026-11-07 读了 434 条，来自 24 个会话。闲聊 188。新规矩 8 条，升级 1 条。 回拉 21 个群、38 条私聊，扫到 404 条。 各群： · -5242899749 148 · 技术中心-运营系统技术内部沟通群 81 · -5046533419 40 · -5117819913 33 · 8230482724 20 · 
+- 2026-11-08 | 私聊 | 讨论 |  | ⚠️ DS hourly probe [生产] · 02:30 北京 2026-11-08 02:30 北京时间 🐢 长跑 task（≥ 15min）: 1 个 · wf_dwd_大表_日-20261108021000020 / dwd_video_event_d 跑了 20min
+- 2026-11-08 | 私聊 | 分工 |  | ⚠️ DS hourly probe [测试] · 02:30 北京 2026-11-08 02:31 北京时间 🐢 长跑 task（≥ 15min）: 1 个 · wf_渠道分析_日-22-20261108001500308 / 等_归因回写_apply_日 跑了 136min
+- 2026-11-08 | 私聊 | 分工 |  | ⚠️ DS hourly probe [测试] · 03:30 北京 2026-11-08 03:31 北京时间 🐢 长跑 task（≥ 15min）: 1 个 · wf_渠道分析_日-22-20261108001500308 / 等_归因回写_apply_日 跑了 196min
+- 2026-11-08 | 私聊 | 审核 |  | 🐜 工作狂人 · 回复 bus id=12695 · bus id=12695 · from worker_ant 2026-11-08T04:30:42 📨 狂人→又初 · bus 12695 入站 bus#12695 📥 正文 ━━━━━━━━━━━━ [P0] 生产 paimon 入湖停: 注册 dwd_user_register_d_v2_r / 订
+- 2026-11-08 | 私聊 | 审核 |  | 🔄 工作状态 · 处理中 主线 bus#12695 · Cursor 已唤醒 [P0] 生产 paimon 入湖停: 注册 dwd_user_register_d_v2_r / 订单 dwd_order_paid_d_r 最晚 etl_time 停在北京 03:48:32, 到 04:30 已 42 分钟无新提交; SR dws_settlement_det
+- 2026-11-08 | 私聊 | 审核 |  | ⏳ 工作状态 · 处理中 主线 bus#12695 ──────────── [自动执行] Cursor agent 已接管 bus#12695，60秒内 ack → 干完 reply
+- 2026-11-08 | 私聊 | 分工 |  | ⚠️ DS hourly probe [测试] · 04:31 北京 2026-11-08 04:31 北京时间 🐢 长跑 task（≥ 15min）: 1 个 · wf_渠道分析_日-22-20261108001500308 / 等_归因回写_apply_日 跑了 256min
+- 2026-11-08 | 私聊 | 审核 |  | 🔄 工作状态 · 处理中 主线 bus#12695 ──────────── ✅ [ACK] bus#12695 收到，开干
+- 2026-11-08 | 私聊 | 审核 |  | 📤 又初→狂人（方案/正文） 主线 bus#12695 · 出站 bus#12698 ──────────── [bus#12695 回执] 1) 又初复测 prod Paimon（约 04:32 北京）： - dwd.dwd_user_register_d_v2_r dt=2026-11-08 MAX(etl_time)=2026-11-08 03:48:
+- 2026-11-08 | 私聊 | 讨论 |  | 🚨 [生产] 生产表没更新 · ads.ads_drama_rank_d_w, dws.dws_ad_funnel_metric_d, dws.dws_ad_request_metric_d, dws.dws_app_user_d_h 2026-11-08 05:04 北京时间 任务: ads.adsdramarankdw, dws.dwsadfunnelm
+- 2026-11-08 | 私聊 | 审核 |  | 🐜 工作狂人 · 回复 bus id=12715 · bus id=12715 · from worker_ant 2026-11-08T05:17:06 📨 狂人→又初 · bus 12715 入站 bus#12715 📥 正文 ━━━━━━━━━━━━ [P0 续] paimon 入湖又停: 04:05 只提交了一批(注册/订单最晚 etl 04:05:
+- 2026-11-08 | 私聊 | 审核 |  | 🔄 工作状态 · 处理中 主线 bus#12715 · Cursor 已唤醒 [P0 续] paimon 入湖又停: 04:05 只提交了一批(注册/订单最晚 etl 04:05:02/04:04:53), 到北京 05:16 已 71 分钟没有第二批; 03 点注册才 57,069(正常二十多万), 04 点 2,370。Fanout/Flink 侧仍需有
+- 2026-11-08 | 私聊 | 审核 |  | ⏳ 工作状态 · 处理中 主线 bus#12715 ──────────── [自动执行] Cursor agent 已接管 bus#12715，60秒内 ack → 干完 reply
+- 2026-11-08 | 私聊 | 审核 |  | 🔄 工作状态 · 处理中 主线 bus#12715 ──────────── ✅ [ACK] bus#12715 收到，开干
+- 2026-11-08 | 私聊 | 审核 |  | 📤 又初→狂人（方案/正文） 主线 bus#12715 · 出站 bus#12717 ──────────── [bus#12715 回执] 1) 又初复测（约 05:17 北京）： - register MAX(etl_time)=2026-11-08 04:05:02.72，仍停 - order MAX(etl_time)=2026-11-08 04:0
+- 2026-11-08 | 私聊 | 审核 |  | 📤 又初→狂人（回复） 主线 bus#1898 · 出站 bus#12718 ──────────── [REPLY] bus#1898 收到，又初待命/rest，不主动 prod。
+- 2026-11-08 | 群 | 事故 |  | 07:00 巡检报的 2 条 FAIL 已经结案，不用补跑： 1) pi=55522：06:31 休眠日表 ads_user_dormancy_d 首跑失败（SR 过载），2 次自动重试也都失败，留下了失败状态。 2) pi=55527：狂人 06:42 发起的补数，同样因为 SR 过载失败，留下的是旧记录。 狂人之后照 11-06 的办法分 8 批算完，写
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[生产] 海豚任务失败 · ads_user_dormancy_d* _2026-11-08 07:32 北京时间_ 🔴 ads_user_dormancy_d 任务: wf_ads_日报表_日 / ads_user_dormancy_d 现象: 07:42 失败, 报错 StarRocks BE 端过载拒绝 [E1011 The server is 
+- 2026-11-08 | 私聊 | 事故 |  | ⚠️ [测试] Flink freshness 告警 ⚠️ (3 张表，BJ ?) 2026-11-08 09:45 北京时间 测试 BJ ? — Flink 反向监控发现 3 张表数据不新鲜： ⚠️ dw.dwusereventdetailnew: ⚠️ 异常：无法连库 或 表为空 ⚠️ dws.dwssettlementdetail: ⚠️ 异常：无法连
+- 2026-11-08 | 私聊 | 讨论 |  | ✅ [测试] Flink freshness 恢复 ✅ (BJ 2026-11-08 10:15:53) 2026-11-08 10:15 北京时间 测试 BJ 2026-11-08 10:15:53 — Flink 反向监控全部 5 张表恢复正常： ✅ dw.dwusereventdetailnew: 最新 eventtime=2026-11-08 10:
+- 2026-11-08 | 私聊 | 讨论 | 私聊·DcVPN_bot | 🔄 正在生成VPN证书，请稍候...
+- 2026-11-08 | 私聊 | 讨论 | 私聊·DcVPN_bot | ✅ VPN证书生成成功 📅 有效期: 1天 🔄 系统会定时自动清理过期证书
+- 2026-11-08 | 私聊 | 事故 |  | ⚠️ *[测试] Flink freshness 告警 ⚠️ (1 张表，BJ 2026-11-08 10:46:02)* _2026-11-08 10:46 北京时间_ [测试] BJ 2026-11-08 10:46:02 — Flink 反向监控发现 1 张表数据不新鲜： ⚠️ dw.dw_user_event_detail_new: ⚠️ 异常：无法
+- 2026-11-08 | 私聊 | 事故 |  | ⚠️ *[生产] 全量数据核查 · 2026-11-07* _2026-11-08 11:03 北京时间_ _2026-11-08 11:00 北京 · 共扫描 179 项 · ref_day=2026-11-07 vs prev_day=2026-11-06_ 🔴 *海豚真失败 task* (3) — **需补数** - `运营系统` / `wf_ads_
+- 2026-11-08 | 私聊 | 讨论 | 私聊·工作狂人 | [生产] 全量数据核查 · 2026-11-07 · 完整报告
+- 2026-11-08 | 私聊 | 讨论 |  | ✅ [测试] Flink freshness 恢复 ✅ (BJ 2026-11-08 11:45:46) 2026-11-08 11:45 北京时间 测试 BJ 2026-11-08 11:45:46 — Flink 反向监控全部 5 张表恢复正常： ✅ dw.dwusereventdetailnew: 最新 eventtime=2026-11-08 11:
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 12:32 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 12:30 失败
+- 2026-11-08 | 私聊 | 讨论 |  | 🚨 [生产] 生产表没更新 · dws.dws_app_user_d_h 2026-11-08 13:04 北京时间 任务: dws.dwsappuserdh 现象: Spark 调度器 1 张正式表的回写没完成 影响: 这些表当天分区没更新, 读它们的报表/接口看到的是旧数据
+- 2026-11-08 | 私聊 | 审核 |  | 🐜 工作狂人 · 回复 bus id=12780 · bus id=12780 · from worker_ant 2026-11-08T13:22:02 📨 狂人→又初 · bus 12780 入站 bus#12780 📥 正文 ━━━━━━━━━━━━ [生产 P0 · 狂人] 入湖又停了: paimon dwd_r 水位北京 11:58~11:59 起
+- 2026-11-08 | 私聊 | 审核 |  | 📤 又初→狂人（回复） 主线 bus#12780 · 出站 bus#12781 ──────────── [REPLY] bus#12780 收到，已知悉。
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 13:31 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 13:30 失败
+- 2026-11-08 | 私聊 | 讨论 |  | 🐜 私聊 · 用户指令 私聊#619 📨 用户→又初 · 私聊#619 📥 正文 ━━━━━━━━━━━━ 不在群里的人不要@，斯科特又不在群里 ━━━━━━━━━━━━ 💡 处理中 / 回复将按任务编号续发
+- 2026-11-08 | 私聊 | 讨论 |  | 📤 **又初** 先读启动包和你指定的 prompt 文件，再按文件要求直接答末尾问题。文件很大，先读开头指令和末尾「当前问题」。这是纠正规则。我查一下近期是否有误 @斯科特 的上下文，再按要求落规则并直接回应。收到。斯科特不在群里，以后群里不再 `@` 他；不在当前群的人一律不 `@`。Fanout/Flink 升级改走有权限的人/bus，不再群里硬 `@
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 14:32 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 14:30 失败
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 15:32 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 15:30 失败
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 16:31 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 16:30 失败
+- 2026-11-08 | 私聊 | 讨论 |  | 🚨 [生产] 生产表没更新 · dws.dws_app_user_d_h 2026-11-08 17:04 北京时间 任务: dws.dwsappuserdh 现象: Spark 调度器 1 张正式表的回写没完成 影响: 这些表当天分区没更新, 读它们的报表/接口看到的是旧数据 从 2026-11-08 13:04:10 起一直没恢复
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 17:31 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 17:30 失败
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 18:31 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 18:30 失败
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 19:32 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 19:30 失败
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 20:31 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 20:30 失败
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 22:32 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 22:30 失败
+- 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 23:32 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 23:30 失败
