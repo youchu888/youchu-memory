@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-09 23:59:08 +0800
+> 更新: 2026-11-10 00:03:09 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-09.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-10.md`
 
 ## 未结案 agent-bus
 
@@ -11,7 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-08 13:32 | 私聊#619 | telegram_dm | completed | 不在群里的人不要@，斯科特又不在群里 |
 | 2026-11-09 09:12 | 群派单#316 | worker_ant_group | completed | @anna_cute9 查完了，结论先说：结算明细不漏数；昨天的结算汇总在重跑，今天的结算汇总 04 点以后还没出。 一、结算明细（dws_settlement |
 | 2026-11-09 09:17 | 群派单#317 | worker_ant_group | completed | @anna_cute9 在重跑，还没跑完。 如果你说的回溯，是今天凌晨入湖作业把 11-08 的明细从 13 点左右开始重新灌一遍（02:36 拉起，04:01 |
 | 2026-11-09 10:11 | 群派单#318 | worker_ant_group | completed | @anna_cute9 昨天（11-08）的结算还没补完，正在补。 - 结算明细 dws_settlement_detail 不用补，11-08 全天逐小时核过 |
