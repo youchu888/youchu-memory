@@ -6,10 +6,12 @@
 再读 data/group_raw/YYYY-MM-DD.jsonl，并补上当日 worker_ant 群入站。
 不另开 Telegram session。
 
-沉淀：带明确规矩的句子当天入库；同一句话隔日再出现则升级已有 lesson。
-没做完的需求写入未做清单；已经统一的指标写入记忆。
-私聊里非闲聊，以及群里的需求、口径和讨论，各写一行到聊天参考，做事时按关键词查。
-学完把短汇总推到私聊。不写 work-log、不进日报、不进工作簿进展。
+沉淀：带明确规矩的句子优先升级/并入已有 lesson 与文件记忆；同一句话隔日再出现则升级。
+废话（闲聊、短回复）不入库。新建有上限，禁止每晚堆一打新条。
+没做完的需求写入未做清单；已经统一的指标写入记忆（同句不重复）。
+私聊里非闲聊，以及群里的需求、口径和讨论，各写一行到聊天参考（近重复跳过）。
+学完跑本地记忆融合（去重 reference、重生 bootstrap），再把短汇总推到私聊。
+不写 work-log、不进日报、不进工作簿进展。
 """
 from __future__ import annotations
 
@@ -18,6 +20,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -25,6 +28,7 @@ import urllib.request
 import uuid
 from collections import defaultdict
 from datetime import datetime, timedelta
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 TGBOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,11 +44,14 @@ from config import (  # noqa: E402
 from group_message_capture import DONE_PATH, RAW_DIR, REQUEST_PATH, SHANGHAI  # noqa: E402
 
 LEARN_ROOT = os.path.expanduser('~/.dc-platform/memory/group_chat/learn')
+MEMORY_ROOT = os.path.expanduser('~/.dc-platform/memory')
 OPEN_REQ_PATH = os.path.expanduser('~/.dc-platform/memory/group_chat/open_requirements.md')
 SETTLED_PATH = os.path.expanduser('~/.dc-platform/memory/group_chat/metrics_settled.md')
 REF_PATH = os.path.expanduser('~/.dc-platform/memory/group_chat/reference.md')
 STATE_PATH = os.path.join(_TGBOT, 'data', 'group_learn_state.json')
-MAX_NEW = 12
+FUSE_SH = os.path.expanduser('~/.dc-platform/scripts/memory-fuse-after-tg-learn.sh')
+# 优先升级旧条；每天新建封顶，逼融合而不是叠新文件
+MAX_NEW = 3
 MAX_UPGRADE = 8
 
 _NOISE = re.compile(
@@ -288,11 +295,25 @@ def _memory_rows(day: str, messages: list[dict]) -> tuple[list[str], list[str]]:
 def _append_memory(path: str, header: str, bullets: list[str]) -> list[str]:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     existing = header if not os.path.isfile(path) else open(path, encoding='utf-8').read()
+    # 近重复：去掉日期前缀再比，避免每天换日期又堆一行同义废话
+    existing_norms = {
+        _norm(re.sub(r'^-?\s*\d{4}-\d{2}-\d{2}\s*', '', line))
+        for line in existing.splitlines()
+        if line.strip().startswith('-')
+    }
     added: list[str] = []
     for bullet in bullets:
         if bullet in existing:
             continue
+        bn = _norm(re.sub(r'^-?\s*\d{4}-\d{2}-\d{2}\s*', '', bullet))
+        if bn and bn in existing_norms:
+            continue
+        # 正文核心 ≥32 字且已被某行包含 → 跳过
+        core = bn[10:] if len(bn) > 40 else bn
+        if core and any(core in en or en in core for en in existing_norms if len(en) >= 24):
+            continue
         added.append(bullet)
+        existing_norms.add(bn)
         if not existing.endswith('\n'):
             existing += '\n'
         existing += bullet + '\n'
@@ -302,6 +323,52 @@ def _append_memory(path: str, header: str, bullets: list[str]) -> list[str]:
             f.write(existing if existing.endswith('\n') else existing + '\n')
         os.replace(tmp, path)
     return added
+
+
+def _file_memory_covers(rule: str) -> str | None:
+    """已在 feedback / lesson 文件里出现过的规矩 → 视为已沉淀，不再新建。"""
+    nrule = _norm(rule)
+    if len(nrule) < 16:
+        return None
+    needle = nrule[:48]
+    root = Path(MEMORY_ROOT)
+    patterns = [
+        'feedback_*.md',
+        'pinned/*.md',
+        'lessons/2026-*.md',
+        'group_chat/metrics_settled.md',
+        'group_chat/reference.md',
+    ]
+    for pat in patterns:
+        for path in root.glob(pat):
+            try:
+                text = _norm(path.read_text(encoding='utf-8', errors='ignore'))
+            except OSError:
+                continue
+            if needle in text or (len(nrule) >= 24 and nrule in text):
+                return str(path)
+    return None
+
+
+def _run_fuse(day: str) -> dict:
+    if not os.path.isfile(FUSE_SH):
+        return {'ok': False, 'error': f'missing {FUSE_SH}'}
+    try:
+        proc = subprocess.run(
+            ['bash', FUSE_SH, '--day', day],
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=180,
+        )
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return {'ok': False, 'error': str(exc)}
+    return {
+        'ok': proc.returncode == 0,
+        'rc': proc.returncode,
+        'stdout': (proc.stdout or '')[-800:],
+        'stderr': (proc.stderr or '')[-400:],
+    }
 
 
 def _render(
@@ -421,6 +488,11 @@ def learn_day(day: str, *, dry_run: bool = False) -> dict:
                 break
         if covered_id:
             state['promoted'][digest] = {'lesson_id': covered_id, 'day': day, 'via': 'covered'}
+            continue
+        hit = _file_memory_covers(rule)
+        if hit:
+            state['promoted'][digest] = {'day': day, 'via': 'file_covered', 'path': hit}
+            actions.append(f'已沉淀跳过 {scope}｜{Path(hit).name}｜{rule[:60]}')
             continue
         if dry_run:
             actions.append(f'[dry-run] {scope}｜{rule[:80]}')
@@ -622,6 +694,8 @@ def main() -> int:
         day = _today()
     result = learn_day(day, dry_run=args.dry_run)
     if not args.dry_run:
+        # 拉完就融合：去重聊天参考、压体积、重生 bootstrap；废话不另开堆
+        result['fuse'] = _run_fuse(day)
         result['tg'] = push_summary(result)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0

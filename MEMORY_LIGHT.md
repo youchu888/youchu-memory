@@ -48,10 +48,14 @@
 | 22:30 | memory git sync | 双机记忆对齐 |
 | 09:00 | 向狂人学习（bus） | 工作日；假日/请假跳过；新知识进 `worker_ant/sessions/` → lesson |
 | **22:50** | **记忆日清** `memory-daily-light-tidy.sh` | 重生 bootstrap、压 OPEN/PINNED 报警、保持次日轻启动 |
+| **02:00** | **TG 回拉 + 学习 + 融合** `daily_group_chat_learn` → `memory-fuse-after-tg-learn.sh` | 闲聊丢弃；有用内容优先并入已有 lesson/feedback/settled；新建封顶；reference 去重 |
 
-原则：**越学越快**——纠正 → update 旧 feedback/lesson（少新建）→ 红线首页冻结、续篇 append → 次日只啃 bootstrap + 按 tag `lookup-rules.sh`。
+原则：**越学越快**——纠正 → update 旧 feedback/lesson（少新建）→ 红线首页冻结、续篇 append → 次日只啃 bootstrap + 按 tag `lookup-rules.sh`。  
+TG 线铁律：**拉完就融合，不叠废话**；同义句已在记忆里 → 跳过新建。
 
 ```bash
 bash ~/.dc-platform/scripts/memory-daily-light-tidy.sh          # 手动日清
 bash .cursor/scripts/install-memory-daily-light-tidy-launchd.sh # 装 22:50
+bash ~/.dc-platform/scripts/memory-fuse-after-tg-learn.sh --day YYYY-MM-DD  # TG 学后融合
+bash /Users/mac/Desktop/CHcode/omdb/tgbot/scripts/install_daily_group_learn_launchd.sh  # 装 02:00
 ```
