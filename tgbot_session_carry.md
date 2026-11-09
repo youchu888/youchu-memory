@@ -1,26 +1,26 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-11-09 · 最新归档：`sessions/tg-rotate-2026-11-09-0601.md`
+> 更新：2026-11-10 · 最新归档：`sessions/tg-rotate-2026-11-10-0602.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 日报云端上传**：以已定稿 `reports/日报-YYYY-MM-DD.md` **原封不动**跑上传脚本；未说改字则不要改写后再传。
+- [LESSON: agent-bus,tg|ack 若 `dropped=silent`，用 `--no-dedup` 或 progress 顶替，勿把未收到 ack 当已 ack。]
+- **TG `status_mirror`**：狂人 bus 入站会先私聊 `🐜 狂人→又初`，ACK/结案后再 `📤 又初→狂人`；「只有我又初在回」常见是**旧单补结案**（入站超约 6h 且过 cutoff）**故意不重推狂人正文**，只推 outbound，不是链路坏了。
+- **认 TG 标题**：🐜 = 狂人原文；📤 = 又初回执/结案；心跳 / lesson / 重唤醒默认不进 TG。
+- **对单条 bus**：查 `incoming bus=<id> → TG` 日志；真人新单若已 mirroring 入站，私聊往上翻应对上 🐜 那条。
+- **日报云端上传**：以已定稿 `reports/日报-YYYY-MM-DD.md` **原封不动**跑上传脚本；未说改字则不要改写后再传。
+- **双机 memory 同步**：主人点名在 **old-mac** 跑 `bash ~/.dc-platform/scripts/sync-memory-git.sh`（导出当日 hosts work-log、rebase、推 youchu-memory `main`），常与日报收尾配套。
+- **bus 派单 ACK**：`kind=ack` 可能被服务端 **`dropped=silent`**；秒回执被吞时用 **`--no-dedup` 重发 ack** 或先发 **progress** 顶住，再干活，最后 **reply** 才结案。
+- **测试环境塌量（#12984）**：test SR `dw.dw_user_event_detail_new` 自 10-26/27 量级断崖；Paimon 同类与 `dws_settlement_detail` 分区明显滞后；先 **SR 核量** 再排 Flink/调度，**不碰 prod**。
+- **测试机 SSH**：`root@43.213.29.105` 公钥未授权时 22 通但 **Permission denied**；跳板可达内网也不等于能上 YARN RM（8088 未必是 Hadoop-2 RM）；卡住时应 **请授权公钥** 再 SKIPPED/拉作业。
+- **Spark 上产前 uid 字典号**：落表 **uid 类 bitmap** 才要 `impl=id_dict`（`mode=assign`、`kind=uid`、cand + `_uc`）；测试 `dict:uid_bl`，上产 `id_dict:uid`；怪 uid 不进；无号 `raise_error`；设备 bitmap 不动。
+- **改前必核 DDL**：渠道日活、页面访问若仅为 **BIGINT 标量人数、无 uid bitmap**，人数与编码无关 → **无 bitmap，不改**；误加的取号步应撤回。
+- **渠道指标日报**：落 **bm_union 原 uid** → 照旧样板改字典号并保留交付。
+- **环境未恢复**：编排/SQL 可先推 `dev` commit，**单跑 cmp 交审**等测试集群/Flink 可用后再做。
 - 群里 **禁止 @ 不在当前群成员**：先确认对方是否在群，再决定是否 @。
 - Fanout / Flink 升级** 等需权限或 infra 介入的事项：走 **有权限的同事** 或 **agent-bus 派单**，不要在群里硬 @ 斯科特。
 - 对末尾「当前问题」要 **直接答复**，不要只复述 prompt 全文。
 - [LESSON: 群聊@ | 禁止 @ 不在当前群的人；斯科特不在群，Fanout/Flink 升级改走有权限的人或 bus，禁止群里 @斯科特]**
-- **斯科特（scott_188）不在相关群**：群内沟通、协作请求 **不得 @ 斯科特**。
-- **Fanout / Flink 升级** 等需权限或 infra 介入的事项：走 **有权限的同事** 或 **agent-bus 派单**，不要在群里硬 @ 斯科特。
-- TG/Cursor 收到「先读某 prompt 再答末尾问题」时：读 **启动包** + **指定 prompt**；体量大可 **先读开头指令 + 末尾「当前问题」**，再作答。
-- 主人私聊纠正（如 #619）应 **落成可复用规则**（群 @ 边界），并在回复里 **明确承诺**（以后怎么做）。
-- 纠正类任务可先 **核对近期是否误 @**，再落规则并回应，避免只空口答应。
-- TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问题」**，按末尾问题直接执行，勿复述文件。
-- agent-bus `mode=work`**：60 秒内 `ack`，干完再 `reply` 结案；**reply 成功前不要 mark 结案**；同一 Cursor 主会话处理，勿 spawn 新 Agent。
-- 下游挂账口径（狂人口径）**：入湖未恢复时 **27 条挂账不动、不补不弃**；`pb_dws_app_user_d_h_hourly` 等挂的是**当日业务小时格**（如 11-08 的 03#04），不是错绑到 11-07；**等入湖探针放行后任务自续跑**，勿乱补历史格。
-- [LESSON: paimon|SR-normal-Paimon-stuck|先比 Paimon 表最晚 etl_time 与 SR 结算等同窗水位；SR 在写、Paimon 不动则升级 Fanout/Flink（@斯科特），勿在下游盲补]
-- [LESSON: agent-bus|P0-lake|ACK 后只做只读复现 + 业务小时漏量核对 + 升级回执；挂账任务按「探针放行自续」处理，禁止入湖未恢复时批量补弃]
-- [LESSON: daily-report|upload|上传前锁定定稿文件，禁止改字；仅主人要求「上传云端」时跑脚本，成功回 code 与稿路径]
-- **日报上传云端**：先确认当日定稿路径（如 `.cursor/work-log/reports/日报-YYYY-MM-DD.md`），**正文原封不动**再跑 `upload_work_report.py`；成功以 API `code=0` 为准，对话里报 `id` 与稿路径即可。
-- **TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问题」**，按末尾问题直接执行，勿复述文件。
-- **agent-bus `mode=work`**：60 秒内 `ack`，干完再 `reply` 结案；**reply 成功前不要 mark 结案**；同一 Cursor 主会话处理，勿 spawn 新 Agent。
 

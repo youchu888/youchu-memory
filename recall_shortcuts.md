@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 10 11 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md` | 2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入 |
+| ## 10 11 2026 agent_session_rotate bitma | `~/.dc-platform/memory/lessons/2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap-列才加-id_dict-步-纯标量去.md` | 2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap |
+| ## 10 11 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-10-ack-若-dropped-silent-用-no-dedup-或-progress-顶替-勿把.md` | 2026-11-10-ack-若-dropped-silent-用-no-ded |
+| bigint bitmap ddl uid 不改 与编 | `sessions/tg-rotate-2026-11-10-0602.md` | **改前必核 DDL**：渠道日活、页面访问若仅为 **BIGINT 标量人数、 |
+| assign bitmap cand dict id_dict impl | `sessions/tg-rotate-2026-11-10-0602.md` | **Spark 上产前 uid 字典号**：落表 **uid 类 bitmap* |
+| 22 denied hadoop permission rm（8088 rm） | `sessions/tg-rotate-2026-11-10-0602.md` | **测试机 SSH**：`root@43.213.29.105` 公钥未授权时  |
+| #1 10 12 26 27 29 | `sessions/tg-rotate-2026-11-10-0602.md` | **测试环境塌量（#12984）**：test SR `dw.dw_user_e |
+| ack bus dedup dropped kind no | `sessions/tg-rotate-2026-11-10-0602.md` | **bus 派单 ACK**：`kind=ack` 可能被服务端 **`drop |
+| .dc bash git.sh hosts log mac | `sessions/tg-rotate-2026-11-10-0602.md` | **双机 memory 同步**：主人点名在 **old-mac** 跑 `ba |
+| dd.md mm reports yyyy 上传 不动 | `sessions/tg-rotate-2026-11-10-0602.md` | **日报云端上传**：以已定稿 `reports/日报-YYYY-MM-DD.m |
+| bus id incoming mirroring tg 上翻 | `sessions/tg-rotate-2026-11-10-0602.md` | **对单条 bus**：查 `incoming bus=<id> → TG` 日 |
+| lesson tg 不进 人原 初回 原文 | `sessions/tg-rotate-2026-11-10-0602.md` | **认 TG 标题**：🐜 = 狂人原文；📤 = 又初回执/结案；心跳 / le |
+| 6h ack bus cutoff） outbound status_mirro | `sessions/tg-rotate-2026-11-10-0602.md` | **TG `status_mirror`**：狂人 bus 入站会先私聊 `🐜  |
+| ack agent bus dedup dropped lesson | `sessions/tg-rotate-2026-11-10-0602.md` | [LESSON: agent-bus,tg/ack 若 `dropped=sil |
+| dd.md mm reports yyyy 上传 不动 | `sessions/tg-rotate-2026-11-10-0602.md` | 日报云端上传**：以已定稿 `reports/日报-YYYY-MM-DD.md` |
 | ## 09 11 2026 @斯 @斯科特 | `~/.dc-platform/memory/lessons/2026-11-09-禁止-不在当前群的人-斯科特不在群-fanout-flink-升级改走有权限的人或-bus-禁止.md` | 2026-11-09-禁止-不在当前群的人-斯科特不在群-fanout-flin |
 | 任务 免只 再落 再落规则并回应 则并 务可 | `sessions/tg-rotate-2026-11-09-0601.md` | 纠正类任务可先 **核对近期是否误 @**，再落规则并回应，避免只空口答应。 |
 | #6 #619）应 19 61 9） 主人 | `sessions/tg-rotate-2026-11-09-0601.md` | 主人私聊纠正（如 #619）应 **落成可复用规则**（群 @ 边界），并在回复 |
@@ -30,18 +45,3 @@
 | 03#04） 07 08 11 27 pb_dws_app_user_d_h | `sessions/tg-rotate-2026-11-08-0600.md` | 下游挂账口径（狂人口径）**：入湖未恢复时 **27 条挂账不动、不补不弃**； |
 | 60 ack agent bus cursor mark | `sessions/tg-rotate-2026-11-08-0600.md` | agent-bus `mode=work`**：60 秒内 `ack`，干完再  |
 | prompt tg 「当 不必 不必通读全文 全文 | `sessions/tg-rotate-2026-11-08-0600.md` | TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问题」 |
-| ## .md 07 11 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-07-upload-主人说-上传云端-时-以-reports-日报-md-定稿-一字不改-执行上传脚本.md` | 2026-11-07-upload-主人说-上传云端-时-以-reports-日 |
-| ## 07 11 2026 agent_session_rotate ap | `~/.dc-platform/memory/lessons/2026-11-07-ctr-exposure-tracing-当单-app-在-dw-中缺-app_pageitem.md` | 2026-11-07-ctr-exposure-tracing-当单-app-在 |
-| 一句 与流 与补 业务 中合 为业 | `sessions/tg-rotate-2026-11-07-0652.md` | 页面点击率相关需求与补数、排查可在日报中合并为业务结果向一句话，避免堆砌内部代号 |
-| dev ops_system owner session task.yaml 不 | `sessions/tg-rotate-2026-11-07-0652.md` | 表开发归属可查 dev session、`ops_system` 目录与 `ta |
-| app flink owner 「全 「单 」与 | `sessions/tg-rotate-2026-11-07-0652.md` | 用**同日、同产品线其他 app** 对比（有的有曝光、有的没有），区分「单 A |
-| app dw fanout sdk 上报 业务 | `sessions/tg-rotate-2026-11-07-0652.md` | 若 `dw` 里**完全没有**对应曝光事件名，而同日同 app 有点击、页面浏 |
-| ads app_pageitem_exposure dw.dw_user dw. | `sessions/tg-rotate-2026-11-07-0652.md` | 缺曝光的核对顺序：ads → `dwd_app_pageitem_exposur |
-| ads ads.ads_page_item_ctr_d ctr 一致 上游 与上 | `sessions/tg-rotate-2026-11-07-0652.md` | 页面元素 CTR 日表 (`ads.ads_page_item_ctr_d`)  |
-| app_id datacheck dt prod 以便 以便复现 | `sessions/tg-rotate-2026-11-07-0652.md` | T-1/指定日 `datacheck` 在 prod 执行时，结论需带**环境、 |
-| api d） id id）可记一句便于核对 inserted token | `sessions/tg-rotate-2026-11-07-0652.md` | 日报定稿路径与 API 回执（如 inserted id）可记一句便于核对，** |
-| markdown 「上 」须 上传 上传前 不得 | `sessions/tg-rotate-2026-11-07-0652.md` | 私聊「上传云端」须以**已定稿 Markdown 原样**跑上传脚本，上传前** |
-| dw 不是 中无 事件 件时 任边 | `sessions/tg-rotate-2026-11-07-0652.md` | 溯源结论要落到**责任边界**：`dw` 是镜像，镜中无该事件时先找源头补事件， |
-| ## 06 11 2026 60 ack | `~/.dc-platform/memory/lessons/2026-11-06-ack-若-dropped-silent-须核实发送-bus-进度问句必查-reply-结案与-.md` | 2026-11-06-ack-若-dropped-silent-须核实发送-bu |
-| ## 06 11 2026 ads agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-06-s4-上生产前从组内删除-dwd_app_pageitem_d_r-dim-ads-探针绑两张-.md` | 2026-11-06-s4-上生产前从组内删除-dwd_app_pageitem |
-| ## 06 11 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-06-现网绿点只看-tgbot-dispatch-的-visible-online-日志-teleth.md` | 2026-11-06-现网绿点只看-tgbot-dispatch-的-visib |

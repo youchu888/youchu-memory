@@ -5,6 +5,9 @@
 # DC Platform 公共记忆索引
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
+- [私聊只见又初 outbound 时先辨旧单补回执（不重推入站）与新单（应](lessons/2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md) — 会话轮换蒸馏
+- [上产前换字典号前先查 DDL：仅 uid 类 bitmap 列才加 id](lessons/2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap-列才加-id_dict-步-纯标量去.md) — 会话轮换蒸馏
+- [ack 若 `dropped=silent`，用 `--no-dedup](lessons/2026-11-10-ack-若-dropped-silent-用-no-dedup-或-progress-顶替-勿把.md) — 会话轮换蒸馏
 - [禁止 @ 不在当前群的人；斯科特不在群，Fanout/Flink 升级改](lessons/2026-11-09-禁止-不在当前群的人-斯科特不在群-fanout-flink-升级改走有权限的人或-bus-禁止.md) — 会话轮换蒸馏
 - [upload|上传前锁定定稿文件，禁止改字；仅主人要求「上传云端」时跑脚](lessons/2026-11-08-upload-上传前锁定定稿文件-禁止改字-仅主人要求-上传云端-时跑脚本-成功回-code-与.md) — 会话轮换蒸馏
 - [P0-lake|ACK 后只做只读复现 + 业务小时漏量核对 + 升级回](lessons/2026-11-08-p0-lake-ack-后只做只读复现-业务小时漏量核对-升级回执-挂账任务按-探针放行自续-处.md) — 会话轮换蒸馏

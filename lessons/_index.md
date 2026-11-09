@@ -3,6 +3,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-10 | [私聊只见又初 outbound 时先辨旧单补回执（不重推入站）与新单（应有 🐜 ](./2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md) | tg-mirror,agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-10 | [上产前换字典号前先查 DDL：仅 uid 类 bitmap 列才加 id_dic](./2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap-列才加-id_dict-步-纯标量去.md) | uid-dict,spark,ddl,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-10 | [ack 若 `dropped=silent`，用 `--no-dedup` 或 ](./2026-11-10-ack-若-dropped-silent-用-no-dedup-或-progress-顶替-勿把.md) | agent-bus,tg,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-09 | [request_time 晚到漏算：04:40 丢数核对、订单全局先去重 vs 注册同日去重](./2026-11-09-request_time-late-arrival-04-40-dedup.md) | request_time,settlement,dedup | 按 request_time 分日；首遍漏靠 04:40 补原日；二次上报先入为主 |
 | 2026-11-09 | [11-09 结算当日：小时追平、凌晨注册次日整日补算、广告表上游未写](./2026-11-09-settlement-11-09-intraday-hourly-ad-upstream.md) | settlement,hourly,ad | 13 点小时正常；~2.7 万注册次日整天重算；广告表等上游恢复 |
 | 2026-11-09 | [11-08 结算重跑验收：744 字段 SR↔湖 0 差异 + 天/时/订单金额三边一致](./2026-11-09-11-08-settlement-rerun-acceptance.md) | settlement,datacheck,sr | 狂人放行 11-08 结算；详情接口依赖天表已回写 SR |
