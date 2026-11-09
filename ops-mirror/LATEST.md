@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-09 23:23:35 +0800
+> 更新: 2026-11-09 23:27:30 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-09.md`
 
@@ -34,3 +34,5 @@
 | 2026-11-09 19:21 | 私聊#621 | telegram_dm | completed | 在old mac上面跑一次 bash ~/.dc-platform/scripts/sync-memory-git.sh |
 | 2026-11-09 20:51 | 群派单#334 | worker_ant_group | completed | @安娜 11-09 00 点新增重复的问题已经处理好了：结算汇总 00 点已经重算，YC-002 / uJhMztRj 00 点新增从 489 回落到 125。 |
 | 2026-11-09 22:00 | 私聊#622 | telegram_dm | completed | 上传云端吧，按你这个 |
+| 2026-11-09 23:25 | 群派单#335 | worker_ant_group | completed | 收到 bus#12999（渠道看板设备指标：新建表还是给三张账本加列）。我现在读审阅包，看完先给猫猫拍 A/B，再出设计。 |
+| 2026-11-09 23:26 | 群派单#336 | worker_ant_group | in_progress | @hull1889 bus#12999 已回猫猫（设计稿 asset#282）。拍板：设备指标单独建结果表放在设备域，三张结算账本一列不动，接口按 app、渠道 |
