@@ -340,8 +340,9 @@ _pull_rebase() {
 
 _pull_rebase
 
-# pull 后重拷脚本，并跑 oneshot（旧机升级 ToDesk 等）
-for s in upgrade_todesk_oneshot.sh worklog_dual_mac_sync.py export_noncode_mirrors.py \
+# pull 后重拷脚本，并跑 oneshot（旧机升级 ToDesk / TG 学习融合 等）
+for s in upgrade_todesk_oneshot.sh install_tg_learn_fuse_oldmac_oneshot.sh \
+  memory-fuse-after-tg-learn.sh worklog_dual_mac_sync.py export_noncode_mirrors.py \
   install-memory-git-sync-launchd.sh; do
   src="$MEM/scripts/$s"
   dst="$RUNTIME_SCRIPTS/$s"
@@ -360,6 +361,12 @@ _run_oneshots() {
     # 后台跑：下载 pkg 可能数分钟，不阻塞 memory push
     bash "$s" &
     echo "info: oneshot upgrade_todesk 已后台触发 pid=$!"
+  fi
+  local t="$RUNTIME_SCRIPTS/install_tg_learn_fuse_oldmac_oneshot.sh"
+  [[ -f "$t" ]] || t="$MEM/scripts/install_tg_learn_fuse_oldmac_oneshot.sh"
+  if [[ -f "$t" ]]; then
+    bash "$t" &
+    echo "info: oneshot tg-learn-fuse 已后台触发 pid=$!"
   fi
 }
 _run_oneshots
