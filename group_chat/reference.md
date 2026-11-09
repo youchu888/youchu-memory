@@ -1608,3 +1608,4 @@
 - 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 22:32 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 22:30 失败
 - 2026-11-08 | 私聊 | 事故 |  | 🚨 *[测试] 海豚任务失败 · ads_keyword_search_hour_h_h_hourly* _2026-11-08 23:32 北京时间_ 🔴 ads_keyword_search_hour_h_h_hourly 任务: wf_用户活跃留存_小时 / ads_keyword_search_hour_h_h_hourly 现象: 23:30 失败
 - 2026-11-09 | 群 | 口径 |  | #12937 取消：知秋 11-07 定 IP 独立主体不进设备表，#12613/#12614 作废；dwsdevicedimdd test/prod 回滚仍 10 列；IP 指标单独按 IP 主体建表，蓝猫改法已发 bus 待重审
+- 2026-11-09 | 群 | 流程 |  | #12946：狂人审设备 dim v1.1 与 IP dim v0.1 分表方案，审结回蓝猫；审结前勿落定稿 DDL/ETL
