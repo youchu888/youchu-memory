@@ -70,3 +70,4 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Monday, Nov 9, 2026, 7:11 PM (UTC+8)</timestamp>\n<user_query>\n日清是啥\n</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"**日清** = 每晚 **22:50** 跑的 `memory-daily-light-tidy.sh`：记忆轻量打扫，不是删库。\n\n干这几件事：\n\n1. **重生 bootstrap**（次日冷启动那份瘦包）  \n2. **体检体积**：OPEN / PINNED 超标就报警  \n3. **写一行日清报告**（学没学到狂人、OPEN 还胖不胖）\n\n**不做**：不批量删 lesson、不合并正文、不收拾 TG 原文归档。\n\n群聊回拉、升规矩是另一条线；日清只保证「第二天开工别被记忆包砸死」。周清理（hygiene）才负责查重、合并、压 OPEN。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Monday, Nov 9, 2026, 7:13 PM (UTC+8)</timestamp>\n<user_query>\n每天晚上拉完tg聊天记录以后就整理一次记忆吧，废话不管，只把有用的内容和已经沉淀的内容融合，学习，沉淀起来，\n</user_query>"}]}}
