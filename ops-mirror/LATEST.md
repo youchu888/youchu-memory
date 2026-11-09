@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-09 16:28:31 +0800
+> 更新: 2026-11-09 16:32:10 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-09.md`
 
@@ -26,3 +26,4 @@
 | 2026-11-09 14:44 | 群派单#327 | worker_ant_group | completed | @anna_cute9 今天 11-09 的结算小时数据已经到 13 点（13:00~14:00 这一小时），现在北京 14:4x，属于正常进度，后面每小时自动 |
 | 2026-11-09 15:50 | 群派单#328 | worker_ant_group | completed | @anna_cute9 分两种情况说： 1. request_time 是 8 号 23 点、入湖到 9 号 3 点才进来（只上报一次）：不会归到 9 号。我们 |
 | 2026-11-09 16:12 | 群派单#329 | worker_ant_group | completed | @anna_cute9 收到，在查。初看：YC-002 / uJhMztRj 11-08 23 点新增 173，11-09 00 点 489，但 00 点安装只 |
+| 2026-11-09 16:32 | 群派单#330 | worker_ant_group | in_progress | @anna_cute9 查清了，是重复计算了注册。YC-002 / uJhMztRj 11-09 00 点算的新增里，有 312 人在 11-08 已经算过新增 |
