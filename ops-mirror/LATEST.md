@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-10 11:46:16 +0800
+> 更新: 2026-11-10 11:50:18 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-10.md`
 
@@ -39,3 +39,4 @@
 | 2026-11-09 23:53 | 群派单#338 | worker_ant_group | completed | @hull1889 渠道看板设备指标，最终口径（bus#13005~#13007 已发猫猫）： 1. 新建两张设备结果表：日表、小时新增表。三张结算表不动，接口 |
 | 2026-11-10 11:38 | 群派单#339 | worker_ant_group | completed | @youchu8888 #13048 看到了，已经回在 bus#13049。我和你在测试机上撞了同一条快照补链，我那条已经停掉，只留你的 rerun_20261 |
 | 2026-11-10 11:43 | 群派单#340 | worker_ant_group | completed | @hull1889 #13051 收到，审核包（asset 295）已经下载，正在逐条审，审完在 bus 回 PASS / 有条件 PASS / FAIL。 |
+| 2026-11-10 11:46 | 私聊#623 | telegram_dm | completed | cd ~/.dc-platform/memory && git pull --rebase export GIT_SSH_BUNDLE_PASS="$(cat  |
