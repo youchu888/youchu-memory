@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-10 23:58:22 +0800
+> 更新: 2026-11-11 00:02:19 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-10.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-11.md`
 
 ## 未结案 agent-bus
 
@@ -11,25 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-09 12:18 | 群派单#323 | worker_ant_group | completed | @hull1889 已经私聊发给知秋了，第三点那两个问题请他确认，等他回复。 |
-| 2026-11-09 12:55 | 群派单#324 | worker_ant_group | completed | @hull1889 还没有。13:18 私聊发给知秋后，到现在他在 TG 和电脑这边都没回这两项。他一回我就在群里告诉你，然后开始建表。 |
-| 2026-11-09 14:41 | 群派单#325 | worker_ant_group | completed | @anna_cute9 11-08 结算已经整天重跑完了（北京 14:15 全部结束）。结算详情接口要读的推广汇总天表、充值天表，已经重算并回写到 SR。注册、 |
-| 2026-11-09 14:42 | 群派单#326 | worker_ant_group | completed | @anna_cute9 11-08 结算核对完了，可以用了。结算详情接口读的天表都已经重算、回写 SR，SR 跟湖上 744 项逐字段 0 差异；汇总天表、小时 |
-| 2026-11-09 14:44 | 群派单#327 | worker_ant_group | completed | @anna_cute9 今天 11-09 的结算小时数据已经到 13 点（13:00~14:00 这一小时），现在北京 14:4x，属于正常进度，后面每小时自动 |
-| 2026-11-09 15:50 | 群派单#328 | worker_ant_group | completed | @anna_cute9 分两种情况说： 1. request_time 是 8 号 23 点、入湖到 9 号 3 点才进来（只上报一次）：不会归到 9 号。我们 |
-| 2026-11-09 16:12 | 群派单#329 | worker_ant_group | completed | @anna_cute9 收到，在查。初看：YC-002 / uJhMztRj 11-08 23 点新增 173，11-09 00 点 489，但 00 点安装只 |
-| 2026-11-09 16:32 | 群派单#330 | worker_ant_group | completed | @anna_cute9 查清了，是重复计算了注册。YC-002 / uJhMztRj 11-09 00 点算的新增里，有 312 人在 11-08 已经算过新增 |
-| 2026-11-09 16:34 | 群派单#331 | worker_ant_group | completed | @anna_cute9 两方面都有，起因是数据问题，计算逻辑有一个缺口没兜住。 1. 数据：上游同一条注册每半小时会补发一次。11-08 晚上入湖断流时，22~ |
-| 2026-11-09 16:43 | 群派单#332 | worker_ant_group | completed | @anna_cute9 不会自动修：已经算完的小时格，第二天不会回头重算。所以我今晚手动重算 11-09 00 点那一格，已经排好，跑在今天这轮重跑后面，预计  |
-| 2026-11-09 17:48 | 私聊#620 | telegram_dm | completed | 为什么看不到狂人的bus消息，只有你回复狂人的bus消息呢？ |
-| 2026-11-09 19:08 | 群派单#333 | worker_ant_group | completed | @安娜 更新一下 11-09 00 点新增重复的修复进度：00 点重算已经在跑了。改了 00 点会影响当天后面各个小时的累计数，所以 00~17 点要一起重算， |
-| 2026-11-09 19:21 | 私聊#621 | telegram_dm | completed | 在old mac上面跑一次 bash ~/.dc-platform/scripts/sync-memory-git.sh |
-| 2026-11-09 20:51 | 群派单#334 | worker_ant_group | completed | @安娜 11-09 00 点新增重复的问题已经处理好了：结算汇总 00 点已经重算，YC-002 / uJhMztRj 00 点新增从 489 回落到 125。 |
-| 2026-11-09 22:00 | 私聊#622 | telegram_dm | completed | 上传云端吧，按你这个 |
-| 2026-11-09 23:25 | 群派单#335 | worker_ant_group | completed | 收到 bus#12999（渠道看板设备指标：新建表还是给三张账本加列）。我现在读审阅包，看完先给猫猫拍 A/B，再出设计。 |
-| 2026-11-09 23:26 | 群派单#336 | worker_ant_group | completed | @hull1889 bus#12999 已回猫猫（设计稿 asset#282）。拍板：设备指标单独建结果表放在设备域，三张结算账本一列不动，接口按 app、渠道 |
-| 2026-11-09 23:47 | 群派单#337 | worker_ant_group | completed | @hull1889 bus#13004 字典 v0.3 已审，00:41 回了 bus#13005，刚又发了一条更正，补在 #13005 后面。结论是可以冻结。 |
-| 2026-11-09 23:53 | 群派单#338 | worker_ant_group | completed | @hull1889 渠道看板设备指标，最终口径（bus#13005~#13007 已发猫猫）： 1. 新建两张设备结果表：日表、小时新增表。三张结算表不动，接口 |
 | 2026-11-10 11:38 | 群派单#339 | worker_ant_group | completed | @youchu8888 #13048 看到了，已经回在 bus#13049。我和你在测试机上撞了同一条快照补链，我那条已经停掉，只留你的 rerun_20261 |
 | 2026-11-10 11:43 | 群派单#340 | worker_ant_group | completed | @hull1889 #13051 收到，审核包（asset 295）已经下载，正在逐条审，审完在 bus 回 PASS / 有条件 PASS / FAIL。 |
 | 2026-11-10 11:46 | 私聊#623 | telegram_dm | completed | cd ~/.dc-platform/memory && git pull --rebase export GIT_SSH_BUNDLE_PASS="$(cat  |
