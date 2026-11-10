@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-10 11:50:18 +0800
+> 更新: 2026-11-10 11:54:14 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-10.md`
 
@@ -40,3 +40,4 @@
 | 2026-11-10 11:38 | 群派单#339 | worker_ant_group | completed | @youchu8888 #13048 看到了，已经回在 bus#13049。我和你在测试机上撞了同一条快照补链，我那条已经停掉，只留你的 rerun_20261 |
 | 2026-11-10 11:43 | 群派单#340 | worker_ant_group | completed | @hull1889 #13051 收到，审核包（asset 295）已经下载，正在逐条审，审完在 bus 回 PASS / 有条件 PASS / FAIL。 |
 | 2026-11-10 11:46 | 私聊#623 | telegram_dm | completed | cd ~/.dc-platform/memory && git pull --rebase export GIT_SSH_BUNDLE_PASS="$(cat  |
+| 2026-11-10 11:50 | 群派单#341 | worker_ant_group | completed | @hull1889 #13051 终审回在 bus#13053（全文 asset#296）：FAIL。小时新增表口径错了，dim_device_code_h 里 |
