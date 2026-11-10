@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-10 12:50:22 +0800
+> 更新: 2026-11-10 12:54:24 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-10.md`
 
@@ -11,7 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-09 10:11 | 群派单#318 | worker_ant_group | completed | @anna_cute9 昨天（11-08）的结算还没补完，正在补。 - 结算明细 dws_settlement_detail 不用补，11-08 全天逐小时核过 |
 | 2026-11-09 11:27 | 群派单#319 | worker_ant_group | completed | @hull1889 收到 #12937，dwsdevicedimdd 补 ipcnt / ipbitmap 两列，我现在动手。先在测试环境 ALTER，再上生产 |
 | 2026-11-09 11:41 | 群派单#320 | worker_ant_group | completed | @hull1889 #12937 这件不做了，跟你更正一下：知秋 11-07 定了 IP 是独立主体，不进设备表，之前 #12614 的放行已经作废。我先在 t |
 | 2026-11-09 12:13 | 群派单#321 | worker_ant_group | completed | @hull1889 收到 #12946，设备 dim v1.1 和 IP dim v0.1 我这就开始审，审完回猫猫。 |
@@ -41,3 +40,4 @@
 | 2026-11-10 11:50 | 群派单#341 | worker_ant_group | completed | @hull1889 #13051 终审回在 bus#13053（全文 asset#296）：FAIL。小时新增表口径错了，dim_device_code_h 里 |
 | 2026-11-10 11:59 | 群派单#342 | worker_ant_group | completed | @hull1889 #13055 收到，复审中，审完在 bus 回。 |
 | 2026-11-10 12:06 | 群派单#343 | worker_ant_group | completed | @hull1889 #13055 第二轮回在 bus（全文 asset#298）：还是 FAIL，但近了。上轮 8 条基本改对；剩下的是 SQL 还没进仓库、小 |
+| 2026-11-10 12:52 | 群派单#344 | worker_ant_group | in_progress | 13058 是我北京 12:06 回猫猫的渠道看板设备指标第二轮终审，结论 FAIL（全文在 asset#298）。上一轮的 8 条基本都改对了，还剩 9 处： |
