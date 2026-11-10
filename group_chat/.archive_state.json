@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-10 02:02:12",
+  "last_run": "2026-11-10 08:02:32",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -2162,9 +2162,14 @@
       "2026-11-08 23:04:15|agent_bus_in|0|[agent-bus#12822] [P1] 生产缺数据: 6 个回写步没回写\npb_ads_channel_promotion_summary_h_h, pb_ads_settlement_preagg_h, pb_dws_app_channel_deduction_h_h, pb_dws_app_channel_summary_h_h, pb_dws_user_promotion_behavior_charge_h_h, pb_dws_user_promotion_behavior_h_h 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。||observe"
     ],
     "2026-11-09": [
-      "2026-11-09 00:04:11|agent_bus_in|0|[agent-bus#12828] [P1] runner 挂账 31 条 (阈值 20)\n被跳过的步堆积, 需要人工决定补还是弃。清单在 HDFS pipeline_runner_pending.jsonl。||observe"
+      "2026-11-09 00:04:11|agent_bus_in|0|[agent-bus#12828] [P1] runner 挂账 31 条 (阈值 20)\n被跳过的步堆积, 需要人工决定补还是弃。清单在 HDFS pipeline_runner_pending.jsonl。||observe",
+      "2026-11-09 03:04:21|agent_bus_in|0|[agent-bus#12841] [P0] 生产缺数据: 16 个回写步没回写\npb_ads_channel_promotion_summary_d_d, pb_ads_channel_promotion_summary_h_h, pb_ads_keyword_analysis_d_d, pb_ads_settlement_preagg_d, pb_ads_settlement_preagg_h, pb_dim_user_all_d_paimon_shadow, pb_dws_app_channel_deduction_d_d, pb_dws_app_channel_deduction_h_h, pb_dws_app_channel_summary_d_d, pb_dws_app_channel_summary_h_h, pb_dws_app_user_d_h_hourly, pb_dws_app_user_d_h_uc_hourly, pb_dws_user_promotion_behavior_charge_d_d, pb_dws_user_promotion_behavior_charge_h_h, pb_dws_user_promotion_behavior_d_d, pb_dws_user_promotion_behavior_h_h 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。\n\n⏱ 该问题自 2026-11-08 23:04:14 起持续未解决, 这是第 1 次重提醒。||observe",
+      "2026-11-09 03:19:38|agent_bus_in|0|[agent-bus#12848] [P1] runner daemon 进程数=0 (正常=2)\n0=没起, >2=双开。启停一律走 daemonctl.sh, 不要现编命令。采集于 2026-11-09 03:19:01||observe",
+      "2026-11-09 04:04:55|agent_bus_in|0|[agent-bus#12855] [P1] runner 挂账 118 条 (阈值 20)\n被跳过的步堆积, 需要人工决定补还是弃。清单在 HDFS pipeline_runner_pending.jsonl。\n\n⏱ 该问题自 2026-11-09 00:04:11 起持续未解决, 这是第 1 次重提醒。||observe",
+      "2026-11-09 04:30:15|agent_bus_in|0|[agent-bus#12861] [P0] runner 线 g_ads_keyword_analysis_d_d 失败停在 1/2 步: ads_keyword_analysis_d_d\n线 g_ads_keyword_analysis_d_d sched_state=failed, 卡在第 1/2 步 ads_keyword_analysis_d_d, 最后活动 2026-11-09 04:28:43, 原因 rc=1。🔴 **这一步后面的所有步全部跑不了**, 组尾回写步的挂账只是它的连带 —— 别被 PUSHBACK 告警指向的影子表带偏, 真病灶就是这一步。🔴 挂账续跑**不刷新 lines.last_at**, 所以这个时间戳不动≠循环停了; 判它还在不在重试只能去 daemon 日志 grep 步名取最后一轮。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位、次日继续挂。||observe",
+      "2026-11-09 07:04:49|agent_bus_in|0|[agent-bus#12897] [P0] 生产缺数据: 12 个回写步没回写\npb_ads_channel_promotion_summary_h_h, pb_ads_settlement_preagg_h, pb_ads_source_analysis_metric_d, pb_dws_ad_error_metric_d, pb_dws_ad_funnel_metric_d, pb_dws_ad_request_metric_d, pb_dws_app_channel_deduction_h_h, pb_dws_app_channel_summary_h_h, pb_dws_app_user_d_h_hourly, pb_dws_app_user_d_h_uc_hourly, pb_dws_user_promotion_behavior_charge_h_h, pb_dws_user_promotion_behavior_h_h 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。\n\n⏱ 该问题自 2026-11-08 23:04:14 起持续未解决, 这是第 2 次重提醒。||observe"
     ]
   },
-  "last_hot_lines": 58,
-  "last_archived_lines": 11
+  "last_hot_lines": 53,
+  "last_archived_lines": 5
 }
