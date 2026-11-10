@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 11 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-11-11-memory-dolphin-vpn-后装-install-on-host-sh-再用-host.md` | 2026-11-11-memory-dolphin-vpn-后装-install |
+| do dolphin」可收成三步清单汇报 hi host in instal | `sessions/tg-rotate-2026-11-11-0603.md` | 私聊派活「同步记忆 + 装 SSH + 验 dolphin」可收成三步清单汇报： |
+| bigdata dev dolphinscheduler hostname ok | `sessions/tg-rotate-2026-11-11-0603.md` | 验通期望：`hostname` → `dolphinscheduler-2`，` |
+| dolphinscheduler hostname ssh vpn whoami | `sessions/tg-rotate-2026-11-11-0603.md` | 连海豚/集群节点需先 VPN；验通用 `ssh dolphinscheduler |
+| .ssh dolphinscheduler exit host id_ed255 | `sessions/tg-rotate-2026-11-11-0603.md` | 安装脚本会写入 `Host dolphinscheduler-2` 与私钥 `~ |
+| && .dc cd git memory platform | `sessions/tg-rotate-2026-11-11-0603.md` | 双机记忆同步固定起手：`cd ~/.dc-platform/memory &&  |
+| bigdata de dev hadoop iu sudo | `sessions/tg-rotate-2026-11-11-0603.md` | 登录默认是 `bigdata-dev`；要跑 Hadoop/集群侧命令用 `su |
+| .d .dc bootstrap bundle.pass cat config | `sessions/tg-rotate-2026-11-11-0603.md` | testcluster SSH 本机安装：`export GIT_SSH_BUN |
+| .md mp om pr prompt prompt（如 | `sessions/tg-rotate-2026-11-11-0603.md` | TG 超长 prompt（如 `prompt_*.md`）先读开头指令与末尾「当 |
 | ## 10 11 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md` | 2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入 |
 | ## 10 11 2026 agent_session_rotate bitma | `~/.dc-platform/memory/lessons/2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap-列才加-id_dict-步-纯标量去.md` | 2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap |
 | ## 10 11 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-10-ack-若-dropped-silent-用-no-dedup-或-progress-顶替-勿把.md` | 2026-11-10-ack-若-dropped-silent-用-no-ded |
@@ -36,12 +45,3 @@
 | 03 escalation etl p0 「只 一并 | `sessions/tg-rotate-2026-11-08-0600.md` | **P0 复测**：二次停写时记录「只出一批又停」、距最晚 `etl` 的无提交 |
 | 18 88 8） @斯 @斯科特（scott_188） _1 | `sessions/tg-rotate-2026-11-08-0600.md` | **无 Fanout 权限**：不擅自动 Fanout/Flink；**群里 @ |
 | dwd_order_paid_d_r dwd_user_register_d_v | `sessions/tg-rotate-2026-11-08-0600.md` | **入湖停写判责**：对比 **Paimon**（注册 `dwd_user_re |
-| 60 ack agent bus cursor mark | `sessions/tg-rotate-2026-11-08-0600.md` | **agent-bus `mode=work`**：60 秒内 `ack`，干完 |
-| prompt tg 「当 不必 不必通读全文 全文 | `sessions/tg-rotate-2026-11-08-0600.md` | **TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问 |
-| .cursor api code dd.md id log | `sessions/tg-rotate-2026-11-08-0600.md` | **日报上传云端**：先确认当日定稿路径（如 `.cursor/work-log |
-| code daily lesson report upload 「上 | `sessions/tg-rotate-2026-11-08-0600.md` | [LESSON: daily-report/upload/上传前锁定定稿文件，禁 |
-| ack agent bus lake lesson p0 | `sessions/tg-rotate-2026-11-08-0600.md` | [LESSON: agent-bus/P0-lake/ACK 后只做只读复现 + |
-| @斯 etl_tim etl_time fanout fl flink（@斯科特 | `sessions/tg-rotate-2026-11-08-0600.md` | [LESSON: paimon/SR-normal-Paimon-stuck/先 |
-| 03#04） 07 08 11 27 pb_dws_app_user_d_h | `sessions/tg-rotate-2026-11-08-0600.md` | 下游挂账口径（狂人口径）**：入湖未恢复时 **27 条挂账不动、不补不弃**； |
-| 60 ack agent bus cursor mark | `sessions/tg-rotate-2026-11-08-0600.md` | agent-bus `mode=work`**：60 秒内 `ack`，干完再  |
-| prompt tg 「当 不必 不必通读全文 全文 | `sessions/tg-rotate-2026-11-08-0600.md` | TG 超大 prompt**：不必通读全文；读**开头指令 + 末尾「当前问题」 |

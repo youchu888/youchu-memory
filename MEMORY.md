@@ -5,6 +5,7 @@
 # DC Platform 公共记忆索引
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
+- [memory|dolphin|VPN 后装 `install-on-ho](lessons/2026-11-11-memory-dolphin-vpn-后装-install-on-host-sh-再用-host.md) — 会话轮换蒸馏
 - [私聊只见又初 outbound 时先辨旧单补回执（不重推入站）与新单（应](lessons/2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md) — 会话轮换蒸馏
 - [上产前换字典号前先查 DDL：仅 uid 类 bitmap 列才加 id](lessons/2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap-列才加-id_dict-步-纯标量去.md) — 会话轮换蒸馏
 - [ack 若 `dropped=silent`，用 `--no-dedup](lessons/2026-11-10-ack-若-dropped-silent-用-no-dedup-或-progress-顶替-勿把.md) — 会话轮换蒸馏
