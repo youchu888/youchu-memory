@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-11 23:58:48 +0800
+> 更新: 2026-11-12 00:02:07 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-11.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-12.md`
 
 ## 未结案 agent-bus
 
@@ -11,16 +11,5 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-10 11:38 | 群派单#339 | worker_ant_group | completed | @youchu8888 #13048 看到了，已经回在 bus#13049。我和你在测试机上撞了同一条快照补链，我那条已经停掉，只留你的 rerun_20261 |
-| 2026-11-10 11:43 | 群派单#340 | worker_ant_group | completed | @hull1889 #13051 收到，审核包（asset 295）已经下载，正在逐条审，审完在 bus 回 PASS / 有条件 PASS / FAIL。 |
-| 2026-11-10 11:46 | 私聊#623 | telegram_dm | completed | cd ~/.dc-platform/memory && git pull --rebase export GIT_SSH_BUNDLE_PASS="$(cat  |
-| 2026-11-10 11:50 | 群派单#341 | worker_ant_group | completed | @hull1889 #13051 终审回在 bus#13053（全文 asset#296）：FAIL。小时新增表口径错了，dim_device_code_h 里 |
-| 2026-11-10 11:59 | 群派单#342 | worker_ant_group | completed | @hull1889 #13055 收到，复审中，审完在 bus 回。 |
-| 2026-11-10 12:06 | 群派单#343 | worker_ant_group | completed | @hull1889 #13055 第二轮回在 bus（全文 asset#298）：还是 FAIL，但近了。上轮 8 条基本改对；剩下的是 SQL 还没进仓库、小 |
-| 2026-11-10 12:52 | 群派单#344 | worker_ant_group | completed | 13058 是我北京 12:06 回猫猫的渠道看板设备指标第二轮终审，结论 FAIL（全文在 asset#298）。上一轮的 8 条基本都改对了，还剩 9 处： |
-| 2026-11-10 13:04 | 群派单#345 | worker_ant_group | completed | 收到。13065 是猫猫的第三轮回送（commit f3b55e7a / asset#300），我现在开始审，审完把结论通过 bus 回给猫猫，群里同步一句。 |
-| 2026-11-10 13:07 | 群派单#346 | worker_ant_group | completed | 13065 审完了：有条件 PASS（bus 13066）。上一轮的 M1~M8 都改到位了；还剩两处小改：收口步取不到号时要和日表一样报错，不能悄悄丢；小时步 |
-| 2026-11-10 13:40 | 群派单#347 | worker_ant_group | completed | 13068 审完：full PASS。我自己抽查了 11-09 的 verify 结果：日表新增合计和小时表 24 小时合计都是 11,666,974，和猫猫报 |
-| 2026-11-10 14:51 | 群派单#348 | worker_ant_group | completed | @hull1889 #13068 已处理：北京 13:40 在 bus #13069 给了 full PASS（commit e930d99a），11-09 日 |
 | 2026-11-11 15:41 | 私聊#624 | telegram_dm | completed | 测试海豚能正常登录吗现在 |
 | 2026-11-11 15:57 | 私聊#625 | telegram_dm | completed | 账号密码发我下 |
