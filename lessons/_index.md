@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-11 | [测试调度 keepRunning 一夜复查通过 · 日常维护归又初](./2026-11-11-bus13107-测试调度keepRunning一夜复查通过-日常维护归又初.md) | pipeline-runner,keepRunning,duty,bus13107 | 系统改造归狂人；日常维护归又初；120min不等/挂账续跑已验 |
 | 2026-11-11 | [memory|dolphin|VPN 后装 `install-on-host.s](./2026-11-11-memory-dolphin-vpn-后装-install-on-host-sh-再用-host.md) | testcluster-ssh,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-10 | [私聊只见又初 outbound 时先辨旧单补回执（不重推入站）与新单（应有 🐜 ](./2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md) | tg-mirror,agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-10 | [上产前换字典号前先查 DDL：仅 uid 类 bitmap 列才加 id_dic](./2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap-列才加-id_dict-步-纯标量去.md) | uid-dict,spark,ddl,session-rotate | 会话轮换前自动蒸馏 |

@@ -8,7 +8,7 @@
 - [ ] **bus#11677 改口径（废 #11627 历史补数）**：知秋 10-28 定——**test 不再追补历史**（不对就不对）；上线任务跟当前进度、有数即可。#11627「rerun 后补归因看板/无候选、渠道日指标、渠道汇总、部门周月/产品周」清单**作废**，不补 10-23 前。狂人：等设备补数+dim_user（dim_user 17:30 已完；设备今晚到 10-27）→ 只了结旧挂账格、不补中间空档 → 回执哪些线出当天数；**又初届时按当天分区查**，禁催历史补数/第二份 rerun。lesson=`2026-10-28-test不再追补历史-废11627补数清单-bus11677.md`。
 
 - [ ] **bus#11621 定案（挂载仍有效）**：test spark_migrate 又初 S4 五步自挂；禁手改 full_chain/prod；渠道周月不挂；Paimon DDL 建前发狂人核。**历史水位追平/补 10-22 前已废**（见 #11677）；查数改等狂人报「当天有数」后按当天分区。lesson=`2026-10-27-S4测试五步自挂-禁手改full_chain-补数日不晚于追平水位.md`。
-- [ ] **pipeline-runner 值班（知秋·bus#11439）**：又初看调度器；`runner_` 告警抄送；SOP=`lessons/2026-10-24-pipeline-runner调度器值班与补数红线-bus11429.md`；次日 08:30 前 bus 汇总狂人；红线先报。
+- [ ] **测试调度日常维护（知秋 11-10 / bus#13107）**：又初维护；狂人改系统。`keepRunning=true`（失败3/FATAL→SKIPPED；槽位120min未就绪不等；挂账>24h→SKIPPED）+ `sqlTextOverride`（user/device snap 断链读最近分区）。一夜复查通过(11-11 08:30)：小时跟到08、`11-11#00`日结05:43。日志=`/home/ec2-user/pipeline-runner/logs/fullchain_daemon_20261110_115207.log`。系统 bug 找狂人。lesson=`2026-11-11-bus13107-测试调度keepRunning一夜复查通过-日常维护归又初.md`。
 - [ ] **归因 result 影子切正式（bus#10921/#10922/#10936）**：计划认可；**D1=10-21 起每天日结**经 bus 发狂人；剧本 `ops_system/00.pipeline/recon/recon_register_attribution_result_shadow_vs_formal.sql`；7 天对平后报切停海豚 `174729603403591`；配置类差先报。另：压测 wf `wf_dws_归因_paimon_shadow_日` 的 `result_d_r` 已按知秋定停（bus#11232，`flag=NO`）；同 wf apply/metrics 仍开，是否同停等知秋。
 
 - [ ] **dim_channel_info_all_snap**：JDBC/SR 换源已停手（#11164）。**现网 SQL 以 `3ce1c124` 的 `dim_channel_info_all_sync.sql` md5 `68ebf206`（00 槽日快照）为准**（#11175）；勿再推 `230fa1fb`。**prod SR `dim.dim_channel_info_all`=0、prod snap 无分区**（#11251 复核）；卡业务后台写产。BitmapUdf 中间态以 Kryo 为准。
