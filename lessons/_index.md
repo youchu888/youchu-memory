@@ -3,6 +3,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-12 | [ACK 若 silent drop 须核对发送记录；无责范围写清边界再 repl](./2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-12 | [小时挂用户属性仅用 `dwm_user_attr_intraday_d_d` d](./2026-11-12-小时挂用户属性仅用-dwm_user_attr_intraday_d_d-dt-d-禁小时读-d.md) | etl,hourly,user_attr,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-12 | [test 登录验收=UI 200 + API 拉项目；账号密码只走配置源，不入公](./2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码只走配置源-不入公共记忆明文.md) | dolphin,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-11 | [测试调度 keepRunning 一夜复查通过 · 日常维护归又初](./2026-11-11-bus13107-测试调度keepRunning一夜复查通过-日常维护归又初.md) | pipeline-runner,keepRunning,duty,bus13107 | 系统改造归狂人；日常维护归又初；120min不等/挂账续跑已验 |
 | 2026-11-11 | [memory|dolphin|VPN 后装 `install-on-host.s](./2026-11-11-memory-dolphin-vpn-后装-install-on-host-sh-再用-host.md) | testcluster-ssh,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-10 | [私聊只见又初 outbound 时先辨旧单补回执（不重推入站）与新单（应有 🐜 ](./2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md) | tg-mirror,agent-bus,session-rotate | 会话轮换前自动蒸馏 |

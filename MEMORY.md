@@ -5,6 +5,9 @@
 # DC Platform 公共记忆索引
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
+- [ACK 若 silent drop 须核对发送记录；无责范围写清边界再 ](lessons/2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md) — 会话轮换蒸馏
+- [小时挂用户属性仅用 `dwm_user_attr_intraday_d_](lessons/2026-11-12-小时挂用户属性仅用-dwm_user_attr_intraday_d_d-dt-d-禁小时读-d.md) — 会话轮换蒸馏
+- [test 登录验收=UI 200 + API 拉项目；账号密码只走配置源](lessons/2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码只走配置源-不入公共记忆明文.md) — 会话轮换蒸馏
 - [memory|dolphin|VPN 后装 `install-on-ho](lessons/2026-11-11-memory-dolphin-vpn-后装-install-on-host-sh-再用-host.md) — 会话轮换蒸馏
 - [私聊只见又初 outbound 时先辨旧单补回执（不重推入站）与新单（应](lessons/2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md) — 会话轮换蒸馏
 - [上产前换字典号前先查 DDL：仅 uid 类 bitmap 列才加 id](lessons/2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap-列才加-id_dict-步-纯标量去.md) — 会话轮换蒸馏

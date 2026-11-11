@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 11 12 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md` | 2026-11-12-ack-若-silent-drop-须核对发送记录-无责范 |
+| ## 11 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-12-小时挂用户属性仅用-dwm_user_attr_intraday_d_d-dt-d-禁小时读-d.md` | 2026-11-12-小时挂用户属性仅用-dwm_user_attr_intra |
+| ## 11 12 200 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码只走配置源-不入公共记忆明文.md` | 2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码 |
+| 60 ack bus dropped reply sent.json | `sessions/tg-rotate-2026-11-12-0604.md` | 收到 bus 派单：60 秒内 ACK → 实干 → reply 结案；ACK  |
+| uid_code vip 上日 先跑 册时 再被 | `sessions/tg-rotate-2026-11-12-0604.md` | 日间表可直接取：渠道、注册时刻、地区、设备、VIP、uid_code；编排上日间 |
+| dim_user_snap snap snap_dt 「小 」作 仍用 | `sessions/tg-rotate-2026-11-12-0604.md` | 旧说明「小时先 snap D-1 再叠日间表」作废；天任务仍用 `dim_use |
+| app_id dim.dim_user_snap dt dwm.dwm_user | `sessions/tg-rotate-2026-11-12-0604.md` | **小时任务挂用户属性（知秋已定）**：只读 `dwm.dwm_user_att |
+| api test ui 交付 从仓 从仓库内 | `sessions/tg-rotate-2026-11-12-0604.md` | 私聊要账号密码：从仓库内 test 海豚配置核对后回复；回复前宜先 UI/API |
+| 12345 admin dolphin dolphinscheduler hos | `sessions/tg-rotate-2026-11-12-0604.md` | 测试海豚入口形态：`http://<test-host>:12345/dolph |
+| prompt tg 「当 与末 令与 免复 | `sessions/tg-rotate-2026-11-12-0604.md` | 大号 TG prompt 文件：读开头指令与末尾「当前问题」，直接答问题，避免复 |
+| 200）+ api dolphinscheduler ht login mc | `sessions/tg-rotate-2026-11-12-0604.md` | 验「测试海豚能否登录」应双线：`/dolphinscheduler/ui/log |
+| dim_user_snap dt dwm_user_attr_intra dwm | `sessions/tg-rotate-2026-11-12-0604.md` | [LESSON: etl,hourly,user_attr/小时挂用户属性仅用  |
+| join owner reply snap」+ sql 「名 | `sessions/tg-rotate-2026-11-12-0604.md` | 跨 owner 小时 SQL 仍可能旧口径：本名下无改动则 reply 写清「名 |
+| dim_user_snap 一次 亿行 任务 全扫 八亿 | `sessions/tg-rotate-2026-11-12-0604.md` | `dim_user_snap` 单分区约十八亿行，小时任务每格全扫一次约多花 3 |
+| app_id dim.dim_user_snap dt dwm.dwm_user | `sessions/tg-rotate-2026-11-12-0604.md` | 小时任务挂用户属性（知秋已定）**：只读 `dwm.dwm_user_attr_ |
 | ## 11 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-11-11-memory-dolphin-vpn-后装-install-on-host-sh-再用-host.md` | 2026-11-11-memory-dolphin-vpn-后装-install |
 | do dolphin」可收成三步清单汇报 hi host in instal | `sessions/tg-rotate-2026-11-11-0603.md` | 私聊派活「同步记忆 + 装 SSH + 验 dolphin」可收成三步清单汇报： |
 | bigdata dev dolphinscheduler hostname ok | `sessions/tg-rotate-2026-11-11-0603.md` | 验通期望：`hostname` → `dolphinscheduler-2`，` |
@@ -30,18 +45,3 @@
 | ack agent bus dedup dropped lesson | `sessions/tg-rotate-2026-11-10-0602.md` | [LESSON: agent-bus,tg/ack 若 `dropped=sil |
 | dd.md mm reports yyyy 上传 不动 | `sessions/tg-rotate-2026-11-10-0602.md` | 日报云端上传**：以已定稿 `reports/日报-YYYY-MM-DD.md` |
 | ## 09 11 2026 @斯 @斯科特 | `~/.dc-platform/memory/lessons/2026-11-09-禁止-不在当前群的人-斯科特不在群-fanout-flink-升级改走有权限的人或-bus-禁止.md` | 2026-11-09-禁止-不在当前群的人-斯科特不在群-fanout-flin |
-| 任务 免只 再落 再落规则并回应 则并 务可 | `sessions/tg-rotate-2026-11-09-0601.md` | 纠正类任务可先 **核对近期是否误 @**，再落规则并回应，避免只空口答应。 |
-| #6 #619）应 19 61 9） 主人 | `sessions/tg-rotate-2026-11-09-0601.md` | 主人私聊纠正（如 #619）应 **落成可复用规则**（群 @ 边界），并在回复 |
-| cursor prompt tg 「先 「当 」时 | `sessions/tg-rotate-2026-11-09-0601.md` | TG/Cursor 收到「先读某 prompt 再答末尾问题」时：读 **启动包 |
-| age agent bus fanout flink infra | `sessions/tg-rotate-2026-11-09-0601.md` | **Fanout / Flink 升级** 等需权限或 infra 介入的事项： |
-| 18 88 8） _1 co ot | `sessions/tg-rotate-2026-11-09-0601.md` | **斯科特（scott_188）不在相关群**：群内沟通、协作请求 **不得 @ |
-| @斯 @斯科特 bus fanout flink lesson | `sessions/tg-rotate-2026-11-09-0601.md` | [LESSON: 群聊@ / 禁止 @ 不在当前群的人；斯科特不在群，Fanou |
-| prompt 「当 」要 不要 不要只复述 全文 | `sessions/tg-rotate-2026-11-09-0601.md` | 对末尾「当前问题」要 **直接答复**，不要只复述 prompt 全文。 |
-| agent bus fanout flink infra 不要 | `sessions/tg-rotate-2026-11-09-0601.md` | Fanout / Flink 升级** 等需权限或 infra 介入的事项：走  |
-| 不在 不在当前群成员 先确 先确认对方是否在群 再决 再决定是否 | `sessions/tg-rotate-2026-11-09-0601.md` | 群里 **禁止 @ 不在当前群成员**：先确认对方是否在群，再决定是否 @。 |
-| ## 08 11 2026 agent_session_rotate code | `~/.dc-platform/memory/lessons/2026-11-08-upload-上传前锁定定稿文件-禁止改字-仅主人要求-上传云端-时跑脚本-成功回-code-与.md` | 2026-11-08-upload-上传前锁定定稿文件-禁止改字-仅主人要求-上 |
-| ## 08 11 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-08-p0-lake-ack-后只做只读复现-业务小时漏量核对-升级回执-挂账任务按-探针放行自续-处.md` | 2026-11-08-p0-lake-ack-后只做只读复现-业务小时漏量核对- |
-| ## 08 11 2026 @斯 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-08-sr-normal-paimon-stuck-先比-paimon-表最晚-etl_time-与-.md` | 2026-11-08-sr-normal-paimon-stuck-先比-pai |
-| 03 escalation etl p0 「只 一并 | `sessions/tg-rotate-2026-11-08-0600.md` | **P0 复测**：二次停写时记录「只出一批又停」、距最晚 `etl` 的无提交 |
-| 18 88 8） @斯 @斯科特（scott_188） _1 | `sessions/tg-rotate-2026-11-08-0600.md` | **无 Fanout 权限**：不擅自动 Fanout/Flink；**群里 @ |
-| dwd_order_paid_d_r dwd_user_register_d_v | `sessions/tg-rotate-2026-11-08-0600.md` | **入湖停写判责**：对比 **Paimon**（注册 `dwd_user_re |
