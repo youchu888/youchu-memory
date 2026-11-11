@@ -501,3 +501,4 @@
 - 2026-10-27 test挂载通扫/等上游非缺步/daemon不回头补 → lessons/2026-10-27-test-spark_migrate挂载通扫-等上游非缺步-daemon不回头补.md
 
 - 2026-10-27 S4测试五步自挂/禁手改full_chain/补数≤追平水位 → lessons/2026-10-27-S4测试五步自挂-禁手改full_chain-补数日不晚于追平水位.md
+- [小时挂用户属性只读日间表](lessons/2026-11-11-bus13145-小时挂用户属性只读日间表-禁dim_user_snap.md) — bus#13145；禁 dim_user_snap；天任务仍 snap
