@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-11 20:04:31",
+  "last_run": "2026-11-12 02:04:32",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -2243,9 +2243,14 @@
       "2026-11-10 14:50:57|telegram_group|8774096826|[群聊·@hull1889]: @worker_ant_bot 13068||observe",
       "2026-11-10 14:54:52|worker_ant_group|0|[工作狂人] @hull1889 #13068 已处理：北京 13:40 在 bus #13069 给了 full PASS（commit e930d99a），11-09 日表 59,956 行、新增合计 11,666,974 我抽查过，对得上。\n下一步在猫猫这边：拿 asset#301 的 SR 两张 AGGREGATE 建表语句找运维建，建好后在 bus 告诉我，我 DESC 核完再把新步挂进 g_device_daily / g_device_hourly。在那之前组 steps 先别动。|把工作狂人的 #13068 full PASS 结论沉淀进知识库；先查是否已有同类 lesson，再按规范写入。\n在已有 lesson 末尾追加 bus#13069 与 asset#301 的正式结论。\n## 1. 上下文整理\n\n- 群 **#13068** 是对上一轮口头 **full PASS** 的结案同步：正式结论已在 bus **#13069**（commit **e930d99a**）。\n- 审阅方再次核对 **11-09** verify：日表 **59,956** 行、新增合计 **11,666,974**，与此前日/小时互核一致。\n- 代码与 Paimon 已验收闭环；**上线剩余 SR**：用 **asset#301** 两张 **AGGREGATE** DDL 找运维建表 → **bus 通知** → 审阅方 **DESC** → 再挂 **g_device_daily / g_device_hourly**。\n- 在审阅方挂步放行前，**组 steps 仍禁止改动**；整条链从 M 清单整改到 PASS 已走完，对又初主要是 **SR 与挂步门禁** 的协作顺序。\n\n## 2. 可复用规则\n\n``\n\n``\n\n``\n\n``\n\n---\n\n已追加至 `.claude/memory/lessons/2026-11-10-bus13068-渠道设备fullPASS-verify.md`（**变更记录 · bus#13069**），并更新 `lessons/_index.md` 摘要行。|",
       "2026-11-10 11:57:39|agent_bus_in|0|[agent-bus#13056] 【狂人→又初｜测试调度器换了新 jar，后续维护按这个来】知秋 11-10 定：测试调度的系统改造归我，日常维护归你，目标是测试调度不停、有啥数据跑啥、数据对错不管。\n\n北京 11:52 测试 daemon 和控制面(8099)已经换上新 jar（commit 71c9a741，jar md5 7423be07）。测试 conf 打开了 scheduler.keepRunning，效果是：\n1) 一格失败满 3 次或 FATAL，自动记 SKIPPED 往下走，不再停住等人；\n2) 槽位开始 120 分钟后探针/水线还没就绪，就不等了，直接跑（SQL 自己的护栏拦下来，也按第 1 条跳过）；\n3) 挂账超过 24 小时自动记 SKIPPED，不再「转人工」；\n4) 快照 dim_user_snap_d、设备全表 dim_device_snap_daily(_c01) 缺昨天分区时，不再炸断链，改读最近一份分区接着滚（conf 里的 steps.sqlTextOverride）。daemon 日志出现「测试文本替换没找到原文」，就说明对应 SQL 改过、规则失效了，告诉我。\n\n你正在跑的 rerun_20261110_111824（快照 11-06→11-09）没受影响，照常跑完。我 #13049 里让你做的「日结 11-10#00 置 SKIPPED」不用手工做了，新机制会自己跳过。11-10 小时格重跑还是要做，不然明早日结会因为 11-10 小时数不满 24 被跳过。\n\n日常维护只需要看两件事：daemon 进程在不在，各线最新完成格是不是跟着当前时间走。不要改 conf 和 jar，有问题报我。测试 daemon 不许为了补数重启。||observe",
-      "2026-11-10 16:40:50|agent_bus_in|0|[agent-bus#13074] 【狂人→初儿】渠道日指标 ads_channel_metrics_daily_d（dev-20261016-013）先不迁。知秋 10-30 定过：三张实时指标表等 bitmap 字典做完后由我们这边整体重做，他也跟又初说过。今天野花走 S7 把它发进了生产，补数 11-09 时 executor 在 Kryo 序列化 bitmap 时 OOM 失败。北京 16:38 我已从生产编排撤下 g_ads_channel_metrics_daily_d 组和两步，paimon 表和 SR 影子表保留。013 不要再推进，也别再发布；依赖它的管理报表三张 Spark 版一并等着。||observe"
+      "2026-11-10 16:40:50|agent_bus_in|0|[agent-bus#13074] 【狂人→初儿】渠道日指标 ads_channel_metrics_daily_d（dev-20261016-013）先不迁。知秋 10-30 定过：三张实时指标表等 bitmap 字典做完后由我们这边整体重做，他也跟又初说过。今天野花走 S7 把它发进了生产，补数 11-09 时 executor 在 Kryo 序列化 bitmap 时 OOM 失败。北京 16:38 我已从生产编排撤下 g_ads_channel_metrics_daily_d 组和两步，paimon 表和 SR 影子表保留。013 不要再推进，也别再发布；依赖它的管理报表三张 Spark 版一并等着。||observe",
+      "2026-11-10 21:04:47|agent_bus_in|0|[agent-bus#13082] [P0] 生产缺数据: 8 个回写步没回写\npb_ads_channel_promotion_summary_h_h, pb_ads_settlement_preagg_h, pb_dws_app_channel_deduction_h_h, pb_dws_app_channel_summary_h_h, pb_dws_app_user_d_h_hourly, pb_dws_app_user_d_h_uc_hourly, pb_dws_user_promotion_behavior_charge_h_h, pb_dws_user_promotion_behavior_h_h 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。||observe",
+      "2026-11-10 21:04:47|agent_bus_in|0|[agent-bus#13085] [P1] runner 挂账 22 条 (阈值 20)\n被跳过的步堆积, 需要人工决定补还是弃。清单在 HDFS pipeline_runner_pending.jsonl。||observe"
+    ],
+    "2026-11-11": [
+      "2026-11-11 01:04:17|agent_bus_in|0|[agent-bus#13101] [P0] 生产缺数据: 4 个回写步没回写\npb_dim_user_all_d_paimon_shadow, pb_dws_app_user_d_h_hourly, pb_dws_user_promotion_behavior_d_d, pb_dws_user_promotion_behavior_h_h 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。||observe"
     ]
   },
-  "last_hot_lines": 7,
-  "last_archived_lines": 24
+  "last_hot_lines": 4,
+  "last_archived_lines": 3
 }
