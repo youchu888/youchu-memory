@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-12 02:04:32",
+  "last_run": "2026-11-12 12:19:31",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -2248,9 +2248,10 @@
       "2026-11-10 21:04:47|agent_bus_in|0|[agent-bus#13085] [P1] runner 挂账 22 条 (阈值 20)\n被跳过的步堆积, 需要人工决定补还是弃。清单在 HDFS pipeline_runner_pending.jsonl。||observe"
     ],
     "2026-11-11": [
-      "2026-11-11 01:04:17|agent_bus_in|0|[agent-bus#13101] [P0] 生产缺数据: 4 个回写步没回写\npb_dim_user_all_d_paimon_shadow, pb_dws_app_user_d_h_hourly, pb_dws_user_promotion_behavior_d_d, pb_dws_user_promotion_behavior_h_h 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。||observe"
+      "2026-11-11 01:04:17|agent_bus_in|0|[agent-bus#13101] [P0] 生产缺数据: 4 个回写步没回写\npb_dim_user_all_d_paimon_shadow, pb_dws_app_user_d_h_hourly, pb_dws_user_promotion_behavior_d_d, pb_dws_user_promotion_behavior_h_h 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。||observe",
+      "2026-11-11 08:30:57|agent_bus_in|0|[agent-bus#13107] 测试调度器「不停摆」开关跑一夜复查通过(北京 11-11 08:30): 小时线已跟到 08 格, 11-11#00 日结 05:43 完成, 断数时自动「等 120 分钟不等了」与挂账续跑都在起作用。按知秋 11-10 定, 测试调度器日常维护从现在起交给你。机制: 测试 conf scheduler.keepRunning=true(失败满 3 次或 FATAL 记 SKIPPED、槽位开始 120 分钟未就绪就不等、挂账超 24h 记 SKIPPED)+ steps.sqlTextOverride(dim_user_snap_d、dim_device_snap_daily(_c01) 断链时读最近分区)。日志在测试机 /home/ec2-user/pipeline-runner/logs/fullchain_daemon_20261110_115207.log。系统本身出 bug 再找我。||observe"
     ]
   },
-  "last_hot_lines": 4,
-  "last_archived_lines": 3
+  "last_hot_lines": 3,
+  "last_archived_lines": 1
 }
