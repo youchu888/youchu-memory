@@ -3,6 +3,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-13 | [超大 TG prompt 只认末尾「当前问题」为执行口径，大文件先跳读尾段再动手](./2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径-大文件先跳读尾段再动手.md) | tgbot-prompt,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-13 | [影子表运维 ALTER 回执须 prod 只读核列数与六列名序，再 `agent](./2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列名序-再-agent_bus_send.md) | agent-bus,sr-shadow,ddl-receipt,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-12 | [ACK 若 silent drop 须核对发送记录；无责范围写清边界再 repl](./2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-12 | [小时挂用户属性仅用 `dwm_user_attr_intraday_d_d` d](./2026-11-12-小时挂用户属性仅用-dwm_user_attr_intraday_d_d-dt-d-禁小时读-d.md) | etl,hourly,user_attr,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-12 | [test 登录验收=UI 200 + API 拉项目；账号密码只走配置源，不入公](./2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码只走配置源-不入公共记忆明文.md) | dolphin,session-rotate | 会话轮换前自动蒸馏 |

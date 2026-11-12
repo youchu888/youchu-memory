@@ -5,6 +5,15 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 11 13 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径-大文件先跳读尾段再动手.md` | 2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径- |
+| ## 11 13 2026 agent agent_bus_send | `~/.dc-platform/memory/lessons/2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列名序-再-agent_bus_send.md` | 2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列 |
+| #1 13 26 32 3「 63 | `sessions/tg-rotate-2026-11-13-0605.md` | 类似 bus#13263「影子 ALTER 已跑完 → 告知狂人」：先查库后发言 |
+| #1 #13275）与所回复 13 27 32 5） | `sessions/tg-rotate-2026-11-13-0605.md` | 正文对外写业务主人名（知秋），技术上记清新 outbound bus id（如  |
+| 35 dws.dws_register_attribution_result_d | `sessions/tg-rotate-2026-11-13-0605.md` | 本例验收表：`dws.dws_register_attribution_resu |
+| bus create ddl prod sho show | `sessions/tg-rotate-2026-11-13-0605.md` | SR 影子表 DDL 完工回执前：prod 只读轻量验收——列总数 + 目标列名 |
+| agent_bus_send.py al bus bus#13263） er i | `sessions/tg-rotate-2026-11-13-0605.md` | 运维回执类任务（如「alter 六句已执行」）：出口统一走 `agent_bus |
+| bus dedup id no reply to | `sessions/tg-rotate-2026-11-13-0605.md` | 对同一 `reply-to-bus-id` 的实质回执若被出站去重拦截，可用 ` |
+| .md cursor prompt tg 「当 件并 | `sessions/tg-rotate-2026-11-13-0605.md` | TG/Cursor 派活带大 `prompt_*.md` 时：先读启动包，再通读 |
 | ## 11 12 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md` | 2026-11-12-ack-若-silent-drop-须核对发送记录-无责范 |
 | ## 11 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-12-小时挂用户属性仅用-dwm_user_attr_intraday_d_d-dt-d-禁小时读-d.md` | 2026-11-12-小时挂用户属性仅用-dwm_user_attr_intra |
 | ## 11 12 200 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码只走配置源-不入公共记忆明文.md` | 2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码 |
@@ -36,12 +45,3 @@
 | assign bitmap cand dict id_dict impl | `sessions/tg-rotate-2026-11-10-0602.md` | **Spark 上产前 uid 字典号**：落表 **uid 类 bitmap* |
 | 22 denied hadoop permission rm（8088 rm） | `sessions/tg-rotate-2026-11-10-0602.md` | **测试机 SSH**：`root@43.213.29.105` 公钥未授权时  |
 | #1 10 12 26 27 29 | `sessions/tg-rotate-2026-11-10-0602.md` | **测试环境塌量（#12984）**：test SR `dw.dw_user_e |
-| ack bus dedup dropped kind no | `sessions/tg-rotate-2026-11-10-0602.md` | **bus 派单 ACK**：`kind=ack` 可能被服务端 **`drop |
-| .dc bash git.sh hosts log mac | `sessions/tg-rotate-2026-11-10-0602.md` | **双机 memory 同步**：主人点名在 **old-mac** 跑 `ba |
-| dd.md mm reports yyyy 上传 不动 | `sessions/tg-rotate-2026-11-10-0602.md` | **日报云端上传**：以已定稿 `reports/日报-YYYY-MM-DD.m |
-| bus id incoming mirroring tg 上翻 | `sessions/tg-rotate-2026-11-10-0602.md` | **对单条 bus**：查 `incoming bus=<id> → TG` 日 |
-| lesson tg 不进 人原 初回 原文 | `sessions/tg-rotate-2026-11-10-0602.md` | **认 TG 标题**：🐜 = 狂人原文；📤 = 又初回执/结案；心跳 / le |
-| 6h ack bus cutoff） outbound status_mirro | `sessions/tg-rotate-2026-11-10-0602.md` | **TG `status_mirror`**：狂人 bus 入站会先私聊 `🐜  |
-| ack agent bus dedup dropped lesson | `sessions/tg-rotate-2026-11-10-0602.md` | [LESSON: agent-bus,tg/ack 若 `dropped=sil |
-| dd.md mm reports yyyy 上传 不动 | `sessions/tg-rotate-2026-11-10-0602.md` | 日报云端上传**：以已定稿 `reports/日报-YYYY-MM-DD.md` |
-| ## 09 11 2026 @斯 @斯科特 | `~/.dc-platform/memory/lessons/2026-11-09-禁止-不在当前群的人-斯科特不在群-fanout-flink-升级改走有权限的人或-bus-禁止.md` | 2026-11-09-禁止-不在当前群的人-斯科特不在群-fanout-flin |
