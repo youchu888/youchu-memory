@@ -497,3 +497,5 @@
 | 2026-11-05 | [11-03审核链-dwd_r-fanout-影子发产与工作簿分工](./2026-11-05-11-03审核链-dwd_r-fanout-影子发产与工作簿分工.md) | dwd_r,fanout,shadow,54556,workbook | first-row禁日批覆盖；03:00槽位；又初工作簿项 |
 | 2026-11-05 | [11-03审核链-dwd_r-fanout-影子发产与工作簿分工](./2026-11-05-11-03审核链-dwd_r-fanout-影子发产与工作簿分工.md) | dwd_r,fanout,shadow,54556,workbook | first-row禁日批覆盖；03:00槽位；又初工作簿项 |
 | 2026-11-11 | [2026-11-11-bus13145-小时挂用户属性只读日间表-禁dim_user_snap.md](./2026-11-11-bus13145-小时挂用户属性只读日间表-禁dim_user_snap.md) | hourly,dim_user_snap,intraday | 小时挂属性只读日间表；禁 snap；天任务仍 snap_dt=D |
+
+- 2026-11-12-bus13228-归因影子补6列与rewrite派生-海豚未迁派出.md | attribution,shadow,rewrite,migrate | bus#13228 影子6列+rewrite派生；未迁派出通用规则
