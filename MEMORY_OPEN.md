@@ -5,7 +5,7 @@
 > 更新：2026-10-28
 
 ## 进行中
-- [ ] **bus#13228 海豚未迁全派出 / 已迁尽快切（又初 9 张）**：待迁 `ads_channel_summary_d`（禁读作废 retention）、dept/product 周月 bitmap×4、`ads_register_attribution_board/no_candidate`；影子修切 `dws_register_attribution_result_d`（6 列+rewrite 派生）/`dws_app_page_visit_d_d`（停留四列+uid_cnt 字典号 bitmap）。通用：runner、影子并行、字典号禁 hash64、全键 FULL JOIN 分类闭合、prod SR 轻量、用户维用 dim_user_snap。交付 SQL+step+影子DDL+首日核对，产编排狂人部署。进度：认领 ETA 已回；test 影子已 ALTER 6 列；`attr_rewrite_status.sql`+pushback 已落；prod SR 影子 35 列+rewrite 两列知秋已核（bus#13291）；paimon 影子 ALTER+attr_rewrite 挂步待知秋白天审部署后回执。
+- [ ] **bus#13228 海豚未迁全派出 / 已迁尽快切（又初 9 张）**：待迁 `ads_channel_summary_d`（禁读作废 retention）、dept/product 周月 bitmap×4、`ads_register_attribution_board/no_candidate`；影子修切 `dws_register_attribution_result_d`（6 列+rewrite 派生）/`dws_app_page_visit_d_d`（停留四列+uid_cnt 字典号 bitmap）。通用：runner、影子并行、字典号禁 hash64、全键 FULL JOIN 分类闭合、prod SR 轻量、用户维用 dim_user_snap。交付 SQL+step+影子DDL+首日核对，产编排狂人部署。进度：认领 ETA 已回；test 影子已 ALTER 6 列；`attr_rewrite_status.sql`+pushback 已落；prod SR 影子 35 列+rewrite 两列知秋已核（bus#13291）；prod SR 影子知秋已核；attr_rewrite COALESCE 坑已修 push `250e94c0`（bus#13297），待知秋复跑比对通过后挂 g_day_close_all。
 - [ ] **bus#11677 改口径（废 #11627 历史补数）**：知秋 10-28 定——**test 不再追补历史**（不对就不对）；上线任务跟当前进度、有数即可。#11627「rerun 后补归因看板/无候选、渠道日指标、渠道汇总、部门周月/产品周」清单**作废**，不补 10-23 前。狂人：等设备补数+dim_user（dim_user 17:30 已完；设备今晚到 10-27）→ 只了结旧挂账格、不补中间空档 → 回执哪些线出当天数；**又初届时按当天分区查**，禁催历史补数/第二份 rerun。lesson=`2026-10-28-test不再追补历史-废11627补数清单-bus11677.md`。
 
 - [ ] **bus#11621 定案（挂载仍有效）**：test spark_migrate 又初 S4 五步自挂；禁手改 full_chain/prod；渠道周月不挂；Paimon DDL 建前发狂人核。**历史水位追平/补 10-22 前已废**（见 #11677）；查数改等狂人报「当天有数」后按当天分区。lesson=`2026-10-27-S4测试五步自挂-禁手改full_chain-补数日不晚于追平水位.md`。
