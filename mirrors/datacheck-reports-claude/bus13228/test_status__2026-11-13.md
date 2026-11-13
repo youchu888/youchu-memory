@@ -22,3 +22,7 @@
 1. 产编排部署（禁手改 prod full_chain）
 2. test `dws_register_attribution_result_d` 出数后试跑 `attr_rewrite_status` + board rewrite 全量
 3. A1 换源差是否接受「跟结算全量渠道」业务确认后切产
+
+## 补充（当晚）
+- A1 / B2 FULL JOIN 报告已落 `reports/`
+- 补跑 result：0 行（入围无候选），rewrite 仍无样可验

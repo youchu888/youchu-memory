@@ -14,3 +14,8 @@
 ## 下一步
 - 等 test 归因结果出数（或狂人补样）后再单跑 `attr_rewrite_status` + board 全量核对
 - 产编排挂组仍交狂人（禁手改 prod full_chain）
+
+## 2026-11-13 补跑 result
+- 单跑 `dws_register_attribution_result_d` 数据日 11-12：SUCCESS · `rows_out=0`
+- 入围 6，同 app+IP 落地页命中 0 → 末筛 `WHERE source_event_id IS NOT NULL` 写出为空（与 A7「全无落地」一致）
+- rewrite 仍无可派生行；非编排问题
