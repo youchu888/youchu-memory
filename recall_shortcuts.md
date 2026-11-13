@@ -5,6 +5,21 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 11 14 2026 agent_session_rotate bo | `~/.dc-platform/memory/lessons/2026-11-14-dc_cursor_bot-缺-cursor_shared_session-时不能代点-requ.md` | 2026-11-14-dc_cursor_bot-缺-cursor_shared |
+| ## 11 14 2026 agent_session_rotate commi | `~/.dc-platform/memory/lessons/2026-11-14-mcp-publish-仅-test-prod-海豚-sql-查-dolphin_ops-平台产.md` | 2026-11-14-mcp-publish-仅-test-prod-海豚-sq |
+| ## 11 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-14-publish_request_status-被降成-none-而-reviewer-备注仍在时.md` | 2026-11-14-publish_request_status-被降成-no |
+| bot cursor_share cursor_shared_session m | `sessions/tg-rotate-2026-11-14-0608.md` | **代点发布不可用**：他人 bot 代点「申请发布」若报 `No module |
+| 03 10 11 11）由主人另行安排 1） bus | `sessions/tg-rotate-2026-11-14-0608.md` | **产发闭环**：发完私聊/ bus 通知相关人（本例通知蓝猫）；补数日期（11 |
+| dolphin_ops pendin pending 一致 与门 主人 | `sessions/tg-rotate-2026-11-14-0608.md` | **主人授权 ≠ 绕过门禁**：即使授权 `dolphin_ops` 直发，平台 |
+| pending 「申 人监 会话 会话持有人 再发 | `sessions/tg-rotate-2026-11-14-0608.md` | **解半截态**：须 **会话持有人**（如蓝猫）在开发平台再点「申请发布」，审 |
+| false i_can_publish_prod none publish pu | `sessions/tg-rotate-2026-11-14-0608.md` | **半截 publish 态**：`publish_request_status |
+| running 下次 且距 余量 作流 全窗 | `sessions/tg-rotate-2026-11-14-0608.md` | **发前安全窗口**：查目标工作流下次调度与 RUNNING 实例，无在跑且距触 |
+| 100000000 6c85b3e3 and co commit（如 it | `sessions/tg-rotate-2026-11-14-0608.md` | **发前对齐仓库与现网**：以指定 commit（如 `6c85b3e3`）核对 |
+| scope spark 「只 」时 不扩 不批 | `sessions/tg-rotate-2026-11-14-0608.md` | **只发海豚、不扩 scope**：私聊明确「只发已有海豚任务」时，**不批** |
+| dolphin_ops mcp prod publish session_cod | `sessions/tg-rotate-2026-11-14-0608.md` | **产发 SQL 默认走平台**：MCP `publish-task-sql`  |
+| false i_can_publish_prod lesson none pub | `sessions/tg-rotate-2026-11-14-0608.md` | [LESSON: 产发门禁/publish_request_status 被降成 |
+| bot cursor_shared cursor_shared_session  | `sessions/tg-rotate-2026-11-14-0608.md` | 代点发布不可用**：他人 bot 代点「申请发布」若报 `No module n |
+| dolphin_ops pending 一致 与门 主人 主人授权 | `sessions/tg-rotate-2026-11-14-0608.md` | 主人授权 ≠ 绕过门禁**：即使授权 `dolphin_ops` 直发，平台会话 |
 | ## 11 13 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径-大文件先跳读尾段再动手.md` | 2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径- |
 | ## 11 13 2026 agent agent_bus_send | `~/.dc-platform/memory/lessons/2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列名序-再-agent_bus_send.md` | 2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列 |
 | #1 13 26 32 3「 63 | `sessions/tg-rotate-2026-11-13-0605.md` | 类似 bus#13263「影子 ALTER 已跑完 → 告知狂人」：先查库后发言 |
@@ -30,18 +45,3 @@
 | dim_user_snap 一次 亿行 任务 全扫 八亿 | `sessions/tg-rotate-2026-11-12-0604.md` | `dim_user_snap` 单分区约十八亿行，小时任务每格全扫一次约多花 3 |
 | app_id dim.dim_user_snap dt dwm.dwm_user | `sessions/tg-rotate-2026-11-12-0604.md` | 小时任务挂用户属性（知秋已定）**：只读 `dwm.dwm_user_attr_ |
 | ## 11 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-11-11-memory-dolphin-vpn-后装-install-on-host-sh-再用-host.md` | 2026-11-11-memory-dolphin-vpn-后装-install |
-| do dolphin」可收成三步清单汇报 hi host in instal | `sessions/tg-rotate-2026-11-11-0603.md` | 私聊派活「同步记忆 + 装 SSH + 验 dolphin」可收成三步清单汇报： |
-| bigdata dev dolphinscheduler hostname ok | `sessions/tg-rotate-2026-11-11-0603.md` | 验通期望：`hostname` → `dolphinscheduler-2`，` |
-| dolphinscheduler hostname ssh vpn whoami | `sessions/tg-rotate-2026-11-11-0603.md` | 连海豚/集群节点需先 VPN；验通用 `ssh dolphinscheduler |
-| .ssh dolphinscheduler exit host id_ed255 | `sessions/tg-rotate-2026-11-11-0603.md` | 安装脚本会写入 `Host dolphinscheduler-2` 与私钥 `~ |
-| && .dc cd git memory platform | `sessions/tg-rotate-2026-11-11-0603.md` | 双机记忆同步固定起手：`cd ~/.dc-platform/memory &&  |
-| bigdata de dev hadoop iu sudo | `sessions/tg-rotate-2026-11-11-0603.md` | 登录默认是 `bigdata-dev`；要跑 Hadoop/集群侧命令用 `su |
-| .d .dc bootstrap bundle.pass cat config | `sessions/tg-rotate-2026-11-11-0603.md` | testcluster SSH 本机安装：`export GIT_SSH_BUN |
-| .md mp om pr prompt prompt（如 | `sessions/tg-rotate-2026-11-11-0603.md` | TG 超长 prompt（如 `prompt_*.md`）先读开头指令与末尾「当 |
-| ## 10 11 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入站-与新单-应有-incoming-再.md` | 2026-11-10-私聊只见又初-outbound-时先辨旧单补回执-不重推入 |
-| ## 10 11 2026 agent_session_rotate bitma | `~/.dc-platform/memory/lessons/2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap-列才加-id_dict-步-纯标量去.md` | 2026-11-10-上产前换字典号前先查-ddl-仅-uid-类-bitmap |
-| ## 10 11 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-10-ack-若-dropped-silent-用-no-dedup-或-progress-顶替-勿把.md` | 2026-11-10-ack-若-dropped-silent-用-no-ded |
-| bigint bitmap ddl uid 不改 与编 | `sessions/tg-rotate-2026-11-10-0602.md` | **改前必核 DDL**：渠道日活、页面访问若仅为 **BIGINT 标量人数、 |
-| assign bitmap cand dict id_dict impl | `sessions/tg-rotate-2026-11-10-0602.md` | **Spark 上产前 uid 字典号**：落表 **uid 类 bitmap* |
-| 22 denied hadoop permission rm（8088 rm） | `sessions/tg-rotate-2026-11-10-0602.md` | **测试机 SSH**：`root@43.213.29.105` 公钥未授权时  |
-| #1 10 12 26 27 29 | `sessions/tg-rotate-2026-11-10-0602.md` | **测试环境塌量（#12984）**：test SR `dw.dw_user_e |

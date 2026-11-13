@@ -3,6 +3,9 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-14 | [dc_cursor_bot 缺 cursor_shared_session 时不](./2026-11-14-dc_cursor_bot-缺-cursor_shared_session-时不能代点-requ.md) | 蓝猫bot,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-14 | [MCP publish 仅 test；prod 海豚 SQL 查 dolphin](./2026-11-14-mcp-publish-仅-test-prod-海豚-sql-查-dolphin_ops-平台产.md) | dolphin_prod,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-14 | [publish_request_status 被降成 none 而 review](./2026-11-14-publish_request_status-被降成-none-而-reviewer-备注仍在时.md) | 产发门禁,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-13 | [超大 TG prompt 只认末尾「当前问题」为执行口径，大文件先跳读尾段再动手](./2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径-大文件先跳读尾段再动手.md) | tgbot-prompt,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-13 | [影子表运维 ALTER 回执须 prod 只读核列数与六列名序，再 `agent](./2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列名序-再-agent_bus_send.md) | agent-bus,sr-shadow,ddl-receipt,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-12 | [ACK 若 silent drop 须核对发送记录；无责范围写清边界再 repl](./2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md) | agent-bus,session-rotate | 会话轮换前自动蒸馏 |

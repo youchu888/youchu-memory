@@ -5,6 +5,9 @@
 # DC Platform 公共记忆索引
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
+- [dc_cursor_bot 缺 cursor_shared_sessio](lessons/2026-11-14-dc_cursor_bot-缺-cursor_shared_session-时不能代点-requ.md) — 会话轮换蒸馏
+- [MCP publish 仅 test；prod 海豚 SQL 查 dol](lessons/2026-11-14-mcp-publish-仅-test-prod-海豚-sql-查-dolphin_ops-平台产.md) — 会话轮换蒸馏
+- [publish_request_status 被降成 none 而 re](lessons/2026-11-14-publish_request_status-被降成-none-而-reviewer-备注仍在时.md) — 会话轮换蒸馏
 - [超大 TG prompt 只认末尾「当前问题」为执行口径，大文件先跳读尾](lessons/2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径-大文件先跳读尾段再动手.md) — 会话轮换蒸馏
 - [影子表运维 ALTER 回执须 prod 只读核列数与六列名序，再 `a](lessons/2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列名序-再-agent_bus_send.md) — 会话轮换蒸馏
 - [ACK 若 silent drop 须核对发送记录；无责范围写清边界再 ](lessons/2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md) — 会话轮换蒸馏
