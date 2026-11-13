@@ -20,6 +20,7 @@
 - [ ] **prod 海豚告警处置（new-mac 专责）**：2026-09-27 自动化已迁 new-mac；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
 - [ ] **记忆系统 P1 养成**：日清 22:50 已挂（`memory-daily-light-tidy`）；周 hygiene；沉前查重；纠正≥2 次写 PINNED。卡=`MEMORY_LIGHT.md`。
 - [ ] **页面访问 DWS 对接**：`ops_system/04.dws/dws_app_page_visit_d_d/` 本地改动未要求则先别 commit。
+- [ ] **bus#13359 明日产挂序（11-13 对齐）**：今晚不动产、不手改 prod。明早狂人先上 `g_dimuser_close`；B1 `attr_rewrite`@250e94c0 挂该组（snap_v2 后、pb_result 前）；A7/A6/A1 狂人比/核；B2 页面访问：狂人重建 paimon，又初找运维 DROP 重建 SR 影子 uid_cnt→BITMAP（`recreate_shadow_uid_bitmap.sql`）；A2–A5 不挂。
 
 ## 已结（勿再当未完写进自评/日报）
 
