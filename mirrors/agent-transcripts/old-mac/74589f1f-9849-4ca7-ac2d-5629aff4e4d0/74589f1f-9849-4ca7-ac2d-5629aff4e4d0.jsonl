@@ -211,3 +211,4 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"Shell","input":{"command":"rg -n \"chagang|catch-up|watching\" /tmp/tgbot-dc.log | tail -10","description":"Final chagang catch-up status"}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"已按「尽量像本窗口」再收了一遍，机器人已重启。\n\n这次砍掉的：\n\n- 私聊忙着时不再另开冷启动，排队接着上次会话（稍等可以，别再整段冷开）\n- 能接着聊时：不拼长提示、不灌历史、不对账当天消息\n- 私聊新开会话也不再全量对账；少塞一份工作区里本来就有的长文\n- 开跑前状态镜像不挡着；跑的时候只刷「正在输入」，不往聊天刷进度字\n\n和本窗口仍差一截的地方没法消掉：Telegram 这边每次还是要起一个命令行代理，答完才整段发回来；这边是已经热着的会话、边出字边看。\n\n另：刚才重启时查岗【雪】可能被补发过一次（直播回了却没记「已发」）。已修好，现在 catch-up 是 0。你可以直接发一条私聊试手感。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Saturday, Nov 14, 2026, 11:35 AM (UTC+8)</timestamp>\n<user_query>\n私聊忙着时不再另开冷启动，排队接着上次会话（稍等可以，别再整段冷开）\n\n这个不行，还是要保持原样，因为有时候可能会发多个任务过来，不能一直排队，\n</user_query>"}]}}
