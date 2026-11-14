@@ -21,8 +21,8 @@
 
 | 文件 | 用途 |
 |------|------|
-| `_ops_server_monitor_incident.md` | server_monitor prod 海豚告警处置（bus#7708） |
-| `_ops_dolphinscheduler_workflow_update.md` | DS 工作流 PUT / 补数 API SOP |
+| `_ops_server_monitor_incident.md` | server_monitor / prod FAIL 告警处置（非表级 datacheck） |
+| `_ops_dolphinscheduler_workflow_update.md` | 海豚 wf PUT / release / schedule SOP |
 | `dws.dws_register_attribution_gray_verify.md` | 灰度 app channel_apply 三条验收 |
 | `datacheck_layered_verification.md` | 套表逐层核查 |
 
