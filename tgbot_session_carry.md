@@ -1,10 +1,20 @@
 # TG 会话热携带（轮换沉淀 · 自动维护）
 
-> 更新：2026-11-14 · 最新归档：`sessions/tg-rotate-2026-11-14-0608.md`
+> 更新：2026-11-15 · 最新归档：`sessions/tg-rotate-2026-11-15-0637.md`
 > 用途：Cursor resume 清空后，新会话仍能继承关键铁律/结论。
 
 ## 携带要点
 
+- 日报必须先跑双机同步（`prepare_daily_report_sync.sh`），确认 `hosts/new-mac` 与 `hosts/old-mac` 当日 work-log 齐全后再写稿，禁止只扫本机会话就交稿。
+- 定稿后立刻 `post_daily_report_to_dm.py` 推 TG；对话里只确认「已推 + 路径」，禁止再贴全文（防双推）。
+- 「上传云端」与推 TG 分离：主人未说上传前不要自动传；说了则用**主人改定后的正文**覆盖本地定稿后，原样跑上传脚本，_upload 前不改字。
+- 主人改定日报后应对照初稿差异写 lesson，避免同类表述再犯（本会话：不宜把「等门禁」类外部卡点硬写进【死锁阻碍】）。
+- 【今日结果】按金样句式：任务名 + 做了什么 + 结果 +「已完成」；进度型工作可写阶段性同步，勿凑条、勿写机器人名。
+- 【死锁阻碍】/【专项复盘】默认留空；主人定稿里死锁为空时，表示当日无值得单列的内部死锁，不要因为「还在等门禁」就擅自填满死锁栏。
+- 【明日动作】可带截止日（如周一），写真实续作 TOP1/TOP2（地区地图门禁恢复后发海豚日 SQL；归因渠道比对通过后日结与影子重建待命）。
+- [LESSON: daily-report|【死锁阻碍】仅写当日明确应交未交的内部卡点；等门禁、等他人比对等外部依赖默认不写死锁，主人清空后须对照差异沉淀避免再硬塞]
+- work-log 偏薄时，用本机 agent transcript、派单溯源（`task_provenance.jsonl` 等）与 bus 回执交叉核对，只计又初本人有交付的实活。
+- 实时指标断流排查（prod 只读）：对比实时指标表停写时点与上游明细新鲜度；明细仍新、指标表自某时点停写 → 断点倾向实时写入作业，非上游明细。
 - 主人授权 ≠ 绕过门禁**：即使授权 `dolphin_ops` 直发，平台会话门禁仍可能拦；先恢复 `pending` 或确认直发路径与门禁一致。
 - 代点发布不可用**：他人 bot 代点「申请发布」若报 `No module named 'cursor_shared_session'`，走人工在平台点，勿指望 bot 闭环。
 - [LESSON: 产发门禁|publish_request_status 被降成 none 而 reviewer/备注仍在时 i_can_publish_prod=false；须会话持有人 request-publish，审核人只审不发产自救]
@@ -13,14 +23,4 @@
 - **发前对齐仓库与现网**：以指定 commit（如 `6c85b3e3`）核对仓库日 SQL；再对比现网海豚同任务 SQL，确认缺口（本例：`order_mapped` 缺 `AND o.amount < 100000000`）。
 - **发前安全窗口**：查目标工作流下次调度与 RUNNING 实例，无在跑且距触发有余量再发。
 - **半截 publish 态**：`publish_request_status=none` 但审核人/备注仍在 → `i_can_publish_prod=false`，带会话的产发会被拒；**审核人不能自点「申请发布」自救**。
-- **解半截态**：须 **会话持有人**（如蓝猫）在开发平台再点「申请发布」，审核人监视到 `pending` 后再发产。
-- **主人授权 ≠ 绕过门禁**：即使授权 `dolphin_ops` 直发，平台会话门禁仍可能拦；先恢复 `pending` 或确认直发路径与门禁一致。
-- **产发闭环**：发完私聊/ bus 通知相关人（本例通知蓝猫）；补数日期（11-03/10/11）由主人另行安排，不与发 SQL 混做。
-- **代点发布不可用**：他人 bot 代点「申请发布」若报 `No module named 'cursor_shared_session'`，走人工在平台点，勿指望 bot 闭环。
-- TG/Cursor 派活带大 `prompt_*.md` 时：先读启动包，再通读该文件并定位末尾「当前问题」；按问题执行，禁止只复述 prompt。
-- 对同一 `reply-to-bus-id` 的实质回执若被出站去重拦截，可用 `--no-dedup` 重发；仍须带可查证的核数结论，勿空「已知悉」。
-- 运维回执类任务（如「alter 六句已执行」）：出口统一走 `agent_bus_send.py`，`--reply-to-bus-id` 对齐原派单（如 bus#13263），结案用 `kind=reply`。
-- SR 影子表 DDL 完工回执前：prod 只读轻量验收——列总数 + 目标列名与列序，再发 bus；必要时附 `SHOW CREATE TABLE` 或等价列清单。
-- 本例验收表：`dws.dws_register_attribution_result_d_paimon_shadow`；六列为 `score_brand / score_model / score_system / score_system_version / score_time / time_bucket_max_seconds`（与 35 列总量、列序一并核对）。
-- 正文对外写业务主人名（知秋），技术上记清新 outbound bus id（如 #13275）与所回复 bus id 的对应关系，便于对账。
 

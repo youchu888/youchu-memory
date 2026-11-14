@@ -5,6 +5,9 @@
 # DC Platform 公共记忆索引
 
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
+- [主人粘贴改定稿并要求上传云端时，先覆盖本地 `reports/日报-YY](lessons/2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports-日报-yyyy-mm-dd-md-再.md) — 会话轮换蒸馏
+- [实时链路断流：prod 只读核对指标表最后写入时刻与上游明细是否仍更新，](lessons/2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明细是否仍更新-明细新而指标停-优先查实.md) — 会话轮换蒸馏
+- [【死锁阻碍】仅写当日明确应交未交的内部卡点；等门禁、等他人比对等外部依赖](lessons/2026-11-15-死锁阻碍-仅写当日明确应交未交的内部卡点-等门禁-等他人比对等外部依赖默认不写死锁-主人清空后须.md) — 会话轮换蒸馏
 - [dc_cursor_bot 缺 cursor_shared_sessio](lessons/2026-11-14-dc_cursor_bot-缺-cursor_shared_session-时不能代点-requ.md) — 会话轮换蒸馏
 - [MCP publish 仅 test；prod 海豚 SQL 查 dol](lessons/2026-11-14-mcp-publish-仅-test-prod-海豚-sql-查-dolphin_ops-平台产.md) — 会话轮换蒸馏
 - [publish_request_status 被降成 none 而 re](lessons/2026-11-14-publish_request_status-被降成-none-而-reviewer-备注仍在时.md) — 会话轮换蒸馏

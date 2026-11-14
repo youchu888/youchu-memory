@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports-日报-yyyy-mm-dd-md-再.md` | 2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports |
+| ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明细是否仍更新-明细新而指标停-优先查实.md` | 2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明 |
+| ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-死锁阻碍-仅写当日明确应交未交的内部卡点-等门禁-等他人比对等外部依赖默认不写死锁-主人清空后须.md` | 2026-11-15-死锁阻碍-仅写当日明确应交未交的内部卡点-等门禁-等他人比 |
+| od pr ro 上游 与上 仍新 | `sessions/tg-rotate-2026-11-15-0637.md` | 实时指标断流排查（prod 只读）：对比实时指标表停写时点与上游明细新鲜度；明细 |
+| agent bus log task_provenance.json task_ | `sessions/tg-rotate-2026-11-15-0637.md` | work-log 偏薄时，用本机 agent transcript、派单溯源（` |
+| daily lesson report 不写 主人 主人清空后须对照差异沉淀避免 | `sessions/tg-rotate-2026-11-15-0637.md` | [LESSON: daily-report/【死锁阻碍】仅写当日明确应交未交的内 |
+| 2（ op p2 sql to top1 | `sessions/tg-rotate-2026-11-15-0637.md` | 【明日动作】可带截止日（如周一），写真实续作 TOP1/TOP2（地区地图门禁恢 |
+| 「还 」就 不要 不要因为「还在等门禁」就擅自填满 不要因为「还在等门禁」就擅自 | `sessions/tg-rotate-2026-11-15-0637.md` | 【死锁阻碍】/【专项复盘】默认留空；主人定稿里死锁为空时，表示当日无值得单列的内 |
+| +「 +「已完成」 「已 了什 人名 今日 | `sessions/tg-rotate-2026-11-15-0637.md` | 【今日结果】按金样句式：任务名 + 做了什么 + 结果 +「已完成」；进度型工作 |
+| lesson 「等 」类 不宜 不宜把「等门禁」类外部卡点硬写进 主人 | `sessions/tg-rotate-2026-11-15-0637.md` | 主人改定日报后应对照初稿差异写 lesson，避免同类表述再犯（本会话：不宜把「 |
+| tg upload 「上 「上传云端」与推 」与 上传 | `sessions/tg-rotate-2026-11-15-0637.md` | 「上传云端」与推 TG 分离：主人未说上传前不要自动传；说了则用**主人改定后的 |
+| post_daily_report_to_dm.py tg 「已 全文 再贴 双 | `sessions/tg-rotate-2026-11-15-0637.md` | 定稿后立刻 `post_daily_report_to_dm.py` 推 TG； |
+| hosts log mac new old prepare_daily_repo | `sessions/tg-rotate-2026-11-15-0637.md` | 日报必须先跑双机同步（`prepare_daily_report_sync.sh |
 | ## 11 14 2026 agent_session_rotate bo | `~/.dc-platform/memory/lessons/2026-11-14-dc_cursor_bot-缺-cursor_shared_session-时不能代点-requ.md` | 2026-11-14-dc_cursor_bot-缺-cursor_shared |
 | ## 11 14 2026 agent_session_rotate commi | `~/.dc-platform/memory/lessons/2026-11-14-mcp-publish-仅-test-prod-海豚-sql-查-dolphin_ops-平台产.md` | 2026-11-14-mcp-publish-仅-test-prod-海豚-sq |
 | ## 11 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-14-publish_request_status-被降成-none-而-reviewer-备注仍在时.md` | 2026-11-14-publish_request_status-被降成-no |
@@ -32,16 +45,3 @@
 | ## 11 12 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md` | 2026-11-12-ack-若-silent-drop-须核对发送记录-无责范 |
 | ## 11 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-12-小时挂用户属性仅用-dwm_user_attr_intraday_d_d-dt-d-禁小时读-d.md` | 2026-11-12-小时挂用户属性仅用-dwm_user_attr_intra |
 | ## 11 12 200 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码只走配置源-不入公共记忆明文.md` | 2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码 |
-| 60 ack bus dropped reply sent.json | `sessions/tg-rotate-2026-11-12-0604.md` | 收到 bus 派单：60 秒内 ACK → 实干 → reply 结案；ACK  |
-| uid_code vip 上日 先跑 册时 再被 | `sessions/tg-rotate-2026-11-12-0604.md` | 日间表可直接取：渠道、注册时刻、地区、设备、VIP、uid_code；编排上日间 |
-| dim_user_snap snap snap_dt 「小 」作 仍用 | `sessions/tg-rotate-2026-11-12-0604.md` | 旧说明「小时先 snap D-1 再叠日间表」作废；天任务仍用 `dim_use |
-| app_id dim.dim_user_snap dt dwm.dwm_user | `sessions/tg-rotate-2026-11-12-0604.md` | **小时任务挂用户属性（知秋已定）**：只读 `dwm.dwm_user_att |
-| api test ui 交付 从仓 从仓库内 | `sessions/tg-rotate-2026-11-12-0604.md` | 私聊要账号密码：从仓库内 test 海豚配置核对后回复；回复前宜先 UI/API |
-| 12345 admin dolphin dolphinscheduler hos | `sessions/tg-rotate-2026-11-12-0604.md` | 测试海豚入口形态：`http://<test-host>:12345/dolph |
-| prompt tg 「当 与末 令与 免复 | `sessions/tg-rotate-2026-11-12-0604.md` | 大号 TG prompt 文件：读开头指令与末尾「当前问题」，直接答问题，避免复 |
-| 200）+ api dolphinscheduler ht login mc | `sessions/tg-rotate-2026-11-12-0604.md` | 验「测试海豚能否登录」应双线：`/dolphinscheduler/ui/log |
-| dim_user_snap dt dwm_user_attr_intra dwm | `sessions/tg-rotate-2026-11-12-0604.md` | [LESSON: etl,hourly,user_attr/小时挂用户属性仅用  |
-| join owner reply snap」+ sql 「名 | `sessions/tg-rotate-2026-11-12-0604.md` | 跨 owner 小时 SQL 仍可能旧口径：本名下无改动则 reply 写清「名 |
-| dim_user_snap 一次 亿行 任务 全扫 八亿 | `sessions/tg-rotate-2026-11-12-0604.md` | `dim_user_snap` 单分区约十八亿行，小时任务每格全扫一次约多花 3 |
-| app_id dim.dim_user_snap dt dwm.dwm_user | `sessions/tg-rotate-2026-11-12-0604.md` | 小时任务挂用户属性（知秋已定）**：只读 `dwm.dwm_user_attr_ |
-| ## 11 2026 agent_session_rotate cursor d | `~/.dc-platform/memory/lessons/2026-11-11-memory-dolphin-vpn-后装-install-on-host-sh-再用-host.md` | 2026-11-11-memory-dolphin-vpn-后装-install |
