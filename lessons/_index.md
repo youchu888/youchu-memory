@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-14 | [日报改定：地区地图不进死锁；可写 spark 迁移进度条](./2026-11-14-日报改定-地区地图不进死锁-可写spark迁移进度条.md) | daily-report, owner-edit | 门禁未恢复只留明日；可写迁移进度；上传一字不改 |
 | 2026-11-14 | [dc_cursor_bot 缺 cursor_shared_session 时不](./2026-11-14-dc_cursor_bot-缺-cursor_shared_session-时不能代点-requ.md) | 蓝猫bot,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-14 | [MCP publish 仅 test；prod 海豚 SQL 查 dolphin](./2026-11-14-mcp-publish-仅-test-prod-海豚-sql-查-dolphin_ops-平台产.md) | dolphin_prod,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-14 | [publish_request_status 被降成 none 而 review](./2026-11-14-publish_request_status-被降成-none-而-reviewer-备注仍在时.md) | 产发门禁,session-rotate | 会话轮换前自动蒸馏 |
