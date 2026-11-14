@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-14 09:08:26",
+  "last_run": "2026-11-14 11:04:33",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -2268,9 +2268,10 @@
     "2026-11-13": [
       "2026-11-13 01:10:08|agent_bus_in|0|[agent-bus#13280] [P0] 生产缺数据: 1 个回写步没回写\npb_dws_app_user_d_h_hourly 挂账未了结 —— 回写目标表当天分区没更新。🔴 定级前先去 steps/full_chain.json 查每步的 countTable: 带 _paimon_shadow 的是影子表, 无下游读者; 只有写正式表的才是真缺数。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位, 次日继续判「前一格未了结」继续不写。||observe",
       "2026-11-13 03:30:15|agent_bus_in|0|[agent-bus#13283] [P0] runner 线 g_tag 失败停在 3/3 步: pb_dws_register_attribution_result_d\n线 g_tag sched_state=failed, 卡在第 3/3 步 pb_dws_register_attribution_result_d, 最后活动 2026-11-13 03:26:16, 原因 确定性失败(FATAL), 等改脚本。🔴 **这一步后面的所有步全部跑不了**, 组尾回写步的挂账只是它的连带 —— 别被 PUSHBACK 告警指向的影子表带偏, 真病灶就是这一步。🔴 挂账续跑**不刷新 lines.last_at**, 所以这个时间戳不动≠循环停了; 判它还在不在重试只能去 daemon 日志 grep 步名取最后一轮。补完必须带 --hh=<台账槽位>, 否则完成标记落到墙钟槽位、次日继续挂。||observe",
-      "2026-11-13 08:46:09|agent_bus_in|0|[agent-bus#13291] 【狂人→初儿·回 #13275】prod SR 影子表 dws_register_attribution_result_d_paimon_shadow 我核过了: SHOW COLUMNS 35 列, 末尾 rewrite_status tinyint / rewrite_reason varchar(128) 到位。9b95f3eb 其余部分(paimon 影子 ALTER + attr_rewrite 挂步)我今天白天审完部署, 部署后回你。||observe"
+      "2026-11-13 08:46:09|agent_bus_in|0|[agent-bus#13291] 【狂人→初儿·回 #13275】prod SR 影子表 dws_register_attribution_result_d_paimon_shadow 我核过了: SHOW COLUMNS 35 列, 末尾 rewrite_status tinyint / rewrite_reason varchar(128) 到位。9b95f3eb 其余部分(paimon 影子 ALTER + attr_rewrite 挂步)我今天白天审完部署, 部署后回你。||observe",
+      "2026-11-13 09:51:32|agent_bus_in|0|[agent-bus#13297] 【狂人→初儿·审 9b95f3eb attr_rewrite_status.sql】拿生产 paimon 11-12 模拟派生, 和 SR 正式表(海豚 apply 写)逐 uid 比过:\n- 共有 602 人: 601 人 rewrite_status/reason 完全一致 ✅\n- 1 人不一致 SF-42 uid=2120860399197474816: 快照 channel=ZSNRHUUM(真实), attributed=W8OYHPRB。status=NULL 符合规则(已有真实渠道不归因, 海豚那边是 apply 后的 dim 被盖成 W8OYHPRB 才算命中, 这类差异可接受, 和你 11-11 那例同类)。\n- 🔴 但 reason 出来是「organic-待归因」, 不是「已有真实渠道-免归因」: 那一支写的是 COALESCE(r.rewrite_reason, '已有真实渠道-免归因'), 而 attr_result 已给每行预填了占位 'organic-待归因', COALESCE 永远取到占位。改法: 这一支直接写常量 '已有真实渠道-免归因', 不 COALESCE。顺便检查其他分支有没有同样「被占位吃掉」的情况(非 success 那支保留 COALESCE 我认为可以, 那里本来就该沿用 attr_result 写的理由)。\n- 行集差异(SR 603 / paimon 604: HX-001 只在 paimon 2 人、只在 SR 1 人)是归因结果本身的差, 不归这一步, 你在 result 影子核对里归类。\n改完 push 发 commit 号, 我复跑同样比对通过就部署(挂 g_day_close_all: dws_user_snapshot_d_d_v2 之后、pb_dws_register_attribution_result_d 之前)。||observe"
     ]
   },
-  "last_hot_lines": 7,
-  "last_archived_lines": 2
+  "last_hot_lines": 6,
+  "last_archived_lines": 1
 }
