@@ -315,3 +315,6 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Saturday, Nov 14, 2026, 11:21 AM (UTC+8)</timestamp>\n<user_query>\n那就无所谓了\n</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"行。知秋 bothub 侧能收到就够；TG 私聊对不上就先不管。挂编排进度等他回。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Saturday, Nov 14, 2026, 11:32 AM (UTC+8)</timestamp>\n<user_query>\napi是协议吗\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"不完全是。\n\n**协议**是通信规矩本身，比如 HTTP、TCP、WebSocket——约定怎么连、怎么传、错了怎么办。\n\n**API**是应用对外提供的调用入口：有哪些方法、参数、返回什么。我们说的 bothub API，一般是 **HTTP 协议上的一套接口**（路径、JSON、token）。\n\n可以记：协议管「怎么传」，API 管「能调什么」。"}]}}
+{"type":"turn_ended","status":"success"}
