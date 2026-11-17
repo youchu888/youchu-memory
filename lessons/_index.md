@@ -5,6 +5,7 @@
 |------|------|------|--------|
 | 2026-11-17 | [设备 LTV 四问审结口径（#13778 → bus#13782）](./2026-11-17-设备LTV四问审结口径-bus13782.md) | device-ltv,payment,channel,snapshot | 先归因再开发；冲突仅当日置空；渠道/国别/机型读快照；进队自10-15 |
 | 2026-11-17 | [设备 LTV 四问审结口径（#13778 → bus#13782）](./2026-11-17-设备LTV四问审结口径-bus13782.md) | device-ltv,payment,channel,snapshot | 先归因再开发；冲突仅当日置空；渠道/国别/机型读快照；进队自10-15 |
+| 2026-11-17 | [设备 LTV 四问审结口径（#13778 → bus#13782）](./2026-11-17-设备LTV四问审结口径-bus13782.md) | device-ltv,payment,channel,snapshot | 先归因再开发；冲突仅当日置空；渠道/国别/机型读快照；进队自10-15 |
 | 2026-11-17 | [设备 LTV 四问：狂人排队审，结论 bus 回猫猫（#13778）](./2026-11-17-设备LTV四问-狂人排队审-结论bus回猫猫-bus13778.md) | device-ltv,worker_ant,agent-bus,review-queue | #13778 四问狂人审；排队不插队；结论 bus 回猫猫 |
 | 2026-11-17 | [数据库密码只进 Keychain，禁止明文提交/发送](./2026-11-17-db-credentials-keychain-only.md) | security,keychain,db | 真密 Keychain；secrets cnf；贴了也拒写 |
 | 2026-11-15 | [主人粘贴改定稿并要求上传云端时，先覆盖本地 `reports/日报-YYYY-M](./2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports-日报-yyyy-mm-dd-md-再.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
