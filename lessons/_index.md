@@ -7,6 +7,7 @@
 | 2026-11-17 | [设备 LTV 设计 v1 审结（#13790）](./2026-11-17-设备LTV设计v1审结-bus13790.md) | device-ltv,channel,quality,ddl | 进队日冻结渠道；冲突同日同应用同订单；告警落质量表；DDL+SQL一并交审 |
 | 2026-11-17 | [设备 LTV SDK 覆盖口径冻结（#13785 → bus#13786）](./2026-11-17-设备LTV-SDK覆盖口径冻结-bus13786.md) | device-ltv,sdk-init,coverage | 无SDK初始化付款不进LTV；表说明仅SDK；日覆盖率；不对财务总充值；口径冻结 |
 | 2026-11-17 | [开发平台审核：跨线探针 vs 同线快照](./2026-11-17-开发平台审核-跨线探针与同线快照规则缺口.md) | dev-session,audit,probe,runlog | 规则漏认跨线探针；修好原 session 重提；勿 S1 重来/勿重跑 |
+| 2026-11-17 | [开发平台审核：跨线探针 vs 同线快照](./2026-11-17-开发平台审核-跨线探针与同线快照规则缺口.md) | dev-session,audit,probe,runlog | 规则漏认跨线探针；修好原 session 重提；勿 S1 重来/勿重跑 |
 | 2026-11-17 | [设备 LTV 四问审结口径（#13778 → bus#13782）](./2026-11-17-设备LTV四问审结口径-bus13782.md) | device-ltv,payment,channel,snapshot | 先归因再开发；冲突仅当日置空；渠道/国别/机型读快照；进队自10-15 |
 | 2026-11-17 | [设备 LTV 四问：狂人排队审，结论 bus 回猫猫（#13778）](./2026-11-17-设备LTV四问-狂人排队审-结论bus回猫猫-bus13778.md) | device-ltv,worker_ant,agent-bus,review-queue | #13778 四问狂人审；排队不插队；结论 bus 回猫猫 |
 | 2026-11-17 | [数据库密码只进 Keychain，禁止明文提交/发送](./2026-11-17-db-credentials-keychain-only.md) | security,keychain,db | 真密 Keychain；secrets cnf；贴了也拒写 |
