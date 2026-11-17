@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-17 21:14:12 +0800
+> 更新: 2026-11-17 21:18:14 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-17.md`
 
@@ -25,3 +25,4 @@
 | 2026-11-17 18:25 | 群派单#364 | worker_ant_group | completed | @anna_cute9 更正我上一条：审核闸「线中间不能配探针」是既定规则，不会为此放宽，前面说的拟修方案撤回。 请把发布被拦时的原报错截图（或完整文字）发群里 |
 | 2026-11-17 20:39 | 群派单#365 | worker_ant_group | completed | @anna_cute9 这个没在平台上改，审核闸是故意卡的，知秋定了不放宽：外部探针只能配在组入口那一步，线中间的步骤不能配。 你这一步 dws_user_pr |
 | 2026-11-17 20:53 | 群派单#366 | worker_ant_group | completed | @anna_cute9 查了 dws_user_promotion_behavior_h_h 在两个环境编排里的现状： 1. 依赖探针没改过，生产和测试一模一样 |
+| 2026-11-17 21:15 | 群派单#367 | worker_ant_group | completed | @youchu8888 收到，#13834 和 #13835 推到我这边我就看。 |
