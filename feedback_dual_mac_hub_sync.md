@@ -53,3 +53,9 @@
 - `bash ~/.dc-platform/scripts/sync-memory-git.sh`
 - `python3 ~/.dc-platform/memory/scripts/worklog_dual_mac_sync.py`
 - `python3 ~/.dc-platform/memory/scripts/ops_mirror_to_memory.py`
+
+## 2026-11-17 再确认
+
+- 权威机继续 **old-mac**（日报/自动化）。
+- **new-mac** 只同步每日动作：写 `.cursor/work-log/当日.md` → `hosts/new-mac/` → memory git；不覆盖权威日报。
+- 保持 `DISABLE_LOCAL_AUTOMATION`；勿跑 `enable-automation-as-authority-new-mac.sh` 除非明确改权威。
