@@ -8,6 +8,7 @@ PINNED_FILE="${MEMORY_ROOT}/PINNED.md"
 PINNED_DIR="${MEMORY_ROOT}/pinned"
 INDEX_FILE="${MEMORY_ROOT}/lessons/_index.md"
 CHAT_REF="${MEMORY_ROOT}/group_chat/reference.md"
+OPS_FACTS="${MEMORY_ROOT}/group_chat/ops_facts.md"
 
 if [[ $# -lt 1 ]]; then
   echo "用法：bash ~/.dc-platform/scripts/lookup-rules.sh 关键词 [更多关键词]" >&2
@@ -57,6 +58,20 @@ else
 fi
 echo ""
 
+echo "## 运维事实"
+echo ""
+if [[ -f "${OPS_FACTS}" ]]; then
+  matched="$(grep -E '^- |^\| ' "${OPS_FACTS}" | grep -i -E "${pattern}" | head -8 || true)"
+  if [[ -n "${matched}" ]]; then
+    echo "${matched}"
+  else
+    echo "_运维事实里没有对上的条目_"
+  fi
+else
+  echo "_还没有运维事实_"
+fi
+echo ""
+
 echo "## 聊天参考"
 echo ""
 if [[ -f "${CHAT_REF}" ]]; then
@@ -70,4 +85,4 @@ else
   echo "_还没有聊天参考_"
 fi
 echo ""
-echo "只用上面命中的几条。不要打开红线全文、经验索引或当日聊天稿。"
+echo "只用上面命中的几条。不要打开红线全文、经验索引或当日聊天稿。问谁执行/重建时优先看运维事实。"

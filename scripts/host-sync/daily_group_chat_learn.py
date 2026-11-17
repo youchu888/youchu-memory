@@ -10,6 +10,7 @@
 废话（闲聊、短回复）不入库。新建有上限，禁止每晚堆一打新条。
 没做完的需求写入未做清单；已经统一的指标写入记忆（同句不重复）。
 私聊里非闲聊，以及群里的需求、口径和讨论，各写一行到聊天参考（近重复跳过）。
+运维执行回执（谁建表/重建/DROP/生产执行）写入 ops_facts.md，供日后「谁执行的」检索。
 学完跑本地记忆融合（去重 reference、重生 bootstrap），再把短汇总推到私聊。
 不写 work-log、不进日报、不进工作簿进展。
 """
@@ -48,6 +49,7 @@ MEMORY_ROOT = os.path.expanduser('~/.dc-platform/memory')
 OPEN_REQ_PATH = os.path.expanduser('~/.dc-platform/memory/group_chat/open_requirements.md')
 SETTLED_PATH = os.path.expanduser('~/.dc-platform/memory/group_chat/metrics_settled.md')
 REF_PATH = os.path.expanduser('~/.dc-platform/memory/group_chat/reference.md')
+OPS_FACTS_PATH = os.path.expanduser('~/.dc-platform/memory/group_chat/ops_facts.md')
 STATE_PATH = os.path.join(_TGBOT, 'data', 'group_learn_state.json')
 FUSE_SH = os.path.expanduser('~/.dc-platform/scripts/memory-fuse-after-tg-learn.sh')
 # 优先升级旧条；每天新建封顶，逼融合而不是叠新文件
@@ -68,11 +70,19 @@ _CATEGORIES: list[tuple[str, re.Pattern[str]]] = [
     ('审核', re.compile(r'审核|审完|修改后通过|审核通过|打回|HOLD|bus#\d+')),
     ('口径', re.compile(r'口径|定义为|算作|只算|只计|禁止|不得|必须')),
     ('事故', re.compile(r'失败|FAILURE|断流|告警|挂了|OOM|事故')),
+    ('运维', re.compile(r'运维|王毅|wangyi|执行好了|执行下|DROP\s+TABLE|重建表|建表完成|SHOW\s+COLUMNS|生产执行')),
     ('发布', re.compile(r'发产|上线|补数|海豚|挂编排|首跑|建表')),
     ('分工', re.compile(r'负责|主责|归.+|工作簿|勿抢|分工|待办')),
     ('需求', re.compile(r'需要返回|能加上|一起返回|还没做|还没加|待补')),
 ]
 _TABLE = re.compile(r'\b((?:dw|dwd|dwm|dws|ads|dim)\.[a-z][a-z0-9_]*|[a-z][a-z0-9]*_[a-z0-9_]+)\b')
+# 运维事实：谁对哪张表/哪份 SQL 做了执行（建表、重建、DROP）
+_OPS_FACT = re.compile(
+    r'(运维|王毅|wangyi\d*|@wangyi\S*)|'
+    r'(生产执行|执行下|执行好了|建好了|重建完成|DROP\s+TABLE|SHOW\s+COLUMNS)|'
+    r'(\.sql\b)',
+    re.IGNORECASE,
+)
 
 
 def _today() -> str:
@@ -292,6 +302,31 @@ def _memory_rows(day: str, messages: list[dict]) -> tuple[list[str], list[str]]:
     return opens, settled
 
 
+def _ops_fact_rows(day: str, messages: list[dict]) -> list[str]:
+    """运维/建表/重建执行事实 → ops_facts.md，供日后「谁执行的」检索。"""
+    rows: list[str] = []
+    for rec in messages:
+        if _is_noise(rec):
+            continue
+        text = rec.get('text') or ''
+        if not _OPS_FACT.search(text):
+            continue
+        # 至少沾一点「执行/建表/重建」语义，避免只提运维闲聊
+        if not re.search(
+            r'执行|建表|重建|DROP|SHOW\s+COLUMNS|生产执行|好了|完成|附件|\.sql',
+            text,
+            re.IGNORECASE,
+        ):
+            continue
+        title = (rec.get('chat_title') or '').strip()
+        who = (rec.get('sender_name') or rec.get('sender_username') or '').strip()
+        where = title or '未知会话'
+        tables = sorted({m.group(1) for m in _TABLE.finditer(text)})[:3]
+        tbl = ('｜表 ' + ','.join(tables)) if tables else ''
+        rows.append(f'- {day} | {where} | {who}{tbl} | {_one_line(text)}')
+    return rows
+
+
 def _append_memory(path: str, header: str, bullets: list[str]) -> list[str]:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     existing = header if not os.path.isfile(path) else open(path, encoding='utf-8').read()
@@ -338,6 +373,7 @@ def _file_memory_covers(rule: str) -> str | None:
         'lessons/2026-*.md',
         'group_chat/metrics_settled.md',
         'group_chat/reference.md',
+        'group_chat/ops_facts.md',
     ]
     for pat in patterns:
         for path in root.glob(pat):
@@ -415,7 +451,7 @@ def _render(
         lines.extend(f'- {a}' for a in actions)
     else:
         lines.append('- 今日没有新规矩需要入库或升级。')
-    order = ['审核', '口径', '事故', '发布', '分工', '需求', '其他']
+    order = ['审核', '口径', '事故', '运维', '发布', '分工', '需求', '其他']
     for name in order:
         rows = buckets.get(name) or []
         if not rows:
@@ -525,6 +561,7 @@ def learn_day(day: str, *, dry_run: bool = False) -> dict:
 
     opens, settled = _memory_rows(day, messages)
     references = _reference_rows(day, messages)
+    ops_facts = _ops_fact_rows(day, messages)
     if not dry_run:
         _append_memory(
             OPEN_REQ_PATH,
@@ -540,6 +577,13 @@ def learn_day(day: str, *, dry_run: bool = False) -> dict:
             REF_PATH,
             '# 聊天参考\n\n私聊里的需求和讨论，以及群里值得对照的几句。启动不读。做事时按关键词查。\n',
             references,
+        )
+        _append_memory(
+            OPS_FACTS_PATH,
+            '# 运维事实\n\n'
+            '群/私聊里「谁对哪张表或哪份 SQL 做了执行」的短事实（建表、重建、DROP、生产执行回执）。\n'
+            '闲聊不进。问「谁重建的 / 谁执行的」时先查本文件，再翻 learn/archive。\n',
+            ops_facts,
         )
     os.makedirs(LEARN_ROOT, exist_ok=True)
     md_path = os.path.join(LEARN_ROOT, f'{day}.md')
@@ -568,6 +612,7 @@ def learn_day(day: str, *, dry_run: bool = False) -> dict:
         },
         'open_requirements': len(opens),
         'settled_metrics': len(settled),
+        'ops_facts': len(ops_facts),
         'noise': noise,
         'by_category': {k: len(v) for k, v in buckets.items()},
         'new_lessons': new_n,

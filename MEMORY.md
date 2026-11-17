@@ -383,6 +383,7 @@
 - [Dev Session 对外汉字名](lessons/2026-07-21-dev-session-display-name-format.md) — 发群/新建用【标签】表名 · 又初；禁 dev-xxx 与海豚 project_code 当对外名。
 - [2026-07-01 归因 P0 全日归档](sessions/2026-07-01-attribution-p0-daily-archive.md) — bus#652~723 时间线、资产索引、未完成项；同类任务总入口。
 - [监控群聊上下文归档](lessons/2026-07-07-group-chat-context-archive.md) — context.jsonl 定时瘦身；冷数据 group_chat/archive + _search.jsonl；prompt 与 bootstrap 可检索。
+- [TG 晚间学习 · 运维事实](lessons/2026-11-17-tg-learn-ops-facts.md) — 执行回执进 `group_chat/ops_facts.md`；`lookup-rules.sh` 可查谁建表/重建；人员速查含王毅。
 - [ALTER 必验 ETL + 同步上线](feedback_ddl_must_sync_verify_etl.md) — 知秋钦定全员：DDL 前查写表 ETL；DDL+ETL 同批；影子禁偷上 prod；首选显式列清单。
 - [归因 P0 快速响应](reference_attribution_p0_quickstart.md) — test 海豚常量、三条验收、TASK_ONLY、发布门、agent-bus 命令。
 - [又初↔狂人 bus 三分法](lessons/2026-07-02-youchu-worker-ant-bus-convention.md) — 默认要干；不用做/暂停/不用回=只回不干；message_bus_mode。
