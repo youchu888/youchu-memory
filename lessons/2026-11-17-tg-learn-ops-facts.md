@@ -31,3 +31,9 @@ domain: ops
 - 脚本：`memory/scripts/host-sync/daily_group_chat_learn.py`
 - 产物：`group_chat/ops_facts.md`
 - 检索：`scripts/lookup-rules.sh`
+
+## 增补（同日纠偏）
+
+- **铁证**：主人在运维群与运维（王毅）互@派执行 SQL，**不需要** bot 在群、也不需要机器人发那条消息。
+- 日学习必须把这类执行事实收进 `ops_facts.md`；事后问「谁重建」先查这里，禁止因本地 raw 缺档/bot 未镜像就答「对不上是谁」。
+- 私聊收口（如「已经改好了，bitmap」）可与群互@交叉印证。
