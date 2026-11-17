@@ -3,6 +3,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-17 | [设备 LTV 四问：狂人排队审，结论 bus 回猫猫（#13778）](./2026-11-17-设备LTV四问-狂人排队审-结论bus回猫猫-bus13778.md) | device-ltv,worker_ant,agent-bus,review-queue | #13778 四问狂人审；排队不插队；结论 bus 回猫猫 |
 | 2026-11-17 | [数据库密码只进 Keychain，禁止明文提交/发送](./2026-11-17-db-credentials-keychain-only.md) | security,keychain,db | 真密 Keychain；secrets cnf；贴了也拒写 |
 | 2026-11-15 | [主人粘贴改定稿并要求上传云端时，先覆盖本地 `reports/日报-YYYY-M](./2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports-日报-yyyy-mm-dd-md-再.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-15 | [实时链路断流：prod 只读核对指标表最后写入时刻与上游明细是否仍更新，明细新而](./2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明细是否仍更新-明细新而指标停-优先查实.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
