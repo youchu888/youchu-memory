@@ -1,0 +1,24 @@
+# StarRocks 连接非密字段（可双机同步本 example）
+# 复制为 db.hosts.conf 后填写；密码只进 Keychain，勿写在本文件。
+#
+# Keychain：
+#   service = youchu.sr.test | youchu.sr.prod
+#   account = 下方 user
+
+[test]
+service=youchu.sr.test
+host=YOUR_TEST_FE_HOST
+port=9030
+user=admin
+database=ads
+charset=utf8mb4
+protocol=tcp
+
+[prod]
+service=youchu.sr.prod
+host=YOUR_PROD_FE_HOST
+port=9030
+user=readonly_user
+database=ads
+charset=utf8mb4
+protocol=tcp

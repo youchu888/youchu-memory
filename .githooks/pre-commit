@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# 拦截暂存区明文口令（新提交）。存量仓内硬编码不在本钩子清扫范围。
+# 启用：git config core.hooksPath .githooks
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+[[ -n "$ROOT" ]] || exit 0
+
+ALLOW_RE='(your-password|YOUR_[A-Z0-9_]*PASSWORD|changeme|placeholder|\*\*\*|\$\{|\$[A-Za-z_]|os\.environ|getenv|getpass|process\.env|<[Pp]assword>|xxx+|TODO_PASSWORD|\*\*\*REDACTED\*\*\*)'
+HIT_RE='(password|passwd|pwd)[[:space:]]*[=:][[:space:]]*["'"'"']?[^[:space:]#"'"'"'].{3,}'
+
+bad=0
+while IFS= read -r f; do
+  [[ -z "$f" ]] && continue
+  case "$f" in
+    *.example|*.EXAMPLE|*example*|*.mdc) continue ;;
+    *.png|*.jpg|*.jpeg|*.gif|*.webp|*.ico|*.jar|*.class|*.zip|*.gz|*.tgz|*.whl|*.so|*.dylib|*.bin) continue ;;
+  esac
+  if ! git show ":$f" >/dev/null 2>&1; then
+    continue
+  fi
+  if git show ":$f" | grep -EIq "$HIT_RE"; then
+    if git show ":$f" | grep -EI "$HIT_RE" | grep -EIv "$ALLOW_RE" >/dev/null; then
+      echo "pre-commit: 疑似明文口令 → $f" >&2
+      echo "  真实密码只进本机 Keychain；仓内仅允许占位或 *.example" >&2
+      bad=1
+    fi
+  fi
+done < <(git diff --cached --name-only --diff-filter=ACMR)
+
+if [[ "$bad" -ne 0 ]]; then
+  echo "pre-commit: 已拒绝。见 feedback_no_plaintext_credentials.md / ensure-db-cnf.sh" >&2
+  exit 1
+fi
+exit 0

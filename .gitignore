@@ -36,3 +36,15 @@ bootstrap/git-ssh/id_ed25519
 !bootstrap/testcluster-ssh/
 !bootstrap/testcluster-ssh/**
 bootstrap/testcluster-ssh/id_ed25519
+
+# 数据库本机凭证（若误拷进本仓则忽略；真密只在 Keychain）
+secrets/
+**/my.cnf
+**/my.cnf.*
+!**/my.cnf.example
+db.hosts.conf
+**/db.hosts.conf
+!**/db.hosts.example
+!config/db.hosts.example
+redact-known-secrets.local
+**/redact-known-secrets.local

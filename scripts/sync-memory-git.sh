@@ -37,7 +37,9 @@ for s in load-memory-context.sh lookup-rules.sh memory_weekly_hygiene.sh \
   install-memory-git-sync-launchd.sh \
   uninstall-memory-git-sync-launchd.sh \
   worklog_dual_mac_sync.py \
-  upgrade_todesk_oneshot.sh; do
+  upgrade_todesk_oneshot.sh \
+  ensure-db-cnf.sh \
+  db-keychain-import.sh; do
   src="$MEM/scripts/$s"
   dst="$RUNTIME_SCRIPTS/$s"
   if [[ -f "$src" ]]; then
@@ -70,8 +72,10 @@ _install_newer "$MEM/scripts/host-sync/append-only-confirm-before-edit.mdc" \
   "$CHCODE_ROOT/.cursor/rules/append-only-confirm-before-edit.mdc"
 _install_newer "$MEM/scripts/host-sync/bootstrap-memory-SKILL.md" \
   "$CHCODE_ROOT/.cursor/skills/bootstrap-memory/SKILL.md"
+_install_newer "$MEM/scripts/host-sync/no-plaintext-credentials.mdc" \
+  "$CHCODE_ROOT/.cursor/rules/no-plaintext-credentials.mdc"
 
-for doc in onehr_checkin_auto.md onehr_checkin_old_mac_setup.md memory_git_sync.md; do
+for doc in onehr_checkin_auto.md onehr_checkin_old_mac_setup.md memory_git_sync.md db_credentials_keychain.md; do
   src="$MEM/scripts/docs/$doc"
   dst="$RUNTIME_SCRIPTS/docs/$doc"
   if [[ -f "$src" ]]; then
@@ -90,6 +94,14 @@ if [[ -f "$src_cfg" ]]; then
   fi
 fi
 # 不覆盖已有 onehr.env（含密码）
+# db hosts 模板可同步；db.hosts.conf（本机）与 secrets/ 不同步
+src_db_ex="$MEM/config/db.hosts.example"
+dst_db_ex="$RUNTIME_CONFIG/db.hosts.example"
+if [[ -f "$src_db_ex" ]]; then
+  if [[ ! -f "$dst_db_ex" || "$src_db_ex" -nt "$dst_db_ex" ]]; then
+    cp -f "$src_db_ex" "$dst_db_ex"
+  fi
+fi
 
 # —— launchd 调度：读仓内 config，落后则自动重装 ——
 # MODE=daily（单机下班一次）| interval（双机高频）

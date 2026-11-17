@@ -13,9 +13,36 @@
 from __future__ import annotations
 
 import os
+import re
 import shutil
 import time
 from pathlib import Path
+
+# 镜像进私人仓前脱敏（防 transcript 把口令又写回来）
+# 已知泄露串只读本机 ~/.dc-platform/config/redact-known-secrets.local（不进 Git）
+_REDACT = "***REDACTED***"
+_KNOWN_SECRETS_FILE = Path.home() / ".dc-platform" / "config" / "redact-known-secrets.local"
+_ASSIGN_RE = re.compile(
+    r"(?i)(\b(?:password|passwd|pwd|secret|api[_-]?key|access[_-]?key|bot[_-]?token|auth[_-]?token)\b\s*[=:]\s*)(['\"]?)([^'\"\s#,;]{4,})(\2)"
+)
+_ALLOW_VAL = re.compile(
+    r"(?i)^(your-password|your_password|changeme|placeholder|\*+|x{3,}|TODO(_PASSWORD)?|None|null|true|false|"
+    r"\$\{[^}]+\}|<[^>]+>|PASSWORD|password|passwd|secret|token|REDACTED|\*\*\*REDACTED\*\*\*|"
+    r"os\.environ|getenv|getpass|process\.env|[A-Z][A-Z0-9_]{2,})$"
+)
+_CN_PWD_RE = re.compile(r"(密码[：:]\s*)([A-Za-z0-9@!#._\-]{4,})")
+
+
+def _load_known_secrets() -> list[str]:
+    if not _KNOWN_SECRETS_FILE.is_file():
+        return []
+    out: list[str] = []
+    for line in _KNOWN_SECRETS_FILE.read_text(encoding="utf-8", errors="ignore").splitlines():
+        s = line.strip()
+        if not s or s.startswith("#"):
+            continue
+        out.append(s)
+    return out
 
 HOME = Path.home()
 MEM = Path(os.environ.get("MEMORY_GIT_DIR", HOME / ".dc-platform" / "memory"))
@@ -68,6 +95,34 @@ def _load_host() -> str:
     return HOST
 
 
+def _redact_text(text: str) -> str:
+    for k in sorted(_load_known_secrets(), key=len, reverse=True):
+        if k in text:
+            text = text.replace(k, _REDACT)
+
+    def _repl(m: re.Match[str]) -> str:
+        val = m.group(3)
+        if _ALLOW_VAL.match(val) or val.startswith("***"):
+            return m.group(0)
+        return f"{m.group(1)}{m.group(2)}{_REDACT}{m.group(4)}"
+
+    text = _ASSIGN_RE.sub(_repl, text)
+    text = _CN_PWD_RE.sub(lambda m: m.group(1) + _REDACT, text)
+    return text
+
+
+def _redact_file(path: Path) -> None:
+    if path.suffix.lower() not in {".jsonl", ".json", ".md", ".txt", ".html", ".csv", ".yml", ".yaml", ".log"}:
+        return
+    try:
+        raw = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return
+    new = _redact_text(raw)
+    if new != raw:
+        path.write_text(new, encoding="utf-8")
+
+
 def _copy_file(src: Path, dst: Path) -> bool:
     if not src.is_file():
         return False
@@ -81,6 +136,7 @@ def _copy_file(src: Path, dst: Path) -> bool:
             if sstat.st_mtime <= dstat.st_mtime and sstat.st_size == dstat.st_size:
                 return False
         shutil.copy2(src, dst)
+        _redact_file(dst)
         return True
     except OSError:
         return False
