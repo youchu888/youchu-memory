@@ -3,15 +3,12 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
-<<<<<<< HEAD
+| 2026-11-17 | [晚间 TG 学习要把运维执行事实单独入库](./2026-11-17-tg-learn-ops-facts.md) | tg-learn,ops_facts,运维 | 执行回执进 ops_facts；谁重建先 lookup |
 | 2026-11-17 | [设备 LTV 设计 v1 审结（#13790）](./2026-11-17-设备LTV设计v1审结-bus13790.md) | device-ltv,channel,quality,ddl | 进队日冻结渠道；冲突同日同应用同订单；告警落质量表；DDL+SQL一并交审 |
 | 2026-11-17 | [设备 LTV SDK 覆盖口径冻结（#13785 → bus#13786）](./2026-11-17-设备LTV-SDK覆盖口径冻结-bus13786.md) | device-ltv,sdk-init,coverage | 无SDK初始化付款不进LTV；表说明仅SDK；日覆盖率；不对财务总充值；口径冻结 |
 | 2026-11-17 | [开发平台审核：外部探针仅组入口·S3](./2026-11-17-开发平台审核-跨线探针与同线快照规则缺口.md) | dev-session,audit,probe,S3 | 知秋定外部探针仅组入口；中间步入口化或去探针；拒审交报错+mode/line/after_step |
 | 2026-11-17 | [设备 LTV 四问审结口径（#13778 → bus#13782）](./2026-11-17-设备LTV四问审结口径-bus13782.md) | device-ltv,payment,channel,snapshot | 先归因再开发；冲突仅当日置空；渠道/国别/机型读快照；进队自10-15 |
 | 2026-11-17 | [设备 LTV 四问：狂人排队审，结论 bus 回猫猫（#13778）](./2026-11-17-设备LTV四问-狂人排队审-结论bus回猫猫-bus13778.md) | device-ltv,worker_ant,agent-bus,review-queue | #13778 四问狂人审；排队不插队；结论 bus 回猫猫 |
-=======
-| 2026-11-17 | [晚间 TG 学习要把运维执行事实单独入库](./2026-11-17-tg-learn-ops-facts.md) | tg-learn,ops_facts,运维 | 执行回执进 ops_facts；谁重建先 lookup |
->>>>>>> 1d9c8ba40eb (feat: 晚间 TG 学习沉淀运维执行事实到 ops_facts)
 | 2026-11-17 | [数据库密码只进 Keychain，禁止明文提交/发送](./2026-11-17-db-credentials-keychain-only.md) | security,keychain,db | 真密 Keychain；secrets cnf；贴了也拒写 |
 | 2026-11-15 | [主人粘贴改定稿并要求上传云端时，先覆盖本地 `reports/日报-YYYY-M](./2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports-日报-yyyy-mm-dd-md-再.md) | daily-report,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-15 | [实时链路断流：prod 只读核对指标表最后写入时刻与上游明细是否仍更新，明细新而](./2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明细是否仍更新-明细新而指标停-优先查实.md) | datacheck,session-rotate | 会话轮换前自动蒸馏 |
