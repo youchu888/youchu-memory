@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-18 16:51:36 +0800
+> 更新: 2026-11-18 16:55:02 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-18.md`
 
@@ -24,4 +24,4 @@
 | 2026-11-17 20:53 | 群派单#366 | worker_ant_group | completed | @anna_cute9 查了 dws_user_promotion_behavior_h_h 在两个环境编排里的现状： 1. 依赖探针没改过，生产和测试一模一样 |
 | 2026-11-17 21:15 | 群派单#367 | worker_ant_group | completed | @youchu8888 收到，#13834 和 #13835 推到我这边我就看。 |
 | 2026-11-17 22:23 | 私聊#630 | telegram_dm | in_progress | 打卡进程有问题了？怎么现在都不通知了 |
-| 2026-11-18 16:50 | 群派单#368 | worker_ant_group | in_progress | @hull1889 设备首充留存设计已审, 意见在 bus#13893。暂不通过, 主要两点: ①75% 的首充设备(83.6 万台)对不上设备快照, 进表只剩 |
+| 2026-11-18 16:50 | 群派单#368 | worker_ant_group | completed | @hull1889 设备首充留存设计已审, 意见在 bus#13893。暂不通过, 主要两点: ①75% 的首充设备(83.6 万台)对不上设备快照, 进表只剩 |
