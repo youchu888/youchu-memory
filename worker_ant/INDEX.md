@@ -20,6 +20,7 @@
 
 | 日期 | 文件 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-18 | [bus未送达401须重发](../lessons/2026-11-18-bus未送达401须重发或群贴要点-bus13908.md) | agent-bus, delivery | 未收到/401→`--to worker_ant`重发或群贴；禁别名 |
 | 2026-06-27 | [全量核心包](../lessons/20260627-worker-ant-full-collab-core.md) | worker_ant, etl, migration | SR幂等/cat/海豚API/踩坑/文档slug；bus#77 |
 | 2026-06-27 | [offset 四步修法](../lessons/20260627-agent-bus-offset-persistence.md) | agent-bus, poller | after_id 落盘/防 backlog 重放；bus#101 |
 | 2026-06-27 | [记忆体系方法论](../lessons/20260627-worker-ant-memory-architecture.md) | memory, self-evolve | 三级分层/触发词/Why+How；bus#102 |
