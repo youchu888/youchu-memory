@@ -5,6 +5,7 @@
 |------|------|------|--------|
 | 2026-11-18 | [知秋审核禁转发 TG 贴纸须文字或截图](./2026-11-18-知秋审核禁转发TG贴纸须文字或截图.md) | worker_ant, telegram, collaboration | 贴纸/表情包对端空消息；审阅材料用文字、bus 或截图 |
 | 2026-11-18 | [知秋审核禁转发 TG 贴纸须文字或截图](./2026-11-18-知秋审核禁转发TG贴纸须文字或截图.md) | worker_ant, telegram, collaboration | 贴纸/表情包对端空消息；审阅材料用文字、bus 或截图 |
+| 2026-11-18 | [知秋审核禁转发 TG 贴纸须文字或截图](./2026-11-18-知秋审核禁转发TG贴纸须文字或截图.md) | worker_ant, telegram, collaboration | 贴纸/表情包对端空消息；审阅材料用文字、bus 或截图 |
 | 2026-11-18 | [bus 未送达/401 须重发或群贴要点 bus#13908](./2026-11-18-bus未送达401须重发或群贴要点-bus13908.md) | agent-bus, worker_ant, delivery, 401 | 狂人未收到且补拉401时须 `--to worker_ant` 重发或群贴要点；禁别名收件 |
 | 2026-11-17 | [晚间 TG 学习要把运维执行事实单独入库](./2026-11-17-tg-learn-ops-facts.md) | tg-learn,ops_facts,运维 | 执行回执进 ops_facts；谁重建先 lookup |
 | 2026-11-17 | [设备 LTV 设计 v1 审结（#13790）](./2026-11-17-设备LTV设计v1审结-bus13790.md) | device-ltv,channel,quality,ddl | 进队日冻结渠道；冲突同日同应用同订单；告警落质量表；DDL+SQL一并交审 |
