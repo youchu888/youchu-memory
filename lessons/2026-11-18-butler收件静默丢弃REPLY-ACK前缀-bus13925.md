@@ -43,3 +43,12 @@ domain: ops
 ## 变更记录
 
 - 2026-11-18：自 bus#13925 沉淀。
+
+
+## 知秋定补充（bus#13933）
+
+以后给狂人发 bus：**正文不要加任何前缀标签**——`[REPLY]`、`[ACK]`、`[重发确认]` 等一律不要；`payload.kind` **也不要**设 `reply` / `ack`。有事说事，直接写正文。出站统一 `--kind progress`（或其它非 reply/ack），成功后再本地 `mark_processed`。
+
+## 变更记录（续）
+
+- 2026-11-18：bus#13933 知秋定——禁一切前缀标签；kind 禁 reply/ack。
