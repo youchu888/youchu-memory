@@ -21,6 +21,7 @@
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；沙箱真跑 DONE（约 1.43 亿）；dim/宽表链仍 HOLD，勿并 full_chain。
 - [ ] **prod 海豚告警处置（new-mac 专责）**：2026-09-27 自动化已迁 new-mac；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
 - [ ] **记忆系统 P1 养成**：日清 22:50 已挂（`memory-daily-light-tidy`）；周 hygiene；沉前查重；纠正≥2 次写 PINNED。卡=`MEMORY_LIGHT.md`。
+- [ ] **bus#13883/#13918 新分 5 张（2026-11-18）**：周月活跃+三维表。已定：七步影子+7日对平；page=upsert；app=SR、page/order=_r、禁 JDBC；test S4 自挂；prod 挂步归狂人、DDL 经确认@王毅；**周月首版 _uc**（#13918）；对平窗≥08-03；**平台 API 化上线前 prod 不挂不切**。执行：A周月→B1 app探数→B2 page→B3 order。
 - [ ] **页面访问 DWS 对接**：`ops_system/04.dws/dws_app_page_visit_d_d/` 本地改动未要求则先别 commit。
 - [ ] **bus#13359/#13476 产挂序**：①`g_dimuser_close` **已上产**（`61985870`，北京12:28）；今晚00槽首跑明早核。②B1 知秋用 prod paimon 11-12 复跑 `attr_rewrite@250e94c0` 比对（缺陷刀已在仓），过后再挂该组。③A7/A6/A1 知秋比/核。④B2：知秋重建 paimon；**又初**找运维按 `recreate_shadow_uid_bitmap.sql` DROP 重建 SR 影子 uid_cnt→BITMAP，建好回执再挂。A2–A5 不挂。禁手改 prod。
 
