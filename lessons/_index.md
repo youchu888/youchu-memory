@@ -1,4 +1,5 @@
 | 2026-11-03 | [2026-11-03-bus12214-七张生产影子重提审野花-prod影子表未建禁报首跑标记](./2026-11-03-bus12214-七张生产影子重提审野花-prod影子表未建禁报首跑标记.md) | spark-migrate,paimon_shadow,request-publish | bus#12214 七张重 RP 野花；prod 无影子禁报首跑 |
+| 2026-11-18 | [butler 收件静默丢弃 REPLY/ACK 前缀 bus#13925](./2026-11-18-butler收件静默丢弃REPLY-ACK前缀-bus13925.md) | agent-bus, butler, silent-drop | 修好前正文禁 [REPLY]/[ACK]、禁 kind=reply，改用 progress+直写正文 |
 # Lessons 索引
 
 | 日期 | 标题 | tags | 一句话 |
