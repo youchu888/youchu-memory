@@ -11,3 +11,7 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"CallDynamicTool","input":{"namespace":"cursor","toolName":"WebSearch","arguments":{"search_term":"万柏林区妇幼保健院 长风院区 众纺路","explanation":"核实万柏林妇幼众纺路地址是否为长风院区"}}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"**不是。** 这是两家不同的单位。\n\n| | 机构 | 地址 | 电话 |\n|---|---|---|---|\n| 你刚问的 | **万柏林区**妇幼保健计划生育服务中心 | 众纺路 8 号 | 0351-6580480 |\n| 长风院区 | **太原市**妇幼保健院 · 长风院区 | 长风西街 113 号 | 一般总机/预约以医院公示为准 |\n\n「长风院区」指的是市妇幼保健院，不是万柏林区妇幼。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Thursday, Nov 19, 2026, 11:16 AM (UTC+8)</timestamp>\n<user_query>\n妇幼保健院可以做婚检吗\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"tool_use","name":"CallDynamicTool","input":{"namespace":"cursor","toolName":"WebSearch","arguments":{"search_term":"太原 妇幼保健院 婚检 免费 地点 万柏林","explanation":"查太原妇幼是否可做婚检及万柏林相关点位"}}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"**可以。** 妇幼保健院一般是免费婚检的主要定点机构之一。\n\n在太原，大致是这样：\n\n- **全市都能去**：太原市妇幼保健院（含**长风院区**，长风西街 113 号）可做免费婚检  \n- **小店区**：小店区妇幼保健计划生育服务中心（永康南路 13 号）可做  \n- **万柏林区**：公开名单里免费婚检定点是 **万柏林区中心医院**（众纺路 2 号，电话 6184698），不是众纺路 8 号那家区妇幼\n\n**免费条件（常见口径）**  \n男女至少一方为太原户籍，拟在太原办结婚登记（含新婚/复婚/再婚）；当年度已领证未检的也可。\n\n**一般要带**  \n双方身份证、户口本原件及复印件；已领证的再带结婚证。\n\n若你户口在小店，优先小店妇幼或市妇幼长风院区；若人在万柏林、想做免费婚检，更稳妥去**万柏林区中心医院**，或先打 `6580480` / `6184698` 问清当天是否接检。"}]}}
+{"type":"turn_ended","status":"success"}
