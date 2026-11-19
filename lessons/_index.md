@@ -4,6 +4,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-19 | [charge/summary 正式表与 Paimon 影子双链路并行](./2026-11-19-charge-summary-正式表与paimon影子双链路并行.md) | charge_d, summary_d, paimon_shadow, dolphin | 正式海豚 SR event_time；影子 Spark request_time；summary 无仓 SQL；对差属口径非错 |
 | 2026-11-18 | [知秋审核禁转发 TG 贴纸须文字或截图](./2026-11-18-知秋审核禁转发TG贴纸须文字或截图.md) | worker_ant, telegram, collaboration | 贴纸/表情包对端空消息；审阅材料用文字、bus 或截图 |
 | 2026-11-18 | [知秋审核禁转发 TG 贴纸须文字或截图](./2026-11-18-知秋审核禁转发TG贴纸须文字或截图.md) | worker_ant, telegram, collaboration | 贴纸/表情包对端空消息；审阅材料用文字、bus 或截图 |
 | 2026-11-18 | [知秋审核禁转发 TG 贴纸须文字或截图](./2026-11-18-知秋审核禁转发TG贴纸须文字或截图.md) | worker_ant, telegram, collaboration | 贴纸/表情包对端空消息；审阅材料用文字、bus 或截图 |
