@@ -5,6 +5,14 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 11 19 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-19-tg-notify-agent-restart-报打卡没通知时先核-onehr-checkin-.md` | 2026-11-19-tg-notify-agent-restart-报打卡没通 |
+| #630 #631 bot tg 一条 一次 | `sessions/tg-rotate-2026-11-19-1225.md` | TG bot 私聊带 `#630`/`#631` 序号时，可把 **重启** 与 |
+| api onehr 「tg 「进 与打 位」 | `sessions/tg-rotate-2026-11-19-1225.md` | 扫近期打卡/OneHR 相关日志里是否有 **「TG 通知失败」** 等明确错误 |
+| 00 0） 20 200）及计划下班触发时间 http 「还 | `sessions/tg-rotate-2026-11-19-1225.md` | 验当日结果：查最近一次上班卡是否成功（如 HTTP 200）及计划下班触发时间， |
+| checkin com.youchu.onehr launchd 侧首 假日 卡 | `sessions/tg-rotate-2026-11-19-1225.md` | 打卡侧首查：`com.youchu.onehr-checkin` launchd |
+| tg vs 「打 」时 不同 不通 | `sessions/tg-rotate-2026-11-19-1225.md` | 用户报「打卡都不通知了」时，先区分：**调度/打卡进程是否存活** vs **T |
+| tg 「卡 「进 」就 不要 不要只给「进程正常」就 | `sessions/tg-rotate-2026-11-19-1225.md` | 若用户指的是「卡打成了但 TG 没收到」：主动要 **大概从哪天开始断**，再按 |
+| #630 ack ag agent」时 en ge | `sessions/tg-rotate-2026-11-19-1225.md` | 用户同时发「重启 agent」时：走冷启动（读启动包、在线确认），并**顺带闭环 |
 | ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports-日报-yyyy-mm-dd-md-再.md` | 2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports |
 | ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明细是否仍更新-明细新而指标停-优先查实.md` | 2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明 |
 | ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-死锁阻碍-仅写当日明确应交未交的内部卡点-等门禁-等他人比对等外部依赖默认不写死锁-主人清空后须.md` | 2026-11-15-死锁阻碍-仅写当日明确应交未交的内部卡点-等门禁-等他人比 |
@@ -37,11 +45,3 @@
 | ## 11 13 2026 agent agent_bus_send | `~/.dc-platform/memory/lessons/2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列名序-再-agent_bus_send.md` | 2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列 |
 | #1 13 26 32 3「 63 | `sessions/tg-rotate-2026-11-13-0605.md` | 类似 bus#13263「影子 ALTER 已跑完 → 告知狂人」：先查库后发言 |
 | #1 #13275）与所回复 13 27 32 5） | `sessions/tg-rotate-2026-11-13-0605.md` | 正文对外写业务主人名（知秋），技术上记清新 outbound bus id（如  |
-| 35 dws.dws_register_attribution_result_d | `sessions/tg-rotate-2026-11-13-0605.md` | 本例验收表：`dws.dws_register_attribution_resu |
-| bus create ddl prod sho show | `sessions/tg-rotate-2026-11-13-0605.md` | SR 影子表 DDL 完工回执前：prod 只读轻量验收——列总数 + 目标列名 |
-| agent_bus_send.py al bus bus#13263） er i | `sessions/tg-rotate-2026-11-13-0605.md` | 运维回执类任务（如「alter 六句已执行」）：出口统一走 `agent_bus |
-| bus dedup id no reply to | `sessions/tg-rotate-2026-11-13-0605.md` | 对同一 `reply-to-bus-id` 的实质回执若被出站去重拦截，可用 ` |
-| .md cursor prompt tg 「当 件并 | `sessions/tg-rotate-2026-11-13-0605.md` | TG/Cursor 派活带大 `prompt_*.md` 时：先读启动包，再通读 |
-| ## 11 12 2026 ack agent | `~/.dc-platform/memory/lessons/2026-11-12-ack-若-silent-drop-须核对发送记录-无责范围写清边界再-reply-结案.md` | 2026-11-12-ack-若-silent-drop-须核对发送记录-无责范 |
-| ## 11 12 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-12-小时挂用户属性仅用-dwm_user_attr_intraday_d_d-dt-d-禁小时读-d.md` | 2026-11-12-小时挂用户属性仅用-dwm_user_attr_intra |
-| ## 11 12 200 2026 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码只走配置源-不入公共记忆明文.md` | 2026-11-12-test-登录验收-ui-200-api-拉项目-账号密码 |

@@ -5,6 +5,7 @@
 # DC Platform 公共记忆索引
 - [bus 未送达/401 须重发或群贴要点 bus#13908](lessons/2026-11-18-bus未送达401须重发或群贴要点-bus13908.md) — 狂人未收到且补拉401时重发；`--to` 必须 worker_ant；通道异常则群贴要点
 
+- [tg-notify|agent-restart|报打卡没通知时先核 on](lessons/2026-11-19-tg-notify-agent-restart-报打卡没通知时先核-onehr-checkin-.md) — 会话轮换蒸馏
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**
 - [主人粘贴改定稿并要求上传云端时，先覆盖本地 `reports/日报-YY](lessons/2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports-日报-yyyy-mm-dd-md-再.md) — 会话轮换蒸馏
 - [实时链路断流：prod 只读核对指标表最后写入时刻与上游明细是否仍更新，](lessons/2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明细是否仍更新-明细新而指标停-优先查实.md) — 会话轮换蒸馏
