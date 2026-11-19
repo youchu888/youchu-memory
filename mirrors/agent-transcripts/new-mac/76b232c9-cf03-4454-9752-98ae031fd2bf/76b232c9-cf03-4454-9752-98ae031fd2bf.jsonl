@@ -19,3 +19,13 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"CallDynamicTool","input":{"namespace":"cursor","toolName":"WebSearch","arguments":{"search_term":"太原市妇幼保健院长风院区 电话 咨询","explanation":"查市妇幼长风院区最新公开电话"}}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"**太原市妇幼保健院 · 长风院区**\n\n- 地址：长风西街 113 号  \n- 常用电话：\n  - `0351-2909320`（咨询）\n  - `0351-2909029`（联系/总值班类）\n  - `0351-2909118`、`0351-2909159`（其他咨询号）\n- 婚检相关曾公示：`0351-2909157`\n\n挂号一般用「健康山西」App。先打不通可换上面几个号试。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Thursday, Nov 19, 2026, 11:30 AM (UTC+8)</timestamp>\n<user_query>\n纺织医院电话是哪个\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"tool_use","name":"CallDynamicTool","input":{"namespace":"cursor","toolName":"WebSearch","arguments":{"search_term":"太原纺织职工医院 电话 众纺路","explanation":"核实太原纺织医院公开电话与地址"}}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"**太原纺织职工医院**（常说的纺织医院）\n\n- 地址：万柏林区南内环西街众纺路 29 号  \n- 常用咨询电话：`0351-5695005`  \n- 体检中心曾公示：`0351-6333238`  \n- 另有旧号：`0351-6333120`\n\n一般先打 `5695005`；问体检/健康证可试 `6333238`。"}]}}
+{"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Thursday, Nov 19, 2026, 11:31 AM (UTC+8)</timestamp>\n<user_query>\n万柏林区免费孕前检查的单位电话\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"tool_use","name":"CallDynamicTool","input":{"namespace":"cursor","toolName":"WebSearch","arguments":{"search_term":"万柏林区 免费孕前优生检查 电话 地点 2025 2026","explanation":"查万柏林区免费孕前优生检查定点单位及电话"}}}]}}
+{"role":"assistant","message":{"content":[{"type":"tool_use","name":"CallDynamicTool","input":{"namespace":"cursor","toolName":"WebSearch","arguments":{"search_term":"太原市万柏林区 免费孕前优生健康检查 妇幼 电话","explanation":"限定太原万柏林查免费孕前检查单位电话"}}}]}}
+{"role":"assistant","message":{"content":[{"type":"tool_use","name":"CallDynamicTool","input":{"namespace":"cursor","toolName":"WebSearch","arguments":{"search_term":"万柏林区医疗集团中心医院 免费孕前优生 电话 6184698","explanation":"确认万柏林中心医院孕前检查咨询电话"}}}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"万柏林区免费孕前优生检查，公开名单里主要是这两家（不是区妇幼那家）：\n\n**1. 万柏林区医疗集团中心医院**（优先打这个）  \n- 电话：`0351-6184698`  \n- 地址：众纺路 2 号  \n\n**2. 太原纺织职工医院**  \n- 电话：`0351-5695005`（咨询）  \n- 体检相关也可试：`0351-6333238`  \n- 地址：众纺路 29 号  \n\n补充：众纺路 8 号万柏林区妇幼电话是 `0351-6580480`，可做政策咨询，但免费孕前优生检查定点一般是上面两家。去之前建议先打电话确认当天是否接检、要带什么材料。"}]}}
+{"type":"turn_ended","status":"success"}
