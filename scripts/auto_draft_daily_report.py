@@ -43,6 +43,37 @@ _PREFIX_RE = re.compile(
     re.I,
 )
 
+# 内部简写 → 书面展开（自动定稿必须过；Cursor 写稿也按此口径）
+# 长词在前，避免「应用维」被「维」误伤
+_JARGON_EXPAND: list[tuple[str, str]] = [
+    ("物化稿", "加工脚本"),
+    ("字典号版", "按字典编号口径"),
+    ("字典号口径", "按字典编号口径"),
+    ("核清收编", "清理归并"),
+    ("应用维", "应用维度表"),
+    ("页面维", "页面维度表"),
+    ("订单维", "订单维度表"),
+    ("七步推进", "开发平台各阶段推进"),
+    ("七步", "开发平台各阶段"),
+    ("首灌", "首次灌数"),
+    ("微差", "轻微差异"),
+    ("补跑", "补历史数据"),
+    ("冒烟出数", "验证出数"),
+    ("冒烟", "验证出数"),
+    ("对平", "核对对齐"),
+    ("建影子", "建对照表"),
+    ("影子表", "对照表"),
+    ("影子", "对照表"),
+    ("断档日", "缺数日期"),
+]
+
+
+def _expand_jargon(text: str) -> str:
+    out = text
+    for src, dst in _JARGON_EXPAND:
+        out = out.replace(src, dst)
+    return out
+
 
 def _today() -> str:
     return datetime.now(TZ).strftime("%Y-%m-%d")
@@ -108,9 +139,11 @@ def collect_bullets(day: str) -> list[str]:
     return preferred[:6]
 
 
-def _shorten(text: str, lo: int = 22, hi: int = 42) -> str:
+def _shorten(text: str, lo: int = 22, hi: int = 48) -> str:
+    text = _expand_jargon(text)
     text = re.sub(r"\s+", "", text)
     text = text.rstrip("。；;，,")
+    # 展开后允许略长，避免为凑短再切回简写腔
     if len(text) > hi:
         text = text[: hi - 1] + "…"
     if len(text) < lo and not text.endswith("已完成"):
