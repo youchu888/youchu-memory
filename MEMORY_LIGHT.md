@@ -40,13 +40,13 @@
 | 归因 | `attribution` |
 | 迁机/LaunchAgent | `new-mac` `launchd` `automation` |
 
-## 晚间自主学习闭环（权威机 new-mac · 工作日）
+## 晚间闭环（权威机 old-mac · 工作日 · 2026-11-21）
 
 | 时刻 | 动作 | 目的 |
 |------|------|------|
-| 21:30 / 21:45 | 日报 | 业务交付，不写运维 |
-| 22:30 | memory git sync | 双机记忆对齐 |
-| 09:00 | 向狂人学习（bus） | 工作日；假日/请假跳过；新知识进 `worker_ant/sessions/` → lesson |
+| 21:30（六 18:30） | 日报 wake | 业务交付；**无 +15 兜底** |
+| interval 120s | memory git sync | 双机记忆对齐 |
+| ~~狂人学习~~ | **已停** | 狂人不再回学习消息 |
 | **22:50** | **记忆日清** `memory-daily-light-tidy.sh` | 重生 bootstrap、压 OPEN/PINNED 报警、保持次日轻启动 |
 | **02:00** | **TG 回拉 + 学习 + 融合** `daily_group_chat_learn` → `memory-fuse-after-tg-learn.sh` | 闲聊丢弃；有用内容优先并入已有 lesson/feedback/settled；新建封顶；reference 去重 |
 

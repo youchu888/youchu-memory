@@ -54,10 +54,9 @@
 
 ```
 21:20  pre-flush（冲 hosts）／周六 18:20
-21:30  wake → Cursor 写稿推 TG（理想）／周六 18:30
-21:45  fallback 一刀（没推才定稿/推）／周六 18:45
-——   不再：22:00 二次 fallback、狂人学习、记忆日清
-（memory-git-sync：interval 全天 120s；若改 daily 再谈 22:30）
+21:30  wake → Cursor 写稿推 TG／周六 18:30（无 fallback；忙则新开 agent）
+22:50  记忆日清（工作日；假日/请假 skip）
+（memory-git-sync：interval 全天 120s）
 ```
 
 ---
@@ -90,15 +89,14 @@
 **阶段 0 · 只观测（0 改动）**  
 在 old-mac 导出：`launchctl list | rg youchu` + 各 log 尾 50 行 + 标记文件是否当日命中。本清单对照打勾。
 
-**阶段 1 · 日报链收口（优先，风险可控）** ✅ 2026-11-21  
-- 保留：21:30 wake（精品稿）／六 18:30  
-- 兜底：**仅 21:45 一次**／六 **仅 18:45**（已推 skip；未推 → auto_draft + 推）  
-- 去掉：22:00 / 19:00 硬兜底（实机早已单时刻；清单已对齐）  
-- 同批：停用「找狂人学习」定时任务  
-- 验收：连续 2 个工作日 TG 恰一条；简写不进正文  
+**阶段 1 · 日报链收口** ✅ 2026-11-21  
+- 保留：21:30 wake／六 18:30  
+- **整段卸掉 fallback**（定时不兜底）  
+- 停用狂人学习；**装回记忆日清 22:50**  
+- 验收：连续 2 个工作日 TG 恰一条；日清归档有当日文件  
 
-**阶段 2 · 晚间串行护栏**（学习/日清已停，本阶段改看 sync）  
-- 日报 posted 后 memory sync 可并行；勿再装回学习/日清除非主人说改  
+**阶段 2 · 晚间串行护栏**  
+- 日报 wake →（可并行 sync）→ 22:50 日清；勿再装学习/fallback  
 
 **阶段 3 · sync 节奏**  
 - 权威机：评估 `MEMORY_SYNC_MODE=interval` 120s 是否可改为 **300～600s** 或「工作时段 interval + 晚间 daily」  
@@ -138,5 +136,5 @@
 
 | 日期 | 说明 |
 |------|------|
-| 2026-11-21 | old-mac 实机核对后：fallback 清单改为单时刻；停用 worker-ant-daily-learn；标注 ensure/日清本机无、hb-watch 等多余项仍观察 |
+| 2026-11-21 | 卸 fallback；装 memory-daily-light-tidy 22:50；停用 worker-ant-learn；原则「定时不兜底、忙则新开 agent」 |
 | 2026-11-20 | 初版全景：基于 new-mac disabled 镜像 plist + 仓内 install 脚本梳理；待 old-mac 实机核对补洞 |

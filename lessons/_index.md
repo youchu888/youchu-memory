@@ -533,3 +533,5 @@
 - 2026-11-12-bus13228-归因影子补6列与rewrite派生-海豚未迁派出.md | attribution,shadow,rewrite,migrate | bus#13228 影子6列+rewrite派生；未迁派出通用规则
 
 | 2026-11-21 | [停用狂人每日学习 + 日报 fallback 单时刻](./2026-11-21-停用狂人每日学习-日报fallback单时刻.md) | automation,launchd,daily-report | 主人停学习；fallback 清单对齐 |
+
+| 2026-11-21 | [卸日报 fallback + 装记忆日清](./2026-11-21-卸日报fallback-装记忆日清.md) | automation,daily-report,memory | 定时不兜底；日清 22:50 |
