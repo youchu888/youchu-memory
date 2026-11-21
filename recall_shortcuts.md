@@ -5,6 +5,16 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 11 2026 21 agent_session_rotate code_ | `~/.dc-platform/memory/lessons/2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owners-与-spark-索引-主链归知秋.md` | 2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owne |
+| 「又 「活 「活跃留存整条链是又初开发的」 下游 下游相关（归因 不说 | `sessions/tg-rotate-2026-11-21-1032.md` | **边界话术**：可说「又初侧有周边/下游相关（归因、标签等）」；**不说**「 |
+| bitmap dws_app_retention_d dws_app_reten | `sessions/tg-rotate-2026-11-21-1032.md` | 对外表述：业务名「活跃留存」↔ 表名 `dws_app_user_d_h` /  |
+| dws 「都 不同 与活 与活跃留存 主链 | `sessions/tg-rotate-2026-11-21-1032.md` | **又初工作簿常见范围**：设备标签、归因、指标库、渠道周/月汇总等；与活跃留存 |
+| 10 2025 29 29（摘录中的 29） 9（ | `sessions/tg-rotate-2026-11-21-1032.md` | **2025-10-29（摘录中的 10-29）**知秋明确：这批表迁 runn |
+| code_owners spark 「是 「活 」时 不是 | `sessions/tg-rotate-2026-11-21-1032.md` | 归属依据：仓库 **`code_owners`**、**Spark 索引**均标 |
+| bitmap） dws_app_retention_d_h dws_app_us | `sessions/tg-rotate-2026-11-21-1032.md` | **活跃留存主链**（`dws_app_user_d_h`、`dws_app_r |
+| code_owners d_h dws_app lesson ownership | `sessions/tg-rotate-2026-11-21-1032.md` | `[LESSON: ownership/活跃留存/问「是不是我们开发的」时先查  |
+| code_owners prompt tg 「当 一句 主责 | `sessions/tg-rotate-2026-11-21-1032.md` | TG/私聊问 **归属/谁开发** 类问题：先 **启动记忆 + prompt  |
+| dws 「都 不同 与活 与活跃留存 主链 | `sessions/tg-rotate-2026-11-21-1032.md` | 又初工作簿常见范围**：设备标签、归因、指标库、渠道周/月汇总等；与活跃留存 * |
 | ## 11 19 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-19-tg-notify-agent-restart-报打卡没通知时先核-onehr-checkin-.md` | 2026-11-19-tg-notify-agent-restart-报打卡没通 |
 | #630 #631 bot tg 一条 一次 | `sessions/tg-rotate-2026-11-19-1225.md` | TG bot 私聊带 `#630`/`#631` 序号时，可把 **重启** 与 |
 | api onehr 「tg 「进 与打 位」 | `sessions/tg-rotate-2026-11-19-1225.md` | 扫近期打卡/OneHR 相关日志里是否有 **「TG 通知失败」** 等明确错误 |
@@ -35,13 +45,3 @@
 | pending 「申 人监 会话 会话持有人 再发 | `sessions/tg-rotate-2026-11-14-0608.md` | **解半截态**：须 **会话持有人**（如蓝猫）在开发平台再点「申请发布」，审 |
 | false i_can_publish_prod none publish pu | `sessions/tg-rotate-2026-11-14-0608.md` | **半截 publish 态**：`publish_request_status |
 | running 下次 且距 余量 作流 全窗 | `sessions/tg-rotate-2026-11-14-0608.md` | **发前安全窗口**：查目标工作流下次调度与 RUNNING 实例，无在跑且距触 |
-| 100000000 6c85b3e3 and co commit（如 it | `sessions/tg-rotate-2026-11-14-0608.md` | **发前对齐仓库与现网**：以指定 commit（如 `6c85b3e3`）核对 |
-| scope spark 「只 」时 不扩 不批 | `sessions/tg-rotate-2026-11-14-0608.md` | **只发海豚、不扩 scope**：私聊明确「只发已有海豚任务」时，**不批** |
-| dolphin_ops mcp prod publish session_cod | `sessions/tg-rotate-2026-11-14-0608.md` | **产发 SQL 默认走平台**：MCP `publish-task-sql`  |
-| false i_can_publish_prod lesson none pub | `sessions/tg-rotate-2026-11-14-0608.md` | [LESSON: 产发门禁/publish_request_status 被降成 |
-| bot cursor_shared cursor_shared_session  | `sessions/tg-rotate-2026-11-14-0608.md` | 代点发布不可用**：他人 bot 代点「申请发布」若报 `No module n |
-| dolphin_ops pending 一致 与门 主人 主人授权 | `sessions/tg-rotate-2026-11-14-0608.md` | 主人授权 ≠ 绕过门禁**：即使授权 `dolphin_ops` 直发，平台会话 |
-| ## 11 13 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径-大文件先跳读尾段再动手.md` | 2026-11-13-超大-tg-prompt-只认末尾-当前问题-为执行口径- |
-| ## 11 13 2026 agent agent_bus_send | `~/.dc-platform/memory/lessons/2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列名序-再-agent_bus_send.md` | 2026-11-13-影子表运维-alter-回执须-prod-只读核列数与六列 |
-| #1 13 26 32 3「 63 | `sessions/tg-rotate-2026-11-13-0605.md` | 类似 bus#13263「影子 ALTER 已跑完 → 告知狂人」：先查库后发言 |
-| #1 #13275）与所回复 13 27 32 5） | `sessions/tg-rotate-2026-11-13-0605.md` | 正文对外写业务主人名（知秋），技术上记清新 outbound bus id（如  |
