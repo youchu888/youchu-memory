@@ -537,3 +537,5 @@
 | 2026-11-21 | [卸日报 fallback + 装记忆日清](./2026-11-21-卸日报fallback-装记忆日清.md) | automation,daily-report,memory | 定时不兜底；日清 22:50 |
 
 | 2026-11-21 | [规矩易忘根因与加固·TG私聊改叫醒IDE](./2026-11-21-规矩易忘根因与加固-TG私聊改叫醒IDE.md) | memory,tg-dm,wake | A0+alwaysApply；私聊默认 wake |
+
+| 2026-11-21 | [记忆快准·行为卡+规则目录](./2026-11-21-规矩易忘根因与加固-TG私聊改叫醒IDE.md) | memory,bootstrap | BEHAVIOR_CARD+RULES_CATALOG 日清重生 |

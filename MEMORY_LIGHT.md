@@ -3,20 +3,23 @@
 > **定案**：本来就是**索引制**，不是每次整库灌。繁重来自「没按索引读」+ 「bootstrap 里塞了不相关的 bus 积压」。  
 > 路径：`~/.dc-platform/memory/`
 
-## 三层（只认这三层）
+## 三层 + 两张卡（2026-11-21 · 快·准）
 
 | 层 | 文件 | 何时读 | 体积 |
 |----|------|--------|------|
-| **启动** | `.cursor/.agent-memory-bootstrap.md` | 新对话第一下 | 目标 ≪100KB；只含 OPEN + 最近动过 + 检索捷径（**不**灌红线全文） |
-| **索引** | `lessons/_index.md` · `MEMORY.md` | **只 rg / 扫标题行**，不整篇 Read | 索引而已 |
-| **原文** | 命中的 1～2 个 `lessons/` 或 `feedback_*` | 任务 tags 对上才读 | 按需 |
+| **行为卡** | `BEHAVIOR_CARD.md` | 启动必守（进 bootstrap A0） | ≤2KB |
+| **规则目录** | `RULES_CATALOG.md` | 启动扫标签（A1 节选）；全面靠文件 | 一行一条 |
+| **启动包** | `.cursor/.agent-memory-bootstrap.md` | 新对话第一下 | OPEN + A0/A1 + 最近动过 |
+| **原文** | 命中的 1～2 个 `feedback_*` / `lessons/` | `lookup-rules.sh` 对上才读 | 按需 |
+
+生成：`bash ~/.dc-platform/scripts/generate-memory-cards.sh`（日清 22:50 自动）
 
 ## 开工 30 秒流程（强制）
 
-1. **Read bootstrap**（整份即可；别再平行 Read PINNED/OPEN/MEMORY）
-2. 看用户任务 → 定 **1～2 个 tag**（如 `日报` / `vpn` / `渠道` / `dolphin`）
-3. **`rg tag lessons/_index.md`** 或 MCP `memory_list` → 命中后 **只 `memory_read` 那 1～2 个文件**
-4. 干完再写：优先 **update 旧 feedback/lesson**，少新建；新红线只追加 `pinned/*.md`（31+），**禁止**顶换 `PINNED.md` 1–30
+1. **Read bootstrap**（含 A0 行为卡；别平行通读 PINNED/MEMORY）
+2. 定 **1～2 个关键词** → `lookup-rules.sh`（或扫 `RULES_CATALOG.md`）
+3. 命中后 **只读 1～2 个原文**
+4. 干完：优先 **update** 旧 feedback/lesson；新红线只追加 `pinned/*.md`（31+）
 
 ## 禁止（这就是「梳理好久」的原因）
 
