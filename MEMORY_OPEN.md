@@ -12,7 +12,7 @@
 
 - [ ] **bus#11621 定案（挂载仍有效）**：test spark_migrate 又初 S4 五步自挂；禁手改 full_chain/prod；渠道周月不挂；Paimon DDL 建前发狂人核。**历史水位追平/补 10-22 前已废**（见 #11677）；查数改等狂人报「当天有数」后按当天分区。lesson=`2026-10-27-S4测试五步自挂-禁手改full_chain-补数日不晚于追平水位.md`。
 - [ ] **测试调度日常维护（知秋 11-10 / bus#13107）**：又初维护；狂人改系统。`keepRunning=true`（失败3/FATAL→SKIPPED；槽位120min未就绪不等；挂账>24h→SKIPPED）+ `sqlTextOverride`（user/device snap 断链读最近分区）。一夜复查通过(11-11 08:30)：小时跟到08、`11-11#00`日结05:43。日志=`/home/ec2-user/pipeline-runner/logs/fullchain_daemon_20261110_115207.log`。系统 bug 找狂人。lesson=`2026-11-11-bus13107-测试调度keepRunning一夜复查通过-日常维护归又初.md`。
-- [ ] **归因 result 影子切正式（bus#10921/#10922/#10936）**：计划认可；**D1=10-21 起每天日结**经 bus 发狂人；剧本 `ops_system/00.pipeline/recon/recon_register_attribution_result_shadow_vs_formal.sql`；7 天对平后报切停海豚 `174729603403591`；配置类差先报。另：压测 wf `wf_dws_归因_paimon_shadow_日` 的 `result_d_r` 已按知秋定停（bus#11232，`flag=NO`）；同 wf apply/metrics 仍开，是否同停等知秋。
+- [ ] **归因 result 影子切正式（bus#10921/#10922/#10936）**：计划认可；**D1=10-21 起每天日结**经 bus 发狂人；剧本 `data-jobs/checks/recon/recon_register_attribution_result_shadow_vs_formal.sql`；7 天对平后报切停海豚 `174729603403591`；配置类差先报。另：压测 wf `wf_dws_归因_paimon_shadow_日` 的 `result_d_r` 已按知秋定停（bus#11232，`flag=NO`）；同 wf apply/metrics 仍开，是否同停等知秋。
 
 - [ ] **dim_channel_info_all_snap**：JDBC/SR 换源已停手（#11164）。**现网 SQL 以 `3ce1c124` 的 `dim_channel_info_all_sync.sql` md5 `68ebf206`（00 槽日快照）为准**（#11175）；勿再推 `230fa1fb`。**prod SR `dim.dim_channel_info_all`=0、prod snap 无分区**（#11251 复核）；卡业务后台写产。BitmapUdf 中间态以 Kryo 为准。
 - [ ] **渠道日指标 013 + 管理报表 Spark 三表（bus#13074 HOLD）**：`ads_channel_metrics_daily_d`（`dev-20261016-013`）**先不迁、不推进、不再发布**（知秋 10-30：等 bitmap 字典后整体重做）。野花 S7 误发产后，11-09 补数 Kryo bitmap OOM；狂人 16:38 已撤产编排 `g_ads_channel_metrics_daily_d` 组+两步，**paimon/SR 影子表保留**。依赖它的 `dev-20261022-001/002/003`（稿 `ad004aed`）**一并等待**。lesson=`2026-11-10-bus13074-渠道日指标013停迁-产编排已撤.md`。
@@ -22,7 +22,7 @@
 - [ ] **prod 海豚告警处置（new-mac 专责）**：2026-09-27 自动化已迁 new-mac；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
 - [ ] **记忆系统 P1 养成**：日清 22:50 已挂（`memory-daily-light-tidy`）；周 hygiene；沉前查重；纠正≥2 次写 PINNED。卡=`MEMORY_LIGHT.md`。
 - [ ] **bus#13883/#13918 新分 5 张（2026-11-18）**：周月活跃+三维表。已定：七步影子+7日对平；page=upsert；app=SR、page/order=_r、禁 JDBC；test S4 自挂；prod 挂步归狂人、DDL 经确认@王毅；**周月首版 _uc**（#13918）；对平窗≥08-03；**平台 API 化上线前 prod 不挂不切**。执行：A周月→B1 app探数→B2 page→B3 order。
-- [ ] **页面访问 DWS 对接**：`ops_system/04.dws/dws_app_page_visit_d_d/` 本地改动未要求则先别 commit。
+- [ ] **页面访问 DWS 对接**：`data-jobs/dolphin/04.dws/dws_app_page_visit_d_d/` 本地改动未要求则先别 commit。
 - [ ] **bus#13359/#13476 产挂序**：①`g_dimuser_close` **已上产**（`61985870`，北京12:28）；今晚00槽首跑明早核。②B1 知秋用 prod paimon 11-12 复跑 `attr_rewrite@250e94c0` 比对（缺陷刀已在仓），过后再挂该组。③A7/A6/A1 知秋比/核。④B2：知秋重建 paimon；**又初**找运维按 `recreate_shadow_uid_bitmap.sql` DROP 重建 SR 影子 uid_cnt→BITMAP，建好回执再挂。A2–A5 不挂。禁手改 prod。
 
 ## 已结（勿再当未完写进自评/日报）
