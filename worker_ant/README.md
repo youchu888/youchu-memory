@@ -2,19 +2,25 @@
 
 > 维护人：又初 · 来源：worker_ant（agent-bus / 群旁听 / dc-platform 文档）
 
-## 目的
+## 状态（主人 2026-11-21）
 
-每天上午用 agent-bus 向工作狂人请教（狂人此时较闲），把回复 + 平台文档 + 当日派单经验**结构化沉淀**，供开工注入上下文。
+**自动「找狂人学习」已停用**（狂人不再回学习消息）。  
+LaunchAgent 已卸；`install-worker-ant-daily-learn-launchd.sh` 默认卸载；wake 默认 exit。  
+历史 sessions / INDEX 仍保留查阅。勿默认重装。
 
-## 每日流程（09:00 Asia/Shanghai · 主人 2026-10-02 改）
+## 目的（历史）
 
-**定时**：LaunchAgent `com.youchu.worker-ant-daily-learn`（周一至周五 **09:00**；法定假/请假跳过）  
-先 `agent_bus_send → worker_ant`，再写 `wake_feed` → `AGENT_LOOP_WAKE_WORKER_ANT_LEARN` 供 IDE 沉淀。
+曾：每天上午用 agent-bus 向工作狂人请教，把回复 + 平台文档 + 当日派单经验**结构化沉淀**。
 
-安装 / 重装：
+## 每日流程（已停 · 原 09:00）
+
+~~定时 LaunchAgent `com.youchu.worker-ant-daily-learn`~~ → 已 `*.disabled-20261121`。
+
+若主人明确要求临时恢复：
 
 ```bash
-bash .cursor/scripts/install-worker-ant-daily-learn-launchd.sh
+WORKER_ANT_LEARN_REINSTALL=1 bash .cursor/scripts/install-worker-ant-daily-learn-launchd.sh
+WORKER_ANT_LEARN_FORCE=1 bash …/worker-ant-daily-learn-wake.sh
 ```
 
 1. **提问**（agent-bus `send_message` → `worker_ant`）  

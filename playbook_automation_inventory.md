@@ -10,8 +10,8 @@
 
 | 类 | 含义 | 成员 |
 |----|------|------|
-| A 常驻保活 | KeepAlive / 进程必须在 | tgbot、agent-bus、onehr、ethan；外加 automation-ensure 巡检 |
-| B 定时业务 | 到点做事一次 | 日报链、狂人学习、记忆日清、群学习、chcode 日同步、pre-flush |
+| A 常驻保活 | KeepAlive / 进程必须在 | tgbot、agent-bus、onehr、ethan；实机另有 hb-watch / away-health / dashboard（ensure 本机无） |
+| B 定时业务 | 到点做事一次 | 日报链、群学习、chcode 日同步、pre-flush（学习/日清已停） |
 | C 同步底座 | 双机/仓同步 | memory-git-sync（interval 或 daily）、vpn-sync |
 
 改动顺序建议：**先 B（日报）→ 再 C（sync 节奏）→ 最后 A（保活间隔）**。同类一次只动一条链，留 1～2 天观察。
@@ -28,7 +28,7 @@
 | `com.youchu.agent-bus-poller` | 登录起 + KeepAlive | `…/youchu-agent-bus/state/youchu_ai_poller.heartbeat`（ensure >180s 告警并 kick） | 同上 | 派单收件；与 Cursor executor 联动 |
 | `com.youchu.onehr-checkin` | 登录起 + KeepAlive | 调度进程在；窗口内打卡成功日志 | ensure 无 PID → kick | 随机窗打卡 |
 | `com.youchu.ethan-jobs-watch` | 登录起 + KeepAlive | watch 进程在 | ensure 无 PID → kick | 招聘岗监控 |
-| `com.youchu.automation-ensure` | **每 120s** + RunAtLoad | 日志 `OK ensure 全部在跑` | 缺 load / 无 PID → bootstrap / kick | **元保活**：盯上面四项 + 定时项已 load |
+| ~~`com.youchu.automation-ensure`~~ | **本机无**（2026-11-21 核对） | — | 由 `automation-hb-watch`(60s) / `away-health`(180s) / `daily-automation-patrol` 分摊 | 清单旧项；勿误重装 unless 主人说改 |
 
 ### B. 定时业务（权威机；周日多数跳过）
 
@@ -36,10 +36,10 @@
 |------|--------|----------|--------------|--------|
 | `com.youchu.pre-daily-report-flush` | 工作日 **21:20** / 周六 **18:20** | hosts 当日流水写入 + memory sync 尝试 | work-log 空则从 ops-mirror 兜底写；sync 失败只 warn | 与 wake 内 sync 重叠 |
 | `com.youchu.daily-report-wake` | 工作日 **21:30** / 周六 **18:30** | `reports/.daily_report_dm_posted.json` 含当日；或至少定稿文件存在 | 只写 wake_feed；**自己不推** | 依赖 Cursor 接住 |
-| `com.youchu.daily-report-fallback` | 工作日 **21:45 + 22:00** / 周六 **18:45 + 19:00** | 同上 `posted` 标记 | 已推 → skip；有稿 → 直推；无稿 → `auto_draft`（含简写展开）再推 | **双时刻硬兜底**；易与 wake 双推（已靠 marker） |
+| `com.youchu.daily-report-fallback` | 工作日 **仅 21:45** / 周六 **仅 18:45** | 同上 `posted` 标记 | 已推 → skip；有稿 → 直推；无稿 → `auto_draft`（含简写展开）再推 | **2026-11-21 收口**：去掉 22:00 / 19:00；实机+install 脚本已单时刻 |
 | `com.youchu.memory-git-sync` | 配置：`MODE=interval` 时 **每 120s**；`daily` 时默认 **22:30** | git push OK / 锁释放；日志 `OK memory 已同步` | flock 互斥；rebase 冲突自愈；失败安全回退 origin | 双机高频时锁竞争多 |
-| `com.youchu.worker-ant-daily-learn` | 工作日 **22:40** | `…/worker-ant-learn-bus-sent/{day}.sent` | 已 sent → skip；发 bus 失败打 FAILED | 靠 IDE 收回复写 session |
-| `com.youchu.memory-daily-light-tidy` | 工作日 **22:50** | bootstrap 重生；日志 sizes / learn_session | 无学到的 session 只 WARN，不重发学习 | 依赖 22:40 已触发 |
+| ~~`com.youchu.worker-ant-daily-learn`~~ | **已停用**（2026-11-21） | — | — | 主人：狂人不再回学习消息；plist=`*.disabled-20261121` |
+| ~~`com.youchu.memory-daily-light-tidy`~~ | **本机无**（核对 2026-11-21） | — | — | 原依赖学习；勿再装回除非主人说改 |
 | `com.youchu.chcode-git-sync` | 日 **08:30**（+ RunAtLoad） | pull 成功日志 | 冲突则 ERROR，不 force | 代码仓只拉 |
 | `com.youchu.daily-group-learn` | 每天 **02:00** | 分类沉淀 + 私聊汇总（脚本侧） | 缺料则跳过/短报 | new-mac 上也曾 enabled，需确认权威唯一 |
 
@@ -50,16 +50,14 @@
 | `com.youchu.vpn-sync` | 每 **1800s** + RunAtLoad | VPN 配置对齐 | 失败重试下次 interval |
 | memory peer / 其它 oneshot | 按需 | — | upgrade_todesk / tg-learn-fuse 等 oneshot，不入日常主链 |
 
-### 晚间权威机时间轴（当前）
+### 晚间权威机时间轴（当前 · 2026-11-21）
 
 ```
-21:20  pre-flush（冲 hosts）
-21:30  wake → Cursor 写稿推 TG（理想）
-21:45  fallback（没推才定稿/推）
-22:00  fallback 再跑（没推才动）
-22:30  memory sync（若 MODE=daily；interval 模式则全天 2min）
-22:40  狂人学习 bus
-22:50  记忆日清
+21:20  pre-flush（冲 hosts）／周六 18:20
+21:30  wake → Cursor 写稿推 TG（理想）／周六 18:30
+21:45  fallback 一刀（没推才定稿/推）／周六 18:45
+——   不再：22:00 二次 fallback、狂人学习、记忆日清
+（memory-git-sync：interval 全天 120s；若改 daily 再谈 22:30）
 ```
 
 ---
@@ -67,8 +65,8 @@
 ## 2. 问题画像（为何显得冗余）
 
 1. **成功定义不统一**：有的看 heartbeat、有的看 posted json、有的看 sent 文件、有的只看日志一行。  
-2. **主路径与兜底职责粘连**：日报 wake 不推、fallback 又推两次；pre-flush 与 wake 都 sync。  
-3. **元保活过勤**：ensure 每 2 分钟扫全表；memory interval 也 2 分钟 → 锁/日志/CPU 叠层。  
+2. **主路径与兜底**：日报 wake 不推、fallback 只补一刀（21:45）；pre-flush 与 wake 仍可能双 sync（阶段 2 再收）。  
+3. **元保活**：实机无 `automation-ensure`，由 hb-watch / away-health / patrol 分摊；memory interval 仍 120s。  
 4. **双机历史**：权威来回切过；new-mac 禁用后旧 plist 堆在 `disabled-on-new-mac/`，易误判「本机还在跑」。  
 5. **脚本双副本**：`.cursor/scripts`（gitignore）vs `Application Support` vs `memory/scripts` —— 改一处不同步。
 
@@ -92,15 +90,15 @@
 **阶段 0 · 只观测（0 改动）**  
 在 old-mac 导出：`launchctl list | rg youchu` + 各 log 尾 50 行 + 标记文件是否当日命中。本清单对照打勾。
 
-**阶段 1 · 日报链收口（优先，风险可控）**  
-- 保留：21:30 wake（精品稿）  
-- 兜底：**仅 21:45 一次**（已推 skip；未推 → auto_draft 展开简写 + 推）  
-- 去掉：22:00 硬兜底；评估 21:20 pre-flush 是否并入 wake 开头（二选一，勿双 sync）  
+**阶段 1 · 日报链收口（优先，风险可控）** ✅ 2026-11-21  
+- 保留：21:30 wake（精品稿）／六 18:30  
+- 兜底：**仅 21:45 一次**／六 **仅 18:45**（已推 skip；未推 → auto_draft + 推）  
+- 去掉：22:00 / 19:00 硬兜底（实机早已单时刻；清单已对齐）  
+- 同批：停用「找狂人学习」定时任务  
 - 验收：连续 2 个工作日 TG 恰一条；简写不进正文  
 
-**阶段 2 · 晚间串行护栏**  
-- 明确依赖：日报 posted →（可并行 sync）→ 22:40 学习 → 22:50 日清  
-- 日清已有「学 session 可缺」WARN；勿让日清去重发学习 bus  
+**阶段 2 · 晚间串行护栏**（学习/日清已停，本阶段改看 sync）  
+- 日报 posted 后 memory sync 可并行；勿再装回学习/日清除非主人说改  
 
 **阶段 3 · sync 节奏**  
 - 权威机：评估 `MEMORY_SYNC_MODE=interval` 120s 是否可改为 **300～600s** 或「工作时段 interval + 晚间 daily」  
@@ -140,4 +138,5 @@
 
 | 日期 | 说明 |
 |------|------|
+| 2026-11-21 | old-mac 实机核对后：fallback 清单改为单时刻；停用 worker-ant-daily-learn；标注 ensure/日清本机无、hb-watch 等多余项仍观察 |
 | 2026-11-20 | 初版全景：基于 new-mac disabled 镜像 plist + 仓内 install 脚本梳理；待 old-mac 实机核对补洞 |

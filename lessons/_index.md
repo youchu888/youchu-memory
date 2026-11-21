@@ -531,3 +531,5 @@
 | 2026-11-11 | [2026-11-11-bus13145-小时挂用户属性只读日间表-禁dim_user_snap.md](./2026-11-11-bus13145-小时挂用户属性只读日间表-禁dim_user_snap.md) | hourly,dim_user_snap,intraday | 小时挂属性只读日间表；禁 snap；天任务仍 snap_dt=D |
 
 - 2026-11-12-bus13228-归因影子补6列与rewrite派生-海豚未迁派出.md | attribution,shadow,rewrite,migrate | bus#13228 影子6列+rewrite派生；未迁派出通用规则
+
+| 2026-11-21 | [停用狂人每日学习 + 日报 fallback 单时刻](./2026-11-21-停用狂人每日学习-日报fallback单时刻.md) | automation,launchd,daily-report | 主人停学习；fallback 清单对齐 |
