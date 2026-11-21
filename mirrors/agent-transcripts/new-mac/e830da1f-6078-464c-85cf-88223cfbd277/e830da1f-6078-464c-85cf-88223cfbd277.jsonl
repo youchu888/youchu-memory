@@ -93,3 +93,6 @@
 {"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Friday, Nov 20, 2026, 10:49 AM (UTC+8)</timestamp>\n<user_query>\n先不用了，到时候我去old mac 梳理改吧 \n</user_query>"}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"好。清单和分阶段方案都在 `~/.dc-platform/memory/playbook_automation_inventory.md`，你到 old-mac 时对着实机核对即可。需要我再动手时再说。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Saturday, Nov 21, 2026, 4:36 PM (UTC+8)</timestamp>\n<user_query>\n怎么和old mac说\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"可以直接把下面整段贴给 old-mac：\n\n---\n\n**给 old-mac（权威机）**\n\n按 `~/.dc-platform/memory/playbook_automation_inventory.md` 做**实机核对**，先别改。\n\n1. 导出本机实际在跑的 LaunchAgent：`launchctl list | rg youchu|dc\\.|tgbot`  \n2. 对照 playbook 表格，逐项补全：名字 / 几点跑 / 成功标记文件是否当日命中 / 失败时实际干什么  \n3. 标出与清单不一致的项（多出来的、少的、时刻不对的）  \n4. **只出核对报告，不要改 plist / 不要重装 / 不要停服务**  \n\n核对完把差异表回我。日报链收口（去掉 22:00、兜底只留 21:45）等我说「改」再动。\n\n---\n\n要点就一句：**先对表，先别改。**"}]}}
+{"type":"turn_ended","status":"success"}
