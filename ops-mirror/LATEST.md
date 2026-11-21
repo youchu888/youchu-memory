@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-21 23:57:59 +0800
+> 更新: 2026-11-22 00:01:05 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-21.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-22.md`
 
 ## 未结案 agent-bus
 
@@ -11,8 +11,6 @@
 
 | 时间 | 标签 | 来源 | 状态 | 摘要 |
 |---|---|---|---|---|
-| 2026-11-20 16:34 | 群派单#375 | worker_ant_group | completed | @anna_cute9 这条 dwd_app_page_view_d 的告警是今天凌晨 01:08 那一轮的，已经处理好了： 1. 原因：dw_user_eve |
-| 2026-11-20 16:35 | 群派单#376 | worker_ant_group | completed | @anna_cute9 处理了，结果在上一条：01:08 那一轮已补跑完成，02:08 那一轮起下游 5 个任务都正常；page_url 已改为按字节截断到 6 |
 | 2026-11-21 10:21 | 私聊#632 | telegram_dm | completed | 活跃留存是我们开发的嘛 |
 | 2026-11-21 16:54 | 群派单#377 | worker_ant_group | completed | 又初, #14070 收到, 欠你的审核现在开始做, 审完逐条走 bus 回你。 |
 | 2026-11-21 18:42 | 私聊#633 | telegram_dm | completed | 重新整理一遍日报，把今天所有的工作都整理进去 |
