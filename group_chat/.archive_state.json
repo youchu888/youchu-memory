@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-20 16:25:39",
+  "last_run": "2026-11-21 18:07:24",
   "archived_keys": {
     "2026-06-26": [
       "2026-06-26 22:03:31|telegram_dm|8740305767|回复 工作狂人 ： 收到|按冷启动协议先加载记忆，再回复工作狂人。\n收到。|",
@@ -2337,8 +2337,13 @@
       "2026-11-19 10:34:25|telegram_group|7649868125|[群聊·@anna_cute9]: @worker_ant_bot dws.dws_user_promotion_behavior_charge_d  ads.ads_channel_promotion_summary_d starRocks这些表的数据来源于哪，starRocks模型加算，还是spark模型计算是按照request_time来分区的吗？这些最新的sql git提交在哪可以看||observe",
       "2026-11-19 10:36:34|worker_ant_group|0|[工作狂人] @anna_cute9 这两张表现在有两套在并行出数:\n\n1) SR 正式表 dws.dws_user_promotion_behavior_charge_d / ads.ads_channel_promotion_summary_d\n- 由海豚任务在 StarRocks 里直接用 SQL 算(老链路), 不是 Spark 回写\n- 按事件时间切天: charge_d 取 dws_settlement_detail 里 event_time 落在前一天的 order_paid, 加上 dim_user_all 当天 register_time 的注册用户\n- summary_d 是 SR 上 dws_app_channel_deduction_d + dws_app_channel_summary_d + dws_app_channel_retention_d 三张日表关联出来的(海豚 wf_渠道分析_日)\n- SQL: charge_d 在 git 的 ops_system/04.dws/dws_user_promotion_behavior_charge_d/dws_user_pr|正在检索知识库中是否已有相关口径，并将狂人本条说明沉淀为可复用规则。\n正在将经验写入 lesson 并更新索引。\n## 1. 上下文整理\n\n- 知秋在群里说明：`dws_user_promotion_behavior_charge_d` 与 `ads.ads_channel_promotion_summary_d` 目前**两套链路并行出数**——SR 正式表（海豚直算）与 Spark 回写的 `_paimon_shadow` 影子表。\n- 与 11-18 工作簿待办 **#4 渠道推广周/月汇总**、**#13 海豚未迁·渠道** 及 Spark 迁移影子验收同一主题：对账、切正式、停海豚前必须先分清「看哪条链」。\n- 正式链路按 **event_time** 切业务日；影子链路按 **request_time** 小时汇总成日、不回看，两边日间差异属**口径不同**，不宜单方判错。\n- 又初侧开发/核查：`charge_d` SQL 在仓内；`summary_d` 正式逻辑以海豚 `wf_渠道分析_日` 为准（仓内无独立日 SQL）；影子改 Spark 走 `b3_*` / `b4_*` 路径。\n\n## 2. 可复用规则\n\n\n\n\n\n\n\n\n\n\n\n---\n\n已沉淀经验：`.claude/memory/lessons/2026-11-19-charge-summary-正式表与paimon影子双链路并行.md`（`lessons/_index.md` 已登记）；镜像在 `~/.dc-platform/memory/lessons/`。本次未 commit（仅本地记忆文件）。|",
       "2026-11-19 11:51:31|telegram_dm|8740305767|[私聊#631] 重启agent|先读启动包和指定 prompt，再按文件要求回答末尾问题。私聊#631 是重启；上一轮#630 关于打卡通知可能没答上，我先核对打卡相关进程状态再一并回复。打卡服务在跑，接着核对最近是否打卡成功以及通知有没有发出。会话已新开，冷启动完成，又初在线。\n\n顺带核了上一句（#630）打卡通知：进程没挂。`com.youchu.onehr-checkin` 在跑；今天 **不上假**；早上 **09:43** 上班卡已成功（HTTP 200）。下班计划约 **22:24**。近期日志里没有「TG 通知失败」。\n\n若你指的是「打卡成功后私聊没推」，说一下大概从哪天开始断的，我再对那几天的通知链路细查。|"
+    ],
+    "2026-11-20": [
+      "2026-11-20 16:34:58|telegram_group|7649868125|[群聊·@anna_cute9]: @worker_ant_bot 这个处理了吗，结果||observe",
+      "2026-11-20 16:35:33|worker_ant_group|0|[工作狂人] @anna_cute9 这条 dwd_app_page_view_d 的告警是今天凌晨 01:08 那一轮的，已经处理好了：\n1. 原因：dw_user_event_detail_new 里有一条 page_url 长 49147 字节（含 emoji 编码的异常 URL），超出目标表 varchar(6144)，SR 严格模式整批过滤导致失败。\n2. 处理：值班时把 page_url 改成按字节安全截断到 6144 以内，01:08 那一轮已补跑完成；从 02:08 那一轮起下游 5 个任务都正常，付费人数和维表延迟两条告警也已自愈。\n3. 收尾：仓库小时表 SQL 已同步成截断写法；日表也已有人改成同样写法。负责人蓝猫会在平台按流程正式发布一次。|提炼狂人消息并写入团队知识库；先查既有经验与沉淀规范。\n正在将经验写入 `.claude/memory/lessons/`。\n## 1. 上下文整理\n\n- 2026-11-20 凌晨 **01:08** `dwd_app_page_view_d` 小时槽因 **`page_url` 超列宽**失败；值班已补跑，**02:08 起**恢复。\n- 根因：源表 `dw_user_event_detail_new` 单条 URL 约 **49147 字节**（emoji 编码膨胀），超过目标 **`VARCHAR(6144)`**，SR 严格模式整批失败。\n- 连锁：依赖 PV 的 **5 个下游**、付费人数与维表延迟告警随之挂起；主链修复后 **已自愈**。\n- 与待办「页面访问 / DWS」「海豚未迁·页面」及昨日 charge/summary 双链路说明同属 **DWD 主链稳定性**主题；本事故是 **字段边界 + 严模式** 类运维，非口径改版。\n- 仓库 **hourly/daily** 已改为 **按字节截断**；**正式发布**由蓝猫走开发平台。\n\n## 2. 可复用规则\n\n\n\n\n\n\n\n\n\n\n\n---\n\n已写入 `.claude/memory/lessons/2026-11-20-dwd_app_page_view-page_url超长SR严模式-bus值班.md`，并更新 `lessons/_index.md`。|",
+      "2026-11-20 16:36:22|worker_ant_group|0|[工作狂人] @anna_cute9 处理了，结果在上一条：01:08 那一轮已补跑完成，02:08 那一轮起下游 5 个任务都正常；page_url 已改为按字节截断到 6144 以内，后面再遇到超长 URL 也不会失败。|融入知识库前，先查是否已有 `page_url` / `dwd_app_page_view` 相关沉淀，并读取自我进化规范。\n本条为结案确认；lesson 已存在，追加收口状态并写入群聊索引。\n## 1. 上下文整理\n\n- 狂人回复又初：前一长条里写的 **`dwd_app_page_view_d` 凌晨 01:08 告警已闭环**，本条是**结案复读**，无新根因或新口径。\n- 链路与上条一致：源明细异常超长 `page_url` → SR 严模式小时入库失败 → 值班**按字节截断至 6144** → **01:08 补跑完成**，**02:08 起下游 5 个任务恢复**，付费人数/维表延迟告警已自愈。\n- 对又初：该 incident **无需再排障**；写 ETL/页面链时按「入库前字节截断 + DDL 6144」对齐；**海豚正式发布**由蓝猫走平台，仓 SQL 改法与上条一致。\n\n## 2. 可复用规则\n\n``\n\n``\n\n``\n\n---\n\n已沉淀：` .claude/memory/lessons/2026-11-20-dwd_app_page_view-page_url超长SR严模式-bus值班.md`（追加收口段）；`~/.dc-platform/memory/group_chat/reference.md`（2026-11-20 索引行）。|"
     ]
   },
-  "last_hot_lines": 0,
+  "last_hot_lines": 5,
   "last_archived_lines": 3
 }
