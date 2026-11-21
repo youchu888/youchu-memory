@@ -535,3 +535,5 @@
 | 2026-11-21 | [停用狂人每日学习 + 日报 fallback 单时刻](./2026-11-21-停用狂人每日学习-日报fallback单时刻.md) | automation,launchd,daily-report | 主人停学习；fallback 清单对齐 |
 
 | 2026-11-21 | [卸日报 fallback + 装记忆日清](./2026-11-21-卸日报fallback-装记忆日清.md) | automation,daily-report,memory | 定时不兜底；日清 22:50 |
+
+| 2026-11-21 | [规矩易忘根因与加固·TG私聊改叫醒IDE](./2026-11-21-规矩易忘根因与加固-TG私聊改叫醒IDE.md) | memory,tg-dm,wake | A0+alwaysApply；私聊默认 wake |
