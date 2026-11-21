@@ -27,6 +27,36 @@ STATE_FILE = Path.home() / ".dc-platform/onehr/schedule_state.json"
 LOG_DIR = Path.home() / ".dc-platform/onehr/logs"
 _PLAN_PREFIX = "_plan_"
 _KEEP_PLAN_DAYS = 3
+_HB_NAME = "onehr-checkin"
+
+
+def _load_hb():
+    """统一心跳；失败则退回普通 sleep（不影响打卡）。"""
+    candidates = [
+        Path.home() / "Library/Application Support/youchu-agent-bus/python/automation_hb.py",
+        Path("/Users/mac/Desktop/CHcode/.cursor/scripts/automation_hb.py"),
+        Path.home() / ".dc-platform/scripts/automation_hb.py",
+    ]
+    for p in candidates:
+        if p.is_file():
+            import importlib.util
+
+            spec = importlib.util.spec_from_file_location("automation_hb", p)
+            if spec and spec.loader:
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+                return mod
+    return None
+
+
+_hb = _load_hb()
+
+
+def _sleep(sec: float) -> None:
+    if _hb is not None:
+        _hb.sleep_beating(_HB_NAME, sec, every=30.0)
+    else:
+        time.sleep(sec)
 
 
 def load_env(path: Path) -> Dict[str, str]:
@@ -158,11 +188,11 @@ def checkout_window(cfg: dict, day: date) -> Optional[Tuple[str, str]]:
     if wd == 5:
         return (
             cfg.get("ONEHR_CHECKOUT_SAT_WINDOW_START", "19:00"),
-            cfg.get("ONEHR_CHECKOUT_SAT_WINDOW_END", "19:30"),
+            cfg.get("ONEHR_CHECKOUT_SAT_WINDOW_END", "20:00"),
         )
     return (
         cfg.get("ONEHR_CHECKOUT_WINDOW_START", "22:00"),
-        cfg.get("ONEHR_CHECKOUT_WINDOW_END", "22:30"),
+        cfg.get("ONEHR_CHECKOUT_WINDOW_END", "23:00"),
     )
 
 
@@ -172,8 +202,8 @@ def checkin_window(cfg: dict, day: date) -> Optional[Tuple[str, str]]:
     if day.weekday() == 6:
         return None
     return (
-        cfg.get("ONEHR_CHECKIN_WINDOW_START", "09:30"),
-        cfg.get("ONEHR_CHECKIN_WINDOW_END", "10:00"),
+        cfg.get("ONEHR_CHECKIN_WINDOW_START", "09:10"),
+        cfg.get("ONEHR_CHECKIN_WINDOW_END", "10:10"),
     )
 
 
@@ -270,6 +300,53 @@ def notify_mac(title: str, message: str) -> None:
     )
 
 
+def notify_tg(title: str, message: str) -> None:
+    """失败超阈值等推主人 TG 私聊（复用 auto 同口径）。"""
+    try:
+        from onehr_checkin_auto import notify_tg as _auto_tg
+
+        _auto_tg(title, message)
+    except Exception as exc:  # noqa: BLE001
+        log(f"TG 通知失败: {exc}")
+
+
+def fail_count_key(kind: str, day: date) -> str:
+    return f"_fail_{kind}_{day.isoformat()}"
+
+
+def fail_tg_key(kind: str, day: date) -> str:
+    return f"_fail_tg_{kind}_{day.isoformat()}"
+
+
+def retry_fail_threshold(cfg: dict) -> int:
+    raw = (cfg.get("ONEHR_RETRY_FAIL_TG_AFTER") or "5").strip()
+    try:
+        n = int(raw)
+        return max(1, n)
+    except ValueError:
+        return 5
+
+
+def bump_fail_count(kind: str, day: date) -> int:
+    state = load_state()
+    key = fail_count_key(kind, day)
+    n = int(state.get(key) or 0) + 1
+    state[key] = n
+    save_state(state)
+    return n
+
+
+def clear_fail_count(kind: str, day: date) -> None:
+    state = load_state()
+    changed = False
+    for key in (fail_count_key(kind, day), fail_tg_key(kind, day)):
+        if key in state:
+            del state[key]
+            changed = True
+    if changed:
+        save_state(state)
+
+
 def in_window_now(cfg: dict, kind: str, now: datetime) -> bool:
     day = now.date()
     win = checkin_window(cfg, day) if kind == "checkin" else checkout_window(cfg, day)
@@ -290,14 +367,42 @@ def invalidate_plan(kind: str, day: date) -> None:
         save_state(state)
 
 
+_LAST_SYNC_TS = 0.0
+
+
 def sync_from_server(env_path: Path) -> None:
-    subprocess.run(
-        [sys.executable, "-u", str(AUTO_PY), "--env", str(env_path), "--sync-schedule"],
-        capture_output=True,
-        text=True,
-        timeout=90,
-        check=False,
-    )
+    """人效通很卡；同步时也写心跳，避免巡检误杀。"""
+    global _LAST_SYNC_TS
+    now_ts = time.time()
+    if now_ts - _LAST_SYNC_TS < 900:
+        return
+    _LAST_SYNC_TS = now_ts
+    import threading
+    stop_hb = threading.Event()
+
+    def _hb_while_sync() -> None:
+        while not stop_hb.wait(20):
+            if _hb is not None:
+                try:
+                    _hb.beat(_HB_NAME, extra={"phase": "sync-schedule"})
+                except Exception:
+                    pass
+
+    thr = threading.Thread(target=_hb_while_sync, name="onehr-sync-hb", daemon=True)
+    thr.start()
+    try:
+        subprocess.run(
+            [sys.executable, "-u", str(AUTO_PY), "--env", str(env_path), "--sync-schedule"],
+            capture_output=True,
+            text=True,
+            timeout=240,
+            check=False,
+        )
+    except subprocess.TimeoutExpired:
+        log("sync-schedule 超时（人效通卡），下次再试")
+    finally:
+        stop_hb.set()
+        thr.join(timeout=2)
 
 
 def check_missed_windows(cfg: dict, now: datetime, env_path: Path) -> None:
@@ -323,48 +428,121 @@ def check_missed_windows(cfg: dict, now: datetime, env_path: Path) -> None:
         state[flag] = True
         save_state(state)
         label = "上班" if kind == "checkin" else "下班"
-        log(f"WARN {label}窗口已结束但未打卡")
+        fails = int(load_state().get(fail_count_key(kind, today)) or 0)
+        log(f"WARN {label}窗口已结束但未打卡 fails={fails}")
         notify_mac("OneHR 打卡遗漏", f"{label}窗 {win[0]}-{win[1]} 已过，请手动补卡")
+        notify_tg(
+            "OneHR 打卡遗漏",
+            f"{label}窗 {win[0]}-{win[1]} 已过仍未打上（本窗失败 {fails} 次），请手动补卡",
+        )
+
+
+def _pre_punch_delay_sec(cfg: dict, kind: str, now: datetime, fail_n: int) -> int:
+    """首次可稍长；失败后缩短，且不超过剩余窗口。"""
+    win = checkin_window(cfg, now.date()) if kind == "checkin" else checkout_window(cfg, now.date())
+    remain = 120
+    if win:
+        bounds = window_bounds(win[0], win[1], now.date())
+        if bounds:
+            remain = max(5, int((bounds[1] - now).total_seconds()) - 15)
+    if fail_n > 0:
+        # 重试：10～40s，利于短窗内持续重试
+        hi = min(40, remain)
+        lo = min(10, hi)
+        return secrets.randbelow(hi - lo + 1) + lo if hi > lo else lo
+    hi = min(90, remain)
+    lo = min(5, hi)
+    return secrets.randbelow(hi - lo + 1) + lo if hi > lo else lo
 
 
 def run_punch(env_path: Path, kind: str, cfg: dict) -> bool:
-    extra = secrets.randbelow(115) + 5
-    log(f"{kind} 计划触发，额外随机延迟 {extra}s")
-    time.sleep(extra)
+    now0 = datetime.now(BJ)
+    fail_n = int(load_state().get(fail_count_key(kind, now0.date())) or 0)
+    extra = _pre_punch_delay_sec(cfg, kind, now0, fail_n)
+    log(f"{kind} 计划触发，额外随机延迟 {extra}s（本窗已失败 {fail_n} 次）")
+    _sleep(extra)
 
-    proc = subprocess.run(
-        [sys.executable, "-u", str(AUTO_PY), "--env", str(env_path), "--kind", kind],
-        capture_output=True,
-        text=True,
-    )
+    # 打卡子进程常要 3～10 分钟（人效通卡 + MFA）；父进程阻塞时必须继续写心跳，
+    # 否则 automation-hb-watch 会把调度踢掉（2026-11-14 19:21 误杀下班卡）。
+    import threading
+
+    stop_hb = threading.Event()
+
+    def _hb_while_punch() -> None:
+        while not stop_hb.wait(20):
+            if _hb is not None:
+                try:
+                    _hb.beat(_HB_NAME, extra={"phase": f"punch:{kind}"})
+                except Exception:
+                    pass
+
+    hb_thr = threading.Thread(target=_hb_while_punch, name="onehr-hb", daemon=True)
+    hb_thr.start()
+    try:
+        proc = subprocess.run(
+            [
+                sys.executable,
+                "-u",
+                str(AUTO_PY),
+                "--env",
+                str(env_path),
+                "--kind",
+                kind,
+                "--quiet-fail",
+            ],
+            capture_output=True,
+            text=True,
+        )
+    finally:
+        stop_hb.set()
+        hb_thr.join(timeout=2)
+
     out = (proc.stdout or "") + (proc.stderr or "")
     for line in out.splitlines():
         if line.strip():
             log(line.strip())
     now = datetime.now(BJ)
+    day = now.date()
     if proc.returncode == 0:
-        mark_punched(kind, now.date())
+        mark_punched(kind, day)
+        clear_fail_count(kind, day)
         return True
     if proc.returncode == 2:
         log(f"{kind} 窗口未到或暂不可打")
     else:
-        log(f"{kind} 失败 exit={proc.returncode}，窗口内将重试")
-        notify_mac("OneHR 打卡失败", f"{kind} 自动打卡失败，窗口内会重试")
+        n = bump_fail_count(kind, day)
+        thr = retry_fail_threshold(cfg)
+        log(f"{kind} 失败 exit={proc.returncode}，窗口内将重试（累计失败 {n}/{thr}）")
+        notify_mac("OneHR 打卡失败", f"{kind} 失败 {n} 次，窗口内继续重试")
+        # 累计失败超过阈值 → TG 通知一次（仍继续重试）
+        if n > thr:
+            state = load_state()
+            flag = fail_tg_key(kind, day)
+            if not state.get(flag):
+                state[flag] = True
+                save_state(state)
+                label = "上班" if kind == "checkin" else "下班"
+                notify_tg(
+                    "OneHR 打卡多次失败",
+                    f"{label}已连续失败 {n} 次（阈值 {thr}），窗口内仍在重试，请留意本机 Telegram/权限",
+                )
     if in_window_now(cfg, kind, now):
-        invalidate_plan(kind, now.date())
+        invalidate_plan(kind, day)
     return False
 
 
 def scheduler_loop(env_path: Path, cfg: dict) -> None:
+    thr = retry_fail_threshold(cfg)
     log(
         "started "
-        f"checkin={cfg.get('ONEHR_CHECKIN_WINDOW_START', '09:30')}"
-        f"~{cfg.get('ONEHR_CHECKIN_WINDOW_END', '10:00')} "
+        f"checkin={cfg.get('ONEHR_CHECKIN_WINDOW_START', '09:10')}"
+        f"~{cfg.get('ONEHR_CHECKIN_WINDOW_END', '10:10')} "
         f"checkout={cfg.get('ONEHR_CHECKOUT_WINDOW_START', '22:00')}"
-        f"~{cfg.get('ONEHR_CHECKOUT_WINDOW_END', '22:30')} "
+        f"~{cfg.get('ONEHR_CHECKOUT_WINDOW_END', '23:00')} "
         f"sat_checkout={cfg.get('ONEHR_CHECKOUT_SAT_WINDOW_START', '19:00')}"
-        f"~{cfg.get('ONEHR_CHECKOUT_SAT_WINDOW_END', '19:30')} "
-        "(daily random, 同极客规则)"
+        f"~{cfg.get('ONEHR_CHECKOUT_SAT_WINDOW_END', '20:00')} "
+        f"fail_tg_after={thr} "
+        "(daily random + in-window retry)"
     )
     last_plan_day: Optional[date] = None
 
@@ -396,20 +574,22 @@ def scheduler_loop(env_path: Path, cfg: dict) -> None:
                 if nxt:
                     targets.append((nxt, kind))
 
+            if _hb is not None:
+                _hb.beat(_HB_NAME)
             if not targets:
-                time.sleep(300)
+                _sleep(300)
                 continue
 
             targets.sort(key=lambda x: x[0])
             wait_sec = max(1.0, (targets[0][0] - now).total_seconds())
             log(f"next {targets[0][1]} in {wait_sec:.0f}s")
-            time.sleep(wait_sec)
+            _sleep(wait_sec)
             run_punch(env_path, targets[0][1], cfg)
         except KeyboardInterrupt:
             raise
         except Exception as exc:
             log(f"loop error: {exc}")
-            time.sleep(60)
+            _sleep(60)
 
 
 def main() -> int:
