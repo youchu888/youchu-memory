@@ -31,8 +31,8 @@ LOADED_LABELS=(
   com.youchu.memory-git-sync
   com.youchu.chcode-git-sync
   com.youchu.daily-report-wake
-  com.youchu.daily-report-fallback
-  # 2026-11-21：worker-ant-daily-learn / memory-daily-light-tidy 已停用或不在本机，勿 bootstrap
+  com.youchu.memory-daily-light-tidy
+  # 2026-11-21：daily-report-fallback / worker-ant-daily-learn 已停用，勿 bootstrap
 )
 
 plist_path() {
