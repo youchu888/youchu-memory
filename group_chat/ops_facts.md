@@ -32,3 +32,4 @@
 - 2026-11-19 | 机器人群 | 工作狂人｜表 ads.ads_channel_promotion_summary_d,ads.ads_channel_promotion_summary_d_d_paimon_shadow,ads_channel_promotion_summary_d_d | @anna_cute9 这两张表现在有两套在并行出数: 1) SR 正式表 dws.dws_user_promotion_behavior_charge_d / ads.ads_channel_promotion_summary_d - 由海豚任务在 StarRocks 里直接用 SQL 算(老链路), 不是 Spark 回写 - 按事件时间切天: char
 - 2026-11-20 | 未知会话 | ｜表 ads.adspageitemctrd,dwd_app_page_stay_d,dwd_app_page_view_d | ⚠️ [生产] 全量数据核查 · 2026-11-19 2026-11-20 11:02 北京时间 2026-11-20 11:01 北京 · 共扫描 166 项 · refday=2026-11-19 vs prevday=2026-11-18 🔴 海豚真失败 task (1) — 需补数 - 运营系统 / wf_用户画像_小时-2026112001080
 - 2026-11-21 | 技术中心-运营系统技术内部沟通群 | 瓶子 | @jiangyan0803 哈咯，帮忙执行一下运维系统生产脚本，帮忙按照文件名的顺序执行哈
+- 2026-11-22 | 未知会话 | ｜表 dws_drama_play_state_d_d | ⚠️ [生产] 全量数据核查 · 2026-11-21 2026-11-22 11:02 北京时间 2026-11-22 11:01 北京 · 共扫描 166 项 · refday=2026-11-21 vs prevday=2026-11-20 🔴 海豚真失败 task (1) — 需补数 - 运营系统 / wf_dws_汇总_日-202611220525
