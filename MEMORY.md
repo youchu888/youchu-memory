@@ -5,6 +5,8 @@
 # DC Platform 公共记忆索引
 - [bus 未送达/401 须重发或群贴要点 bus#13908](lessons/2026-11-18-bus未送达401须重发或群贴要点-bus13908.md) — 狂人未收到且补拉401时重发；`--to` 必须 worker_ant；通道异常则群贴要点
 
+- [停用每日学习须点名 job：`worker-ant-daily-lear](lessons/2026-11-23-停用每日学习须点名-job-worker-ant-daily-learn-与-daily-gro.md) — 会话轮换蒸馏
+- [主人说 bus/机器人没收到时，先查 inbox+TG 镜像时间线；自动](lessons/2026-11-23-主人说-bus-机器人没收到时-先查-inbox-tg-镜像时间线-自动执行快速结案优先解释-看.md) — 会话轮换蒸馏
 - [活跃留存|问「是不是我们开发的」时先查 code_owners 与 Sp](lessons/2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owners-与-spark-索引-主链归知秋.md) — 会话轮换蒸馏
 - [tg-notify|agent-restart|报打卡没通知时先核 on](lessons/2026-11-19-tg-notify-agent-restart-报打卡没通知时先核-onehr-checkin-.md) — 会话轮换蒸馏
 > **Canonical**：`~/.dc-platform/memory/` · 维护人：**又初**

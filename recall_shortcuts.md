@@ -5,6 +5,17 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## 00 02 11 2026 23 | `~/.dc-platform/memory/lessons/2026-11-23-停用每日学习须点名-job-worker-ant-daily-learn-与-daily-gro.md` | 2026-11-23-停用每日学习须点名-job-worker-ant-dail |
+| ## 11 2026 23 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-23-主人说-bus-机器人没收到时-先查-inbox-tg-镜像时间线-自动执行快速结案优先解释-看.md` | 2026-11-23-主人说-bus-机器人没收到时-先查-inbox-tg-镜 |
+| bus executor inbox ux 「已 」等 | `sessions/tg-rotate-2026-11-23-1926.md` | bus 争议排查顺序：inbox 时间 → 镜像会话内容 → executor  |
+| 「重 」的 不能 不能用来解释「重启前已发出」的消息丢失 丢失 之后 | `sessions/tg-rotate-2026-11-23-1926.md` | 机器人重启时间在消息之后，不能用来解释「重启前已发出」的消息丢失。 |
+| cursor executor 「待 」的 不像 不像「待你点开」的派单醒目 | `sessions/tg-rotate-2026-11-23-1926.md` | `cursor-executor` 自动跑完时，私聊多为阶段同步（开干/结案）， |
+| status_mirror tg 「机 「机器人里没看到」要先查 」要 人里 | `sessions/tg-rotate-2026-11-23-1926.md` | 「机器人里没看到」要先查 TG `status_mirror` 是否已有入站原文 |
+| agent bus inbox 一单 不以 不以口头提醒为准 | `sessions/tg-rotate-2026-11-23-1926.md` | 口头发 bus 与 agent-bus 入站是同一单；查收以 inbox + 本 |
+| ack bus#n bus」→ processed reply 「发 | `sessions/tg-rotate-2026-11-23-1926.md` | 狂人「发了 bus」→ 先入站查 `bus#N`、出站 ack/reply、`p |
+| disabled job launchd plist 「取 」时 | `sessions/tg-rotate-2026-11-23-1926.md` | 用户说「取消了还在发」时，先核 launchd/plist 是否 `disabl |
+| 00 02 ant dai daily group | `sessions/tg-rotate-2026-11-23-1926.md` | 「每日学习」停用要分清两条链路：`worker-ant-daily-learn` |
+| 「全 「只 」与 与「 主人 习可 | `sessions/tg-rotate-2026-11-23-1926.md` | 群聊学习可拆成「全停」与「只关私聊推送、后台静默沉淀」；改前需主人明确二选一，勿 |
 | ## 11 2026 21 agent_session_rotate code_ | `~/.dc-platform/memory/lessons/2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owners-与-spark-索引-主链归知秋.md` | 2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owne |
 | 「又 「活 「活跃留存整条链是又初开发的」 下游 下游相关（归因 不说 | `sessions/tg-rotate-2026-11-21-1032.md` | **边界话术**：可说「又初侧有周边/下游相关（归因、标签等）」；**不说**「 |
 | bitmap dws_app_retention_d dws_app_reten | `sessions/tg-rotate-2026-11-21-1032.md` | 对外表述：业务名「活跃留存」↔ 表名 `dws_app_user_d_h` /  |
@@ -34,14 +45,3 @@
 | +「 +「已完成」 「已 了什 人名 今日 | `sessions/tg-rotate-2026-11-15-0637.md` | 【今日结果】按金样句式：任务名 + 做了什么 + 结果 +「已完成」；进度型工作 |
 | lesson 「等 」类 不宜 不宜把「等门禁」类外部卡点硬写进 主人 | `sessions/tg-rotate-2026-11-15-0637.md` | 主人改定日报后应对照初稿差异写 lesson，避免同类表述再犯（本会话：不宜把「 |
 | tg upload 「上 「上传云端」与推 」与 上传 | `sessions/tg-rotate-2026-11-15-0637.md` | 「上传云端」与推 TG 分离：主人未说上传前不要自动传；说了则用**主人改定后的 |
-| post_daily_report_to_dm.py tg 「已 全文 再贴 双 | `sessions/tg-rotate-2026-11-15-0637.md` | 定稿后立刻 `post_daily_report_to_dm.py` 推 TG； |
-| hosts log mac new old prepare_daily_repo | `sessions/tg-rotate-2026-11-15-0637.md` | 日报必须先跑双机同步（`prepare_daily_report_sync.sh |
-| ## 11 14 2026 agent_session_rotate bo | `~/.dc-platform/memory/lessons/2026-11-14-dc_cursor_bot-缺-cursor_shared_session-时不能代点-requ.md` | 2026-11-14-dc_cursor_bot-缺-cursor_shared |
-| ## 11 14 2026 agent_session_rotate commi | `~/.dc-platform/memory/lessons/2026-11-14-mcp-publish-仅-test-prod-海豚-sql-查-dolphin_ops-平台产.md` | 2026-11-14-mcp-publish-仅-test-prod-海豚-sq |
-| ## 11 14 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-14-publish_request_status-被降成-none-而-reviewer-备注仍在时.md` | 2026-11-14-publish_request_status-被降成-no |
-| bot cursor_share cursor_shared_session m | `sessions/tg-rotate-2026-11-14-0608.md` | **代点发布不可用**：他人 bot 代点「申请发布」若报 `No module |
-| 03 10 11 11）由主人另行安排 1） bus | `sessions/tg-rotate-2026-11-14-0608.md` | **产发闭环**：发完私聊/ bus 通知相关人（本例通知蓝猫）；补数日期（11 |
-| dolphin_ops pendin pending 一致 与门 主人 | `sessions/tg-rotate-2026-11-14-0608.md` | **主人授权 ≠ 绕过门禁**：即使授权 `dolphin_ops` 直发，平台 |
-| pending 「申 人监 会话 会话持有人 再发 | `sessions/tg-rotate-2026-11-14-0608.md` | **解半截态**：须 **会话持有人**（如蓝猫）在开发平台再点「申请发布」，审 |
-| false i_can_publish_prod none publish pu | `sessions/tg-rotate-2026-11-14-0608.md` | **半截 publish 态**：`publish_request_status |
-| running 下次 且距 余量 作流 全窗 | `sessions/tg-rotate-2026-11-14-0608.md` | **发前安全窗口**：查目标工作流下次调度与 RUNNING 实例，无在跑且距触 |
