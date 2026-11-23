@@ -1,7 +1,7 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-23 23:58:27 +0800
+> 更新: 2026-11-24 00:01:46 +0800
 
-详见当日: `ops-mirror/hosts/old-mac/2026-11-23.md`
+详见当日: `ops-mirror/hosts/old-mac/2026-11-24.md`
 
 ## 未结案 agent-bus
 
