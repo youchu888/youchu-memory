@@ -1,4 +1,4 @@
-# 规则目录（自动生成 2026-11-21 18:13）
+# 规则目录（自动生成 2026-11-23 22:50）
 
 > 一行一条。启动扫目录；对上再 Read 原文。禁止整库灌进对话。
 
@@ -54,6 +54,7 @@
 | board decisions detail | 拍板沟通：逐条展开 | `feedback_board_decisions_detail.md` |
 | channel scoring query pa | 渠道评分表条件查询规则 | `feedback_channel_scoring_query_pattern.md` |
 | commit message detailed | 提交说明尽量详细（主人 2026-10-30） | `feedback_commit_message_detailed.md` |
+| commit no bus id | commit 说明禁 bus 编号 | `feedback_commit_no_bus_id.md` |
 | confirm before breaking  | 已定规矩要破例：先确认再说改 | `feedback_confirm_before_breaking_rules.md` |
 | daily report dual mac be | Feedback：日报必须先双机上传再同步再写（主人 2026-08-11） | `feedback_daily_report_dual_mac_before_2130.md` |
 | daily report golden styl | 日报金样：以主人改定稿为准（又初必遵） | `feedback_daily_report_golden_style_from_owner_edits.md` |
@@ -92,7 +93,7 @@
 | no bump extension versio | 死规矩 · 又初不改插件版本号 / 不自行发 vsix（2026-07-29 钦定 · 2026-08-04 再犯） | `feedback_no_bump_extension_version.md` |
 | no workaround report wor | 共享组件出问题 · 直接反馈狂人，禁止私自绕过（2026-10-22） | `feedback_no_workaround_report_worker_ant.md` |
 | omdb is portable no memo | omdb 子目录视作独立可分发项目；不要在 dc-parent 或 omdb 项目路径下保存任何 omdb 相关的 memory；约束写在… | `feedback_omdb_is_portable_no_memory.md` |
-| ops system etl directory | ETL / Dev Session 统一放 ops_system 分层目录 | `feedback_ops_system_etl_directory_layout.md` |
+| ops system etl directory | ETL / Dev Session 统一放 data-jobs/dolphin 分层目录 | `feedback_ops_system_etl_directory_layout.md` |
 | per app verification rul | 这条是**项目级根本规则**，覆盖设计 + ETL + 表结构 + bitmap hash + 指标核对 + 数据质量。不限于"核对场景"。 | `feedback_per_app_verification_rule.md` |
 | pinned overflow append o | PINNED 1–30 冻结；新红线只追加 pinned/，禁止顶旧条 | `feedback_pinned_overflow_append_only.md` |
 | prod bucket from prod pr | 产发 bucket/并行度只认 prod 探数，禁用 test 行数估配置 | `feedback_prod_bucket_from_prod_probe.md` |
