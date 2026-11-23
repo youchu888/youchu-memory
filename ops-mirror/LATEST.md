@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-23 21:20:01 +0800
+> 更新: 2026-11-23 21:22:42 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-23.md`
 
@@ -20,3 +20,4 @@
 | 2026-11-23 18:17 | 私聊#637 | telegram_dm | completed | 每日学习不是让你取消了吗？为什么还每天发呢 |
 | 2026-11-23 18:20 | 私聊#638 | telegram_dm | completed | 细节已发 bus 给初儿(#14392)。 狂人说发了bus，查一下有收到吗 |
 | 2026-11-23 18:25 | 私聊#639 | telegram_dm | completed | 没有同步消息到机器人里，我也没看到，是什么原因 |
+| 2026-11-23 21:22 | 群派单#384 | worker_ant_group | in_progress | bus#14417 收到。我先按规范审一遍建表稿，审过就走测试平台的建表接口，在测试集群建 ads_app_device_first_recharge_rete |
