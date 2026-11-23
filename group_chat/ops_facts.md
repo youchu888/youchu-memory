@@ -33,3 +33,6 @@
 - 2026-11-20 | 未知会话 | ｜表 ads.adspageitemctrd,dwd_app_page_stay_d,dwd_app_page_view_d | ⚠️ [生产] 全量数据核查 · 2026-11-19 2026-11-20 11:02 北京时间 2026-11-20 11:01 北京 · 共扫描 166 项 · refday=2026-11-19 vs prevday=2026-11-18 🔴 海豚真失败 task (1) — 需补数 - 运营系统 / wf_用户画像_小时-2026112001080
 - 2026-11-21 | 技术中心-运营系统技术内部沟通群 | 瓶子 | @jiangyan0803 哈咯，帮忙执行一下运维系统生产脚本，帮忙按照文件名的顺序执行哈
 - 2026-11-22 | 未知会话 | ｜表 dws_drama_play_state_d_d | ⚠️ [生产] 全量数据核查 · 2026-11-21 2026-11-22 11:02 北京时间 2026-11-22 11:01 北京 · 共扫描 166 项 · refday=2026-11-21 vs prevday=2026-11-20 🔴 海豚真失败 task (1) — 需补数 - 运营系统 / wf_dws_汇总_日-202611220525
+- 2026-11-23 | 未知会话 |  | @wangyi00001 帮忙发一下测试环境hbase feature_user表的建表语句
+- 2026-11-23 | 未知会话 | ｜表 ads.ads_app_device_ltv_d_d,ads.ads_app_device_ltv_pay_gap_d,g_device_daily | @hull1889 c388764b 收到,测试 paimon 两张表都建好了: · paimon.ads.ads_app_device_ltv_d_d · paimon.ads.ads_app_device_ltv_pay_gap_d(不分区,主键 dt,bucket 1) SHOW CREATE 都核过,和文件一致。 挂步有一点要说清:调度器没有「挂上但
+- 2026-11-23 | 技术中心-运营系统技术内部沟通群 | 阿志 | 这个好了吗 @wangyi00001 @jiangyan0803
