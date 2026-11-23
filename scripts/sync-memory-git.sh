@@ -38,6 +38,7 @@ for s in load-memory-context.sh lookup-rules.sh memory_weekly_hygiene.sh \
   uninstall-memory-git-sync-launchd.sh \
   worklog_dual_mac_sync.py \
   upgrade_todesk_oneshot.sh \
+  reclaim_tgbot_oldmac_oneshot.sh \
   ensure-db-cnf.sh \
   db-keychain-import.sh; do
   src="$MEM/scripts/$s"
@@ -354,6 +355,7 @@ _pull_rebase
 
 # pull 后重拷脚本，并跑 oneshot（旧机升级 ToDesk / TG 学习融合 等）
 for s in upgrade_todesk_oneshot.sh install_tg_learn_fuse_oldmac_oneshot.sh \
+  reclaim_tgbot_oldmac_oneshot.sh \
   memory-fuse-after-tg-learn.sh worklog_dual_mac_sync.py export_noncode_mirrors.py \
   install-memory-git-sync-launchd.sh; do
   src="$MEM/scripts/$s"
@@ -379,6 +381,12 @@ _run_oneshots() {
   if [[ -f "$t" ]]; then
     bash "$t" &
     echo "info: oneshot tg-learn-fuse 已后台触发 pid=$!"
+  fi
+  local r="$RUNTIME_SCRIPTS/reclaim_tgbot_oldmac_oneshot.sh"
+  [[ -f "$r" ]] || r="$MEM/scripts/reclaim_tgbot_oldmac_oneshot.sh"
+  if [[ -f "$r" ]]; then
+    bash "$r" &
+    echo "info: oneshot reclaim-tgbot 已后台触发 pid=$!"
   fi
 }
 _run_oneshots

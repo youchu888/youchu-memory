@@ -42,7 +42,8 @@ cat >"$AUTH_FILE" <<'EOF'
 # 2026-11-23：TG bot 交回 old-mac；new-mac 不起 bot（不抢 token）
 old-mac
 EOF
-printf '%s\n' 'export WORKLOG_HOST_ID=old-mac' >"$HOST_ENV"
+# 本机身份仍是 new-mac（勿写成 old-mac，否则会误跑旧机 oneshot）
+printf '%s\n' 'export WORKLOG_HOST_ID=new-mac' >"$HOST_ENV"
 
 # 仅标记「本机不起自动化保活」；memory-git-sync 保持
 cat >"$HOME/.dc-platform/config/DISABLE_LOCAL_AUTOMATION" <<'EOF'

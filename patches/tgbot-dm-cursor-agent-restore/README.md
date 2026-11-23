@@ -11,15 +11,19 @@
 bash ~/.dc-platform/memory/patches/tgbot-dm-cursor-agent-restore/release-bot-on-new-mac.sh
 ```
 
-## old-mac：修好后拉回 bot（旧机执行）
+## old-mac：自动拉回（推荐，连不上旧机时用）
 
-memory-git 拉到本补丁后：
+个人仓推送后，旧机 `memory-git-sync`（约 2 分钟一轮）pull 会触发 oneshot，**只跑一次**：
+
+- 配置：`config/oneshot_reclaim_tgbot_oldmac.env`（`ENABLED=1` `TARGET_HOST=old-mac`）
+- 脚本：`scripts/reclaim_tgbot_oldmac_oneshot.sh` → 调本目录 `reclaim-bot-on-old-mac.sh`
+- 成功写 stamp：`~/.dc-platform/state/oneshot_reclaim_tgbot_oldmac.stamp`，并把 `ENABLED` 置 0
+
+手动（能登旧机时）：
 
 ```bash
 bash ~/.dc-platform/memory/patches/tgbot-dm-cursor-agent-restore/reclaim-bot-on-old-mac.sh
 ```
-
-可选 `--restart-only`：只重启 bot，不改权威主机标记。
 
 ## 文件
 
