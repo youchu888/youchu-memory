@@ -1,5 +1,5 @@
 # ops-mirror · LATEST（权威机 `old-mac`）
-> 更新: 2026-11-23 18:20:00 +0800
+> 更新: 2026-11-23 18:23:16 +0800
 
 详见当日: `ops-mirror/hosts/old-mac/2026-11-23.md`
 
@@ -18,3 +18,4 @@
 | 2026-11-23 17:00 | 群派单#383 | worker_ant_group | completed | @hull1889 设备 LTV 已挂测试:测试编排 v40,北京 11-23 17 点槽起生效。g_device_daily 里 device_order_p |
 | 2026-11-23 17:22 | 私聊#636 | telegram_dm | dispatched | 我感觉你现在没有之前好用了，可以恢复到之前的状态吗？任务发给你现在都看不见回复的 |
 | 2026-11-23 18:17 | 私聊#637 | telegram_dm | completed | 每日学习不是让你取消了吗？为什么还每天发呢 |
+| 2026-11-23 18:20 | 私聊#638 | telegram_dm | completed | 细节已发 bus 给初儿(#14392)。 狂人说发了bus，查一下有收到吗 |
