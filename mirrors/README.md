@@ -1,12 +1,17 @@
 # mirrors · 非代码双机镜像
 
+<<<<<<< Updated upstream
 - host: `old-mac`
 - updated: 2026-11-24 06:02:22 +0800
+=======
+- host: `new-mac`
+- updated: 2026-11-24 06:05:18 +0800
+>>>>>>> Stashed changes
 - transcript_days: 21
 
 ## 本轮复制文件数
 
-- `agent-transcripts`: 1
+- `agent-transcripts`: 6
 - `datacheck-playbooks-claude`: 0
 - `datacheck-playbooks-codex`: 0
 - `datacheck-reports-claude`: 0
