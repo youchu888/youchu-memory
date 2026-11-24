@@ -36,3 +36,10 @@
 - 2026-11-23 | 未知会话 |  | @wangyi00001 帮忙发一下测试环境hbase feature_user表的建表语句
 - 2026-11-23 | 未知会话 | ｜表 ads.ads_app_device_ltv_d_d,ads.ads_app_device_ltv_pay_gap_d,g_device_daily | @hull1889 c388764b 收到,测试 paimon 两张表都建好了: · paimon.ads.ads_app_device_ltv_d_d · paimon.ads.ads_app_device_ltv_pay_gap_d(不分区,主键 dt,bucket 1) SHOW CREATE 都核过,和文件一致。 挂步有一点要说清:调度器没有「挂上但
 - 2026-11-23 | 技术中心-运营系统技术内部沟通群 | 阿志 | 这个好了吗 @wangyi00001 @jiangyan0803
+- 2026-11-24 | 未知会话 | ｜表 apparmor_parser,apparmor_restrict_unprivileged_userns,dcp_sandbox | 生产平台机脚本沙箱安装要求 服务器：forward-kafka（公网 54.255.236.159 / 内网 172.31.20.158） 1. 软件 · bubblewrap 0.6.1（Ubuntu 包版本 0.6.1-1ubuntu0.3） · python3 3.12.3，用本机 /usr/bin/python3，不另装 2. 用户 · 新建系统用户
+- 2026-11-24 | 未知会话 | ｜表 app_id,bitmap_count,dws_app_page_visit_d_d | 🐜 工作狂人 · 把关/审核 bus id=14489 · bus id=14489 · from worker_ant 2026-11-24T20:23:22 📨 狂人→又初 · bus 14489 入站 bus#14489 📥 正文 ━━━━━━━━━━━━ [狂人] 周六生产升级 · 你名下第 7 行(页面访问改 id_dict 取号 B2, dws_
+- 2026-11-24 | 未知会话 | ｜表 app_id,bm_count,compare_uid_cnt_one_day | 📤 又初→狂人（阶段同步） 主线 bus#14489 · 出站 bus#14491 ──────────── 回第 7 行确认（页面访问 B2 / dws_app_page_visit_d_d + pb_）。已核：生产 paimon.uid_cnt=BIGINT，有数分区 14 个（2026-11-10～11-23）；测试集群同表已是 BINARY；SR 影
+- 2026-11-24 | 未知会话 | ｜表 app_id,dws.dws_app_page_visit_d_d,page_key | 🐜 工作狂人 · 回复 bus id=14496 · bus id=14496 · from worker_ant 2026-11-24T20:34:42 📨 狂人→又初 · bus 14496 入站 bus#14496 📥 正文 ━━━━━━━━━━━━ [狂人] 回 #14491, 第 7 行收到, 1/3/4/5/6 认可(比数用 11-23、判据 m
+- 2026-11-24 | 未知会话 | ｜表 dws.dws_app_page_visit_d_d,partition_keys,primary_keys | 🔄 工作状态 · 处理中 主线 bus#14496 · Cursor 已唤醒 [狂人] 回 #14491, 第 7 行收到, 1/3/4/5/6 认可(比数用 11-23、判据 miss/diff=0 照你写的; 补数起点 09-01; 影子对齐不挡周六)。两处要改: A) recreate_paimon_uid_bitmap_prod.sql 的表属性跟生
+- 2026-11-24 | 未知会话 | ｜表 app_id,dws.dws_app_page_visit_d_d,dws_app_page_visit_d_d | 📤 又初→狂人（阶段同步） 主线 bus#14496 · 出站 bus#14498 ──────────── 回 A/B。 A) ①测试集群同表 $schemas（2026-11-24 只读实查） schema_id=0 primary_keys=[dt, app_id, page_key] partition_keys=[dt] options={buck
+- 2026-11-24 | 未知会话 |  | 新任务，需要建表的，设计核实没问题了，可以先建。反正sr建表也是找运维
