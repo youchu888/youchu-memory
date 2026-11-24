@@ -50,13 +50,13 @@
 | `com.youchu.vpn-sync` | 每 **1800s** + RunAtLoad | VPN 配置对齐 | 失败重试下次 interval |
 | memory peer / 其它 oneshot | 按需 | — | upgrade_todesk / tg-learn-fuse 等 oneshot，不入日常主链 |
 
-### 晚间权威机时间轴（当前 · 2026-11-21）
+### 晚间双机时间轴（定案 · 时间点不变 · 2026-11-24）
 
 ```
-21:20  pre-flush（冲 hosts）／周六 18:20
-21:30  wake → Cursor 写稿推 TG／周六 18:30（无 fallback；忙则新开 agent）
-22:50  记忆日清（工作日；假日/请假 skip）
-（memory-git-sync：interval 全天 120s）
+两台   21:20  pre-flush（本机 work-log → hosts → git）／周六 18:20
+两台   全天   memory-git-sync interval 120s（互相同步）
+old-mac 21:30  合并双机 hosts 定稿 → 推 TG／周六 18:30
+old-mac 22:50  记忆日清（工作日；假日/请假 skip）
 ```
 
 ---
