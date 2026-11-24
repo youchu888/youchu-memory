@@ -314,11 +314,39 @@ def publish_canonical_report(mem_wl: Path, local_wl: Path, day: str, host: str) 
             host_report.write_text(body if body.endswith("\n") else body + "\n", encoding="utf-8")
             print(f"canonical: non-authority `{host}` archived to hosts only (not overwriting)")
 
+    def _result_count(text: str) -> int:
+        """【今日结果】里带「已完成」的 TQ 条数。"""
+        n = 0
+        in_results = False
+        for line in (text or "").splitlines():
+            s = line.strip()
+            if s.startswith("## 【今日结果】"):
+                in_results = True
+                continue
+            if in_results and s.startswith("## "):
+                break
+            if in_results and s.startswith("- [TQ-002") and "已完成" in s:
+                n += 1
+        return n
+
     # 3) 仅当权威机已上传 hosts 稿时，镜像到本机 + 写入 reports
+    #    若本地/仓内已有更满的定稿，禁止被权威机「单条空壳稿」盖掉（今晚漏报后补救仍被镜像冲掉）
     if auth_report.exists():
         body = _read_text(auth_report)
         if body.strip():
             stamped = _stamp(body, authority)
+            auth_n = _result_count(stamped)
+            keep_n = 0
+            if canon.exists():
+                keep_n = max(keep_n, _result_count(_read_text(canon)))
+            if local_report.exists():
+                keep_n = max(keep_n, _result_count(_read_text(local_report)))
+            if keep_n > auth_n:
+                print(
+                    f"canonical: keep richer existing reports "
+                    f"(existing_results={keep_n} > authority_results={auth_n}); skip thin mirror"
+                )
+                return canon if canon.exists() else None
             canon.write_text(stamped, encoding="utf-8")
             local_report.write_text(stamped, encoding="utf-8")
             print(f"canonical: mirrored from hosts/{authority}/reports")
