@@ -32,7 +32,7 @@
 - **事件漏斗（大漏斗）**：最新口径已发产、验收完成、本月数据已补全（含 `funnel_backfill` 09-01～09-20）；日常日批维护即可。
 - **页面访问 / 归因日常**：不盯产品卡点；分区巡检、扫链继续。
 
-- [x] **设备 LTV 测试日批首跑（2026-11-24）**：test SR `ads_app_device_ltv_d_d` dt=2026-11-23 已有数（5344 行，etl 03:46）；pay_gap 不回写 SR 已核；**step.json tagTargets 补 pay_gap** 仍欠（源码不在本机）。
+- [x] **设备 LTV 测试日批首跑 + step 尾巴（2026-11-24）**：首跑 PASS；`tagTargets` 已含 pay_gap（`3494717f`，本机已检出 `data-jobs/spark/05.ads/ads_app_device_ltv_d_d/`）；产编排仍不挂。
 
 ## 待跟进
 
