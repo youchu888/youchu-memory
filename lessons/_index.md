@@ -5,6 +5,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-24 | [双机日报缺条先读 `hosts/new-mac/当日.md` 是否空壳/仅 mi](./2026-11-24-双机日报缺条先读-hosts-new-mac-当日-md-是否空壳-仅-mirror-再查-sy.md) | daily-report,troubleshooting,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-24 | [new-mac 干完活必须在 21:20 前写入 `.cursor/work-l](./2026-11-24-new-mac-干完活必须在-21-20-前写入-cursor-work-log-当日-md-并.md) | daily-report,dual-mac,work-log,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-23 | [停用每日学习须点名 job：`worker-ant-daily-learn` 与](./2026-11-23-停用每日学习须点名-job-worker-ant-daily-learn-与-daily-gro.md) | launchd,每日学习,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-23 | [主人说 bus/机器人没收到时，先查 inbox+TG 镜像时间线；自动执行快速](./2026-11-23-主人说-bus-机器人没收到时-先查-inbox-tg-镜像时间线-自动执行快速结案优先解释-看.md) | agent-bus,tgbot,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-21 | [活跃留存|问「是不是我们开发的」时先查 code_owners 与 Spark ](./2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owners-与-spark-索引-主链归知秋.md) | ownership,session-rotate | 会话轮换前自动蒸馏 |

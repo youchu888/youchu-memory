@@ -5,6 +5,20 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## .m 11 2026 24 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-24-双机日报缺条先读-hosts-new-mac-当日-md-是否空壳-仅-mirror-再查-sy.md` | 2026-11-24-双机日报缺条先读-hosts-new-mac-当日-md- |
+| ## .cursor .m 11 20 2026 | `~/.dc-platform/memory/lessons/2026-11-24-new-mac-干完活必须在-21-20-前写入-cursor-work-log-当日-md-并.md` | 2026-11-24-new-mac-干完活必须在-21-20-前写入-curs |
+| ok sync 不了 了漏 免反 却治 | `sessions/tg-rotate-2026-11-24-2236.md` | 日报差异归因话术：**同步 OK + 源机流水缺失**，避免反复改 sync 脚 |
+| force sync tg 「3 」若 不能 | `sessions/tg-rotate-2026-11-24-2236.md` | 用户手里的「3 条完整稿」若只存在于私聊/单机会话，要 **覆盖定稿 + 按需  |
+| .cursor .m flush hosts log md | `sessions/tg-rotate-2026-11-24-2236.md` | 排查顺序：看当日 `hosts/*` 正文 → 对照是否写过 `.cursor/ |
+| 20 21 flush sync tg 今晚 | `sessions/tg-rotate-2026-11-24-2236.md` | 已修链路是：**先双机 flush + sync，再汇稿推 TG**；今晚链路通 |
+| 21 30 ho hosts mac memory | `sessions/tg-rotate-2026-11-24-2236.md` | old-mac 21:30 定稿并推 TG 后，若完整稿从未进 `youchu- |
+| ac c） hosts ld log ma | `sessions/tg-rotate-2026-11-24-2236.md` | 实活在对话/报告文件里、**未进当日 work-log**，权威机（old-ma |
+| .cursor .m cursor ide log mac | `sessions/tg-rotate-2026-11-24-2236.md` | **Cursor transcript 不跨机**；new-mac 上的 IDE |
+| .cursor .m hosts log mac magically | `sessions/tg-rotate-2026-11-24-2236.md` | `hosts/new-mac/当日.md` 若只有「当日未写 `.cursor/ |
+| 20 21 30 flush hosts mac | `sessions/tg-rotate-2026-11-24-2236.md` | 21:20 flush、21:30 定稿前若 `hosts/new-mac`、` |
+| git hosts memory 「少 」要 先分 | `sessions/tg-rotate-2026-11-24-2236.md` | 双机日报「少内容」要先分清：是 **memory git / hosts 同步失 |
+| .m daily hosts lesson ma mac | `sessions/tg-rotate-2026-11-24-2236.md` | [LESSON: daily-report,troubleshooting/双机 |
+| .cursor .m 20 21 daily dual | `sessions/tg-rotate-2026-11-24-2236.md` | [LESSON: daily-report,dual-mac,work-log/ |
 | ## 00 02 11 2026 23 | `~/.dc-platform/memory/lessons/2026-11-23-停用每日学习须点名-job-worker-ant-daily-learn-与-daily-gro.md` | 2026-11-23-停用每日学习须点名-job-worker-ant-dail |
 | ## 11 2026 23 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-23-主人说-bus-机器人没收到时-先查-inbox-tg-镜像时间线-自动执行快速结案优先解释-看.md` | 2026-11-23-主人说-bus-机器人没收到时-先查-inbox-tg-镜 |
 | bus executor inbox ux 「已 」等 | `sessions/tg-rotate-2026-11-23-1926.md` | bus 争议排查顺序：inbox 时间 → 镜像会话内容 → executor  |
@@ -31,17 +45,3 @@
 | api onehr 「tg 「进 与打 位」 | `sessions/tg-rotate-2026-11-19-1225.md` | 扫近期打卡/OneHR 相关日志里是否有 **「TG 通知失败」** 等明确错误 |
 | 00 0） 20 200）及计划下班触发时间 http 「还 | `sessions/tg-rotate-2026-11-19-1225.md` | 验当日结果：查最近一次上班卡是否成功（如 HTTP 200）及计划下班触发时间， |
 | checkin com.youchu.onehr launchd 侧首 假日 卡 | `sessions/tg-rotate-2026-11-19-1225.md` | 打卡侧首查：`com.youchu.onehr-checkin` launchd |
-| tg vs 「打 」时 不同 不通 | `sessions/tg-rotate-2026-11-19-1225.md` | 用户报「打卡都不通知了」时，先区分：**调度/打卡进程是否存活** vs **T |
-| tg 「卡 「进 」就 不要 不要只给「进程正常」就 | `sessions/tg-rotate-2026-11-19-1225.md` | 若用户指的是「卡打成了但 TG 没收到」：主动要 **大概从哪天开始断**，再按 |
-| #630 ack ag agent」时 en ge | `sessions/tg-rotate-2026-11-19-1225.md` | 用户同时发「重启 agent」时：走冷启动（读启动包、在线确认），并**顺带闭环 |
-| ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports-日报-yyyy-mm-dd-md-再.md` | 2026-11-15-主人粘贴改定稿并要求上传云端时-先覆盖本地-reports |
-| ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明细是否仍更新-明细新而指标停-优先查实.md` | 2026-11-15-实时链路断流-prod-只读核对指标表最后写入时刻与上游明 |
-| ## 11 15 2026 agent_session_rotate curso | `~/.dc-platform/memory/lessons/2026-11-15-死锁阻碍-仅写当日明确应交未交的内部卡点-等门禁-等他人比对等外部依赖默认不写死锁-主人清空后须.md` | 2026-11-15-死锁阻碍-仅写当日明确应交未交的内部卡点-等门禁-等他人比 |
-| od pr ro 上游 与上 仍新 | `sessions/tg-rotate-2026-11-15-0637.md` | 实时指标断流排查（prod 只读）：对比实时指标表停写时点与上游明细新鲜度；明细 |
-| agent bus log task_provenance.json task_ | `sessions/tg-rotate-2026-11-15-0637.md` | work-log 偏薄时，用本机 agent transcript、派单溯源（` |
-| daily lesson report 不写 主人 主人清空后须对照差异沉淀避免 | `sessions/tg-rotate-2026-11-15-0637.md` | [LESSON: daily-report/【死锁阻碍】仅写当日明确应交未交的内 |
-| 2（ op p2 sql to top1 | `sessions/tg-rotate-2026-11-15-0637.md` | 【明日动作】可带截止日（如周一），写真实续作 TOP1/TOP2（地区地图门禁恢 |
-| 「还 」就 不要 不要因为「还在等门禁」就擅自填满 不要因为「还在等门禁」就擅自 | `sessions/tg-rotate-2026-11-15-0637.md` | 【死锁阻碍】/【专项复盘】默认留空；主人定稿里死锁为空时，表示当日无值得单列的内 |
-| +「 +「已完成」 「已 了什 人名 今日 | `sessions/tg-rotate-2026-11-15-0637.md` | 【今日结果】按金样句式：任务名 + 做了什么 + 结果 +「已完成」；进度型工作 |
-| lesson 「等 」类 不宜 不宜把「等门禁」类外部卡点硬写进 主人 | `sessions/tg-rotate-2026-11-15-0637.md` | 主人改定日报后应对照初稿差异写 lesson，避免同类表述再犯（本会话：不宜把「 |
-| tg upload 「上 「上传云端」与推 」与 上传 | `sessions/tg-rotate-2026-11-15-0637.md` | 「上传云端」与推 TG 分离：主人未说上传前不要自动传；说了则用**主人改定后的 |
