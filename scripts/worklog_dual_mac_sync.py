@@ -73,6 +73,33 @@ def _read_text(p: Path) -> str:
     return p.read_text(encoding="utf-8", errors="replace").strip()
 
 
+_BIZ_RE = re.compile(
+    r"(渠道|归因|漏斗|报表|建表|ETL|核查|指标|表|分区|补数|发布|试跑|抽检|口径|汇总|"
+    r"标签|设备|数仓|维表|对账|看板|留存|充值|广告|推广|页面访问|次留|终身价值)",
+    re.I,
+)
+
+
+def _biz_bullet_count(text: str) -> int:
+    n = 0
+    for line in (text or "").splitlines():
+        s = line.strip()
+        if not s.startswith("- "):
+            continue
+        body = s[2:].strip()
+        if _BIZ_RE.search(body):
+            n += 1
+    return n
+
+
+def _looks_ops_mirror_shell(text: str) -> bool:
+    t = text or ""
+    if "ops-mirror" in t or "流水偏空警告" in t or "暂无手写流水" in t:
+        if _biz_bullet_count(t) == 0:
+            return True
+    return False
+
+
 def _local_report(local_wl: Path, day: str) -> Path:
     """日报稿两种文件名都认：同步脚本用日期在前，云端稿用「日报-」在前。"""
     preferred = local_wl / "reports" / f"{day}-日报.md"
