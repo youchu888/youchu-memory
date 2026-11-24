@@ -237,7 +237,9 @@ def main() -> int:
     args = ap.parse_args()
     day = args.date or _today()
 
-    # 已有人工/IDE 定稿则不覆盖
+    bullets = collect_bullets(day)
+
+    # 已有定稿：若 hosts/流水里业务条明显更多，则升级覆盖（防「先写了 1 条空壳稿」锁死）
     existing = None
     for name in (f"{day}-日报.md", f"日报-{day}.md"):
         p = REPORTS / name
@@ -245,12 +247,26 @@ def main() -> int:
             existing = p
             break
     if existing and not args.dry_run:
-        print(f"keep existing {existing}")
-        if args.post or args.force_post:
-            return post(day, existing, force=args.force_post or True)
-        return 0
+        existing_text = _read(existing)
+        existing_n = 0
+        in_results = False
+        for line in existing_text.splitlines():
+            if line.strip().startswith("## 【今日结果】"):
+                in_results = True
+                continue
+            if in_results and line.strip().startswith("## "):
+                break
+            if in_results and line.strip().startswith("- [TQ-002") and "已完成" in line:
+                existing_n += 1
+        if len(bullets) <= existing_n:
+            print(f"keep existing {existing} results={existing_n} hosts_biz={len(bullets)}")
+            if args.post or args.force_post:
+                return post(day, existing, force=args.force_post or True)
+            return 0
+        print(
+            f"upgrade existing {existing}: results={existing_n} < hosts_biz={len(bullets)}"
+        )
 
-    bullets = collect_bullets(day)
     body = render(day, bullets)
     if args.dry_run:
         print(body)

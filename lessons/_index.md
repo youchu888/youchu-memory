@@ -1,3 +1,4 @@
+| 2026-11-24 | [日报漏项因 work-log 未落盘，不是双机同步失效](./2026-11-24-日报漏项因work-log未落盘-非双机同步失效.md) | 日报,work-log,双机,flush | 实活须写 .cursor/work-log；sync 通≠内容全 |
 | 2026-11-03 | [2026-11-03-bus12214-七张生产影子重提审野花-prod影子表未建禁报首跑标记](./2026-11-03-bus12214-七张生产影子重提审野花-prod影子表未建禁报首跑标记.md) | spark-migrate,paimon_shadow,request-publish | bus#12214 七张重 RP 野花；prod 无影子禁报首跑 |
 | 2026-11-18 | [butler 收件静默丢弃 REPLY/ACK 前缀 bus#13925](./2026-11-18-butler收件静默丢弃REPLY-ACK前缀-bus13925.md) | agent-bus, butler, silent-drop | 禁一切前缀标签与 kind=reply/ack；直写正文+progress（#13925/#13933） |
 # Lessons 索引

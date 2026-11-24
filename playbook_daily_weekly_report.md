@@ -50,6 +50,12 @@ bash ~/.dc-platform/scripts/prepare_daily_report_sync.sh
 
 缺机 hosts 时须在回复点明；新机活未写 work-log 则旧机无法汇到（transcript 不跨机）。
 
+### 2026-11-24 补强（漏报根因）
+
+- **同步通 ≠ 内容全**：flush/sync 只搬运磁盘上已有流水；对话里干完但未写 `.cursor/work-log/当日.md` → hosts 仍是 ops-mirror 空壳。
+- **收工必写**：规则 `CHcode/.cursor/rules/daily-worklog-required.mdc`；冲刺脚本对空壳打 WARN；导出时**禁止用更空的稿覆盖更满的 hosts**；`auto_draft` 若 hosts 业务条多于已有定稿结果条则升级覆盖。
+- 正式 `reports/` 仍以权威机推送为准；非权威机可补 hosts，**不要**用单条空壳稿长期锁死 reports。
+
 ## 日报流程（生成 → 记录 → 私聊）
 
 > 主人 2026-08-04：今日结果只写已完成；死锁尽量空；未完进明日；**自动推送仅 old-mac**。

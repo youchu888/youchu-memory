@@ -162,12 +162,27 @@ def export_host_day(mem_wl: Path, local_wl: Path, day: str, host: str) -> Path |
 
     if not wrote:
         return None
-    # 已有更完整的本地 hosts 时不要被 ops-mirror 兜底覆盖掉
-    if source == "ops-mirror" and day_dst.exists():
+    # 已有更完整的本地 hosts 时不要被 ops-mirror / 空壳本地流水覆盖掉
+    new_body = "\n".join(chunks).rstrip() + "\n"
+    if day_dst.exists():
         existing = _read_text(day_dst)
-        if existing and "ops-mirror 兜底" not in existing and "## 本机日流水" in existing:
+        old_n = _biz_bullet_count(existing)
+        new_n = _biz_bullet_count(new_body)
+        if old_n > new_n:
             return day_dst
-    day_dst.write_text("\n".join(chunks).rstrip() + "\n", encoding="utf-8")
+        if source == "ops-mirror" and existing and "ops-mirror 兜底" not in existing and "## 本机日流水" in existing:
+            return day_dst
+        if _looks_ops_mirror_shell(new_body) and old_n > 0:
+            return day_dst
+    if _looks_ops_mirror_shell(new_body) and "流水偏空警告" not in new_body:
+        chunks.insert(
+            3,
+            "> ⚠️ 流水偏空警告：导出内容几乎无业务实活；权威机汇稿可能漏项。"
+            "请先写本机 `.cursor/work-log/当日.md`（规则 daily-worklog-required）。",
+        )
+        chunks.insert(4, "")
+        new_body = "\n".join(chunks).rstrip() + "\n"
+    day_dst.write_text(new_body, encoding="utf-8")
     return day_dst
 
 
