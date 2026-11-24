@@ -7,7 +7,7 @@
 
 | 类型 | 触发 |
 |------|------|
-| 日报 | 用户说「日报/今日总结」；或 **工作日** 自动：双机冲刺（周一至周五 21:20 / 周六 18:20）→ 同步 → old-mac 写日报推 TG（周一至周五 **21:30** / 周六 **18:30**） |
+| 日报 | 用户说「日报/今日总结」；或 **工作日** 自动：**两台都冲刺**（周一至周五 21:20 / 周六 18:20 写 hosts + git 同步）→ **old-mac** 汇总定稿并推 TG（周一至周五 **21:30** / 周六 **18:30**）。时间点不变。 |
 | 周报 | 用户说「周报/上周总结/本周计划」 |
 
 ## 日历规则（摘要）
@@ -49,6 +49,18 @@ bash ~/.dc-platform/scripts/prepare_daily_report_sync.sh
 | 正式日报（权威） | `~/.dc-platform/memory/work-log/reports/YYYY-MM-DD-日报.md` · **以旧 Mac（old-mac）稿为准**；新机只贡献 hosts 流水 |
 
 缺机 hosts 时须在回复点明；新机活未写 work-log 则旧机无法汇到（transcript 不跨机）。
+
+### 双机合并（定案 · 时间点不变）
+
+```
+两台  21:20（周六 18:20）  pre-daily-report-flush：本机 work-log → hosts/<本机> → git push
+两台  全天 interval         memory-git-sync：互相同步 youchu-memory
+old-mac 21:30（周六 18:30）  读双机 hosts 合并定稿 → 推 TG
+```
+
+- **new-mac**：必须跑 `pre-daily-report-flush` + `memory-git-sync`；**不**跑定稿/推 TG（`AUTHORITY_HOST=old-mac`）。
+- **old-mac**：同样冲刺 + sync；到点汇总双机流水后推 TG。
+- 关 new-mac「权威自动化」时，**不得**停 flush / memory-git-sync。
 
 ### 2026-11-24 补强（漏报根因）
 

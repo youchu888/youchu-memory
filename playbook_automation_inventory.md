@@ -1,7 +1,7 @@
 # 自动化全景清单与优化方案（又初 · 2026-11-20）
 
 > 权威机：**old-mac**（`AUTHORITY_HOST=old-mac`）  
-> new-mac：`DISABLE_LOCAL_AUTOMATION` —— 不保活、不重装；可保留 memory 同步贡献 hosts  
+> new-mac：`DISABLE_LOCAL_AUTOMATION` —— 不跑 TG/bus/定稿推送等权威自动化；**必须保留** `memory-git-sync` + `pre-daily-report-flush`（双机到点合并日报）  
 > 原则：**主路径成功即停；失败才补一刀；改 A 不许伤 B**
 
 ---
@@ -34,7 +34,7 @@
 
 | 名字 | 何时跑 | 成功标记 | 失败才干什么 | 冗余点 |
 |------|--------|----------|--------------|--------|
-| `com.youchu.pre-daily-report-flush` | 工作日 **21:20** / 周六 **18:20** | hosts 当日流水写入 + memory sync 尝试 | work-log 空则从 ops-mirror 兜底写；sync 失败只 warn | 与 wake 内 sync 重叠 |
+| `com.youchu.pre-daily-report-flush` | **双机都要** · 工作日 **21:20** / 周六 **18:20** | hosts 当日流水写入 + memory sync 尝试 | work-log 空则从 ops-mirror 兜底写；sync 失败只 warn | new-mac 关权威自动化时仍须保留 |
 | `com.youchu.daily-report-wake` | 工作日 **21:30** / 周六 **18:30** | `reports/.daily_report_dm_posted.json` 含当日；或至少定稿文件存在 | 只写 wake_feed；**自己不推** | 依赖 Cursor 接住 |
 | ~~`com.youchu.daily-report-fallback`~~ | **已停用**（2026-11-21） | — | — | 主人：定时不兜底；agent 忙则新开；plist=`*.disabled-20261121` |
 | `com.youchu.memory-git-sync` | 配置：`MODE=interval` 时 **每 120s**；`daily` 时默认 **22:30** | git push OK / 锁释放；日志 `OK memory 已同步` | flock 互斥；rebase 冲突自愈；失败安全回退 origin | 双机高频时锁竞争多 |
