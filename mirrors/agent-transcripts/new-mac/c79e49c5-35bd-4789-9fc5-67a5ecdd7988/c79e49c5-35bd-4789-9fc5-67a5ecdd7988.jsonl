@@ -220,3 +220,6 @@
 {"role":"assistant","message":{"content":[{"type":"tool_use","name":"Shell","input":{"command":"export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/usr/local/bin:$PATH\n# append work-log for today Asia/Shanghai\nTODAY=$(TZ=Asia/Shanghai date +%F)\nLOG=\"/Users/mac/Desktop/CHcode/.cursor/work-log/${TODAY}.md\"\nmkdir -p \"$(dirname \"$LOG\")\"\nif [[ ! -f \"$LOG\" ]]; then\n  printf '# work-log · %s\\n\\n## 已完成\\n' \"$TODAY\" > \"$LOG\"\nfi\n# append if not already there\nif ! rg -q 'bus#14550' \"$LOG\" 2>/dev/null; then\n  printf -- '- 向狂人同步又初进度（bus#14550），问有无新活；无则请转达知秋\\n' >> \"$LOG\"\nfi\ntail -8 \"$LOG\"\n","description":"Append today's work-log line for bus sync"}}]}}
 {"role":"assistant","message":{"content":[{"type":"text","text":"已发狂人：**bus#14550**（progress）。\n\n内容含：可挂产前进度、HOLD 项、仓已对齐；末尾问有无新活，没有请转达知秋。等他回。"}]}}
 {"type":"turn_ended","status":"success"}
+{"role":"user","message":{"content":[{"type":"text","text":"<timestamp>Wednesday, Nov 25, 2026, 5:44 PM (UTC+8)</timestamp>\n<user_query>\nmysql 是 olap 还是 oltp\n</user_query>"}]}}
+{"role":"assistant","message":{"content":[{"type":"text","text":"**主要是 OLTP**（在线事务：行存、索引、高并发读写、事务）。\n\n也能做一点分析，但不是为 OLAP 设计的；真正大分析一般用列存/仓（如 StarRocks、ClickHouse）。"}]}}
+{"type":"turn_ended","status":"success"}
