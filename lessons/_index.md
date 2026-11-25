@@ -5,6 +5,8 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-25 | [任意机上有交付就要先写 `.cursor/work-log/当日.md`，再指望](./2026-11-25-任意机上有交付就要先写-cursor-work-log-当日-md-再指望-flush-sync.md) | daily-report,work-log,session-rotate | 会话轮换前自动蒸馏 |
+| 2026-11-25 | [关 new-mac 本地权威自动化时，必须保留 pre-daily-report](./2026-11-25-关-new-mac-本地权威自动化时-必须保留-pre-daily-report-flush-与.md) | daily-report,new-mac,automation,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-24 | [双机日报缺条先读 `hosts/new-mac/当日.md` 是否空壳/仅 mi](./2026-11-24-双机日报缺条先读-hosts-new-mac-当日-md-是否空壳-仅-mirror-再查-sy.md) | daily-report,troubleshooting,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-24 | [new-mac 干完活必须在 21:20 前写入 `.cursor/work-l](./2026-11-24-new-mac-干完活必须在-21-20-前写入-cursor-work-log-当日-md-并.md) | daily-report,dual-mac,work-log,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-23 | [停用每日学习须点名 job：`worker-ant-daily-learn` 与](./2026-11-23-停用每日学习须点名-job-worker-ant-daily-learn-与-daily-gro.md) | launchd,每日学习,session-rotate | 会话轮换前自动蒸馏 |

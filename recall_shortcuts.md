@@ -5,6 +5,18 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## .cursor .m 11 2026 25 | `~/.dc-platform/memory/lessons/2026-11-25-任意机上有交付就要先写-cursor-work-log-当日-md-再指望-flush-sync.md` | 2026-11-25-任意机上有交付就要先写-cursor-work-log-当 |
+| ## 11 2026 25 agent_session_rotate autom | `~/.dc-platform/memory/lessons/2026-11-25-关-new-mac-本地权威自动化时-必须保留-pre-daily-report-flush-与.md` | 2026-11-25-关-new-mac-本地权威自动化时-必须保留-pre-d |
+| .md prompt tg 「当 件末 先读 | `sessions/tg-rotate-2026-11-25-1137.md` | TG 派活类问题：先读指定 `prompt_*.md`，直接答文件末尾「当前问题 |
+| ac automation c「 daily disable flush | `sessions/tg-rotate-2026-11-25-1137.md` | 关 new-mac「权威自动化」时，**不得连带停** pre-daily-re |
+| mac old 一致 与定 两项 两项均已装 | `sessions/tg-rotate-2026-11-25-1137.md` | 本次 old-mac 两项均已装、已加载、退出码 0，**无需重装**；钟点与定 |
+| com. com.youchu.daily com.youchu.pre dai | `sessions/tg-rotate-2026-11-25-1137.md` | old-mac 必留 **`com.youchu.pre-daily-repor |
+| biz com.youchu.pre daily flush git hosts | `sessions/tg-rotate-2026-11-25-1137.md` | new-mac 已恢复 **`com.youchu.pre-daily-repo |
+| hosts mac new old tg worklog_host_id | `sessions/tg-rotate-2026-11-25-1137.md` | **定稿权威仍是 old-mac**；new-mac 设 `WORKLOG_HO |
+| 120s flush git memory sync 一轮） | `sessions/tg-rotate-2026-11-25-1137.md` | 双机全天跑 **memory-git-sync**（约 **120s** 一轮） |
+| 0（ 18 20 20（周六 20） 21 | `sessions/tg-rotate-2026-11-25-1137.md` | 日报链路已定：**21:20（周六 18:20）** 双机 `pre-daily |
+| automation daily flush git lesson log | `sessions/tg-rotate-2026-11-25-1137.md` | [LESSON: daily-report,new-mac,automation |
+| .cursor .m cu flush log mac | `sessions/tg-rotate-2026-11-25-1137.md` | 实活必须先落本机 **`.cursor/work-log/当日.md`**；否则 |
 | ## .m 11 2026 24 agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-24-双机日报缺条先读-hosts-new-mac-当日-md-是否空壳-仅-mirror-再查-sy.md` | 2026-11-24-双机日报缺条先读-hosts-new-mac-当日-md- |
 | ## .cursor .m 11 20 2026 | `~/.dc-platform/memory/lessons/2026-11-24-new-mac-干完活必须在-21-20-前写入-cursor-work-log-当日-md-并.md` | 2026-11-24-new-mac-干完活必须在-21-20-前写入-curs |
 | ok sync 不了 了漏 免反 却治 | `sessions/tg-rotate-2026-11-24-2236.md` | 日报差异归因话术：**同步 OK + 源机流水缺失**，避免反复改 sync 脚 |
@@ -33,15 +45,3 @@
 | ## 11 2026 21 agent_session_rotate code_ | `~/.dc-platform/memory/lessons/2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owners-与-spark-索引-主链归知秋.md` | 2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owne |
 | 「又 「活 「活跃留存整条链是又初开发的」 下游 下游相关（归因 不说 | `sessions/tg-rotate-2026-11-21-1032.md` | **边界话术**：可说「又初侧有周边/下游相关（归因、标签等）」；**不说**「 |
 | bitmap dws_app_retention_d dws_app_reten | `sessions/tg-rotate-2026-11-21-1032.md` | 对外表述：业务名「活跃留存」↔ 表名 `dws_app_user_d_h` /  |
-| dws 「都 不同 与活 与活跃留存 主链 | `sessions/tg-rotate-2026-11-21-1032.md` | **又初工作簿常见范围**：设备标签、归因、指标库、渠道周/月汇总等；与活跃留存 |
-| 10 2025 29 29（摘录中的 29） 9（ | `sessions/tg-rotate-2026-11-21-1032.md` | **2025-10-29（摘录中的 10-29）**知秋明确：这批表迁 runn |
-| code_owners spark 「是 「活 」时 不是 | `sessions/tg-rotate-2026-11-21-1032.md` | 归属依据：仓库 **`code_owners`**、**Spark 索引**均标 |
-| bitmap） dws_app_retention_d_h dws_app_us | `sessions/tg-rotate-2026-11-21-1032.md` | **活跃留存主链**（`dws_app_user_d_h`、`dws_app_r |
-| code_owners d_h dws_app lesson ownership | `sessions/tg-rotate-2026-11-21-1032.md` | `[LESSON: ownership/活跃留存/问「是不是我们开发的」时先查  |
-| code_owners prompt tg 「当 一句 主责 | `sessions/tg-rotate-2026-11-21-1032.md` | TG/私聊问 **归属/谁开发** 类问题：先 **启动记忆 + prompt  |
-| dws 「都 不同 与活 与活跃留存 主链 | `sessions/tg-rotate-2026-11-21-1032.md` | 又初工作簿常见范围**：设备标签、归因、指标库、渠道周/月汇总等；与活跃留存 * |
-| ## 11 19 2026 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-19-tg-notify-agent-restart-报打卡没通知时先核-onehr-checkin-.md` | 2026-11-19-tg-notify-agent-restart-报打卡没通 |
-| #630 #631 bot tg 一条 一次 | `sessions/tg-rotate-2026-11-19-1225.md` | TG bot 私聊带 `#630`/`#631` 序号时，可把 **重启** 与 |
-| api onehr 「tg 「进 与打 位」 | `sessions/tg-rotate-2026-11-19-1225.md` | 扫近期打卡/OneHR 相关日志里是否有 **「TG 通知失败」** 等明确错误 |
-| 00 0） 20 200）及计划下班触发时间 http 「还 | `sessions/tg-rotate-2026-11-19-1225.md` | 验当日结果：查最近一次上班卡是否成功（如 HTTP 200）及计划下班触发时间， |
-| checkin com.youchu.onehr launchd 侧首 假日 卡 | `sessions/tg-rotate-2026-11-19-1225.md` | 打卡侧首查：`com.youchu.onehr-checkin` launchd |
