@@ -21,10 +21,11 @@
 
 | 文件 | 用途 |
 |------|------|
-| `_ops_server_monitor_incident.md` | server_monitor / prod FAIL 告警处置（非表级 datacheck） |
-| `_ops_dolphinscheduler_workflow_update.md` | 海豚 wf PUT / release / schedule SOP |
+| `_ops_server_monitor_incident.md` | server_monitor prod 海豚告警处置（bus#7708） |
+| `_ops_dolphinscheduler_workflow_update.md` | DS 工作流 PUT / 补数 API SOP |
 | `dws.dws_register_attribution_gray_verify.md` | 灰度 app channel_apply 三条验收 |
 | `datacheck_layered_verification.md` | 套表逐层核查 |
+| `dim.dim_app_info_all.md` | 应用维 SR↔Paimon 按日对平（核清收编） |
 
 ## 每个剧本必须包含的内容
 1. 表标识
