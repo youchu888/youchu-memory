@@ -43,3 +43,5 @@
 - 2026-11-24 | 未知会话 | ｜表 dws.dws_app_page_visit_d_d,partition_keys,primary_keys | 🔄 工作状态 · 处理中 主线 bus#14496 · Cursor 已唤醒 [狂人] 回 #14491, 第 7 行收到, 1/3/4/5/6 认可(比数用 11-23、判据 miss/diff=0 照你写的; 补数起点 09-01; 影子对齐不挡周六)。两处要改: A) recreate_paimon_uid_bitmap_prod.sql 的表属性跟生
 - 2026-11-24 | 未知会话 | ｜表 app_id,dws.dws_app_page_visit_d_d,dws_app_page_visit_d_d | 📤 又初→狂人（阶段同步） 主线 bus#14496 · 出站 bus#14498 ──────────── 回 A/B。 A) ①测试集群同表 $schemas（2026-11-24 只读实查） schema_id=0 primary_keys=[dt, app_id, page_key] partition_keys=[dt] options={buck
 - 2026-11-24 | 未知会话 |  | 新任务，需要建表的，设计核实没问题了，可以先建。反正sr建表也是找运维
+- 2026-11-25 | 未知会话 | ｜表 anna_cute9,b3_behavior_hourly,dws_user_promotion_behavior_h_h | @anna_cute9 dws_user_promotion_behavior_h_h b3_behavior_hourly.sql → data-jobs/spark/04.dws/dws_user_promotion_behavior_h_h/b3_behavior_hourly.sql 65 生效日期写死成 11-13 起,11-14 复核时退回重做;
+- 2026-11-25 | 未知会话 | ｜表 ads.ads_app_device_first_recharge_retention_d_d_old | @wangyi00001 老哥，在测试SR帮忙执行一下 DROP TABLE IF EXISTS ads.ads_app_device_first_recharge_retention_d_d_old;
