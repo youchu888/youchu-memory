@@ -1,4 +1,4 @@
-# 规则目录（自动生成 2026-11-25 22:50）
+# 规则目录（自动生成 2026-11-26 22:50）
 
 > 一行一条。启动扫目录；对上再 Read 原文。禁止整库灌进对话。
 
@@ -113,6 +113,7 @@
 | starrocks default value  | StarRocks 不允许 ALTER 修改列默认值；DEFAULT CURRENT_TIMESTAMP 在主键表 UPDATE 时会踩坑 | `feedback_starrocks_default_value_caution.md` |
 | starrocks primary key pa | In StarRocks primary key tables, partition columns must be included i… | `feedback_starrocks_primary_key_partition_rules.md` |
 | task time estimation | Feedback：任务耗时预估 + 实际记录（持续校准） | `feedback_task_time_estimation.md` |
+| test platform zsq18012 n | 测试平台连法（指标库）· 狂人 2026-11-26 | `feedback_test_platform_zsq18012_not_18013.md` |
 | tg bus long message must | TG / agent-bus 长消息出站 | `feedback_tg_bus_long_message_must_split.md` |
 | tg dm fast work dual tra | Feedback：TG 私聊长活占着时另开 agent（已落地） | `feedback_tg_dm_fast_work_dual_track.md` |
 | tg no ask answer ok | TG SQL 答完禁止主动征询「这个回答合适吗？」与满意/不满意按钮 | `feedback_tg_no_ask_answer_ok.md` |
