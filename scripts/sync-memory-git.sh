@@ -34,6 +34,8 @@ for s in load-memory-context.sh lookup-rules.sh memory_weekly_hygiene.sh \
   install-onehr-checkin-launchd.sh \
   uninstall-onehr-checkin-launchd.sh \
   export_noncode_mirrors.py \
+  export_agent_bus_readonly_mirror.py \
+  agent-bus-readonly-status.sh \
   install-memory-git-sync-launchd.sh \
   uninstall-memory-git-sync-launchd.sh \
   worklog_dual_mac_sync.py \
@@ -222,6 +224,7 @@ fi
 WL_SYNC="$MEM/scripts/worklog_dual_mac_sync.py"
 OPS_MIRROR="$MEM/scripts/ops_mirror_to_memory.py"
 NONCODE_MIRROR="$MEM/scripts/export_noncode_mirrors.py"
+AGENT_BUS_MIRROR="$MEM/scripts/export_agent_bus_readonly_mirror.py"
 _run_worklog() {
   if [[ -f "$WL_SYNC" ]]; then
     python3 "$WL_SYNC" || echo "warn: worklog_dual_mac_sync 失败（继续 memory sync）"
@@ -237,10 +240,17 @@ _run_noncode_mirrors() {
     python3 "$NONCODE_MIRROR" || echo "warn: export_noncode_mirrors 失败（继续 memory sync）"
   fi
 }
+_run_agent_bus_readonly_mirror() {
+  # 权威机 export；非权威机 materialize。绝不在此启 poller。
+  if [[ -f "$AGENT_BUS_MIRROR" ]]; then
+    python3 "$AGENT_BUS_MIRROR" both || echo "warn: agent-bus readonly mirror 失败（继续 memory sync）"
+  fi
+}
 
 _run_worklog
 _run_ops_mirror
 _run_noncode_mirrors
+_run_agent_bus_readonly_mirror
 
 git add -A
 if git diff --cached --quiet && git diff --quiet; then
@@ -308,6 +318,11 @@ _heal_rebase_conflicts() {
         git checkout --ours -- "$f" 2>/dev/null || git checkout --theirs -- "$f"
         git add -- "$f"
         ;;
+      mirrors/agent-bus/*)
+        # 权威机导出的只读 bus 镜像：冲突取远端（权威侧下一轮会再推）
+        git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
+        git add -- "$f"
+        ;;
       mirrors/datacheck-*)
         # 报告/剧本：取较新侧（theirs），本机下一轮 export 会补回更新文件
         git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f"
@@ -344,6 +359,7 @@ _pull_rebase() {
   _run_worklog
   _run_ops_mirror
   _run_noncode_mirrors
+  _run_agent_bus_readonly_mirror
   git add -A
   if ! git diff --cached --quiet; then
     git commit -m "chore: auto-heal resync $(date '+%Y-%m-%d %H:%M') @$(hostname -s)" || true

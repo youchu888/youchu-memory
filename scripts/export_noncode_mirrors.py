@@ -8,6 +8,8 @@
 
 不同步（刻意）：
   - 业务代码仓正文、密钥、Telethon session、agent-bus 全量 state、VPN
+
+agent-bus 只读对照副本另见 export_agent_bus_readonly_mirror.py（权威机导出 inbox/sent/processed）。
 """
 
 from __future__ import annotations
@@ -226,6 +228,8 @@ def main() -> int:
         "| 同步 | 不同步 |",
         "|------|--------|",
         "| 核查报告 / playbook 副本、近窗 transcript、tgbot outgoing 文稿 | 业务代码、`.env`、session、agent-bus 全量 state、VPN |",
+        "",
+        "agent-bus 只读镜像见 `mirrors/agent-bus/`（`export_agent_bus_readonly_mirror.py`）。",
         "",
         "权威仍以各机写盘为准；本目录只做跨机可读备份。",
         "",

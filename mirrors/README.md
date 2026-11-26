@@ -1,12 +1,12 @@
 # mirrors · 非代码双机镜像
 
-- host: `old-mac`
-- updated: 2026-11-26 18:06:15 +0800
+- host: `new-mac`
+- updated: 2026-11-26 18:09:31 +0800
 - transcript_days: 21
 
 ## 本轮复制文件数
 
-- `agent-transcripts`: 1
+- `agent-transcripts`: 9
 - `datacheck-playbooks-claude`: 0
 - `datacheck-playbooks-codex`: 0
 - `datacheck-reports-claude`: 0
@@ -18,5 +18,7 @@
 | 同步 | 不同步 |
 |------|--------|
 | 核查报告 / playbook 副本、近窗 transcript、tgbot outgoing 文稿 | 业务代码、`.env`、session、agent-bus 全量 state、VPN |
+
+agent-bus 只读镜像见 `mirrors/agent-bus/`（`export_agent_bus_readonly_mirror.py`）。
 
 权威仍以各机写盘为准；本目录只做跨机可读备份。
