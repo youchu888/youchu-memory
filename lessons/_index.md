@@ -547,3 +547,5 @@
 
 | 2026-11-21 | [记忆快准·行为卡+规则目录](./2026-11-21-规矩易忘根因与加固-TG私聊改叫醒IDE.md) | memory,bootstrap | BEHAVIOR_CARD+RULES_CATALOG 日清重生 |
 | 2026-11-21 | [私聊wake须executor干完打卡窗一小时](./2026-11-21-私聊wake须executor干完打卡窗一小时.md) | tg-dm,wake,onehr,punch | Away 下 TG_DM 须 executor 干完；打卡窗拉到 1 小时 |
+
+| 2026-11-26 | [agent-bus 只读镜像 old→new](./2026-11-26-agent-bus-readonly-mirror-old-to-new.md) | agent-bus,dual-mac,readonly-mirror | 权威机 export；new-mac 只读物化，不启 poller |
