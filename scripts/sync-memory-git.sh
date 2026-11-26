@@ -373,6 +373,7 @@ _pull_rebase
 for s in upgrade_todesk_oneshot.sh install_tg_learn_fuse_oldmac_oneshot.sh \
   reclaim_tgbot_oldmac_oneshot.sh \
   memory-fuse-after-tg-learn.sh worklog_dual_mac_sync.py export_noncode_mirrors.py \
+  export_agent_bus_readonly_mirror.py agent-bus-readonly-status.sh \
   install-memory-git-sync-launchd.sh; do
   src="$MEM/scripts/$s"
   dst="$RUNTIME_SCRIPTS/$s"
