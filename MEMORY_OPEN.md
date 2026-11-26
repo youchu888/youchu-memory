@@ -17,7 +17,7 @@
 - [ ] **dim_channel_info_all_snap**：JDBC/SR 换源已停手（#11164）。**现网 SQL 以 `3ce1c124` 的 `dim_channel_info_all_sync.sql` md5 `68ebf206`（00 槽日快照）为准**（#11175）；勿再推 `230fa1fb`。**prod SR `dim.dim_channel_info_all`=0、prod snap 无分区**（#11251 复核）；卡业务后台写产。BitmapUdf 中间态以 Kryo 为准。
 - [x] **渠道日指标 013 + 推广周月 4 对（2026-11-23 产升清单）**：两项确认撤回；狂人已从测试编排摘掉、不进本周产升；以后重开会话以结算序列稿为准。lesson=`2026-11-23-生产升级清单013与推广周月确认撤回.md`。
 - [ ] **大漏斗优化停**。缓存 85 分钟、先按人聚合 75 分钟，都比基线 66 分钟慢。单扫试验 A 已取消（INSERT 未完成提交）。集群 SQL 已收回最初版。test SR 基线未覆盖。沙箱 Paimon 仍是试验 B 的数，要回到最初版需重跑，未开。（**注**：事件漏斗最新口径已发产、验收、补数完成；此项仅指性能试验，勿写成「漏斗未上线」。）
-- [ ] **指标库（先 test 后 prod）**：测试平台域名 `https://zsq18012.dcpusff.my`（Cloudflare 直通 18012，免 VPN/隧道；curl 须带浏览器 UA，否则 403）。**勿连 18013**（演练实例/演练库）。令牌：账号 `popi947239` 登 `/login` → `/api-tokens` 自建 Bearer。元数据 MySQL `172.31.6.193:3306` 仅跳板 `root@43.213.80.248`（bot 无 root 公钥）；2026-11-26 曾 1040 Too many connections。缺口只读 SQL 已交狂人代跑（回 #14575）。历史快照 published **658**。prod HOLD。
+- [ ] **指标库（先 test 后 prod）**：测试平台域名 `https://zsq18012.dcpusff.my`（Cloudflare 直通 18012，免 VPN/隧道；curl 须带浏览器 UA，否则 403）。**勿连 18013**（演练实例/演练库）。令牌：账号 `popi947239` 登 `/login` → `/api-tokens` 自建 Bearer。元数据 MySQL `172.31.6.193:3306` 仅跳板 `root@43.213.80.248`（bot 无 root 公钥）；2026-11-26 曾 1040 Too many connections。缺口只读 SQL 已交狂人（7 条只读+60s 超时）；北京 16:2x 仍 1040，狂人后台每 5 分钟探连、通了就跑并回结果。令牌网页自建。历史快照 published **658**。prod HOLD。
 - [ ] **设备标签 uid_map 指纹**：#8179 PASS；沙箱真跑 DONE（约 1.43 亿）；dim/宽表链仍 HOLD，勿并 full_chain。
 - [ ] **prod 海豚告警处置（new-mac 专责）**：2026-09-27 自动化已迁 new-mac；playbook=`playbook_server_monitor_incident.md`；确认事故→立刻修含改代码。
 - [ ] **记忆系统 P1 养成**：日清 22:50 已挂（`memory-daily-light-tidy`）；周 hygiene；沉前查重；纠正≥2 次写 PINNED。卡=`MEMORY_LIGHT.md`。
