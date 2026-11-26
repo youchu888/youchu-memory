@@ -45,3 +45,5 @@
 - 2026-11-24 | 未知会话 |  | 新任务，需要建表的，设计核实没问题了，可以先建。反正sr建表也是找运维
 - 2026-11-25 | 未知会话 | ｜表 anna_cute9,b3_behavior_hourly,dws_user_promotion_behavior_h_h | @anna_cute9 dws_user_promotion_behavior_h_h b3_behavior_hourly.sql → data-jobs/spark/04.dws/dws_user_promotion_behavior_h_h/b3_behavior_hourly.sql 65 生效日期写死成 11-13 起,11-14 复核时退回重做;
 - 2026-11-25 | 未知会话 | ｜表 ads.ads_app_device_first_recharge_retention_d_d_old | @wangyi00001 老哥，在测试SR帮忙执行一下 DROP TABLE IF EXISTS ads.ads_app_device_first_recharge_retention_d_d_old;
+- 2026-11-26 | 技术中心-运营系统技术内部沟通群 | 方飞 | 要上线的时候, 你把需要装什么, 哪个版本提供给运维安装就好了
+- 2026-11-26 | 技术中台数据中心-开发小组 | 野花 | # 日报 · 野花·2026-11-26 [REPORT-ORG:天穹部门] [LEVEL:L1] [TYPE:日报] [DATE:2026-11-26] > 提交人: 野花 > 工号: DN1951 > 岗位: 后端 BE > 层级: L1 > 日期: 2026-11-26 ## 【今日结果】 - [TQ-002 | DMP系统] 优化测试环境广告汇总表代
