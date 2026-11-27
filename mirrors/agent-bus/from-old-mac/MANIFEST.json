@@ -1,7 +1,7 @@
 {
   "host": "old-mac",
   "authority_host": "old-mac",
-  "exported_at": "2026-11-27T20:00:10+0800",
+  "exported_at": "2026-11-27T20:03:45+0800",
   "state_dir": "/Users/mac/Library/Application Support/youchu-agent-bus/state",
   "files": [
     "youchu_ai_inbox.jsonl",
