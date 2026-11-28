@@ -1,0 +1,48 @@
+-- SR 影子 dws.dws_app_page_visit_d_d_paimon_shadow
+-- 按现网正式表 dws.dws_app_page_visit_d_d 对齐三处：
+--   1) DISTRIBUTED BY HASH(app_id, page_key)  （旧稿仅 HASH(page_key)）
+--   2) dynamic_partition.history_partition_num = 60  （旧稿 30）
+--   3) dynamic_partition.start = -2147483648  （旧稿 -10000；现网正式表实测值）
+-- uid_cnt 必须为 BITMAP；旧 bigint 影子须 DROP 重建，不能 ALTER。
+-- 不挡 B2 挂步：当前影子已是 bitmap，pb 可写；切正式前建议按本 DDL 重建对齐。
+-- 执行人：运维（王毅）——仅 SR 影子；生产 Paimon 删表重建归狂人平台接口，不进本工单。
+-- 又初出脚本 + SHOW COLUMNS 只读核验。
+
+DROP TABLE IF EXISTS dws.dws_app_page_visit_d_d_paimon_shadow;
+
+CREATE TABLE IF NOT EXISTS `dws`.`dws_app_page_visit_d_d_paimon_shadow` (
+  `dt` date NOT NULL COMMENT "业务日",
+  `app_id` varchar(50) NOT NULL COMMENT "产品",
+  `page_key` varchar(64) NOT NULL COMMENT "页面",
+  `page_name` varchar(512) NULL COMMENT "页面名",
+  `pv_cnt` bigint NULL COMMENT "访问次数",
+  `uid_cnt` bitmap NULL COMMENT "访问账号集合(字典号)",
+  `entry_cnt` bigint NULL COMMENT "进入次数",
+  `jump_cnt` bigint NULL COMMENT "跳转次数",
+  `valid_stay_sec_sum` bigint NULL COMMENT "有效停留秒",
+  `valid_stay_page_cnt` bigint NULL COMMENT "有效停留页次",
+  `stay_page_cnt` bigint NULL COMMENT "停留页次",
+  `dropout_page_cnt` bigint NULL COMMENT "跳出页次",
+  `load_time_sum` bigint NULL COMMENT "加载时长",
+  `load_cnt` bigint NULL COMMENT "加载次数",
+  `etl_time` datetime NULL COMMENT "写入时间"
+) ENGINE=OLAP
+PRIMARY KEY(`dt`, `app_id`, `page_key`)
+COMMENT "页面访问影子表，Spark 回写；uid_cnt=字典号 bitmap，分桶/动态分区对齐正式表"
+PARTITION BY RANGE(`dt`) ()
+DISTRIBUTED BY HASH(`app_id`, `page_key`) BUCKETS 16
+PROPERTIES (
+"compression" = "LZ4",
+"dynamic_partition.buckets" = "16",
+"dynamic_partition.enable" = "true",
+"dynamic_partition.end" = "3",
+"dynamic_partition.history_partition_num" = "60",
+"dynamic_partition.prefix" = "p",
+"dynamic_partition.start" = "-2147483648",
+"dynamic_partition.time_unit" = "DAY",
+"dynamic_partition.time_zone" = "Asia/Shanghai",
+"enable_persistent_index" = "true",
+"fast_schema_evolution" = "true",
+"replicated_storage" = "true",
+"replication_num" = "3"
+);
