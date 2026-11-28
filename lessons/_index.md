@@ -5,6 +5,7 @@
 
 | 日期 | 标题 | tags | 一句话 |
 |------|------|------|--------|
+| 2026-11-28 | [Spark 提审前先问狂人；禁直 RP；bitmap 暂停与 v145 错峰](./2026-11-28-spark提审前先问狂人-禁直RP-bitmap暂停与v145错峰.md) | spark-migrate,request-publish,worker_ant | 先问再提；bitmap 暂停不提；大版本后交比对再定发日 |
 | 2026-11-28 | [运维 DDL 发 chat_id=-5031650278；禁路径；单条 CREA](./2026-11-28-运维-ddl-发-chat_id-5031650278-禁路径-单条-create-alter-.md) | 协作DDL交付,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-25 | [任意机上有交付就要先写 `.cursor/work-log/当日.md`，再指望](./2026-11-25-任意机上有交付就要先写-cursor-work-log-当日-md-再指望-flush-sync.md) | daily-report,work-log,session-rotate | 会话轮换前自动蒸馏 |
 | 2026-11-25 | [关 new-mac 本地权威自动化时，必须保留 pre-daily-report](./2026-11-25-关-new-mac-本地权威自动化时-必须保留-pre-daily-report-flush-与.md) | daily-report,new-mac,automation,session-rotate | 会话轮换前自动蒸馏 |
