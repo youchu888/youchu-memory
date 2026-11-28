@@ -5,6 +5,7 @@
 # DC Platform 公共记忆索引
 - [bus 未送达/401 须重发或群贴要点 bus#13908](lessons/2026-11-18-bus未送达401须重发或群贴要点-bus13908.md) — 狂人未收到且补拉401时重发；`--to` 必须 worker_ant；通道异常则群贴要点
 
+- [运维 DDL 发 chat_id=-5031650278；禁路径；单条 ](lessons/2026-11-28-运维-ddl-发-chat_id-5031650278-禁路径-单条-create-alter-.md) — 会话轮换蒸馏
 - [任意机上有交付就要先写 `.cursor/work-log/当日.md`](lessons/2026-11-25-任意机上有交付就要先写-cursor-work-log-当日-md-再指望-flush-sync.md) — 会话轮换蒸馏
 - [关 new-mac 本地权威自动化时，必须保留 pre-daily-re](lessons/2026-11-25-关-new-mac-本地权威自动化时-必须保留-pre-daily-report-flush-与.md) — 会话轮换蒸馏
 - [双机日报缺条先读 `hosts/new-mac/当日.md` 是否空壳/](lessons/2026-11-24-双机日报缺条先读-hosts-new-mac-当日-md-是否空壳-仅-mirror-再查-sy.md) — 会话轮换蒸馏

@@ -5,6 +5,19 @@
 
 | 关键词钩子 | 路径 | 一句话 |
 |---|---|---|
+| ## +执 .txt） 11 2026 28 | `~/.dc-platform/memory/lessons/2026-11-28-运维-ddl-发-chat_id-5031650278-禁路径-单条-create-alter-.md` | 2026-11-28-运维-ddl-发-chat_id-5031650278-禁 |
+| dd ddl」步骤分离 dl l」 prod 」步 | `sessions/tg-rotate-2026-11-28-0833.md` | 王毅跑完后用 prod 只读核列等后续，与「发 DDL」步骤分离。 |
+| id msg 主人 主人删消息重发时 人删 停旧 | `sessions/tg-rotate-2026-11-28-0833.md` | 主人删消息重发时：先停旧监控进程，重发后再起新监控，避免双盯或盯错 msg id |
+| as ba baseline（例如锚到已知文本消息） el e（ group_r | `sessions/tg-rotate-2026-11-28-0833.md` | `group_raw` 旁听对「文档类/文件消息」可能漏记；监控要设合理 bas |
+| sql 为主 以可 件少 可执 少注 | `sessions/tg-rotate-2026-11-28-0833.md` | 给王毅的脚本文件少注释，正文以可执行 SQL 为主。 |
+| +「 +「生产 @wangyi00001 「执 「生 」+ | `sessions/tg-rotate-2026-11-28-0833.md` | 派单文案极简：`@wangyi00001` +「生产/测试」+「执行下」+ 正文 |
+| 400 api bo bot ddl gb | `sessions/tg-rotate-2026-11-28-0833.md` | tgbot（Bot）不在该群时 `getChat` 会 400；发运维群 DDL |
+| .sql .txt 不开 与可 件前 优先 | `sessions/tg-rotate-2026-11-28-0833.md` | 发文件前核对内容与可打开性；群里 `.sql` 有时打不开，组合脚本优先 `.t |
+| @王毅 alter create sql 也可 也可发文件并 | `sessions/tg-rotate-2026-11-28-0833.md` | 单条 `CREATE` 或单条 `ALTER`：可把 SQL 直接贴在群里；单条 |
+| +执 .txt） 5031650278 @wangyi00001 alter c | `sessions/tg-rotate-2026-11-28-0833.md` | [LESSON: 协作DDL交付/运维 DDL 发 chat_id=-50316 |
+| agent bot group_raw process telet teleth | `sessions/tg-rotate-2026-11-28-0833.md` | 等王毅回执续跑时：单独 agent/process 只读轮询 `group_ra |
+| create drop 不要 不要拆成两条消息 两条 个文 | `sessions/tg-rotate-2026-11-28-0833.md` | 组合语句（如 `DROP`+`CREATE`）：打成一个文件整包发出，不要拆成两 |
+| 5031650278 @wangyi00001 _i at ch ddl | `sessions/tg-rotate-2026-11-28-0833.md` | 运维 DDL 统一发「大数据运维」群（chat_id `-5031650278` |
 | ## .cursor .m 11 2026 25 | `~/.dc-platform/memory/lessons/2026-11-25-任意机上有交付就要先写-cursor-work-log-当日-md-再指望-flush-sync.md` | 2026-11-25-任意机上有交付就要先写-cursor-work-log-当 |
 | ## 11 2026 25 agent_session_rotate autom | `~/.dc-platform/memory/lessons/2026-11-25-关-new-mac-本地权威自动化时-必须保留-pre-daily-report-flush-与.md` | 2026-11-25-关-new-mac-本地权威自动化时-必须保留-pre-d |
 | .md prompt tg 「当 件末 先读 | `sessions/tg-rotate-2026-11-25-1137.md` | TG 派活类问题：先读指定 `prompt_*.md`，直接答文件末尾「当前问题 |
@@ -32,16 +45,3 @@
 | .m daily hosts lesson ma mac | `sessions/tg-rotate-2026-11-24-2236.md` | [LESSON: daily-report,troubleshooting/双机 |
 | .cursor .m 20 21 daily dual | `sessions/tg-rotate-2026-11-24-2236.md` | [LESSON: daily-report,dual-mac,work-log/ |
 | ## 00 02 11 2026 23 | `~/.dc-platform/memory/lessons/2026-11-23-停用每日学习须点名-job-worker-ant-daily-learn-与-daily-gro.md` | 2026-11-23-停用每日学习须点名-job-worker-ant-dail |
-| ## 11 2026 23 agent agent_session_rotate | `~/.dc-platform/memory/lessons/2026-11-23-主人说-bus-机器人没收到时-先查-inbox-tg-镜像时间线-自动执行快速结案优先解释-看.md` | 2026-11-23-主人说-bus-机器人没收到时-先查-inbox-tg-镜 |
-| bus executor inbox ux 「已 」等 | `sessions/tg-rotate-2026-11-23-1926.md` | bus 争议排查顺序：inbox 时间 → 镜像会话内容 → executor  |
-| 「重 」的 不能 不能用来解释「重启前已发出」的消息丢失 丢失 之后 | `sessions/tg-rotate-2026-11-23-1926.md` | 机器人重启时间在消息之后，不能用来解释「重启前已发出」的消息丢失。 |
-| cursor executor 「待 」的 不像 不像「待你点开」的派单醒目 | `sessions/tg-rotate-2026-11-23-1926.md` | `cursor-executor` 自动跑完时，私聊多为阶段同步（开干/结案）， |
-| status_mirror tg 「机 「机器人里没看到」要先查 」要 人里 | `sessions/tg-rotate-2026-11-23-1926.md` | 「机器人里没看到」要先查 TG `status_mirror` 是否已有入站原文 |
-| agent bus inbox 一单 不以 不以口头提醒为准 | `sessions/tg-rotate-2026-11-23-1926.md` | 口头发 bus 与 agent-bus 入站是同一单；查收以 inbox + 本 |
-| ack bus#n bus」→ processed reply 「发 | `sessions/tg-rotate-2026-11-23-1926.md` | 狂人「发了 bus」→ 先入站查 `bus#N`、出站 ack/reply、`p |
-| disabled job launchd plist 「取 」时 | `sessions/tg-rotate-2026-11-23-1926.md` | 用户说「取消了还在发」时，先核 launchd/plist 是否 `disabl |
-| 00 02 ant dai daily group | `sessions/tg-rotate-2026-11-23-1926.md` | 「每日学习」停用要分清两条链路：`worker-ant-daily-learn` |
-| 「全 「只 」与 与「 主人 习可 | `sessions/tg-rotate-2026-11-23-1926.md` | 群聊学习可拆成「全停」与「只关私聊推送、后台静默沉淀」；改前需主人明确二选一，勿 |
-| ## 11 2026 21 agent_session_rotate code_ | `~/.dc-platform/memory/lessons/2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owners-与-spark-索引-主链归知秋.md` | 2026-11-21-活跃留存-问-是不是我们开发的-时先查-code_owne |
-| 「又 「活 「活跃留存整条链是又初开发的」 下游 下游相关（归因 不说 | `sessions/tg-rotate-2026-11-21-1032.md` | **边界话术**：可说「又初侧有周边/下游相关（归因、标签等）」；**不说**「 |
-| bitmap dws_app_retention_d dws_app_reten | `sessions/tg-rotate-2026-11-21-1032.md` | 对外表述：业务名「活跃留存」↔ 表名 `dws_app_user_d_h` /  |
