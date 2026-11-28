@@ -1,6 +1,6 @@
 # agent-bus · 未结案（只读镜像）
 
-- generated: 2026-11-28 18:22:47 +0800
+- generated: 2026-11-28 18:26:08 +0800
 - open_count: 0
 - showing: 0
 
