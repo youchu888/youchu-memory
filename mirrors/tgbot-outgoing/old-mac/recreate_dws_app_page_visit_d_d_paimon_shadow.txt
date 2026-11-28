@@ -1,13 +1,3 @@
--- SR 影子 dws.dws_app_page_visit_d_d_paimon_shadow
--- 按现网正式表 dws.dws_app_page_visit_d_d 对齐三处：
---   1) DISTRIBUTED BY HASH(app_id, page_key)  （旧稿仅 HASH(page_key)）
---   2) dynamic_partition.history_partition_num = 60  （旧稿 30）
---   3) dynamic_partition.start = -2147483648  （旧稿 -10000；现网正式表实测值）
--- uid_cnt 必须为 BITMAP；旧 bigint 影子须 DROP 重建，不能 ALTER。
--- 不挡 B2 挂步：当前影子已是 bitmap，pb 可写；切正式前建议按本 DDL 重建对齐。
--- 执行人：运维（王毅）——仅 SR 影子；生产 Paimon 删表重建归狂人平台接口，不进本工单。
--- 又初出脚本 + SHOW COLUMNS 只读核验。
-
 DROP TABLE IF EXISTS dws.dws_app_page_visit_d_d_paimon_shadow;
 
 CREATE TABLE IF NOT EXISTS `dws`.`dws_app_page_visit_d_d_paimon_shadow` (
